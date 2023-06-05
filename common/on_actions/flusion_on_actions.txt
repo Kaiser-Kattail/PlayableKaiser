@@ -20,6 +20,8 @@ on_monthly_pulse_country = {
 		centrism.98
 		centrism.99
 		conquest.8
+		misc.10
+		centrism.65
 	}
 }
 

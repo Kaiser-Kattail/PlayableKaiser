@@ -27,6 +27,13 @@ kaiser_planet_1 = {
 	show_in_outliner = no
 
 	build_time = 1
+	potential = {
+		always = no
+	}
+
+	possible = {
+		always = no
+	}
 
 #   possible = { from = { has_technology = kaiser_planet_core } }
 
@@ -40,6 +47,13 @@ kaiser_planet_2 = {
 
 
 	build_time = 1
+	potential = {
+		always = no
+	}
+
+	possible = {
+		always = no
+	}
 
 
 #	possible = { from = { has_technology = kaiser_planet_core } }
@@ -53,6 +67,13 @@ kaiser_planet_3 = {
 
 
 	build_time = 1
+	potential = {
+		always = no
+	}
+
+	possible = {
+		always = no
+	}
 
 #	possible = { from = { has_technology = kaiser_planet_core } }
 
@@ -65,6 +86,13 @@ kaiser_planet_4 = {
 	show_in_outliner = no
 
 	build_time = 1
+	potential = {
+		always = no
+	}
+
+	possible = {
+		always = no
+	}
 
 #	possible = { from = { has_technology = kaiser_planet_core } }
 }

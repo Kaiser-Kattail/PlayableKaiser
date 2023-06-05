@@ -50,15 +50,15 @@ agenda_project_dominance = {
 agenda_project_celestia = {
 	agenda_cost = @base_tradition_agenda_cost
 	allow = {
-	#	has_ascension_perk = ap_gigastructural_constructs
+		has_ascension_perk = ap_gigastructural_constructs
 	}
 	potential = {
 		has_origin = origin_katzen
 		NOT = {
 			has_country_flag = celestia_started
 		}
-	#	has_technology = tech_mega_engineering
-	#	has_country_flag = dominance_started
+		has_technology = tech_mega_engineering
+		has_country_flag = dominance_started
 	}
 	modifiers = {
 		{

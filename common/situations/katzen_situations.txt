@@ -474,11 +474,6 @@ situation_project_celestia = {
 			current_situation_approach = approach_big_invest
 			add = 2
 		}
-		modifier = {
-			desc = string_current_approach
-			current_situation_approach = approach_big_invest
-			add = 10
-		}
 	}
 	approach = {
 		name = approach_no_invest
@@ -529,14 +524,6 @@ situation_project_celestia = {
 			upkeep = {
 				alloys = 2000
 			}
-		}
-	}
-	approach = {
-		name = approach_debug
-		icon = GFX_situation_approach_balance_sheet
-		icon_background = GFX_situation_approach_bg_green
-		on_select = {
-			custom_tooltip = approach_big_invest_tooltip
 		}
 	}
 }

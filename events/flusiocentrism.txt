@@ -4,10 +4,7 @@ country_event = {
 	id = centrism.1
 	is_triggered_only = yes
 	hide_window = yes
-	trigger = {
-		has_origin = origin_katzen
-		has_tradition = tr_flusion_finish
-	}
+
 
 	immediate = {
 		every_owned_planet = {
@@ -23,6 +20,10 @@ planet_event = {
 	id = centrism.2
 	is_triggered_only = yes
 	hide_window = yes
+	trigger = {
+		has_origin = origin_katzen
+		has_tradition = tr_flusion_finish
+	}
 	immediate = {
 		if = {
 			limit = {
@@ -130,22 +131,41 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 
-	trigger = {
-		has_origin = origin_katzen
-		has_tradition = tr_border_colonies
-	}
-
 	immediate = {
-		every_owned_planet = {
-			limit = {
-				NOR = {
-					has_planet_flag = playerflusion
-					has_modifier = katzen_colony
+		if = {
+			limit = { has_origin = origin_katzen }
+			every_owned_planet = {
+				limit = {
+					NOR = {
+						has_planet_flag = playerflusion
+						has_modifier = katzen_colony
+					}
+				}
+				add_modifier = {
+					modifier = katzen_colony
+					days = -1
 				}
 			}
-			add_modifier = {
-				modifier = katzen_colony
-				days = -1
+		}
+	}
+}
+
+country_event = {
+	id = centrism.65
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_origin = origin_katzen
+				}
+			}
+			every_owned_planet = {
+				remove_modifier = katzen_colony
+				remove_deposit = d_bureau_of_colonial_benefits
+				remove_deposit = d_flusion_bounty_colony
 			}
 		}
 	}
@@ -155,20 +175,18 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 
-	trigger = {
-		has_origin = origin_katzen
-		has_tradition = tr_flusions_bounty
-	}
-
 	immediate = {
-		every_owned_planet = {
-			limit = {
-				NOR = {
-					has_planet_flag = playerflusion
-					has_deposit = d_flusion_bounty_colony
+		if = {
+			limit = { has_origin = origin_katzen has_tradition = tr_flusions_bounty }
+			every_owned_planet = {
+				limit = {
+					NOR = {
+						has_planet_flag = playerflusion
+						has_deposit = d_flusion_bounty_colony
+					}
 				}
+				add_deposit = d_flusion_bounty_colony
 			}
-			add_deposit = d_flusion_bounty_colony
 		}
 	}
 }
@@ -177,20 +195,18 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 
-	trigger = {
-		has_origin = origin_katzen
-		has_tradition = tr_work_arrangements
-	}
-
 	immediate = {
-		every_owned_planet = {
-			limit = {
-				NOR = {
-					has_planet_flag = playerflusion
-					has_deposit = d_bureau_of_colonial_benefits
+		if = {
+			limit = { has_origin = origin_katzen has_tradition = tr_work_arrangements }
+			every_owned_planet = {
+				limit = {
+					NOR = {
+						has_planet_flag = playerflusion
+						has_deposit = d_bureau_of_colonial_benefits
+					}
 				}
+				add_deposit = d_bureau_of_colonial_benefits
 			}
-			add_deposit = d_bureau_of_colonial_benefits
 		}
 	}
 }

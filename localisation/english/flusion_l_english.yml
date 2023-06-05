@@ -496,3 +496,10 @@
  kaiser_planet_3_DESC:0 "Hundreds of thousands of weapon batteries installed within the planet's crust, and a gigantic cannon that can shred anything into pieces."
  kaiser_planet_4:0 "Kaisercraft Final Armament"
  kaiser_planet_4_DESC:0 "The monumental task of loading the vessel with ammunition and ammunition factories may seem small, but it is critical nonetheless."
+
+ policy_kaiser_appearance:0 "Build-A-Kaiser"
+ policy_kaiser_appearance_desc:0 "Changes the appearance of Kaiser Kattail."
+ pvz_cattail:0 "PvZ Cattail"
+ pvz_cattail_desc:0 "Changes the Kaiser's appearance to his classic form."
+ derega_kaiser:0 "Canon Kaiser"
+ derega_kaiser_desc:0 "Changes the Kaiser's appearance to his more 'normal' form."

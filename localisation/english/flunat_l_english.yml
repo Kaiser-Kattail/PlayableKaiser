@@ -376,7 +376,7 @@ NAME_symbie_defense: "Symby Army"
  flunat_defense_army_desc:0 "Armies comprised of their home nation's species, they defend or attack in the name of their country."
 
  flunat.0991.title:0 "The Flusionian Coalition"
- flunat.0991.desc:0 "For several years, world tension across Flusion has been spiking. Reaching an all time high, the surviving nations of Flsuion have federated and declared war on us!\n\n§HIf we lose this battle, §Rwe lose the game!§!"
+ flunat.0991.desc:0 "For several years, world tension across Flusion has been spiking. Reaching an all time high, the surviving nations of Flusion have federated and declared war on us!\n\n§HIf we lose this battle, §Rwe lose the game!§!"
  flunat.0991.a:0 "All units, high alert!"
  tension_1: "Stage 1"
  tension_2: "Stage 2"

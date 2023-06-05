@@ -13,66 +13,8 @@ event = {
 	immediate = {
 		every_playable_country = {
 			limit = { has_origin = origin_katzen }
-			country_event = { id = flusion.2 }
+			country_event = { id = flusion.4 }
 			country_event = { id = kaiser_bureau.0 days = 30 }
-		}
-	}
-}
-
-
-country_event = {
-	id = flusion.2
-	is_triggered_only = yes
-	picture = GFX_evt_landing_ship_2
-	title = "flusion.2.title"
-	desc = "flusion.2.desc"
-	option = {
-		name = "flusion.2.a"
-		hidden_effect = {
-			create_species = {
-				name = "Imperial Katzen"
-				plural = "Imperial Katzens"
-				class = Flusionian
-				portrait = kaiser
-				homeworld = event_target:gigaflusion
-				traits = {
-					trait = trait_pc_continental_preference
-					trait = trait_quick_learners
-					trait = trait_talented
-					trait = trait_venerable
-				}
-				effect = {
-					set_global_flag = kaiser_portrait_defined
-					save_global_event_target_as = kaiser_portrait
-				}
-
-			}
-			country_event = { id = flusion.4}
-		}
-	}
-	option = {
-		name = "flusion.2.b"
-		hidden_effect = {
-				create_species = {
-					name = "Imperial Katzen"
-					plural = "Imperial Katzens"
-					class = Flusionian
-					portrait = Kattail_1
-					homeworld = event_target:gigaflusion
-					traits = {
-						trait = trait_pc_continental_preference
-						trait = trait_quick_learners
-						trait = trait_talented
-						trait = trait_venerable
-					}
-					
-					effect = {
-						set_global_flag = kaiser_portrait_defined
-						save_global_event_target_as = kaiser_portrait
-					}
-					
-				}
-			country_event = { id = flusion.4}
 		}
 	}
 }
@@ -124,6 +66,45 @@ country_event = {
 			}
 
 		#Leader Portraits
+
+		create_species = {
+			name = "Imperial Katzen"
+			plural = "Imperial Katzens"
+			class = Flusionian
+			portrait = Kattail_1
+			homeworld = event_target:gigaflusion
+			traits = {
+				trait = trait_pc_continental_preference
+				trait = trait_quick_learners
+				trait = trait_talented
+				trait = trait_venerable
+			}
+			
+			effect = {
+				set_global_flag = kaiser_portrait_defined
+				save_global_event_target_as = kaiser_portrait_hd
+			}
+			
+		}
+
+		create_species = {
+			name = "Imperial Katzen"
+			plural = "Imperial Katzens"
+			class = Flusionian
+			portrait = kaiser
+			homeworld = event_target:gigaflusion
+			traits = {
+				trait = trait_pc_continental_preference
+				trait = trait_quick_learners
+				trait = trait_talented
+				trait = trait_venerable
+			}
+			effect = {
+				set_global_flag = kaiser_portrait_defined
+				save_global_event_target_as = kaiser_portrait_pvz
+			}
+
+		}
 		
 
 		#Make the soulbot species
@@ -357,30 +338,22 @@ country_event = {
 
 
 		ruler = {
-			set_leader_flag = perish
-			kill_leader = {
-				flag = perish show_notification = no
-			}
-		}
-
-		create_leader = {
-			name = "Kattail"
-			skill = 4
-			class = admiral
-			gender = male
-			immortal = yes
+			change_species = event_target:kaiser_portrait_hd
+			change_leader_portrait = event_target:kaiser_portrait_hd
+			set_name = "Kattail"
+			set_skill = 4
+			change_leader_class = admiral
+			set_gender = male
+			set_immortal = yes
 			set_age = 189
-			traits = {
-				trait = leader_trait_ruler_kaiser_cattail
-				trait = trait_ruler_charismatic_2
-				trait = trait_ruler_military_pioneer
-				trait = leader_trait_intimidator
-				trait = subclass_admiral_strategist
-			}
-			species = event_target:kaiser_portrait
+			add_trait = leader_trait_ruler_kaiser_cattail
+			add_trait = trait_ruler_charismatic_2
+			add_trait = trait_ruler_military_pioneer
+			add_trait = leader_trait_intimidator
+			add_trait = subclass_admiral_strategist
+			set_leader_flag = kaiser_kattail
+			save_global_event_target_as = kaiser_kattail
 		}
-
-		assign_leader = last_created_leader
 
 
 		random_owned_leader = {

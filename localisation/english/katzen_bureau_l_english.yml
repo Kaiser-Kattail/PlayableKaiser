@@ -1,7 +1,7 @@
 ﻿l_english:
 
     kaiser_bureau.0.name:0 "The Katzenvereinigungsbüro"
-    kaiser_bureau.0.desc:0 "Our adivsors have alerted us of a newly formed bureau to facilitate the §YUnification of Flusion§!. It is headed by the venerable §YDouclaw MacCathur§!. He expects great things from the enevitable unification."
+    kaiser_bureau.0.desc:0 "Our advisors have alerted us of a newly formed bureau to facilitate the §YUnification of Flusion§!. It is headed by the venerable §YDouclaw MacCathur§!. He expects great things from the inevitable unification."
     kaiser_bureau.0.a:0 "On Screen"
 
     kaiser_bureau.1.name:0 "Douclaw MacCathur"
@@ -11,12 +11,12 @@
 
     kaiser_bureau_tooltip:0 "Katzenvereinigungsbüro"
 
-    kaiser_conquest_mech_desc:0 "This screen allows you manage §YConquests§! on §EFlusion§!. Each area has a level of §YKatzen Grasp§! which changes as we go on §YConquests§!.\n\nDuring a §YConquest§!, a situation will start. The situation approach determines the monthly progress and cost of §YStrikes§!. §YStrikes§! can be performed through a planetary decision. Due to limted resources and manpower, we cannot perforom specialized §YStrikes§! when engaging in more than one §YConquest§! Once a stage is finished we will attack a more centralized force, represented by an invasion on §EFlusion§!. Finish the situation to capture a region. You may need to capture one region before you capture another.\n\nYou can begin a by §YConquest§! clicking on a nation and declaring war."
+    kaiser_conquest_mech_desc:0 "This screen allows you manage §YConquests§! on §EFlusion§!. Each area has a level of §YKatzen Grasp§! which changes as we go on §YConquests§!.\n\nDuring a §YConquest§!, a situation will start. The situation approach determines the monthly progress and cost of §YStrikes§!. §YStrikes§! can be performed through a planetary decision. Due to limted resources and manpower, we cannot perforom specialized §YStrikes§! when engaging in more than one §YConquest§!. Once a stage is finished we will attack a more centralized force, represented by an invasion on §EFlusion§!. Finish the situation to capture a region. You may need to capture one region before you capture another.\n\nYou can begin a by §YConquest§! clicking on a nation and declaring war."
 
     kaiser_bureau.douclaw.low.a:0 "We must teach these misguided nations about the wonders of unification."
     kaiser_bureau.douclaw.low.b:0 "\nThey shall submit eventually."
     kaiser_bureau.douclaw.low.c:0 "\n§RLORIS STOP BALLING ON THE WAR TABLE!!§!"
-    kaiser_bureau.douclaw.low.d:0 "\nThe unification of Flusion is ineviatble."
+    kaiser_bureau.douclaw.low.d:0 "\nThe unification of Flusion is inevitable."
 
     kaiser_bureau.douclaw.mid.a:0 "\nA great start to our unification."
     kaiser_bureau.douclaw.mid.b:0 "\nThink of the possibilities once we are united."

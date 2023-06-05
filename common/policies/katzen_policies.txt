@@ -133,3 +133,48 @@ flusion_migration = {
 		}
 	}
 }
+
+kaiser_appearance = {
+	potential = {
+		AND = {
+			is_country_type = default
+			has_origin = origin_katzen
+		}
+	}
+
+	option = {
+		name = "derega_kaiser"
+		policy_flags = {
+			derega_kaiser
+		}
+		on_enabled = {
+			hidden_effect = {
+				country_event = {
+					id = misc.9
+				}
+			}
+		}
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "pvz_cattail"
+
+		policy_flags = {
+			pvz_cattail
+		}
+		on_enabled = {
+			hidden_effect = {
+				country_event = {
+					id = misc.8
+				}
+			}
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+}
