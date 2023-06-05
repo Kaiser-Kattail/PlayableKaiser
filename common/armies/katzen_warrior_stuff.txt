@@ -193,8 +193,8 @@ peacekeeper_army = {
 }
 
 dominion_tracks = {
-	damage = 100.0
-	health = 100.0
+	damage = 50.0
+	health = 50.0
 	has_morale = no
 	collateral_damage = 1
 	war_exhaustion = 5.0
@@ -205,7 +205,7 @@ dominion_tracks = {
 	resources = {
 		category = armies
 		upkeep = {
-			energy = 40
+			energy = 30
 			alloys = 10
 		}
 	}

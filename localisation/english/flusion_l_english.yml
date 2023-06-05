@@ -450,7 +450,7 @@
     misc.5.b:0 "Wunderbar!"
 
  NAME_dominiontracks: "Dominiontracks"
- dominion_tracks:0 "Dominiontracks Riesigerkatzenpanzer"
+ dominion_tracks:0 "DT Riesigerkatzenpanzer"
  dominion_tracks_desc:0 "Dominiontracks was one of the earliest Riesigerkatzenpanzer designs the Kaiser made and thus lacks many items for a more comfortable or even efficient warmongering experience. However, its austerity makes it even more of a diabolical war machine than other tanks of its kind."
 
  leader_trait_gunfur:0 "Ole Gunfur"
@@ -459,7 +459,7 @@
  NAME_gunfur: "Heinrich Gunfur"
  misc.6.title: "$NAME_gunfur$"
  misc.6.desc: "§HA battle-scarred Katzen in surprisingly advanced power armor approaches the view screen. He is bedecked in dozens of awards from many Flusionian nations although the bulk comes from the Katzenartig Imperium. Their fur is greying yet they seem surprisingly young for a seemingly vaunted military leader.§!\n\n"I offer my services again to you, mein Kaiser."\n\n§HHe speaks in a rough and coarse accent of a northern Herzlander that has been long since flecked in radiation and wounds.§!"
- gunfurdesc: "Heinrich Gunfur is one of the most experienced Katzens in the galaxy and has commanded, in some way, every type of vehicle and troop from infantry to aircraft carriers. He was the first one selected to control the mighty Riesigerkatzenpanzers of the Kaiser and he does his duty with coldhearted, devastating efficiency while tearing rival nations apart on a fundamental level."
+ gunfurdesc: "This leader has fought on every type of soil and commanded every type of soldier. He blitzed his way through Solakia, overextended and away from supply lines and continued to thrive. His capacity for autonomy should not be understated."
  gunfur_catch_phrase: "§L"I blitzed through Solakia, and I hold faith that I could do it again."§!"
  misc.6.a: "Who are you?"
  misc.6.a.response: "I am Größterpanzerkommandant Heinrich Gunfur of the Riesigerkatzenpanzer Dominiontracks and conqueror of billions."

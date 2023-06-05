@@ -49,7 +49,7 @@ d_katown_palace ={
 	resources = {
 		category = planet_deposits
 		produces = {
-			unity = 50
+			unity = 100
 		}
 	}
 
@@ -68,7 +68,7 @@ d_katown_palace_primitive ={
 	resources = {
 		category = planet_deposits
 		produces = {
-			unity = 25
+			unity = 50
 		}
 	}
 

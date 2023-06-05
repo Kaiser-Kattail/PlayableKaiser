@@ -41,10 +41,7 @@ leader_trait_ruler_kaiser_cattail = {
 katzen_trait_martial_free = {
 	cost = 0
 	species_potential_add = {
-		exists = from
-		from = {
-			has_origin = origin_katzen
-		}
+		always = no
 	}
 	initial = no
 	randomized = no
