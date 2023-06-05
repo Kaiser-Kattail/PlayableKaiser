@@ -1,0 +1,43 @@
+# SPACE PANZER
+weapon_component_template = {
+	key = "PLAYABLE_PANZER_ARTILLERY_1"
+	size = large
+	entity = "large_laser_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_kinetic_artillery_2"
+	icon_frame = 1
+
+	damage = { min = 200 max = 600 }
+	windup = { min = 3 max = 20 }
+	total_fire_time = 50
+	range = 120
+	accuracy = 0.75
+
+	shield_damage = 1.5
+	hull_damage = 1.25
+	armor_damage = 0.50
+	tracking = 0.10
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t6_cost
+		}
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
+
+	component_set = "PLAYABLE_PANZER_ARTILLERY_1"
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic }
+
+	size_restriction = { katzen_panzer }
+
+	firing_arc = 30
+	min_range = 10.0
+
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+}

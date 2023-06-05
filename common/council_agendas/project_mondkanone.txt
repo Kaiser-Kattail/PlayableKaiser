@@ -1,0 +1,73 @@
+@base_tradition_agenda_cost = 7000
+
+agenda_project_mondkanone = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_katzen_adopt
+	}
+	potential = {
+		has_origin = origin_katzen
+		NOT = {
+			has_country_flag = mondkanone_started
+		}
+	}
+	modifiers = {
+		{
+			country_unity_produces_mult = -0.10
+		}
+	}
+	effect = {
+		country_event = {
+			id = katsit.10 days = 2
+		}
+	}
+}
+
+agenda_project_dominance = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_flusion_adopt
+	}
+	potential = {
+		has_origin = origin_katzen
+		has_country_flag = ready_for_moon_ap
+		NOT = {
+			has_country_flag = dominance_started
+		}
+	}
+	modifiers = {
+		{
+			country_unity_produces_mult = -0.10
+		}
+	}
+	effect = {
+		country_event = {
+			id = kmoon.1 days = 2
+		}
+	}
+}
+
+agenda_project_celestia = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+	#	has_ascension_perk = ap_gigastructural_constructs
+	}
+	potential = {
+		has_origin = origin_katzen
+		NOT = {
+			has_country_flag = celestia_started
+		}
+	#	has_technology = tech_mega_engineering
+	#	has_country_flag = dominance_started
+	}
+	modifiers = {
+		{
+			country_unity_produces_mult = -0.10
+		}
+	}
+	effect = {
+		country_event = {
+			id = kaiser_war_planet.8 days = 2
+		}
+	}
+}

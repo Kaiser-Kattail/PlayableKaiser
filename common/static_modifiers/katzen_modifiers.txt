@@ -1,0 +1,35 @@
+temp_job_help = {
+	pop_demotion_time_mult = -9.99
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_expel_population.dds"
+	icon_frame = 1
+}
+
+central_instability = {
+	planet_stability_add = -100
+
+	icon = "gfx/interface/icons/planet_modifiers/capital.dds"	
+	icon_frame = 3
+}
+
+stop_eating_naval_cap_you_hecker = {
+	country_naval_cap_add = 50
+}
+
+no_ftl_capability = {
+	ship_speed_mult = -0.5
+	ship_windup_mult = 0.85
+	country_starbase_influence_cost_mult = 0.5
+}
+
+central_stability = {
+	country_unity_produces_mult = 0.01
+}
+
+katzen_colony = {
+	planet_jobs_produces_mult = -0.1
+	pop_growth_speed = 0.15
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_land_appropriated.dds"
+	icon_frame = 2
+}

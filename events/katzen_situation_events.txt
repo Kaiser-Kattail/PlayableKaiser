@@ -1,0 +1,144 @@
+namespace = katsit
+
+
+country_event = {
+	id = katsit.10
+	title = katsit.10.name
+	desc = katsit.10.desc
+	picture = GFX_evt_attack_moon
+	is_triggered_only = yes
+	show_sound = event_default
+	fire_only_once = yes
+
+	trigger = {
+		has_origin = origin_katzen
+		any_planet_within_border = {
+			has_planet_flag = gigamuno
+		}
+	}
+
+	immediate = {
+		owner = {
+			start_situation = {
+				type = situation_mandakanone
+				target = root
+				effect = {
+					save_event_target_as = new_situation
+				}
+			}
+			set_country_flag = mondkanone_started
+		}
+	}
+
+	option = {
+		name = katsit.10.A # We cannot afford this now
+		icon = {
+			icon = GFX_situation_approach_balance_sheet
+			icon_background = GFX_situation_approach_bg_red
+			text = set_situation_approach_icon_text
+		}
+		event_target:new_situation = {
+			set_situation_approach = approach_no_invest
+		}
+	}
+
+	option = {
+		name = katsit.10.B # Low investment
+		icon = {
+			icon = GFX_situation_approach_balance_sheet
+			icon_background = GFX_situation_approach_bg_yellow
+			text = set_situation_approach_icon_text
+		}
+		event_target:new_situation = {
+			set_situation_approach = approach_low_invest
+		}
+	}
+
+	option = {
+		name = katsit.10.C # Mid investment
+		icon = {
+			icon = GFX_situation_approach_balance_sheet
+			icon_background = GFX_situation_approach_bg_yellow
+			text = set_situation_approach_icon_text
+		}
+		event_target:new_situation = {
+			set_situation_approach = approach_mid_invest
+		}
+	}
+
+	option = {
+		name = katsit.10.D # Big investment
+		icon = {
+			icon = GFX_situation_approach_balance_sheet
+			icon_background = GFX_situation_approach_bg_green
+			text = set_situation_approach_icon_text
+		}
+		event_target:new_situation = {
+			set_situation_approach = approach_big_invest
+		}
+	}
+}
+
+situation_event = {
+	id = katsit.11
+	title = katsit.11.name
+	desc = katsit.11.desc
+	picture = GFX_evt_attack_moon
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		owner = {
+			has_origin = origin_katzen
+			any_planet_within_border = {
+			has_planet_flag = gigamuno
+		}
+		}
+	}
+
+	immediate = {
+		owner = {
+			every_situation = {
+				limit = {
+					is_situation_type = situation_mandakanone
+				}
+				destroy_situation = this
+			}
+			create_fleet = {
+				name = "Projekt Mondkanone"
+				settings = {
+					spawn_debris = no
+					uses_naval_capacity = no
+					can_disband = no
+				}
+				effect = {
+					set_owner = event_target:katzenartig
+					create_ship = {
+						name = "Projekt Mondkanone"
+						design = "Lunar Defence System"
+						upgradable = no
+						
+					}
+					
+
+					set_location = event_target:gigamuno
+					
+				}
+				
+				
+			}
+			event_target:gigamuno = {
+				remove_planet = yes
+			}
+			last_created_fleet = {
+				save_global_event_target_as = kaiser_moon_pls
+			}
+			set_country_flag = ready_for_moon_ap
+			add_modifier = {
+				modifier = stop_eating_naval_cap_you_hecker
+			}
+		}
+		
+	}
+}
+

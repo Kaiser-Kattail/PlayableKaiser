@@ -1,0 +1,44 @@
+tradition_katzen = {
+	tree_template = "tree_12_12"
+	adoption_bonus = "tr_katzen_adopt"
+	finish_bonus = "tr_katzen_finish"
+
+	potential = {
+		has_origin = origin_katzen
+	}
+
+	traditions = {
+		"tr_katzen_war_machine"
+		"tr_katzen_logistiks"
+		"tr_katzenkrieglosung"
+		"tr_katzen_celestial_supremacy"
+		"tr_katzen_planetside_garrisons"
+		
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+tradition_flusion = {
+	tree_template = "tree_11_11_21"
+	adoption_bonus = "tr_flusion_adopt"
+	finish_bonus = "tr_flusion_finish"
+
+	potential = {
+		has_origin = origin_katzen
+	}
+
+
+	traditions = {
+		"tr_work_arrangements"
+		"tr_border_colonies"
+		"tr_imperial_management"
+		"tr_flusions_bounty"
+		"tr_centralization"
+		
+	}
+	ai_weight = {
+		weight = 0
+	}
+}

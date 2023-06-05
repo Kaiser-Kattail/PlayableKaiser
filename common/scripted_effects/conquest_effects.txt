@@ -1,0 +1,88 @@
+update_total_flusion_con_value = {
+	event_target:playerflusion = {
+		set_variable = {
+			which = "flusion_total_con_value"
+			value = 0
+		}
+		change_variable = {
+			which = "flusion_total_con_value"
+			value = hanarian_con
+		}
+		change_variable = {
+			which = "flusion_total_con_value"
+			value = lauranaise_con
+		}
+		change_variable = {
+			which = "flusion_total_con_value"
+			value = symbies_con
+		}
+		change_variable = {
+			which = "flusion_total_con_value"
+			value = yinjites_con
+		}
+		change_variable = {
+			which = "flusion_total_con_value"
+			value = cyatianalas_con
+		}
+		change_variable = {
+			which = "flusion_total_con_value"
+			value = mercurians_con
+		}
+		change_variable = {
+			which = "flusion_total_con_value"
+			value = ezics_con
+		}
+		change_variable = {
+			which = "flusion_total_con_value"
+			value = droog_con
+		}
+		change_variable = {
+			which = "flusion_total_con_value"
+			value = zousans_con
+		}
+		change_variable = {
+			which = "flusion_total_con_value"
+			value = ravkan_con
+		}
+		change_variable = {
+			which = "flusion_total_con_value"
+			value = solakians_con
+		}
+		change_variable = {
+			which = "flusion_total_con_value"
+			value = cookie_con
+		}
+		change_variable = {
+			which = "flusion_total_con_value"
+			value = kronk_con
+		}
+	}
+}
+
+check_flusionian_war = {
+	event_target:playerflusion = {
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = war_with_harania
+					has_country_flag = war_with_solakia 
+					has_country_flag = war_with_cookie
+					has_country_flag = war_with_kronk
+					has_country_flag = war_with_ravka
+					has_country_flag = war_with_zousa
+					has_country_flag = war_with_droog
+					has_country_flag = war_with_ezic
+					has_country_flag = war_with_mercuria
+					has_country_flag = war_with_cyatianala
+					has_country_flag = war_with_yinja
+					has_country_flag = war_with_symbie
+					has_country_flag = war_with_laurandaar
+				}
+			}
+			set_country_flag = flusionian_war
+		}
+		else = {
+			remove_country_flag = flusionian_war
+		}
+	}
+}

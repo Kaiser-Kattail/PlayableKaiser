@@ -1,0 +1,128 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ap_kaiser_moon"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_kaiser_moon.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_flusion"
+		texturefile = "gfx/event_pictures/flusion.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_katzen"
+		textureFile = "gfx/interface/traditions/tiles/tradition_hex_bg_katzen.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_katzen"
+		textureFile = "gfx/interface/traditions/tree_icons/tradition_icon_katzen.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_katzen"
+		textureFile = "gfx/interface/traditions/tiles/tradition_category_tile_katzen.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_katzen"
+		textureFile = "gfx/interface/traditions/tiles/tradition_category_tile_katzen.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_katzen_war_machine"
+		textureFile = "gfx/interface/traditions/tradition_katzen_war_machine.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_katzen_celestial_supremacy"
+		textureFile = "gfx/interface/traditions/tradition_celestial_supremacy.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_katzen_planetside_garrisons"
+		textureFile = "gfx/interface/traditions/tradition_katzen_planetside_garrisons.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_katzen_logistiks"
+		textureFile = "gfx/interface/traditions/tradition_katzen_logistiks.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_katzenkrieglosung"
+		textureFile = "gfx/interface/traditions/tradition_katzenkrieglosung.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_flusion"
+		textureFile = "gfx/interface/traditions/tiles/tradition_hex_bg_flusion.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_flusion"
+		textureFile = "gfx/interface/traditions/tree_icons/tradition_icon_flusion.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_flusion"
+		textureFile = "gfx/interface/traditions/tiles/tradition_category_tile_flusion.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_flusion"
+		textureFile = "gfx/interface/traditions/tiles/tradition_category_tile_flusion.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_border_colonies"
+		textureFile = "gfx/interface/traditions/tradition_border_colonies.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_work_arrangements"
+		textureFile = "gfx/interface/traditions/tradition_work_arrangements.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_flusions_bounty"
+		textureFile = "gfx/interface/traditions/tradition_flusions_bounty.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_centralization"
+		textureFile = "gfx/interface/traditions/tradition_centralization.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_imperial_management"
+		textureFile = "gfx/interface/traditions/tradition_imperial_management.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_project_mondkanone"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_project_mondkanone.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_project_dominance"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_project_dominance.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_project_celestia"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_project_celestia.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = { name = "GFX_wg_player_katzen"			texturefile = "gfx/interface/icons/diplomacy/diplomacy_katzen_conquest.dds" }
+	spriteType = { name = "GFX_wg_end_katzen_threat"			texturefile = "gfx/interface/icons/diplomacy/diplomacy_katzen_defence.dds" }
+}
+	
+spriteTypes = {
+	spriteType = {
+		name = "GFX_katzen_war_forge_1_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/katzen_warforge.dds"
+	}
+}

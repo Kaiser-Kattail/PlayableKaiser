@@ -1,0 +1,70 @@
+kaiser_planet_0 = {
+	entity = ""
+	construction_entity = ""
+	# construction_blocks_and_blocked_by = none # BLOCKING TEST
+	portrait = "GFX_megastructure_construction_background"
+	show_in_outliner = no
+
+
+	build_time = 1
+
+	potential = {
+		always = no
+	}
+
+	possible = {
+		always = no
+	}
+
+	on_build_complete = {
+	}
+}
+
+kaiser_planet_1 = {
+	entity = "kaiser_planet_stage_01_construction_entity"
+	construction_entity = "kaiser_planet_stage_01_construction_entity"
+	portrait = "GFX_megastructure_planetcraft"
+	show_in_outliner = no
+
+	build_time = 1
+
+#   possible = { from = { has_technology = kaiser_planet_core } }
+
+}
+
+kaiser_planet_2 = {
+	entity = "kaiser_planet_stage_02_construction_entity"
+	construction_entity = "kaiser_planet_stage_02_construction_entity"
+	portrait = "GFX_megastructure_planetcraft"
+	show_in_outliner = no
+
+
+	build_time = 1
+
+
+#	possible = { from = { has_technology = kaiser_planet_core } }
+}
+
+kaiser_planet_3 = {
+	entity = "kaiser_planet_stage_03_construction_entity"
+	construction_entity = "kaiser_planet_stage_03_construction_entity"
+	portrait = "GFX_megastructure_planetcraft"
+	show_in_outliner = no
+
+
+	build_time = 1
+
+#	possible = { from = { has_technology = kaiser_planet_core } }
+
+}
+
+kaiser_planet_4 = {
+	entity = ""
+	construction_entity = "kaiser_planet_stage_04_construction_entity"
+	portrait = "GFX_megastructure_planetcraft"
+	show_in_outliner = no
+
+	build_time = 1
+
+#	possible = { from = { has_technology = kaiser_planet_core } }
+}

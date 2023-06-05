@@ -1,0 +1,19 @@
+planet_is_dry = {
+	OR = {
+		is_planet_class = pc_desert
+		is_planet_class = pc_outback
+		is_planet_class = pc_coastal
+		is_planet_class = pc_sandsea
+		is_planet_class = pc_oasis
+		is_planet_class = pc_arid
+		is_planet_class = pc_savannah
+		is_planet_class = pc_steppe
+		is_planet_class = pc_mesa
+		is_planet_class = pc_badlands
+		is_planet_class = pc_hadesert
+		is_planet_class = pc_prairie
+		is_planet_class = pc_veld
+		is_planet_class = pc_semiarid
+		is_planet_class = pc_med
+	}
+}

@@ -1,0 +1,50 @@
+katzen_war_forge_0 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	construction_blocks_others = no
+	entity_offset = { x = 0 y = 0 }
+	resources = {
+		category = megastructures
+		cost = { alloys = 1000 }
+	}
+	potential = { always = no }
+	ai_weight = { factor = 0 }
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {}
+	
+	}	
+
+	
+katzen_war_forge_1 = {
+	entity = "katzen_war_forge_entity"
+	construction_entity = "katzen_war_forge_entity"
+	portrait = "GFX_megastructure_construction_background"
+	show_galactic_map_icon = no
+	place_entity_on_planet_plane = no
+	construction_blocks_others = no
+	entity_offset = { x = 0 y = 0 }
+	build_time = 720
+	show_in_outliner = no
+	resources = {
+		category = megastructures
+		cost = { }
+		produces = { alloys = 4 }
+	}
+	upgrade_from = {
+		katzen_war_forge_0
+	}
+	country_modifier = {
+		country_naval_cap_add = 2
+		starbase_shipyard_build_speed_mult = 0.02
+	}
+	potential = { always = yes }
+	ai_weight = { factor = 0 }
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {}	
+}	
+
+	

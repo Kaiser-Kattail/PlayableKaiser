@@ -1,0 +1,72 @@
+
+#Kaiser Moon
+ship_design = {
+	name = "Kaiser Attack Moon"
+	ship_size = giga_massive_planet
+	section = {
+		template = "kaiser_moon_bow_01_key"
+		slot = "bow"
+
+	}
+
+	section = {
+		template = "kaiser_moon_mid_01_key"
+		slot = "mid"
+
+	}
+
+	section = {
+		template = "kaiser_moon_stern_01_key"
+		slot = "stern"
+
+	}
+
+	section = {
+		template = "kaiser_moon_sternthrusters_01_key"
+		slot = "sternthrusters"
+
+	}
+	required_component = "REACTOR_MOON"
+	required_component = "HYPER_DRIVE_1"
+	required_component = "SENSOR_1"
+	required_component = "GIGA_MOON_COMPUTER"
+
+}
+
+ship_design = {
+	name = "Kaiser Behemoth Planet"
+	ship_size = kaiser_planet
+	section = {
+		template = "kaiser_planet_bowgun_01_key"
+		slot = "bowgun"
+	}
+
+	section = {
+		template = "kaiser_planet_bow_01_key"
+		slot = "bow"
+
+	}
+
+	section = {
+		template = "kaiser_planet_mid_01_key"
+		slot = "mid"
+
+	}
+
+	section = {
+		template = "kaiser_planet_stern_01_key"
+		slot = "stern"
+
+	}
+
+	section = {
+		template = "kaiser_planet_sternthrusters_01_key"
+		slot = "sternthrusters"
+
+	}
+	required_component = "REACTOR_PLANET"
+	required_component = "HYPER_DRIVE_1"
+	required_component = "SENSOR_1"
+	required_component = "GIGA_PLANET_COMPUTER"
+
+}

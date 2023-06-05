@@ -1,0 +1,350 @@
+namespace = misc
+
+country_event = {
+	id = misc.1
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_origin = origin_katzen
+		has_tradition = tr_katzen_planetside_garrisons
+	}
+	immediate = {
+		every_controlled_planet = {
+			limit = {
+				NOT = {
+					has_planet_flag = playerflusion
+					any_planet_army = {
+						army_type = peacekeeper_army
+					}
+				}
+				has_ground_combat = no
+				is_colony = yes
+			}
+			while = { count = 1	create_army = { 
+				name = "Katzenarmee Peacekeeper Garrison"	
+				owner = event_target:katzenartig 
+				species = owner_main_species 
+				type = "peacekeeper_army"
+				land_army = yes
+			} }
+		}
+	}
+}
+
+country_event = {
+	id = misc.3
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_origin = origin_katzen
+	}
+	immediate = {
+		set_variable = { #count total systems, used so kaiser can change the name
+			which = "player_katzen_galaxy_total_system_count"
+			value = 0
+		}
+		every_system = { #every system in galaxy adds 1
+			event_target:katzenartig = {
+				change_variable = {
+					which = "player_katzen_galaxy_total_system_count"
+					value = 1
+				}
+			}
+		}
+		set_variable = { #count katzen systems, used so kaiser can change the name
+			which = "player_katzen_total_system_count"
+			value = 0
+		}
+		every_system_within_border = { #count katzen systems
+			event_target:katzenartig = {
+				change_variable = {
+					which = "player_katzen_total_system_count"
+					value = 1
+				}
+			}
+		}
+		set_variable = { #check for greater katzen imperium
+			which = "player_greater_imperium_limit"
+			value = "player_katzen_galaxy_total_system_count"
+		}
+		multiply_variable = { #the limit to form greater imperium is 45% the total systems
+			which = "player_greater_imperium_limit"
+			value = 0.45
+		}
+		set_variable = { #check for galactic katzen imperium
+			which = "player_galactic_imperium_limit"
+			value = "player_katzen_galaxy_total_system_count"
+		}
+		multiply_variable = { #the limit to form galactic imperium is 75% the total systems
+			which = "player_galactic_imperium_limit"
+			value = 0.75
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = player_big_katzen_empire_formed
+				}
+				check_variable = {
+					which = "player_katzen_total_system_count"
+					value >= "player_greater_imperium_limit"
+				}
+			}
+			set_country_flag = player_big_katzen_empire_formed
+			change_country_flag = {
+				icon = {
+					category="domination"
+					file="domination_3.dds"
+				}
+				background = {
+					category="backgrounds"
+					file="v.dds"
+				}
+				colors = {
+					"indigo"
+					"dark_purple"
+					"null"
+					"null"
+				}
+			}
+			set_name = "Großkatzenartig Imperium"
+			every_country = { country_event = { id = misc.4 } }
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = player_galactic_katzen_empire_formed
+				}
+				check_variable = {
+					which = "player_katzen_total_system_count"
+					value >= "player_galactic_imperium_limit"
+				}
+			}
+			set_country_flag = player_galactic_katzen_empire_formed
+			change_country_flag = {
+				icon = {
+					category="domination"
+					file="domination_18.dds"
+				}
+				background = {
+					category="backgrounds"
+					file="circle.dds"
+				}
+				colors = {
+					"indigo"
+					"dark_blue"
+					"null"
+					"null"
+				}
+			}
+			set_name = "Galaktisches Katzimperium"
+			every_country = { country_event = { id = misc.5 } }
+		}
+	}
+}
+
+country_event = { #big
+	id = misc.4
+	title = "misc.4.name"
+	desc = "misc.4.desc"
+
+	picture = GFX_evt_announcement
+	show_sound = event_celebration
+	location = from
+	is_triggered_only = yes
+
+	option = { #aw
+		name = "misc.4.a"
+		trigger = {
+			NOT = {
+				has_origin = origin_katzen
+			}
+		}
+	}
+	option = { #:KaiserPog:
+		name = "misc.4.b"
+		trigger = {
+			has_origin = origin_katzen
+		}
+	}
+}
+
+country_event = { #galactic
+	id = misc.5
+	title = "misc.5.name"
+	desc = "misc.5.desc"
+
+	picture = GFX_evt_binary_stars
+	show_sound = event_celebration
+	location = from
+	is_triggered_only = yes
+
+	option = { #aw
+		name = "misc.5.a"
+		trigger = {
+			NOT = {
+				has_origin = origin_katzen
+			}
+		}
+	}
+	option = { #:KaiserPog:
+		name = "misc.5.b"
+		trigger = {
+			has_origin = origin_katzen
+		}
+	}
+}
+
+country_event = {
+	id = misc.6
+	title = misc.6.title
+	desc = misc.6.desc
+	show_sound = par_portrait_02
+	picture = GFX_leader_recruitment_bg_renowned
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_recruit
+
+	immediate = {
+		ethic_leader_creator = {
+			SPECIES_CLASS = MAM
+			LEADER_PORTRAIT = mam14
+			CLASS = general
+			NAME = NAME_gunfur
+			LEVEL = 4
+			GENDER = male
+			IMMORTAL = no
+			ETHIC = militarist
+			DESC = gunfurdesc
+			CATCH_PHRASE = gunfur_catch_phrase
+		}
+		last_created_leader = {
+			add_trait = subclass_general_invader
+			add_trait = leader_trait_gunfur
+			add_trait = katzen_trait_elite
+			add_trait = leader_trait_butcher_2
+			add_trait = leader_trait_victory_or_death
+			set_age = 32
+			save_global_event_target_as = gunfur
+		}
+	}
+
+	picture_event_data = {
+		portrait = event_target:ethic_leader
+		room = ethic_spaceship_room
+	}
+
+	option = {
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:gunfur = {
+				kill_leader = {
+					flag = gunfur show_notification = no
+				}
+			}
+		}
+	}
+	option = {
+		name = misc.6.a
+		response_text = misc.6.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = misc.6.b
+		response_text = misc.6.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = misc.6.c
+		response_text = misc.6.c.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = HIRE
+		tag = hire_leader
+		custom_tooltip = misc.6.hire_custom_tooltip
+		hidden_effect = {
+			ethic_leader_hire_effect = {
+				GLOBAL_EVENT_TARGET = gunfur
+			}
+			create_fleet = {
+				name = "Großdominiontracks Force"
+				effect = {
+					set_owner = root
+					while = {
+						count = 1
+						create_army_transport = {
+							army_type = dominion_tracks
+							army_name = "NAME_dominiontracks"
+							ship_name = "NAME_dominiontracks"
+							
+						}
+						 
+					}
+					set_location = {
+						target = root.capital_scope
+					}
+				}
+			}
+			last_created_army = {
+				assign_leader = event_target:gunfur
+			}
+		}
+	}
+}
+
+country_event = {
+	id = misc.7
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		FROMFROMFROM = { # Planet where ground combat is taking place.
+			OR = {
+				random_ground_combat_attacker = {
+					limit = {
+						exists = leader
+						leader = {
+							has_trait = leader_trait_gunfur
+						}
+					}
+					leader = {
+						save_event_target_as = gunfur_loot
+					}
+				}
+				random_ground_combat_defender = {
+					limit = {
+						exists = leader
+						leader = {
+							has_trait = leader_trait_gunfur
+						}
+					}
+					leader = {
+						save_event_target_as = gunfur_loot
+					}
+				}
+			}
+		}
+
+		# If attacking army has a leader with Crusader trait, award Unity.
+		if = {
+			limit = { exists = event_target:gunfur_loot }
+			FROMFROM = {
+				if = {
+					limit = {
+						event_target:gunfur_loot = {
+							has_trait = leader_trait_gunfur
+						}
+					}
+					add_resource = {
+						alloys = 10
+						energy = 25
+						minerals = 25
+						food = 25
+					}
+				}
+			}
+		}
+	}
+}

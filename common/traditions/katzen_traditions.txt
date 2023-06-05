@@ -1,0 +1,268 @@
+#KAISERISM
+tr_katzen_adopt = {
+	unlocks_agenda = agenda_project_mondkanone
+	modifier = {
+		diplo_weight_naval_mult = 0.1
+		country_power_projection_influence_produces_add = 1
+	}
+}
+
+tr_katzen_finish = {
+	# the refund effect is implemented elsewhere
+	modifier = {
+		ascension_perks_add = 1
+	}
+}
+
+tr_katzen_war_machine = {
+	modifier = {
+		ships_upkeep_mult = -0.15
+		starbase_shipyard_build_cost_mult = -0.15
+		country_leader_cap_add = 1
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_katzen_planetside_garrisons = {
+	possible = {
+		has_tradition = tr_katzen_logistiks
+	}
+
+	modifier = {
+		planet_soldiers_unity_produces_add = 2
+		country_leader_cap_add = 1
+
+		show_only_custom_tooltip = no
+		custom_tooltip = tr_katzen_planetside_garrisons_effect
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_katzen_logistiks = {
+	modifier = {
+		armies_upkeep_mult = -0.35
+		planet_army_build_speed_mult = 0.2
+		country_leader_cap_add = 1
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_katzen_celestial_supremacy = {
+	possible = {
+		has_tradition = tr_katzen_war_machine
+		has_tradition = tr_katzen_logistiks
+	}
+
+	modifier = {
+		megastructure_build_speed_mult = 0.05
+		shipsize_giga_planet_behemoth_hull_mult = 0.10
+		shipsize_giga_massive_planet_hull_mult = 0.20
+		country_leader_cap_add = 1
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_katzenkrieglosung = {
+	possible = {
+		has_tradition = tr_katzen_war_machine
+	}
+
+	modifier = {
+		country_naval_cap_mult = 0.1
+		country_leader_cap_add = 1
+
+		show_only_custom_tooltip = no
+		custom_tooltip = tr_katzenkrieglosung_effect
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+#FLUSIOCENTRISM
+
+tr_flusion_adopt = {
+	unlocks_agenda = agenda_project_dominance
+	possible = {
+		has_ascension_perk = ap_kaiser_moon
+	}
+	on_enabled = {
+		hidden_effect = {
+			set_country_flag = flusion_unity_scale
+			country_event = {
+				id = centrism.3 days = 12
+			}
+		}
+		custom_tooltip = "tr_flusion_adopt_effect"
+	}
+}
+
+tr_flusion_finish = {
+	# the refund effect is implemented elsewhere
+	on_enabled = {
+		if = {
+			limit = {
+				NOT = {
+					has_technology = tech_katzen_flusioarc
+				}
+			}
+			give_technology = {
+				tech = tech_katzen_flusioarc
+			}
+			limit = {
+				NOT = {
+					has_technology = tech_capital_productivity_1
+				}
+			}
+			give_technology = {
+				tech = tech_capital_productivity_1
+			}
+			limit = {
+				NOT = {
+					has_technology = tech_katzen_reactor
+				}
+			}
+			add_tech_progress = {
+				tech = tech_katzen_reactor
+				progress = 0.25
+			}
+			limit = {
+				NOT = {
+					has_technology = tech_katzen_forge
+				}
+			}
+			add_tech_progress = {
+				tech = tech_katzen_forge
+				progress = 0.25
+			}
+			limit = {
+				NOT = {
+					has_technology = tech_katzen_habitability
+				}
+			}
+			add_tech_progress = {
+				tech = tech_katzen_habitability
+				progress = 0.25
+			}
+			limit = {
+				NOT = {
+					has_technology = tech_katzen_lab
+				}
+			}
+			add_tech_progress = {
+				tech = tech_katzen_lab
+				progress = 0.25
+			}
+			limit = {
+				NOT = {
+					has_technology = tech_katzen_luxuries
+				}
+			}
+			add_tech_progress = {
+				tech = tech_katzen_luxuries
+				progress = 0.25
+			}
+			limit = {
+				NOT = {
+					has_technology = tech_katzen_rr
+				}
+			}
+			add_tech_progress = {
+				tech = tech_katzen_rr
+				progress = 0.25
+			}
+			limit = {
+				NOT = {
+					has_technology = tech_katzen_theater
+				}
+			}
+			add_tech_progress = {
+				tech = tech_katzen_theater
+				progress = 0.25
+			}
+		}
+	}
+	custom_tooltip = "tr_flusion_finish_effect"
+	modifier = {
+		ascension_perks_add = 1
+	}
+}
+
+tr_work_arrangements = {
+	ai_weight = {
+		factor = 5000
+	}
+	on_enabled = {
+		event_target:playerflusion = {
+			add_deposit = d_bureau_of_benefits
+		}
+	}
+	custom_tooltip = "tr_work_arrangements_effect"
+}
+
+tr_border_colonies = {
+	ai_weight = {
+		factor = 5000
+	}
+	custom_tooltip = "tr_border_colonies_effect"
+}
+
+tr_imperial_management = {
+	possible = {
+		has_tradition = tr_work_arrangements
+	}
+
+	on_enabled = {
+		event_target:playerflusion = {
+			add_deposit = d_flusion_bureaucracy
+		}
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_flusions_bounty = {
+	possible = {
+		has_tradition = tr_border_colonies
+	}
+
+	on_enabled = {
+		event_target:playerflusion = {
+			add_deposit = d_flusion_bounty
+		}
+	}
+
+	custom_tooltip_with_modifiers = "tr_flusions_bounty_effect"
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_centralization = {
+	possible = {
+		has_tradition = tr_flusions_bounty
+		has_tradition = tr_imperial_management
+	}
+
+	custom_tooltip = "tr_centralization_effect"
+
+	ai_weight = {
+		factor = 5000
+	}
+}

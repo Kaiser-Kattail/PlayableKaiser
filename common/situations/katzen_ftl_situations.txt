@@ -1,0 +1,93 @@
+situation_ftl_development = {
+	picture = GFX_evt_analyzing_artifacts
+	category = neutral
+	start_value = 0
+	complete_icon = GFX_situation_outcome_positive
+	complete_icon_frame = GFX_situation_outcome_frame_green
+
+	monthly_progress = {
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_minor_research
+			add = 1
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_major_research
+			add = 2
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_heavy_research
+			add = 4
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = ftl_situation_success
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = ftl.2
+				}
+			}
+		}
+	}
+
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 120
+		}
+	}
+
+	approach = {
+		name = approach_minor_research
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				physics_research = 15
+				society_research = 15
+				engineering_research = 15
+			}
+		}
+	}
+	approach = {
+		name = approach_major_research
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				physics_research = 30
+				society_research = 30
+				engineering_research = 30
+			}
+		}
+	}
+	approach = {
+		name = approach_heavy_research
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_red
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				physics_research = 60
+				society_research = 60
+				engineering_research = 60
+			}
+		}
+	}
+}

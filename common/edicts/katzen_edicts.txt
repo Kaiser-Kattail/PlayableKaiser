@@ -1,0 +1,13 @@
+katzen_leader_upgrade = {
+	icon = "GFX_katzen_edict_1"
+	length = 1
+	resources = { category = edicts }
+	potential = { has_origin = origin_katzen }
+	effect = {
+		country_event = {
+			id = katzen.7
+		}
+	}
+	ai_weight = { weight = 0 }
+}
+

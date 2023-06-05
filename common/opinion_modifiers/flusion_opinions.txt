@@ -1,0 +1,17 @@
+##########################################################################
+# HARD FIXED STATE - DO NOT REMOVE OR RENAME ANY OF THESE
+##########################################################################
+
+opinion_katzen_militarism = {
+	opinion = {
+		modifier = {
+			add = -25
+			has_ethic = ethic_fanatic_militarist
+			FROM = { has_ethic = "ethic_frantic_fanatic_militarist" }
+		}	
+		modifier = {
+			add = -50
+			FROM = { has_ethic = "ethic_frantic_fanatic_militarist" }
+		}		
+	}
+}

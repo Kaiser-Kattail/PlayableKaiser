@@ -1,0 +1,791 @@
+guiTypes = {
+
+	# Giga Event Window
+	containerWindowType = {
+		name = "kaiser_conquest_map"
+		orientation = center
+		origo = center
+		moveable = yes
+		size = { width = 1400 height = 1000 }
+
+		background = {
+			name = "background"
+			quadTextureSprite = "gfx_transparency_button"
+		}
+
+		iconType = {
+			name = "giga_menu"
+			spriteType = "GFX_kaiser_conquest_bg"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = 20 y = 20000 }			# HIDDEN
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_long"
+			position = { x = 20 y = 20000 }			# HIDDEN
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "focus_button"
+			position = { x = 20 y = 20000 }			# HIDDEN
+			orientation = "UPPER_RIGHT"
+			spriteType = "GFX_fleetview_focus"
+			buttonFont = "cg_16b"
+			shortcut = "q"
+		}
+
+		buttonType = {
+			name = "close"
+			spriteType = "GFX_giga_menu_button_bg"
+			position = { x = 20 y = 20000 }			# HIDDEN
+			font = "cg_16b"
+			format = center
+			text = "giga_menu.2.confirm"
+		}
+
+		instantTextBoxType = {
+			name = "heading"
+			font = "malgun_goth_24"
+			text = "DIPLOMACY"
+			position = { x = 20 y = 20000 }			# HIDDEN
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "alien_message_background"
+			size = { x = 485 y = 420 }
+			position = { x = 45 y = -20000 }		 # HIDDEN
+			spriteType = "GFX_tiles_dark_area_cut_8"
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "confirm_button"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 45 y = -20000 }		 # HIDDEN
+			Orientation = "UPPER_RIGHT"
+			font = "cg_16b"
+			text = "MESSAGE_OK"
+			clicksound = "confirmation"
+		}
+
+
+		### PORTRAIT ###
+		containerWindowType = {
+			name = "portrait_background"
+			position = { x = 17 y = 45 }
+			size = { width = 482 height = 175 }
+			clipping = yes
+
+			iconType = {
+				name = "event_picture"
+				spriteType = "GFX_diplomacy_portrait_frame"
+				position = { x = -6 y = -5 }
+			}
+
+			iconType = {
+				name = "portrait"
+				position = { x = 250 y = 0 }
+				spriteType = "GFX_portrait_character"
+			}
+		}
+
+		containerWindowType = {
+			name = "portrait"
+			position = { x = 65 y = 640 }
+			size = { width = 482 height = 180 }
+			clipping = no
+			
+			iconType = {
+				name = "portrait"
+				spriteType = "GFX_portrait_gamesetup_mask"
+				alwaysTransparent = yes
+				position = { x = -3 y = -3 }
+				scale = 0.7
+			}
+
+			iconType = {
+				name = "black_frame"
+				spriteType = "GFX_flusion_portrait_shadow_frame"
+				position = { x = -6 y = -6 }
+				alwaysTransparent = yes
+				scale = 0.7
+			}
+
+			iconType = {
+				name = "stripes_1"
+				spriteType = "GFX_diplomacy_stripes_2"
+				alwaysTransparent = yes
+				position = { x = -3 y = -3 }
+				scale = 0.7
+			}
+	
+			iconType = {
+				name = "city_frame"
+				spriteType = "GFX_diplomacy_portrait_frame"
+				position = { x = -6 y = -5 }
+				alwaysTransparent = yes
+				scale = 0.7
+			}
+
+			iconType = {
+				name = "douclaw_name"
+				spriteType = "GFX_douclaw_name"
+				position = { x = 105 y = 250 }
+				alwaysTransparent = yes
+				scale = 1
+			}
+		}
+
+		containerWindowType = { #THE MAP
+			name = "kaiser_conquest_map"
+			position = { x = 281 y = 150 }
+			size = { width = 868 height = 434 }
+
+			iconType = {
+				name = "kaiser_conquest_map_bg"
+				spriteType = "GFX_kaiser_conquest_map_bg"
+				alwaysTransparent = yes
+			}
+
+			#LAURN
+			effectButtonType  = {
+				size = { x = 90	 y = -1 }
+				scale = 1
+				name = "laurandar_map_icon_0"
+				no_clicksound = yes
+				effect = "kaiser_laurandar_0"
+				spriteType = "GFX_laurn_0"
+				position = { x = 692 y = 63 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "laurandar_map_icon_1"
+				no_clicksound = yes
+				effect = "kaiser_laurandar_1"
+				spriteType = "GFX_laurn_1"
+				position = { x = 692 y = 63 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "laurandar_map_icon_2"
+				no_clicksound = yes
+				effect = "kaiser_laurandar_2"
+				spriteType = "GFX_laurn_2"
+				position = { x = 692 y = 63 }
+			}
+
+			#KATZEN
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "katzen_map_icon_0"
+				no_clicksound = yes
+				effect = "kaiser_katzen_0"
+				spriteType = "GFX_katzen_0"
+				position = { x = 296 y = 86 }
+			}
+
+			#KRONK
+			effectButtonType  = {
+				size = { x = 90	 y = -1 }
+				scale = 1
+				name = "kronk_map_icon_0"
+				no_clicksound = yes
+				effect = "kaiser_kronk_0"
+				spriteType = "GFX_kronk_0"
+				position = { x = 528 y = 150 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90	 y = -1 }
+				scale = 1
+				name = "kronk_map_icon_1"
+				no_clicksound = yes
+				effect = "kaiser_kronk_1"
+				spriteType = "GFX_kronk_1"
+				position = { x = 528 y = 150 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90	 y = -1 }
+				scale = 1
+				name = "kronk_map_icon_2"
+				no_clicksound = yes
+				effect = "kaiser_kronk_2"
+				spriteType = "GFX_kronk_2"
+				position = { x = 528 y = 150 }
+			}
+
+			#symbies
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "symbies_map_icon_0"
+				no_clicksound = yes
+				effect = "kaiser_symbies_0"
+				spriteType = "GFX_symbies_0"
+				position = { x = 698 y = 151 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "symbies_map_icon_1"
+				no_clicksound = yes
+				effect = "kaiser_symbies_1"
+				spriteType = "GFX_symbies_1"
+				position = { x = 698 y = 151 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "symbies_map_icon_2"
+				no_clicksound = yes
+				effect = "kaiser_symbies_2"
+				spriteType = "GFX_symbies_2"
+				position = { x = 698 y = 151 }
+			}
+
+			#ezicania
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "ezicania_map_icon_0"
+				no_clicksound = yes
+				effect = "kaiser_ezicania_0"
+				spriteType = "GFX_ezicania_0"
+				position = { x = 481 y = 88 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "ezicania_map_icon_1"
+				no_clicksound = yes
+				effect = "kaiser_ezicania_1"
+				spriteType = "GFX_ezicania_1"
+				position = { x = 481 y = 88 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "ezicania_map_icon_2"
+				no_clicksound = yes
+				effect = "kaiser_ezicania_2"
+				spriteType = "GFX_ezicania_2"
+				position = { x = 481 y = 88 }
+			}
+
+			#yinja
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "yinja_map_icon_0"
+				no_clicksound = yes
+				effect = "kaiser_yinja_0"
+				spriteType = "GFX_yinja_0"
+				position = { x = 630 y = 151 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "yinja_map_icon_1"
+				no_clicksound = yes
+				effect = "kaiser_yinja_1"
+				spriteType = "GFX_yinja_1"
+				position = { x = 630 y = 151 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "yinja_map_icon_2"
+				no_clicksound = yes
+				effect = "kaiser_yinja_2"
+				spriteType = "GFX_yinja_2"
+				position = { x = 630 y = 151 }
+			}
+
+			#COOKIE
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "cookie_map_icon_0"
+				no_clicksound = yes
+				effect = "kaiser_cookie_0"
+				spriteType = "GFX_cookie_0"
+				position = { x = 401 y = 233 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "cookie_map_icon_1"
+				no_clicksound = yes
+				effect = "kaiser_cookie_1"
+				spriteType = "GFX_cookie_1"
+				position = { x = 401 y = 233 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "cookie_map_icon_2"
+				no_clicksound = yes
+				effect = "kaiser_cookie_2"
+				spriteType = "GFX_cookie_2"
+				position = { x = 401 y = 233 }
+			}
+
+			#haranian
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "haranian_map_icon_0"
+				no_clicksound = yes
+				effect = "kaiser_haranian_0"
+				spriteType = "GFX_haranian_0"
+				position = { x = 503 y = 335 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "haranian_map_icon_1"
+				no_clicksound = yes
+				effect = "kaiser_haranian_1"
+				spriteType = "GFX_haranian_1"
+				position = { x = 503 y = 335 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "haranian_map_icon_2"
+				no_clicksound = yes
+				effect = "kaiser_haranian_2"
+				spriteType = "GFX_haranian_2"
+				position = { x = 503 y = 335 }
+			}
+
+			#SOLAKIA
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "solakians_map_icon_0"
+				no_clicksound = yes
+				effect = "kaiser_solakians_0"
+				spriteType = "GFX_solakians_0"
+				position = { x = 194 y = 196 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "solakians_map_icon_1"
+				no_clicksound = yes
+				effect = "kaiser_solakians_1"
+				spriteType = "GFX_solakians_1"
+				position = { x = 194 y = 196 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "solakians_map_icon_2"
+				no_clicksound = yes
+				effect = "kaiser_solakians_2"
+				spriteType = "GFX_solakians_2"
+				position = { x = 194 y = 196 }
+			}
+
+			#CYATS
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "cyatianalas_map_icon_0"
+				no_clicksound = yes
+				effect = "kaiser_cyatianalas_0"
+				spriteType = "GFX_cyatianalas_0"
+				position = { x = 531 y = 289 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "cyatianalas_map_icon_1"
+				no_clicksound = yes
+				effect = "kaiser_cyatianalas_1"
+				spriteType = "GFX_cyatianalas_1"
+				position = { x = 531 y = 289 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "cyatianalas_map_icon_2"
+				no_clicksound = yes
+				effect = "kaiser_cyatianalas_2"
+				spriteType = "GFX_cyatianalas_2"
+				position = { x = 531 y = 289 }
+			}
+
+			#MERCURIA
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "mercurians_map_icon_0"
+				no_clicksound = yes
+				effect = "kaiser_mercurians_0"
+				spriteType = "GFX_mercurians_0"
+				position = { x = 123 y = 64 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "mercurians_map_icon_1"
+				no_clicksound = yes
+				effect = "kaiser_mercurians_1"
+				spriteType = "GFX_mercurians_1"
+				position = { x = 123 y = 64 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "mercurians_map_icon_2"
+				no_clicksound = yes
+				effect = "kaiser_mercurians_2"
+				spriteType = "GFX_mercurians_2"
+				position = { x = 123 y = 64 }
+			}
+
+			#RAVKA
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "ravkan_map_icon_0"
+				no_clicksound = yes
+				effect = "kaiser_ravkan_0"
+				spriteType = "GFX_ravkan_0"
+				position = { x = 192 y = 339 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "ravkan_map_icon_1"
+				no_clicksound = yes
+				effect = "kaiser_ravkan_1"
+				spriteType = "GFX_ravkan_1"
+				position = { x = 192 y = 339 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "ravkan_map_icon_2"
+				no_clicksound = yes
+				effect = "kaiser_ravkan_2"
+				spriteType = "GFX_ravkan_2"
+				position = { x = 192 y = 339 }
+			}
+
+			#Zousans
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "zousans_map_icon_0"
+				no_clicksound = yes
+				effect = "kaiser_zousans_0"
+				spriteType = "GFX_zousans_0"
+				position = { x = 88 y = 267 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "zousans_map_icon_1"
+				no_clicksound = yes
+				effect = "kaiser_zousans_1"
+				spriteType = "GFX_zousans_1"
+				position = { x = 88 y = 267 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "zousans_map_icon_2"
+				no_clicksound = yes
+				effect = "kaiser_zousans_2"
+				spriteType = "GFX_zousans_2"
+				position = { x = 88 y = 267 }
+			}
+
+			#DROOG
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "droog_map_icon_0"
+				no_clicksound = yes
+				effect = "kaiser_droog_0"
+				spriteType = "GFX_droog_0"
+				position = { x = -1 y = 185 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "droog_map_icon_1"
+				no_clicksound = yes
+				effect = "kaiser_droog_1"
+				spriteType = "GFX_droog_1"
+				position = { x = -1 y = 185 }
+			}
+
+			effectButtonType  = {
+				size = { x = 90 y = -1 }
+				scale = 1
+				name = "droog_map_icon_2"
+				no_clicksound = yes
+				effect = "kaiser_droog_2"
+				spriteType = "GFX_droog_2"
+				position = { x = -1 y = 185 }
+			}
+
+			iconType = {
+				name = "kaiser_conquest_map_overlay"
+				spriteType = "GFX_kaiser_conquest_map_overlay"
+				alwaysTransparent = yes
+			}
+		}
+
+		### EMPIRE INFO ###
+		iconType = {
+			name = "empire_info_bg"
+			spriteType = "GFX_diplomacy_dark_fade_bg"
+			position = { x = 45 y = -20000 }			 # HIDDEN
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "empire_name"
+			font = "malgun_goth_24"
+			text = "Kammarian Galactic Concordat"
+			position = { x = 45 y = -20000 }			 # HIDDEN
+			maxWidth = 450
+			maxHeight = 16
+			format = LEFT
+			text_color_code = "E"
+			fixedsize = yes
+		}
+
+		instantTextBoxType={
+			name = "empire_government_type"
+			font = "cg_16b"
+			text = "Autocracy"
+			position = { x = 45 y = -20000 }			 # HIDDEN
+			maxWidth = 250
+			maxHeight = 16
+			format = LEFT
+			fixedsize = yes
+			text_color_code = "Y"
+		}
+
+		instantTextBoxType={
+			name = "empire_personality_type"
+			font = "cg_16b"
+			text = "Despicable Neutrals"
+			position = { x = 45 y = -20000 }			 # HIDDEN
+			maxWidth = 250
+			maxHeight = 16
+			format = LEFT
+			fixedsize = yes
+		}
+
+		OverlappingElementsBoxType = {
+			name = "empire_ethics_icons"
+			position = { x = 45 y = -20000 }			 # HIDDEN
+			size = { x = 240 y = 30 }
+			spacing = 2.0
+			format = left
+		}
+
+		buttonType = {
+			name = "empire_flag"
+			quadTextureSprite = "GFX_empire_flag_128"
+			position = { x = 25 y = 20000 }				# HIDDEN
+			orientation = UPPER_LEFT
+			scale = 0.5
+		}
+
+		containerWindowType = {
+			name = "leader_details"
+			position = { x = 45 y = -20000 }			 # HIDDEN
+
+			containerWindowType = {
+				name = "empire_traits_box"
+				position = { x = 45 y = -20000 }		 # HIDDEN
+				size = { width = 210 height = 75 }
+
+				background = {
+					name = "ethics_bg"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+			}
+
+			instantTextBoxType = {
+				name = "empire_traits_label"
+				position = { x = 45 y = -20000 }		 # HIDDEN
+				font = "cg_16b"
+				maxWidth = 230
+				maxHeight = 20
+				fixedSize = yes
+				format = left
+				#text_color_code = "E"
+				text = "RULER_TRAITS"
+				alwaysTransparent = yes
+			}
+
+			overlappingElementsBoxType = {
+				name = "leader_traits"
+				position = { x = 45 y = -20000 }		 # HIDDEN
+				size = { x = 125 y = 330 }
+			}
+
+			instantTextBoxType = {
+				name = "leader_name"
+				position = { x = 45 y = -20000 }		 # HIDDEN
+				font = "cg_16b"
+				maxWidth = 330
+				maxHeight = 20
+				fixedSize = yes
+				format = left
+				text = "Leader Name"
+				text_color_code = "E"
+			}
+
+			instantTextBoxType = {
+				name = "leader_species"
+				position = { x = 45 y = -20000 }		 # HIDDEN
+				font = "cg_16b"
+				maxWidth = 330
+				maxHeight = 20
+				fixedSize = yes
+				text = "Leader Species"
+				format = left
+			}
+		}
+
+		### OPINION
+		containerWindowType = {
+			name = "opinion_window"
+			position = { x = 45 y = -20000 }		 # HIDDEN
+			size = { width = 94 height = 30 }
+
+			# Use this for tooltip area, picture comes from somewhere else
+			background = {
+				name = "opinion_bg"
+				spriteType = "GFX_tiled_window_transparent"
+			}
+
+			iconType = {
+				name = "their_opinion_icon"
+				spriteType = "GFX_diplomacy_opinion"
+				position = { x = 45 y = -20000 }		 # HIDDEN
+				alwaysTransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "their_opinion"
+				font = "cg_16b"
+				maxWidth = 40
+				position = { x = 45 y = -20000 }		 # HIDDEN
+				format = left
+				text = "100"
+				alwaysTransparent = yes
+			}
+		}
+
+		### EVENT DIPLO ###
+
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = 0 y = 400 }
+			size = { width = 1000 height = 1000 }
+
+			instantTextBoxType = {
+				name = "action_title"
+				position = { x = 460 y = -20000 }			# HIDDEN
+				maxWidth = 520
+				alwaysTransparent = yes
+				font = "large_title_font"
+				text_color_code = "W"
+			}
+
+			instantTextBoxType={
+				name = "action_desc"
+				font = "malgun_goth_24"
+				position = { x = 800 y = -20000 }		 # HIDDEN
+				maxWidth = 500
+				maxHeight = 180
+				Orientation = "UPPER_LEFT"
+				format = center
+				alwaysTransparent = yes
+				text_color_code = "H"
+			}
+
+			listboxType = {
+				name = "option_list"
+				position = { x = 460 y = -288 }
+				size = { x = 250 y = 60 }
+				spacing = 1
+				scrollbartype = ""
+				borderSize = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "cg_30b"
+			position = { x = 469 y = 790 }		 # HIDDEN
+			maxWidth = 210
+			maxHeight = 100
+			format = center
+			scrollbartype = "standardtext_slider"
+		}
+
+		#info
+		instantTextBoxType = {
+			name = "flusion_mechanics"
+			font = "malgun_goth_24"
+			position = { x = 780 y = 630 }		 # HIDDEN 818
+			maxWidth = 540
+			maxHeight = 360
+			format = center
+			text = "kaiser_conquest_mech_desc"
+			scrollbartype = "standardtext_slider"
+		}
+	}
+}

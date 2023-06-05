@@ -1,0 +1,270 @@
+namespace = kmoon
+ country_event = {
+	id = kmoon.1
+	title = "kmoon.1.title"
+	desc = "kmoon.1.desc"
+	picture = GFX_evt_attack_moon
+	show_sound = event_radio_chatter
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		start_situation = {
+			type = situation_kaiser_moon
+			target = root
+			effect = {
+				save_event_target_as = kaiser_moon_sit
+			}
+		}
+		set_country_flag = dominance_started
+	}
+
+	option = {
+		name = katsit.10.A # We cannot afford this now
+		icon = {
+			icon = GFX_situation_approach_balance_sheet
+			icon_background = GFX_situation_approach_bg_red
+			text = set_situation_approach_icon_text
+		}
+		event_target:kaiser_moon_sit = {
+			set_situation_approach = approach_no_invest
+		}
+	}
+
+	option = {
+		name = katsit.10.B # Low investment
+		icon = {
+			icon = GFX_situation_approach_balance_sheet
+			icon_background = GFX_situation_approach_bg_yellow
+			text = set_situation_approach_icon_text
+		}
+		event_target:kaiser_moon_sit = {
+			set_situation_approach = approach_low_invest
+		}
+	}
+
+	option = {
+		name = katsit.10.C # Mid investment
+		icon = {
+			icon = GFX_situation_approach_balance_sheet
+			icon_background = GFX_situation_approach_bg_yellow
+			text = set_situation_approach_icon_text
+		}
+		event_target:kaiser_moon_sit = {
+			set_situation_approach = approach_mid_invest
+		}
+	}
+
+	option = {
+		name = katsit.10.D # Big investment
+		icon = {
+			icon = GFX_situation_approach_balance_sheet
+			icon_background = GFX_situation_approach_bg_green
+			text = set_situation_approach_icon_text
+		}
+		event_target:kaiser_moon_sit = {
+			set_situation_approach = approach_big_invest
+		}
+	}
+
+ }
+
+ situation_event = {
+	id = kmoon.20
+	title = katsit.20.name
+	desc = katsit.20.desc
+	picture = GFX_evt_attack_moon
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		owner = {
+			has_origin = origin_katzen
+		}
+	}
+
+	immediate = {
+		owner = {
+			every_situation = {
+				limit = {
+					is_situation_type = situation_kaiser_moon
+				}
+				destroy_situation = this
+			}
+			remove_modifier = stop_eating_naval_cap_you_hecker
+			create_fleet = {
+				name = "Kaiservorherrschaft"
+				settings = {
+					spawn_debris = no
+				}
+				effect = {
+					set_owner = event_target:katzenartig
+					create_ship = {
+						name = "Kaiservorherrschaft"
+						design = "Kaiser Attack Moon"
+						upgradable = yes
+					}
+					set_fleet_flag = current_katzen_flagship
+					set_location = event_target:gigaflusion
+				}
+			}
+		country_event = {
+			id = kmoon.21
+		}	
+		
+	}
+}
+ }
+
+country_event = {
+	id = kmoon.21
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		delete_fleet = {
+			target = event_target:kaiser_moon_pls
+			kill_leader = no
+		}
+		clear_global_event_target = kaiser_moon_pls
+		set_country_flag = do_you_wanna_build_a_moon_man
+		set_country_flag = kaiser_moon_tech_possible
+		give_technology = {
+			tech = giga_tech_war_moon_1
+		}
+		give_technology = {
+			tech = giga_tech_war_moon_2
+		}
+		give_technology = {
+			tech = giga_tech_war_moon_artillery
+		}
+		give_technology = {
+			tech = giga_tech_war_moon_sections
+		}
+		give_technology = {
+			tech = giga_tech_kaiser_moon
+		}
+		give_technology = {
+			tech = giga_tech_war_moon_specialization
+		}
+		create_ship_design = { design = "Kaiser Attack Moon" }
+		add_ship_design = last_created_design
+		
+	}
+ }
+
+ country_event = {
+	id = kmoon.200
+	title = "kmoon.200.name"
+	desc = "kmoon.200.desc"
+	is_triggered_only = yes
+
+	immediate = {
+		start_situation = {
+			type = situation_new_moon
+			target = root
+			effect = {
+				save_event_target_as = new_moon_sit
+			}
+		}
+		
+	}
+
+
+	option = {
+		name = katsit.10.A # We cannot afford this now
+		icon = {
+			icon = GFX_situation_approach_balance_sheet
+			icon_background = GFX_situation_approach_bg_red
+			text = set_situation_approach_icon_text
+		}
+		event_target:new_moon_sit = {
+			set_situation_approach = approach_no_invest
+		}
+	}
+
+	option = {
+		name = katsit.10.B # Low investment
+		icon = {
+			icon = GFX_situation_approach_balance_sheet
+			icon_background = GFX_situation_approach_bg_yellow
+			text = set_situation_approach_icon_text
+		}
+		event_target:new_moon_sit = {
+			set_situation_approach = approach_low_invest
+		}
+	}
+
+	option = {
+		name = katsit.10.C # Mid investment
+		icon = {
+			icon = GFX_situation_approach_balance_sheet
+			icon_background = GFX_situation_approach_bg_yellow
+			text = set_situation_approach_icon_text
+		}
+		event_target:new_moon_sit = {
+			set_situation_approach = approach_mid_invest
+		}
+	}
+
+	option = {
+		name = katsit.10.D # Big investment
+		icon = {
+			icon = GFX_situation_approach_balance_sheet
+			icon_background = GFX_situation_approach_bg_green
+			text = set_situation_approach_icon_text
+		}
+		event_target:new_moon_sit = {
+			set_situation_approach = approach_big_invest
+		}
+	}
+
+ }
+
+ situation_event = {
+	id = kmoon.2001
+	title = "katsit.2001.name"
+	desc = "katsit.2001.desc"
+	picture = GFX_evt_attack_moon
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		owner = {
+			has_origin = origin_katzen
+		}
+	}
+
+	immediate = {
+		owner = {
+			every_situation = {
+				limit = {
+					is_situation_type = situation_new_moon
+				}
+				destroy_situation = this
+			}
+			create_fleet = {
+				name = "Kaiservorherrschaft"
+				settings = {
+					spawn_debris = no
+				}
+				effect = {
+					set_owner = event_target:katzenartig
+					create_ship = {
+						name = "Kaiservorherrschaft"
+						design = "Kaiser Attack Moon"
+						upgradable = yes
+					}
+					set_fleet_flag = current_katzen_flagship
+					set_location = event_target:new_moon
+				}
+			}
+		
+	}
+	event_target:new_moon = {
+		planet = {
+			remove_planet = yes
+		}
+		clear_global_event_target = new_moon
+}
+ }
+}

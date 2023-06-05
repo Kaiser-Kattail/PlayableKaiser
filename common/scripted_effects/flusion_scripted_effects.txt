@@ -1,0 +1,952 @@
+flusion_remove_all_ruler_traits = {
+	if = {
+		limit = {
+			has_ruler_trait = leader_trait_ruler_brainslug
+		}
+		remove_ruler_trait = leader_trait_ruler_brainslug
+	}
+	if = {
+		limit = {
+			has_ruler_trait = leader_trait_ruler_chosen
+		}
+		remove_ruler_trait = leader_trait_ruler_chosen
+	}
+	if = {
+		limit = {
+			has_ruler_trait = leader_trait_ruler_cyborg
+		}
+		remove_ruler_trait = leader_trait_ruler_cyborg
+	}
+	if = {
+		limit = {
+			has_ruler_trait = leader_trait_ruler_erudite
+		}
+		remove_ruler_trait = leader_trait_ruler_erudite
+	}
+	if = {
+		limit = {
+			has_ruler_trait = leader_trait_ruler_hive_mind
+		}
+		remove_ruler_trait = leader_trait_ruler_hive_mind
+	}
+	if = {
+		limit = {
+			has_ruler_trait = leader_trait_ruler_machine_intelligence
+		}
+		remove_ruler_trait = leader_trait_ruler_machine_intelligence
+	}
+	if = {
+		limit = {
+			has_ruler_trait = leader_trait_ruler_psionic
+		}
+		remove_ruler_trait = leader_trait_ruler_psionic
+	}
+	if = {
+		limit = {
+			has_ruler_trait = leader_trait_ruler_synthetic
+		}
+		remove_ruler_trait = leader_trait_ruler_synthetic
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_architectural_sense
+		}
+		remove_ruler_trait = trait_ruler_architectural_sense
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_battleship_focus
+		}
+		remove_ruler_trait = trait_ruler_battleship_focus
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_champion_of_the_people
+		}
+		remove_ruler_trait = trait_ruler_champion_of_the_people
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_charismatic
+		}
+		remove_ruler_trait = trait_ruler_charismatic
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_corvette_focus
+		}
+		remove_ruler_trait = trait_ruler_corvette_focus
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_cruiser_focus
+		}
+		remove_ruler_trait = trait_ruler_cruiser_focus
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_deep_connections
+		}
+		remove_ruler_trait = trait_ruler_deep_connections
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_destroyer_focus
+		}
+		remove_ruler_trait = trait_ruler_destroyer_focus
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_expansionist
+		}
+		remove_ruler_trait = trait_ruler_expansionist
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_explorer
+		}
+		remove_ruler_trait = trait_ruler_explorer
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_eye_for_talent
+		}
+		remove_ruler_trait = trait_ruler_eye_for_talent
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_fertility_preacher
+		}
+		remove_ruler_trait = trait_ruler_fertility_preacher
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_fortifier
+		}
+		remove_ruler_trait = trait_ruler_fortifier
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_from_the_ranks
+		}
+		remove_ruler_trait = trait_ruler_from_the_ranks
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_frontier_spirit
+		}
+		remove_ruler_trait = trait_ruler_frontier_spirit
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_home_in_the_sky
+		}
+		remove_ruler_trait = trait_ruler_home_in_the_sky
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_industrialist
+		}
+		remove_ruler_trait = trait_ruler_industrialist
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_investor
+		}
+		remove_ruler_trait = trait_ruler_investor
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_logistic_understanding
+		}
+		remove_ruler_trait = trait_ruler_logistic_understanding
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_military_pioneer
+		}
+		remove_ruler_trait = trait_ruler_military_pioneer
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_recruiter
+		}
+		remove_ruler_trait = trait_ruler_recruiter
+	}
+	if = {
+		limit = {
+			has_ruler_trait = leader_trait_reformer
+		}
+		remove_ruler_trait = leader_trait_reformer
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_space_miner
+		}
+		remove_ruler_trait = trait_ruler_space_miner
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_warlike
+		}
+		remove_ruler_trait = trait_ruler_warlike
+	}
+	if = {
+		limit = {
+			has_ruler_trait = trait_ruler_world_shaper
+		}
+		remove_ruler_trait = trait_ruler_world_shaper
+	}
+	if = {
+		limit = {
+			has_ruler_trait = leader_trait_fleet_organizer
+		}
+		remove_ruler_trait = leader_trait_fleet_organizer
+	}
+	if = {
+		limit = {
+			has_ruler_trait = leader_trait_resilient
+		}
+		remove_ruler_trait = leader_trait_resilient
+	}
+}
+
+flusion_conversion_effect_step_1 = {
+	#City districts
+	export_trigger_value_to_variable = {
+		trigger = num_districts
+		parameters = {
+			type = district_city
+		}
+		variable = city_count
+	}
+	export_trigger_value_to_variable = {
+		trigger = num_districts
+		parameters = {
+			type = district_hive
+		}
+		variable = hive_count
+	}
+	export_trigger_value_to_variable = {
+		trigger = num_districts
+		parameters = {
+			type = district_nexus
+		}
+		variable = nexus_count
+	}
+
+	#Industrial
+	export_trigger_value_to_variable = {
+		trigger = num_districts
+		parameters = {
+			type = district_industrial
+		}
+		variable = industrial_count
+	}
+
+	#Mining
+	export_trigger_value_to_variable = {
+		trigger = num_districts
+		parameters = {
+			type = district_mining
+		}
+		variable = mining_count
+	}
+	export_trigger_value_to_variable = {
+		trigger = num_districts
+		parameters = {
+			type = district_mining_uncapped
+		}
+		variable = mining_u_count
+	}
+
+	#Farming
+	export_trigger_value_to_variable = {
+		trigger = num_districts
+		parameters = {
+			type = district_farming
+		}
+		variable = farm_count
+	}
+	export_trigger_value_to_variable = {
+		trigger = num_districts
+		parameters = {
+			type = district_farming_uncapped
+		}
+		variable = farm_u_count
+	}
+}
+
+flusion_conversion_effect_step_2 = {
+	#City
+	while = {
+		count = city_count
+		add_district = district_flusion_city
+	}
+	clear_variable = city_count
+	while = {
+		count = hive_count
+		add_district = district_flusion_city
+	}
+	clear_variable = hive_count
+	while = {
+		count = nexus_count
+		add_district = district_flusion_city
+	}
+	clear_variable = nexus_count
+
+	#Industry
+	while = {
+		count = industrial_count
+		add_district = district_flusion_heavy_industry
+	}
+	clear_variable = industrial_count
+
+	#Mine
+	while = {
+		count = mining_count
+		add_district = district_flusion_mining
+	}
+	clear_variable = mining_count
+	while = {
+		count = mining_u_count
+		add_district = district_flusion_mining
+	}
+	clear_variable = mining_u_count
+
+	#Farm
+	while = {
+		count = farm_count
+		add_district = district_flusion_farming
+	}
+	clear_variable = farm_count
+	while = {
+		count = farm_u_count
+		add_district = district_flusion_farming
+	}
+	clear_variable = farm_u_count
+}
+
+katzen_elite = {
+	add_trait = katzen_trait_elite
+}
+
+player_flusion_unify_flusion = {
+	event_target:playerflusion = {
+		remove_deposit = d_flunat
+		every_planet_army = {
+			limit = {
+				owner = {
+					OR = {
+						is_country_type = flusion_nation
+						is_country_type = flusion_coalition
+					}
+				}
+			}
+			remove_army = yes
+		}
+		while = {
+			count = 10
+			remove_deposit = d_annexed_region_solak
+		}
+		while = {
+			count = 10
+			remove_deposit = d_annexed_region_cookie
+		}
+		while = {
+			count = 10
+			remove_deposit = d_annexed_region_kronk
+		}
+		while = {
+			count = 10
+			remove_deposit = d_annexed_region_ravka
+		}
+		while = {
+			count = 10
+			remove_deposit = d_annexed_region_droog
+		}
+		while = {
+			count = 10
+			remove_deposit = d_annexed_region_zousa
+		}
+		if = {
+			limit = { event_target:katzenartig = { NOT = { has_country_flag = solak_pop_acquired } } }
+			while = {
+				count = 5
+				create_pop = {
+					species = event_target:solakians
+				}
+				last_created_pop = {
+					add_modifier = {
+						modifier = "pop_recently_conquered"
+						days = 3600
+					}
+				}
+			}
+			planet.owner = {
+				set_country_flag = solak_pop_acquired
+			}
+		}
+		if = {
+			limit = { event_target:katzenartig = { NOT = { has_country_flag = cookie_pop_acquired } } }
+			while = {
+				count = 4
+				create_pop = {
+					species = event_target:cookians
+				}
+				last_created_pop = {
+					add_modifier = {
+						modifier = "pop_recently_conquered"
+						days = 3600
+					}
+				}
+			}
+			planet.owner = {
+				set_country_flag = cookie_pop_acquired
+			}
+		}
+		if = {
+			limit = { event_target:katzenartig = { NOT = { has_country_flag = kronk_pop_acquired } } }
+			while = {
+				count = 3
+				create_pop = {
+					species = event_target:kronks
+				}
+				last_created_pop = {
+					add_modifier = {
+						modifier = "pop_recently_conquered"
+						days = 3600
+					}
+				}
+			}
+			planet.owner = {
+				set_country_flag = kronk_pop_acquired
+			}
+		}
+		if = {
+			limit = { event_target:katzenartig = { NOT = { has_country_flag = ravka_pop_acquired } } }
+			while = {
+				count = 2
+				create_pop = {
+					species = event_target:ravkans
+				}
+				last_created_pop = {
+					add_modifier = {
+						modifier = "pop_recently_conquered"
+						days = 3600
+					}
+				}
+			}
+			planet.owner = {
+				set_country_flag = ravka_pop_acquired
+			}
+		}
+		if = {
+			limit = { event_target:katzenartig = { NOT = { has_country_flag = zousa_pop_acquired } } }
+			while = {
+				count = 1
+				create_pop = {
+					species = event_target:zousans
+				}
+				last_created_pop = {
+					add_modifier = {
+						modifier = "pop_recently_conquered"
+						days = 3600
+					}
+				}
+			}
+			planet.owner = {
+				set_country_flag = zousa_pop_acquired
+			}
+		}
+		if = {
+			limit = { event_target:katzenartig = { NOT = { has_country_flag = droog_pop_acquired } } }
+			while = {
+				count = 1
+				create_pop = {
+					species = event_target:droog
+				}
+				last_created_pop = {
+					add_modifier = {
+						modifier = "pop_recently_conquered"
+						days = 3600
+					}
+				}
+			}
+			planet.owner = {
+				set_country_flag = droog_pop_acquired
+			}
+		}
+		if = {
+			limit = { event_target:katzenartig = { NOT = { has_country_flag = ezic_pop_acquired } } }
+			while = {
+				count = 2
+				create_pop = {
+					species = event_target:ezics
+				}
+				last_created_pop = {
+					add_modifier = {
+						modifier = "pop_recently_conquered"
+						days = 3600
+					}
+				}
+			}
+			planet.owner = {
+				set_country_flag = ezic_pop_acquired
+			}
+		}
+		if = {
+			limit = { event_target:katzenartig = { NOT = { has_country_flag = mercuria_pop_acquired } } }
+			while = {
+				count = 1
+				create_pop = {
+					species = event_target:mercurians
+				}
+				last_created_pop = {
+					add_modifier = {
+						modifier = "pop_recently_conquered"
+						days = 3600
+					}
+				}
+			}
+			planet.owner = {
+				set_country_flag = mercuria_pop_acquired
+			}
+		}
+		if = {
+			limit = { event_target:katzenartig = { NOT = { has_country_flag = cyatianala_pop_acquired } } }
+			while = {
+				count = 1
+				create_pop = {
+					species = event_target:mercurians
+				}
+				last_created_pop = {
+					add_modifier = {
+						modifier = "pop_recently_conquered"
+						days = 3600
+					}
+				}
+			}
+			planet.owner = {
+				set_country_flag = cyatianala_pop_acquired
+			}
+		}
+		if = {
+			limit = { event_target:katzenartig = { NOT = { has_country_flag = yinja_pop_acquired } } }
+			while = {
+				count = 3
+				create_pop = {
+					species = event_target:yinjites
+				}
+				last_created_pop = {
+					add_modifier = {
+						modifier = "pop_recently_conquered"
+						days = 3600
+					}
+				}
+			}
+			planet.owner = {
+				set_country_flag = yinja_pop_acquired
+			}
+		}
+		if = {
+			limit = { event_target:katzenartig = { NOT = { has_country_flag = symbie_pop_acquired } } }
+			while = {
+				count = 2
+				create_pop = {
+					species = event_target:symbies
+				}
+				last_created_pop = {
+					add_modifier = {
+						modifier = "pop_recently_conquered"
+						days = 3600
+					}
+				}
+			}
+			planet.owner = {
+				set_country_flag = symbie_pop_acquired
+			}
+		}
+		if = {
+			limit = { event_target:katzenartig = { NOT = { has_country_flag = lauranaise_pop_acquired } } }
+			while = {
+				count = 4
+				create_pop = {
+					species = event_target:lauranaise
+				}
+				last_created_pop = {
+					add_modifier = {
+						modifier = "pop_recently_conquered"
+						days = 3600
+					}
+				}
+			}
+			planet.owner = {
+				set_country_flag = lauranaise_pop_acquired
+			}
+		}
+		if = {
+			limit = { event_target:playerflusion = { NOT = { has_deposit = d_grand_kronk_quarry } } }
+			add_deposit = d_grand_kronk_quarry
+		}
+		if = {
+			limit = { event_target:playerflusion = { NOT = { has_deposit = d_ezic_farmland } } }
+			add_deposit = d_ezic_farmland
+		}
+		if = {
+			limit = { event_target:playerflusion = { NOT = { has_deposit = d_mercurian_plains } } }
+			add_deposit = d_mercurian_plains
+		}
+		if = {
+			limit = { event_target:playerflusion = { NOT = { has_deposit = d_yinjite_sea_mines } } }
+			add_deposit = d_yinjite_sea_mines
+		}
+		if = {
+			limit = { event_target:playerflusion = { NOT = { has_deposit = d_laurandar_shores } } }
+			add_deposit = d_laurandar_shores
+		}
+		if = {
+			limit = { event_target:playerflusion = { NOT = { has_deposit = d_propanian_mines } } }
+			add_deposit = d_propanian_mines
+		}
+		if = {
+			limit = { event_target:playerflusion = { NOT = { has_deposit = d_magnetic_puffy } } }
+			add_deposit = d_magnetic_puffy
+		}
+		if = {
+			limit = { event_target:playerflusion = { NOT = { has_deposit = d_cookian_steppes_mining } } }
+			add_deposit = d_cookian_steppes_mining
+		}
+		if = {
+			limit = { event_target:playerflusion = { NOR = { has_deposit = d_altarian_jungle has_deposit = d_altarian_island } } }
+			add_deposit = d_altarian_jungle
+		}
+		if = {
+			limit = { event_target:playerflusion = { NOR = { has_deposit = d_manglarian_junkyard has_deposit = d_restored_solak } } }
+			add_deposit = d_manglarian_junkyard
+		}
+		if = {
+			limit = { event_target:playerflusion = { NOR = { has_deposit = d_catspian_sea has_deposit = d_catspian_crystal_mines } } }
+			add_deposit = d_catspian_sea
+		}
+		if = {
+			limit = { event_target:playerflusion = { NOR = { has_deposit = d_northern_ice_cap has_deposit = d_polar_mineral_fields } } }
+			add_deposit = d_northern_ice_cap
+		}
+		if = {
+			limit = { event_target:playerflusion = { NOR = { has_deposit = d_southern_ice_cap has_deposit = d_antarctic_uranium_fields } } }
+			add_deposit = d_southern_ice_cap
+		}
+		if = {
+			limit = { event_target:playerflusion = { NOR = { has_deposit = d_meowriana_trench has_deposit = d_flusion_sea_temple } } }
+			add_deposit = d_meowriana_trench
+		}
+		if = {
+			limit = { event_target:playerflusion = { NOT = { has_deposit = d_solakian_factory } } }
+			add_deposit = d_solakian_factory
+		}
+		remove_deposit = d_flunat
+	}
+	every_country = {
+		limit = {
+			OR = {
+				is_country_type = flusion_nation
+				is_country_type = flusion_coalition
+			}
+		}
+		destroy_country = yes
+	}
+	set_global_flag = solakia_conquered
+	set_global_flag = cookie_conquered
+	set_global_flag = kronk_conquered
+	set_global_flag = ravka_conquered
+	set_global_flag = zousa_conquered
+	set_global_flag = droog_conquered
+	set_global_flag = ezic_conquered
+	set_global_flag = mercuria_conquered
+	set_global_flag = cyatianala_conquered
+	set_global_flag = yinja_conquered
+	set_global_flag = symbie_conquered
+	set_global_flag = lauranaise_conquered
+	set_country_flag = unified_flusion
+	random_situation = {
+		limit = {
+			is_situation_type = situation_world_tension
+		}
+		destroy_situation = this
+	}
+}
+
+player_flusion_annexed_solak = {
+	add_deposit = d_annexed_region_solak
+	random_owned_pop = {
+		kill_pop = yes
+	}
+}
+
+player_flusion_liberated_solak = {
+	while = {
+		count = 10
+		remove_deposit = d_annexed_region_solak
+	}
+	
+	while = {
+		count = 2
+		create_pop = {
+			species = owner_main_species
+		}
+	}
+}
+
+player_flusion_annexed_cookie = {
+	add_deposit = d_annexed_region_cookie
+	random_owned_pop = {
+		kill_pop = yes
+	}
+}
+
+player_flusion_liberated_cookie = {
+	while = {
+		count = 10
+		remove_deposit = d_annexed_region_cookie
+	}
+	
+	while = {
+		count = 2
+		create_pop = {
+			species = owner_main_species
+		}
+	}
+}
+
+player_flusion_annexed_kronk = {
+	add_deposit = d_annexed_region_kronk
+	random_owned_pop = {
+		kill_pop = yes
+	}
+}
+
+player_flusion_liberated_kronk = {
+	while = {
+		count = 10
+		remove_deposit = d_annexed_region_kronk
+	}
+	
+	while = {
+		count = 2
+		create_pop = {
+			species = owner_main_species
+		}
+	}
+}
+
+player_flusion_annexed_ravka = {
+	add_deposit = d_annexed_region_ravka
+	random_owned_pop = {
+		kill_pop = yes
+	}
+}
+
+player_flusion_liberated_ravka = {
+	while = {
+		count = 10
+		remove_deposit = d_annexed_region_ravka
+	}
+	
+	while = {
+		count = 2
+		create_pop = {
+			species = owner_main_species
+		}
+	}
+}
+
+player_flusion_annexed_zousa = {
+	add_deposit = d_annexed_region_zousa
+	random_owned_pop = {
+		kill_pop = yes
+	}
+}
+
+player_flusion_liberated_zousa = {
+	while = {
+		count = 10
+		remove_deposit = d_annexed_region_zousa
+	}
+	
+	while = {
+		count = 2
+		create_pop = {
+			species = owner_main_species
+		}
+	}
+}
+
+player_flusion_annexed_droog = {
+	add_deposit = d_annexed_region_droog
+	random_owned_pop = {
+		kill_pop = yes
+	}
+}
+
+player_flusion_liberated_droog = {
+	while = {
+		count = 10
+		remove_deposit = d_annexed_region_droog
+	}
+	
+	while = {
+		count = 2
+		create_pop = {
+			species = owner_main_species
+		}
+	}
+}
+
+player_flusion_annexed_ezic = {
+	add_deposit = d_annexed_region_ezic
+	random_owned_pop = {
+		kill_pop = yes
+	}
+}
+
+player_flusion_liberated_ezic = {
+	while = {
+		count = 10
+		remove_deposit = d_annexed_region_ezic
+	}
+	
+	while = {
+		count = 2
+		create_pop = {
+			species = owner_main_species
+		}
+	}
+}
+
+player_flusion_annexed_mercuria = {
+	add_deposit = d_annexed_region_mercuria
+	random_owned_pop = {
+		kill_pop = yes
+	}
+}
+
+player_flusion_liberated_mercuria = {
+	while = {
+		count = 10
+		remove_deposit = d_annexed_region_mercuria
+	}
+	
+	while = {
+		count = 2
+		create_pop = {
+			species = owner_main_species
+		}
+	}
+}
+
+player_flusion_annexed_cyatianala = {
+	add_deposit = d_annexed_region_cyatianala
+	random_owned_pop = {
+		kill_pop = yes
+	}
+}
+
+player_flusion_liberated_cyatianala = {
+	while = {
+		count = 10
+		remove_deposit = d_annexed_region_cyatianala
+	}
+	
+	while = {
+		count = 2
+		create_pop = {
+			species = owner_main_species
+		}
+	}
+}
+
+player_flusion_annexed_yinja = {
+	add_deposit = d_annexed_region_yinja
+	random_owned_pop = {
+		kill_pop = yes
+	}
+}
+
+player_flusion_liberated_yinja = {
+	while = {
+		count = 10
+		remove_deposit = d_annexed_region_yinja
+	}
+	
+	while = {
+		count = 2
+		create_pop = {
+			species = owner_main_species
+		}
+	}
+}
+
+player_flusion_annexed_symbie = {
+	add_deposit = d_annexed_region_symbie
+	random_owned_pop = {
+		kill_pop = yes
+	}
+}
+
+player_flusion_liberated_symbie = {
+	while = {
+		count = 10
+		remove_deposit = d_annexed_region_symbie
+	}
+	
+	while = {
+		count = 2
+		create_pop = {
+			species = owner_main_species
+		}
+	}
+}
+
+player_flusion_annexed_lauranaise = {
+	add_deposit = d_annexed_region_lauranaise
+	random_owned_pop = {
+		kill_pop = yes
+	}
+}
+
+player_flusion_liberated_lauranaise = {
+	while = {
+		count = 10
+		remove_deposit = d_annexed_region_lauranaise
+	}
+	
+	while = {
+		count = 2
+		create_pop = {
+			species = owner_main_species
+		}
+	}
+}
+
+player_flusion_annexed_haranian = {
+	add_deposit = d_annexed_region_haranian
+	random_owned_pop = {
+		kill_pop = yes
+	}
+}
+
+player_flusion_liberated_haranian = {
+	while = {
+		count = 10
+		remove_deposit = d_annexed_region_haranian
+	}
+	
+	while = {
+		count = 2
+		create_pop = {
+			species = owner_main_species
+		}
+	}
+}
+

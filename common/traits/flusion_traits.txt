@@ -1,0 +1,103 @@
+
+# All leaders will have a common trait-point value set in defines, which they use to grab traits
+
+# leader_trait = yes - this tags the trait as a leader-trait and not a species-trait
+# initial = no - if set to no, this trait can not be granted to leaders when they are generated
+# leader_class = { admiral scientist }  -- OR  - if not set, it can be given to all leader-types except Rulers
+# requires_traits = { trait_psionic } -- AND - leader-trait can only be randomly given on generation if the leaders species has this trait
+# requires_governments = { despotic_hegemony ai_overlordship } -- OR - leader-trait can only be randomly given on generation if the Empire has this type of government form
+# prerequisites = { tech_psionic_theory } - AND - leader-trait can only be given if the technology specified has been researched by the Empire
+
+#################
+#  Ruler Traits #
+#################
+
+# Ruler-traits have the same parameters as leader-traits
+# leader_class has to be set to include "ruler" for a ruler to be valid for a trait
+# modifiers granted to rulers are applied to the entire Empire
+
+leader_trait_ruler_kaiser_cattail = {
+	councilor_trait = yes
+	immortal_leaders = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_great_khan"
+		RARITY = common
+		COUNCIL = yes
+		TIER = none
+	}
+	modifier = {
+		army_morale = 0.25
+		ship_weapon_damage = 0.05
+		pop_government_ethic_attraction = 0.10
+		
+	}
+	leader_class = { scientist governor admiral general }
+	initial = no
+	randomized = no
+}
+
+katzen_trait_martial_free = {
+	cost = 0
+	species_potential_add = {
+		exists = from
+		from = {
+			has_origin = origin_katzen
+		}
+	}
+	initial = no
+	randomized = no
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		pop_cat_slave_happiness = -0.5
+		species_empire_size_mult = -0.10
+		army_damage_mult = 0.15
+		army_health = 0.15
+		army_morale = 0.4
+	}
+}
+
+katzen_trait_elite = {
+	inline_script = {
+		script = trait/icon
+		ICON = "GFX_leader_trait_from_the_ranks"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	immortal_leaders = yes
+	self_modifier = {
+		species_leader_exp_gain = 0.15
+	}
+	leader_class = {
+		admiral general governor scientist
+	}
+	initial = no
+	randomized = no
+}
+
+leader_trait_gunfur = {
+	destiny_trait = yes
+	ethic_destiny_trait = no
+	inline_script = {
+		script = trait/icon
+		CLASS = general
+		ICON = "GFX_leader_rocketry_specialization"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	modifier = {
+		army_damage_mult = 0.5
+		army_attack_morale_mult = 0.5
+		army_collateral_damage_mult = 2
+	}
+	leader_potential_add = {
+		always = no
+	}
+	leader_class = { general }
+	custom_tooltip_with_modifiers = leader_trait_gunfur_effect
+	selectable_weight = 0
+	destiny_background_icon = "GFX_leader_background_destiny_1"
+}

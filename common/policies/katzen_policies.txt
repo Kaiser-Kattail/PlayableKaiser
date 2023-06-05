@@ -1,0 +1,135 @@
+consumer_alloys = {
+	potential = {
+		AND = {
+			is_country_type = default
+			has_origin = origin_katzen
+		}
+	}
+
+	option = {
+		name = "no_artisan_alloy"
+
+		policy_flags = {}
+		modifier = {}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "smol_artisan_alloy"
+		policy_flags = {}
+		modifier = {
+			planet_artisans_consumer_goods_produces_add = -1
+			planet_artisans_alloys_produces_add = 0.5
+		}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "more_artisan_alloy"
+
+		policy_flags = {}
+		modifier = {
+			planet_artisans_consumer_goods_produces_add = -2
+			planet_artisans_alloys_produces_add = 1
+		}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 100
+				is_country_type = enclave_mercenary
+			}
+		}
+	}
+
+	option = {
+		name = "half_artisan_alloy"
+
+		policy_flags = {}
+		modifier = {
+			planet_artisans_consumer_goods_produces_add = -3
+			planet_artisans_alloys_produces_add = 1.5
+		}
+
+		AI_weight = {
+			factor = 100
+			modifier = {
+				factor = 0
+				NOR = {
+					has_ai_personality = honorbound_warriors
+					has_ai_personality = devouring_swarm
+				}
+			}
+		}
+	}
+}
+
+flusion_migration = {
+	potential = {
+		AND = {
+			is_country_type = default
+			has_origin = origin_katzen
+			has_tradition = tr_work_arrangements
+		}
+	}
+
+	option = {
+		name = "no_migration"
+
+		policy_flags = {
+			no_migration
+		}
+		modifier = {}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "smol_migration"
+		policy_flags = {
+			smol_migration
+		}
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "more_migration"
+
+		policy_flags = {
+			more_migration
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "much_migration"
+
+		policy_flags = {
+			much_migration
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+}

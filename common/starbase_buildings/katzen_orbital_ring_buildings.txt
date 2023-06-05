@@ -1,0 +1,121 @@
+katzen_ring_energy_hub = {
+	icon = "GFX_spaceport_module_teldar_refinery"
+	construction_days = 360
+	potential = {
+		exists = owner
+		owner = {
+			has_technology = tech_power_hub_2
+			has_technology = "tech_katzen_flusioarc"
+		}
+		is_orbital_ring = yes
+	}
+	planet_modifier = {
+		planet_technician_energy_produces_add = 4
+	}
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 500
+			exotic_gases = 200
+		}
+		upkeep = {
+			energy = 10
+			exotic_gases = 3
+		}
+	}
+	show_in_tech = "katzen_flusioarc"
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0
+			planet = {
+				planet_resource_compare = {
+					resource = energy
+					value < 20
+					type = produces
+				}
+			}
+		}
+		modifier = {
+			factor = 4
+			planet = {
+				has_designation = col_generator
+			}
+		}
+	}
+}
+
+katzen_ring_alloys_hub = {
+	icon = "GFX_orbitalring_alloy_hub"
+	construction_days = 360
+	potential = {
+		exists = owner
+		owner = {
+			has_technology = tech_alloys_2
+			has_technology = "tech_katzen_flusioarc"
+		}
+		is_orbital_ring = yes
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_catalytic_empire = no
+			}
+		}
+		modifier = {
+			planet_metallurgists_alloys_produces_add = 2
+			planet_metallurgists_minerals_upkeep_add = 4
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+			planet_metallurgists_alloys_produces_add = 2
+			planet_metallurgists_food_upkeep_add = 6
+		}
+	}
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 200
+			volatile_motes = 300
+		}
+		upkeep = {
+			energy = 5
+			volatile_motes = 4
+		}
+	}
+	show_in_tech = "katzen_flusioarc"
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 60
+		modifier = {
+			factor = 0
+			planet = {
+				planet_resource_compare = {
+					resource = alloys
+					value < 20
+					type = produces
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			planet = {
+				OR = {
+					has_designation = col_foundry
+					has_designation = col_industrial
+				}
+			}
+		}
+	}
+}

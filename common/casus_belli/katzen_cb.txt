@@ -1,0 +1,37 @@
+cb_player_katzen = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		is_country_type = default
+		has_tradition = tr_katzenkrieglosung
+		has_policy_flag = unrestricted_wars
+		NOT = { is_in_federation_with = from }
+	}
+	is_valid = {
+		has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+cb_stop_player_katzen = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		is_country_type = default
+		NOT = { is_in_federation_with = from }
+		from = { has_tradition = tr_katzenkrieglosung }
+	}
+	is_valid = {
+		has_total_war_cb = no
+		from = { is_country_type = default }
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}

@@ -1,0 +1,543 @@
+decision_flusion_arc = {
+	enactment_time = 3600
+
+	prerequisites = {
+		"tech_katzen_flusioarc"
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 200
+			minerals = 20000
+		}
+	}
+
+	potential = {
+		planet.owner = {
+			has_origin = origin_katzen
+			has_country_flag = unified_flusion
+		}
+
+			has_planet_flag = gigaflusion
+			NOR = {
+				is_planet_class = pc_flusion_gaia_ecu
+				is_planet_class = pc_city
+				is_planet_class = pc_relic
+				has_modifier = resort_colony
+				has_modifier = penal_colony
+				has_modifier = slave_colony
+				has_modifier = pm_wenkwort_custodian
+			}
+	}
+
+	allow = {
+		num_uncleared_blockers < 1
+		num_pops >= 90
+		custom_tooltip = {
+			fail_text = need_both_dams
+			has_planet_flag = solaktropa
+			has_planet_flag = katlantropa
+		}
+	}
+
+	effect = { 
+		hidden_effect = {
+			add_modifier ={
+				modifier = temp_job_help
+				days = 1080
+			}
+		}
+		change_pc = pc_flusion_gaia_ecu
+		add_district = district_flusion_city
+		add_district = district_flusion_city
+		add_district = district_flusion_city
+		add_district = district_flusion_city
+
+		add_district = district_flusion_farming
+		add_district = district_flusion_heavy_industry
+		add_district = district_flusion_civilian_industry
+		add_district = district_flusion_mining
+	}
+}
+
+
+decision_kaiser_moon = {
+	sound = event_administrative_work
+	owned_planets_only = no
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 1000
+		}
+	}
+
+	potential = {
+		is_moon = yes
+		space_owner = { is_ai = no }
+		solar_system.owner = {
+			has_country_flag = do_you_wanna_build_a_moon_man
+		}
+		NOT = {
+			is_colony = yes
+		}
+		planet.owner = {
+			NOT = {
+				any_controlled_fleet = {
+					has_fleet_flag = current_katzen_flagship
+				}
+			}
+		}
+		
+	}
+	allow = {
+		planet.owner = {
+			NOT = {
+				 any_situation = {
+					is_situation_type = situation_kaiser_moon
+				 }
+			}
+		}
+	}
+
+	effect = {
+		solar_system.owner = {
+			country_event = {
+				id = kmoon.200
+			}
+		}
+		planet = {
+			save_global_event_target_as = new_moon
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+decision_expand_flusio_arcology = {
+	potential = {
+		has_planet_flag = playerflusion
+		is_planet_class = pc_flusion_gaia_ecu
+		planet.owner = {
+			has_country_flag = expand_flusion_agenda
+		}
+	}
+	enactment_time = 720
+	resources = {
+		category = decisions
+		cost = {
+			minerals = 30000
+			alloys = 30000
+		}
+	}
+
+	effect = {
+		add_deposit = d_expanded_flusion
+	}
+
+}
+
+
+
+#builds solaktropa dams
+decision_solaktropa = {
+	prerequisites = {
+		"tech_capital_productivity_1"
+	}
+    enactment_time = 720
+    resources = {
+        category = decisions
+        cost = {
+            influence = 50
+            minerals = 7500
+        }
+    }
+    potential = {
+        planet.owner = {
+			has_origin = origin_katzen
+        }
+        has_planet_flag = gigaflusion
+        NOT = {
+            has_planet_flag = solaktropa
+        }
+    }
+	allow = {
+		custom_tooltip = {
+			fail_text = no_forest
+			has_deposit = d_altarian_island
+		}
+	}
+    effect = {
+		add_deposit = d_solaktropa_project
+		hidden_effect = {
+			set_planet_flag = solaktropa
+		}
+	}
+}
+
+#Housing Dam
+decision_katlantropa = {
+	prerequisites = {
+		"tech_capital_productivity_1"
+	}
+    enactment_time = 720
+    resources = {
+        category = decisions
+        cost = {
+            influence = 50
+            minerals = 7500
+        }
+    }
+    potential = {
+        planet.owner = {
+			has_origin = origin_katzen
+        }
+            has_planet_flag = gigaflusion
+        
+        NOT = {
+            has_planet_flag = katlantropa
+        }
+    }
+    effect = {
+		add_deposit = d_katlantropa_project
+		hidden_effect = {
+			set_planet_flag = katlantropa
+		}
+    }
+}
+
+#Housing Dam
+decision_katzen_housing_dam = {
+	owned_planets_only = yes
+    prerequisites = {
+        "tech_capital_productivity_2"
+    }
+    enactment_time = 720
+    resources = {
+        category = decisions
+        cost = {
+            influence = 50
+            minerals = 7500
+        }
+    }
+    potential = {
+        planet.owner = {
+            has_origin = origin_katzen
+        }
+			has_planet_flag = gigaflusion
+		
+		is_artificial = no
+    }
+
+	allow = {
+		custom_tooltip = {
+			fail_text = no_other_dam
+        	NOR = {
+            	has_deposit = d_katzen_housing_dam
+				has_deposit = d_katzen_food_dam
+				has_deposit = d_katzen_mineral_dam
+				has_deposit = d_katzen_energy_dam
+        	}
+		}
+	}
+
+	on_queued = {
+		set_planet_flag = katzen_dam
+	}
+
+	on_unqueued = {
+		remove_planet_flag = katzen_dam
+	}
+    effect = {
+		add_deposit = d_katzen_housing_dam
+    }
+}
+
+#food dam
+decision_katzen_food_dam = {
+	owned_planets_only = yes
+    prerequisites = {
+        "tech_capital_productivity_2"
+    }
+    enactment_time = 720
+    resources = {
+        category = decisions
+        cost = {
+            influence = 50
+            minerals = 7500
+        }
+    }
+    potential = {
+        planet.owner = {
+            has_origin = origin_katzen
+        }
+			has_planet_flag = gigaflusion
+		
+		is_artificial = no
+    }
+
+	allow = {
+		custom_tooltip = {
+			fail_text = no_other_dam
+        	NOR = {
+            	has_deposit = d_katzen_housing_dam
+				has_deposit = d_katzen_food_dam
+				has_deposit = d_katzen_mineral_dam
+				has_deposit = d_katzen_energy_dam
+        	}
+		}
+		custom_tooltip = {
+			fail_text = cannot_be_dry
+			NOR = {
+				is_planet_class = pc_desert
+				is_planet_class = pc_outback
+				is_planet_class = pc_coastal
+				is_planet_class = pc_sandsea
+				is_planet_class = pc_oasis
+				is_planet_class = pc_arid
+				is_planet_class = pc_savannah
+				is_planet_class = pc_steppe
+				is_planet_class = pc_mesa
+				is_planet_class = pc_badlands
+				is_planet_class = pc_hadesert
+				is_planet_class = pc_prairie
+				is_planet_class = pc_veld
+				is_planet_class = pc_semiarid
+				is_planet_class = pc_med
+			}
+		}
+	}
+
+	on_queued = {
+		set_planet_flag = katzen_dam
+	}
+
+	on_unqueued = {
+		remove_planet_flag = katzen_dam
+	}
+    effect = {
+		add_deposit = d_katzen_food_dam
+    }
+}
+
+#mineral dam
+decision_katzen_mineral_dam = {
+	owned_planets_only = yes
+    prerequisites = {
+        "tech_capital_productivity_2"
+    }
+    enactment_time = 720
+    resources = {
+        category = decisions
+        cost = {
+            influence = 50
+            minerals = 7500
+        }
+    }
+    potential = {
+        planet.owner = {
+            has_origin = origin_katzen
+        }
+			has_planet_flag = gigaflusion
+	
+		is_artificial = no
+    }
+
+	allow = {
+		custom_tooltip = {
+			fail_text = no_other_dam
+        	NOR = {
+            	has_deposit = d_katzen_housing_dam
+				has_deposit = d_katzen_food_dam
+				has_deposit = d_katzen_mineral_dam
+				has_deposit = d_katzen_energy_dam
+        	}
+		}
+	}
+
+	on_queued = {
+		set_planet_flag = katzen_dam
+	}
+
+	on_unqueued = {
+		remove_planet_flag = katzen_dam
+	}
+
+    effect = {
+		add_deposit = d_katzen_mineral_dam
+    }
+}
+
+#katzen energy dam
+decision_katzen_energy_dam = {
+	owned_planets_only = yes
+    prerequisites = {
+        "tech_capital_productivity_2"
+    }
+    enactment_time = 720
+    resources = {
+        category = decisions
+        cost = {
+            influence = 50
+            minerals = 7500
+        }
+    }
+    potential = {
+        planet.owner = {
+            has_origin = origin_katzen
+        }
+			has_planet_flag = gigaflusion
+		
+		is_artificial = no
+    }
+
+	allow = {
+		custom_tooltip = {
+			fail_text = no_other_dam
+        	NOR = {
+            	has_deposit = d_katzen_housing_dam
+				has_deposit = d_katzen_food_dam
+				has_deposit = d_katzen_mineral_dam
+				has_deposit = d_katzen_energy_dam
+        	}
+		}
+	}
+
+	on_queued = {
+		set_planet_flag = katzen_dam
+	}
+
+	on_unqueued = {
+		remove_planet_flag = katzen_dam
+	}
+
+    effect = {
+		add_deposit = d_katzen_energy_dam
+    }
+}
+
+decision_katzen_defense_array_1 = {
+	owned_planets_only = yes
+	enactment_time = 720
+	resources = {
+		category = decisions
+		cost = {
+			unity = 100
+			alloys = 1000
+		}
+	}
+	potential = {
+		planet.owner = {
+			has_origin = origin_katzen
+			has_country_flag = unified_flusion
+		}
+		NOT = {
+			any_fleet_in_orbit = {
+				has_fleet_flag = katzen_planet_platform_player_1
+			}
+		}
+		
+	}
+
+	effect = { 
+		create_fleet = {
+			name = "Katzenplanetenverteidigung"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = ROOT
+				create_ship = {
+					name = "Katzenplanetenverteidigung"
+					design = "Meoder"
+					upgradable = no
+				}
+				set_location = {
+					target = ROOT
+					distance = 0
+					angle = 0
+				}
+				set_fleet_flag = katzen_planet_platform_player_1			}
+		}
+	}
+}
+
+decision_katzen_war_forge = {
+	owned_planets_only = no
+	enactment_time = 0
+	resources = {
+		category = decisions
+		cost = {
+			unity = 100
+			alloys = 1000
+		}
+	}
+	potential = {
+		planet.solar_system.owner = {
+			has_origin = origin_katzen
+			has_country_flag = unified_flusion
+		}
+		NOT = {
+			has_planet_flag = war_forge
+		}
+		is_star = no
+		OR = {
+			habitable_planet = yes
+			is_planet_class = pc_flusion_gaia_ecu
+			is_planet_class = pc_nuked
+		}
+		is_artificial = no
+		giga_habitable_structure = no
+	}
+	effect = {
+		solar_system = {
+			spawn_megastructure = {
+				type = katzen_war_forge_0
+				planet = ROOT
+				owner = space_owner
+			}
+			random_system_megastructure = {
+				limit = {
+					is_megastructure_type = katzen_war_forge_0
+					planet = { is_same_value = ROOT } 
+				}
+				upgrade_megastructure_to = katzen_war_forge_1
+			}
+		}
+		set_planet_flag = war_forge
+		
+	}
+}
+
+decision_kaiser_craft_recall = {
+	enactment_time = 30
+    resources = {
+        category = decisions
+        cost = {
+            influence = 50
+        }
+    }
+	sound = event_red_alert
+    potential = {
+        planet.owner = {
+			has_origin = origin_katzen
+			any_controlled_fleet = {
+				has_fleet_flag = current_katzen_flagship
+			}
+        }
+		has_planet_flag = gigaflusion
+        
+    }
+	effect = {
+		planet.owner = {
+			every_controlled_fleet = {
+				limit = {
+					has_fleet_flag = current_katzen_flagship
+				}
+				set_location = event_target:gigaflusion
+			}
+		}
+	}
+}

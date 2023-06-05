@@ -1,0 +1,31 @@
+objectTypes = {
+	pdxmesh = {
+		name = "kaiser_planet_complete_mesh"
+		file = "gfx/models/ships/kaiser_planet/kaiser_planet_complete.mesh"
+		scale = 1
+	}
+}
+
+objectTypes = {
+	pdxmesh = {
+		name = "kaiser_planet_stage_1_mesh"
+		file = "gfx/models/ships/kaiser_planet/kaiser_planet_stage_1.mesh"
+		scale = 1
+	}
+}
+
+objectTypes = {
+	pdxmesh = {
+		name = "kaiser_planet_stage_2_mesh"
+		file = "gfx/models/ships/kaiser_planet/kaiser_planet_stage_2.mesh"
+		scale = 1
+	}
+}
+
+objectTypes = {
+	pdxmesh = {
+		name = "kaiser_planet_stage_3_mesh"
+		file = "gfx/models/ships/kaiser_planet/kaiser_planet_stage_3.mesh"
+		scale = 1
+	}
+}

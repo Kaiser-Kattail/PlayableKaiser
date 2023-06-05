@@ -1,0 +1,332 @@
+﻿### Katzen 1
+### Created by Jeff Jeffery Jefferson III
+
+KAT = {
+	category = "Katzen"
+	ship_names = {
+
+		generic = {
+			KAT_SHIP_Kassburg KAT_SHIP_Attax KAT_SHIP_Mear KAT_SHIP_Pouchkinio KAT_SHIP_Emmeowirich KAT_SHIP_Katchy KAT_SHIP_Mice KAT_SHIP_Detmeowld KAT_SHIP_Douburg KAT_SHIP_Kaisergrad KAT_SHIP_Miegen KAT_SHIP_Zitrone KAT_SHIP_Lauren KAT_SHIP_Chesse KAT_SHIP_Kaiserslauten KAT_SHIP_Miaderkorn KAT_SHIP_Wuff KAT_SHIP_Katnik KAT_SHIP_Kiekeld KAT_SHIP_Kattertail KAT_SHIP_Chaster KAT_SHIP_Rhawnland KAT_SHIP_Stielem KAT_SHIP_Erlowin KAT_SHIP_Kara KAT_SHIP_Kattbus KAT_SHIP_Kattailsund KAT_SHIP_Teuyaka KAT_SHIP_Leipig KAT_SHIP_Kelle KAT_SHIP_Meoderbrucke KAT_SHIP_Challe KAT_SHIP_Douclawien KAT_SHIP_Kaiserkatstadt KAT_SHIP_Meoderschluss KAT_SHIP_Blau KAT_SHIP_Westerforden KAT_SHIP_Blauestadt KAT_SHIP_Zentralder KAT_SHIP_Derdoux KAT_SHIP_Kasini KAT_SHIP_Meowdeburg KAT_SHIP_Kattailshaven KAT_SHIP_Mleokante KAT_SHIP_Cattan KAT_SHIP_Katzenheim KAT_SHIP_Kochi KAT_SHIP_Dawnseldorf KAT_SHIP_Charkangel KAT_SHIP_Connon KAT_SHIP_Binette KAT_SHIP_Eoven KAT_SHIP_Kostov KAT_SHIP_Miev KAT_SHIP_Zentralis KAT_SHIP_Kugelstatd KAT_SHIP_Stevenshutten KAT_SHIP_Blasbucht KAT_SHIP_Kreiburk KAT_SHIP_Extremeboden KAT_SHIP_Ulmeow
+		}
+	}
+
+	fleet_names = {
+		sequential_name = KAT_xxFLEET_ORD
+	}
+
+	army_names = {
+
+		machine_defense = {
+			sequential_name = KAT_xx_ORD
+		}
+
+		machine_assault_1 = {
+			sequential_name = KAT_xx_ORD
+		}
+
+		machine_assault_2 = {
+			sequential_name = KAT_xx_ORD
+		}
+
+		machine_assault_3 = {
+			sequential_name = KAT_xx_ORD
+		}
+
+		defense_army = {
+			sequential_name = KAT_xx_ORD
+		}
+
+		assault_army = {
+			sequential_name = KAT_xx_ORD
+		}
+
+		slave_army = {
+			sequential_name = KAT_xx_ORD
+		}
+
+		clone_army = {
+			sequential_name = KAT_xx_ORD
+		}
+
+		undead_army = {
+			sequential_name = KAT_xx_ORD
+		}
+
+		robotic_army = {
+			sequential_name = KAT_xx_ORD
+		}
+
+		robotic_defense_army = {
+			sequential_name = KAT_xx_ORD
+		}
+
+		psionic_army = {
+			sequential_name = KAT_xx_ORD
+		}
+
+		xenomorph_army = {
+			sequential_name = KAT_xx_ORD
+		}
+
+		gene_warrior_army = {
+			sequential_name = KAT_xx_ORD
+		}
+
+		occupation_army = {
+			sequential_name = KAT_xx_ORD
+		}
+
+		robotic_occupation_army = {
+			sequential_name = KAT_xx_ORD
+		}
+
+		primitive_army = {
+			sequential_name = KAT1_xx_ORD
+		}
+		industrial_army = {
+			sequential_name = KAT1_xx_ORD
+		}
+		postatomic_army = {
+			sequential_name = KAT1_xx_ORD
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				KAT_PLANET_Cocoville
+				KAT_PLANET_Nova_Flusionia
+				KAT_PLANET_Neu_Katown
+				KAT_PLANET_Felinida
+				KAT_PLANET_Kattails_Haven
+				KAT_PLANET_Minoulis
+				KAT_PLANET_Eloni
+				KAT_PLANET_Zweiblio
+				KAT_PLANET_Rhawn
+				KAT_PLANET_Katzenhaus
+				KAT_PLANET_Susses_Zuhause
+				KAT_PLANET_Fellkugel
+				KAT_PLANET_Meokins
+				KAT_PLANET_Treiblio
+				KAT_PLANET_Katzenila
+				KAT_PLANET_Derkatez
+				KAT_PLANET_Kattailand
+				KAT_PLANET_Kittykat
+				KAT_PLANET_Cattenip
+				KAT_PLANET_Furrbalia
+				KAT_PLANET_Blasteria
+				KAT_PLANET_Gatoshores
+				KAT_PLANET_Nordikat
+				KAT_PLANET_Cuddlezone
+				KAT_PLANET_Itchilia
+				KAT_PLANET_Ataria
+				KAT_PLANET_Lionita
+				KAT_PLANET_Meopin
+				KAT_PLANET_Meterhills
+				KAT_PLANET_Lynxsi
+				KAT_PLANET_Felinda
+				KAT_PLANET_Skratcha
+				KAT_PLANET_Bobka
+				KAT_PLANET_Frankat
+				KAT_PLANET_Kittenland
+				KAT_PLANET_Elowinien
+				KAT_PLANET_Ataraxien
+				KAT_PLANET_Pouchkinnien
+				KAT_PLANET_Ninien
+				KAT_PLANET_Meteorien
+				KAT_PLANET_Itchien
+				KAT_PLANET_Bavawria
+				KAT_PLANET_Purremberg
+				KAT_PLANET_Cutelogne
+				KAT_PLANET_Pawlatinate
+				KAT_PLANET_Sobak
+				KAT_PLANET_Cattenbadden
+				KAT_PLANET_Pawquitaine
+				KAT_PLANET_Katzwald
+				KAT_PLANET_Purrlin
+				KAT_PLANET_Frankfurr
+				KAT_PLANET_Meownich
+				KAT_PLANET_Katzhausen
+				KAT_PLANET_Erfurt
+				KAT_PLANET_Germewring
+				KAT_PLANET_Raftown
+				KAT_PLANET_Ceceburg
+				KAT_PLANET_Leopzig
+				KAT_PLANET_Ninaachen
+				KAT_PLANET_Henrielberg
+				KAT_PLANET_Katopia
+				KAT_PLANET_Chonkberg
+				KAT_PLANET_Katzenberg
+				KAT_PLANET_Weimiau
+				KAT_PLANET_Weimeow
+				KAT_PLANET_Schnurrfurt
+			}
+		}
+
+		pc_desert = {
+			names = {
+			}
+		}
+
+		pc_tropical = {
+			names = {
+			}
+		}
+
+		pc_arid = {
+			names = {
+			}
+		}
+
+		pc_continental = {
+			names = {
+			}
+		}
+
+		pc_ocean = {
+			names = {
+				KAT_PLANET_Steam_Kommentatortränensee
+			}
+		}
+
+		pc_tundra = {
+			names = {
+			}
+		}
+
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+
+	}
+
+	character_names = {
+		default = {
+			# Always combined with a second name
+			first_names_male = {
+				KAT_NAME_Hans
+				KAT_NAME_Gustav
+				KAT_NAME_Albrecht
+				KAT_NAME_Alexander
+				KAT_NAME_Alois
+				KAT_NAME_Alwin
+				KAT_NAME_Andreois
+				KAT_NAME_Ekkehard
+				KAT_NAME_Elias
+				KAT_NAME_Elimar
+				KAT_NAME_Ferdinand
+				KAT_NAME_Wilhelm
+				KAT_NAME_Hermann
+				KAT_NAME_Jannik
+				KAT_NAME_Jasper
+				KAT_NAME_Calvin
+				KAT_NAME_Karl
+				KAT_NAME_Christian
+				KAT_NAME_Christof
+				KAT_NAME_Guido
+				KAT_NAME_Gunther
+				KAT_NAME_Hauke
+				KAT_NAME_Konrad
+				KAT_NAME_Ludwig
+				KAT_NAME_Ludolf
+				KAT_NAME_Magnus
+				KAT_NAME_Malte
+				KAT_NAME_Manuel
+				KAT_NAME_Marcus
+				KAT_NAME_Matthias
+				KAT_NAME_Edmund
+				KAT_NAME_Meowkins
+				KAT_NAME_Pheonix
+			}
+
+			first_names_female = {
+				KAT_NAME_Katherine
+				KAT_NAME_Adle
+				KAT_NAME_Agatha 
+				KAT_NAME_Cacille 
+				KAT_NAME_Carina 
+				KAT_NAME_Carmen 
+				KAT_NAME_Emmy 
+				KAT_NAME_Erika 
+				KAT_NAME_Fabienne 
+				KAT_NAME_Felicia 
+				KAT_NAME_Florentina 
+				KAT_NAME_Augusta 
+				KAT_NAME_Ayleen 
+				KAT_NAME_Barbara 
+				KAT_NAME_Elisa 
+				KAT_NAME_Elisabeth 
+				KAT_NAME_Emmeline 
+				KAT_NAME_Henny 
+				KAT_NAME_Valerie 
+				KAT_NAME_Vanessa 
+				KAT_NAME_Laura 
+				KAT_NAME_Leonore 
+				KAT_NAME_Leopoldine 
+				KAT_NAME_Frauke 
+				KAT_NAME_Frida 
+				KAT_NAME_Friedl 
+				KAT_NAME_Cornelia 
+				KAT_NAME_Sophoe 
+				KAT_NAME_Svenja
+				KAT_NAME_Meowkins
+			}
+
+			# Always combined with a first name
+			second_names = {
+				KAT_NAME_Katzesir 
+				KAT_NAME_Cattail 
+				KAT_NAME_Muller 
+				KAT_NAME_Schmidt 
+				KAT_NAME_Schneider 
+				KAT_NAME_Fisher 
+				KAT_NAME_Weber 
+				KAT_NAME_Meyer 
+				KAT_NAME_Wagner 
+				KAT_NAME_Becker 
+				KAT_NAME_Schulz 
+				KAT_NAME_Hoffman 
+				KAT_NAME_Schafer 
+				KAT_NAME_Koch 
+				KAT_NAME_Bauer 
+				KAT_NAME_Richter 
+				KAT_NAME_Klein 
+				KAT_NAME_Wolf 
+				KAT_NAME_Neumann 
+				KAT_NAME_Schwarz 
+				KAT_NAME_Lange 
+				KAT_NAME_Schmitt 
+				KAT_NAME_Werner 
+				KAT_NAME_Schmitz 
+				KAT_NAME_Krause 
+				KAT_NAME_Frank 
+				KAT_NAME_Peters 
+				KAT_NAME_Lang 
+				KAT_NAME_Scholz 
+				KAT_NAME_Jung 
+				KAT_NAME_Schubert 
+				KAT_NAME_Volgel 
+				KAT_NAME_Keller 
+				KAT_NAME_Gunther 
+				KAT_NAME_Winkler 
+				KAT_NAME_Roth 
+				KAT_NAME_Beck 
+				KAT_NAME_Lorenz
+				KAT_NAME_Von_Kattensbach
+				KAT_NAME_Von_Clatz
+			}
+		}
+	}
+}

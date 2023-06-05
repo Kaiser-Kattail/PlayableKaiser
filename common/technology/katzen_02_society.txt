@@ -1,0 +1,157 @@
+#Katzen housing tech
+#tech_katzen_housing = {
+#	cost = @tier4cost1
+#	area = society
+#	tier = 4
+#	category = {
+#		"statecraft"
+#	}
+#	prerequisites = {
+#		"tech_paradise_dome"
+#		"tech_housing_2"
+#	}
+#	weight = @tier4weight1
+#	weight_modifier = {
+#		modifier = {
+#			factor = 0
+#			NOT = {
+#				has_origin = origin_katzen
+#			}
+#		}
+#		modifier = {
+#			factor = value:tech_weight_likelihood
+#			research_leader = {
+#				area = society
+#				has_trait = "leader_trait_expertise_statecraft"
+#			}
+#		}
+#	}
+#	ai_weight = {
+#		modifier = {
+#			factor = 1.25
+#			research_leader = {
+#				area = society
+#				has_trait = "leader_trait_expertise_statecraft"
+#			}
+#		}
+#		modifier = {
+#			factor = @housing_ai_tech_factor
+#			num_pops >= 100
+#		}
+#	}
+#}
+
+#Katzen habitability tech
+tech_katzen_habitability = {
+	cost = @tier4cost3
+	area = society
+	tier = 4
+	category = {
+		new_worlds
+	}
+	prerequisites = {
+		"tech_colonization_4"
+	}
+	weight = @tier4weight3
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				has_origin = origin_katzen
+			}
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = {
+			factor = 0.7
+			OR = {
+				has_civic = civic_machine_servitor
+				has_civic = civic_machine_assimilator
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+	}
+}
+
+#Katzen theater tech
+tech_katzen_theater = {
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	category = {
+		statecraft
+	}
+	prerequisites = {
+		"tech_housing_1"
+	}
+	weight = @tier3weight1
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				has_origin = origin_katzen
+			}
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+		modifier = {
+			factor = @housing_ai_tech_factor
+			num_pops >= 100
+		}
+	}
+}
+
+#Flusio-arc tech
+tech_katzen_flusioarc = {
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	category = {
+		statecraft
+	}
+	prerequisites = {
+		tech_capital_productivity_1
+	}
+	weight = @tier3weight1
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				has_origin = origin_katzen
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = @housing_ai_tech_factor
+			num_pops >= 100
+		}
+	}
+}

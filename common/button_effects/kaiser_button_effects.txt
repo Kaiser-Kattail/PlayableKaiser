@@ -1,0 +1,266 @@
+kaiser_bureau = {
+	potential = {
+		exists = from
+		from = {
+			NOT = { has_country_flag = giga_diplo_sa_buttons }
+			AND = { 
+				has_country_flag = kaiser_bureau_formed
+				has_origin = origin_katzen
+			}
+		}
+	}
+	effect = { custom_tooltip = "kaiser_bureau_tooltip" hidden_effect = { from = { country_event = { id = kaiser_bureau.2 } } } }
+}
+
+kaiser_katzen_0 = {
+	potential = { exists = from }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "katzen_con_0_tooltip" }
+}
+
+#Ezic
+kaiser_ezicania_0 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = ezicania_con value <= 0 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "ezicania_con_0_tooltip" hidden_effect = { from = { country_event = { id = flunat.0701 } } } }
+}
+
+kaiser_ezicania_1 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = ezicania_con value = 1 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "ezicania_con_1_tooltip" hidden_effect = { from = { country_event = { id = flunat.0701 } } } }
+}
+
+kaiser_ezicania_2 = {
+	potential = { exists = from event_target:playerflusion = { check_variable = { which = ezicania_con value = 2 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "ezicania_con_2_tooltip" }
+}
+
+#Laurn
+kaiser_laurandar_0 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = lauranaise_con value = 0 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "laurn_con_0_tooltip" hidden_effect = { from = { country_event = { id = flunat.01301 } } } }
+}
+
+kaiser_laurandar_1 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = lauranaise_con value = 1 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "laurn_con_1_tooltip" hidden_effect = { from = { country_event = { id = flunat.01301 } } } }
+}
+
+kaiser_laurandar_2 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = lauranaise_con value = 2 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "laurn_con_2_tooltip" }
+}
+
+#KRONK
+kaiser_kronk_0 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = kronk_con value = 0 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "kronk_con_0_tooltip" hidden_effect = { from = { country_event = { id = flunat.0301 } } } }
+}
+
+kaiser_kronk_1 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = kronk_con value = 1 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "kronk_con_1_tooltip" hidden_effect = { from = { country_event = { id = flunat.0301 } } } }
+}
+
+kaiser_kronk_2 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = kronk_con value = 2 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "kronk_con_2_tooltip" }
+}
+
+#SYMBIES
+kaiser_symbies_0 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = symbies_con value = 0 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "symbies_con_0_tooltip" hidden_effect = { from = { country_event = { id = flunat.01201 } } } }
+}
+
+kaiser_symbies_1 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = symbies_con value = 1 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "symbies_con_1_tooltip" hidden_effect = { from = { country_event = { id = flunat.01201 } } } }
+}
+
+kaiser_symbies_2 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = symbies_con value = 2 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "symbies_con_2_tooltip" }
+}
+
+#YINJA
+kaiser_yinja_0 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = yinjites_con value = 0 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "yinja_con_0_tooltip" hidden_effect = { from = { country_event = { id = flunat.01101 } } } }
+}
+
+kaiser_yinja_1 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = yinjites_con value = 1 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "yinja_con_1_tooltip" hidden_effect = { from = { country_event = { id = flunat.01101 } } } }
+}
+
+kaiser_yinja_2 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = yinjites_con value = 2 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "yinja_con_2_tooltip" }
+}
+
+#HARANIA
+kaiser_haranian_0 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = haranian_con value = 0 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "haranian_con_0_tooltip" hidden_effect = { from = { country_event = { id = flunat.01401 } } } }
+}
+
+kaiser_haranian_1 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = haranian_con value = 1 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "haranian_con_1_tooltip" hidden_effect = { from = { country_event = { id = flunat.01401 } } } }
+}
+
+kaiser_haranian_2 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = haranian_con value = 2 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "haranian_con_2_tooltip" }
+}
+
+#Cookie
+kaiser_cookie_0 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = cookie_con value = 0 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "cookie_con_0_tooltip" hidden_effect = { from = { country_event = { id = flunat.0201 } } } }
+}
+
+kaiser_cookie_1 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = cookie_con value = 1 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "cookie_con_1_tooltip" hidden_effect = { from = { country_event = { id = flunat.0201 } } } }
+}
+
+kaiser_cookie_2 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = cookie_con value = 2 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "cookie_con_2_tooltip" }
+}
+
+#SOLAKIANS
+kaiser_solakians_0 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = solakians_con value = 0 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "solakians_con_0_tooltip" hidden_effect = { from = { country_event = { id = flunat.0101 } } } }
+}
+
+kaiser_solakians_1 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = solakians_con value = 1 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "solakians_con_1_tooltip" hidden_effect = { from = { country_event = { id = flunat.0101 } } } }
+}
+
+kaiser_solakians_2 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = solakians_con value = 2 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "solakians_con_2_tooltip" }
+}
+
+#CYATS
+kaiser_cyatianalas_0 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = cyatianalas_con value = 0 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "cyatianalas_con_0_tooltip" hidden_effect = { from = { country_event = { id = flunat.0901 } } } }
+}
+
+kaiser_cyatianalas_1 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = cyatianalas_con value = 1 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "cyatianalas_con_1_tooltip" hidden_effect = { from = { country_event = { id = flunat.0901 } } } }
+}
+
+kaiser_cyatianalas_2 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = cyatianalas_con value = 2 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "cyatianalas_con_2_tooltip" }
+}
+
+#MERCURIANS
+kaiser_mercurians_0 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = mercurians_con value = 0 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "mercurians_con_0_tooltip" hidden_effect = { from = { country_event = { id = flunat.0801} } } }
+}
+
+kaiser_mercurians_1 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = mercurians_con value = 1 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "mercurians_con_1_tooltip" hidden_effect = { from = { country_event = { id = flunat.0801 } } } }
+}
+
+kaiser_mercurians_2 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = mercurians_con value = 2 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "mercurians_con_2_tooltip" }
+}
+
+#RAVKANS
+kaiser_ravkan_0 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = ravkan_con value = 0 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "ravkan_con_0_tooltip" hidden_effect = { from = { country_event = { id = flunat.0401 } } } }
+}
+
+kaiser_ravkan_1 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = ravkan_con value = 1 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "ravkan_con_1_tooltip" hidden_effect = { from = { country_event = { id = flunat.0401 } } } }
+}
+
+kaiser_ravkan_2 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = ravkan_con value = 2 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "ravkan_con_2_tooltip" }
+}
+
+#zousans
+kaiser_zousans_0 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = zousans_con value = 0 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "zousans_con_0_tooltip" hidden_effect = { from = { country_event = { id = flunat.0501 } } } }
+}
+
+kaiser_zousans_1 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = zousans_con value = 1 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "zousans_con_1_tooltip" hidden_effect = { from = { country_event = { id = flunat.0501 } } } }
+}
+
+kaiser_zousans_2 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = zousans_con value = 2 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "zousans_con_2_tooltip" }
+}
+
+#droog
+kaiser_droog_0 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = droog_con value = 0 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "droog_con_0_tooltip" hidden_effect = { from = { country_event = { id = flunat.0601 } } } }
+}
+
+kaiser_droog_1 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = droog_con value = 1 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "droog_con_1_tooltip" hidden_effect = { from = { country_event = { id = flunat.0601 } } } }
+}
+
+kaiser_droog_2 = {
+	potential = { exists = from event_target:playerflusion = {check_variable = { which = droog_con value = 2 } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "droog_con_2_tooltip" }
+}

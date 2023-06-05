@@ -1,0 +1,100 @@
+spriteTypes = {
+    spriteType = { name = "GFX_kaiser_conquest_bg"								texturefile = "gfx/interface/conquest_ui/conquest_background.dds" }
+	spriteType = { name = "GFX_douclaw_name"								texturefile = "gfx/interface/conquest_ui/douclaw_name_text.dds" }
+	spriteType = { name = "GFX_kaiser_conquest_map_bg"					texturefile = "gfx/interface/conquest_ui/conquest_map_background.dds" }
+	spriteType = { name = "GFX_kaiser_conquest_map_overlay"					texturefile = "gfx/interface/conquest_ui/conquest_map_overlay.dds" }
+
+	#KATZEN
+	spriteType = { name = "GFX_katzen_0"									texturefile = "gfx/interface/conquest_ui/regions/katzen_0.dds" }
+
+	#LAURn
+	spriteType = { name = "GFX_laurn_0"									texturefile = "gfx/interface/conquest_ui/regions/laurandar_0.dds" }
+
+	spriteType = { name = "GFX_laurn_1"									texturefile = "gfx/interface/conquest_ui/regions/laurandar_1.dds" }
+
+	spriteType = { name = "GFX_laurn_2"									texturefile = "gfx/interface/conquest_ui/regions/laurandar_2.dds" }
+
+	#EZIC
+	spriteType = { name = "GFX_ezicania_0"									texturefile = "gfx/interface/conquest_ui/regions/ezicania_0.dds" }
+
+	spriteType = { name = "GFX_ezicania_1"									texturefile = "gfx/interface/conquest_ui/regions/ezicania_1.dds" }
+
+	spriteType = { name = "GFX_ezicania_2"									texturefile = "gfx/interface/conquest_ui/regions/ezicania_2.dds" }
+
+	#KRONK
+	spriteType = { name = "GFX_kronk_0"									texturefile = "gfx/interface/conquest_ui/regions/kronk_0.dds" }
+
+	spriteType = { name = "GFX_kronk_1"									texturefile = "gfx/interface/conquest_ui/regions/kronk_1.dds" }
+
+	spriteType = { name = "GFX_kronk_2"									texturefile = "gfx/interface/conquest_ui/regions/kronk_2.dds" }
+
+	#SYMBIES
+	spriteType = { name = "GFX_symbies_0"									texturefile = "gfx/interface/conquest_ui/regions/symbies_0.dds" }
+
+	spriteType = { name = "GFX_symbies_1"									texturefile = "gfx/interface/conquest_ui/regions/symbies_1.dds" }
+
+	spriteType = { name = "GFX_symbies_2"									texturefile = "gfx/interface/conquest_ui/regions/symbies_2.dds" }
+
+	#YINJA
+	spriteType = { name = "GFX_yinja_0"									texturefile = "gfx/interface/conquest_ui/regions/yinja_0.dds" }
+
+	spriteType = { name = "GFX_yinja_1"									texturefile = "gfx/interface/conquest_ui/regions/yinja_1.dds" }
+
+	spriteType = { name = "GFX_yinja_2"									texturefile = "gfx/interface/conquest_ui/regions/yinja_2.dds" }
+
+	#HARANIA
+	spriteType = { name = "GFX_haranian_0"									texturefile = "gfx/interface/conquest_ui/regions/harania_0.dds" }
+
+	spriteType = { name = "GFX_haranian_1"									texturefile = "gfx/interface/conquest_ui/regions/harania_1.dds" }
+
+	spriteType = { name = "GFX_haranian_2"									texturefile = "gfx/interface/conquest_ui/regions/harania_2.dds" }
+
+	#COOKIE
+	spriteType = { name = "GFX_cookie_0"									texturefile = "gfx/interface/conquest_ui/regions/cookie_0.dds" }
+
+	spriteType = { name = "GFX_cookie_1"									texturefile = "gfx/interface/conquest_ui/regions/cookie_1.dds" }
+
+	spriteType = { name = "GFX_cookie_2"									texturefile = "gfx/interface/conquest_ui/regions/cookie_2.dds" }
+
+	#solakians
+	spriteType = { name = "GFX_solakians_0"									texturefile = "gfx/interface/conquest_ui/regions/solakia_0.dds" }
+
+	spriteType = { name = "GFX_solakians_1"									texturefile = "gfx/interface/conquest_ui/regions/solakia_1.dds" }
+
+	spriteType = { name = "GFX_solakians_2"									texturefile = "gfx/interface/conquest_ui/regions/solakia_2.dds" }
+
+	#CYATS
+	spriteType = { name = "GFX_cyatianalas_0"									texturefile = "gfx/interface/conquest_ui/regions/cyat_0.dds" }
+
+	spriteType = { name = "GFX_cyatianalas_1"									texturefile = "gfx/interface/conquest_ui/regions/cyat_1.dds" }
+
+	spriteType = { name = "GFX_cyatianalas_2"									texturefile = "gfx/interface/conquest_ui/regions/cyat_2.dds" }
+
+	#MERCURIANS
+	spriteType = { name = "GFX_mercurians_0"									texturefile = "gfx/interface/conquest_ui/regions/mercuria_0.dds" }
+
+	spriteType = { name = "GFX_mercurians_1"									texturefile = "gfx/interface/conquest_ui/regions/mercuria_1.dds" }
+
+	spriteType = { name = "GFX_mercurians_2"									texturefile = "gfx/interface/conquest_ui/regions/mercuria_2.dds" }
+
+	#RAVKANS
+	spriteType = { name = "GFX_ravkan_0"									texturefile = "gfx/interface/conquest_ui/regions/ravka_0.dds" }
+
+	spriteType = { name = "GFX_ravkan_1"									texturefile = "gfx/interface/conquest_ui/regions/ravka_1.dds" }
+
+	spriteType = { name = "GFX_ravkan_2"									texturefile = "gfx/interface/conquest_ui/regions/ravka_2.dds" }
+
+	#zousans
+	spriteType = { name = "GFX_zousans_0"									texturefile = "gfx/interface/conquest_ui/regions/zousa_0.dds" }
+
+	spriteType = { name = "GFX_zousans_1"									texturefile = "gfx/interface/conquest_ui/regions/zousa_1.dds" }
+
+	spriteType = { name = "GFX_zousans_2"									texturefile = "gfx/interface/conquest_ui/regions/zousa_2.dds" }	
+
+	#droog
+	spriteType = { name = "GFX_droog_0"									texturefile = "gfx/interface/conquest_ui/regions/droog_0.dds" }
+
+	spriteType = { name = "GFX_droog_1"									texturefile = "gfx/interface/conquest_ui/regions/droog_1.dds" }
+
+	spriteType = { name = "GFX_droog_2"									texturefile = "gfx/interface/conquest_ui/regions/droog_2.dds" }
+}

@@ -1,0 +1,28 @@
+ap_kaiser_moon = {
+	possible = {
+		custom_tooltip = {
+			fail_text = "unify_flusion_first_bozo"
+			has_country_flag = unified_flusion
+		}
+		has_tradition = tr_katzen_finish
+	}
+
+	modifier = {
+		country_unity_produces_mult = 0.1
+	}
+
+	on_enabled = {
+		custom_tooltip = "ap_kaiser_moon_effect"
+	}
+
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_kaiser_moon
+		}
+		has_origin = origin_katzen
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}

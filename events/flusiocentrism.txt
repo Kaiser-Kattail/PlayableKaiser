@@ -1,0 +1,390 @@
+namespace = centrism
+
+country_event = {
+	id = centrism.1
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_origin = origin_katzen
+		has_tradition = tr_flusion_finish
+	}
+
+	immediate = {
+		every_owned_planet = {
+			remove_modifier = central_instability
+			planet_event = {
+				id = centrism.2
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = centrism.2
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		if = {
+			limit = {
+				check_variable_arithmetic = {
+					which = value:flusion_empire_ratio
+					value >= 0.5
+				} 
+				NOT = {
+					has_planet_flag = playerflusion
+				}
+			}
+			add_modifier = {
+				modifier = central_instability
+				mult = value:flusion_empire_ratio_five
+			}
+		}
+	}
+}
+
+country_event = {
+	id = centrism.3
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_evt_announcement
+	show_sound = event_celebration
+	trigger = {
+		has_origin = origin_katzen
+	}
+
+	title = centrism.3.title
+	desc = centrism.3.desc
+
+	immediate = {
+		event_target:playerflusion = {
+			add_deposit = d_centralized_industry
+		}
+	}
+
+	option = {
+		name = "centrism.3.a"
+	}
+
+}
+
+planet_event = {
+	id = centrism.4
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		from = {
+			has_origin = origin_katzen
+		}
+		NOT = {
+			has_planet_flag = playerflusion
+		}
+		exists = fromfrom
+	}
+	immediate = {
+		if = {
+			limit = {
+				count_owned_pop = {
+					count <= 15					
+				}
+			}
+			every_owned_pop = {
+				resettle_pop = {
+					pop = THIS
+					planet = event_target:playerflusion
+				}
+				clear_pop_category = yes
+			}
+			from = {
+				country_event = {
+					id = centrism.5
+				}
+				set_timed_country_flag = {
+					flag = dont_spam_me
+					days = 10
+				}
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = centrism.5
+	is_triggered_only = yes
+	picture = GFX_evt_surrender
+	show_sound = event_radio_chatter
+	title = centrism.5.title
+	desc = centrism.5.desc
+	trigger = {
+		NOT = {
+			has_country_flag = dont_spam_me
+		}
+	}
+	option = {
+		name = centrism.5.a
+	}
+}
+
+country_event = {
+	id = centrism.6
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_origin = origin_katzen
+		has_tradition = tr_border_colonies
+	}
+
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				NOR = {
+					has_planet_flag = playerflusion
+					has_modifier = katzen_colony
+				}
+			}
+			add_modifier = {
+				modifier = katzen_colony
+				days = -1
+			}
+		}
+	}
+}
+country_event = {
+	id = centrism.7
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_origin = origin_katzen
+		has_tradition = tr_flusions_bounty
+	}
+
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				NOR = {
+					has_planet_flag = playerflusion
+					has_deposit = d_flusion_bounty_colony
+				}
+			}
+			add_deposit = d_flusion_bounty_colony
+		}
+	}
+}
+country_event = {
+	id = centrism.8
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_origin = origin_katzen
+		has_tradition = tr_work_arrangements
+	}
+
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				NOR = {
+					has_planet_flag = playerflusion
+					has_deposit = d_bureau_of_colonial_benefits
+				}
+			}
+			add_deposit = d_bureau_of_colonial_benefits
+		}
+	}
+}
+
+country_event = {
+	id = centrism.9
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_origin = origin_katzen
+		has_tradition = tr_centralization
+	}
+
+	immediate = {
+		remove_modifier = central_stability
+		set_variable = {
+			which = centralization_unity_modifier
+			value = 0
+		}
+		every_owned_planet = {
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = central_instability
+					}
+					NOT = {
+						has_planet_flag = playerflusion
+					}
+				}
+				event_target:katzenartig = {
+					change_variable = {
+						which = centralization_unity_modifier
+						value = 1
+					}
+				}
+			}
+		}
+		event_target:katzenartig = {
+			add_modifier = {
+				modifier = central_stability
+				multiplier = centralization_unity_modifier
+			}
+		}
+	}
+}
+
+country_event = {
+	id = centrism.97
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_origin = origin_katzen
+		has_policy_flag = smol_migration
+		has_tradition = tr_work_arrangements
+		NOT = {
+			has_country_flag = recent_migration
+		}
+	}
+
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				NOT = {
+					has_planet_flag = playerflusion
+				}
+				count_owned_pop = {
+					count >= 15
+				}
+			}
+			every_owned_pop = {
+				random_list = {
+					95 = {
+					}
+					5 = {
+						resettle_pop = {
+							pop = THIS
+							planet = event_target:playerflusion
+						}
+					}
+				}
+			}
+		}
+		event_target:playerflusion = {
+			add_modifier = {
+				modifier = temp_job_help
+				days = 5
+			}
+		}
+		set_timed_country_flag = {
+			flag = recent_migration
+			days = 1800
+		}
+	}
+
+}
+country_event = {
+	id = centrism.98
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_origin = origin_katzen
+		has_policy_flag = more_migration
+		has_tradition = tr_work_arrangements
+		NOT = {
+			has_country_flag = recent_migration
+		}
+	}
+
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				NOT = {
+					has_planet_flag = playerflusion
+				}
+				count_owned_pop = {
+					count >= 15
+				}
+			}
+			every_owned_pop = {
+				random_list = {
+					90 = {
+					}
+					10 = {
+						resettle_pop = {
+							pop = THIS
+							planet = event_target:playerflusion
+						}
+					}
+				}
+			}
+		}
+		event_target:playerflusion = {
+			add_modifier = {
+				modifier = temp_job_help
+				days = 5
+			}
+		}
+		set_timed_country_flag = {
+			flag = recent_migration
+			days = 1800
+		}
+	}
+
+}
+
+country_event = {
+	id = centrism.99
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_origin = origin_katzen
+		has_policy_flag = much_migration
+		has_tradition = tr_work_arrangements
+		NOT = {
+			has_country_flag = recent_migration
+		}
+	}
+
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				NOT = {
+					has_planet_flag = playerflusion
+				}
+				count_owned_pop = {
+					count >= 15
+				}
+			}
+			every_owned_pop = {
+				random_list = {
+					85 = {
+					}
+					15 = {
+						resettle_pop = {
+							pop = THIS
+							planet = event_target:playerflusion
+						}
+					}
+				}
+			}
+		}
+		event_target:playerflusion = {
+			add_modifier = {
+				modifier = temp_job_help
+				days = 5
+			}
+		}
+		set_timed_country_flag = {
+			flag = recent_migration
+			days = 1800
+		}
+	}
+
+}

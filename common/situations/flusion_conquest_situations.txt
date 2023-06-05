@@ -1,0 +1,1851 @@
+###FLUSIONIAN WORLD TENSION###
+situation_world_tension = {
+	picture = GFX_evt_flusion
+	category = negative
+	start_value = 0
+	complete_icon = GFX_situation_outcome_negative
+	complete_icon_frame = GFX_situation_outcome_frame_red
+
+	monthly_progress = {
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_ignore
+			add = 0.025
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mobilize
+			add = 0.05
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = situation_world_tension_coalition
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = flunat.0991
+				}
+			}
+		}
+	}
+
+	stages = {
+		tension_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			end = 30
+		}
+		tension_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_red
+			end = 60
+		}
+		tension_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+			end = 100
+		}
+		
+	}
+
+	approach = {
+		name = approach_diplomacy
+		icon = GFX_situation_approach_handshake
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				influence = 4
+			}
+		}
+	}
+	approach = {
+		name = approach_ignore
+		icon = GFX_situation_approach_shrug
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+	}
+	approach = {
+		name = approach_mobilize
+		icon = GFX_situation_approach_fist
+		icon_background = GFX_situation_approach_bg_red
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			produces = {
+				energy = 25
+				minerals = 25
+				alloys = 10
+			}
+		}
+	}
+}
+
+###CONQUEST SITUATIONS###
+situation_solakian_conquest = {
+	picture = GFX_evt_burning_city
+	category = neutral
+	start_value = 20
+	complete_icon = GFX_situation_outcome_positive
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	fail_icon = GFX_situation_outcome_revolt
+	fail_icon_frame = GFX_situation_outcome_frame_red
+
+	monthly_progress = {
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mobile
+			add = 0.5
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mixed
+			add = 1
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_attrition
+			add = 2
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = conquest_situation_conquer_solakia
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = flunat.0102
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		custom_tooltip = conquest_situation_get_rekt
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = conquest.102
+				}
+			}
+		}
+	}
+
+	stages = {
+		backfoot = {
+			icon = GFX_situation_outcome_revolt
+			icon_background = GFX_situation_outcome_frame_red
+			end = 20
+			modifier = {
+				pop_happiness = -0.15
+				planet_jobs_produces_mult = -0.2
+			}
+		}
+		region_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 40
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+		region_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 60
+			on_first_enter = {
+				situation_event = { id = flunat.0111 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+		region_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			end = 80
+			on_first_enter = {
+				situation_event = { id = flunat.0111 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+		region_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_green
+			end = 100
+			on_first_enter = {
+				situation_event = { id = flunat.0111 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+		region_5 = {
+			icon = GFX_situation_stage_5
+			icon_background = GFX_situation_stage_frame_green
+			end = 120
+			on_first_enter = {
+				situation_event = { id = flunat.0111 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+	}
+
+	approach = {
+		name = approach_mobile
+		icon = GFX_situation_approach_fleet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 5
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_mixed
+		icon = GFX_situation_approach_sword
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 10
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_attrition
+		icon = GFX_situation_approach_fist
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 15
+				minerals = 5
+				alloys = 2
+			}
+		}
+	}
+}
+
+situation_cookian_conquest = {
+	picture = GFX_evt_burning_city
+	category = neutral
+	start_value = 20
+	complete_icon = GFX_situation_outcome_positive
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	fail_icon = GFX_situation_outcome_revolt
+	fail_icon_frame = GFX_situation_outcome_frame_red
+
+	monthly_progress = {
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mobile
+			add = 0.5
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mixed
+			add = 1
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_attrition
+			add = 2
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = conquest_situation_conquer_cookie
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = flunat.0202
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		custom_tooltip = conquest_situation_get_rekt
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = conquest.202
+				}
+			}
+		}
+	}
+
+	stages = {
+		backfoot = {
+			icon = GFX_situation_outcome_revolt
+			icon_background = GFX_situation_outcome_frame_red
+			end = 20
+			modifier = {
+				pop_happiness = -0.15
+				planet_jobs_produces_mult = -0.2
+			}
+		}
+		region_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 40
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+		region_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 60
+			on_first_enter = {
+				situation_event = { id = flunat.0211 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+		region_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			end = 80
+			on_first_enter = {
+				situation_event = { id = flunat.0211 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+		region_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_green
+			end = 100
+			on_first_enter = {
+				situation_event = { id = flunat.0211 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+	}
+
+	approach = {
+		name = approach_mobile
+		icon = GFX_situation_approach_fleet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 5
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_mixed
+		icon = GFX_situation_approach_sword
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 10
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_attrition
+		icon = GFX_situation_approach_fist
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 15
+				minerals = 5
+				alloys = 2
+			}
+		}
+	}
+}
+
+situation_kronk_conquest = {
+	picture = GFX_evt_burning_city
+	category = neutral
+	start_value = 20
+	complete_icon = GFX_situation_outcome_positive
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	fail_icon = GFX_situation_outcome_revolt
+	fail_icon_frame = GFX_situation_outcome_frame_red
+
+	monthly_progress = {
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mobile
+			add = 0.5
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mixed
+			add = 1
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_attrition
+			add = 2
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = conquest_situation_conquer_kronk
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = flunat.0302
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		custom_tooltip = conquest_situation_get_rekt
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = conquest.302
+				}
+			}
+		}
+	}
+
+	stages = {
+		backfoot = {
+			icon = GFX_situation_outcome_revolt
+			icon_background = GFX_situation_outcome_frame_red
+			end = 20
+			modifier = {
+				pop_happiness = -0.15
+				planet_jobs_produces_mult = -0.2
+			}
+		}
+		region_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 40
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+		region_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 60
+			on_first_enter = {
+				situation_event = { id = flunat.0311 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+		region_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			end = 80
+			on_first_enter = {
+				situation_event = { id = flunat.0311 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+	}
+
+	approach = {
+		name = approach_mobile
+		icon = GFX_situation_approach_fleet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 5
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_mixed
+		icon = GFX_situation_approach_sword
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 10
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_attrition
+		icon = GFX_situation_approach_fist
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 15
+				minerals = 5
+				alloys = 2
+			}
+		}
+	}
+}
+
+situation_ravka_conquest = {
+	picture = GFX_evt_burning_city
+	category = neutral
+	start_value = 19
+	complete_icon = GFX_situation_outcome_positive
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	fail_icon = GFX_situation_outcome_revolt
+	fail_icon_frame = GFX_situation_outcome_frame_red
+
+	monthly_progress = {
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mobile
+			add = 0.5
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mixed
+			add = 1
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_attrition
+			add = 2
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = conquest_situation_conquer_ravka
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = flunat.0402
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		custom_tooltip = conquest_situation_get_rekt
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = conquest.402
+				}
+			}
+		}
+	}
+
+	stages = {
+		backfoot = {
+			icon = GFX_situation_outcome_revolt
+			icon_background = GFX_situation_outcome_frame_red
+			end = 20
+			modifier = {
+				pop_happiness = -0.15
+				planet_jobs_produces_mult = -0.2
+			}
+		}
+		region_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 40
+			on_first_enter = {
+				situation_event = { id = flunat.0411 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+		region_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 60
+			on_first_enter = {
+				situation_event = { id = flunat.0411 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+	}
+
+	approach = {
+		name = approach_mobile
+		icon = GFX_situation_approach_fleet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 5
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_mixed
+		icon = GFX_situation_approach_sword
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 10
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_attrition
+		icon = GFX_situation_approach_fist
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 15
+				minerals = 5
+				alloys = 2
+			}
+		}
+	}
+}
+
+situation_zousa_conquest = {
+	picture = GFX_evt_burning_city
+	category = neutral
+	start_value = 19
+	complete_icon = GFX_situation_outcome_positive
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	fail_icon = GFX_situation_outcome_revolt
+	fail_icon_frame = GFX_situation_outcome_frame_red
+
+	monthly_progress = {
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mobile
+			add = 0.5
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mixed
+			add = 1
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_attrition
+			add = 2
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = conquest_situation_conquer_zousa
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = flunat.0502
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		custom_tooltip = conquest_situation_get_rekt
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = conquest.502
+				}
+			}
+		}
+	}
+
+	stages = {
+		backfoot = {
+			icon = GFX_situation_outcome_revolt
+			icon_background = GFX_situation_outcome_frame_red
+			end = 20
+			modifier = {
+				pop_happiness = -0.15
+				planet_jobs_produces_mult = -0.2
+			}
+		}
+		region_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 40
+			on_first_enter = {
+				situation_event = { id = flunat.0511 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+	}
+
+	approach = {
+		name = approach_mobile
+		icon = GFX_situation_approach_fleet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 5
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_mixed
+		icon = GFX_situation_approach_sword
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 10
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_attrition
+		icon = GFX_situation_approach_fist
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 15
+				minerals = 5
+				alloys = 2
+			}
+		}
+	}
+}
+
+situation_droog_conquest = {
+	picture = GFX_evt_burning_city
+	category = neutral
+	start_value = 19
+	complete_icon = GFX_situation_outcome_positive
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	fail_icon = GFX_situation_outcome_revolt
+	fail_icon_frame = GFX_situation_outcome_frame_red
+
+	monthly_progress = {
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mobile
+			add = 0.5
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mixed
+			add = 1
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_attrition
+			add = 2
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = conquest_situation_conquer_droog
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = flunat.0602
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		custom_tooltip = conquest_situation_get_rekt
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = conquest.602
+				}
+			}
+		}
+	}
+
+	stages = {
+		backfoot = {
+			icon = GFX_situation_outcome_revolt
+			icon_background = GFX_situation_outcome_frame_red
+			end = 20
+			modifier = {
+				pop_happiness = -0.15
+				planet_jobs_produces_mult = -0.2
+			}
+		}
+		region_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 40
+			on_first_enter = {
+				situation_event = { id = flunat.0611 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+	}
+
+	approach = {
+		name = approach_mobile
+		icon = GFX_situation_approach_fleet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 5
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_mixed
+		icon = GFX_situation_approach_sword
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 10
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_attrition
+		icon = GFX_situation_approach_fist
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 15
+				minerals = 5
+				alloys = 2
+			}
+		}
+	}
+}
+
+situation_ezic_conquest = {
+	picture = GFX_evt_burning_city
+	category = neutral
+	start_value = 19
+	complete_icon = GFX_situation_outcome_positive
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	fail_icon = GFX_situation_outcome_revolt
+	fail_icon_frame = GFX_situation_outcome_frame_red
+
+	monthly_progress = {
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mobile
+			add = 0.5
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mixed
+			add = 1
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_attrition
+			add = 2
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = conquest_situation_conquer_ezic
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = flunat.0702
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		custom_tooltip = conquest_situation_get_rekt
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = conquest.702
+				}
+			}
+		}
+	}
+
+	stages = {
+		backfoot = {
+			icon = GFX_situation_outcome_revolt
+			icon_background = GFX_situation_outcome_frame_red
+			end = 20
+			modifier = {
+				pop_happiness = -0.15
+				planet_jobs_produces_mult = -0.2
+			}
+		}
+		region_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 40
+			on_first_enter = {
+				situation_event = { id = flunat.0711 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+		region_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 60
+			on_first_enter = {
+				situation_event = { id = flunat.0711 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+	}
+
+	approach = {
+		name = approach_mobile
+		icon = GFX_situation_approach_fleet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 5
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_mixed
+		icon = GFX_situation_approach_sword
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 10
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_attrition
+		icon = GFX_situation_approach_fist
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 15
+				minerals = 5
+				alloys = 2
+			}
+		}
+	}
+}
+
+situation_mercurian_conquest = {
+	picture = GFX_evt_burning_city
+	category = neutral
+	start_value = 19
+	complete_icon = GFX_situation_outcome_positive
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	fail_icon = GFX_situation_outcome_revolt
+	fail_icon_frame = GFX_situation_outcome_frame_red
+
+	monthly_progress = {
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mobile
+			add = 0.5
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mixed
+			add = 1
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_attrition
+			add = 2
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = conquest_situation_conquer_mercuria
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = flunat.0802
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		custom_tooltip = conquest_situation_get_rekt
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = conquest.802
+				}
+			}
+		}
+	}
+
+	stages = {
+		backfoot = {
+			icon = GFX_situation_outcome_revolt
+			icon_background = GFX_situation_outcome_frame_red
+			end = 20
+			modifier = {
+				pop_happiness = -0.15
+				planet_jobs_produces_mult = -0.2
+			}
+		}
+		region_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 40
+			on_first_enter = {
+				situation_event = { id = flunat.0811 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+	}
+
+	approach = {
+		name = approach_mobile
+		icon = GFX_situation_approach_fleet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 5
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_mixed
+		icon = GFX_situation_approach_sword
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 10
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_attrition
+		icon = GFX_situation_approach_fist
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 15
+				minerals = 5
+				alloys = 2
+			}
+		}
+	}
+}
+
+situation_cyatianala_conquest = {
+	picture = GFX_evt_burning_city
+	category = neutral
+	start_value = 19
+	complete_icon = GFX_situation_outcome_positive
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	fail_icon = GFX_situation_outcome_revolt
+	fail_icon_frame = GFX_situation_outcome_frame_red
+
+	monthly_progress = {
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mobile
+			add = 0.5
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mixed
+			add = 1
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_attrition
+			add = 2
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = conquest_situation_conquer_cyatianala
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = flunat.0902
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		custom_tooltip = conquest_situation_get_rekt
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = conquest.902
+				}
+			}
+		}
+	}
+
+	stages = {
+		backfoot = {
+			icon = GFX_situation_outcome_revolt
+			icon_background = GFX_situation_outcome_frame_red
+			end = 20
+			modifier = {
+				pop_happiness = -0.15
+				planet_jobs_produces_mult = -0.2
+			}
+		}
+		region_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 40
+			on_first_enter = {
+				situation_event = { id = flunat.0911 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+		region_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 60
+			on_first_enter = {
+				situation_event = { id = flunat.0911 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+	}
+
+	approach = {
+		name = approach_mobile
+		icon = GFX_situation_approach_fleet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 5
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_mixed
+		icon = GFX_situation_approach_sword
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 10
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_attrition
+		icon = GFX_situation_approach_fist
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 15
+				minerals = 5
+				alloys = 2
+			}
+		}
+	}
+}
+
+situation_yinja_conquest = {
+	picture = GFX_evt_burning_city
+	category = neutral
+	start_value = 19
+	complete_icon = GFX_situation_outcome_positive
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	fail_icon = GFX_situation_outcome_revolt
+	fail_icon_frame = GFX_situation_outcome_frame_red
+
+	monthly_progress = {
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mobile
+			add = 0.5
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mixed
+			add = 1
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_attrition
+			add = 2
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = conquest_situation_conquer_yinja
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = flunat.01102
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		custom_tooltip = conquest_situation_get_rekt
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = conquest.1102
+				}
+			}
+		}
+	}
+
+	stages = {
+		backfoot = {
+			icon = GFX_situation_outcome_revolt
+			icon_background = GFX_situation_outcome_frame_red
+			end = 20
+			modifier = {
+				pop_happiness = -0.15
+				planet_jobs_produces_mult = -0.2
+			}
+		}
+		region_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 40
+			on_first_enter = {
+				situation_event = { id = flunat.01111 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+		region_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 60
+			on_first_enter = {
+				situation_event = { id = flunat.01111 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+		region_3 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 80
+			on_first_enter = {
+				situation_event = { id = flunat.01111 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+	}
+
+	approach = {
+		name = approach_mobile
+		icon = GFX_situation_approach_fleet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 5
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_mixed
+		icon = GFX_situation_approach_sword
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 10
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_attrition
+		icon = GFX_situation_approach_fist
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 15
+				minerals = 5
+				alloys = 2
+			}
+		}
+	}
+}
+
+situation_symbie_conquest = {
+	picture = GFX_evt_burning_city
+	category = neutral
+	start_value = 19
+	complete_icon = GFX_situation_outcome_positive
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	fail_icon = GFX_situation_outcome_revolt
+	fail_icon_frame = GFX_situation_outcome_frame_red
+
+	monthly_progress = {
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mobile
+			add = 0.5
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mixed
+			add = 1
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_attrition
+			add = 2
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = conquest_situation_conquer_symbie
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = flunat.01202
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		custom_tooltip = conquest_situation_get_rekt
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = conquest.1202
+				}
+			}
+		}
+	}
+
+	stages = {
+		backfoot = {
+			icon = GFX_situation_outcome_revolt
+			icon_background = GFX_situation_outcome_frame_red
+			end = 20
+			modifier = {
+				pop_happiness = -0.15
+				planet_jobs_produces_mult = -0.2
+			}
+		}
+		region_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 40
+			on_first_enter = {
+				situation_event = { id = flunat.01211 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+		region_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 60
+			on_first_enter = {
+				situation_event = { id = flunat.01211 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+		region_3 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 80
+			on_first_enter = {
+				situation_event = { id = flunat.01211 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+	}
+
+	approach = {
+		name = approach_mobile
+		icon = GFX_situation_approach_fleet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 5
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_mixed
+		icon = GFX_situation_approach_sword
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 10
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_attrition
+		icon = GFX_situation_approach_fist
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 15
+				minerals = 5
+				alloys = 2
+			}
+		}
+	}
+}
+
+situation_lauranaise_conquest = {
+	picture = GFX_evt_burning_city
+	category = neutral
+	start_value = 19
+	complete_icon = GFX_situation_outcome_positive
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	fail_icon = GFX_situation_outcome_revolt
+	fail_icon_frame = GFX_situation_outcome_frame_red
+
+	monthly_progress = {
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mobile
+			add = 0.5
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mixed
+			add = 1
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_attrition
+			add = 2
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = conquest_situation_conquer_lauranaise
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = flunat.01302
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		custom_tooltip = conquest_situation_get_rekt
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = conquest.1302
+				}
+			}
+		}
+	}
+
+	stages = {
+		backfoot = {
+			icon = GFX_situation_outcome_revolt
+			icon_background = GFX_situation_outcome_frame_red
+			end = 20
+			modifier = {
+				pop_happiness = -0.15
+				planet_jobs_produces_mult = -0.2
+			}
+		}
+		region_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 40
+			on_first_enter = {
+				situation_event = { id = flunat.01311 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+		region_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 60
+			on_first_enter = {
+				situation_event = { id = flunat.01311 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+		region_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			end = 80
+			on_first_enter = {
+				situation_event = { id = flunat.01311 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+		region_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_green
+			end = 100
+			on_first_enter = {
+				situation_event = { id = flunat.01311 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+	}
+
+	approach = {
+		name = approach_mobile
+		icon = GFX_situation_approach_fleet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 5
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_mixed
+		icon = GFX_situation_approach_sword
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 10
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_attrition
+		icon = GFX_situation_approach_fist
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 15
+				minerals = 5
+				alloys = 2
+			}
+		}
+	}
+}
+
+situation_haranian_conquest = {
+	picture = GFX_evt_burning_city
+	category = neutral
+	start_value = 19
+	complete_icon = GFX_situation_outcome_positive
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	fail_icon = GFX_situation_outcome_revolt
+	fail_icon_frame = GFX_situation_outcome_frame_red
+
+	monthly_progress = {
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mobile
+			add = 0.5
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mixed
+			add = 1
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_attrition
+			add = 2
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = conquest_situation_conquer_harania
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = flunat.1402
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		custom_tooltip = conquest_situation_get_rekt
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = conquest.1402
+				}
+			}
+		}
+	}
+
+	stages = {
+		backfoot = {
+			icon = GFX_situation_outcome_revolt
+			icon_background = GFX_situation_outcome_frame_red
+			end = 20
+			modifier = {
+				pop_happiness = -0.15
+				planet_jobs_produces_mult = -0.2
+			}
+		}
+		region_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 40
+			on_first_enter = {
+				situation_event = { id = flunat.01411 }
+			}
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+			}
+		}
+	}
+
+	approach = {
+		name = approach_mobile
+		icon = GFX_situation_approach_fleet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 5
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_mixed
+		icon = GFX_situation_approach_sword
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 10
+				alloys = 2
+			}
+		}
+	}
+	approach = {
+		name = approach_attrition
+		icon = GFX_situation_approach_fist
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 15
+				minerals = 5
+				alloys = 2
+			}
+		}
+	}
+}

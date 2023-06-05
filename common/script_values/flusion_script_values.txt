@@ -1,0 +1,9 @@
+flusion_empire_ratio = {
+    add = trigger:num_pops
+    divide = owner.capital_scope.trigger:num_pops
+}
+
+flusion_empire_ratio_five = {
+    weight = value:flusion_empire_ratio
+    subtract = 0.5
+}

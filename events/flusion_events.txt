@@ -1,0 +1,2352 @@
+################################
+#
+# Exodus Events
+#
+###############################
+
+namespace = flusion
+
+event = {
+	id = flusion.1
+	hide_window = yes
+	is_triggered_only = yes	
+	immediate = {
+		every_playable_country = {
+			limit = { has_origin = origin_katzen }
+			country_event = { id = flusion.2 }
+			country_event = { id = kaiser_bureau.0 days = 30 }
+		}
+	}
+}
+
+
+country_event = {
+	id = flusion.2
+	is_triggered_only = yes
+	picture = GFX_evt_landing_ship_2
+	title = "flusion.2.title"
+	desc = "flusion.2.desc"
+	option = {
+		name = "flusion.2.a"
+		hidden_effect = {
+			create_species = {
+				name = "Imperial Katzen"
+				plural = "Imperial Katzens"
+				class = Flusionian
+				portrait = kaiser
+				homeworld = event_target:gigaflusion
+				traits = {
+					trait = trait_pc_continental_preference
+					trait = trait_quick_learners
+					trait = trait_talented
+					trait = trait_venerable
+				}
+				effect = {
+					set_global_flag = kaiser_portrait_defined
+					save_global_event_target_as = kaiser_portrait
+				}
+
+			}
+			country_event = { id = flusion.4}
+		}
+	}
+	option = {
+		name = "flusion.2.b"
+		hidden_effect = {
+				create_species = {
+					name = "Imperial Katzen"
+					plural = "Imperial Katzens"
+					class = Flusionian
+					portrait = Kattail_1
+					homeworld = event_target:gigaflusion
+					traits = {
+						trait = trait_pc_continental_preference
+						trait = trait_quick_learners
+						trait = trait_talented
+						trait = trait_venerable
+					}
+					
+					effect = {
+						set_global_flag = kaiser_portrait_defined
+						save_global_event_target_as = kaiser_portrait
+					}
+					
+				}
+			country_event = { id = flusion.4}
+		}
+	}
+}
+
+planet_event = {
+	id = flusion.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_planet_flag = flusion
+			}
+			set_planet_entity = {
+				entity = "flusion_planet_entity"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flusion.4
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_country_flag = flusion_setup_complete }
+	}
+	immediate = {
+		save_global_event_target_as = katzenartig
+		add_modifier = {
+			modifier = no_ftl_capability days = -1
+		}
+		#Target flusion
+		every_galaxy_planet = { 
+			if = {
+				limit = {
+					solar_system = { has_star_flag = flusion_system }
+					}	
+				save_global_event_target_as = jublio_system
+				}
+			if = {
+				limit = {
+						planet = { has_planet_flag = gigaflusion }
+					}
+				save_global_event_target_as = flusionhome
+				}
+			}
+
+		#Leader Portraits
+		
+
+		#Make the soulbot species
+		create_species = {
+			name = "Soulbot"
+			plural = "Soulbots"
+			class = ROBOT
+			portrait = default_robot
+			traits = {
+				trait = trait_mechanical
+				trait = trait_robot_enhanced_memory
+				trait = trait_robot_learning_algorithms
+				trait = trait_robot_luxurious
+				trait = trait_robot_custom_made
+			}
+			effect = {
+				save_global_event_target_as = soulbot
+			}
+		}
+
+		event_target:flusionhome = {
+		#Flusion Species
+		#Haranians
+		create_species = {
+			name = "Haranian"
+			plural = "Haranians"
+			class = HUM
+			portrait = humanoid_02
+			homeworld = this
+			traits = {
+				trait = trait_pc_continental_preference
+				trait = trait_intelligent
+				trait = trait_decadent
+			}
+			effect = {
+				save_global_event_target_as = haranians
+			}
+		} 
+		#Lauranaise
+		 create_species = {
+			name = "Lauranaise"
+			plural = "Lauranaise"
+			class = AVI
+			portrait = avi5
+			homeworld = this
+			traits = {
+				trait = trait_pc_continental_preference
+				trait = trait_rapid_breeders
+			}
+			effect = {
+				save_global_event_target_as = lauranaise
+			}
+		}
+		 #SYmbies
+		 create_species = {
+			name = "Symbie"
+			plural = "Symbies"
+			class = HUM
+			portrait = humanoid_hp_06
+			homeworld = this
+			traits = {
+				trait = trait_pc_continental_preference
+				trait = trait_strong
+				trait = trait_nomadic
+			}
+			effect = {
+				save_global_event_target_as = symbies
+			}
+		}
+		 #Yinjites
+		 create_species = {
+			name = "Yinjite"
+			plural = "Yinjites"
+			class = HUM
+			portrait = humanoid_hp_09
+			homeworld = this
+			traits = {
+				trait = trait_pc_continental_preference
+				trait = trait_industrious
+				trait = trait_sedentary
+			}
+			effect = {
+				save_global_event_target_as = yinjites
+			}
+		}
+			#Ezics
+				create_species = {
+					name = "Arctic Ezicania"
+					plural = "Arctic Ezicanias"
+					class = REP
+					portrait = rep2
+					homeworld = this
+					traits = {
+						trait = trait_pc_continental_preference
+						trait = trait_venerable
+						trait = trait_adaptive
+						trait = trait_strong
+						trait = trait_slow_learners
+						trait = trait_quarrelsome
+						trait = trait_slow_breeders
+					}
+					effect = {
+						save_global_event_target_as = ezics
+					}
+				}
+
+			#Kronks
+				create_species = {
+					name = "Kronk"
+					plural = "Kronks"
+					class = ART
+					portrait = art15
+					homeworld = this
+					traits = {
+						trait = trait_pc_continental_preference
+						trait = trait_industrious
+						trait = trait_rapid_breeders
+						trait = trait_sedentary
+						trait = trait_repugnant
+					}
+					effect = {
+						save_global_event_target_as = kronks
+					}
+				}
+
+			#Solakians
+				create_species = {
+					name = "Solakian"
+					plural = "Solakians"
+					class = HUM
+					portrait = humanoid_05
+					homeworld = this
+					traits = {
+						trait = trait_pc_continental_preference
+						trait = trait_intelligent
+						trait = trait_charismatic
+						trait = trait_resilient
+						trait = trait_wasteful
+					}
+					effect = {
+						save_global_event_target_as = solakians
+					}
+				}
+
+			#Mercurians
+				create_species = {
+					name = "Mercurian"
+					plural = "Mercurians"
+					class = PLANT
+					portrait = pla8
+					homeworld = this
+					traits = {
+						trait = trait_pc_continental_preference
+						trait = trait_intelligent
+						trait = trait_sedentary
+						trait = trait_wasteful
+					}
+					effect = {
+						save_global_event_target_as = mercurians
+					}
+				}
+			#Ravkanians
+			create_species = {
+				name = "Ravkan"
+				plural = "Ravkans"
+				class = HUM
+				portrait = humanoid_hp_01
+				homeworld = this
+				traits = {
+					trait = trait_pc_continental_preference
+					trait = trait_intelligent
+					trait = trait_sedentary
+					trait = trait_wasteful
+				}
+				effect = {
+					save_global_event_target_as = ravkans
+				}
+			}
+			
+			#Zousanians
+			create_species = {
+				name = "Zousan"
+				plural = "Zousans"
+				class = AVI
+				portrait = avi11
+				homeworld = this
+				traits = {
+					trait = trait_pc_continental_preference
+					trait = trait_talented
+					trait = trait_traditional
+					trait = trait_decadent
+				}
+				effect = {
+					save_global_event_target_as = zousans
+				}
+			}
+
+			#Cookians
+				create_species = {
+					name = "Cookian"
+					plural = "Cookians"
+					class = FUN
+					portrait = fun1
+					homeworld = this
+					traits = {
+						trait = trait_pc_continental_preference
+						trait = trait_delicious
+						trait = trait_erudite
+						trait = trait_wasteful
+					}
+					effect = {
+						save_global_event_target_as = cookians
+					}
+				}
+			#Droog
+				create_species = {
+					name = "Droog"
+					plural = "Droog"
+					class = PLANT
+					portrait = pla11
+					homeworld = this
+					traits = {
+						trait = trait_pc_continental_preference
+						trait = trait_strong
+					}
+					effect = {
+						save_global_event_target_as = droog
+					}
+				}
+		}
+
+
+		ruler = {
+			set_leader_flag = perish
+			kill_leader = {
+				flag = perish show_notification = no
+			}
+		}
+
+		create_leader = {
+			name = "Kattail"
+			skill = 4
+			class = admiral
+			gender = male
+			immortal = yes
+			set_age = 189
+			traits = {
+				trait = leader_trait_ruler_kaiser_cattail
+				trait = trait_ruler_charismatic_2
+				trait = trait_ruler_military_pioneer
+				trait = leader_trait_intimidator
+				trait = subclass_admiral_strategist
+			}
+			species = event_target:kaiser_portrait
+		}
+
+		assign_leader = last_created_leader
+
+
+		random_owned_leader = {
+			limit = {
+				leader_class = governor
+				NOT = {
+					has_leader_flag = flusion_modified
+				}
+			} 
+			set_leader_flag = kill_yourself_now
+			kill_leader = { flag = kill_yourself_now show_notification = no }
+		}
+
+		random_owned_leader = {
+			limit = {
+				leader_class = scientist
+				NOT = {
+					has_leader_flag = flusion_modified
+				}
+			}
+			set_is_female = no
+			set_name = "Pawlbert"
+			set_leader_flag = flusion_modified
+			add_trait = katzen_trait_elite
+		}
+
+	#	random_owned_leader = {
+	#		limit = {
+	#			leader_class = scientist
+	#			NOT = {
+	#				has_leader_flag = flusion_modified
+	#			}
+	#		}
+	#		set_is_female = yes
+	#		set_name = "Gatorynn"
+	#		set_leader_flag = flusion_modified
+	#		add_trait = leader_trait_stubborn
+	#		add_trait = katzen_trait_elite
+	#	}
+
+		# random_owned_leader = {
+		# 	limit = {
+		# 		leader_class = scientist
+		# 		NOT = {
+		# 			has_leader_flag = flusion_modified
+		# 		}
+		# 	}
+		# 	change_species = event_target:ezics
+		# 	set_is_female = yes
+		# 	change_leader_portrait = species
+		# 	set_name = "Karrette"
+		# 	set_leader_flag = flusion_modified
+		# 	add_trait = katzen_trait_elite
+		# }
+
+	#Create Pawtton
+		create_leader = {
+			class = general
+			species = owner_main_species
+			name = "Meorge Pawtton"
+			gender = male
+			skill = 3
+			immortal = yes
+			traits = {
+				trait = katzen_trait_elite
+				trait = katzen_trait_nukelad_general
+			}
+		}	
+		last_created_leader = {
+			set_leader_flag = pawtton
+			save_global_event_target_as = pawtton
+			clear_global_event_target = kaiser_portrait
+		}
+
+	#Create Loris
+		create_leader = {
+			class = governor
+			species = owner_main_species
+			name = "Loris Von Kattensbach"
+			gender = male
+			skill = 6
+			immortal = yes
+			traits = {
+				trait = katzen_trait_elite
+				trait = leader_trait_architectural_interest
+				trait = leader_trait_environmental_engineer
+				trait = leader_trait_army_veteran
+			}
+		}
+		last_created_leader = {
+			change_leader_portrait = loris
+			set_leader_flag = loris
+			save_global_event_target_as = loris
+		}
+
+		event_target:playerflusion = {
+			assign_leader = event_target:loris
+		}
+
+	#Create Douclaw
+		create_leader = {
+			class = admiral
+			species = owner_main_species
+			name = "Douclaw MacCathur"
+			gender = male
+			skill = 3
+			immortal = yes
+			set_age = 57
+			traits = {
+				trait = katzen_trait_elite
+				trait = katzen_trait_nukelad
+				trait = katzen_trait_blitzkrieg
+			}
+		}
+		last_created_leader = {
+			change_leader_portrait = douclaw
+			set_leader_flag = douclaw
+			save_global_event_target_as = douclaw
+		}
+
+	#Create Flusion Nations
+	#Haranians
+	create_country = {
+		name = "NAME_Haranian"
+		adjective = "NAME_Haranians"
+		ethos = {
+			ethic = ethic_authoritarian
+			ethic = ethic_xenophobe
+			ethic = ethic_pacifist
+		}
+		authority = auth_imperial
+		civics = random
+		origin = origin_default_pre_ftl
+		flag = random
+		species = event_target:haranians
+		type = flusion_nation
+		effect = {
+			save_global_event_target_as = haranian_flunat
+			set_country_flag = flusion_nation_haranian
+		}
+	}
+	event_target:haranian_flunat = {
+		create_leader = {
+			class = general
+			species = event_target:haranian
+			name = "Fantasia"
+			skill = 5
+			set_age = 52
+			gender = female
+			traits = {
+				trait = katzen_trait_elite
+			}
+			effect = {
+				set_leader_flag = fantasia
+				save_global_event_target_as = fantasia_flunat
+			}
+		}
+		set_leader = event_target:fantasia_flunat
+		establish_communications_no_message = root
+	}
+	#Lauranaise
+	create_country = {
+		name = "NAME_Lauranaise"
+		adjective = "NAME_Lauranaises"
+		ethos = {
+			ethic = ethic_authoritarian
+			ethic = ethic_xenophobe
+			ethic = ethic_militarist
+		}
+		authority = auth_oligarchic
+		civics = random
+		origin = origin_default_pre_ftl
+		flag = random
+		species = event_target:lauranaise
+		type = flusion_nation
+		effect = {
+			save_global_event_target_as = lauranaise_flunat
+			set_country_flag = flusion_nation_lauranaise
+		}
+	}
+	event_target:lauranaise_flunat = {
+		create_leader = {
+			class = admiral
+			species = event_target:lauranaise
+			name = "Aaron N. Bleu"
+			skill = 4
+			set_age = 36
+			gender = male
+			traits = {
+				trait = katzen_trait_elite
+			}
+			effect = {
+				set_leader_flag = aaron
+				save_global_event_target_as = aaron_flunat
+			}
+		}
+		set_leader = event_target:aaron_flunat
+		establish_communications_no_message = root
+	}
+	#Symbies
+	create_country = {
+		name = "NAME_Symbies"
+		adjective = "NAME_Symbie"
+		ethos = {
+			ethic = ethic_fanatic_egalitarian
+			ethic = ethic_xenophile
+		}
+		authority = auth_democratic
+		civics = random
+		origin = origin_default_pre_ftl
+		flag = random
+		species = event_target:symbies
+		type = flusion_nation
+		effect = {
+			save_global_event_target_as = symbie_flunat
+			set_country_flag = flusion_nation_symbies
+		}
+	}
+	event_target:symbie_flunat = {
+		create_leader = {
+			class = governor
+			species = event_target:symbies
+			name = "Nekochaosien"
+			skill = 2
+			set_age = 43
+			gender = female
+			traits = {
+				trait = katzen_trait_elite
+			}
+			effect = {
+				set_leader_flag = neko
+				save_global_event_target_as = neko_flunat
+			}
+		}
+		set_leader = event_target:neko_flunat
+		establish_communications_no_message = root
+	}		
+	#Yinjites
+		create_country = {
+			name = "NAME_Yinjites"
+			adjective = "NAME_Yinjite"
+			ethos = {
+				ethic = ethic_materialist
+				ethic = ethic_egalitarian
+				ethic = ethic_militarist
+			}
+			authority = auth_democratic
+			civics = random
+			origin = origin_default_pre_ftl
+			flag = random
+			species = event_target:yinjites
+			type = flusion_nation
+			effect = {
+				save_global_event_target_as = yinjite_flunat
+				set_country_flag = flusion_nation_yinjites
+			}
+		}
+		event_target:yinjite_flunat = {
+			create_leader = {
+				class = scientist
+				species = event_target:yinjites
+				name = "Tezu Doe"
+				skill = 5
+				set_age = 46
+				gender = female
+				traits = {
+					trait = katzen_trait_elite
+				}
+				effect = {
+					set_leader_flag = tezu
+					save_global_event_target_as = tezu_flunat
+				}
+			}
+			set_leader = event_target:tezu_flunat
+			establish_communications_no_message = root
+		}	
+	#Cyatianala
+		create_country = {
+			name = "NAME_Cyatianalas"
+			adjective = "NAME_Cyatianala"
+			ethos = {
+				ethic = ethic_spiritualist
+				ethic = ethic_militarist
+				ethic = ethic_xenophile
+			}
+			authority = auth_imperial
+			civics = random
+			origin = origin_default_pre_ftl
+			flag = random
+			species = event_target:mercurians
+			type = flusion_nation
+			effect = {
+				save_global_event_target_as = cyatianala_flunat
+				set_country_flag = flusion_nation_cyatianala
+			}
+		}
+		event_target:cyatianala_flunat = {
+			create_leader = {
+				class = scientist
+				species = event_target:cyatianalas
+				name = "Kittita"
+				skill = 5
+				set_age = 46
+				gender = female
+				traits = {
+					trait = katzen_trait_elite
+				}
+				effect = {
+					set_leader_flag = kittita
+					save_global_event_target_as = kittita_flunat
+				}
+			}
+			set_leader = event_target:kittita_flunat
+			establish_communications_no_message = root
+		}	
+	#Mercuria
+		create_country = {
+			name = "NAME_Mercurians"
+			adjective = "NAME_Mercuria"
+			ethos = {
+				ethic = ethic_fanatic_spiritualist
+				ethic = ethic_militarist
+			}
+			authority = auth_imperial
+			civics = random
+			origin = origin_default_pre_ftl
+			flag = random
+			species = event_target:mercurians
+			type = flusion_nation
+			effect = {
+				save_global_event_target_as = mercuria_flunat
+				set_country_flag = flusion_nation_mercuria
+			}
+		}
+		event_target:mercuria_flunat = {
+			create_leader = {
+				class = admiral
+				species = event_target:mercurians
+				name = "Cattail II"
+				skill = 5
+				set_age = 46
+				gender = male
+				traits = {
+					trait = katzen_trait_elite
+				}
+				effect = {
+					set_leader_flag = cattail
+					save_global_event_target_as = cattail_flunat
+				}
+			}
+			set_leader = event_target:cattail_flunat
+			establish_communications_no_message = root
+		}  
+		#Ezicanian Empire
+		 create_country = {
+			name = "NAME_Ezics"
+			adjective = "NAME_Ezic"
+			ethos = {
+				ethic = ethic_fanatic_pacifist
+				ethic = ethic_xenophobe
+			}
+			authority = auth_oligarchic
+			civics = random
+			origin = origin_default_pre_ftl
+			flag = random
+			species = event_target:ezics
+			type = flusion_nation
+			effect = {
+				save_global_event_target_as = ezic_flunat
+				set_country_flag = flusion_nation_ezic
+			}
+		}
+		event_target:ezic_flunat = {
+			create_leader = {
+				class = governor
+				species = event_target:ezic
+				name = "Hornsfelt"
+				skill = 5
+				set_age = 46
+				gender = male
+				traits = {
+					trait = katzen_trait_elite
+				}
+				effect = {
+					set_leader_flag = hornsfelt
+					save_global_event_target_as = hornsfelt_flunat
+				}
+			}
+			set_leader = event_target:hornsfelt_flunat
+			establish_communications_no_message = root
+		} 
+	#Droog
+	 create_country = {
+		name = "NAME_Droog"
+		adjective = "NAME_Droogs"
+		ethos = {
+			ethic = ethic_fanatic_xenophile
+			ethic = ethic_egalitarian
+		}
+		authority = auth_democratic
+		civics = random
+		origin = origin_default_pre_ftl
+		flag = random
+		species = event_target:droog
+		type = flusion_nation
+		effect = {
+			save_global_event_target_as = droog_flunat
+			set_country_flag = flusion_nation_droog
+		}
+	}
+	event_target:droog_flunat = {
+		create_leader = {
+			class = scientist
+			species = event_target:droog
+			name = "Xavier Damascus"
+			skill = 4
+			set_age = 28
+			gender = male
+			traits = {
+				trait = katzen_trait_elite
+			}
+			effect = {
+				set_leader_flag = xavier
+				save_global_event_target_as = xavier_flunat
+			}
+		}
+		set_leader = event_target:xavier_flunat
+		establish_communications_no_message = root
+	}
+	#Zousa 
+	create_country = {
+		name = "NAME_Zousans"
+		adjective = "NAME_Zousan"
+		ethos = {
+			ethic = ethic_fanatic_spiritualist
+			ethic = ethic_authoritarian
+		}
+		authority = auth_imperial
+		civics = random
+		origin = origin_default_pre_ftl
+		flag = random
+		species = event_target:zousans
+		type = flusion_nation
+		effect = {
+			save_global_event_target_as = zousan_flunat
+			set_country_flag = flusion_nation_zousa
+		}
+	}
+	event_target:zousan_flunat = {
+		create_leader = {
+			class = governor
+			species = event_target:zousans
+			name = "Dimora"
+			skill = 2
+			set_age = 34
+			gender = female
+			traits = {
+				trait = katzen_trait_elite
+			}
+			effect = {
+				set_leader_flag = dimora
+				save_global_event_target_as = dimora_flunat
+			}
+		}
+		set_leader = event_target:dimora_flunat
+		establish_communications_no_message = root
+	}
+	 #Ravkans
+	 create_country = {
+		name = "NAME_Ravkans"
+		adjective = "NAME_Ravkan"
+		ethos = {
+			ethic = ethic_xenophobe
+			ethic = ethic_militarist
+			ethic = ethic_authoritarian
+		}
+		authority = auth_dictatorial
+		civics = random
+		origin = origin_default_pre_ftl
+		flag = random
+		species = event_target:ravkans
+		type = flusion_nation
+		effect = {
+			save_global_event_target_as = ravkan_flunat
+			set_country_flag = flusion_nation_ravka
+		}
+	}
+	event_target:ravkan_flunat = {
+		create_leader = {
+			class = general
+			species = event_target:ravkans
+			name = "Sunchen Muhame"
+			skill = 3
+			set_age = 87
+			gender = male
+			traits = {
+				trait = katzen_trait_elite
+			}
+			effect = {
+				set_leader_flag = sunchen
+				save_global_event_target_as = sunchen_flunat
+			}
+		}
+		set_leader = event_target:sunchen_flunat
+		establish_communications_no_message = root
+	}
+	 	create_country = {
+			name = "NAME_Solakians"
+			adjective = "NAME_Solakian"
+			ethos = {
+				ethic = ethic_xenophile
+				ethic = ethic_materialist
+				ethic = ethic_egalitarian
+			}
+			authority = auth_democratic
+			civics = random
+		    origin = origin_default_pre_ftl
+			flag = {
+				icon={
+					category="flusionian"
+					file="solakia_flag.dds"
+				}
+				background={
+					category="backgrounds"
+					file="circle.dds"
+				}
+				colors={
+					"dark_purple"
+					"purple"
+					"null"
+					"null"
+				}
+			}
+			species = event_target:solakians
+			type = flusion_nation
+			effect = {
+				save_global_event_target_as = solakia_flunat
+				set_country_flag = flusion_nation_solakia
+			}
+		}
+		event_target:solakia_flunat = {
+			create_leader = {
+				class = scientist
+				species = event_target:solakians
+				name = "Dofus Teknik Makina"
+				skill = 4
+				set_age = 41
+				gender = male
+				traits = {
+					trait = katzen_trait_elite
+				}
+				effect = {
+					set_leader_flag = dofus
+					save_global_event_target_as = dofus_flunat
+				}
+			}
+			set_leader = event_target:dofun_flunat
+			establish_communications_no_message = root
+		}
+	 #Cookian Steppes
+		create_country = {
+			name = "NAME_Cookies"
+			adjective = "NAME_Cookie"
+			ethos = {
+				ethic = ethic_authoritarian
+				ethic = ethic_fanatic_materialist
+			}
+			authority = auth_dictatorial
+			civics = random
+		    origin = origin_default_pre_ftl
+			flag = {
+				icon={
+					category="ornate"
+					file="flag_ornate_14.dds"
+				}
+				background={
+					category="backgrounds"
+					file="pattern_01.dds"
+				}
+				colors={
+					"ochre_brown"
+					"white"
+					"null"
+					"null"
+				}
+			}
+			species = event_target:cookians
+			type = flusion_nation
+			effect = {
+				save_global_event_target_as = cookie_flunat
+				set_country_flag = flusion_nation_cookie
+			}
+		}
+		event_target:cookie_flunat = {
+			create_leader = {
+				class = governor
+				species = event_target:cookians
+				name = "Troy Baker"
+				skill = 4
+				set_age = 41
+				gender = male
+				traits = {
+					trait = katzen_trait_elite
+				}
+				effect = {
+					set_leader_flag = cookie
+					save_global_event_target_as = cookie_lead_flunat
+				}
+			}
+			set_leader = event_target:cookie_lead_flunat
+			establish_communications_no_message = root
+		}
+	 #Kronk
+		create_country = {
+			name = "NAME_Kronks"
+			adjective = "NAME_Kronk"
+			ethos = {
+				ethic = ethic_authoritarian
+				ethic = ethic_xenophobe
+				ethic = ethic_spiritualist
+			}
+			authority = auth_oligarchic
+			civics = random
+		    origin = origin_default_pre_ftl
+			flag = {
+				icon={
+					category="domination"
+					file="domination_6.dds"
+				}
+				background={
+					category="backgrounds"
+					file="stripe.dds"
+				}
+				colors={
+					"dark_red"
+					"blue"
+					"null"
+					"null"
+				}
+			}
+			species = event_target:kronks
+			type = flusion_nation
+			effect = {
+				save_global_event_target_as = kronk_flunat
+				set_country_flag = flusion_nation_kronk
+			}
+		}
+		event_target:kronk_flunat = {
+			create_leader = {
+				class = admiral
+				species = event_target:kronks
+				name = "Kronk"
+				skill = 4
+				set_age = 41
+				gender = male
+				traits = {
+					trait = katzen_trait_elite
+				}
+				effect = {
+					set_leader_flag = kronk
+					save_global_event_target_as = kronk_lead_flunat
+				}
+			}
+			set_leader = event_target:kronk_lead_flunat
+			establish_communications_no_message = root
+		}
+
+	#Setup Flusion
+		save_event_target_as = flusion_owner
+		capital_scope = {
+			set_planet_size = 16
+			clear_blockers = yes
+			clear_deposits = yes
+			random_pop = { kill_pop = yes }
+			random_pop = { kill_pop = yes }
+			random_pop = { kill_pop = yes }
+			random_pop = { kill_pop = yes }
+			random_pop = { kill_pop = yes }
+			random_pop = { kill_pop = yes }
+			random_pop = { kill_pop = yes }
+			random_pop = { kill_pop = yes }
+			random_pop = { kill_pop = yes }
+			random_pop = { kill_pop = yes }
+			random_pop = { kill_pop = yes }
+			random_pop = { kill_pop = yes }
+			random_pop = { kill_pop = yes }
+			random_pop = { kill_pop = yes }
+			random_pop = { kill_pop = yes }
+			random_pop = { kill_pop = yes }
+			random_pop = { kill_pop = yes }
+			random_pop = { kill_pop = yes }
+			random_pop = { kill_pop = yes }
+
+			# while = {
+			# 	count = 5
+			# 	create_pop = {
+			# 		species = event_target:ezics
+			# 	}
+			# }
+
+			# while = {
+			# 	count = 5
+			# 	create_pop = {
+			# 		species = event_target:kronks
+			# 	}
+			# }
+
+			# while = {
+			# 	count = 6
+			# 	create_pop = {
+			# 		species = event_target:flusionians
+			# 	}
+			# }
+			
+			# while = {
+			# 	count = 4
+			# 	create_pop = {
+			# 		species = event_target:solakians
+			# 	}
+			# }
+
+			remove_district = district_city
+			remove_district = district_city
+
+			remove_district = district_industrial
+
+			remove_district = district_generator
+			remove_district = district_generator
+
+			remove_district = district_mining
+
+			remove_district = district_farming
+
+			remove_building = building_commercial_zone
+			remove_building = building_bureaucratic_1
+
+			add_building = building_stronghold
+
+			add_deposit = d_katown
+			add_deposit = d_katzen_mountain_range
+			add_deposit = d_katown_palace_primitive
+			add_deposit = d_katown_reactor
+			# add_deposit = d_altarian_jungle
+			# add_deposit = d_manglarian_junkyard
+			# add_deposit = d_catspian_sea
+			# add_deposit = d_northern_ice_cap
+			# add_deposit = d_southern_ice_cap
+			# add_deposit = d_meowriana_trench
+			# add_deposit = d_solakian_factory
+			# add_deposit = d_cookian_steppes_mining
+			# add_deposit = d_magnetic_puffy
+			# add_deposit = d_propanian_mines
+			# add_deposit = d_laurandar_shores
+			# add_deposit = d_yinjite_sea_mines
+			# add_deposit = d_mercurian_plains
+			# add_deposit = d_ezic_farmland
+			# add_deposit = d_grand_kronk_quarry
+			add_deposit = d_flunat
+			planet_event = { id = flusion.3 days = 1 }
+		}
+	#Remove mining station
+	 event_target:katzenartig = {
+		every_owned_ship = {
+			limit = {
+				is_ship_size = mining_station
+				# is_ship_size = research_station
+			}
+			delete_ship = this
+		}
+		every_owned_ship = {
+			limit = {
+				# is_ship_size = mining_station
+				is_ship_size = research_station
+			}
+			delete_ship = this
+		}
+	 }
+		
+	#Create Jublio
+		}
+		set_country_flag = flusion_setup_complete
+		
+	}
+
+namespace = katzen
+
+#Solaktropa dam add
+planet_event = {
+	id = katzen.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_deposit = d_solaktropa_project
+	}
+}
+
+#Katlantropa dam add
+planet_event = {
+	id = katzen.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_deposit = d_katlantropa_project
+	}
+}
+
+#Katzen elite to soulbot
+country_event = {
+	id = katzen.3
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		from = {
+			#Must be recruited
+			NOT = { 
+				prev = { 
+					any_pool_leader = { 
+						is_same_value = prevprev 
+					} 
+				} 
+			}
+			#Can't be a soulbot
+			NOT = {
+				has_leader_flag = soulbot
+			}
+			#Must be elite
+			has_trait = katzen_trait_elite
+			#Must own Solakia
+			has_country_flag = war_with_solakia 
+		}
+	}
+	immediate = {
+		clone_leader = { 
+			target = from
+			species = event_target:soulbot
+			effect = {
+			set_leader_flag = soulbot
+			change_leader_portrait = species
+			}
+		}
+	}
+}
+
+#Keep Douclaw and Loris looking correct
+country_event = {
+	id = katzen.4
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		this = {
+			has_origin = origin_katzen
+		}
+	}
+	immediate = {
+		random_owned_leader = {
+			limit = {
+				has_leader_flag = loris
+				NOT = {
+					has_leader_flag = soulbot
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = silly_flusionian_portraits_enabled
+				}
+				change_leader_portrait = lorisreal
+			}
+			if = {
+				limit ={
+					NOT = {
+						has_global_flag = silly_flusionian_portraits_enabled
+					}
+				}
+				change_leader_portrait = loris
+			}
+		}
+		random_owned_leader = {
+			limit = {
+				has_leader_flag = douclaw
+				NOT = {
+					has_leader_flag = soulbot
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = silly_flusionian_portraits_enabled
+				}
+				change_leader_portrait = douclawreal
+			}
+			if = {
+				limit ={
+					NOT = {
+						has_global_flag = silly_flusionian_portraits_enabled
+					}
+				}
+				change_leader_portrait = douclaw
+			}
+		}
+	}
+}
+
+#Set lore acurate looks (if applicable)
+country_event = {
+	id = katzen.6
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		this = {
+			has_origin = origin_katzen
+		}
+		has_global_flag = silly_flusionian_portraits_enabled
+	}
+	immediate = {
+		random_owned_leader = {
+			limit = {
+				has_leader_flag = loris
+			}
+			change_leader_portrait = lorisreal
+		}
+		random_owned_leader = {
+			limit = {
+				has_leader_flag = douclaw
+			}
+			change_leader_portrait = douclawreal
+		}
+	}
+}
+
+#Give leader elite trait part 1
+country_event = {
+	id = katzen.7
+	is_triggered_only = yes
+	title = "katzen.7.name"
+	desc = "katzen.7.desc"
+	trigger = {
+		this = {
+			has_origin = origin_katzen
+		}
+	}
+	#Governors
+	option = {
+		name = "katzen.7.a"
+		allow = {
+			resource_stockpile_compare = { resource = unity value >= 1000 }
+			custom_tooltip = {
+				fail_text = "must_have_valid_elite_governor"
+				any_owned_leader = {
+					leader_class = governor
+					NOT = {
+						has_trait = katzen_trait_elite
+					}
+				}
+			}
+		}
+		add_resource = { unity = -1000 }
+		hidden_effect = {
+			country_event = {
+				id = katzen.8
+			}
+		} 
+	}
+	#Scientists
+	option = {
+		name = "katzen.7.b"
+		allow = {
+			resource_stockpile_compare = { resource = unity value >= 1000 }
+			custom_tooltip = {
+				fail_text = "must_have_valid_elite_scientist"
+				any_owned_leader = {
+					leader_class = scientist
+					NOT = {
+						has_trait = katzen_trait_elite
+					}
+				}
+			}
+		}
+		add_resource = { unity = -1000 }
+		hidden_effect = {
+			country_event = {
+				id = katzen.9
+			}
+		} 
+	}
+	#Admirals
+	option = {
+		name = "katzen.7.c"
+		allow = {
+			resource_stockpile_compare = { resource = unity value >= 1000 }
+			custom_tooltip = {
+				fail_text = "must_have_valid_elite_admiral"
+				any_owned_leader = {
+					leader_class = admiral
+					NOT = {
+						has_trait = katzen_trait_elite
+					}
+				}
+			}
+		}
+		add_resource = { unity = -1000 }
+		hidden_effect = {
+			country_event = {
+				id = katzen.10
+			}
+		} 
+	}
+	#Generals
+	option = {
+		name = "katzen.7.d"
+		allow = {
+			resource_stockpile_compare = { resource = unity value >= 1000 }
+			custom_tooltip = {
+				fail_text = "must_have_valid_elite_general"
+				any_owned_leader = {
+					leader_class = general
+					NOT = {
+						has_trait = katzen_trait_elite
+					}
+				}
+			}
+		}
+		add_resource = { unity = -1000 }
+		hidden_effect = {
+			country_event = {
+				id = katzen.11
+			}
+		} 
+	}
+	
+	option = { # Exit
+		default_hide_option = yes
+		name = "katzen.7.e"
+	}
+}
+
+#Make Elite governor
+country_event = {
+	id = katzen.8
+	title = "katzen.8.name"
+	desc = "katzen.8.desc"
+	is_triggered_only = yes
+
+	immediate = {
+		giga_event_target_list_clear = yes
+		every_owned_leader = {
+			limit = {
+				leader_class = governor
+				NOT = {
+					has_trait = katzen_trait_elite
+				}
+			}
+			giga_event_target_list_save = yes
+		}
+	}
+	option = { trigger = { etl_001 = yes } name = "etl_001" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_001 = { katzen_elite = yes } } }
+	option = { trigger = { etl_002 = yes } name = "etl_002" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_002 = { katzen_elite = yes } } }
+	option = { trigger = { etl_003 = yes } name = "etl_003" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_003 = { katzen_elite = yes } } }
+	option = { trigger = { etl_004 = yes } name = "etl_004" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_004 = { katzen_elite = yes } } }
+	option = { trigger = { etl_005 = yes } name = "etl_005" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_005 = { katzen_elite = yes } } }
+	option = { trigger = { etl_006 = yes } name = "etl_006" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_006 = { katzen_elite = yes } } }
+	option = { trigger = { etl_007 = yes } name = "etl_007" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_007 = { katzen_elite = yes } } }
+	option = { trigger = { etl_008 = yes } name = "etl_008" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_008 = { katzen_elite = yes } } }
+	option = { trigger = { etl_009 = yes } name = "etl_009" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_009 = { katzen_elite = yes } } }
+	option = { trigger = { etl_010 = yes } name = "etl_010" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_010 = { katzen_elite = yes } } }
+	option = { trigger = { etl_011 = yes } name = "etl_011" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_011 = { katzen_elite = yes } } }
+	option = { trigger = { etl_012 = yes } name = "etl_012" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_012 = { katzen_elite = yes } } }
+	option = { trigger = { etl_013 = yes } name = "etl_013" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_013 = { katzen_elite = yes } } }
+	option = { trigger = { etl_014 = yes } name = "etl_014" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_014 = { katzen_elite = yes } } }
+	option = { trigger = { etl_015 = yes } name = "etl_015" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_015 = { katzen_elite = yes } } }
+	option = { trigger = { etl_016 = yes } name = "etl_016" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_016 = { katzen_elite = yes } } }
+	option = { trigger = { etl_017 = yes } name = "etl_017" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_017 = { katzen_elite = yes } } }
+	option = { trigger = { etl_018 = yes } name = "etl_018" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_018 = { katzen_elite = yes } } }
+	option = { trigger = { etl_019 = yes } name = "etl_019" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_019 = { katzen_elite = yes } } }
+	option = { trigger = { etl_020 = yes } name = "etl_020" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_020 = { katzen_elite = yes } } }
+	option = { trigger = { etl_021 = yes } name = "etl_021" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_021 = { katzen_elite = yes } } }
+	option = { trigger = { etl_022 = yes } name = "etl_022" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_022 = { katzen_elite = yes } } }
+	option = { trigger = { etl_023 = yes } name = "etl_023" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_023 = { katzen_elite = yes } } }
+	option = { trigger = { etl_024 = yes } name = "etl_024" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_024 = { katzen_elite = yes } } }
+	option = { trigger = { etl_025 = yes } name = "etl_025" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_025 = { katzen_elite = yes } } }
+	option = { trigger = { etl_026 = yes } name = "etl_026" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_026 = { katzen_elite = yes } } }
+	option = { trigger = { etl_027 = yes } name = "etl_027" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_027 = { katzen_elite = yes } } }
+	option = { trigger = { etl_028 = yes } name = "etl_028" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_028 = { katzen_elite = yes } } }
+	option = { trigger = { etl_029 = yes } name = "etl_029" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_029 = { katzen_elite = yes } } }
+	option = { trigger = { etl_030 = yes } name = "etl_030" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_030 = { katzen_elite = yes } } }
+	option = { trigger = { etl_031 = yes } name = "etl_031" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_031 = { katzen_elite = yes } } }
+	option = { trigger = { etl_032 = yes } name = "etl_032" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_032 = { katzen_elite = yes } } }
+	option = { trigger = { etl_033 = yes } name = "etl_033" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_033 = { katzen_elite = yes } } }
+	option = { trigger = { etl_034 = yes } name = "etl_034" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_034 = { katzen_elite = yes } } }
+	option = { trigger = { etl_035 = yes } name = "etl_035" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_035 = { katzen_elite = yes } } }
+	option = { trigger = { etl_036 = yes } name = "etl_036" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_036 = { katzen_elite = yes } } }
+	option = { trigger = { etl_037 = yes } name = "etl_037" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_037 = { katzen_elite = yes } } }
+	option = { trigger = { etl_038 = yes } name = "etl_038" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_038 = { katzen_elite = yes } } }
+	option = { trigger = { etl_039 = yes } name = "etl_039" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_039 = { katzen_elite = yes } } }
+	option = { trigger = { etl_040 = yes } name = "etl_040" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_040 = { katzen_elite = yes } } }
+	option = { trigger = { etl_041 = yes } name = "etl_041" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_041 = { katzen_elite = yes } } }
+	option = { trigger = { etl_042 = yes } name = "etl_042" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_042 = { katzen_elite = yes } } }
+	option = { trigger = { etl_043 = yes } name = "etl_043" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_043 = { katzen_elite = yes } } }
+	option = { trigger = { etl_044 = yes } name = "etl_044" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_044 = { katzen_elite = yes } } }
+	option = { trigger = { etl_045 = yes } name = "etl_045" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_045 = { katzen_elite = yes } } }
+	option = { trigger = { etl_046 = yes } name = "etl_046" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_046 = { katzen_elite = yes } } }
+	option = { trigger = { etl_047 = yes } name = "etl_047" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_047 = { katzen_elite = yes } } }
+	option = { trigger = { etl_048 = yes } name = "etl_048" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_048 = { katzen_elite = yes } } }
+	option = { trigger = { etl_049 = yes } name = "etl_049" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_049 = { katzen_elite = yes } } }
+	option = { trigger = { etl_050 = yes } name = "etl_050" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_050 = { katzen_elite = yes } } }
+	option = { trigger = { etl_051 = yes } name = "etl_051" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_051 = { katzen_elite = yes } } }
+	option = { trigger = { etl_052 = yes } name = "etl_052" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_052 = { katzen_elite = yes } } }
+	option = { trigger = { etl_053 = yes } name = "etl_053" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_053 = { katzen_elite = yes } } }
+	option = { trigger = { etl_054 = yes } name = "etl_054" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_054 = { katzen_elite = yes } } }
+	option = { trigger = { etl_055 = yes } name = "etl_055" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_055 = { katzen_elite = yes } } }
+	option = { trigger = { etl_056 = yes } name = "etl_056" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_056 = { katzen_elite = yes } } }
+	option = { trigger = { etl_057 = yes } name = "etl_057" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_057 = { katzen_elite = yes } } }
+	option = { trigger = { etl_058 = yes } name = "etl_058" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_058 = { katzen_elite = yes } } }
+	option = { trigger = { etl_059 = yes } name = "etl_059" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_059 = { katzen_elite = yes } } }
+	option = { trigger = { etl_060 = yes } name = "etl_060" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_060 = { katzen_elite = yes } } }
+	option = { trigger = { etl_061 = yes } name = "etl_061" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_061 = { katzen_elite = yes } } }
+	option = { trigger = { etl_062 = yes } name = "etl_062" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_062 = { katzen_elite = yes } } }
+	option = { trigger = { etl_063 = yes } name = "etl_063" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_063 = { katzen_elite = yes } } }
+	option = { trigger = { etl_064 = yes } name = "etl_064" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_064 = { katzen_elite = yes } } }
+	option = { trigger = { etl_065 = yes } name = "etl_065" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_065 = { katzen_elite = yes } } }
+	option = { trigger = { etl_066 = yes } name = "etl_066" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_066 = { katzen_elite = yes } } }
+	option = { trigger = { etl_067 = yes } name = "etl_067" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_067 = { katzen_elite = yes } } }
+	option = { trigger = { etl_068 = yes } name = "etl_068" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_068 = { katzen_elite = yes } } }
+	option = { trigger = { etl_069 = yes } name = "etl_069" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_069 = { katzen_elite = yes } } }
+	option = { trigger = { etl_070 = yes } name = "etl_070" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_070 = { katzen_elite = yes } } }
+	option = { trigger = { etl_071 = yes } name = "etl_071" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_071 = { katzen_elite = yes } } }
+	option = { trigger = { etl_072 = yes } name = "etl_072" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_072 = { katzen_elite = yes } } }
+	option = { trigger = { etl_073 = yes } name = "etl_073" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_073 = { katzen_elite = yes } } }
+	option = { trigger = { etl_074 = yes } name = "etl_074" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_074 = { katzen_elite = yes } } }
+	option = { trigger = { etl_075 = yes } name = "etl_075" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_075 = { katzen_elite = yes } } }
+	option = { trigger = { etl_076 = yes } name = "etl_076" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_076 = { katzen_elite = yes } } }
+	option = { trigger = { etl_077 = yes } name = "etl_077" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_077 = { katzen_elite = yes } } }
+	option = { trigger = { etl_078 = yes } name = "etl_078" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_078 = { katzen_elite = yes } } }
+	option = { trigger = { etl_079 = yes } name = "etl_079" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_079 = { katzen_elite = yes } } }
+	option = { trigger = { etl_080 = yes } name = "etl_080" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_080 = { katzen_elite = yes } } }
+	option = { trigger = { etl_081 = yes } name = "etl_081" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_081 = { katzen_elite = yes } } }
+	option = { trigger = { etl_082 = yes } name = "etl_082" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_082 = { katzen_elite = yes } } }
+	option = { trigger = { etl_083 = yes } name = "etl_083" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_083 = { katzen_elite = yes } } }
+	option = { trigger = { etl_084 = yes } name = "etl_084" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_084 = { katzen_elite = yes } } }
+	option = { trigger = { etl_085 = yes } name = "etl_085" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_085 = { katzen_elite = yes } } }
+	option = { trigger = { etl_086 = yes } name = "etl_086" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_086 = { katzen_elite = yes } } }
+	option = { trigger = { etl_087 = yes } name = "etl_087" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_087 = { katzen_elite = yes } } }
+	option = { trigger = { etl_088 = yes } name = "etl_088" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_088 = { katzen_elite = yes } } }
+	option = { trigger = { etl_089 = yes } name = "etl_089" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_089 = { katzen_elite = yes } } }
+	option = { trigger = { etl_090 = yes } name = "etl_090" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_090 = { katzen_elite = yes } } }
+	option = { trigger = { etl_091 = yes } name = "etl_091" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_091 = { katzen_elite = yes } } }
+	option = { trigger = { etl_092 = yes } name = "etl_092" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_092 = { katzen_elite = yes } } }
+	option = { trigger = { etl_093 = yes } name = "etl_093" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_093 = { katzen_elite = yes } } }
+	option = { trigger = { etl_094 = yes } name = "etl_094" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_094 = { katzen_elite = yes } } }
+	option = { trigger = { etl_095 = yes } name = "etl_095" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_095 = { katzen_elite = yes } } }
+	option = { trigger = { etl_096 = yes } name = "etl_096" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_096 = { katzen_elite = yes } } }
+	option = { trigger = { etl_097 = yes } name = "etl_097" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_097 = { katzen_elite = yes } } }
+	option = { trigger = { etl_098 = yes } name = "etl_098" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_098 = { katzen_elite = yes } } }
+	option = { trigger = { etl_099 = yes } name = "etl_099" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_099 = { katzen_elite = yes } } }
+	option = { trigger = { etl_100 = yes } name = "etl_100" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_100 = { katzen_elite = yes } } }
+	option = { trigger = { etl_101 = yes } name = "etl_101" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_101 = { katzen_elite = yes } } }
+	option = { trigger = { etl_102 = yes } name = "etl_102" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_102 = { katzen_elite = yes } } }
+	option = { trigger = { etl_103 = yes } name = "etl_103" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_103 = { katzen_elite = yes } } }
+	option = { trigger = { etl_104 = yes } name = "etl_104" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_104 = { katzen_elite = yes } } }
+	option = { trigger = { etl_105 = yes } name = "etl_105" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_105 = { katzen_elite = yes } } }
+	option = { trigger = { etl_106 = yes } name = "etl_106" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_106 = { katzen_elite = yes } } }
+	option = { trigger = { etl_107 = yes } name = "etl_107" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_107 = { katzen_elite = yes } } }
+	option = { trigger = { etl_108 = yes } name = "etl_108" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_108 = { katzen_elite = yes } } }
+	option = { trigger = { etl_109 = yes } name = "etl_109" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_109 = { katzen_elite = yes } } }
+	option = { trigger = { etl_110 = yes } name = "etl_110" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_110 = { katzen_elite = yes } } }
+	option = { trigger = { etl_111 = yes } name = "etl_111" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_111 = { katzen_elite = yes } } }
+	option = { trigger = { etl_112 = yes } name = "etl_112" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_112 = { katzen_elite = yes } } }
+	option = { trigger = { etl_113 = yes } name = "etl_113" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_113 = { katzen_elite = yes } } }
+	option = { trigger = { etl_114 = yes } name = "etl_114" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_114 = { katzen_elite = yes } } }
+	option = { trigger = { etl_115 = yes } name = "etl_115" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_115 = { katzen_elite = yes } } }
+	option = { trigger = { etl_116 = yes } name = "etl_116" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_116 = { katzen_elite = yes } } }
+	option = { trigger = { etl_117 = yes } name = "etl_117" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_117 = { katzen_elite = yes } } }
+	option = { trigger = { etl_118 = yes } name = "etl_118" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_118 = { katzen_elite = yes } } }
+	option = { trigger = { etl_119 = yes } name = "etl_119" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_119 = { katzen_elite = yes } } }
+	option = { trigger = { etl_120 = yes } name = "etl_120" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_120 = { katzen_elite = yes } } }
+	option = { trigger = { etl_121 = yes } name = "etl_121" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_121 = { katzen_elite = yes } } }
+	option = { trigger = { etl_122 = yes } name = "etl_122" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_122 = { katzen_elite = yes } } }
+	option = { trigger = { etl_123 = yes } name = "etl_123" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_123 = { katzen_elite = yes } } }
+	option = { trigger = { etl_124 = yes } name = "etl_124" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_124 = { katzen_elite = yes } } }
+	option = { trigger = { etl_125 = yes } name = "etl_125" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_125 = { katzen_elite = yes } } }
+	option = { trigger = { etl_126 = yes } name = "etl_126" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_126 = { katzen_elite = yes } } }
+	option = { trigger = { etl_127 = yes } name = "etl_127" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_127 = { katzen_elite = yes } } }
+	option = { trigger = { etl_128 = yes } name = "etl_128" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_128 = { katzen_elite = yes } } }
+	option = { trigger = { etl_129 = yes } name = "etl_129" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_129 = { katzen_elite = yes } } }
+	option = { trigger = { etl_130 = yes } name = "etl_130" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_130 = { katzen_elite = yes } } }
+	option = { trigger = { etl_131 = yes } name = "etl_131" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_131 = { katzen_elite = yes } } }
+	option = { trigger = { etl_132 = yes } name = "etl_132" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_132 = { katzen_elite = yes } } }
+	option = { trigger = { etl_133 = yes } name = "etl_133" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_133 = { katzen_elite = yes } } }
+	option = { trigger = { etl_134 = yes } name = "etl_134" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_134 = { katzen_elite = yes } } }
+	option = { trigger = { etl_135 = yes } name = "etl_135" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_135 = { katzen_elite = yes } } }
+	option = { trigger = { etl_136 = yes } name = "etl_136" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_136 = { katzen_elite = yes } } }
+	option = { trigger = { etl_137 = yes } name = "etl_137" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_137 = { katzen_elite = yes } } }
+	option = { trigger = { etl_138 = yes } name = "etl_138" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_138 = { katzen_elite = yes } } }
+	option = { trigger = { etl_139 = yes } name = "etl_139" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_139 = { katzen_elite = yes } } }
+	option = { trigger = { etl_140 = yes } name = "etl_140" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_140 = { katzen_elite = yes } } }
+	option = { trigger = { etl_141 = yes } name = "etl_141" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_141 = { katzen_elite = yes } } }
+	option = { trigger = { etl_142 = yes } name = "etl_142" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_142 = { katzen_elite = yes } } }
+	option = { trigger = { etl_143 = yes } name = "etl_143" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_143 = { katzen_elite = yes } } }
+	option = { trigger = { etl_144 = yes } name = "etl_144" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_144 = { katzen_elite = yes } } }
+	option = { trigger = { etl_145 = yes } name = "etl_145" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_145 = { katzen_elite = yes } } }
+	option = { trigger = { etl_146 = yes } name = "etl_146" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_146 = { katzen_elite = yes } } }
+	option = { trigger = { etl_147 = yes } name = "etl_147" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_147 = { katzen_elite = yes } } }
+	option = { trigger = { etl_148 = yes } name = "etl_148" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_148 = { katzen_elite = yes } } }
+	option = { trigger = { etl_149 = yes } name = "etl_149" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_149 = { katzen_elite = yes } } }
+	option = { trigger = { etl_150 = yes } name = "etl_150" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_150 = { katzen_elite = yes } } }
+	option = { trigger = { etl_151 = yes } name = "etl_151" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_151 = { katzen_elite = yes } } }
+	option = { trigger = { etl_152 = yes } name = "etl_152" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_152 = { katzen_elite = yes } } }
+	option = { trigger = { etl_153 = yes } name = "etl_153" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_153 = { katzen_elite = yes } } }
+	option = { trigger = { etl_154 = yes } name = "etl_154" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_154 = { katzen_elite = yes } } }
+	option = { trigger = { etl_155 = yes } name = "etl_155" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_155 = { katzen_elite = yes } } }
+	option = { trigger = { etl_156 = yes } name = "etl_156" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_156 = { katzen_elite = yes } } }
+	option = { trigger = { etl_157 = yes } name = "etl_157" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_157 = { katzen_elite = yes } } }
+	option = { trigger = { etl_158 = yes } name = "etl_158" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_158 = { katzen_elite = yes } } }
+	option = { trigger = { etl_159 = yes } name = "etl_159" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_159 = { katzen_elite = yes } } }
+	option = { trigger = { etl_160 = yes } name = "etl_160" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_160 = { katzen_elite = yes } } }
+	option = { trigger = { etl_161 = yes } name = "etl_161" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_161 = { katzen_elite = yes } } }
+	option = { trigger = { etl_162 = yes } name = "etl_162" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_162 = { katzen_elite = yes } } }
+	option = { trigger = { etl_163 = yes } name = "etl_163" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_163 = { katzen_elite = yes } } }
+	option = { trigger = { etl_164 = yes } name = "etl_164" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_164 = { katzen_elite = yes } } }
+	option = { trigger = { etl_165 = yes } name = "etl_165" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_165 = { katzen_elite = yes } } }
+	option = { trigger = { etl_166 = yes } name = "etl_166" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_166 = { katzen_elite = yes } } }
+	option = { trigger = { etl_167 = yes } name = "etl_167" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_167 = { katzen_elite = yes } } }
+	option = { trigger = { etl_168 = yes } name = "etl_168" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_168 = { katzen_elite = yes } } }
+	option = { trigger = { etl_169 = yes } name = "etl_169" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_169 = { katzen_elite = yes } } }
+	option = { trigger = { etl_170 = yes } name = "etl_170" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_170 = { katzen_elite = yes } } }
+	option = { trigger = { etl_171 = yes } name = "etl_171" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_171 = { katzen_elite = yes } } }
+	option = { trigger = { etl_172 = yes } name = "etl_172" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_172 = { katzen_elite = yes } } }
+	option = { trigger = { etl_173 = yes } name = "etl_173" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_173 = { katzen_elite = yes } } }
+	option = { trigger = { etl_174 = yes } name = "etl_174" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_174 = { katzen_elite = yes } } }
+	option = { trigger = { etl_175 = yes } name = "etl_175" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_175 = { katzen_elite = yes } } }
+	option = { trigger = { etl_176 = yes } name = "etl_176" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_176 = { katzen_elite = yes } } }
+	option = { trigger = { etl_177 = yes } name = "etl_177" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_177 = { katzen_elite = yes } } }
+	option = { trigger = { etl_178 = yes } name = "etl_178" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_178 = { katzen_elite = yes } } }
+	option = { trigger = { etl_179 = yes } name = "etl_179" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_179 = { katzen_elite = yes } } }
+	option = { trigger = { etl_180 = yes } name = "etl_180" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_180 = { katzen_elite = yes } } }
+	option = { trigger = { etl_181 = yes } name = "etl_181" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_181 = { katzen_elite = yes } } }
+	option = { trigger = { etl_182 = yes } name = "etl_182" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_182 = { katzen_elite = yes } } }
+	option = { trigger = { etl_183 = yes } name = "etl_183" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_183 = { katzen_elite = yes } } }
+	option = { trigger = { etl_184 = yes } name = "etl_184" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_184 = { katzen_elite = yes } } }
+	option = { trigger = { etl_185 = yes } name = "etl_185" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_185 = { katzen_elite = yes } } }
+	option = { trigger = { etl_186 = yes } name = "etl_186" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_186 = { katzen_elite = yes } } }
+	option = { trigger = { etl_187 = yes } name = "etl_187" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_187 = { katzen_elite = yes } } }
+	option = { trigger = { etl_188 = yes } name = "etl_188" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_188 = { katzen_elite = yes } } }
+	option = { trigger = { etl_189 = yes } name = "etl_189" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_189 = { katzen_elite = yes } } }
+	option = { trigger = { etl_190 = yes } name = "etl_190" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_190 = { katzen_elite = yes } } }
+	option = { trigger = { etl_191 = yes } name = "etl_191" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_191 = { katzen_elite = yes } } }
+	option = { trigger = { etl_192 = yes } name = "etl_192" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_192 = { katzen_elite = yes } } }
+	option = { trigger = { etl_193 = yes } name = "etl_193" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_193 = { katzen_elite = yes } } }
+	option = { trigger = { etl_194 = yes } name = "etl_194" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_194 = { katzen_elite = yes } } }
+	option = { trigger = { etl_195 = yes } name = "etl_195" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_195 = { katzen_elite = yes } } }
+	option = { trigger = { etl_196 = yes } name = "etl_196" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_196 = { katzen_elite = yes } } }
+	option = { trigger = { etl_197 = yes } name = "etl_197" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_197 = { katzen_elite = yes } } }
+	option = { trigger = { etl_198 = yes } name = "etl_198" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_198 = { katzen_elite = yes } } }
+	option = { trigger = { etl_199 = yes } name = "etl_199" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_199 = { katzen_elite = yes } } }
+	option = { trigger = { etl_200 = yes } name = "etl_200" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_200 = { katzen_elite = yes } } }
+
+	option = { # Back
+		default_hide_option = yes
+		name = "katzen.8.f"
+		add_resource = { unity = 1000 }
+		hidden_effect = {
+			country_event = {
+				id = katzen.7
+			}
+		} 
+	}
+}
+
+
+#Make Elite scientist
+country_event = {
+	id = katzen.9
+	title = "katzen.9.name"
+	desc = "katzen.9.desc"
+	is_triggered_only = yes
+
+	immediate = {
+		giga_event_target_list_clear = yes
+		every_owned_leader = {
+			limit = {
+				leader_class = scientist
+				NOT = {
+					has_trait = katzen_trait_elite
+					has_trait = leader_trait_ruler_kaiser_cattail
+				}
+			}
+			giga_event_target_list_save = yes
+		}
+	}
+	option = { trigger = { etl_001 = yes } name = "etl_001" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_001 = { katzen_elite = yes } } }
+	option = { trigger = { etl_002 = yes } name = "etl_002" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_002 = { katzen_elite = yes } } }
+	option = { trigger = { etl_003 = yes } name = "etl_003" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_003 = { katzen_elite = yes } } }
+	option = { trigger = { etl_004 = yes } name = "etl_004" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_004 = { katzen_elite = yes } } }
+	option = { trigger = { etl_005 = yes } name = "etl_005" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_005 = { katzen_elite = yes } } }
+	option = { trigger = { etl_006 = yes } name = "etl_006" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_006 = { katzen_elite = yes } } }
+	option = { trigger = { etl_007 = yes } name = "etl_007" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_007 = { katzen_elite = yes } } }
+	option = { trigger = { etl_008 = yes } name = "etl_008" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_008 = { katzen_elite = yes } } }
+	option = { trigger = { etl_009 = yes } name = "etl_009" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_009 = { katzen_elite = yes } } }
+	option = { trigger = { etl_010 = yes } name = "etl_010" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_010 = { katzen_elite = yes } } }
+	option = { trigger = { etl_011 = yes } name = "etl_011" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_011 = { katzen_elite = yes } } }
+	option = { trigger = { etl_012 = yes } name = "etl_012" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_012 = { katzen_elite = yes } } }
+	option = { trigger = { etl_013 = yes } name = "etl_013" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_013 = { katzen_elite = yes } } }
+	option = { trigger = { etl_014 = yes } name = "etl_014" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_014 = { katzen_elite = yes } } }
+	option = { trigger = { etl_015 = yes } name = "etl_015" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_015 = { katzen_elite = yes } } }
+	option = { trigger = { etl_016 = yes } name = "etl_016" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_016 = { katzen_elite = yes } } }
+	option = { trigger = { etl_017 = yes } name = "etl_017" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_017 = { katzen_elite = yes } } }
+	option = { trigger = { etl_018 = yes } name = "etl_018" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_018 = { katzen_elite = yes } } }
+	option = { trigger = { etl_019 = yes } name = "etl_019" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_019 = { katzen_elite = yes } } }
+	option = { trigger = { etl_020 = yes } name = "etl_020" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_020 = { katzen_elite = yes } } }
+	option = { trigger = { etl_021 = yes } name = "etl_021" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_021 = { katzen_elite = yes } } }
+	option = { trigger = { etl_022 = yes } name = "etl_022" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_022 = { katzen_elite = yes } } }
+	option = { trigger = { etl_023 = yes } name = "etl_023" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_023 = { katzen_elite = yes } } }
+	option = { trigger = { etl_024 = yes } name = "etl_024" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_024 = { katzen_elite = yes } } }
+	option = { trigger = { etl_025 = yes } name = "etl_025" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_025 = { katzen_elite = yes } } }
+	option = { trigger = { etl_026 = yes } name = "etl_026" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_026 = { katzen_elite = yes } } }
+	option = { trigger = { etl_027 = yes } name = "etl_027" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_027 = { katzen_elite = yes } } }
+	option = { trigger = { etl_028 = yes } name = "etl_028" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_028 = { katzen_elite = yes } } }
+	option = { trigger = { etl_029 = yes } name = "etl_029" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_029 = { katzen_elite = yes } } }
+	option = { trigger = { etl_030 = yes } name = "etl_030" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_030 = { katzen_elite = yes } } }
+	option = { trigger = { etl_031 = yes } name = "etl_031" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_031 = { katzen_elite = yes } } }
+	option = { trigger = { etl_032 = yes } name = "etl_032" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_032 = { katzen_elite = yes } } }
+	option = { trigger = { etl_033 = yes } name = "etl_033" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_033 = { katzen_elite = yes } } }
+	option = { trigger = { etl_034 = yes } name = "etl_034" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_034 = { katzen_elite = yes } } }
+	option = { trigger = { etl_035 = yes } name = "etl_035" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_035 = { katzen_elite = yes } } }
+	option = { trigger = { etl_036 = yes } name = "etl_036" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_036 = { katzen_elite = yes } } }
+	option = { trigger = { etl_037 = yes } name = "etl_037" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_037 = { katzen_elite = yes } } }
+	option = { trigger = { etl_038 = yes } name = "etl_038" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_038 = { katzen_elite = yes } } }
+	option = { trigger = { etl_039 = yes } name = "etl_039" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_039 = { katzen_elite = yes } } }
+	option = { trigger = { etl_040 = yes } name = "etl_040" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_040 = { katzen_elite = yes } } }
+	option = { trigger = { etl_041 = yes } name = "etl_041" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_041 = { katzen_elite = yes } } }
+	option = { trigger = { etl_042 = yes } name = "etl_042" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_042 = { katzen_elite = yes } } }
+	option = { trigger = { etl_043 = yes } name = "etl_043" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_043 = { katzen_elite = yes } } }
+	option = { trigger = { etl_044 = yes } name = "etl_044" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_044 = { katzen_elite = yes } } }
+	option = { trigger = { etl_045 = yes } name = "etl_045" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_045 = { katzen_elite = yes } } }
+	option = { trigger = { etl_046 = yes } name = "etl_046" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_046 = { katzen_elite = yes } } }
+	option = { trigger = { etl_047 = yes } name = "etl_047" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_047 = { katzen_elite = yes } } }
+	option = { trigger = { etl_048 = yes } name = "etl_048" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_048 = { katzen_elite = yes } } }
+	option = { trigger = { etl_049 = yes } name = "etl_049" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_049 = { katzen_elite = yes } } }
+	option = { trigger = { etl_050 = yes } name = "etl_050" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_050 = { katzen_elite = yes } } }
+	option = { trigger = { etl_051 = yes } name = "etl_051" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_051 = { katzen_elite = yes } } }
+	option = { trigger = { etl_052 = yes } name = "etl_052" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_052 = { katzen_elite = yes } } }
+	option = { trigger = { etl_053 = yes } name = "etl_053" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_053 = { katzen_elite = yes } } }
+	option = { trigger = { etl_054 = yes } name = "etl_054" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_054 = { katzen_elite = yes } } }
+	option = { trigger = { etl_055 = yes } name = "etl_055" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_055 = { katzen_elite = yes } } }
+	option = { trigger = { etl_056 = yes } name = "etl_056" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_056 = { katzen_elite = yes } } }
+	option = { trigger = { etl_057 = yes } name = "etl_057" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_057 = { katzen_elite = yes } } }
+	option = { trigger = { etl_058 = yes } name = "etl_058" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_058 = { katzen_elite = yes } } }
+	option = { trigger = { etl_059 = yes } name = "etl_059" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_059 = { katzen_elite = yes } } }
+	option = { trigger = { etl_060 = yes } name = "etl_060" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_060 = { katzen_elite = yes } } }
+	option = { trigger = { etl_061 = yes } name = "etl_061" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_061 = { katzen_elite = yes } } }
+	option = { trigger = { etl_062 = yes } name = "etl_062" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_062 = { katzen_elite = yes } } }
+	option = { trigger = { etl_063 = yes } name = "etl_063" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_063 = { katzen_elite = yes } } }
+	option = { trigger = { etl_064 = yes } name = "etl_064" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_064 = { katzen_elite = yes } } }
+	option = { trigger = { etl_065 = yes } name = "etl_065" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_065 = { katzen_elite = yes } } }
+	option = { trigger = { etl_066 = yes } name = "etl_066" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_066 = { katzen_elite = yes } } }
+	option = { trigger = { etl_067 = yes } name = "etl_067" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_067 = { katzen_elite = yes } } }
+	option = { trigger = { etl_068 = yes } name = "etl_068" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_068 = { katzen_elite = yes } } }
+	option = { trigger = { etl_069 = yes } name = "etl_069" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_069 = { katzen_elite = yes } } }
+	option = { trigger = { etl_070 = yes } name = "etl_070" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_070 = { katzen_elite = yes } } }
+	option = { trigger = { etl_071 = yes } name = "etl_071" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_071 = { katzen_elite = yes } } }
+	option = { trigger = { etl_072 = yes } name = "etl_072" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_072 = { katzen_elite = yes } } }
+	option = { trigger = { etl_073 = yes } name = "etl_073" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_073 = { katzen_elite = yes } } }
+	option = { trigger = { etl_074 = yes } name = "etl_074" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_074 = { katzen_elite = yes } } }
+	option = { trigger = { etl_075 = yes } name = "etl_075" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_075 = { katzen_elite = yes } } }
+	option = { trigger = { etl_076 = yes } name = "etl_076" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_076 = { katzen_elite = yes } } }
+	option = { trigger = { etl_077 = yes } name = "etl_077" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_077 = { katzen_elite = yes } } }
+	option = { trigger = { etl_078 = yes } name = "etl_078" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_078 = { katzen_elite = yes } } }
+	option = { trigger = { etl_079 = yes } name = "etl_079" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_079 = { katzen_elite = yes } } }
+	option = { trigger = { etl_080 = yes } name = "etl_080" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_080 = { katzen_elite = yes } } }
+	option = { trigger = { etl_081 = yes } name = "etl_081" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_081 = { katzen_elite = yes } } }
+	option = { trigger = { etl_082 = yes } name = "etl_082" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_082 = { katzen_elite = yes } } }
+	option = { trigger = { etl_083 = yes } name = "etl_083" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_083 = { katzen_elite = yes } } }
+	option = { trigger = { etl_084 = yes } name = "etl_084" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_084 = { katzen_elite = yes } } }
+	option = { trigger = { etl_085 = yes } name = "etl_085" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_085 = { katzen_elite = yes } } }
+	option = { trigger = { etl_086 = yes } name = "etl_086" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_086 = { katzen_elite = yes } } }
+	option = { trigger = { etl_087 = yes } name = "etl_087" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_087 = { katzen_elite = yes } } }
+	option = { trigger = { etl_088 = yes } name = "etl_088" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_088 = { katzen_elite = yes } } }
+	option = { trigger = { etl_089 = yes } name = "etl_089" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_089 = { katzen_elite = yes } } }
+	option = { trigger = { etl_090 = yes } name = "etl_090" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_090 = { katzen_elite = yes } } }
+	option = { trigger = { etl_091 = yes } name = "etl_091" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_091 = { katzen_elite = yes } } }
+	option = { trigger = { etl_092 = yes } name = "etl_092" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_092 = { katzen_elite = yes } } }
+	option = { trigger = { etl_093 = yes } name = "etl_093" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_093 = { katzen_elite = yes } } }
+	option = { trigger = { etl_094 = yes } name = "etl_094" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_094 = { katzen_elite = yes } } }
+	option = { trigger = { etl_095 = yes } name = "etl_095" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_095 = { katzen_elite = yes } } }
+	option = { trigger = { etl_096 = yes } name = "etl_096" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_096 = { katzen_elite = yes } } }
+	option = { trigger = { etl_097 = yes } name = "etl_097" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_097 = { katzen_elite = yes } } }
+	option = { trigger = { etl_098 = yes } name = "etl_098" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_098 = { katzen_elite = yes } } }
+	option = { trigger = { etl_099 = yes } name = "etl_099" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_099 = { katzen_elite = yes } } }
+	option = { trigger = { etl_100 = yes } name = "etl_100" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_100 = { katzen_elite = yes } } }
+	option = { trigger = { etl_101 = yes } name = "etl_101" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_101 = { katzen_elite = yes } } }
+	option = { trigger = { etl_102 = yes } name = "etl_102" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_102 = { katzen_elite = yes } } }
+	option = { trigger = { etl_103 = yes } name = "etl_103" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_103 = { katzen_elite = yes } } }
+	option = { trigger = { etl_104 = yes } name = "etl_104" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_104 = { katzen_elite = yes } } }
+	option = { trigger = { etl_105 = yes } name = "etl_105" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_105 = { katzen_elite = yes } } }
+	option = { trigger = { etl_106 = yes } name = "etl_106" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_106 = { katzen_elite = yes } } }
+	option = { trigger = { etl_107 = yes } name = "etl_107" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_107 = { katzen_elite = yes } } }
+	option = { trigger = { etl_108 = yes } name = "etl_108" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_108 = { katzen_elite = yes } } }
+	option = { trigger = { etl_109 = yes } name = "etl_109" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_109 = { katzen_elite = yes } } }
+	option = { trigger = { etl_110 = yes } name = "etl_110" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_110 = { katzen_elite = yes } } }
+	option = { trigger = { etl_111 = yes } name = "etl_111" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_111 = { katzen_elite = yes } } }
+	option = { trigger = { etl_112 = yes } name = "etl_112" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_112 = { katzen_elite = yes } } }
+	option = { trigger = { etl_113 = yes } name = "etl_113" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_113 = { katzen_elite = yes } } }
+	option = { trigger = { etl_114 = yes } name = "etl_114" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_114 = { katzen_elite = yes } } }
+	option = { trigger = { etl_115 = yes } name = "etl_115" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_115 = { katzen_elite = yes } } }
+	option = { trigger = { etl_116 = yes } name = "etl_116" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_116 = { katzen_elite = yes } } }
+	option = { trigger = { etl_117 = yes } name = "etl_117" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_117 = { katzen_elite = yes } } }
+	option = { trigger = { etl_118 = yes } name = "etl_118" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_118 = { katzen_elite = yes } } }
+	option = { trigger = { etl_119 = yes } name = "etl_119" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_119 = { katzen_elite = yes } } }
+	option = { trigger = { etl_120 = yes } name = "etl_120" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_120 = { katzen_elite = yes } } }
+	option = { trigger = { etl_121 = yes } name = "etl_121" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_121 = { katzen_elite = yes } } }
+	option = { trigger = { etl_122 = yes } name = "etl_122" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_122 = { katzen_elite = yes } } }
+	option = { trigger = { etl_123 = yes } name = "etl_123" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_123 = { katzen_elite = yes } } }
+	option = { trigger = { etl_124 = yes } name = "etl_124" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_124 = { katzen_elite = yes } } }
+	option = { trigger = { etl_125 = yes } name = "etl_125" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_125 = { katzen_elite = yes } } }
+	option = { trigger = { etl_126 = yes } name = "etl_126" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_126 = { katzen_elite = yes } } }
+	option = { trigger = { etl_127 = yes } name = "etl_127" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_127 = { katzen_elite = yes } } }
+	option = { trigger = { etl_128 = yes } name = "etl_128" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_128 = { katzen_elite = yes } } }
+	option = { trigger = { etl_129 = yes } name = "etl_129" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_129 = { katzen_elite = yes } } }
+	option = { trigger = { etl_130 = yes } name = "etl_130" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_130 = { katzen_elite = yes } } }
+	option = { trigger = { etl_131 = yes } name = "etl_131" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_131 = { katzen_elite = yes } } }
+	option = { trigger = { etl_132 = yes } name = "etl_132" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_132 = { katzen_elite = yes } } }
+	option = { trigger = { etl_133 = yes } name = "etl_133" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_133 = { katzen_elite = yes } } }
+	option = { trigger = { etl_134 = yes } name = "etl_134" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_134 = { katzen_elite = yes } } }
+	option = { trigger = { etl_135 = yes } name = "etl_135" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_135 = { katzen_elite = yes } } }
+	option = { trigger = { etl_136 = yes } name = "etl_136" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_136 = { katzen_elite = yes } } }
+	option = { trigger = { etl_137 = yes } name = "etl_137" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_137 = { katzen_elite = yes } } }
+	option = { trigger = { etl_138 = yes } name = "etl_138" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_138 = { katzen_elite = yes } } }
+	option = { trigger = { etl_139 = yes } name = "etl_139" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_139 = { katzen_elite = yes } } }
+	option = { trigger = { etl_140 = yes } name = "etl_140" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_140 = { katzen_elite = yes } } }
+	option = { trigger = { etl_141 = yes } name = "etl_141" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_141 = { katzen_elite = yes } } }
+	option = { trigger = { etl_142 = yes } name = "etl_142" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_142 = { katzen_elite = yes } } }
+	option = { trigger = { etl_143 = yes } name = "etl_143" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_143 = { katzen_elite = yes } } }
+	option = { trigger = { etl_144 = yes } name = "etl_144" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_144 = { katzen_elite = yes } } }
+	option = { trigger = { etl_145 = yes } name = "etl_145" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_145 = { katzen_elite = yes } } }
+	option = { trigger = { etl_146 = yes } name = "etl_146" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_146 = { katzen_elite = yes } } }
+	option = { trigger = { etl_147 = yes } name = "etl_147" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_147 = { katzen_elite = yes } } }
+	option = { trigger = { etl_148 = yes } name = "etl_148" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_148 = { katzen_elite = yes } } }
+	option = { trigger = { etl_149 = yes } name = "etl_149" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_149 = { katzen_elite = yes } } }
+	option = { trigger = { etl_150 = yes } name = "etl_150" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_150 = { katzen_elite = yes } } }
+	option = { trigger = { etl_151 = yes } name = "etl_151" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_151 = { katzen_elite = yes } } }
+	option = { trigger = { etl_152 = yes } name = "etl_152" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_152 = { katzen_elite = yes } } }
+	option = { trigger = { etl_153 = yes } name = "etl_153" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_153 = { katzen_elite = yes } } }
+	option = { trigger = { etl_154 = yes } name = "etl_154" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_154 = { katzen_elite = yes } } }
+	option = { trigger = { etl_155 = yes } name = "etl_155" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_155 = { katzen_elite = yes } } }
+	option = { trigger = { etl_156 = yes } name = "etl_156" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_156 = { katzen_elite = yes } } }
+	option = { trigger = { etl_157 = yes } name = "etl_157" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_157 = { katzen_elite = yes } } }
+	option = { trigger = { etl_158 = yes } name = "etl_158" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_158 = { katzen_elite = yes } } }
+	option = { trigger = { etl_159 = yes } name = "etl_159" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_159 = { katzen_elite = yes } } }
+	option = { trigger = { etl_160 = yes } name = "etl_160" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_160 = { katzen_elite = yes } } }
+	option = { trigger = { etl_161 = yes } name = "etl_161" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_161 = { katzen_elite = yes } } }
+	option = { trigger = { etl_162 = yes } name = "etl_162" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_162 = { katzen_elite = yes } } }
+	option = { trigger = { etl_163 = yes } name = "etl_163" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_163 = { katzen_elite = yes } } }
+	option = { trigger = { etl_164 = yes } name = "etl_164" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_164 = { katzen_elite = yes } } }
+	option = { trigger = { etl_165 = yes } name = "etl_165" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_165 = { katzen_elite = yes } } }
+	option = { trigger = { etl_166 = yes } name = "etl_166" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_166 = { katzen_elite = yes } } }
+	option = { trigger = { etl_167 = yes } name = "etl_167" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_167 = { katzen_elite = yes } } }
+	option = { trigger = { etl_168 = yes } name = "etl_168" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_168 = { katzen_elite = yes } } }
+	option = { trigger = { etl_169 = yes } name = "etl_169" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_169 = { katzen_elite = yes } } }
+	option = { trigger = { etl_170 = yes } name = "etl_170" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_170 = { katzen_elite = yes } } }
+	option = { trigger = { etl_171 = yes } name = "etl_171" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_171 = { katzen_elite = yes } } }
+	option = { trigger = { etl_172 = yes } name = "etl_172" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_172 = { katzen_elite = yes } } }
+	option = { trigger = { etl_173 = yes } name = "etl_173" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_173 = { katzen_elite = yes } } }
+	option = { trigger = { etl_174 = yes } name = "etl_174" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_174 = { katzen_elite = yes } } }
+	option = { trigger = { etl_175 = yes } name = "etl_175" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_175 = { katzen_elite = yes } } }
+	option = { trigger = { etl_176 = yes } name = "etl_176" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_176 = { katzen_elite = yes } } }
+	option = { trigger = { etl_177 = yes } name = "etl_177" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_177 = { katzen_elite = yes } } }
+	option = { trigger = { etl_178 = yes } name = "etl_178" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_178 = { katzen_elite = yes } } }
+	option = { trigger = { etl_179 = yes } name = "etl_179" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_179 = { katzen_elite = yes } } }
+	option = { trigger = { etl_180 = yes } name = "etl_180" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_180 = { katzen_elite = yes } } }
+	option = { trigger = { etl_181 = yes } name = "etl_181" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_181 = { katzen_elite = yes } } }
+	option = { trigger = { etl_182 = yes } name = "etl_182" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_182 = { katzen_elite = yes } } }
+	option = { trigger = { etl_183 = yes } name = "etl_183" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_183 = { katzen_elite = yes } } }
+	option = { trigger = { etl_184 = yes } name = "etl_184" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_184 = { katzen_elite = yes } } }
+	option = { trigger = { etl_185 = yes } name = "etl_185" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_185 = { katzen_elite = yes } } }
+	option = { trigger = { etl_186 = yes } name = "etl_186" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_186 = { katzen_elite = yes } } }
+	option = { trigger = { etl_187 = yes } name = "etl_187" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_187 = { katzen_elite = yes } } }
+	option = { trigger = { etl_188 = yes } name = "etl_188" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_188 = { katzen_elite = yes } } }
+	option = { trigger = { etl_189 = yes } name = "etl_189" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_189 = { katzen_elite = yes } } }
+	option = { trigger = { etl_190 = yes } name = "etl_190" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_190 = { katzen_elite = yes } } }
+	option = { trigger = { etl_191 = yes } name = "etl_191" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_191 = { katzen_elite = yes } } }
+	option = { trigger = { etl_192 = yes } name = "etl_192" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_192 = { katzen_elite = yes } } }
+	option = { trigger = { etl_193 = yes } name = "etl_193" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_193 = { katzen_elite = yes } } }
+	option = { trigger = { etl_194 = yes } name = "etl_194" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_194 = { katzen_elite = yes } } }
+	option = { trigger = { etl_195 = yes } name = "etl_195" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_195 = { katzen_elite = yes } } }
+	option = { trigger = { etl_196 = yes } name = "etl_196" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_196 = { katzen_elite = yes } } }
+	option = { trigger = { etl_197 = yes } name = "etl_197" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_197 = { katzen_elite = yes } } }
+	option = { trigger = { etl_198 = yes } name = "etl_198" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_198 = { katzen_elite = yes } } }
+	option = { trigger = { etl_199 = yes } name = "etl_199" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_199 = { katzen_elite = yes } } }
+	option = { trigger = { etl_200 = yes } name = "etl_200" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_200 = { katzen_elite = yes } } }
+
+	option = { # Back
+		default_hide_option = yes
+		name = "katzen.8.f"
+		add_resource = { unity = 1000 }
+		hidden_effect = {
+			country_event = {
+				id = katzen.7
+			}
+		} 
+	}
+}
+
+
+#Make Elite admiral
+country_event = {
+	id = katzen.10
+	title = "katzen.10.name"
+	desc = "katzen.10.desc"
+	is_triggered_only = yes
+
+	immediate = {
+		giga_event_target_list_clear = yes
+		every_owned_leader = {
+			limit = {
+				leader_class = admiral
+				NOT = {
+					has_trait = katzen_trait_elite
+					has_trait = leader_trait_ruler_kaiser_cattail
+				}
+			}
+			giga_event_target_list_save = yes
+		}
+	}
+	option = { trigger = { etl_001 = yes } name = "etl_001" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_001 = { katzen_elite = yes } } }
+	option = { trigger = { etl_002 = yes } name = "etl_002" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_002 = { katzen_elite = yes } } }
+	option = { trigger = { etl_003 = yes } name = "etl_003" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_003 = { katzen_elite = yes } } }
+	option = { trigger = { etl_004 = yes } name = "etl_004" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_004 = { katzen_elite = yes } } }
+	option = { trigger = { etl_005 = yes } name = "etl_005" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_005 = { katzen_elite = yes } } }
+	option = { trigger = { etl_006 = yes } name = "etl_006" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_006 = { katzen_elite = yes } } }
+	option = { trigger = { etl_007 = yes } name = "etl_007" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_007 = { katzen_elite = yes } } }
+	option = { trigger = { etl_008 = yes } name = "etl_008" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_008 = { katzen_elite = yes } } }
+	option = { trigger = { etl_009 = yes } name = "etl_009" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_009 = { katzen_elite = yes } } }
+	option = { trigger = { etl_010 = yes } name = "etl_010" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_010 = { katzen_elite = yes } } }
+	option = { trigger = { etl_011 = yes } name = "etl_011" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_011 = { katzen_elite = yes } } }
+	option = { trigger = { etl_012 = yes } name = "etl_012" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_012 = { katzen_elite = yes } } }
+	option = { trigger = { etl_013 = yes } name = "etl_013" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_013 = { katzen_elite = yes } } }
+	option = { trigger = { etl_014 = yes } name = "etl_014" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_014 = { katzen_elite = yes } } }
+	option = { trigger = { etl_015 = yes } name = "etl_015" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_015 = { katzen_elite = yes } } }
+	option = { trigger = { etl_016 = yes } name = "etl_016" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_016 = { katzen_elite = yes } } }
+	option = { trigger = { etl_017 = yes } name = "etl_017" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_017 = { katzen_elite = yes } } }
+	option = { trigger = { etl_018 = yes } name = "etl_018" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_018 = { katzen_elite = yes } } }
+	option = { trigger = { etl_019 = yes } name = "etl_019" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_019 = { katzen_elite = yes } } }
+	option = { trigger = { etl_020 = yes } name = "etl_020" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_020 = { katzen_elite = yes } } }
+	option = { trigger = { etl_021 = yes } name = "etl_021" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_021 = { katzen_elite = yes } } }
+	option = { trigger = { etl_022 = yes } name = "etl_022" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_022 = { katzen_elite = yes } } }
+	option = { trigger = { etl_023 = yes } name = "etl_023" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_023 = { katzen_elite = yes } } }
+	option = { trigger = { etl_024 = yes } name = "etl_024" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_024 = { katzen_elite = yes } } }
+	option = { trigger = { etl_025 = yes } name = "etl_025" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_025 = { katzen_elite = yes } } }
+	option = { trigger = { etl_026 = yes } name = "etl_026" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_026 = { katzen_elite = yes } } }
+	option = { trigger = { etl_027 = yes } name = "etl_027" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_027 = { katzen_elite = yes } } }
+	option = { trigger = { etl_028 = yes } name = "etl_028" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_028 = { katzen_elite = yes } } }
+	option = { trigger = { etl_029 = yes } name = "etl_029" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_029 = { katzen_elite = yes } } }
+	option = { trigger = { etl_030 = yes } name = "etl_030" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_030 = { katzen_elite = yes } } }
+	option = { trigger = { etl_031 = yes } name = "etl_031" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_031 = { katzen_elite = yes } } }
+	option = { trigger = { etl_032 = yes } name = "etl_032" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_032 = { katzen_elite = yes } } }
+	option = { trigger = { etl_033 = yes } name = "etl_033" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_033 = { katzen_elite = yes } } }
+	option = { trigger = { etl_034 = yes } name = "etl_034" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_034 = { katzen_elite = yes } } }
+	option = { trigger = { etl_035 = yes } name = "etl_035" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_035 = { katzen_elite = yes } } }
+	option = { trigger = { etl_036 = yes } name = "etl_036" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_036 = { katzen_elite = yes } } }
+	option = { trigger = { etl_037 = yes } name = "etl_037" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_037 = { katzen_elite = yes } } }
+	option = { trigger = { etl_038 = yes } name = "etl_038" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_038 = { katzen_elite = yes } } }
+	option = { trigger = { etl_039 = yes } name = "etl_039" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_039 = { katzen_elite = yes } } }
+	option = { trigger = { etl_040 = yes } name = "etl_040" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_040 = { katzen_elite = yes } } }
+	option = { trigger = { etl_041 = yes } name = "etl_041" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_041 = { katzen_elite = yes } } }
+	option = { trigger = { etl_042 = yes } name = "etl_042" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_042 = { katzen_elite = yes } } }
+	option = { trigger = { etl_043 = yes } name = "etl_043" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_043 = { katzen_elite = yes } } }
+	option = { trigger = { etl_044 = yes } name = "etl_044" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_044 = { katzen_elite = yes } } }
+	option = { trigger = { etl_045 = yes } name = "etl_045" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_045 = { katzen_elite = yes } } }
+	option = { trigger = { etl_046 = yes } name = "etl_046" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_046 = { katzen_elite = yes } } }
+	option = { trigger = { etl_047 = yes } name = "etl_047" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_047 = { katzen_elite = yes } } }
+	option = { trigger = { etl_048 = yes } name = "etl_048" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_048 = { katzen_elite = yes } } }
+	option = { trigger = { etl_049 = yes } name = "etl_049" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_049 = { katzen_elite = yes } } }
+	option = { trigger = { etl_050 = yes } name = "etl_050" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_050 = { katzen_elite = yes } } }
+	option = { trigger = { etl_051 = yes } name = "etl_051" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_051 = { katzen_elite = yes } } }
+	option = { trigger = { etl_052 = yes } name = "etl_052" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_052 = { katzen_elite = yes } } }
+	option = { trigger = { etl_053 = yes } name = "etl_053" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_053 = { katzen_elite = yes } } }
+	option = { trigger = { etl_054 = yes } name = "etl_054" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_054 = { katzen_elite = yes } } }
+	option = { trigger = { etl_055 = yes } name = "etl_055" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_055 = { katzen_elite = yes } } }
+	option = { trigger = { etl_056 = yes } name = "etl_056" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_056 = { katzen_elite = yes } } }
+	option = { trigger = { etl_057 = yes } name = "etl_057" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_057 = { katzen_elite = yes } } }
+	option = { trigger = { etl_058 = yes } name = "etl_058" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_058 = { katzen_elite = yes } } }
+	option = { trigger = { etl_059 = yes } name = "etl_059" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_059 = { katzen_elite = yes } } }
+	option = { trigger = { etl_060 = yes } name = "etl_060" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_060 = { katzen_elite = yes } } }
+	option = { trigger = { etl_061 = yes } name = "etl_061" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_061 = { katzen_elite = yes } } }
+	option = { trigger = { etl_062 = yes } name = "etl_062" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_062 = { katzen_elite = yes } } }
+	option = { trigger = { etl_063 = yes } name = "etl_063" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_063 = { katzen_elite = yes } } }
+	option = { trigger = { etl_064 = yes } name = "etl_064" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_064 = { katzen_elite = yes } } }
+	option = { trigger = { etl_065 = yes } name = "etl_065" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_065 = { katzen_elite = yes } } }
+	option = { trigger = { etl_066 = yes } name = "etl_066" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_066 = { katzen_elite = yes } } }
+	option = { trigger = { etl_067 = yes } name = "etl_067" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_067 = { katzen_elite = yes } } }
+	option = { trigger = { etl_068 = yes } name = "etl_068" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_068 = { katzen_elite = yes } } }
+	option = { trigger = { etl_069 = yes } name = "etl_069" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_069 = { katzen_elite = yes } } }
+	option = { trigger = { etl_070 = yes } name = "etl_070" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_070 = { katzen_elite = yes } } }
+	option = { trigger = { etl_071 = yes } name = "etl_071" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_071 = { katzen_elite = yes } } }
+	option = { trigger = { etl_072 = yes } name = "etl_072" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_072 = { katzen_elite = yes } } }
+	option = { trigger = { etl_073 = yes } name = "etl_073" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_073 = { katzen_elite = yes } } }
+	option = { trigger = { etl_074 = yes } name = "etl_074" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_074 = { katzen_elite = yes } } }
+	option = { trigger = { etl_075 = yes } name = "etl_075" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_075 = { katzen_elite = yes } } }
+	option = { trigger = { etl_076 = yes } name = "etl_076" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_076 = { katzen_elite = yes } } }
+	option = { trigger = { etl_077 = yes } name = "etl_077" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_077 = { katzen_elite = yes } } }
+	option = { trigger = { etl_078 = yes } name = "etl_078" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_078 = { katzen_elite = yes } } }
+	option = { trigger = { etl_079 = yes } name = "etl_079" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_079 = { katzen_elite = yes } } }
+	option = { trigger = { etl_080 = yes } name = "etl_080" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_080 = { katzen_elite = yes } } }
+	option = { trigger = { etl_081 = yes } name = "etl_081" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_081 = { katzen_elite = yes } } }
+	option = { trigger = { etl_082 = yes } name = "etl_082" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_082 = { katzen_elite = yes } } }
+	option = { trigger = { etl_083 = yes } name = "etl_083" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_083 = { katzen_elite = yes } } }
+	option = { trigger = { etl_084 = yes } name = "etl_084" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_084 = { katzen_elite = yes } } }
+	option = { trigger = { etl_085 = yes } name = "etl_085" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_085 = { katzen_elite = yes } } }
+	option = { trigger = { etl_086 = yes } name = "etl_086" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_086 = { katzen_elite = yes } } }
+	option = { trigger = { etl_087 = yes } name = "etl_087" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_087 = { katzen_elite = yes } } }
+	option = { trigger = { etl_088 = yes } name = "etl_088" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_088 = { katzen_elite = yes } } }
+	option = { trigger = { etl_089 = yes } name = "etl_089" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_089 = { katzen_elite = yes } } }
+	option = { trigger = { etl_090 = yes } name = "etl_090" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_090 = { katzen_elite = yes } } }
+	option = { trigger = { etl_091 = yes } name = "etl_091" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_091 = { katzen_elite = yes } } }
+	option = { trigger = { etl_092 = yes } name = "etl_092" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_092 = { katzen_elite = yes } } }
+	option = { trigger = { etl_093 = yes } name = "etl_093" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_093 = { katzen_elite = yes } } }
+	option = { trigger = { etl_094 = yes } name = "etl_094" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_094 = { katzen_elite = yes } } }
+	option = { trigger = { etl_095 = yes } name = "etl_095" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_095 = { katzen_elite = yes } } }
+	option = { trigger = { etl_096 = yes } name = "etl_096" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_096 = { katzen_elite = yes } } }
+	option = { trigger = { etl_097 = yes } name = "etl_097" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_097 = { katzen_elite = yes } } }
+	option = { trigger = { etl_098 = yes } name = "etl_098" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_098 = { katzen_elite = yes } } }
+	option = { trigger = { etl_099 = yes } name = "etl_099" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_099 = { katzen_elite = yes } } }
+	option = { trigger = { etl_100 = yes } name = "etl_100" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_100 = { katzen_elite = yes } } }
+	option = { trigger = { etl_101 = yes } name = "etl_101" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_101 = { katzen_elite = yes } } }
+	option = { trigger = { etl_102 = yes } name = "etl_102" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_102 = { katzen_elite = yes } } }
+	option = { trigger = { etl_103 = yes } name = "etl_103" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_103 = { katzen_elite = yes } } }
+	option = { trigger = { etl_104 = yes } name = "etl_104" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_104 = { katzen_elite = yes } } }
+	option = { trigger = { etl_105 = yes } name = "etl_105" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_105 = { katzen_elite = yes } } }
+	option = { trigger = { etl_106 = yes } name = "etl_106" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_106 = { katzen_elite = yes } } }
+	option = { trigger = { etl_107 = yes } name = "etl_107" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_107 = { katzen_elite = yes } } }
+	option = { trigger = { etl_108 = yes } name = "etl_108" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_108 = { katzen_elite = yes } } }
+	option = { trigger = { etl_109 = yes } name = "etl_109" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_109 = { katzen_elite = yes } } }
+	option = { trigger = { etl_110 = yes } name = "etl_110" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_110 = { katzen_elite = yes } } }
+	option = { trigger = { etl_111 = yes } name = "etl_111" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_111 = { katzen_elite = yes } } }
+	option = { trigger = { etl_112 = yes } name = "etl_112" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_112 = { katzen_elite = yes } } }
+	option = { trigger = { etl_113 = yes } name = "etl_113" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_113 = { katzen_elite = yes } } }
+	option = { trigger = { etl_114 = yes } name = "etl_114" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_114 = { katzen_elite = yes } } }
+	option = { trigger = { etl_115 = yes } name = "etl_115" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_115 = { katzen_elite = yes } } }
+	option = { trigger = { etl_116 = yes } name = "etl_116" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_116 = { katzen_elite = yes } } }
+	option = { trigger = { etl_117 = yes } name = "etl_117" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_117 = { katzen_elite = yes } } }
+	option = { trigger = { etl_118 = yes } name = "etl_118" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_118 = { katzen_elite = yes } } }
+	option = { trigger = { etl_119 = yes } name = "etl_119" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_119 = { katzen_elite = yes } } }
+	option = { trigger = { etl_120 = yes } name = "etl_120" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_120 = { katzen_elite = yes } } }
+	option = { trigger = { etl_121 = yes } name = "etl_121" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_121 = { katzen_elite = yes } } }
+	option = { trigger = { etl_122 = yes } name = "etl_122" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_122 = { katzen_elite = yes } } }
+	option = { trigger = { etl_123 = yes } name = "etl_123" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_123 = { katzen_elite = yes } } }
+	option = { trigger = { etl_124 = yes } name = "etl_124" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_124 = { katzen_elite = yes } } }
+	option = { trigger = { etl_125 = yes } name = "etl_125" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_125 = { katzen_elite = yes } } }
+	option = { trigger = { etl_126 = yes } name = "etl_126" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_126 = { katzen_elite = yes } } }
+	option = { trigger = { etl_127 = yes } name = "etl_127" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_127 = { katzen_elite = yes } } }
+	option = { trigger = { etl_128 = yes } name = "etl_128" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_128 = { katzen_elite = yes } } }
+	option = { trigger = { etl_129 = yes } name = "etl_129" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_129 = { katzen_elite = yes } } }
+	option = { trigger = { etl_130 = yes } name = "etl_130" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_130 = { katzen_elite = yes } } }
+	option = { trigger = { etl_131 = yes } name = "etl_131" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_131 = { katzen_elite = yes } } }
+	option = { trigger = { etl_132 = yes } name = "etl_132" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_132 = { katzen_elite = yes } } }
+	option = { trigger = { etl_133 = yes } name = "etl_133" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_133 = { katzen_elite = yes } } }
+	option = { trigger = { etl_134 = yes } name = "etl_134" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_134 = { katzen_elite = yes } } }
+	option = { trigger = { etl_135 = yes } name = "etl_135" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_135 = { katzen_elite = yes } } }
+	option = { trigger = { etl_136 = yes } name = "etl_136" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_136 = { katzen_elite = yes } } }
+	option = { trigger = { etl_137 = yes } name = "etl_137" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_137 = { katzen_elite = yes } } }
+	option = { trigger = { etl_138 = yes } name = "etl_138" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_138 = { katzen_elite = yes } } }
+	option = { trigger = { etl_139 = yes } name = "etl_139" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_139 = { katzen_elite = yes } } }
+	option = { trigger = { etl_140 = yes } name = "etl_140" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_140 = { katzen_elite = yes } } }
+	option = { trigger = { etl_141 = yes } name = "etl_141" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_141 = { katzen_elite = yes } } }
+	option = { trigger = { etl_142 = yes } name = "etl_142" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_142 = { katzen_elite = yes } } }
+	option = { trigger = { etl_143 = yes } name = "etl_143" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_143 = { katzen_elite = yes } } }
+	option = { trigger = { etl_144 = yes } name = "etl_144" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_144 = { katzen_elite = yes } } }
+	option = { trigger = { etl_145 = yes } name = "etl_145" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_145 = { katzen_elite = yes } } }
+	option = { trigger = { etl_146 = yes } name = "etl_146" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_146 = { katzen_elite = yes } } }
+	option = { trigger = { etl_147 = yes } name = "etl_147" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_147 = { katzen_elite = yes } } }
+	option = { trigger = { etl_148 = yes } name = "etl_148" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_148 = { katzen_elite = yes } } }
+	option = { trigger = { etl_149 = yes } name = "etl_149" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_149 = { katzen_elite = yes } } }
+	option = { trigger = { etl_150 = yes } name = "etl_150" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_150 = { katzen_elite = yes } } }
+	option = { trigger = { etl_151 = yes } name = "etl_151" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_151 = { katzen_elite = yes } } }
+	option = { trigger = { etl_152 = yes } name = "etl_152" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_152 = { katzen_elite = yes } } }
+	option = { trigger = { etl_153 = yes } name = "etl_153" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_153 = { katzen_elite = yes } } }
+	option = { trigger = { etl_154 = yes } name = "etl_154" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_154 = { katzen_elite = yes } } }
+	option = { trigger = { etl_155 = yes } name = "etl_155" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_155 = { katzen_elite = yes } } }
+	option = { trigger = { etl_156 = yes } name = "etl_156" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_156 = { katzen_elite = yes } } }
+	option = { trigger = { etl_157 = yes } name = "etl_157" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_157 = { katzen_elite = yes } } }
+	option = { trigger = { etl_158 = yes } name = "etl_158" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_158 = { katzen_elite = yes } } }
+	option = { trigger = { etl_159 = yes } name = "etl_159" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_159 = { katzen_elite = yes } } }
+	option = { trigger = { etl_160 = yes } name = "etl_160" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_160 = { katzen_elite = yes } } }
+	option = { trigger = { etl_161 = yes } name = "etl_161" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_161 = { katzen_elite = yes } } }
+	option = { trigger = { etl_162 = yes } name = "etl_162" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_162 = { katzen_elite = yes } } }
+	option = { trigger = { etl_163 = yes } name = "etl_163" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_163 = { katzen_elite = yes } } }
+	option = { trigger = { etl_164 = yes } name = "etl_164" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_164 = { katzen_elite = yes } } }
+	option = { trigger = { etl_165 = yes } name = "etl_165" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_165 = { katzen_elite = yes } } }
+	option = { trigger = { etl_166 = yes } name = "etl_166" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_166 = { katzen_elite = yes } } }
+	option = { trigger = { etl_167 = yes } name = "etl_167" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_167 = { katzen_elite = yes } } }
+	option = { trigger = { etl_168 = yes } name = "etl_168" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_168 = { katzen_elite = yes } } }
+	option = { trigger = { etl_169 = yes } name = "etl_169" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_169 = { katzen_elite = yes } } }
+	option = { trigger = { etl_170 = yes } name = "etl_170" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_170 = { katzen_elite = yes } } }
+	option = { trigger = { etl_171 = yes } name = "etl_171" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_171 = { katzen_elite = yes } } }
+	option = { trigger = { etl_172 = yes } name = "etl_172" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_172 = { katzen_elite = yes } } }
+	option = { trigger = { etl_173 = yes } name = "etl_173" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_173 = { katzen_elite = yes } } }
+	option = { trigger = { etl_174 = yes } name = "etl_174" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_174 = { katzen_elite = yes } } }
+	option = { trigger = { etl_175 = yes } name = "etl_175" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_175 = { katzen_elite = yes } } }
+	option = { trigger = { etl_176 = yes } name = "etl_176" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_176 = { katzen_elite = yes } } }
+	option = { trigger = { etl_177 = yes } name = "etl_177" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_177 = { katzen_elite = yes } } }
+	option = { trigger = { etl_178 = yes } name = "etl_178" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_178 = { katzen_elite = yes } } }
+	option = { trigger = { etl_179 = yes } name = "etl_179" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_179 = { katzen_elite = yes } } }
+	option = { trigger = { etl_180 = yes } name = "etl_180" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_180 = { katzen_elite = yes } } }
+	option = { trigger = { etl_181 = yes } name = "etl_181" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_181 = { katzen_elite = yes } } }
+	option = { trigger = { etl_182 = yes } name = "etl_182" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_182 = { katzen_elite = yes } } }
+	option = { trigger = { etl_183 = yes } name = "etl_183" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_183 = { katzen_elite = yes } } }
+	option = { trigger = { etl_184 = yes } name = "etl_184" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_184 = { katzen_elite = yes } } }
+	option = { trigger = { etl_185 = yes } name = "etl_185" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_185 = { katzen_elite = yes } } }
+	option = { trigger = { etl_186 = yes } name = "etl_186" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_186 = { katzen_elite = yes } } }
+	option = { trigger = { etl_187 = yes } name = "etl_187" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_187 = { katzen_elite = yes } } }
+	option = { trigger = { etl_188 = yes } name = "etl_188" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_188 = { katzen_elite = yes } } }
+	option = { trigger = { etl_189 = yes } name = "etl_189" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_189 = { katzen_elite = yes } } }
+	option = { trigger = { etl_190 = yes } name = "etl_190" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_190 = { katzen_elite = yes } } }
+	option = { trigger = { etl_191 = yes } name = "etl_191" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_191 = { katzen_elite = yes } } }
+	option = { trigger = { etl_192 = yes } name = "etl_192" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_192 = { katzen_elite = yes } } }
+	option = { trigger = { etl_193 = yes } name = "etl_193" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_193 = { katzen_elite = yes } } }
+	option = { trigger = { etl_194 = yes } name = "etl_194" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_194 = { katzen_elite = yes } } }
+	option = { trigger = { etl_195 = yes } name = "etl_195" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_195 = { katzen_elite = yes } } }
+	option = { trigger = { etl_196 = yes } name = "etl_196" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_196 = { katzen_elite = yes } } }
+	option = { trigger = { etl_197 = yes } name = "etl_197" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_197 = { katzen_elite = yes } } }
+	option = { trigger = { etl_198 = yes } name = "etl_198" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_198 = { katzen_elite = yes } } }
+	option = { trigger = { etl_199 = yes } name = "etl_199" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_199 = { katzen_elite = yes } } }
+	option = { trigger = { etl_200 = yes } name = "etl_200" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_200 = { katzen_elite = yes } } }
+
+	option = { # Back
+		default_hide_option = yes
+		name = "katzen.8.f"
+		add_resource = { unity = 1000 }
+		hidden_effect = {
+			country_event = {
+				id = katzen.7
+			}
+		} 
+	}
+}
+
+
+#Make Elite general
+country_event = {
+	id = katzen.11
+	title = "katzen.11.name"
+	desc = "katzen.11.desc"
+	is_triggered_only = yes
+
+	immediate = {
+		giga_event_target_list_clear = yes
+		every_owned_leader = {
+			limit = {
+				leader_class = general
+				NOT = {
+					has_trait = katzen_trait_elite
+					has_trait = leader_trait_ruler_kaiser_cattail
+				}
+			}
+			giga_event_target_list_save = yes
+		}
+	}
+	option = { trigger = { etl_001 = yes } name = "etl_001" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_001 = { katzen_elite = yes } } }
+	option = { trigger = { etl_002 = yes } name = "etl_002" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_002 = { katzen_elite = yes } } }
+	option = { trigger = { etl_003 = yes } name = "etl_003" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_003 = { katzen_elite = yes } } }
+	option = { trigger = { etl_004 = yes } name = "etl_004" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_004 = { katzen_elite = yes } } }
+	option = { trigger = { etl_005 = yes } name = "etl_005" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_005 = { katzen_elite = yes } } }
+	option = { trigger = { etl_006 = yes } name = "etl_006" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_006 = { katzen_elite = yes } } }
+	option = { trigger = { etl_007 = yes } name = "etl_007" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_007 = { katzen_elite = yes } } }
+	option = { trigger = { etl_008 = yes } name = "etl_008" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_008 = { katzen_elite = yes } } }
+	option = { trigger = { etl_009 = yes } name = "etl_009" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_009 = { katzen_elite = yes } } }
+	option = { trigger = { etl_010 = yes } name = "etl_010" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_010 = { katzen_elite = yes } } }
+	option = { trigger = { etl_011 = yes } name = "etl_011" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_011 = { katzen_elite = yes } } }
+	option = { trigger = { etl_012 = yes } name = "etl_012" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_012 = { katzen_elite = yes } } }
+	option = { trigger = { etl_013 = yes } name = "etl_013" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_013 = { katzen_elite = yes } } }
+	option = { trigger = { etl_014 = yes } name = "etl_014" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_014 = { katzen_elite = yes } } }
+	option = { trigger = { etl_015 = yes } name = "etl_015" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_015 = { katzen_elite = yes } } }
+	option = { trigger = { etl_016 = yes } name = "etl_016" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_016 = { katzen_elite = yes } } }
+	option = { trigger = { etl_017 = yes } name = "etl_017" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_017 = { katzen_elite = yes } } }
+	option = { trigger = { etl_018 = yes } name = "etl_018" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_018 = { katzen_elite = yes } } }
+	option = { trigger = { etl_019 = yes } name = "etl_019" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_019 = { katzen_elite = yes } } }
+	option = { trigger = { etl_020 = yes } name = "etl_020" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_020 = { katzen_elite = yes } } }
+	option = { trigger = { etl_021 = yes } name = "etl_021" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_021 = { katzen_elite = yes } } }
+	option = { trigger = { etl_022 = yes } name = "etl_022" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_022 = { katzen_elite = yes } } }
+	option = { trigger = { etl_023 = yes } name = "etl_023" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_023 = { katzen_elite = yes } } }
+	option = { trigger = { etl_024 = yes } name = "etl_024" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_024 = { katzen_elite = yes } } }
+	option = { trigger = { etl_025 = yes } name = "etl_025" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_025 = { katzen_elite = yes } } }
+	option = { trigger = { etl_026 = yes } name = "etl_026" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_026 = { katzen_elite = yes } } }
+	option = { trigger = { etl_027 = yes } name = "etl_027" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_027 = { katzen_elite = yes } } }
+	option = { trigger = { etl_028 = yes } name = "etl_028" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_028 = { katzen_elite = yes } } }
+	option = { trigger = { etl_029 = yes } name = "etl_029" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_029 = { katzen_elite = yes } } }
+	option = { trigger = { etl_030 = yes } name = "etl_030" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_030 = { katzen_elite = yes } } }
+	option = { trigger = { etl_031 = yes } name = "etl_031" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_031 = { katzen_elite = yes } } }
+	option = { trigger = { etl_032 = yes } name = "etl_032" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_032 = { katzen_elite = yes } } }
+	option = { trigger = { etl_033 = yes } name = "etl_033" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_033 = { katzen_elite = yes } } }
+	option = { trigger = { etl_034 = yes } name = "etl_034" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_034 = { katzen_elite = yes } } }
+	option = { trigger = { etl_035 = yes } name = "etl_035" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_035 = { katzen_elite = yes } } }
+	option = { trigger = { etl_036 = yes } name = "etl_036" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_036 = { katzen_elite = yes } } }
+	option = { trigger = { etl_037 = yes } name = "etl_037" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_037 = { katzen_elite = yes } } }
+	option = { trigger = { etl_038 = yes } name = "etl_038" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_038 = { katzen_elite = yes } } }
+	option = { trigger = { etl_039 = yes } name = "etl_039" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_039 = { katzen_elite = yes } } }
+	option = { trigger = { etl_040 = yes } name = "etl_040" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_040 = { katzen_elite = yes } } }
+	option = { trigger = { etl_041 = yes } name = "etl_041" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_041 = { katzen_elite = yes } } }
+	option = { trigger = { etl_042 = yes } name = "etl_042" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_042 = { katzen_elite = yes } } }
+	option = { trigger = { etl_043 = yes } name = "etl_043" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_043 = { katzen_elite = yes } } }
+	option = { trigger = { etl_044 = yes } name = "etl_044" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_044 = { katzen_elite = yes } } }
+	option = { trigger = { etl_045 = yes } name = "etl_045" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_045 = { katzen_elite = yes } } }
+	option = { trigger = { etl_046 = yes } name = "etl_046" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_046 = { katzen_elite = yes } } }
+	option = { trigger = { etl_047 = yes } name = "etl_047" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_047 = { katzen_elite = yes } } }
+	option = { trigger = { etl_048 = yes } name = "etl_048" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_048 = { katzen_elite = yes } } }
+	option = { trigger = { etl_049 = yes } name = "etl_049" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_049 = { katzen_elite = yes } } }
+	option = { trigger = { etl_050 = yes } name = "etl_050" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_050 = { katzen_elite = yes } } }
+	option = { trigger = { etl_051 = yes } name = "etl_051" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_051 = { katzen_elite = yes } } }
+	option = { trigger = { etl_052 = yes } name = "etl_052" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_052 = { katzen_elite = yes } } }
+	option = { trigger = { etl_053 = yes } name = "etl_053" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_053 = { katzen_elite = yes } } }
+	option = { trigger = { etl_054 = yes } name = "etl_054" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_054 = { katzen_elite = yes } } }
+	option = { trigger = { etl_055 = yes } name = "etl_055" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_055 = { katzen_elite = yes } } }
+	option = { trigger = { etl_056 = yes } name = "etl_056" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_056 = { katzen_elite = yes } } }
+	option = { trigger = { etl_057 = yes } name = "etl_057" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_057 = { katzen_elite = yes } } }
+	option = { trigger = { etl_058 = yes } name = "etl_058" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_058 = { katzen_elite = yes } } }
+	option = { trigger = { etl_059 = yes } name = "etl_059" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_059 = { katzen_elite = yes } } }
+	option = { trigger = { etl_060 = yes } name = "etl_060" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_060 = { katzen_elite = yes } } }
+	option = { trigger = { etl_061 = yes } name = "etl_061" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_061 = { katzen_elite = yes } } }
+	option = { trigger = { etl_062 = yes } name = "etl_062" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_062 = { katzen_elite = yes } } }
+	option = { trigger = { etl_063 = yes } name = "etl_063" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_063 = { katzen_elite = yes } } }
+	option = { trigger = { etl_064 = yes } name = "etl_064" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_064 = { katzen_elite = yes } } }
+	option = { trigger = { etl_065 = yes } name = "etl_065" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_065 = { katzen_elite = yes } } }
+	option = { trigger = { etl_066 = yes } name = "etl_066" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_066 = { katzen_elite = yes } } }
+	option = { trigger = { etl_067 = yes } name = "etl_067" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_067 = { katzen_elite = yes } } }
+	option = { trigger = { etl_068 = yes } name = "etl_068" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_068 = { katzen_elite = yes } } }
+	option = { trigger = { etl_069 = yes } name = "etl_069" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_069 = { katzen_elite = yes } } }
+	option = { trigger = { etl_070 = yes } name = "etl_070" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_070 = { katzen_elite = yes } } }
+	option = { trigger = { etl_071 = yes } name = "etl_071" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_071 = { katzen_elite = yes } } }
+	option = { trigger = { etl_072 = yes } name = "etl_072" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_072 = { katzen_elite = yes } } }
+	option = { trigger = { etl_073 = yes } name = "etl_073" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_073 = { katzen_elite = yes } } }
+	option = { trigger = { etl_074 = yes } name = "etl_074" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_074 = { katzen_elite = yes } } }
+	option = { trigger = { etl_075 = yes } name = "etl_075" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_075 = { katzen_elite = yes } } }
+	option = { trigger = { etl_076 = yes } name = "etl_076" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_076 = { katzen_elite = yes } } }
+	option = { trigger = { etl_077 = yes } name = "etl_077" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_077 = { katzen_elite = yes } } }
+	option = { trigger = { etl_078 = yes } name = "etl_078" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_078 = { katzen_elite = yes } } }
+	option = { trigger = { etl_079 = yes } name = "etl_079" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_079 = { katzen_elite = yes } } }
+	option = { trigger = { etl_080 = yes } name = "etl_080" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_080 = { katzen_elite = yes } } }
+	option = { trigger = { etl_081 = yes } name = "etl_081" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_081 = { katzen_elite = yes } } }
+	option = { trigger = { etl_082 = yes } name = "etl_082" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_082 = { katzen_elite = yes } } }
+	option = { trigger = { etl_083 = yes } name = "etl_083" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_083 = { katzen_elite = yes } } }
+	option = { trigger = { etl_084 = yes } name = "etl_084" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_084 = { katzen_elite = yes } } }
+	option = { trigger = { etl_085 = yes } name = "etl_085" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_085 = { katzen_elite = yes } } }
+	option = { trigger = { etl_086 = yes } name = "etl_086" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_086 = { katzen_elite = yes } } }
+	option = { trigger = { etl_087 = yes } name = "etl_087" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_087 = { katzen_elite = yes } } }
+	option = { trigger = { etl_088 = yes } name = "etl_088" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_088 = { katzen_elite = yes } } }
+	option = { trigger = { etl_089 = yes } name = "etl_089" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_089 = { katzen_elite = yes } } }
+	option = { trigger = { etl_090 = yes } name = "etl_090" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_090 = { katzen_elite = yes } } }
+	option = { trigger = { etl_091 = yes } name = "etl_091" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_091 = { katzen_elite = yes } } }
+	option = { trigger = { etl_092 = yes } name = "etl_092" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_092 = { katzen_elite = yes } } }
+	option = { trigger = { etl_093 = yes } name = "etl_093" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_093 = { katzen_elite = yes } } }
+	option = { trigger = { etl_094 = yes } name = "etl_094" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_094 = { katzen_elite = yes } } }
+	option = { trigger = { etl_095 = yes } name = "etl_095" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_095 = { katzen_elite = yes } } }
+	option = { trigger = { etl_096 = yes } name = "etl_096" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_096 = { katzen_elite = yes } } }
+	option = { trigger = { etl_097 = yes } name = "etl_097" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_097 = { katzen_elite = yes } } }
+	option = { trigger = { etl_098 = yes } name = "etl_098" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_098 = { katzen_elite = yes } } }
+	option = { trigger = { etl_099 = yes } name = "etl_099" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_099 = { katzen_elite = yes } } }
+	option = { trigger = { etl_100 = yes } name = "etl_100" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_100 = { katzen_elite = yes } } }
+	option = { trigger = { etl_101 = yes } name = "etl_101" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_101 = { katzen_elite = yes } } }
+	option = { trigger = { etl_102 = yes } name = "etl_102" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_102 = { katzen_elite = yes } } }
+	option = { trigger = { etl_103 = yes } name = "etl_103" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_103 = { katzen_elite = yes } } }
+	option = { trigger = { etl_104 = yes } name = "etl_104" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_104 = { katzen_elite = yes } } }
+	option = { trigger = { etl_105 = yes } name = "etl_105" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_105 = { katzen_elite = yes } } }
+	option = { trigger = { etl_106 = yes } name = "etl_106" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_106 = { katzen_elite = yes } } }
+	option = { trigger = { etl_107 = yes } name = "etl_107" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_107 = { katzen_elite = yes } } }
+	option = { trigger = { etl_108 = yes } name = "etl_108" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_108 = { katzen_elite = yes } } }
+	option = { trigger = { etl_109 = yes } name = "etl_109" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_109 = { katzen_elite = yes } } }
+	option = { trigger = { etl_110 = yes } name = "etl_110" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_110 = { katzen_elite = yes } } }
+	option = { trigger = { etl_111 = yes } name = "etl_111" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_111 = { katzen_elite = yes } } }
+	option = { trigger = { etl_112 = yes } name = "etl_112" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_112 = { katzen_elite = yes } } }
+	option = { trigger = { etl_113 = yes } name = "etl_113" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_113 = { katzen_elite = yes } } }
+	option = { trigger = { etl_114 = yes } name = "etl_114" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_114 = { katzen_elite = yes } } }
+	option = { trigger = { etl_115 = yes } name = "etl_115" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_115 = { katzen_elite = yes } } }
+	option = { trigger = { etl_116 = yes } name = "etl_116" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_116 = { katzen_elite = yes } } }
+	option = { trigger = { etl_117 = yes } name = "etl_117" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_117 = { katzen_elite = yes } } }
+	option = { trigger = { etl_118 = yes } name = "etl_118" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_118 = { katzen_elite = yes } } }
+	option = { trigger = { etl_119 = yes } name = "etl_119" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_119 = { katzen_elite = yes } } }
+	option = { trigger = { etl_120 = yes } name = "etl_120" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_120 = { katzen_elite = yes } } }
+	option = { trigger = { etl_121 = yes } name = "etl_121" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_121 = { katzen_elite = yes } } }
+	option = { trigger = { etl_122 = yes } name = "etl_122" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_122 = { katzen_elite = yes } } }
+	option = { trigger = { etl_123 = yes } name = "etl_123" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_123 = { katzen_elite = yes } } }
+	option = { trigger = { etl_124 = yes } name = "etl_124" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_124 = { katzen_elite = yes } } }
+	option = { trigger = { etl_125 = yes } name = "etl_125" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_125 = { katzen_elite = yes } } }
+	option = { trigger = { etl_126 = yes } name = "etl_126" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_126 = { katzen_elite = yes } } }
+	option = { trigger = { etl_127 = yes } name = "etl_127" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_127 = { katzen_elite = yes } } }
+	option = { trigger = { etl_128 = yes } name = "etl_128" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_128 = { katzen_elite = yes } } }
+	option = { trigger = { etl_129 = yes } name = "etl_129" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_129 = { katzen_elite = yes } } }
+	option = { trigger = { etl_130 = yes } name = "etl_130" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_130 = { katzen_elite = yes } } }
+	option = { trigger = { etl_131 = yes } name = "etl_131" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_131 = { katzen_elite = yes } } }
+	option = { trigger = { etl_132 = yes } name = "etl_132" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_132 = { katzen_elite = yes } } }
+	option = { trigger = { etl_133 = yes } name = "etl_133" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_133 = { katzen_elite = yes } } }
+	option = { trigger = { etl_134 = yes } name = "etl_134" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_134 = { katzen_elite = yes } } }
+	option = { trigger = { etl_135 = yes } name = "etl_135" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_135 = { katzen_elite = yes } } }
+	option = { trigger = { etl_136 = yes } name = "etl_136" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_136 = { katzen_elite = yes } } }
+	option = { trigger = { etl_137 = yes } name = "etl_137" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_137 = { katzen_elite = yes } } }
+	option = { trigger = { etl_138 = yes } name = "etl_138" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_138 = { katzen_elite = yes } } }
+	option = { trigger = { etl_139 = yes } name = "etl_139" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_139 = { katzen_elite = yes } } }
+	option = { trigger = { etl_140 = yes } name = "etl_140" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_140 = { katzen_elite = yes } } }
+	option = { trigger = { etl_141 = yes } name = "etl_141" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_141 = { katzen_elite = yes } } }
+	option = { trigger = { etl_142 = yes } name = "etl_142" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_142 = { katzen_elite = yes } } }
+	option = { trigger = { etl_143 = yes } name = "etl_143" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_143 = { katzen_elite = yes } } }
+	option = { trigger = { etl_144 = yes } name = "etl_144" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_144 = { katzen_elite = yes } } }
+	option = { trigger = { etl_145 = yes } name = "etl_145" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_145 = { katzen_elite = yes } } }
+	option = { trigger = { etl_146 = yes } name = "etl_146" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_146 = { katzen_elite = yes } } }
+	option = { trigger = { etl_147 = yes } name = "etl_147" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_147 = { katzen_elite = yes } } }
+	option = { trigger = { etl_148 = yes } name = "etl_148" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_148 = { katzen_elite = yes } } }
+	option = { trigger = { etl_149 = yes } name = "etl_149" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_149 = { katzen_elite = yes } } }
+	option = { trigger = { etl_150 = yes } name = "etl_150" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_150 = { katzen_elite = yes } } }
+	option = { trigger = { etl_151 = yes } name = "etl_151" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_151 = { katzen_elite = yes } } }
+	option = { trigger = { etl_152 = yes } name = "etl_152" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_152 = { katzen_elite = yes } } }
+	option = { trigger = { etl_153 = yes } name = "etl_153" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_153 = { katzen_elite = yes } } }
+	option = { trigger = { etl_154 = yes } name = "etl_154" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_154 = { katzen_elite = yes } } }
+	option = { trigger = { etl_155 = yes } name = "etl_155" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_155 = { katzen_elite = yes } } }
+	option = { trigger = { etl_156 = yes } name = "etl_156" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_156 = { katzen_elite = yes } } }
+	option = { trigger = { etl_157 = yes } name = "etl_157" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_157 = { katzen_elite = yes } } }
+	option = { trigger = { etl_158 = yes } name = "etl_158" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_158 = { katzen_elite = yes } } }
+	option = { trigger = { etl_159 = yes } name = "etl_159" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_159 = { katzen_elite = yes } } }
+	option = { trigger = { etl_160 = yes } name = "etl_160" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_160 = { katzen_elite = yes } } }
+	option = { trigger = { etl_161 = yes } name = "etl_161" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_161 = { katzen_elite = yes } } }
+	option = { trigger = { etl_162 = yes } name = "etl_162" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_162 = { katzen_elite = yes } } }
+	option = { trigger = { etl_163 = yes } name = "etl_163" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_163 = { katzen_elite = yes } } }
+	option = { trigger = { etl_164 = yes } name = "etl_164" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_164 = { katzen_elite = yes } } }
+	option = { trigger = { etl_165 = yes } name = "etl_165" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_165 = { katzen_elite = yes } } }
+	option = { trigger = { etl_166 = yes } name = "etl_166" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_166 = { katzen_elite = yes } } }
+	option = { trigger = { etl_167 = yes } name = "etl_167" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_167 = { katzen_elite = yes } } }
+	option = { trigger = { etl_168 = yes } name = "etl_168" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_168 = { katzen_elite = yes } } }
+	option = { trigger = { etl_169 = yes } name = "etl_169" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_169 = { katzen_elite = yes } } }
+	option = { trigger = { etl_170 = yes } name = "etl_170" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_170 = { katzen_elite = yes } } }
+	option = { trigger = { etl_171 = yes } name = "etl_171" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_171 = { katzen_elite = yes } } }
+	option = { trigger = { etl_172 = yes } name = "etl_172" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_172 = { katzen_elite = yes } } }
+	option = { trigger = { etl_173 = yes } name = "etl_173" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_173 = { katzen_elite = yes } } }
+	option = { trigger = { etl_174 = yes } name = "etl_174" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_174 = { katzen_elite = yes } } }
+	option = { trigger = { etl_175 = yes } name = "etl_175" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_175 = { katzen_elite = yes } } }
+	option = { trigger = { etl_176 = yes } name = "etl_176" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_176 = { katzen_elite = yes } } }
+	option = { trigger = { etl_177 = yes } name = "etl_177" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_177 = { katzen_elite = yes } } }
+	option = { trigger = { etl_178 = yes } name = "etl_178" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_178 = { katzen_elite = yes } } }
+	option = { trigger = { etl_179 = yes } name = "etl_179" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_179 = { katzen_elite = yes } } }
+	option = { trigger = { etl_180 = yes } name = "etl_180" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_180 = { katzen_elite = yes } } }
+	option = { trigger = { etl_181 = yes } name = "etl_181" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_181 = { katzen_elite = yes } } }
+	option = { trigger = { etl_182 = yes } name = "etl_182" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_182 = { katzen_elite = yes } } }
+	option = { trigger = { etl_183 = yes } name = "etl_183" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_183 = { katzen_elite = yes } } }
+	option = { trigger = { etl_184 = yes } name = "etl_184" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_184 = { katzen_elite = yes } } }
+	option = { trigger = { etl_185 = yes } name = "etl_185" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_185 = { katzen_elite = yes } } }
+	option = { trigger = { etl_186 = yes } name = "etl_186" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_186 = { katzen_elite = yes } } }
+	option = { trigger = { etl_187 = yes } name = "etl_187" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_187 = { katzen_elite = yes } } }
+	option = { trigger = { etl_188 = yes } name = "etl_188" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_188 = { katzen_elite = yes } } }
+	option = { trigger = { etl_189 = yes } name = "etl_189" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_189 = { katzen_elite = yes } } }
+	option = { trigger = { etl_190 = yes } name = "etl_190" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_190 = { katzen_elite = yes } } }
+	option = { trigger = { etl_191 = yes } name = "etl_191" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_191 = { katzen_elite = yes } } }
+	option = { trigger = { etl_192 = yes } name = "etl_192" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_192 = { katzen_elite = yes } } }
+	option = { trigger = { etl_193 = yes } name = "etl_193" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_193 = { katzen_elite = yes } } }
+	option = { trigger = { etl_194 = yes } name = "etl_194" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_194 = { katzen_elite = yes } } }
+	option = { trigger = { etl_195 = yes } name = "etl_195" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_195 = { katzen_elite = yes } } }
+	option = { trigger = { etl_196 = yes } name = "etl_196" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_196 = { katzen_elite = yes } } }
+	option = { trigger = { etl_197 = yes } name = "etl_197" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_197 = { katzen_elite = yes } } }
+	option = { trigger = { etl_198 = yes } name = "etl_198" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_198 = { katzen_elite = yes } } }
+	option = { trigger = { etl_199 = yes } name = "etl_199" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_199 = { katzen_elite = yes } } }
+	option = { trigger = { etl_200 = yes } name = "etl_200" response_text = "katzen_elite_t" hidden_effect = { event_target:etl_200 = { katzen_elite = yes } } }
+
+	option = { # Back
+		default_hide_option = yes
+		name = "katzen.8.f"
+		add_resource = { unity = 1000 }
+		hidden_effect = {
+			country_event = {
+				id = katzen.7
+			}
+		} 
+	}
+}

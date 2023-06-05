@@ -1,0 +1,126 @@
+#Katzen rare resources tech
+tech_katzen_rr = {
+	cost = @tier3cost1
+	area = engineering
+	tier = 3
+	category = {
+		materials
+	}
+	prerequisites = {
+	}
+	weight = @tier3weight1
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				has_origin = origin_katzen
+			}
+		}
+	}
+	ai_weight = {
+
+	}
+}
+
+#Katzen foundry tech
+tech_katzen_forge = {
+	cost = @tier3cost1
+	area = engineering
+	tier = 3
+	category = {
+		materials
+	}
+	prerequisites = {
+		"tech_alloys_1"
+		"tech_colonial_centralization" 
+	}
+	weight = @tier3weight1
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				has_origin = origin_katzen
+			}
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = prospectorium }
+		}
+	}
+	ai_weight = {
+		factor = @ai_alloy_factor_factor
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#Katzen consumer goods tech
+tech_katzen_luxuries = {
+	cost = @tier3cost2
+	area = engineering
+	tier = 3
+	category = {
+		materials
+	}
+	prerequisites = {
+		"tech_luxuries_1"
+		"tech_katzen_forge"
+	}
+	weight = @tier3weight1
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				has_origin = origin_katzen
+			}
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = prospectorium }
+		}
+	}
+	ai_weight = {
+		factor = @ai_alloy_factor_factor
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+tech_kaiser_planet = {
+	cost = @tier5cost1
+	area = engineering
+	tier = 5
+	category = {
+		voidcraft
+	}
+	prerequisites = {
+	}
+	weight = 0
+	ai_weight = {
+		weight = 0
+	}
+}

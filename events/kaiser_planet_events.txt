@@ -1,0 +1,229 @@
+namespace = kaiser_war_planet
+
+country_event = {
+	id = kaiser_war_planet.1
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		set_global_flag = kaiser_building_planet
+		event_target:doughland = {
+			giga_set_has_mega_flag = yes
+			set_planet_flag = kaiser_planet_project
+		}
+		set_country_flag = celestia_started
+	}
+}
+
+country_event = {
+	id = kaiser_war_planet.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_controlled_fleet = {
+			remove_fleet_flag = current_katzen_flagship
+		}
+		create_fleet = {
+			name = "Kaiserübermacht"
+			settings = {
+				spawn_debris = no
+				can_change_composition = no #yes
+				is_boss = yes
+			}
+			effect = {
+				set_owner = event_target:katzenartig
+				create_ship = {
+					name = "Kaiserübermacht"
+					design = "Kaiser Behemoth Planet"
+					upgradable = yes
+				}
+				set_fleet_flag = current_katzen_flagship
+				set_location = event_target:doughland
+			}
+		}
+	}
+}
+
+situation_event = {
+	id = kaiser_war_planet.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+			solar_system = {
+				spawn_megastructure = {
+					type = kaiser_planet_0
+					planet = event_target:doughland
+					owner = event_target:katzenartig
+				}
+			}
+		}
+	}
+}
+
+situation_event = {
+	id = kaiser_war_planet.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+			event_target:doughland = {
+				every_megastructure = {
+					delete_megastructure = this
+				}
+			}
+			solar_system = {
+				spawn_megastructure = {
+					type = kaiser_planet_1
+					planet = event_target:doughland
+					owner = event_target:katzenartig
+				}
+			}
+		}
+	}
+}
+
+situation_event = {
+	id = kaiser_war_planet.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+			event_target:doughland = {
+				every_megastructure = {
+					delete_megastructure = this
+				}
+			}
+			solar_system = {
+				spawn_megastructure = {
+					type = kaiser_planet_2
+					planet = event_target:doughland
+					owner = event_target:katzenartig
+				}
+			}
+		}
+	}
+}
+
+situation_event = {
+	id = kaiser_war_planet.6
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+			event_target:doughland = {
+				every_megastructure = {
+					delete_megastructure = this
+				}
+				solar_system = {
+					spawn_megastructure = {
+						type = kaiser_planet_3
+						planet = event_target:doughland
+						owner = event_target:katzenartig
+					}
+				}
+			}
+		}
+	}
+}
+
+situation_event = {
+	id = kaiser_war_planet.7
+	title = kaiser_war_planet.7.name
+	desc = kaiser_war_planet.7.desc
+	picture = GFX_evt_attack_moon
+	is_triggered_only = yes
+
+	option = {
+		name = kaiser_war_planet.7.a
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = kaiser_war_planet.2
+				}
+				event_target:doughland = {
+					every_megastructure = {
+						remove_megastructure = this
+					}
+					remove_planet = yes
+				}
+			}
+			destroy_situation = this
+		}
+	}
+}
+
+country_event = {
+	id = kaiser_war_planet.8
+	title = "kaiser_war_planet.8.title"
+	desc = "kaiser_war_planet.8.desc"
+	picture = GFX_evt_attack_moon
+	show_sound = event_radio_chatter
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		start_situation = {
+			type = situation_project_celestia
+			target = root
+			effect = {
+				save_event_target_as = kaiser_planet_sit
+			}
+		}
+		set_country_flag = celestia_started
+	}
+
+	option = {
+		name = katsit.10.A # We cannot afford this now
+		icon = {
+			icon = GFX_situation_approach_balance_sheet
+			icon_background = GFX_situation_approach_bg_red
+			text = set_situation_approach_icon_text
+		}
+		event_target:kaiser_planet_sit = {
+			set_situation_approach = approach_no_invest
+		}
+	}
+
+	option = {
+		name = katsit.10.B # Low investment
+		icon = {
+			icon = GFX_situation_approach_balance_sheet
+			icon_background = GFX_situation_approach_bg_yellow
+			text = set_situation_approach_icon_text
+		}
+		event_target:kaiser_planet_sit = {
+			set_situation_approach = approach_low_invest
+		}
+	}
+
+	option = {
+		name = katsit.10.C # Mid investment
+		icon = {
+			icon = GFX_situation_approach_balance_sheet
+			icon_background = GFX_situation_approach_bg_yellow
+			text = set_situation_approach_icon_text
+		}
+		event_target:kaiser_planet_sit = {
+			set_situation_approach = approach_mid_invest
+		}
+	}
+
+	option = {
+		name = katsit.10.D # Big investment
+		icon = {
+			icon = GFX_situation_approach_balance_sheet
+			icon_background = GFX_situation_approach_bg_green
+			text = set_situation_approach_icon_text
+		}
+		event_target:kaiser_planet_sit = {
+			set_situation_approach = approach_big_invest
+		}
+	}
+
+ }

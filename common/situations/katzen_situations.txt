@@ -1,0 +1,542 @@
+situation_mandakanone = {
+	picture = GFX_evt_galactic_market
+	category = positive
+	complete_icon = GFX_situation_outcome_positive
+	complete_icon_frame = GFX_situation_outcome_frame_green
+
+	on_start = {
+		set_situation_flag = building_the_moon
+	}
+	on_abort = {
+		owner = {
+			add_resource = {
+				energy = @bailout_basic_base_amount
+				mult = value:bailout_scaling_factor
+			}
+		}
+	}
+
+	start_value = 0
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 25
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 50
+		}
+		stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			end = 75
+			
+		}
+		stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_green
+			end = 100
+		}
+	}
+
+	on_progress_complete = {
+		hidden_effect = {
+			situation_event = {
+				id = katsit.11
+			}
+		}
+	}
+	on_fail = {
+		hidden_effect = { destroy_situation = this }
+	}
+	monthly_progress = {
+		base = 0
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_no_invest
+			add = 0
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_low_invest
+			add = 0.5
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mid_invest
+			add = 1
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_big_invest
+			add = 2
+		}
+	}
+	approach = {
+		name = approach_no_invest
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_red
+		default = yes
+		on_select = {
+			custom_tooltip = approach_no_invest_tooltip
+		}
+	}
+	approach = {
+		name = approach_low_invest
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_low_invest_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				alloys = 50
+			}
+		}
+	}
+	approach = {
+		name = approach_mid_invest
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_mid_invest_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				alloys = 100
+			}
+		}
+	}
+	approach = {
+		name = approach_big_invest
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip = approach_big_invest_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				alloys = 200
+			}
+		}
+	}
+}
+
+situation_kaiser_moon = {
+	picture = GFX_evt_attack_moon
+	category = positive
+	complete_icon = GFX_situation_outcome_positive
+	complete_icon_frame = GFX_situation_outcome_frame_green
+
+	on_start = {
+		set_situation_flag = building_the_new_moon
+	}
+	on_abort = {
+		owner = {
+			add_resource = {
+				energy = @bailout_basic_base_amount
+				mult = value:bailout_scaling_factor
+			}
+		}
+	}
+
+	start_value = 0
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 25
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 50
+		}
+		stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			end = 75
+			
+		}
+		stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_green
+			end = 100
+		}
+	}
+
+	on_progress_complete = {
+		hidden_effect = {
+			situation_event = {
+				id = kmoon.20
+			}
+		}
+	}
+	on_fail = {
+		hidden_effect = { destroy_situation = this }
+	}
+	monthly_progress = {
+		base = 0
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_no_invest
+			add = 0
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_low_invest
+			add = 0.5
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mid_invest
+			add = 1
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_big_invest
+			add = 2
+		}
+	}
+	approach = {
+		name = approach_no_invest
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_red
+		default = yes
+		on_select = {
+			custom_tooltip = approach_no_invest_tooltip
+		}
+	}
+	approach = {
+		name = approach_low_invest
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_low_invest_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				alloys = 50
+			}
+		}
+	}
+	approach = {
+		name = approach_mid_invest
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_mid_invest_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				alloys = 100
+			}
+		}
+	}
+	approach = {
+		name = approach_big_invest
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip = approach_big_invest_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				alloys = 200
+			}
+		}
+	}
+}
+
+situation_new_moon = {
+	picture = GFX_evt_attack_moon
+	category = positive
+	complete_icon = GFX_situation_outcome_positive
+	complete_icon_frame = GFX_situation_outcome_frame_green
+
+	on_start = {
+		set_situation_flag = building_a_new_moon
+	}
+	on_abort = {
+		owner = {
+			add_resource = {
+				energy = @bailout_basic_base_amount
+				mult = value:bailout_scaling_factor
+			}
+		}
+	}
+
+	start_value = 0
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 25
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 50
+		}
+		stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			end = 75
+			
+		}
+		stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_green
+			end = 100
+		}
+	}
+
+	on_progress_complete = {
+		hidden_effect = {
+			situation_event = {
+				id = kmoon.2001
+			}
+		}
+	}
+	on_fail = {
+		hidden_effect = { destroy_situation = this }
+	}
+	monthly_progress = {
+		base = 0
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_no_invest
+			add = 0
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_low_invest
+			add = 0.25
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mid_invest
+			add = 0.5
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_big_invest
+			add = 1
+		}
+	}
+	approach = {
+		name = approach_no_invest
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_red
+		default = yes
+		on_select = {
+			custom_tooltip = approach_no_invest_tooltip
+		}
+	}
+	approach = {
+		name = approach_low_invest
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_low_invest_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				alloys = 50
+			}
+		}
+	}
+	approach = {
+		name = approach_mid_invest
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_mid_invest_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				alloys = 100
+			}
+		}
+	}
+	approach = {
+		name = approach_big_invest
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip = approach_big_invest_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				alloys = 200
+			}
+		}
+	}
+}
+
+
+situation_project_celestia = {
+	picture = GFX_evt_attack_moon
+	category = positive
+	complete_icon = GFX_situation_outcome_positive
+	complete_icon_frame = GFX_situation_outcome_frame_green
+
+	on_start = {
+		set_situation_flag = situation_celestia_begun
+	}
+	on_abort = {
+	}
+
+	start_value = 0
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 60
+			on_first_enter = {
+				situation_event = {
+					id = kaiser_war_planet.3
+				}
+			}
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 120
+			on_first_enter = {
+				situation_event = {
+					id = kaiser_war_planet.4
+				}
+			}
+		}
+		stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			end = 180
+			on_first_enter = {
+				situation_event = {
+					id = kaiser_war_planet.5
+				}
+			}
+		}
+		stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_green
+			end = 240
+			on_first_enter = {
+				situation_event = {
+					id = kaiser_war_planet.6
+				}
+			}
+		}
+	}
+
+	on_progress_complete = {
+		hidden_effect = {
+			situation_event = {
+				id = kaiser_war_planet.7
+			}
+		}
+	}
+	on_fail = {
+		hidden_effect = { destroy_situation = this }
+	}
+	monthly_progress = {
+		base = 0
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_no_invest
+			add = 0
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_low_invest
+			add = 0.5
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_mid_invest
+			add = 1
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_big_invest
+			add = 2
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_big_invest
+			add = 10
+		}
+	}
+	approach = {
+		name = approach_no_invest
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_red
+		default = yes
+		on_select = {
+			custom_tooltip = approach_no_invest_tooltip
+		}
+	}
+	approach = {
+		name = approach_low_invest
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_low_invest_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				alloys = 500
+			}
+		}
+	}
+	approach = {
+		name = approach_mid_invest
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_mid_invest_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				alloys = 1000
+			}
+		}
+	}
+	approach = {
+		name = approach_big_invest
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip = approach_big_invest_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				alloys = 2000
+			}
+		}
+	}
+	approach = {
+		name = approach_debug
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip = approach_big_invest_tooltip
+		}
+	}
+}
