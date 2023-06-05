@@ -692,7 +692,7 @@ country_event = {
 			create_leader = {
 				class = admiral
 				species = event_target:mercurians
-				name = "Cattail II"
+				name = "King Aven Moll"
 				skill = 5
 				set_age = 46
 				gender = male
@@ -910,7 +910,7 @@ country_event = {
 					save_global_event_target_as = dofus_flunat
 				}
 			}
-			set_leader = event_target:dofun_flunat
+			set_leader = event_target:dofus_flunat
 			establish_communications_no_message = root
 		}
 	 #Cookian Steppes
