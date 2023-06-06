@@ -132,7 +132,7 @@ country_event = {
 			name = "Haranian"
 			plural = "Haranians"
 			class = HUM
-			portrait = humanoid_02
+			portrait = humanoid_05
 			homeworld = this
 			traits = {
 				trait = trait_pc_continental_preference
@@ -147,8 +147,8 @@ country_event = {
 		 create_species = {
 			name = "Lauranaise"
 			plural = "Lauranaise"
-			class = AVI
-			portrait = avi5
+			class = REP
+			portrait = rep8
 			homeworld = this
 			traits = {
 				trait = trait_pc_continental_preference
@@ -235,7 +235,7 @@ country_event = {
 					name = "Solakian"
 					plural = "Solakians"
 					class = HUM
-					portrait = humanoid_05
+					portrait = human
 					homeworld = this
 					traits = {
 						trait = trait_pc_continental_preference
@@ -254,7 +254,7 @@ country_event = {
 					name = "Mercurian"
 					plural = "Mercurians"
 					class = PLANT
-					portrait = pla8
+					portrait = pla14
 					homeworld = this
 					traits = {
 						trait = trait_pc_continental_preference
@@ -286,8 +286,8 @@ country_event = {
 			
 			#Zousanians
 			create_species = {
-				name = "Zousan"
-				plural = "Zousans"
+				name = "Zousanian"
+				plural = "Zousanians"
 				class = AVI
 				portrait = avi11
 				homeworld = this
@@ -320,20 +320,36 @@ country_event = {
 					}
 				}
 			#Droog
-				create_species = {
-					name = "Droog"
-					plural = "Droog"
-					class = PLANT
-					portrait = pla11
-					homeworld = this
-					traits = {
-						trait = trait_pc_continental_preference
-						trait = trait_strong
-					}
-					effect = {
-						save_global_event_target_as = droog
-					}
+			create_species = {
+				name = "Droog"
+				plural = "Droog"
+				class = HUM
+				portrait = humanoid_03
+				homeworld = this
+				traits = {
+					trait = trait_pc_continental_preference
+					trait = trait_strong
 				}
+				effect = {
+					save_global_event_target_as = droog
+				}
+			}
+
+			#Cyat
+			create_species = {
+				name = "Cyat"
+				plural = "Cyats"
+				class = MAM
+				portrait = mam14
+				homeworld = this
+				traits = {
+					trait = trait_pc_continental_preference
+					trait = trait_strong
+				}
+				effect = {
+					save_global_event_target_as = cyatianalas
+				}
+			}
 		}
 
 
@@ -576,7 +592,7 @@ country_event = {
 		create_leader = {
 			class = governor
 			species = event_target:symbies
-			name = "Nekochaosien"
+			name = "James Madjacks"
 			skill = 2
 			set_age = 43
 			gender = female
@@ -584,11 +600,11 @@ country_event = {
 				trait = katzen_trait_elite
 			}
 			effect = {
-				set_leader_flag = neko
-				save_global_event_target_as = neko_flunat
+				set_leader_flag = james
+				save_global_event_target_as = james_flunat
 			}
 		}
-		set_leader = event_target:neko_flunat
+		set_leader = event_target:james_flunat
 		establish_communications_no_message = root
 	}		
 	#Yinjites
@@ -643,7 +659,7 @@ country_event = {
 			civics = random
 			origin = origin_default_pre_ftl
 			flag = random
-			species = event_target:mercurians
+			species = event_target:cyatianalas
 			type = flusion_nation
 			effect = {
 				save_global_event_target_as = cyatianala_flunat
@@ -827,7 +843,7 @@ country_event = {
 		adjective = "NAME_Ravkan"
 		ethos = {
 			ethic = ethic_xenophobe
-			ethic = ethic_militarist
+			ethic = ethic_spiritualist
 			ethic = ethic_authoritarian
 		}
 		authority = auth_dictatorial
