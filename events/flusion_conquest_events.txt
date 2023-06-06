@@ -1083,6 +1083,7 @@ country_event = {
 			remove_deposit = d_katown_palace_primitive
 			add_deposit = d_katown_palace
 		}
+		remove_country_flag = flusionian_war
 		country_event = {
 			id = ftl.1 days = 660
 		}
