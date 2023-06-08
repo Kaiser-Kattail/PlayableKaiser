@@ -6,7 +6,7 @@ update_total_flusion_con_value = {
 		}
 		change_variable = {
 			which = "flusion_total_con_value"
-			value = hanarian_con
+			value = haranian_con
 		}
 		change_variable = {
 			which = "flusion_total_con_value"
@@ -60,29 +60,27 @@ update_total_flusion_con_value = {
 }
 
 check_flusionian_war = {
-	event_target:playerflusion = {
-		if = {
-			limit = {
-				OR = {
-					has_country_flag = war_with_harania
-					has_country_flag = war_with_solakia 
-					has_country_flag = war_with_cookie
-					has_country_flag = war_with_kronk
-					has_country_flag = war_with_ravka
-					has_country_flag = war_with_zousa
-					has_country_flag = war_with_droog
-					has_country_flag = war_with_ezic
-					has_country_flag = war_with_mercuria
-					has_country_flag = war_with_cyatianala
-					has_country_flag = war_with_yinja
-					has_country_flag = war_with_symbie
-					has_country_flag = war_with_laurandaar
-				}
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = war_with_harania
+				has_country_flag = war_with_solakia 
+				has_country_flag = war_with_cookie
+				has_country_flag = war_with_kronk
+				has_country_flag = war_with_ravka
+				has_country_flag = war_with_zousa
+				has_country_flag = war_with_droog
+				has_country_flag = war_with_ezic
+				has_country_flag = war_with_mercuria
+				has_country_flag = war_with_cyatianala
+				has_country_flag = war_with_yinja
+				has_country_flag = war_with_symbie
+				has_country_flag = war_with_laurandaar
 			}
-			set_country_flag = flusionian_war
 		}
-		else = {
-			remove_country_flag = flusionian_war
-		}
+		set_country_flag = flusionian_war
+	}
+	else = {
+		remove_country_flag = flusionian_war
 	}
 }
