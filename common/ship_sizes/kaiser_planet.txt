@@ -28,7 +28,7 @@ kaiser_planet = {
 
 	class = shipclass_military
 	possible_construction = { always = no }
-
+	prerequisites = { "kaiser_planet" }
 	ship_roles = { artillery }
 
 	required_component_set = "power_core"
