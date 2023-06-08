@@ -9,7 +9,7 @@ decision_flusion_strike_cheap = {
 		}
 	}
 	potential = {
-		owner = {
+		from = {
 			has_origin = origin_katzen
 			has_country_flag = flusionian_war
 			any_situation = {
@@ -36,7 +36,7 @@ decision_flusion_strike_cheap = {
 	allow = {
 		custom_tooltip = {
 			fail_text = "multiple_conquests_active"
-			owner = {
+			from = {
 				calc_true_if = {
 					amount <= 1
 					has_country_flag = war_with_harania
@@ -57,7 +57,7 @@ decision_flusion_strike_cheap = {
 		}
 	}
 	effect = {
-		owner = {
+		from = {
 			random_situation = {
 				limit = {
 					OR = {
@@ -93,7 +93,7 @@ decision_flusion_strike_mixed = {
 		}
 	}
 	potential = {
-		owner = {
+		from = {
 			has_origin = origin_katzen
 			has_country_flag = flusionian_war
 			any_situation = {
@@ -120,7 +120,7 @@ decision_flusion_strike_mixed = {
 	allow = {
 		custom_tooltip = {
 			fail_text = "multiple_conquests_active"
-			owner = {
+			from = {
 				calc_true_if = {
 					amount <= 1
 					has_country_flag = war_with_harania
@@ -141,7 +141,7 @@ decision_flusion_strike_mixed = {
 		}
 	}
 	effect = {
-		owner = {
+		from = {
 			random_situation = {
 				limit = {
 					OR = {
@@ -178,7 +178,7 @@ decision_flusion_strike_attrition = {
 		}
 	}
 	potential = {
-		owner = {
+		from = {
 			has_origin = origin_katzen
 			has_country_flag = flusionian_war
 			any_situation = {
@@ -205,7 +205,7 @@ decision_flusion_strike_attrition = {
 	allow = {
 		custom_tooltip = {
 			fail_text = "multiple_conquests_active"
-			owner = {
+			from = {
 				calc_true_if = {
 					amount <= 1
 					has_country_flag = war_with_harania
@@ -226,7 +226,7 @@ decision_flusion_strike_attrition = {
 		}
 	}
 	effect = {
-		owner = {
+		from = {
 			random_situation = {
 				limit = {
 					OR = {
