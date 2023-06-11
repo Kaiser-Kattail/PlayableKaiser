@@ -225,12 +225,14 @@ decision_katzen_housing_dam = {
         }
     }
     potential = {
-        from = {
-            has_origin = origin_katzen
+    	from = {
+        	has_origin = origin_katzen
         }
-			has_planet_flag = gigaflusion
+	NOT = {
+		has_planet_flag = gigaflusion
+	}
 		
-		is_artificial = no
+	is_artificial = no
     }
 
 	allow = {
@@ -272,12 +274,14 @@ decision_katzen_food_dam = {
         }
     }
     potential = {
-        from = {
-            has_origin = origin_katzen
+    	from = {
+        	has_origin = origin_katzen
         }
-			has_planet_flag = gigaflusion
+	NOT = {
+		has_planet_flag = gigaflusion
+	}
 		
-		is_artificial = no
+	is_artificial = no
     }
 
 	allow = {
@@ -339,12 +343,14 @@ decision_katzen_mineral_dam = {
         }
     }
     potential = {
-        from = {
-            has_origin = origin_katzen
+    	from = {
+        	has_origin = origin_katzen
         }
-			has_planet_flag = gigaflusion
-	
-		is_artificial = no
+	NOT = {
+		has_planet_flag = gigaflusion
+	}
+		
+	is_artificial = no
     }
 
 	allow = {
@@ -387,12 +393,14 @@ decision_katzen_energy_dam = {
         }
     }
     potential = {
-        from = {
-            has_origin = origin_katzen
+    	from = {
+        	has_origin = origin_katzen
         }
-			has_planet_flag = gigaflusion
+	NOT = {
+		has_planet_flag = gigaflusion
+	}
 		
-		is_artificial = no
+	is_artificial = no
     }
 
 	allow = {
