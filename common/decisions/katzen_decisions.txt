@@ -14,7 +14,7 @@ decision_flusion_arc = {
 	}
 
 	potential = {
-		planet.owner = {
+		from = {
 			has_origin = origin_katzen
 			has_country_flag = unified_flusion
 		}
@@ -82,7 +82,7 @@ decision_kaiser_moon = {
 		NOT = {
 			is_colony = yes
 		}
-		planet.owner = {
+		from = {
 			NOT = {
 				any_controlled_fleet = {
 					has_fleet_flag = current_katzen_flagship
@@ -92,7 +92,7 @@ decision_kaiser_moon = {
 		
 	}
 	allow = {
-		planet.owner = {
+		from = {
 			NOT = {
 				 any_situation = {
 					is_situation_type = situation_kaiser_moon
@@ -122,7 +122,7 @@ decision_expand_flusio_arcology = {
 	potential = {
 		has_planet_flag = playerflusion
 		is_planet_class = pc_flusion_gaia_ecu
-		planet.owner = {
+		from = {
 			has_country_flag = expand_flusion_agenda
 		}
 	}
@@ -157,7 +157,7 @@ decision_solaktropa = {
         }
     }
     potential = {
-        planet.owner = {
+        from = {
 			has_origin = origin_katzen
         }
         has_planet_flag = gigaflusion
@@ -193,7 +193,7 @@ decision_katlantropa = {
         }
     }
     potential = {
-        planet.owner = {
+        from = {
 			has_origin = origin_katzen
         }
             has_planet_flag = gigaflusion
@@ -225,7 +225,7 @@ decision_katzen_housing_dam = {
         }
     }
     potential = {
-        planet.owner = {
+        from = {
             has_origin = origin_katzen
         }
 			has_planet_flag = gigaflusion
@@ -272,7 +272,7 @@ decision_katzen_food_dam = {
         }
     }
     potential = {
-        planet.owner = {
+        from = {
             has_origin = origin_katzen
         }
 			has_planet_flag = gigaflusion
@@ -339,7 +339,7 @@ decision_katzen_mineral_dam = {
         }
     }
     potential = {
-        planet.owner = {
+        from = {
             has_origin = origin_katzen
         }
 			has_planet_flag = gigaflusion
@@ -387,7 +387,7 @@ decision_katzen_energy_dam = {
         }
     }
     potential = {
-        planet.owner = {
+        from = {
             has_origin = origin_katzen
         }
 			has_planet_flag = gigaflusion
@@ -431,7 +431,7 @@ decision_katzen_defense_array_1 = {
 		}
 	}
 	potential = {
-		planet.owner = {
+		from = {
 			has_origin = origin_katzen
 			has_country_flag = unified_flusion
 		}
@@ -475,7 +475,7 @@ decision_katzen_war_forge = {
 		}
 	}
 	potential = {
-		planet.solar_system.owner = {
+		from = {
 			has_origin = origin_katzen
 			has_country_flag = unified_flusion
 		}
@@ -521,7 +521,7 @@ decision_kaiser_craft_recall = {
     }
 	sound = event_red_alert
     potential = {
-        planet.owner = {
+        from = {
 			has_origin = origin_katzen
 			any_controlled_fleet = {
 				has_fleet_flag = current_katzen_flagship
@@ -531,7 +531,7 @@ decision_kaiser_craft_recall = {
         
     }
 	effect = {
-		planet.owner = {
+		from = {
 			every_controlled_fleet = {
 				limit = {
 					has_fleet_flag = current_katzen_flagship
