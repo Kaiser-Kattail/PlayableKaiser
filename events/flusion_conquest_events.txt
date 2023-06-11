@@ -507,11 +507,7 @@ country_event = {
 	desc = conquest.602.desc
 	diplomatic = yes
 	picture_event_data = {
-		portrait = event_target:xavier_flunat
-		planet_background = root.owner
-		graphical_culture = plantoid_01
-		city_level = root.owner
-		room = personality_federation_builders_room
+		room = no_video_feed_room
 	}
 	location = event_target:flusionhome
 	immediate = {
