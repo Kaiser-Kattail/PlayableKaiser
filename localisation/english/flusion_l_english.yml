@@ -407,7 +407,7 @@
  tr_flusion_adopt:0 "Flusiocentrism Traditions"
  tr_flusion_adopt_effect: "Provides §G+50%§! §YBuild Speed§! and §YDecision Speed§! on §YFlusion§!."
  tr_flusion_finish:0 "Flusiocentrism Traditions Finished"
- tr_flusion_finish_effect: "Our colonies suffer §Rstability penalties§! if they have more than 50% of §YFlusion's§! population!"
+ tr_flusion_finish_effect: "Unlocks every Katzen tech as a research option.\nUnlocks the §YFlusio-Arcology§!.\nOur colonies suffer §Rstability penalties§! if they have more than 50% of §YFlusion's§! population!"
  tr_work_arrangements:0 "Work Arrangements"
  tr_work_arrangements_delayed:0 "By carefully managing our empire, we can select individuals or entire populations to travel to Flusion under the guise of wanting work rather than state-mandated movement."
  tr_work_arrangements_effect:0 "All colonies but §YFlusion§! receive §Y+20%§! Emmigration Push.\nUnlocks the §YFlusionian Migration§! policy."
