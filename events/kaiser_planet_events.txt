@@ -71,7 +71,10 @@ situation_event = {
 	immediate = {
 		owner = {
 			event_target:doughland = {
-				every_megastructure = {
+				every_system_megastructure = {
+					limit = {
+						is_megastructure_type = kaiser_planet_0
+					}
 					delete_megastructure = this
 				}
 			}
@@ -94,7 +97,10 @@ situation_event = {
 	immediate = {
 		owner = {
 			event_target:doughland = {
-				every_megastructure = {
+				every_system_megastructure = {
+					limit = {
+						is_megastructure_type = kaiser_planet_1
+					}
 					delete_megastructure = this
 				}
 			}
@@ -117,15 +123,18 @@ situation_event = {
 	immediate = {
 		owner = {
 			event_target:doughland = {
-				every_megastructure = {
+				every_system_megastructure = {
+					limit = {
+						is_megastructure_type = kaiser_planet_2
+					}
 					delete_megastructure = this
 				}
-				solar_system = {
-					spawn_megastructure = {
-						type = kaiser_planet_3
-						planet = event_target:doughland
-						owner = event_target:katzenartig
-					}
+			}
+			solar_system = {
+				spawn_megastructure = {
+					type = kaiser_planet_3
+					planet = event_target:doughland
+					owner = event_target:katzenartig
 				}
 			}
 		}
@@ -147,8 +156,11 @@ situation_event = {
 					id = kaiser_war_planet.2
 				}
 				event_target:doughland = {
-					every_megastructure = {
-						remove_megastructure = this
+					every_system_megastructure = {
+						limit = {
+							is_megastructure_type = kaiser_planet_3
+						}
+						delete_megastructure = this
 					}
 					remove_planet = yes
 				}

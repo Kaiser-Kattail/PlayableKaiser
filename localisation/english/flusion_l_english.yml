@@ -90,6 +90,7 @@
     d_symbyland_battlefield_desc:0 "The Rapturian War saw untold destruction by copious atomic bombardment. While most of the radiation has now dissipated, large swathes of Symbyland remain uninhabitable, but these areas can be scavenged for valuable leftover fissile materials."
     d_symbyland_power:0 "Repurposed Nuclear Power Plants"
     d_symbyland_power_desc:0 "Entire fields of nuclear power plants can be powered by re-using leftover fissile material from the Rapturian War."
+
    
     d_katzen_mineral_dam:0 "Katzen Mining Dams"
     d_katzen_mineral_dam_desc:0 "A series of dams that allow for the excavation of the seabed, which increases the mineral output of this world."
@@ -407,7 +408,7 @@
  tr_flusion_adopt:0 "Flusiocentrism Traditions"
  tr_flusion_adopt_effect: "Provides §G+50%§! §YBuild Speed§! and §YDecision Speed§! on §YFlusion§!."
  tr_flusion_finish:0 "Flusiocentrism Traditions Finished"
- tr_flusion_finish_effect: "Our colonies suffer §Rstability penalties§! if they have more than 50% of §YFlusion's§! population!"
+ tr_flusion_finish_effect: "Unlocks every Katzen tech as a research option.\nUnlocks the §YFlusio-Arcology§!.\nOur colonies suffer §Rstability penalties§! if they have more than 50% of §YFlusion's§! population!"
  tr_work_arrangements:0 "Work Arrangements"
  tr_work_arrangements_delayed:0 "By carefully managing our empire, we can select individuals or entire populations to travel to Flusion under the guise of wanting work rather than state-mandated movement."
  tr_work_arrangements_effect:0 "All colonies but §YFlusion§! receive §Y+20%§! Emmigration Push.\nUnlocks the §YFlusionian Migration§! policy."

@@ -57,7 +57,7 @@ katzen_panzer = { #Destroyerish, designed to conduct Blitzkrieg and overwhelm en
 	rotation_speed = 0.60
 	collision_radius = 3.0
 	max_hitpoints = 500
-	base_buildtime = @corvette_build_time
+	base_buildtime = @destroyer_build_time
 	potential_country = {
 		has_origin = origin_katzen
 	}
@@ -163,6 +163,7 @@ katzen_submarine = {
 	rotation_speed = 0.2
 	collision_radius = 3.5
 	max_hitpoints = 500
+	build_time = @destroyer_build_time
 	modifier = {
 		ship_evasion_add = 100
 		ships_upkeep_mult = -2

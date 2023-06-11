@@ -69,5 +69,6 @@ agenda_project_celestia = {
 		country_event = {
 			id = kaiser_war_planet.8 days = 2
 		}
+		give_technology = { tech_kaiser_planet }
 	}
 }

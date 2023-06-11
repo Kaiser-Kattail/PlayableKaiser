@@ -195,6 +195,7 @@ country_event = {
 				add_deposit = d_manglarian_junkyard
 				add_deposit = d_solakian_factory
 				add_deposit = d_meowriana_trench
+				add_deposit = d_altarian_jungle
 				player_flusion_liberated_solak = yes
 				while = {
 					count = 5
@@ -1286,7 +1287,6 @@ country_event = {
 				destroy_situation = this
 			}
 			event_target:playerflusion = {
-				add_deposit = d_altarian_jungle
 				add_deposit = d_zousa_megalopolis
 				player_flusion_liberated_zousa = yes
 				while = {
