@@ -757,7 +757,7 @@ guiTypes = {
 
 			listboxType = {
 				name = "option_list"
-				position = { x = 460 y = -288 }
+				position = { x = 485 y = -297 }
 				size = { x = 250 y = 60 }
 				spacing = 1
 				scrollbartype = ""
@@ -768,10 +768,10 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "alien_message"
-			font = "cg_30b"
-			position = { x = 469 y = 790 }		 # HIDDEN
-			maxWidth = 210
-			maxHeight = 100
+			font = "malgun_goth_24"
+			position = { x = 422 y = 767 }		 # HIDDEN
+			maxWidth = 300
+			maxHeight = 150
 			format = center
 			scrollbartype = "standardtext_slider"
 		}
