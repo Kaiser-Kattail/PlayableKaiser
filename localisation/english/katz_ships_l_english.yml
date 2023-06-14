@@ -132,8 +132,11 @@
 	KATZEN_COMBAT_COMPUTER_ARTILLERY_ADVANCED: "Advanced Artillery Tactics"
 	KATZEN_COMBAT_COMPUTER_CARRIER_BASIC: "Basic Carrier Tactics"
 	KATZEN_COMBAT_COMPUTER_CARRIER_ADVANCED: "Advanced Carrier Tactics"
- 	SUBMARINE_COMPUTER: "Basic U-boot Tactics"
-	SUBMARINE_COMPUTER_ADVANCED: "Advanced U-boot Tactics"
+	SUBMARINE_COMPUTER:0 "Unterraumboot Targeting Computer"
+  SUBMARINE_COMPUTER_DESC:0 "The Unterraumboot will stay at extreme range (§Y500§!) range and fire its torpedoes at distant targets."
+
+  SUBMARINE_MISSILE:0 "Unterraumtorpedo"
+  SUBMARINE_MISSILE_DESC:0 "These missiles have extremely long range and are designed to be carried by Katzen subspace submarines, enabling them to hit distant targets with great."
 
 	KATDESTROYER_SHIP_THRUSTER_1: "Chemical Thrusters"
 	KATDESTROYER_SHIP_THRUSTER_2: "Ion Thrusters"
