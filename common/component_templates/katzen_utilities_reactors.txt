@@ -133,7 +133,7 @@ utility_component_template = {
 	upgrades_to = "KATDESTROYER_FUSION_REACTOR"
 
 	ai_weight = {
-		weight = 0
+		weight = 1
 	}
 }
 
@@ -160,7 +160,7 @@ utility_component_template = {
 	upgrades_to = "KATCRUISER_FUSION_REACTOR"
 
 	ai_weight = {
-		weight = 0
+		weight = 1
 	}
 }
 
@@ -187,7 +187,7 @@ utility_component_template = {
 	upgrades_to = "KATTITAN_FUSION_REACTOR"
 
 	ai_weight = {
-		weight = 0
+		weight = 1
 	}
 }
 
@@ -215,7 +215,7 @@ utility_component_template = {
 	upgrades_to = "KATSUB_FUSION_REACTOR"
 
 	ai_weight = {
-		weight = 0
+		weight = 1
 	}
 }
 
@@ -246,7 +246,7 @@ utility_component_template = {
 	upgrades_to = "KATDESTROYER_COLD_FUSION_REACTOR"
 
 	ai_weight = {
-		weight = 0
+		weight = 2
 	}
 }
 
@@ -273,7 +273,7 @@ utility_component_template = {
 	upgrades_to = "KATCRUISER_COLD_FUSION_REACTOR"
 
 	ai_weight = {
-		weight = 0
+		weight = 2
 	}
 }
 
@@ -300,7 +300,7 @@ utility_component_template = {
 	upgrades_to = "KATSUB_COLD_FUSION_REACTOR"
 
 	ai_weight = {
-		weight = 0
+		weight = 2
 	}
 }
 
@@ -327,7 +327,7 @@ utility_component_template = {
 	upgrades_to = "KATTITAN_COLD_FUSION_REACTOR"
 
 	ai_weight = {
-		weight = 0
+		weight = 2
 	}
 }
 
@@ -361,7 +361,7 @@ utility_component_template = {
 	upgrades_to = "KATDESTROYER_ANTIMATTER_REACTOR"
 
 	ai_weight = {
-		weight = 0
+		weight = 3
 	}
 }
 
@@ -388,7 +388,7 @@ utility_component_template = {
 	upgrades_to = "KATCRUISER_ANTIMATTER_REACTOR"
 
 	ai_weight = {
-		weight = 0
+		weight = 3
 	}
 }
 
@@ -415,7 +415,7 @@ utility_component_template = {
 	upgrades_to = "KATSUB_ANTIMATTER_REACTOR"
 
 	ai_weight = {
-		weight = 0
+		weight = 3
 	}
 }
 
@@ -442,7 +442,7 @@ utility_component_template = {
 	upgrades_to = "KATTITAN_ANTIMATTER_REACTOR"
 
 	ai_weight = {
-		weight = 0
+		weight = 3
 	}
 }
 
@@ -473,7 +473,7 @@ utility_component_template = {
 	upgrades_to = "KATDESTROYER_ZERO_POINT_REACTOR"
 
 	ai_weight = {
-		weight = 0
+		weight = 4
 	}
 }
 
@@ -500,7 +500,7 @@ utility_component_template = {
 	upgrades_to = "KATCRUISER_ZERO_POINT_REACTOR"
 
 	ai_weight = {
-		weight = 0
+		weight = 4
 	}
 }
 
@@ -527,7 +527,7 @@ utility_component_template = {
 	upgrades_to = "KATSUB_ZERO_POINT_REACTOR"
 
 	ai_weight = {
-		weight = 0
+		weight = 4
 	}
 }
 
@@ -554,7 +554,7 @@ utility_component_template = {
 	upgrades_to = "KATTITAN_ZERO_POINT_REACTOR"
 
 	ai_weight = {
-		weight = 0
+		weight = 4
 	}
 }
 
@@ -586,7 +586,7 @@ utility_component_template = {
 	upgrades_to = "KATDESTROYER_DARK_MATTER_REACTOR"
 
 	ai_weight = {
-		weight = 0
+		weight = 5
 	}
 }
 
@@ -613,7 +613,7 @@ utility_component_template = {
 	upgrades_to = "KATCRUISER_DARK_MATTER_REACTOR"
 
 	ai_weight = {
-		weight = 0
+		weight = 5
 	}
 }
 
@@ -640,7 +640,7 @@ utility_component_template = {
 	upgrades_to = "KATSUB_DARK_MATTER_REACTOR"
 
 	ai_weight = {
-		weight = 0
+		weight = 5
 	}
 }
 
@@ -668,7 +668,7 @@ utility_component_template = {
 	upgrades_to = "KATTITAN_DARK_MATTER_REACTOR"
 
 	ai_weight = {
-		weight = 0
+		weight = 5
 	}
 }
 
@@ -699,7 +699,11 @@ utility_component_template = {
 	size_restriction = { katzen_panzer }
 
 	ai_weight = {
-		weight = 0
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
 	}
 }
 
@@ -788,6 +792,10 @@ utility_component_template = {
 	size_restriction = { katzen_cruiser }
 
 	ai_weight = {
-		weight = 0
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
 	}
 }
