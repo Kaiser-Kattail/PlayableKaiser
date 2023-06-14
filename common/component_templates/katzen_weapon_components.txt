@@ -46,7 +46,7 @@ weapon_component_template = {
 	key = "SUBMARINE_MISSILE"
 	size = torpedo
 	entity = "invisible_turret_entity"
-	icon = "GFX_ship_part_torpedo_2"
+	icon = "GFX_ship_part_torpedo_3"
 	icon_frame = 1
 	type = missile
 	component_set = "SUBMARINE_MISSILE"
@@ -54,7 +54,7 @@ weapon_component_template = {
 	tags = { weapon_type_explosive g_slot }
 	size_restriction = { katzen_submarine }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
-	ai_tag_weight = 0
+	ai_tag_weight = 100
 
 	firing_arc = 70
 
