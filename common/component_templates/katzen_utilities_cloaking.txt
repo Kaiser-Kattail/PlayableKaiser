@@ -1,3 +1,9 @@
+@very_low_strength	= 1
+@low_strength		= 2 
+@medium_strength	= 3
+@high_strength		= 4
+@very_high_strength	= 5
+
 utility_component_template = {
 	key = "SUBMARINE_CLOAKING_1"
 	size = aux

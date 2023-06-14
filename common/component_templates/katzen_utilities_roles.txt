@@ -384,3 +384,103 @@ utility_component_template = {
 	}
 
 }
+
+utility_component_template = {
+	key = "SUBMARINE_COMPUTER"
+	size = small
+	icon = "GFX_ship_part_computer_swarm_basic"
+	icon_frame = 1
+	power = @power1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost1
+		}
+	}
+
+	class_restriction = { shipclass_military }
+	size_restriction = { katzen_submarine }
+	component_set = "katzen_combat_computers"
+	ship_behavior = "giga_katzen_submarine"
+	prerequisites = { "tech_combat_computers_1" "tech_torpedoes_1" }
+	upgrades_to = "SUBMARINE_COMPUTER_ADVANCED"
+	ai_tags = { explosive explosive_stealth }
+	ai_tag_weight = 0
+
+	modifier = {
+		weapon_type_explosive_weapon_damage_mult = 0.05
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "SUBMARINE_COMPUTER_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_swarm_advanced"
+	icon_frame = 1
+	power = @power2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost2
+		}
+	}
+	class_restriction = { shipclass_military }
+	size_restriction = { katzen_submarine }
+	component_set = "katzen_combat_computers"
+	ship_behavior = "torpedo"
+	prerequisites = { "tech_combat_computers_2" "tech_torpedoes_1" }
+	upgrades_to = "SUBMARINE_COMPUTER_SAPIENT"
+	ai_tags = { explosive explosive_stealth }
+	ai_tag_weight = 0
+
+	modifier = {
+		weapon_type_explosive_weapon_damage_mult = 0.10
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "SUBMARINE_COMPUTER_SAPIENT"
+	size = small
+	icon = "GFX_ship_part_computer_swarm_sapient"
+	icon_frame = 1
+	power = @power3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost3
+		}
+	}
+	class_restriction = { shipclass_military }
+	size_restriction = { katzen_submarine }
+	component_set = "katzen_combat_computers"
+	ship_behavior = "torpedo"
+	prerequisites = { "tech_combat_computers_3" "tech_torpedoes_1" }
+	ai_tags = { explosive explosive_stealth }
+	ai_tag_weight = 0
+
+	modifier = {
+		weapon_type_explosive_weapon_damage_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = ghost_signal_5_flag
+				has_global_flag = ghost_signal_4_flag
+				has_global_flag = ghost_signal_3_flag
+				has_global_flag = ghost_signal_2_flag
+				has_global_flag = ghost_signal_1_flag
+			}
+		}
+	}
+}
