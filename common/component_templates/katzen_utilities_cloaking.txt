@@ -59,12 +59,7 @@ utility_component_template = {
 	}
 
 	ai_weight = {
-		weight = @basic_cloaking_weight
-		modifier = {
-			factor = 0
-			no_resource_for_component = { RESOURCE = exotic_gases }
-		}
-		inline_script = ship_components/weights/roles_cloaking_devices
+		weight = 31
 	}
 }
 
@@ -124,16 +119,7 @@ utility_component_template = {
 		energy_torpedoes_stealth
 	}
 	ai_weight = {
-		weight = @advanced_cloaking_weight
-		modifier = {
-			factor = 0
-			no_resource_for_component = { RESOURCE = exotic_gases }
-		}
-		modifier = {
-			factor = 0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
-		inline_script = ship_components/weights/roles_cloaking_devices
+		weight = 32
 	}
 }
 
@@ -191,16 +177,7 @@ utility_component_template = {
 		energy_torpedoes_stealth
 	}
 	ai_weight = {
-		weight = @elite_cloaking_weight
-		modifier = {
-			factor = 0
-			no_resource_for_component = { RESOURCE = exotic_gases }
-		}
-		modifier = {
-			factor = 0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
-		inline_script = ship_components/weights/roles_cloaking_devices
+		weight = 33
 	}
 }
 
@@ -258,16 +235,7 @@ utility_component_template = {
 		energy_torpedoes_stealth
 	}
 	ai_weight = {
-		weight = @dark_matter_cloaking_weight
-		modifier = {
-			factor = 0
-			no_resource_for_component = { RESOURCE = exotic_gases }
-		}
-		modifier = {
-			factor = 0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
-		}
-		inline_script = ship_components/weights/roles_cloaking_devices
+		weight = 34
 	}
 }
 
@@ -326,15 +294,6 @@ utility_component_template = {
 		energy_torpedoes_stealth
 	}
 	ai_weight = {
-		weight = @psi_cloaking_weight
-		modifier = {
-			factor = 0
-			no_resource_for_component = { RESOURCE = sr_zro }
-		}
-		modifier = {
-			factor = 0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
-		inline_script = ship_components/weights/roles_cloaking_devices
+		weight = 35
 	}
 }
