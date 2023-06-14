@@ -54,7 +54,7 @@ weapon_component_template = {
 	tags = { weapon_type_explosive g_slot }
 	size_restriction = { katzen_submarine }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
-	ai_tag_weight = 100
+	ai_tag_weight = 999
 
 	firing_arc = 70
 
@@ -74,4 +74,15 @@ weapon_component_template = {
 	armor_damage = 1.50
 	missile_retarget_range = 100
 	size_damage_factor = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @50
+		}
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
 }
