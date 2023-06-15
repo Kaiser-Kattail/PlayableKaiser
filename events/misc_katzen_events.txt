@@ -444,3 +444,29 @@ country_event = {
 		}
 	}
 }
+
+#Aeternum Insights
+country_event = {
+	id = misc.11
+	is_triggered_only = yes
+	title = misc.11.title
+	desc = misc.11.desc
+	picture = GFX_evt_legendary_leader
+	show_sound = event_factions
+	event_window_type = leader_story
+
+	picture_event_data = {
+		portrait = root.owner.ruler
+		room = root.owner
+	}
+
+	option = {
+		name = misc.11.a
+		custom_tooltip = misc.11.a.tt
+		hidden_effect = {
+			increase_aeternite_intel = yes
+			increase_aeternite_intel = yes
+			increase_aeternite_intel = yes
+		}
+	}
+}

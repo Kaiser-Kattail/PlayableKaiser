@@ -503,3 +503,8 @@
  pvz_cattail_desc:0 "Changes the Kaiser's appearance to his classic form."
  derega_kaiser:0 "Canon Kaiser"
  derega_kaiser_desc:0 "Changes the Kaiser's appearance to his more 'normal' form."
+
+    misc.11.title:0 "Aeternite Knowledge"
+    misc.11.desc:0 "§RGRRR ANGRY NO LOC§!"
+    misc.11.a:0 "Excellent"
+    misc.11.a.tt:0 "We gain §Y3§! Aeternite Intel"
