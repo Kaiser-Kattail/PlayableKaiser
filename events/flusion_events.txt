@@ -368,6 +368,9 @@ country_event = {
 			add_trait = leader_trait_intimidator
 			add_trait = subclass_admiral_strategist
 			set_leader_flag = kaiser_kattail
+			set_leader_flag = legendary_leader
+			set_leader_flag = immune_to_negative_traits
+			set_leader_flag = leader_death_events_blocked
 			save_global_event_target_as = kaiser_kattail
 		}
 
