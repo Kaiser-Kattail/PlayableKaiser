@@ -509,3 +509,8 @@
     misc.11.desc:0 "§RGRRR ANGRY NO LOC§!"
     misc.11.a:0 "Excellent"
     misc.11.a.tt:0 "We gain §Y3§! Aeternite Intel"
+
+    tech_kaiser_planet_sections:0 "Katzen Superscale Celestial Body Weaponization"
+	tech_kaiser_planet_sections_desc:0 "Innovations in Katzen science has led us here, to the one thing we all thought impossible. Something stronger than the Kaiser Moon. Yet here it is, in all its glory."
+	allow_kaiser_planet_sections:0 "§HUnlocks Section:§! Kaiser Behemoth Planetcraft Sections"
+	desc_kaiser_planet_sections:0 "A truly insane engineering project, based on Katzen technologies. Like the Kaiser Moon, the Kaiser Planetcraft boasts a massive railgun instead of a laser array, and is equipped with a vast array of kinetic and explosive weapons. These new section configurations can be applied to any new or existing Behemoth Planetcrafts."
