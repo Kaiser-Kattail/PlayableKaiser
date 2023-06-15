@@ -18,3 +18,10 @@ component_set = {
 	icon = "GFX_ship_part_swarmer_missile_2"
 	icon_frame = 1
 }
+
+component_set = {
+	key = "SUBMARINE_MISSILE"
+
+	icon = "GFX_ship_part_torpedo_3"
+	icon_frame = 1
+}

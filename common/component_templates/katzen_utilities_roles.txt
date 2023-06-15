@@ -384,3 +384,38 @@ utility_component_template = {
 	}
 
 }
+
+######################
+# 'SUBMARINE' COMPUTERS #
+######################
+
+utility_component_template = {
+	key = "SUBMARINE_COMPUTER"
+	size = small
+	icon = "GFX_ship_part_computer_swarm_basic"
+	icon_frame = 1
+	power = @power1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost1
+		}
+	}
+
+	class_restriction = { shipclass_military }
+	size_restriction = { katzen_submarine }
+	component_set = "katzen_combat_computers"
+	ship_behavior = "giga_katzen_submarine"
+	prerequisites = { "tech_combat_computers_1" "tech_torpedoes_1" }
+	upgrades_to = "SUBMARINE_COMPUTER_ADVANCED"
+	ai_tags = { explosive explosive_stealth }
+	ai_tag_weight = 0
+
+	modifier = {
+		weapon_type_explosive_weapon_damage_mult = 0.05
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}

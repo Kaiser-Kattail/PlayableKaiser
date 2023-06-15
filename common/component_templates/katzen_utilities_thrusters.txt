@@ -102,7 +102,7 @@ utility_component_template = {
 	upgrades_to = "KATDESTROYER_SHIP_THRUSTER_2"
 
 	ai_weight = {
-		weight = 0
+		weight = 1
 	}
 }
 
@@ -128,7 +128,7 @@ utility_component_template = {
 	upgrades_to = "KATCRUISER_SHIP_THRUSTER_2"
 
 	ai_weight = {
-		weight = 0
+		weight = 1
 	}
 }
 
@@ -155,7 +155,7 @@ utility_component_template = {
 	upgrades_to = "KATTITAN_SHIP_THRUSTER_2"
 
 	ai_weight = {
-		weight = 0
+		weight = 1
 	}
 }
 
@@ -185,7 +185,7 @@ utility_component_template = {
 	upgrades_to = "KATDESTROYER_SHIP_THRUSTER_3"
 
 	ai_weight = {
-		weight = 0
+		weight = 2
 	}
 }
 
@@ -213,7 +213,7 @@ utility_component_template = {
 	upgrades_to = "KATCRUISER_SHIP_THRUSTER_3"
 
 	ai_weight = {
-		weight = 0
+		weight = 2
 	}
 }
 
@@ -237,11 +237,11 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_2" }
 	component_set = "katzen_thruster_components"
-	size_restriction = { titan }
+	size_restriction = { katzen_cruiser }
 	upgrades_to = "KATTITAN_SHIP_THRUSTER_3"
 
 	ai_weight = {
-		weight = 0
+		weight = 2
 	}
 }
 
@@ -268,7 +268,7 @@ utility_component_template = {
 	upgrades_to = "KATDESTROYER_SHIP_THRUSTER_4"
 
 	ai_weight = {
-		weight = 0
+		weight = 3
 	}
 }
 
@@ -295,7 +295,7 @@ utility_component_template = {
 	upgrades_to = "KATCRUISER_SHIP_THRUSTER_4"
 
 	ai_weight = {
-		weight = 0
+		weight = 3
 	}
 }
 
@@ -322,7 +322,7 @@ utility_component_template = {
 	upgrades_to = "KATTITAN_SHIP_THRUSTER_4"
 
 	ai_weight = {
-		weight = 0
+		weight = 3
 	}
 }
 
@@ -349,7 +349,7 @@ utility_component_template = {
 	upgrades_to = "KATDESTROYER_SHIP_THRUSTER_5"
 
 	ai_weight = {
-		weight = 0
+		weight = 4
 	}
 }
 
@@ -403,7 +403,7 @@ utility_component_template = {
 	upgrades_to = "KATTITAN_SHIP_THRUSTER_5"
 
 	ai_weight = {
-		weight = 0
+		weight = 4
 	}
 }
 
@@ -430,7 +430,7 @@ utility_component_template = {
 	size_restriction = { katzen_panzer }
 
 	ai_weight = {
-		weight = 0
+		weight = 5
 	}
 }
 
@@ -457,7 +457,7 @@ utility_component_template = {
 	size_restriction = { katzen_bomber katzen_submarine }
 
 	ai_weight = {
-		weight = 0
+		weight = 5
 	}
 }
 
@@ -484,6 +484,6 @@ utility_component_template = {
 	size_restriction = { katzen_cruiser }
 
 	ai_weight = {
-		weight = 0
+		weight = 5
 	}
 }

@@ -6,6 +6,8 @@ katzen_cruiser = { #Battleship-Titan, designed to "sit back" and assist the flee
 	collision_radius = 7
 	max_hitpoints = 5000
 	base_buildtime = @battleship_build_time
+	can_have_federation_design = no
+	enable_default_design = yes
 	potential_country = {
 		has_origin = origin_katzen
 	}
@@ -25,7 +27,7 @@ katzen_cruiser = { #Battleship-Titan, designed to "sit back" and assist the flee
 	num_target_locators = 4
 	is_space_station = no
 	icon = ship_size_military_8
-
+	
 	combat_disengage_chance = 1.25
 
 	resources = {
@@ -58,6 +60,8 @@ katzen_panzer = { #Destroyerish, designed to conduct Blitzkrieg and overwhelm en
 	collision_radius = 3.0
 	max_hitpoints = 500
 	base_buildtime = @destroyer_build_time
+	can_have_federation_design = no
+	enable_default_design = yes
 	potential_country = {
 		has_origin = origin_katzen
 	}
@@ -120,11 +124,11 @@ katzen_bomber = { #Cruiser, bomber designed to assault enemy worlds and fortific
 	icon = ship_size_military_4
 	base_buildtime = @cruiser_build_time
 	can_have_federation_design = no
-	enable_default_design = no	#if yes, countries will have an auto-generated design at start
 	enable_3dview_in_ship_browser = no #if yes, ship design will have a 3d view in the ship browser
 
 	default_behavior = line
 
+	enable_default_design = yes
 	potential_country = {
 		has_origin = origin_katzen
 	}
@@ -182,6 +186,8 @@ katzen_submarine = {
 
 	combat_disengage_chance = 100
 
+	can_have_federation_design = no
+	enable_default_design = yes
 	potential_country = {
 		has_origin = origin_katzen
 	}

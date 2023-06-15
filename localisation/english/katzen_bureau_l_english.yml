@@ -2,91 +2,94 @@
 
     kaiser_bureau.0.name:0 "The Katzenvereinigungsbüro"
     kaiser_bureau.0.desc:0 "Our advisors have alerted us of a newly formed bureau to facilitate the §YUnification of Flusion§!. It is headed by the venerable §YDouclaw MacCathur§!. He expects great things from the inevitable unification."
-    kaiser_bureau.0.a:0 "On Screen"
+    kaiser_bureau.0.a:0 "On screen"
 
     kaiser_bureau.1.name:0 "Douclaw MacCathur"
-    kaiser_bureau.1.desc:0 "Great Kaiser, I expect our unification to be swift and effortless. Let us teach these fools why they should learn to love the Imperium."
+    kaiser_bureau.1.desc:0 "Oh, most esteemed Kaiser Kattail. Your faithful High Command and I have finished drawing up a myriad of war plans and operations to spearhead our upcoming planetaru unification campaigns. We are all most eagers to see them put into action under your guidance."
     kaiser_bureau.1.a:0 "On with it."
     kaiser_bureau.1.a.tooltip:0 "The Flusionian Unification screen will be shown."
 
     kaiser_bureau_tooltip:0 "Katzenvereinigungsbüro"
 
-    kaiser_conquest_mech_desc:0 "This screen allows you manage §YConquests§! on §EFlusion§!. Each area has a level of §YKatzen Grasp§! which changes as we go on §YConquests§!.\n\nDuring a §YConquest§!, a situation will start. The situation approach determines the monthly progress and cost of §YStrikes§!. §YStrikes§! can be performed through a planetary decision. Due to limted resources and manpower, we cannot perforom specialized §YStrikes§! when engaging in more than one §YConquest§!. Once a stage is finished we will attack a more centralized force, represented by an invasion on §EFlusion§!. Finish the situation to capture a region. You may need to capture one region before you capture another.\n\nYou can begin a by §YConquest§! clicking on a nation and declaring war."
+    kaiser_conquest_mech_desc:0 "This screen allows you manage §YConquests§! on §EFlusion§!. Each area has a level of §YKatzen Grasp§! which changes as we go on §YConquests§!.\n\nDuring a §YConquest§!, a situation will start. The situation approach determines the monthly progress and cost of §YStrikes§!. §YStrikes§! can be performed through a planetary decision. Due to limted resources and manpower, we cannot perform specialized §YStrikes§! when engaging in more than one §YConquest§!. Once a stage is finished we will attack a more centralized force, represented by an invasion on §EFlusion§!. Finish the situation to capture a region. You may need to capture one region before you capture another.\n\nYou can begin a by §YConquest§! clicking on a nation and declaring war."
 
-    kaiser_bureau.douclaw.low.a:0 "We must teach these misguided nations about the wonders of unification."
-    kaiser_bureau.douclaw.low.b:0 "\nThey shall submit eventually."
-    kaiser_bureau.douclaw.low.c:0 "\n§RLORIS STOP BALLING ON THE WAR TABLE!!§!"
-    kaiser_bureau.douclaw.low.d:0 "\nThe unification of Flusion is inevitable."
+    kaiser_bureau.douclaw.low.a:0 "We must teach this sadly misguided world about the wonders of unification."
+    kaiser_bureau.douclaw.low.b:0 "I dearly hope that the nations of Flusion one day realize the greatness that we can bring to them."
+    kaiser_bureau.douclaw.low.c:0 "\n§RLORIS! STOP BALLING ON THE WAR TABLE!!§!"
+    kaiser_bureau.douclaw.low.d:0 "The unification of Flusion is inevitable, and we must be the ones to seize this opportunity."
 
     kaiser_bureau.douclaw.mid.a:0 "\nA great start to our unification."
-    kaiser_bureau.douclaw.mid.b:0 "\nThink of the possibilities once we are united."
+    kaiser_bureau.douclaw.mid.b:0 "\nThink of the possibilities once we are united! Peace, prosperity and greatness for all!"
     kaiser_bureau.douclaw.mid.c:0 "\nI believe a bit more land is needed."
-    kaiser_bureau.douclaw.mid.d:0 "\nScrew the Solakians."
+    kaiser_bureau.douclaw.mid.d:0 "\nScrew the Solakians. Metaphorically, of course."
 
-    kaiser_bureau.douclaw.high.a:0 "\nWe are almost there."
-    kaiser_bureau.douclaw.high.b:0 "\nNo nation will stop us now!"
+    kaiser_bureau.douclaw.high.a:0 "\nWe are almost there... "
+    kaiser_bureau.douclaw.high.b:0 "\nNo nation will stop us now! And then, we shall take to the stars!"
     kaiser_bureau.douclaw.high.c:0 "\nOh, the dams we will make..."
     kaiser_bureau.douclaw.high.d:0 "\nFirst Flusion, then the galaxy!"
 
-    kaiser_bureau.douclaw.done:0 "\nThe Unification is complete!"
+    kaiser_bureau.douclaw.done:0 "\nThe Unification is complete! All of Flusion at last proudly stands united under a single, eternal banner!"
 
-    invade_nearby_nations:0 "We must invade nearby nations first!"
+    invade_nearby_nations:0 "We cannot invade a nation which we do not directly neighbor."
     multiple_conquests_active:0 "We cannot launch a strike when engaging in more than one conquest!"
 
 #    _con_0_tooltip:0 "§§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£  Pops\n\n§YFEATURES:§!\n\n§H$$§!"
 #    _con_1_tooltip:0 "§§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£  Pops\n\n§YFEATURES:§!\n\n§H$$§!"
 #    _con_2_tooltip:0 "§B§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YPOPULATION:§! £pop£  Pops\n\n§YFEATURES:§!\n\n§H$$§!"
 
-    katzen_con_0_tooltip:0 "§BCat Kingdom§!\n\n§HCurent Katzen Grasp: §!§GExtreme§!\n\nOur homeland, ruled by the fierce §HKaiser Kattail§! himself.\n\n§YPOPULATION:§! £pop£ 10 Pops\n\n§YFEATURES:§!\n\n§HKatown Megalopolis§!\n£mod_planet_max_districts_add£ §G+1§! Max Districts\n\n§HKatown Government Palace§!\n£stability£ §G+5§! Stability\n£unity£ §G+25§! Unity\n\n§HKatown Megareactor§!\n£mod_job_technician_add£ §G+2§! Technician Jobs\n£mod_energy_produces_add£ §G+1§! §YEnergy Credits§! from £job_technician£ Technician Jobs"
+    katzen_con_0_tooltip:0 "§BKatzen Herzlands§!\n\nA land of panzers and wonders, the Katzen Herzlands are nothing less than our proud homeland, ruled by the fierce §HKaiser Kattail§! himself. Home to billions and growing, it must and shall become the beating heart of our ever-expanding empire.\n\n§HCurent Katzen Grasp: §!§GExtreme§!\n\n§YPOPULATION:§! £pop£ 10 Pops\n\n§YFEATURES:§!\n\n§HKatown Megalopolis§!\n£mod_planet_max_districts_add£ §G+1§! Max Districts\n\n§HKatown Government Palace§!\n£stability£ §G+5§! Stability\n£unity£ §G+25§! Unity\n\n§HKatown Megareactor§!\n£mod_job_technician_add£ §G+2§! Technician Jobs\n£mod_energy_produces_add£ §G+1§! §YEnergy Credits§! from £job_technician£ Technician Jobs"
 
     laurn_con_0_tooltip:0 "§YLaurandar§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n§HLush Laurnaise Shores§!\n£mod_planet_amenities_add£ §G+10§! Amenities"
     laurn_con_1_tooltip:0 "§YLaurandar§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n§HLush Laurnaise Shores§!\n£mod_planet_amenities_add£ §G+10§! Amenities"
-    laurn_con_2_tooltip:0 "§BLaurandar§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n§HLush Laurnaise Shores§!\n£mod_planet_amenities_add£ §G+10§! Amenities"
+    laurn_con_2_tooltip:0 "§BLaurendaar§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§HLush Laurnaise Shores§!\n£mod_planet_amenities_add£ §G+10§! Amenities"
 
     ezicania_con_0_tooltip:0 "§WEzicania Empire§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§HEzic Pastures§!\n£mod_district_farming_max£ §G+3§! Max Agriculture Districts\n\n§HMagnetic Puffy Point§!\n£mod_district_mining_max£ §G+1§! Max Mining Districts"
     ezicania_con_1_tooltip:0 "§WEzicania Empire§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§HEzic Pastures§!\n£mod_district_farming_max£ §G+3§! Max Agriculture Districts\n\n§HMagnetic Puffy Point§!\n£mod_district_mining_max£ §G+1§! Max Mining Districts"
-    ezicania_con_2_tooltip:0 "§BEzicania Empire§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§HEzic Pastures§!\n£mod_district_farming_max£ §G+3§! Max Agriculture Districts\n\n§HMagnetic Puffy Point§!\n£mod_district_mining_max£ §G+1§! Max Mining Districts"
+    ezicania_con_2_tooltip:0 "§BEzikanien§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§HEzic Pastures§!\n£mod_district_farming_max£ §G+3§! Max Agriculture Districts\n\n§HMagnetic Puffy Point§!\n£mod_district_mining_max£ §G+1§! Max Mining Districts"
 
     kronk_con_0_tooltip:0 "§PKronk§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 3 Pops\n\n§YFEATURES:§!\n\n§HGrand Kronk Quarry§!\n£mod_district_mining_max£ §G+5§! Max Mining Districts"
     kronk_con_1_tooltip:0 "§PKronk§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 3 Pops\n\n§YFEATURES:§!\n\n§HGrand Kronk Quarry§!\n£mod_district_mining_max£ §G+5§! Max Mining Districts"
-    kronk_con_2_tooltip:0 "§BKronk§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YPOPULATION:§! £pop£ 3 Pops\n\n§YFEATURES:§!\n\n§HGrand Kronk Quarry§!\n£mod_district_mining_max£ §G+5§! Max Mining Districts"
+    kronk_con_2_tooltip:0 "§BKrönkenstaat§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§HGrand Kronk Quarry§!\n£mod_district_mining_max£ §G+5§! Max Mining Districts"
 
     symbies_con_0_tooltip:0 "§RSymbyland§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n£blocker£ §HRapturian War Battlefields§!\n£energy£ §G+20§! Energy Credits\n£volatile_motes£ §G+3§! Volitile Motes"
     symbies_con_1_tooltip:0 "§RSymbyland§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n£blocker£ §HRapturian War Battlefields§!\n£energy£ §G+20§! Energy Credits\n£volatile_motes£ §G+3§! Volitile Motes"
-    symbies_con_2_tooltip:0 "§BSymbyland§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n£blocker£ §HRapturian War Battlefields§!\n£energy£ §G+20§! Energy Credits\n£volatile_motes£ §G+3§! Volitile Motes"
+    symbies_con_2_tooltip:0 "§BOst-Geschwollen§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n£blocker£ §HRapturian War Battlefields§!\n£energy£ §G+20§! Energy Credits\n£volatile_motes£ §G+3§! Volitile Motes"
 
-    yinja_con_0_tooltip:0 "§GYinja Republic§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 3 Pops\n\n§YFEATURES:§!\n\n§HYinjite Underwater Mines§!\n£mod_district_mining_max£ §G+2§! Max Mining Districts"
-    yinja_con_1_tooltip:0 "§GYinja Republic§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 3 Pops\n\n§YFEATURES:§!\n\n§HYinjite Underwater Mines§!\n£mod_district_mining_max£ §G+2§! Max Mining Districts"
-    yinja_con_2_tooltip:0 "§BYinja Republic§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YPOPULATION:§! £pop£ 3 Pops\n\n§YFEATURES:§!\n\n§HYinjite Underwater Mines§!\n£mod_district_mining_max£ §G+2§! Max Mining Districts"
+    yinja_con_0_tooltip:0 "§GYinjite Thalassocracy§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 3 Pops\n\n§YFEATURES:§!\n\n§HYinjite Underwater Mines§!\n£mod_district_mining_max£ §G+2§! Max Mining Districts"
+    yinja_con_1_tooltip:0 "§GYinjite Thalassocracy§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 3 Pops\n\n§YFEATURES:§!\n\n§HYinjite Underwater Mines§!\n£mod_district_mining_max£ §G+2§! Max Mining Districts"
+    yinja_con_2_tooltip:0 "§BYinjatz§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§HYinjite Underwater Mines§!\n£mod_district_mining_max£ §G+2§! Max Mining Districts"
 
     cookie_con_0_tooltip:0 "§TCookian Steppes§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 4 Pops\n\n§YFEATURES:§!\n\n§H$d_cookian_steppes_mining$§!\n£mod_district_mining_max£ §G+1§! Max Mining Districts"
     cookie_con_1_tooltip:0 "§TCookian Steppes§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 4 Pops\n\n§YFEATURES:§!\n\n§H$d_cookian_steppes_mining$§!\n£mod_district_mining_max£ §G+1§! Max Mining Districts"
-    cookie_con_2_tooltip:0 "§BCookian Steppes§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YPOPULATION:§! £pop£ 4 Pops\n\n§YFEATURES:§!\n\n§H$d_cookian_steppes_mining$§!\n£mod_district_mining_max£ §G+1§! Max Mining Districts"
+    cookie_con_2_tooltip:0 "§BLyuinstaat§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§H$d_cookian_steppes_mining$§!\n£mod_district_mining_max£ §G+1§! Max Mining Districts"
 
     solakians_con_0_tooltip:0 "§MSolakian Republic§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 5 Pops\n\n§YFEATURES:§!\n\n§H$d_altarian_jungle$§!\n\n§H$d_manglarian_junkyard$§!\n\n§H$d_solakian_factory$§!\n£consumer_goods£ §G+10§! Consumer Goods\n\n§H$d_meowriana_trench$§!"
     solakians_con_1_tooltip:0 "§MSolakian Republic§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 5 Pops\n\n§YFEATURES:§!\n\n§H$d_altarian_jungle$§!\n\n§H$d_manglarian_junkyard$§!\n\n§H$d_solakian_factory$§!\n£consumer_goods£ §G+10§! Consumer Goods\n\n§H$d_meowriana_trench$§!"
-    solakians_con_2_tooltip:0 "§BSolakian Republic§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YPOPULATION:§! £pop£ 5 Pops\n\n§YFEATURES:§!\n\n§H$d_altarian_jungle$§!\n\n§H$d_manglarian_junkyard$§!\n\n§H$d_solakian_factory$§!\n£consumer_goods£ §G+10§! Consumer Goods\n\n§H$d_meowriana_trench$§!"
+    solakians_con_2_tooltip:0 "§BSolakien§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§H$d_altarian_jungle$§!\n\n§H$d_manglarian_junkyard$§!\n\n§H$d_solakian_factory$§!\n£consumer_goods£ §G+10§! Consumer Goods\n\n§H$d_meowriana_trench$§!"
+    
 
-    ravkan_con_0_tooltip:0 "§HRavka§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n§H$d_ravaka_volcano$§!\n£mod_alloys_produces_mult£ §G+15%§! £alloys£ Alloys from £job_foundry£ Metallurgist Jobs\n£rare_crystals£ §G+3§! Rare Crystals"
-    ravkan_con_1_tooltip:0 "§HRavka§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n§H$d_ravaka_volcano$§!\n£mod_alloys_produces_mult£ §G+15%§! £alloys£ Alloys from £job_foundry£ Metallurgist Jobs\n£rare_crystals£ §G+3§! Rare Crystals"
-    ravkan_con_2_tooltip:0 "§BRavka§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n§H$d_ravaka_volcano$§!\n£mod_alloys_produces_mult£ §G+15%§! £alloys£ Alloys from £job_foundry£ Metallurgist Jobs\n£rare_crystals£ §G+3§! Rare Crystals"
+    ravkan_con_0_tooltip:0 "§HRavkan Commonwealth§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n§H$d_ravaka_volcano$§!\n£mod_alloys_produces_mult£ §G+15%§! £alloys£ Alloys from £job_foundry£ Metallurgist Jobs\n£rare_crystals£ §G+3§! Rare Crystals"
+    ravkan_con_1_tooltip:0 "§HRavkan Commonwealth§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n§H$d_ravaka_volcano$§!\n£mod_alloys_produces_mult£ §G+15%§! £alloys£ Alloys from £job_foundry£ Metallurgist Jobs\n£rare_crystals£ §G+3§! Rare Crystals"
+    ravkan_con_2_tooltip:0 "§BRavkanien§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§H$d_ravaka_volcano$§!\n£mod_alloys_produces_mult£ §G+15%§! £alloys£ Alloys from £job_foundry£ Metallurgist Jobs\n£rare_crystals£ §G+3§! Rare Crystals"
 
     zousans_con_0_tooltip:0 "§EZousa§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§H$d_zousa_megalopolis$§!\n£mod_country_society_tech_research_speed£ §G+30%§! Archaeostudies Research Speed\n£society_research£ §G+30§! Society Research\n£minor_artifacts£ §G+3§! Minor Artifacts"
     zousans_con_1_tooltip:0 "§EZousa§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§H$d_zousa_megalopolis$§!\n£mod_country_society_tech_research_speed£ §G+30%§! Archaeostudies Research Speed\n£society_research£ §G+30§! Society Research\n£minor_artifacts£ §G+3§! Minor Artifacts"
-    zousans_con_2_tooltip:0 "§BZousa§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§H$d_zousa_megalopolis$§!\n£mod_country_society_tech_research_speed£ §G+30%§! Archaeostudies Research Speed\n£society_research£ §G+30§! Society Research\n£minor_artifacts£ §G+3§! Minor Artifacts"
+    zousans_con_2_tooltip:0 "§BZousanien§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§H$d_zousa_megalopolis$§!\n£mod_country_society_tech_research_speed£ §G+30%§! Archaeostudies Research Speed\n£society_research£ §G+30§! Society Research\n£minor_artifacts£ §G+3§! Minor Artifacts"
 
-    droog_con_0_tooltip:0 "§HDroog§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§H$d_propanian_mines$§!\n£mod_district_mining_max£ §G+2§! Max Exotic Gas Extractors"
-    droog_con_1_tooltip:0 "§HDroog§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§H$d_propanian_mines$§!\n£mod_district_mining_max£ §G+2§! Max Exotic Gas Extractors"
-    droog_con_2_tooltip:0 "§BDroog§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§H$d_propanian_mines$§!\n£mod_district_mining_max£ §G+2§! Max Exotic Gas Extractors"
+
+    droog_con_0_tooltip:0 "§HDroogian Tribes§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§H$d_propanian_mines$§!\n£mod_district_mining_max£ §G+2§! Max Exotic Gas Extractors"
+    droog_con_1_tooltip:0 "§HDroogian Tribes§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§H$d_propanian_mines$§!\n£mod_district_mining_max£ §G+2§! Max Exotic Gas Extractors"
+    droog_con_2_tooltip:0 "§BDroogland§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§H$d_propanian_mines$§!\n£mod_district_mining_max£ §G+2§! Max Exotic Gas Extractors"
 
     mercurians_con_0_tooltip:0 "§MMercuria§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§H$d_mercurian_plains$§!\n£mod_district_farming_max£ §G+3§! Max Agriculture Districts"
     mercurians_con_1_tooltip:0 "§MMercuria§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§H$d_mercurian_plains$§!\n£mod_district_farming_max£ §G+3§! Max Agriculture Districts"
-    mercurians_con_2_tooltip:0 "§BMercuria§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§H$d_mercurian_plains$§!\n£mod_district_farming_max£ §G+3§! Max Agriculture Districts"
+    mercurians_con_2_tooltip:0 "§BMercurreich§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§H$d_mercurian_plains$§!\n£mod_district_farming_max£ §G+3§! Max Agriculture Districts"
 
     cyatianalas_con_0_tooltip:0 "§BCyatianala§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n§HNone of note§!"
     cyatianalas_con_1_tooltip:0 "§BCyatianala§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n§HNone of note§!"
-    cyatianalas_con_2_tooltip:0 "§BCyatianala§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n§HNone of note§!"
+    cyatianalas_con_2_tooltip:0 "§BCyatianalien§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§HNone of note§!"
 
-    haranian_con_0_tooltip:0 "§YHarania§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§HNone of note§!"
-    haranian_con_1_tooltip:0 "§YHarania§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§HNone of note§!"
-    haranian_con_2_tooltip:0 "§BHarania§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§HNone of note§!"
+    haranian_con_0_tooltip:0 "§YKingdom of Harania§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§HNone of note§!"
+    haranian_con_1_tooltip:0 "§YKingdom of Harania§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§HNone of note§!"
+    haranian_con_2_tooltip:0 "§BHaranien§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§HNone of note§!"
+
