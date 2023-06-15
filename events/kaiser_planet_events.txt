@@ -34,7 +34,7 @@ country_event = {
 			effect = {
 				set_owner = event_target:katzenartig
 				create_ship = {
-					name = "Kaiserübermachts"
+					name = "Kaiserübermacht"
 					design = "Kaiser Behemoth Planet"
 					upgradable = yes
 				}
