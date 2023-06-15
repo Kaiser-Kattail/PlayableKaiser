@@ -55,7 +55,7 @@ agenda_project_celestia = {
 	potential = {
 		has_origin = origin_katzen
 		NOT = {
-			has_country_flag =  
+			has_country_flag = celestia_started
 		}
 		has_technology = tech_mega_engineering
 		has_country_flag = dominance_started
