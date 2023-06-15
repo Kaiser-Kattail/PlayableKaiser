@@ -22,8 +22,8 @@ leader_trait_ruler_kaiser_cattail = {
 	inline_script = {
 		script = trait/icon
 		CLASS = leader
-		ICON = "GFX_leader_trait_great_khan"
-		RARITY = common
+		ICON = "GFX_leader_trait_ruler_kaiser_kattail"
+		RARITY = paragon
 		COUNCIL = yes
 		TIER = none
 	}
