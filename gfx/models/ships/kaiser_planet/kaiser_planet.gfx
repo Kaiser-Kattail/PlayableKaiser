@@ -29,3 +29,43 @@ objectTypes = {
 		scale = 1
 	}
 }
+
+objectTypes = {
+	pdxmesh = {
+		name = "kaiser_planet_bow_mesh"
+		file = "gfx/models/ships/kaiser_planet/kaiser_planet_bow.mesh"
+		scale = 1
+	}
+}
+
+objectTypes = {
+	pdxmesh = {
+		name = "kaiser_planet_stern_mesh"
+		file = "gfx/models/ships/kaiser_planet/kaiser_planet_stern.mesh"
+		scale = 1
+	}
+}
+
+objectTypes = {
+	pdxmesh = {
+		name = "kaiser_planet_bowgun_mesh"
+		file = "gfx/models/ships/kaiser_planet/kaiser_planet_bowgun.mesh"
+		scale = 1
+	}
+}
+
+objectTypes = {
+	pdxmesh = {
+		name = "kaiser_planet_mid_mesh"
+		file = "gfx/models/ships/kaiser_planet/kaiser_planet_mid.mesh"
+		scale = 1
+	}
+}
+
+objectTypes = {
+	pdxmesh = {
+		name = "kaiser_planet_sternthrusters_mesh"
+		file = "gfx/models/ships/kaiser_planet/kaiser_planet_sternthrusters.mesh"
+		scale = 1
+	}
+}
