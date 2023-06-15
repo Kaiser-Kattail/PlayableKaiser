@@ -35,7 +35,7 @@ ship_design = {
 
 ship_design = {
 	name = "Kaiser Behemoth Planet"
-	ship_size = kaiser_planet
+	ship_size = giga_planet_behemoth
 	section = {
 		template = "kaiser_planet_bowgun_01_key"
 		slot = "bowgun"
