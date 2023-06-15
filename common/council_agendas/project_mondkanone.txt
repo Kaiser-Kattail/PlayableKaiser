@@ -55,7 +55,7 @@ agenda_project_celestia = {
 	potential = {
 		has_origin = origin_katzen
 		NOT = {
-			has_country_flag = celestia_started
+			has_country_flag =  
 		}
 		has_technology = tech_mega_engineering
 		has_country_flag = dominance_started
@@ -69,6 +69,5 @@ agenda_project_celestia = {
 		country_event = {
 			id = kaiser_war_planet.8 days = 2
 		}
-		give_technology = { tech_kaiser_planet }
 	}
 }
