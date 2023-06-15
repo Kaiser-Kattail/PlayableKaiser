@@ -7,7 +7,7 @@ country_event = {
 
 	immediate = {
 		set_global_flag = kaiser_building_planet
-		event_target:doughland = {
+		event_target:nesar = {
 			giga_set_has_mega_flag = yes
 			set_planet_flag = kaiser_planet_project
 		}
@@ -34,14 +34,22 @@ country_event = {
 			effect = {
 				set_owner = event_target:katzenartig
 				create_ship = {
-					name = "Kaiserübermacht"
+					name = "Kaiserübermachts"
 					design = "Kaiser Behemoth Planet"
 					upgradable = yes
 				}
 				set_fleet_flag = current_katzen_flagship
-				set_location = event_target:doughland
+				set_location = event_target:nesar
 			}
 		}
+		give_technology = {
+			tech = giga_tech_war_planet
+		}
+		give_technology = {
+			tech = tech_kaiser_planet_sections
+		}
+		create_ship_design = { design = "Kaiser Behemoth Planet" }
+		add_ship_design = last_created_design
 	}
 }
 
@@ -55,7 +63,7 @@ situation_event = {
 			solar_system = {
 				spawn_megastructure = {
 					type = kaiser_planet_0
-					planet = event_target:doughland
+					planet = event_target:nesar
 					owner = event_target:katzenartig
 				}
 			}
@@ -70,18 +78,20 @@ situation_event = {
 
 	immediate = {
 		owner = {
-			event_target:doughland = {
+			event_target:nesar = {
+				set_planet_size = 1
+			}
+			solar_system = {
 				every_system_megastructure = {
 					limit = {
 						is_megastructure_type = kaiser_planet_0
 					}
 					delete_megastructure = this
 				}
-			}
-			solar_system = {
+
 				spawn_megastructure = {
 					type = kaiser_planet_1
-					planet = event_target:doughland
+					planet = event_target:nesar
 					owner = event_target:katzenartig
 				}
 			}
@@ -96,18 +106,17 @@ situation_event = {
 
 	immediate = {
 		owner = {
-			event_target:doughland = {
+			solar_system = {
 				every_system_megastructure = {
 					limit = {
 						is_megastructure_type = kaiser_planet_1
 					}
 					delete_megastructure = this
 				}
-			}
-			solar_system = {
+
 				spawn_megastructure = {
 					type = kaiser_planet_2
-					planet = event_target:doughland
+					planet = event_target:nesar
 					owner = event_target:katzenartig
 				}
 			}
@@ -122,18 +131,17 @@ situation_event = {
 
 	immediate = {
 		owner = {
-			event_target:doughland = {
+			solar_system = {
 				every_system_megastructure = {
 					limit = {
 						is_megastructure_type = kaiser_planet_2
 					}
 					delete_megastructure = this
 				}
-			}
-			solar_system = {
+
 				spawn_megastructure = {
 					type = kaiser_planet_3
-					planet = event_target:doughland
+					planet = event_target:nesar
 					owner = event_target:katzenartig
 				}
 			}
@@ -155,14 +163,16 @@ situation_event = {
 				country_event = {
 					id = kaiser_war_planet.2
 				}
-				event_target:doughland = {
+				event_target:nesar = {
+					remove_planet = yes
+				}
+				solar_system = {
 					every_system_megastructure = {
 						limit = {
 							is_megastructure_type = kaiser_planet_3
 						}
 						delete_megastructure = this
 					}
-					remove_planet = yes
 				}
 			}
 			destroy_situation = this
