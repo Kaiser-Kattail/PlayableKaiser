@@ -4,4 +4,13 @@ spriteTypes = {
 		textureFile = gfx/interface/icons/armies/plane_icon.dds
 	}
 
+	spriteType = {
+		name = "GFX_leader_trait_ruler_kaiser_kattail"
+		textureFile = gfx/interface/icons/traits/kaiser_trait.dds
+	}
+
+	spriteType = {
+		name = "GFX_no_preset"
+		textureFile = gfx/event_pictures/no_preset.dds
+	}
 }

@@ -1,0 +1,40 @@
+namespace = giga_aeternum
+
+country_event = {
+	id = giga_aeternum.2010
+	title = "giga_aeternum.2010.name"
+	desc = "giga_aeternum.2010.desc"
+	picture = GFX_evt_clocks
+	show_sound = event_mystic_reveal
+	is_triggered_only = yes
+
+	immediate = {
+		country_event = { id = giga_aeternum.3009 days = 720 } #the agency
+	}
+
+	option = {
+		name = "giga_aeternum.2010.a"
+		hidden_effect = {
+			every_country = {
+				limit = { NOT = { has_communications = event_target:birch_aeternum } }
+				establish_communications_no_message = event_target:birch_aeternum
+			}
+			every_system = {
+					limit = { 
+						exists = space_owner 
+						space_owner = { is_country_type = dormant_aeternum }
+					} 
+				set_surveyed = {
+					surveyed = yes
+					surveyor = ROOT
+				}
+			}
+            #immediate = {
+            #    limit = {
+            #        has_origin = origin_katzen
+            #    }
+            #    country_event = { id = misc.11 days = 30}
+            #}
+		}
+	}
+}

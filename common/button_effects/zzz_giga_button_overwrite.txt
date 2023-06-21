@@ -1,3 +1,7 @@
+##########################
+## GIGA CONTACTS STUFF ###
+##########################
+
 giga_contact_solak = {
 	potential = {
 		exists = from
@@ -85,4 +89,297 @@ giga_contact_ezic = {
 		}
 	}
 	effect = { custom_tooltip = "giga_contact_ezic_tooltip" hidden_effect = { from = { country_event = { id = giga_katrebels.0012 } } } }
+}
+
+##########################
+#### GIGA MENU STUFF #####
+##########################
+
+jublio_x_disabled = {
+	potential = {
+		exists = from
+		from = {
+			has_country_flag = giga_menu_page_00
+			has_global_flag = giga_jublio_disabled
+		}
+	}
+	allow = {
+		custom_tooltip = "must_not_have_started_game"
+		hidden_trigger = { NOT = { has_global_flag = giga_game_started } }
+	}
+	allow = {
+		custom_tooltip = "must_not_have_katzen_orign"
+		hidden_trigger = { NOT = { any_country = { has_origin = origin_katzen } } }
+	}
+	effect = {
+		custom_tooltip = "giga_jublio_disabled"
+		hidden_effect = {
+			remove_global_flag = giga_jublio_disabled
+			remove_flags_katzen = yes
+		}
+	}
+}
+
+jupitwo_x_disabled = {
+	potential = {
+		exists = from
+		from = {
+			has_country_flag = giga_menu_page_00
+			has_global_flag = giga_jupitwo_disabled
+		}
+	}
+	allow = {
+		custom_tooltip = "must_not_have_started_game"
+		hidden_trigger = { NOT = { has_global_flag = giga_game_started } }
+	}
+	allow = {
+		custom_tooltip = "must_not_have_katzen_orign"
+		hidden_trigger = { NOT = { any_country = { has_origin = origin_katzen } } }
+	}
+	effect = {
+		custom_tooltip = "giga_jupitwo_disabled"
+		hidden_effect = {
+			remove_global_flag = giga_jupitwo_disabled
+		}
+	}
+}
+
+katzenartig_x_disabled = {
+	potential = {
+		exists = from
+		from = {
+			has_country_flag = giga_menu_page_00
+			has_global_flag = katzenartig_disabled
+		}
+	}
+	allow = {
+		custom_tooltip = "must_not_have_started_game_or_disabled_jublio"
+		hidden_trigger = { NOR = { has_global_flag = giga_game_started has_global_flag = giga_jublio_disabled } }
+	}
+	allow = {
+		custom_tooltip = "must_not_have_katzen_orign"
+		hidden_trigger = { NOT = { any_country = { has_origin = origin_katzen } } }
+	}
+	effect = {
+		custom_tooltip = "giga_katzenartig_disabled"
+		hidden_effect = { remove_global_flag = katzenartig_disabled }
+	}
+}
+
+katzenartig_x_yes_disabled = { #default "disabled" option, click to ENABLE
+	potential = {
+		exists = from
+		from = {
+			has_country_flag = giga_menu_page_00
+			OR = {
+				has_global_flag = katzenartig_always
+				has_global_flag = katzenartig_deathwish
+				has_global_flag = katzenartig_disabled
+				has_global_flag = katzenartig_stellarite
+				has_global_flag = katzenartig_improbable
+				has_global_flag = katzenartig_never
+				has_global_flag = katzenartig_easy
+			}
+		}
+	}
+	allow = {
+		custom_tooltip = "must_not_have_started_game_or_disabled_jublio"
+		hidden_trigger = { NOR = { has_global_flag = giga_game_started has_global_flag = giga_jublio_disabled } }
+	}
+	allow = {
+		custom_tooltip = "must_not_have_katzen_orign"
+		hidden_trigger = { NOT = { any_country = { has_origin = origin_katzen } } }
+	}
+	effect = {
+		custom_tooltip = "giga_katzenartig_enabled_default"
+		hidden_effect = {
+			remove_global_flag = katzenartig_disabled
+			remove_global_flag = katzenartig_always
+			remove_global_flag = katzenartig_deathwish
+			remove_global_flag = katzenartig_stellarite
+			remove_global_flag = katzenartig_improbable
+			remove_global_flag = katzenartig_never
+			remove_global_flag = katzenartig_easy
+		}
+	}
+}
+
+katzenartig_x_nuke_disabled = { #NO KAISER, click to ENABLE
+	potential = {
+		exists = from
+		from = {
+			has_country_flag = giga_menu_page_00
+			NOT = { has_global_flag = katzenartig_never }
+		}
+	}
+	allow = {
+		custom_tooltip = "must_not_have_started_game_or_disabled_jublio"
+		hidden_trigger = { NOR = { has_global_flag = giga_game_started has_global_flag = giga_jublio_disabled } }
+	}
+	allow = {
+		custom_tooltip = "must_not_have_katzen_orign"
+		hidden_trigger = { NOT = { any_country = { has_origin = origin_katzen } } }
+	}
+	effect = {
+		custom_tooltip = "giga_katzenartig_enabled_never"
+		hidden_effect = {
+			remove_global_flag = katzenartig_disabled
+			remove_global_flag = katzenartig_deathwish
+			remove_global_flag = katzenartig_easy
+			set_global_flag = katzenartig_never
+			remove_global_flag = katzenartig_always
+			remove_global_flag = katzenartig_stellarite
+			remove_global_flag = katzenartig_improbable
+		}
+	}
+}
+
+katzenartig_x_always_disabled = { #always kaiser, click to ENABLE
+	potential = {
+		exists = from
+		from = {
+			has_country_flag = giga_menu_page_00
+			NOT = { has_global_flag = katzenartig_always }
+		}
+	}
+	allow = {
+		custom_tooltip = "must_not_have_started_game_or_disabled_jublio"
+		hidden_trigger = { NOR = { has_global_flag = giga_game_started has_global_flag = giga_jublio_disabled } }
+	}
+	allow = {
+		custom_tooltip = "must_not_have_katzen_orign"
+		hidden_trigger = { NOT = { any_country = { has_origin = origin_katzen } } }
+	}
+	effect = {
+		custom_tooltip = "giga_katzenartig_enabled_always"
+		hidden_effect = {
+			remove_global_flag = katzenartig_disabled
+			set_global_flag = katzenartig_always
+			remove_global_flag = katzenartig_deathwish
+			remove_global_flag = katzenartig_stellarite
+			remove_global_flag = katzenartig_improbable
+			remove_global_flag = katzenartig_never
+			remove_global_flag = katzenartig_easy
+		}
+	}
+}
+
+katzenartig_x_easy_disabled = { #Easy kaiser, click to ENABLE
+	potential = {
+		exists = from
+		from = {
+			has_country_flag = giga_menu_page_00
+			NOT = { has_global_flag = katzenartig_easy } 
+		}
+	}
+	allow = {
+		custom_tooltip = "must_not_have_started_game_or_disabled_jublio"
+		hidden_trigger = { NOR = { has_global_flag = giga_game_started has_global_flag = giga_jublio_disabled } }
+	}
+	allow = {
+		custom_tooltip = "must_not_have_katzen_orign"
+		hidden_trigger = { NOT = { any_country = { has_origin = origin_katzen } } }
+	}
+	effect = {
+		custom_tooltip = "giga_katzenartig_enabled_easy"
+		hidden_effect = {
+			set_global_flag = katzenartig_easy
+			remove_global_flag = katzenartig_disabled
+			remove_global_flag = katzenartig_deathwish
+			remove_global_flag = katzenartig_always
+			remove_global_flag = katzenartig_stellarite
+			remove_global_flag = katzenartig_improbable
+			remove_global_flag = katzenartig_never
+		}
+	}
+}
+
+katzenartig_x_deathwish_disabled = { #OP kaiser, click to ENABLE
+	potential = {
+		exists = from
+		from = {
+			has_country_flag = giga_menu_page_00
+			NOT = { has_global_flag = katzenartig_deathwish }
+		}
+	}
+	allow = {
+		custom_tooltip = "must_not_have_started_game_or_disabled_jublio"
+		hidden_trigger = { NOR = { has_global_flag = giga_game_started has_global_flag = giga_jublio_disabled } }
+	}
+	allow = {
+		custom_tooltip = "must_not_have_katzen_orign"
+		hidden_trigger = { NOT = { any_country = { has_origin = origin_katzen } } }
+	}
+	effect = {
+		custom_tooltip = "giga_katzenartig_enabled_deathwish"
+		hidden_effect = {
+			remove_global_flag = katzenartig_disabled
+			set_global_flag = katzenartig_deathwish
+			remove_global_flag = katzenartig_always
+			remove_global_flag = katzenartig_stellarite
+			remove_global_flag = katzenartig_improbable
+			remove_global_flag = katzenartig_never
+			remove_global_flag = katzenartig_easy
+		}
+	}
+}
+
+katzenartig_x_stellarite_disabled = { #ultra OP kaiser, click to ENABLE
+	potential = {
+		exists = from
+		from = {
+			has_country_flag = giga_menu_page_00
+			NOT = { has_global_flag = katzenartig_stellarite }
+		}
+	}
+	allow = {
+		custom_tooltip = "must_not_have_started_game_or_disabled_jublio"
+		hidden_trigger = { NOR = { has_global_flag = giga_game_started has_global_flag = giga_jublio_disabled } }
+	}
+	allow = {
+		custom_tooltip = "must_not_have_katzen_orign"
+		hidden_trigger = { NOT = { any_country = { has_origin = origin_katzen } } }
+	}
+	effect = {
+		custom_tooltip = "giga_katzenartig_enabled_stellarite"
+		hidden_effect = {
+			remove_global_flag = katzenartig_disabled
+			set_global_flag = katzenartig_stellarite
+			remove_global_flag = katzenartig_always
+			remove_global_flag = katzenartig_deathwish
+			remove_global_flag = katzenartig_improbable
+			remove_global_flag = katzenartig_never
+			remove_global_flag = katzenartig_easy
+		}
+	}
+}
+
+katzenartig_x_improbable_disabled = { #infinite OP kaiser, click to ENABLE
+	potential = {
+		exists = from
+		from = {
+			has_country_flag = giga_menu_page_00
+			NOT = { has_global_flag = katzenartig_improbable }
+		}
+	}
+	allow = {
+		custom_tooltip = "must_not_have_started_game_or_disabled_jublio"
+		hidden_trigger = { NOR = { has_global_flag = giga_game_started has_global_flag = giga_jublio_disabled } }
+	}
+	allow = {
+		custom_tooltip = "must_not_have_katzen_orign"
+		hidden_trigger = { NOT = { any_country = { has_origin = origin_katzen } } }
+	}
+	effect = {
+		custom_tooltip = "giga_katzenartig_enabled_improbable"
+		hidden_effect = {
+			remove_global_flag = katzenartig_disabled
+			remove_global_flag = katzenartig_stellarite
+			set_global_flag = katzenartig_improbable
+			remove_global_flag = katzenartig_always
+			remove_global_flag = katzenartig_deathwish
+			remove_global_flag = katzenartig_never
+			remove_global_flag = katzenartig_easy
+		}
+	}
 }

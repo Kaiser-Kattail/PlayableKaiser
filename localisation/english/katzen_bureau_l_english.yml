@@ -15,7 +15,7 @@
 
     kaiser_bureau.douclaw.low.a:0 "We must teach this sadly misguided world about the wonders of unification."
     kaiser_bureau.douclaw.low.b:0 "I dearly hope that the nations of Flusion one day realize the greatness that we can bring to them."
-    kaiser_bureau.douclaw.low.c:0 "§RLORIS! STOP BALLING ON THE WAR TABLE!!§!"
+    kaiser_bureau.douclaw.low.c:0 "\n§RLORIS! STOP BALLING ON THE WAR TABLE!!§!"
     kaiser_bureau.douclaw.low.d:0 "The unification of Flusion is inevitable, and we must be the ones to seize this opportunity."
 
     kaiser_bureau.douclaw.mid.a:0 "\nA great start to our unification."
@@ -63,18 +63,18 @@
     cookie_con_1_tooltip:0 "§TCookian Steppes§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 4 Pops\n\n§YFEATURES:§!\n\n§H$d_cookian_steppes_mining$§!\n£mod_district_mining_max£ §G+1§! Max Mining Districts"
     cookie_con_2_tooltip:0 "§BLyuinstaat§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§H$d_cookian_steppes_mining$§!\n£mod_district_mining_max£ §G+1§! Max Mining Districts"
 
-    solakians_con_0_tooltip:0 "§MSolakian Republic§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 5 Pops\n\n§YFEATURES:§!\n\n§H$d_manglarian_junkyard$§!\n\n§H$d_solakian_factory$§!\n£consumer_goods£ §G+10§! Consumer Goods\n\n§H$d_meowriana_trench$§!"
-    solakians_con_1_tooltip:0 "§MSolakian Republic§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 5 Pops\n\n§YFEATURES:§!\n\n§H$d_manglarian_junkyard$§!\n\n§H$d_solakian_factory$§!\n£consumer_goods£ §G+10§! Consumer Goods\n\n§H$d_meowriana_trench$§!"
-    solakians_con_2_tooltip:0 "§BSolakien§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§H$d_manglarian_junkyard$§!\n\n§H$d_solakian_factory$§!\n£consumer_goods£ §G+10§! Consumer Goods\n\n§H$d_meowriana_trench$§!"
+    solakians_con_0_tooltip:0 "§MSolakian Republic§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 5 Pops\n\n§YFEATURES:§!\n\n§H$d_altarian_jungle$§!\n\n§H$d_manglarian_junkyard$§!\n\n§H$d_solakian_factory$§!\n£consumer_goods£ §G+10§! Consumer Goods\n\n§H$d_meowriana_trench$§!"
+    solakians_con_1_tooltip:0 "§MSolakian Republic§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 5 Pops\n\n§YFEATURES:§!\n\n§H$d_altarian_jungle$§!\n\n§H$d_manglarian_junkyard$§!\n\n§H$d_solakian_factory$§!\n£consumer_goods£ §G+10§! Consumer Goods\n\n§H$d_meowriana_trench$§!"
+    solakians_con_2_tooltip:0 "§BSolakien§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§H$d_altarian_jungle$§!\n\n§H$d_manglarian_junkyard$§!\n\n§H$d_solakian_factory$§!\n£consumer_goods£ §G+10§! Consumer Goods\n\n§H$d_meowriana_trench$§!"
     
 
     ravkan_con_0_tooltip:0 "§HRavkan Commonwealth§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n§H$d_ravaka_volcano$§!\n£mod_alloys_produces_mult£ §G+15%§! £alloys£ Alloys from £job_foundry£ Metallurgist Jobs\n£rare_crystals£ §G+3§! Rare Crystals"
     ravkan_con_1_tooltip:0 "§HRavkan Commonwealth§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n§H$d_ravaka_volcano$§!\n£mod_alloys_produces_mult£ §G+15%§! £alloys£ Alloys from £job_foundry£ Metallurgist Jobs\n£rare_crystals£ §G+3§! Rare Crystals"
     ravkan_con_2_tooltip:0 "§BRavkanien§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§H$d_ravaka_volcano$§!\n£mod_alloys_produces_mult£ §G+15%§! £alloys£ Alloys from £job_foundry£ Metallurgist Jobs\n£rare_crystals£ §G+3§! Rare Crystals"
 
-    zousans_con_0_tooltip:0 "§EZousa§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§H$d_altarian_jungle$§!\n\n§H$d_zousa_megalopolis$§!\n£research_speed£ §G+30%§! Archaeostudies Research Speed\n£society_research£ §G+30§! Society Research\n£minor_artifacts£ §G+3§! Minor Artifacts"
-    zousans_con_1_tooltip:0 "§EZousa§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§H$d_altarian_jungle$§!\n\n§H$d_zousa_megalopolis$§!\n£research_speed£ §G+30%§! Archaeostudies Research Speed\n£society_research£ §G+30§! Society Research\n£minor_artifacts£ §G+3§! Minor Artifacts"
-    zousans_con_2_tooltip:0 "§BZousanien§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§H$d_altarian_jungle$§!\n\n§H$d_zousa_megalopolis$§!\n£research_speed£ §G+30%§! Archaeostudies Research Speed\n£society_research£ §G+30§! Society Research\n£minor_artifacts£ §G+3§! Minor Artifacts"
+    zousans_con_0_tooltip:0 "§EZousa§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§H$d_zousa_megalopolis$§!\n£mod_country_society_tech_research_speed£ §G+30%§! Archaeostudies Research Speed\n£society_research£ §G+30§! Society Research\n£minor_artifacts£ §G+3§! Minor Artifacts"
+    zousans_con_1_tooltip:0 "§EZousa§!\n\n§HCurent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§H$d_zousa_megalopolis$§!\n£mod_country_society_tech_research_speed£ §G+30%§! Archaeostudies Research Speed\n£society_research£ §G+30§! Society Research\n£minor_artifacts£ §G+3§! Minor Artifacts"
+    zousans_con_2_tooltip:0 "§BZousanien§!\n\n§HCurent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§H$d_zousa_megalopolis$§!\n£mod_country_society_tech_research_speed£ §G+30%§! Archaeostudies Research Speed\n£society_research£ §G+30§! Society Research\n£minor_artifacts£ §G+3§! Minor Artifacts"
 
 
     droog_con_0_tooltip:0 "§HDroogian Tribes§!\n\n§HCurent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§H$d_propanian_mines$§!\n£mod_district_mining_max£ §G+2§! Max Exotic Gas Extractors"

@@ -368,6 +368,9 @@ country_event = {
 			add_trait = leader_trait_intimidator
 			add_trait = subclass_admiral_strategist
 			set_leader_flag = kaiser_kattail
+			set_leader_flag = legendary_leader
+			set_leader_flag = immune_to_negative_traits
+			set_leader_flag = leader_death_events_blocked
 			save_global_event_target_as = kaiser_kattail
 		}
 
@@ -1153,6 +1156,53 @@ country_event = {
 		set_country_flag = flusion_setup_complete
 		
 	}
+
+event = {
+	id = flusion.42
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = katzenartig_disabled
+		set_global_flag = giga_jublio_disabled
+		set_global_flag = giga_jupitwo_disabled
+	}
+}
+
+event = {
+	id = flusion.43
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_playable_country = {
+			limit = {
+				has_origin = origin_katzen
+				NOT = {
+					has_country_flag = kaiser_preset
+				}
+			}
+			country_event = { id = flusion.44 }
+		}
+	}
+}
+
+country_event = {
+	id = flusion.44
+	title = flusion.44.name
+	desc = flusion.44.desc
+	picture = GFX_no_preset
+	show_sound = event_assembly_fight
+	is_triggered_only = yes #The game will not consider this event for starting on its own. Event will need to be triggered by another event, or by some other effect. Most events will use this.
+	immediate = {
+		add_modifier = {
+			modifier = mod_no_preset = days = -1
+		}
+	}
+	option = {
+		name = "flusion.44.a"
+	}
+}
 
 namespace = katzen
 

@@ -22,8 +22,8 @@ leader_trait_ruler_kaiser_cattail = {
 	inline_script = {
 		script = trait/icon
 		CLASS = leader
-		ICON = "GFX_leader_trait_great_khan"
-		RARITY = common
+		ICON = "GFX_leader_trait_ruler_kaiser_kattail"
+		RARITY = paragon
 		COUNCIL = yes
 		TIER = none
 	}
@@ -58,10 +58,11 @@ katzen_trait_martial_free = {
 katzen_trait_elite = {
 	inline_script = {
 		script = trait/icon
+		CLASS = leader
 		ICON = "GFX_leader_trait_from_the_ranks"
 		RARITY = veteran
 		COUNCIL = no
-		TIER = 1
+		TIER = none
 	}
 	immortal_leaders = yes
 	self_modifier = {

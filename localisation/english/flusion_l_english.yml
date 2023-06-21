@@ -504,3 +504,22 @@
  pvz_cattail_desc:0 "Changes the Kaiser's appearance to his classic form."
  derega_kaiser:0 "Canon Kaiser"
  derega_kaiser_desc:0 "Changes the Kaiser's appearance to his more 'normal' form."
+
+    misc.11.title:0 "Aeternite Knowledge"
+    misc.11.desc:0 "§RGRRR ANGRY NO LOC§!"
+    misc.11.a:0 "Excellent"
+    misc.11.a.tt:0 "We gain §Y3§! Aeternite Intel"
+
+    tech_kaiser_planet_sections:0 "Katzen Superscale Celestial Body Weaponization"
+	tech_kaiser_planet_sections_desc:0 "Innovations in Katzen science has led us here, to the one thing we all thought impossible. Something stronger than the Kaiser Moon. Yet here it is, in all its glory."
+	allow_kaiser_planet_sections:0 "§HUnlocks Section:§! Kaiser Behemoth Planetcraft Sections"
+	desc_kaiser_planet_sections:0 "A truly insane engineering project, based on Katzen technologies. Like the Kaiser Moon, the Kaiser Planetcraft boasts a massive railgun instead of a laser array, and is equipped with a vast array of kinetic and explosive weapons. These new section configurations can be applied to any new or existing Behemoth Planetcrafts."
+
+    must_not_have_katzen_orign:0 "Disabled by Playable Katzenartig Imperium"
+
+    flusion.44.name:0 "You didn't use the preset!"
+    flusion.44.desc:0 "Please make sure to use our custom Katzenartig Imperium preset! It is at the bottom of the preset list. If you don't you won't get the intended Kaiser experience!. If you really want to, you can make your own, but just know that things might not work 100% as intended."
+    flusion.44.a:0 "Fine..."
+
+    mod_no_preset:0 "Not Using Preset"
+    mod_no_preset_tt:0 "Cringe: §R+100%§!"

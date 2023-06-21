@@ -136,6 +136,9 @@ tech_katzen_flusioarc = {
 	category = {
 		statecraft
 	}
+	potential = {
+		has_country_flag = finished_flusiocentrism
+	}
 	prerequisites = {
 		tech_capital_productivity_1
 	}
