@@ -34,3 +34,8 @@ katzen_colony = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_land_appropriated.dds"
 	icon_frame = 2
 }
+
+mod_no_preset = {
+	custom_tooltip = mod_no_preset_tt
+	icon = "gfx/interface/icons/modifiers/no_preset.dds"
+}

@@ -108,6 +108,9 @@
 		trait="trait_ruler_charismatic"
 		leader_class="admiral"
 	}
+	flags = {
+		kaiser_preset
+	}
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
 	room="personality_hegemonic_imperialists_room"
