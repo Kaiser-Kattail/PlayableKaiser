@@ -122,6 +122,8 @@ tr_flusion_finish = {
 			give_technology = {
 				tech = tech_katzen_flusioarc
 			}
+		}
+		if = {
 			limit = {
 				NOT = {
 					has_technology = tech_capital_productivity_1
@@ -130,6 +132,8 @@ tr_flusion_finish = {
 			give_technology = {
 				tech = tech_capital_productivity_1
 			}
+		}
+		if = {
 			limit = {
 				NOT = {
 					has_technology = tech_katzen_reactor
@@ -139,6 +143,8 @@ tr_flusion_finish = {
 				tech = tech_katzen_reactor
 				progress = 0.25
 			}
+		}
+		if = {
 			limit = {
 				NOT = {
 					has_technology = tech_katzen_forge
@@ -148,6 +154,8 @@ tr_flusion_finish = {
 				tech = tech_katzen_forge
 				progress = 0.25
 			}
+		}
+		if = {
 			limit = {
 				NOT = {
 					has_technology = tech_katzen_habitability
@@ -157,6 +165,8 @@ tr_flusion_finish = {
 				tech = tech_katzen_habitability
 				progress = 0.25
 			}
+		}
+		if = {
 			limit = {
 				NOT = {
 					has_technology = tech_katzen_lab
@@ -166,6 +176,8 @@ tr_flusion_finish = {
 				tech = tech_katzen_lab
 				progress = 0.25
 			}
+		}
+		if = {
 			limit = {
 				NOT = {
 					has_technology = tech_katzen_luxuries
@@ -175,6 +187,8 @@ tr_flusion_finish = {
 				tech = tech_katzen_luxuries
 				progress = 0.25
 			}
+		}
+		if = {
 			limit = {
 				NOT = {
 					has_technology = tech_katzen_rr
@@ -184,6 +198,8 @@ tr_flusion_finish = {
 				tech = tech_katzen_rr
 				progress = 0.25
 			}
+		}
+		if = {
 			limit = {
 				NOT = {
 					has_technology = tech_katzen_theater
