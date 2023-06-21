@@ -48,7 +48,7 @@ utility_component_template = {
 	ship_behavior = "line"
 
 	class_restriction = { shipclass_military }
-	size_restriction = { katzen_bomber katzen_panzer katzen_submarine }
+	size_restriction = { katzen_bomber katzen_panzer }
 	component_set = "katzen_combat_computers"
 	upgrades_to = "KATZEN_COMBAT_COMPUTER_LINE_BASIC"
 
@@ -162,7 +162,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { katzen_panzer katzen_bomber katzen_submarine }
+	size_restriction = { katzen_panzer }
 	component_set = "katzen_combat_computers"
 	ship_behavior = "picket"
 	prerequisites = { "tech_combat_computers_1" }
@@ -191,7 +191,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { katzen_bomber katzen_panzer katzen_submarine }
+	size_restriction = { katzen_panzer }
 	component_set = "katzen_combat_computers"
 	ship_behavior = "picket"
 	prerequisites = { "tech_combat_computers_2" }
@@ -222,7 +222,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { katzen_panzer katzen_cruiser katzen_bomber katzen_submarine }
+	size_restriction = { katzen_panzer katzen_cruiser katzen_bomber }
 	component_set = "katzen_combat_computers"
 	ship_behavior = "line"
 	prerequisites = { "tech_combat_computers_1" }
@@ -251,7 +251,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { katzen_panzer katzen_bomber katzen_cruiser katzen_submarine }
+	size_restriction = { katzen_panzer katzen_bomber katzen_cruiser }
 	component_set = "katzen_combat_computers"
 	ship_behavior = "line"
 	prerequisites = { "tech_combat_computers_2" }
@@ -282,7 +282,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { katzen_cruiser katzen_bomber katzen_submarine }
+	size_restriction = { katzen_cruiser katzen_bomber }
 	component_set = "katzen_combat_computers"
 	ship_behavior = "artillery"
 	prerequisites = { "tech_combat_computers_1" }
@@ -311,7 +311,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { katzen_bomber katzen_cruiser katzen_submarine }
+	size_restriction = { katzen_bomber katzen_cruiser }
 	component_set = "katzen_combat_computers"
 	ship_behavior = "artillery"
 	prerequisites = { "tech_combat_computers_2" }
