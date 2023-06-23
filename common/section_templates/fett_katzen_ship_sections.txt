@@ -16,8 +16,8 @@ ship_section_template = {
 	aux_utility_slots = 2
 	resources = {
 		category = ships
-		upkeep = {
-			alloys = 0.05
+		cost = {
+			alloys = 80
 		}
 	}
 }
@@ -66,8 +66,8 @@ ship_section_template = {
 
 	resources = {
 		category = ships
-		upkeep = {
-			alloys = 0.05
+		cost = {
+			alloys = 80
 		}
 	}
 
@@ -109,8 +109,8 @@ ship_section_template = {
 
 	resources = {
 		category = ships
-		upkeep = {
-			alloys = 0.05
+		cost = {
+			alloys = 80
 		}
 	}
 }
@@ -135,8 +135,8 @@ ship_section_template = {
 
 	resources = {
 		category = ships
-		upkeep = {
-			alloys = 0.05
+		cost = {
+			alloys = 60
 		}
 	}
 }
@@ -164,8 +164,8 @@ ship_section_template = {
 
 	resources = {
 		category = ships
-		upkeep = {
-			alloys = 0.05
+		cost = {
+			alloys = 120
 		}
 	}
 }
@@ -180,17 +180,20 @@ ship_section_template = {
 
 	component_slot = { name = "MISSILE_01"			template = "medium_missile_turret"			locatorname = "loc101" }
 	component_slot = { name = "MISSILE_02"			template = "medium_missile_turret"			locatorname = "loc101" }
-	component_slot = { name = "MISSILE_03"			template = "medium_missile_turret"			locatorname = "loc101" }
+	# component_slot = { name = "MISSILE_03"			template = "medium_missile_turret"			locatorname = "loc101" }
 	# component_slot = { name = "MISSILE_04"			template = "medium_missile_turret"			locatorname = "loc101" }
 	# component_slot = { name = "MISSILE_05"			template = "medium_missile_turret"			locatorname = "loc101" }
 	# component_slot = { name = "MISSILE_06"			template = "medium_missile_turret"			locatorname = "loc101" }
 
-	medium_utility_slots = 6
-	aux_utility_slots = 2
+	medium_utility_slots = 4
+	aux_utility_slots = 1
+
 	resources = {
 		category = ships
-		upkeep = {
-			alloys = 0.05
+		cost = {
+			alloys = 120
+			exotic_gases = @cloak_s_t3_cost_strategic_resources
+			rare_crystals = @cloak_s_t3_cost_strategic_resources
 		}
 	}
 }
