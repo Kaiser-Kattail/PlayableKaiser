@@ -22,6 +22,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @l_t6_cost
+			volatile_motes = @l_t6_rare
 		}
 		upkeep = {
 			energy = @l_t6_upkeep_energy
@@ -40,6 +41,13 @@ weapon_component_template = {
 
 	ai_tags = { weapon_role_artillery }
 	ai_tag_weight = 0
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+	}
 }
 
 weapon_component_template = {
@@ -78,11 +86,21 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @50
+			alloys = @m_t6_cost
+			volatile_motes = @m_t6_rare
 		}
 		upkeep = {
-			energy = @l_t6_upkeep_energy
-			alloys = @l_t6_upkeep_alloys
+			energy = @m_t6_upkeep_energy
+			alloys = @m_t6_upkeep_alloys
+			volatile_motes = @m_t6_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
 		}
 	}
 }

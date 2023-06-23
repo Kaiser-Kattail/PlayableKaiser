@@ -326,7 +326,10 @@
    
     edict_katzen_leader_upgrade:0 "Leader Katzenification"
     edict_katzen_leader_upgrade_desc:0 "Our leaders are national treasures, and should be treated as such. The very latest in anti-aging technology and special training will be made available to choice leaders."
-   
+
+    edict_katzen_conquest_map:0 "Katzenvereinigungsbüro"
+    edict_katzen_conquest_map_desc:0 "Access the Flusionian Conquest Map"
+
     stop_eating_naval_cap_you_hecker:0 "Flusionian Maintenance"
     stop_eating_naval_cap_you_hecker_desc:0 "Project Mondkanone is specially maintained, and as such provides its own naval capacity."
    

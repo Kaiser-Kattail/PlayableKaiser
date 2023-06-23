@@ -74,12 +74,12 @@ katzen_panzer = { #Destroyerish, designed to conduct Blitzkrieg and overwhelm en
 		ship_armor_add = 400
 		ship_shield_add = 200
 	}
-	size_multiplier = 1
-	fleet_slot_size = 1
+	size_multiplier = 2
+	fleet_slot_size = 2
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 4
 	is_space_station = no
-	icon = ship_size_military_1
+	icon = ship_size_military_2
 
 	resources = {
 		category = ships
@@ -117,7 +117,7 @@ katzen_bomber = { #Cruiser, bomber designed to assault enemy worlds and fortific
 		ship_orbital_bombardment_mult = 2
 	}
 	size_multiplier = 4
-	fleet_slot_size = 3
+	fleet_slot_size = 4
 	section_slots = { "mid" = { locator = "part2" } }
 	num_target_locators = 4
 	is_space_station = no
@@ -175,8 +175,8 @@ katzen_submarine = {
 		ship_cloaking_strength_add = 3
 		ship_piracy_suppression_add = 10
 	}
-	size_multiplier = 2
-	fleet_slot_size = 2
+	size_multiplier = 4
+	fleet_slot_size = 4
 	section_slots = { "mid" = { locator = "part2" } }
 	num_target_locators = 4
 	is_space_station = no
@@ -197,8 +197,8 @@ katzen_submarine = {
 	resources = {
 		category = ships
 		upkeep = {
-			energy = @destroyer_upkeep_energy
-			alloys = @destroyer_upkeep_alloys
+			energy = @cruiser_upkeep_energy
+			alloys = @cruiser_upkeep_alloys
 		}
 	}
 

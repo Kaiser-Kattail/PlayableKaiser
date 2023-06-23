@@ -420,7 +420,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATZEN_BOMBER_COMPUTER"
+	key = "KATZEN_BOMBER_COMPUTER_BASIC"
 	size = small
 	icon = "GFX_ship_part_computer_swarm_basic"
 	icon_frame = 1

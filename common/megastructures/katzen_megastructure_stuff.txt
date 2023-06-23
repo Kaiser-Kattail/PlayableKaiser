@@ -6,7 +6,7 @@ katzen_war_forge_0 = {
 	construction_blocks_others = no
 	entity_offset = { x = 0 y = 0 }
 	resources = {
-		category = megastructures
+		category = giga_kilostructures
 		cost = { alloys = 1000 }
 	}
 	potential = { always = no }
@@ -29,7 +29,7 @@ katzen_war_forge_1 = {
 	build_time = 720
 	show_in_outliner = no
 	resources = {
-		category = megastructures
+		category = giga_kilostructures
 		cost = { }
 		produces = { alloys = 4 }
 	}

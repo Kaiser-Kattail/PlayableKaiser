@@ -132,8 +132,8 @@
 	KATZEN_COMBAT_COMPUTER_ARTILLERY_ADVANCED: "Advanced Artillery Tactics"
 	KATZEN_COMBAT_COMPUTER_CARRIER_BASIC: "Basic Carrier Tactics"
 	KATZEN_COMBAT_COMPUTER_CARRIER_ADVANCED: "Advanced Carrier Tactics"
-	KATZEN_BOMBER_COMPUTER_CARRIER_BASIC: "Basic Torpedo Tactics"
-	KATZEN_BOMBER_COMPUTER_CARRIER_ADVANCED: "Advanced Torpedo Tactics"
+	KATZEN_BOMBER_COMPUTER_BASIC: "Basic Torpedo Tactics"
+	KATZEN_BOMBER_COMPUTER_ADVANCED: "Advanced Torpedo Tactics"
 	SUBMARINE_COMPUTER:0 "Unterraumboot Targeting Computer"
   SUBMARINE_COMPUTER_DESC:0 "The Unterraumboot will stay at extreme range (§Y500§!) range and fire its torpedoes at distant targets."
 
