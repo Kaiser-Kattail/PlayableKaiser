@@ -527,3 +527,10 @@
  NAME_koko:0 "Koko Von Beumien"
  misc.12.title:0 "$NAME_koko$"
  misc.12.desc:0 ""
+
+ policy_loris_appearance:0 "Build-A-Loris"
+ policy_loris_appearance_desc:0 "Chnages the appearance of Loris Von Kattensbach."
+ HD_loris:0 "HD Loris"
+ HD_loris_desc:0 "Changes Loris's appearance to his more normal and high definition form."
+ cartoon_loris:0 "Cartoon Loris"
+ cartoon_loris_desc:0 "Changes Loris's appearance to his classic and VERY SERIOUSINGS cartoon form."
