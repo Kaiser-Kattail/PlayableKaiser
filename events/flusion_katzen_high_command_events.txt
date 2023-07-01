@@ -1,0 +1,9 @@
+namespace = high_command
+country_event = {
+	id = high_command.1
+	title = high_command.1.title
+	desc = high_command.1.desc
+
+	diplomatic = yes
+	custom_gui = "kaiser_high_command"
+}
