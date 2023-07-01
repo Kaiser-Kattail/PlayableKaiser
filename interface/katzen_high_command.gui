@@ -777,7 +777,12 @@ guiTypes = {
 			containerWindowType = { 
 				name = "pawtton_box"
 				position = { x = 267 y = 389 }
-				effectButtonType = { #Pawtton
+				size = { x = 77 y = 104 }
+				clipping = no
+				
+				#Pawtton
+
+				effectButtonType = { 
 					size = { x = 77 y = 104 }
 					scale = 1
 					name = "pawtton_active"
@@ -786,11 +791,34 @@ guiTypes = {
 					spriteType = "GFX_kaiser_high_command_pawtton_active"
 					position = { x = 0 y = 0 }
 				}
+				effectButtonType = { 
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "pawtton_inactive"
+					no_clicksound = yes
+					effect = "katzen_high_command_pawtton_inactive"
+					spriteType = "GFX_kaiser_high_command_pawtton_inactive"
+					position = { x = 0 y = 0 }
+				}
+				effectButtonType = { 
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "pawtton_dead"
+					no_clicksound = yes
+					effect = "katzen_high_command_pawtton_dead"
+					spriteType = "GFX_kaiser_high_command_pawtton_dead"
+					position = { x = 0 y = 0 }
+				}
 			}
 			containerWindowType = {
 				name = "katzmann_box"
 				position = { x = 760 y = 695 }
-				effectButtonType = { #Katzmann
+				size = { x = 77 y = 104 }
+				clipping = no
+
+				#Katzmann
+
+				effectButtonType = { 
 					size = { x = 77 y = 104 }
 					scale = 1
 					name = "katzmann_active"
@@ -799,11 +827,34 @@ guiTypes = {
 					spriteType = "GFX_kaiser_high_command_katzmann_active"
 					position = { x = 0 y = 0 }
 				}
+				effectButtonType = { 
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "katzmann_inactive"
+					no_clicksound = yes
+					effect = "katzen_high_command_katzmann_inactive"
+					spriteType = "GFX_kaiser_high_command_katzmann_inactive"
+					position = { x = 0 y = 0 }
+				}
+				effectButtonType = { 
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "katzmann_dead"
+					no_clicksound = yes
+					effect = "katzen_high_command_katzmann_dead"
+					spriteType = "GFX_kaiser_high_command_katzmann_dead"
+					position = { x = 0 y = 0 }
+				}
 			}
 			containerWindowType = { 
 				name = "lilith_box"
 				position = { x = 970 y = 685 }
-				effectButtonType = { #Lilith
+				size = { x = 77 y = 104 }
+				clipping = no
+
+				#Lilith
+
+				effectButtonType = { 
 					size = { x = 77 y = 104 }
 					scale = 1
 					name = "lilith_active"
@@ -812,11 +863,34 @@ guiTypes = {
 					spriteType = "GFX_kaiser_high_command_lilith_active"
 					position = { x = 0 y = 0 }
 				}
+				effectButtonType = { 
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "lilith_inactive"
+					no_clicksound = yes
+					effect = "katzen_high_command_lilith_inactive"
+					spriteType = "GFX_kaiser_high_command_lilith_inactive"
+					position = { x = 0 y = 0 }
+				}
+				effectButtonType = { 
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "lilith_dead"
+					no_clicksound = yes
+					effect = "katzen_high_command_lilith_dead"
+					spriteType = "GFX_kaiser_high_command_lilith_dead"
+					position = { x = 0 y = 0 }
+				}
 			}
 			containerWindowType = { 
 				name = "novasum_box"
 				position = { x = 970 y = 548 }
-				effectButtonType = { #Novasum
+				size = { x = 77 y = 104 }
+				clipping = no
+
+				#Novasum
+
+				effectButtonType = { 
 					size = { x = 77 y = 104 }
 					scale = 1
 					name = "novasum_active"
@@ -825,11 +899,34 @@ guiTypes = {
 					spriteType = "GFX_kaiser_high_command_novasum_active"
 					position = { x = 0 y = 0 }
 				}
+				effectButtonType = { 
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "novasum_inactive"
+					no_clicksound = yes
+					effect = "katzen_high_command_novasum_inactive"
+					spriteType = "GFX_kaiser_high_command_novasum_inactive"
+					position = { x = 0 y = 0 }
+				}
+				effectButtonType = { 
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "novasum_dead"
+					no_clicksound = yes
+					effect = "katzen_high_command_novasum_dead"
+					spriteType = "GFX_kaiser_high_command_novasum_dead"
+					position = { x = 0 y = 0 }
+				}
 			}
 			containerWindowType = { 
 				name = "pawlbert_box"
 				position = { x = 865 y = 617 }
-				effectButtonType = { #Pawlbert
+				size = { x = 77 y = 104 }
+				clipping = no
+				
+				#Pawlbert
+
+				effectButtonType = { 
 					size = { x = 77 y = 104 }
 					scale = 1
 					name = "pawlbert_active"
@@ -838,11 +935,34 @@ guiTypes = {
 					spriteType = "GFX_kaiser_high_command_pawlbert_active"
 					position = { x = 0 y = 0 }
 				}
+				effectButtonType = { 
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "pawlbert_inactive"
+					no_clicksound = yes
+					effect = "katzen_high_command_pawlbert_inactive"
+					spriteType = "GFX_kaiser_high_command_pawlbert_inactive"
+					position = { x = 0 y = 0 }
+				}
+				effectButtonType = { 
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "pawlbert_dead"
+					no_clicksound = yes
+					effect = "katzen_high_command_pawlbert_dead"
+					spriteType = "GFX_kaiser_high_command_pawlbert_dead"
+					position = { x = 0 y = 0 }
+				}
 			}
 			containerWindowType = { 
 				name = "tarynn_box"
 				position = { x = 760 y = 548 }
-				effectButtonType = { #Tarynn
+				size = { x = 77 y = 104 }
+				clipping = no
+
+				#Tarynn
+
+				effectButtonType = { 
 					size = { x = 77 y = 104 }
 					scale = 1
 					name = "tarynn_active"
@@ -851,11 +971,34 @@ guiTypes = {
 					spriteType = "GFX_kaiser_high_command_tarynn_active"
 					position = { x = 0 y = 0 }
 				}
+				effectButtonType = { 
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "tarynn_inactive"
+					no_clicksound = yes
+					effect = "katzen_high_command_tarynn_inactive"
+					spriteType = "GFX_kaiser_high_command_tarynn_inactive"
+					position = { x = 0 y = 0 }
+				}
+				effectButtonType = { 
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "tarynn_dead"
+					no_clicksound = yes
+					effect = "katzen_high_command_tarynn_dead"
+					spriteType = "GFX_kaiser_high_command_tarynn_dead"
+					position = { x = 0 y = 0 }
+				}
 			}
 			containerWindowType = { 
 				name = "birch_box"
 				position = { x = 907 y = 212 }
-				effectButtonType = { #Birch
+				size = { x = 77 y = 104 }
+				clipping = no
+
+				#Birch
+
+				effectButtonType = {
 					size = { x = 77 y = 104 }
 					scale = 1
 					name = "birch_active"
@@ -864,11 +1007,34 @@ guiTypes = {
 					spriteType = "GFX_kaiser_high_command_birch_active"
 					position = { x = 0 y = 0 }
 				}
+				effectButtonType = {
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "birch_inactive"
+					no_clicksound = yes
+					effect = "katzen_high_command_birch_inactive"
+					spriteType = "GFX_kaiser_high_command_birch_inactive"
+					position = { x = 0 y = 0 }
+				}
+				effectButtonType = {
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "birch_dead"
+					no_clicksound = yes
+					effect = "katzen_high_command_birch_dead"
+					spriteType = "GFX_kaiser_high_command_birch_dead"
+					position = { x = 0 y = 0 }
+				}
 			} 
 			containerWindowType = { 
 				name = "garf_box"
 				position = { x = 760 y = 349 }
-				effectButtonType = { #Garf
+				size = { x = 77 y = 104 }
+				clipping = no
+
+				#Garf
+
+				effectButtonType = { 
 					size = { x = 77 y = 104 }
 					scale = 1
 					name = "garf_active"
@@ -877,11 +1043,34 @@ guiTypes = {
 					spriteType = "GFX_kaiser_high_command_garf_active"
 					position = { x = 0 y = 0 }
 				}
+				effectButtonType = { 
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "garf_inactive"
+					no_clicksound = yes
+					effect = "katzen_high_command_garf_inactive"
+					spriteType = "GFX_kaiser_high_command_garf_inactive"
+					position = { x = 0 y = 0 }
+				}
+				effectButtonType = { 
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "garf_dead"
+					no_clicksound = yes
+					effect = "katzen_high_command_garf_dead"
+					spriteType = "GFX_kaiser_high_command_garf_dead"
+					position = { x = 0 y = 0 }
+				}
 			} 
 			containerWindowType = { 
 				name = "katzhaum_box"
 				position = { x = 991 y = 212 }
-				effectButtonType = { #Katzhaum
+				size = { x = 77 y = 104 }
+				clipping = no
+
+				#Katzhaum
+
+				effectButtonType = { 
 					size = { x = 77 y = 104 }
 					scale = 1
 					name = "katzhaum_active"
@@ -890,11 +1079,34 @@ guiTypes = {
 					spriteType = "GFX_kaiser_high_command_katzhaum_active"
 					position = { x = 0 y = 0 }
 				}
+				effectButtonType = { 
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "katzhaum_inactive"
+					no_clicksound = yes
+					effect = "katzen_high_command_katzhaum_inactive"
+					spriteType = "GFX_kaiser_high_command_katzhaum_inactive"
+					position = { x = 0 y = 0 }
+				}
+				effectButtonType = { 
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "katzhaum_dead"
+					no_clicksound = yes
+					effect = "katzen_high_command_katzhaum_dead"
+					spriteType = "GFX_kaiser_high_command_katzhaum_dead"
+					position = { x = 0 y = 0 }
+				}
 			} 
 			containerWindowType = { 
 				name = "rex_box"
 				position = { x = 865 y = 349 }
-				effectButtonType = { #Rex
+				size = { x = 77 y = 104 }
+				clipping = no
+
+				#Rex
+
+				effectButtonType = { 
 					size = { x = 77 y = 104 }
 					scale = 1
 					name = "rex_active"
@@ -903,11 +1115,34 @@ guiTypes = {
 					spriteType = "GFX_kaiser_high_command_rex_active"
 					position = { x = 0 y = 0 }
 				}
+				effectButtonType = { 
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "rex_inactive"
+					no_clicksound = yes
+					effect = "katzen_high_command_rex_inactive"
+					spriteType = "GFX_kaiser_high_command_rex_inactive"
+					position = { x = 0 y = 0 }
+				}
+				effectButtonType = { 
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "rex_dead"
+					no_clicksound = yes
+					effect = "katzen_high_command_rex_dead"
+					spriteType = "GFX_kaiser_high_command_rex_dead"
+					position = { x = 0 y = 0 }
+				}
 			}
 			containerWindowType = { 
 				name = "strobel_box"
 				position = { x = 970 y = 349 }
-				effectButtonType = { #Strobel
+				size = { x = 77 y = 104 }
+				clipping = no
+
+				#Strobel
+				
+				effectButtonType = {
 					size = { x = 77 y = 104 }
 					scale = 1
 					name = "strobel_active"
@@ -916,11 +1151,34 @@ guiTypes = {
 					spriteType = "GFX_kaiser_high_command_strobel_active"
 					position = { x = 0 y = 0 }
 				}	
+				effectButtonType = {
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "strobel_inactive"
+					no_clicksound = yes
+					effect = "katzen_high_command_strobel_inactive"
+					spriteType = "GFX_kaiser_high_command_strobel_inactive"
+					position = { x = 0 y = 0 }
+				}
+				effectButtonType = {
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "strobel_dead"
+					no_clicksound = yes
+					effect = "katzen_high_command_strobel_dead"
+					spriteType = "GFX_kaiser_high_command_strobel_dead"
+					position = { x = 0 y = 0 }
+				}
 			}
 			containerWindowType = { 
 				name = "stron_box"
 				position = { x = 823 y = 212 }
-				effectButtonType = { #Stron
+				size = { x = 77 y = 104 }
+				clipping = no
+
+				#Stron
+
+				effectButtonType = { 
 					size = { x = 77 y = 104 }
 					scale = 1
 					name = "stron_active"
@@ -929,10 +1187,33 @@ guiTypes = {
 					spriteType = "GFX_kaiser_high_command_stron_active"
 					position = { x = 0 y = 0 }
 				}
+				effectButtonType = { 
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "stron_inactive"
+					no_clicksound = yes
+					effect = "katzen_high_command_stron_inactive"
+					spriteType = "GFX_kaiser_high_command_stron_inactive"
+					position = { x = 0 y = 0 }
+				}
+				effectButtonType = { 
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "stron_dead"
+					no_clicksound = yes
+					effect = "katzen_high_command_stron_dead"
+					spriteType = "GFX_kaiser_high_command_stron_dead"
+					position = { x = 0 y = 0 }
+				}
 			}
 			containerWindowType = { 
 				name = "ungers_box"
 				position = { x = 739 y = 212 }
+				size = { x = 77 y = 104 }
+				clipping = no
+				
+				#Ungers
+				
 				effectButtonType = { #Ungers
 					size = { x = 77 y = 104 }
 					scale = 1
@@ -940,6 +1221,24 @@ guiTypes = {
 					no_clicksound = yes
 					effect = "katzen_high_command_ungers_active"
 					spriteType = "GFX_kaiser_high_command_ungers_active"
+					position = { x = 0 y = 0 }
+				}
+				effectButtonType = { #Ungers
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "ungers_inactive"
+					no_clicksound = yes
+					effect = "katzen_high_command_ungers_inactive"
+					spriteType = "GFX_kaiser_high_command_ungers_inactive"
+					position = { x = 0 y = 0 }
+				}
+				effectButtonType = { #Ungers
+					size = { x = 77 y = 104 }
+					scale = 1
+					name = "ungers_dead"
+					no_clicksound = yes
+					effect = "katzen_high_command_ungers_dead"
+					spriteType = "GFX_kaiser_high_command_ungers_dead"
 					position = { x = 0 y = 0 }
 				}
 			}
