@@ -1,0 +1,16 @@
+#Empty U-Boat
+ship_design = { 
+	name = "Koko"
+	ship_size = katzen_submarine
+	section = {
+		template = "KATZEN_SPACE_SUBMARINE"
+		slot = "mid"
+		component = { slot = "AUX_UTILITY_1" template = "SUBMARINE_CLOAKING_1" }
+	}
+	
+	required_component = "KATSUB_FISSION_REACTOR"
+	required_component = "HYPER_DRIVE_1"
+	required_component = "KATCSUB_SHIP_THRUSTER_1"
+	required_component = "SENSOR_1"
+	required_component = "KATZEN_COMBAT_COMPUTER_DEFAULT"
+}

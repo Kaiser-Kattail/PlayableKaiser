@@ -459,9 +459,9 @@
  leader_trait_gunfur_desc:1 "This leader has fought on every type of soil and commanded every type of soldier. He blitzed his way through Solakia, overextended and away from supply lines and continued to thrive. His capacity for autonomy should not be understated."
  NAME_gunfur: "Heinrich Gunfur"
  misc.6.title: "$NAME_gunfur$"
- misc.6.desc: "§HA battle-scarred Katzen in surprisingly advanced power armor approaches the view screen. He is bedecked in dozens of awards from many Flusionian nations although the bulk comes from the Katzenartig Imperium. Their fur is greying yet they seem surprisingly young for a seemingly vaunted military leader.§!\n\n"I offer my services again to you, mein Kaiser."\n\n§HHe speaks in a rough and coarse accent of a northern Herzlander that has been long since flecked in radiation and wounds.§!"
+ misc.6.desc: "§HA battle-scarred Katzen in surprisingly advanced power armor approaches the view screen. He is bedecked in dozens of awards from many Flusionian nations although the bulk comes from the Katzenartig Imperium. Their fur is greying yet they seem surprisingly young for a seemingly vaunted military leader.§!\n\n\"I offer my services again to you, mein Kaiser.\"\n\n§HHe speaks in a rough and coarse accent of a northern Herzlander that has been long since flecked in radiation and wounds.§!"
  gunfurdesc: "This leader has fought on every type of soil and commanded every type of soldier. He blitzed his way through Solakia, overextended and away from supply lines and continued to thrive. His capacity for autonomy should not be understated."
- gunfur_catch_phrase: "§L"I blitzed through Solakia, and I hold faith that I could do it again."§!"
+ gunfur_catch_phrase: "§L\"I blitzed through Solakia, and I hold faith that I could do it again.\"§!"
  misc.6.a: "Who are you?"
  misc.6.a.response: "I am Größterpanzerkommandant Heinrich Gunfur of the Riesigerkatzenpanzer Dominiontracks and conqueror of billions."
  misc.6.b: "What does your army consist of?"
@@ -523,3 +523,7 @@
 
     mod_no_preset:0 "Not Using Preset"
     mod_no_preset_tt:0 "Cringe: §R+100%§!"
+ 
+ NAME_koko:0 "Koko Von Beumien"
+ misc.12.title:0 "$NAME_koko$"
+ misc.12.desc:0 ""
