@@ -21,8 +21,10 @@ planet_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
-		has_origin = origin_katzen
-		has_tradition = tr_flusion_finish
+		from = {
+			has_origin = origin_katzen
+			has_tradition = tr_flusion_finish
+		}
 	}
 	immediate = {
 		if = {

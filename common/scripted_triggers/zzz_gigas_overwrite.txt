@@ -1,0 +1,130 @@
+gigas_kilostructure_list = {
+	#[[$CONDITION$]]
+	or = {
+		# asteroid artillery
+		$CONDITION$ = asteroid_artillery_0
+		$CONDITION$ = asteroid_artillery_1
+		$CONDITION$ = asteroid_artillery_ruined
+		$CONDITION$ = asteroid_artillery_repaired
+		$CONDITION$ = asteroid_artillery_config
+
+		# asteroid manufactury
+		$CONDITION$ = asteroid_manufactory_0
+		$CONDITION$ = asteroid_manufactory_1
+		$CONDITION$ = asteroid_manufactory_2
+
+		# dynamic core ignitor
+		$CONDITION$ = terraform_barren_0
+		$CONDITION$ = terraform_barren_1
+		$CONDITION$ = terraform_barren_2
+		$CONDITION$ = terraform_barren_3
+		$CONDITION$ = terraform_barren_2_disabled
+		$CONDITION$ = terraform_barren_3_restored
+
+		# gateway
+		$CONDITION$ = gateway_0
+		$CONDITION$ = gateway_final
+		$CONDITION$ = gateway_ruined
+		$CONDITION$ = gateway_restored
+
+		# geothermal stabilizer
+		$CONDITION$ = terraform_molten_0
+		$CONDITION$ = terraform_molten_1
+		$CONDITION$ = terraform_molten_2
+		$CONDITION$ = terraform_molten_3
+
+		# G.L.U.E.
+		$CONDITION$ = terraform_shattered_0
+		$CONDITION$ = terraform_shattered_1
+		$CONDITION$ = terraform_shattered_2
+		$CONDITION$ = terraform_shattered_3
+		$CONDITION$ = terraform_shattered_4
+
+		# habitats
+		$CONDITION$ = habitat_0
+
+		# macroatmospheric stabilizer
+		$CONDITION$ = macro_stabilizer_0
+		$CONDITION$ = macro_stabilizer_1
+		$CONDITION$ = macro_stabilizer_2
+		$CONDITION$ = macro_stabilizer_3
+
+		# macroengineering test site
+		$CONDITION$ = macro_test_site_0
+		$CONDITION$ = macro_test_site_1
+		$CONDITION$ = macro_test_site_1_dismantle
+		$CONDITION$ = macro_test_site_ruined
+		$CONDITION$ = macro_test_site_restored
+
+		# orbital artificial ecosystem
+		$CONDITION$ = orbital_artificial_eco_0
+		$CONDITION$ = orbital_artificial_eco_1
+		$CONDITION$ = orbital_artificial_eco_1_dismantle
+		$CONDITION$ = orbital_artificial_eco_ruined
+		$CONDITION$ = orbital_artificial_eco_restored
+
+		# stellar particle accelerator
+		$CONDITION$ = particle_accelerator_0
+		$CONDITION$ = particle_accelerator_1
+		$CONDITION$ = particle_accelerator_1_manage
+		$CONDITION$ = particle_accelerator_ruined
+		$CONDITION$ = particle_accelerator_restored
+
+		# atmospheric purifier
+		$CONDITION$ = terraform_toxic_0
+		$CONDITION$ = terraform_toxic_1
+		$CONDITION$ = terraform_toxic_2
+		$CONDITION$ = terraform_toxic_3
+
+		# frameworld harvests - these shouldn't be considered any type of mega really, and don't use the mega eco category anyway
+		#$CONDITION$ = frameworld_harvest_0
+		#$CONDITION$ = frameworld_salvage_habitat_0
+
+		# frameworld outpost
+		$CONDITION$ = frameworld_outpost_0
+		$CONDITION$ = frameworld_outpost_marked_0
+		$CONDITION$ = frameworld_outpost_wreck_0
+		$CONDITION$ = frameworld_outpost_wreck_1
+
+		# planetary mass planet cracker
+		$CONDITION$ = moon_printer_orbital_mass_harvester_0
+		$CONDITION$ = moon_printer_orbital_mass_harvester_1
+
+		# QSO stuff
+		$CONDITION$ = quasi_stellar_gateway_off
+		$CONDITION$ = quasi_stellar_gateway_on
+		$CONDITION$ = quasi_stellar_marker_planet
+		$CONDITION$ = quasi_stellar_marker_planet_open
+		$CONDITION$ = quasi_stellar_marker_planet_firing
+		$CONDITION$ = quasi_stellar_marker_cluster
+		$CONDITION$ = quasi_stellar_marker_cluster_open
+		$CONDITION$ = quasi_stellar_marker_cluster_firing
+		$CONDITION$ = quasi_stellar_marker_star
+		$CONDITION$ = quasi_stellar_marker_star_open
+		$CONDITION$ = quasi_stellar_marker_star_firing
+
+		# L-Gate
+		$CONDITION$ = lgate_base
+
+		# Hyper-Relay
+		$CONDITION$ = hyper_relay
+		$CONDITION$ = hyper_relay_ruined
+		$CONDITION$ = hyper_relay_restored
+
+		# Orbital Ring
+		$CONDITION$ = orbital_ring
+		$CONDITION$ = orbital_ring_ruined
+		$CONDITION$ = orbital_ring_restored
+
+		# Orbital Arcology
+		$CONDITION$ = orbital_arcology_0
+		$CONDITION$ = orbital_arcology_1
+		$CONDITION$ = orbital_arcology_2
+		$CONDITION$ = orbital_arcology_3
+		$CONDITION$ = orbital_arcology_1_l
+		$CONDITION$ = orbital_arcology_1_m
+
+		$CONDITION$ = katzen_war_forge_0
+		$CONDITION$ = katzen_war_forge_1
+	}
+}
