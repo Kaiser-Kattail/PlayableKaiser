@@ -470,3 +470,182 @@ country_event = {
 		}
 	}
 }
+
+planet_event = {
+	id = misc.12
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					owner = { NOT = { has_origin = origin_katzen } }
+					is_colony = no
+				}
+			}
+			if = {
+				limit = { is_colony = yes }
+				save_event_target_as = destroyed_siegfried_world
+				owner = { country_event = { id = misc.13 } }
+				destroy_colony = yes
+			}
+			remove_all_buildings = yes
+			remove_all_districts = yes
+			change_pc = pc_katzenland
+			set_planet_entity = {
+				entity = katzenland_01_entity
+			}
+			add_modifier = {
+				modifier = "irradiated_desert_planet"
+				days = -1
+			}
+			while = {
+				count = 12
+				create_katzenland_deposits = yes
+			}
+			solar_system = {
+				remove_star_flag = siegfried_anti_jump_star
+				every_neighbor_system = { remove_star_flag = siegfried_anti_jump_star }
+			}
+		}
+		else = {
+			planet_event = { id = misc.12 days = 30 }
+		}
+	}
+}
+
+country_event = {
+	id = misc.13
+	title = "giga_katzen.121.name"
+	desc = "giga_katzen.121.desc"
+	is_triggered_only = yes
+	picture = GFX_evt_exploding_planet
+	show_sound = event_super_explosion
+	location = event_target:destroyed_siegfried_world
+
+
+	option = { #NOOOO
+		name = "giga_katzen.121.a"
+		custom_tooltip = "giga_katzen.121.a.tooltip"
+	}
+}
+
+country_event = {
+	id = misc.14
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		resource_stockpile_compare = {
+			resource = alloys
+			value >= 1000
+		}
+		any_planet_within_border = {
+			NOT = {
+				has_planet_flag = war_forge
+			}
+		}
+		has_edict = katzen_war_forge_construction
+	}
+	immediate = {
+		random_planet_within_border = {
+			limit = {
+				NOT = {
+					has_planet_flag = war_forge
+				}
+				is_star = no
+				OR = {
+					habitable_planet = yes
+					is_planet_class = pc_flusion_gaia_ecu
+					is_planet_class = pc_nuked
+				}
+				is_artificial = no
+				giga_habitable_structure = no
+			}
+			planet.owner = {
+				add_resource = {
+					alloys = -1000
+				}
+			}
+			solar_system = {
+				spawn_megastructure = {
+					type = katzen_war_forge_0
+					planet = prev
+					owner = space_owner
+				}
+				random_system_megastructure = {
+					limit = {
+						is_megastructure_type = katzen_war_forge_0
+						planet = { is_same_value = PREVPREVPREV } 
+					}
+					upgrade_megastructure_to = katzen_war_forge_1
+				}
+			}
+			set_planet_flag = war_forge
+		}
+	}
+}
+
+country_event = {
+	id = misc.15
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_katzen
+	}
+	immediate = {
+		every_megastructure = { #Delete any finished war forges in system with ONLY hostile ships
+			limit = {
+				is_megastructure_type = katzen_war_forge_1
+				solar_system = {
+					any_fleet_in_system = { #no hostiles
+						controller = {
+							OR = {
+								is_at_war_with = event_target:katzenartig
+								is_hostile = event_target:katzenartig
+							}
+						}
+					}
+					NOT = { #No katzens
+						any_fleet_in_system = {
+							owner = { has_origin = origin_katzen }
+						}
+					}
+					# space_owner = { #Doesn't own it
+					# 	NOT = { is_country_type = katzenartig_imperium }
+					# }
+				}
+			}
+			remove_megastructure = THIS
+			solar_system = {
+				save_event_target_as = war_forge_destroyed_system
+				every_system_planet = {
+					limit = { has_planet_flag = war_forge }
+					remove_planet_flag = war_forge
+				}
+				space_owner = { country_event = { id = misc.16 } }
+			}
+		}
+	}
+}
+
+country_event = { #Warforge destroyed
+	id = misc.16
+	title = "giga_katzen.031.name"
+	desc = "giga_katzen.031.desc"
+	picture = GFX_evt_large_explosion
+	show_sound = event_structural_collapse
+
+	location = from
+	is_triggered_only = yes
+
+	option = {
+		name = "giga_katzen.031.a"
+		add_resource = {
+			alloys = 500
+			minerals = 500
+			engineering_research = 1000
+			influence = 25
+		}
+	}
+}
