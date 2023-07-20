@@ -89,6 +89,7 @@ decision_siegfried_world = {
 			has_modifier = penal_colony
 			has_modifier = slave_colony
 			has_modifier = pm_wenkwort_custodian
+			is_planet_class = pc_player_siegfried_world
 		}
 	}
 
