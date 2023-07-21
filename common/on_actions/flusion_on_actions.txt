@@ -34,6 +34,12 @@ on_monthly_pulse_country = {
 	}
 }
 
+on_planet_bombarded = {
+	events = {
+		misc.17
+	}
+}
+
 on_terraforming_complete = {
 	events = {
 		flusion.3

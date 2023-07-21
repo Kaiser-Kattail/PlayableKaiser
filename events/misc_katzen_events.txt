@@ -649,3 +649,23 @@ country_event = { #Warforge destroyed
 		}
 	}
 }
+
+planet_event = {
+	id = misc.17
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_fleet_in_orbit = {
+			any_owned_ship = { is_ship_size = katzen_submarine }
+			owner = { has_origin = origin_katzen }
+		}
+	}
+
+	immediate = {
+		add_modifier = {
+			modifier = katzen_submarine_subspace_blockade
+			days = 3
+		}
+	}
+}
