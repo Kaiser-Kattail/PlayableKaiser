@@ -453,12 +453,11 @@ country_event = {
 			species = owner_main_species
 			name = "Loris Von Kattensbach"
 			gender = male
-			skill = 6
+			skill = 3
 			immortal = yes
 			traits = {
 				trait = katzen_trait_elite
 				trait = leader_trait_architectural_interest
-				trait = leader_trait_environmental_engineer
 				trait = leader_trait_army_veteran
 			}
 		}
