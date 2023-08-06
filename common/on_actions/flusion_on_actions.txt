@@ -29,6 +29,14 @@ on_monthly_pulse_country = {
 		conquest.8
 		misc.10
 		centrism.65
+		misc.15
+		misc.14
+	}
+}
+
+on_planet_bombarded = {
+	events = {
+		misc.17
 	}
 }
 

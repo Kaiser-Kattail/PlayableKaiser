@@ -213,3 +213,37 @@ katzen_submarine = {
 	required_component_set = "sensor_components"
 	required_component_set = "katzen_combat_computers"
 }
+
+katzen_player_warforge_platform = { #Katzen war forge platform
+	graphical_culture = no
+	entity = "katzen_warforge_platform_planet_entity"
+	max_speed = 0.0
+	acceleration = 0.0
+	rotation_speed = 0.0
+	modifier = {
+		ship_evasion_mult = -1
+		ship_armor_add = 5000
+		ship_shield_add = 1000
+	}
+	ship_modifier = {
+		ship_weapon_range_mult = 0.20
+		ship_fire_rate_mult = 0.10
+	}
+	max_hitpoints = 12000
+	size_multiplier = 4
+	fleet_slot_size = 4
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = yes
+	build_block_radius = 0
+	potential_country = {
+		has_origin = origin_katzen
+	}
+	
+	class = shipclass_military_station
+	enable_default_design = yes
+	is_designable = yes
+	required_component_set = "katzen_power_core"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+}

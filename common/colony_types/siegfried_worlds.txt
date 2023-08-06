@@ -1,0 +1,19 @@
+col_player_katzen_fortress = {
+	icon = GFX_colony_type_fortress
+
+	potential = {
+		exists = owner
+		is_planet_class = pc_player_siegfried_world
+		owner = {
+			has_origin = origin_katzen
+		}
+	}
+
+	planet_modifier = {
+		job_soldier_per_pop = 0.10
+	}
+
+	weight_modifier = {
+		base = 999
+	}
+}

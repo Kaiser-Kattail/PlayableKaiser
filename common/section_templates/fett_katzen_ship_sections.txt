@@ -197,3 +197,27 @@ ship_section_template = {
 		}
 	}
 }
+
+ship_section_template = {
+	key = "KATZEN_PLAYER_PLANET_PLATFORM"
+	ship_size = katzen_player_warforge_platform
+	fits_on_slot = "mid"
+	icon = "GFX_ship_part_core_mid"
+	entity = "katzen_warplatform_invisible_entity"
+
+	component_slot = { name = "MISSILE_01"			template = "medium_missile_turret"					locatorname = "medium_gun_01" } #Missiles
+	component_slot = { name = "MISSILE_02"			template = "medium_missile_turret"					locatorname = "medium_gun_05" }
+	component_slot = { name = "MISSILE_03"			template = "medium_missile_turret"					locatorname = "medium_gun_01" }
+	component_slot = { name = "MISSILE_04"			template = "medium_missile_turret"					locatorname = "medium_gun_05" }
+	component_slot = { name = "KINETIC_01"			template = "large_turret"							locatorname = "medium_gun_03" } #Kinetic
+	component_slot = { name = "KINETIC_02"			template = "large_turret"							locatorname = "medium_gun_03" }
+	component_slot = { name = "KINETIC_03"			template = "large_turret"							locatorname = "medium_gun_05" } #Kinetic
+	component_slot = { name = "KINETIC_04"			template = "large_turret"							locatorname = "medium_gun_04" }
+	component_slot = { name = "AUTOCANNON_01"		template = "small_turret"							locatorname = "medium_gun_05" } #Small guns
+	component_slot = { name = "AUTOCANNON_02"		template = "small_turret"							locatorname = "medium_gun_04" }
+	component_slot = { name = "AUTOCANNON_03"		template = "small_turret"							locatorname = "medium_gun_04" }
+	component_slot = { name = "AUTOCANNON_04"		template = "small_turret"							locatorname = "medium_gun_05" }
+
+	large_utility_slots = 5
+	aux_utility_slots = 2
+}

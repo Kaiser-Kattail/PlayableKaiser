@@ -193,10 +193,10 @@ country_event = {
 		}
 		 #SYmbies
 		 create_species = {
-			name = "Symbie"
-			plural = "Symbies"
-			class = HUM
-			portrait = humanoid_hp_06
+			name = "Wacegi"
+			plural = "Wacegis"
+			class = FUN
+			portrait = fun11
 			homeworld = this
 			traits = {
 				trait = trait_pc_continental_preference
@@ -225,10 +225,10 @@ country_event = {
 		}
 			#Ezics
 				create_species = {
-					name = "Arctic Ezicania"
-					plural = "Arctic Ezicanias"
+					name = "Zuspri"
+					plural = "Zuspri"
 					class = REP
-					portrait = rep2
+					portrait = rep10
 					homeworld = this
 					traits = {
 						trait = trait_pc_continental_preference
@@ -319,8 +319,8 @@ country_event = {
 			
 			#Zousanians
 			create_species = {
-				name = "Zousanian"
-				plural = "Zousanians"
+				name = "Linterian"
+				plural = "Linterians"
 				class = AVI
 				portrait = avi11
 				homeworld = this
@@ -337,8 +337,8 @@ country_event = {
 
 			#Cookians
 				create_species = {
-					name = "Cookian"
-					plural = "Cookians"
+					name = "Galletian"
+					plural = "Galletians"
 					class = FUN
 					portrait = fun1
 					homeworld = this
@@ -486,12 +486,11 @@ country_event = {
 			species = owner_main_species
 			name = "Loris Von Kattensbach"
 			gender = male
-			skill = 6
+			skill = 3
 			immortal = yes
 			traits = {
 				trait = katzen_trait_elite
 				trait = leader_trait_architectural_interest
-				trait = leader_trait_environmental_engineer
 				trait = leader_trait_army_veteran
 			}
 		}

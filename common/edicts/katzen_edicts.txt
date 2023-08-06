@@ -23,3 +23,28 @@ katzen_conquest_map = {
 	}
 	ai_weight = { weight = 0 }
 }
+
+katzen_war_forge_construction = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		upkeep = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+	}
+
+	potential = {
+		has_origin = origin_katzen
+		has_country_flag = unified_flusion
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

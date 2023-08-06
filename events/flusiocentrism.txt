@@ -135,7 +135,7 @@ country_event = {
 
 	immediate = {
 		if = {
-			limit = { has_origin = origin_katzen }
+			limit = { has_origin = origin_katzen has_tradition = tr_border_colonies}
 			every_owned_planet = {
 				limit = {
 					NOR = {
@@ -272,8 +272,9 @@ country_event = {
 	immediate = {
 		every_owned_planet = {
 			limit = {
-				NOT = {
+				NOR = {
 					has_planet_flag = playerflusion
+					has_modifier = no_relocation
 				}
 				count_owned_pop = {
 					count >= 15
@@ -322,8 +323,9 @@ country_event = {
 	immediate = {
 		every_owned_planet = {
 			limit = {
-				NOT = {
+				NOR = {
 					has_planet_flag = playerflusion
+					has_modifier = no_relocation
 				}
 				count_owned_pop = {
 					count >= 15
@@ -373,8 +375,9 @@ country_event = {
 	immediate = {
 		every_owned_planet = {
 			limit = {
-				NOT = {
+				NOR = {
 					has_planet_flag = playerflusion
+					has_modifier = no_relocation
 				}
 				count_owned_pop = {
 					count >= 15
