@@ -327,7 +327,7 @@
     edict_katzen_leader_upgrade:0 "Leader Katzenification"
     edict_katzen_leader_upgrade_desc:0 "Our leaders are national treasures, and should be treated as such. The very latest in anti-aging technology and special training will be made available to choice leaders."
 
-    edict_katzen_conquest_map:0 "Katzenvereinigungsbüro"
+    edict_katzen_conquest_map:0 "Contact the Katzenvereinigungsbüro"
     edict_katzen_conquest_map_desc:0 "Access the Flusionian Conquest Map"
 
     stop_eating_naval_cap_you_hecker:0 "Flusionian Maintenance"
@@ -507,6 +507,20 @@
  pvz_cattail_desc:0 "Changes the Kaiser's appearance to his classic form."
  derega_kaiser:0 "Canon Kaiser"
  derega_kaiser_desc:0 "Changes the Kaiser's appearance to his more 'normal' form."
+
+    kaiser_docs_note:0 "\n\n§YOrigin documentation can be found in the Situation Log.§!"
+
+	kaiser_docs_chain_title:0 "Katzenartig Imperium Documentation"
+	kaiser_docs_chain_desc:0 "The §YKatzenartig Imperium§! needs no introduction, but the mechanics incuded in this origin do. With unique technologies and bonuses available, the Katzenartig Imperium will easily become one of the military superpowers of the galaxy. If it will meet its match, remains to be seen. \n\nSee subcategories in this menu for additional details."
+
+	kaiser_docs_1:0 "1. Unification"
+	kaiser_docs_1_desc:0 "Flusion must first be unified in order for our Kaiser's plans for the rest of the galaxy to be achieved.\n\nThe §YKatzenvereinigungsbüro§! will be the first step in our Unification. There you will be able to engage in diplomacy with the rest of the Flusionian nations. As you conquest, a World Tension situation will progress. If it completes, the remaining Flusionian states will all declare war on you, so be careful. After unification has been achieved, we may then set our eyes on the stars and the other empires that await our unity."
+
+	kaiser_docs_2:0 "2. Unique Ships"
+	kaiser_docs_2_desc:0 "Thanks to Katzen ingenuity, we have unique ships at our disposal.\n\nThey all have unique niches to fill, so our navy will be quite capable combined with regular ships. There are four unique ships available to us:\n\n§YKatzenweltraumpanzers§!: Small, fast space tanks with a large railgun at the front.\n§HUnlocked by§! £engineering_research£ §Y$tech_destroyers$§!\n\n§YLeerekatzenbombers§!: Bombers with plenty of torpedo slots.\n§HUnlocked by§! £engineering_research£ §Y$tech_cruisers$§!\n\n§YKatzenkreuzers§!: A jack of all trades cruiser, with a hanger and even a couple torpedos.\n§HUnlocked by§! £engineering_research£ §Y$tech_battleships$§!\n\n§YUnterraumboots§!: Torpedo boats with powerful cloaking capabilities.\n§HUnlocked by§! £physics_research£ §Y$tech_cloaking_1$§!"
+
+    kaiser_docs_3:0 "3. Celestial Projects"
+	kaiser_docs_3_desc:0 "Projects like §YMondkanone§!, §YDominance§!, and §YHöchstedominanz§! are all started through §YAgendas§!. When finished, a situation will start to allow the construction of our celestial weapons.\n\nProject §YMondkanone§!: £alloys£ 10,000 Alloys required to complete\n\nProject §YDominance§!: £alloys£ 10,000 Alloys required to complete\n\nProject §YHöchstedominanz§!: £alloys£ 240,000 Alloys required to complete\n\nIn the case of a celestial weapon's destruction, a new situation may be started with a decision at any planet."
 
     misc.11.title:0 "Aeternite Knowledge"
     misc.11.desc:0 "§RGRRR ANGRY NO LOC§!"

@@ -46,6 +46,39 @@ country_event = {
 	}
 	immediate = {
 		save_global_event_target_as = katzenartig
+
+		#DOCS
+
+		begin_event_chain = {
+			event_chain = kaiser_docs_chain
+		}
+
+		create_point_of_interest = {
+			id = kaiser_docs_chain.1
+			name = "kaiser_docs_1"
+			desc = "kaiser_docs_1_desc"
+			event_chain = "kaiser_docs_chain"
+			location = capital_scope
+		}
+
+		create_point_of_interest = {
+			id = kaiser_docs_chain.2
+			name = "kaiser_docs_2"
+			desc = "kaiser_docs_2_desc"
+			event_chain = "kaiser_docs_chain"
+			location = capital_scope
+		}
+
+		create_point_of_interest = {
+			id = kaiser_docs_chain.3
+			name = "kaiser_docs_3"
+			desc = "kaiser_docs_3_desc"
+			event_chain = "kaiser_docs_chain"
+			location = capital_scope
+		}
+
+		#END DOCS
+
 		add_modifier = {
 			modifier = no_ftl_capability days = -1
 		}
