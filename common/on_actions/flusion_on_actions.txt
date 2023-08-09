@@ -2,7 +2,6 @@ on_game_start = {
 	events = {
 		flusion.1
 		flusion.43
-		high_command.1
 	}
 }
 
@@ -53,12 +52,6 @@ on_planet_transfer = {		events = { centrism.4 }}
 on_leader_death = {
 	events = {
 		katzen.3
-	}
-}
-
-on_tech_increased = { 
-	events = { 
-		misc.51
 	}
 }
 
