@@ -530,3 +530,37 @@
  HD_loris_desc:0 "Changes Loris's appearance to his more normal and high definition form."
  cartoon_loris:0 "Cartoon Loris"
  cartoon_loris_desc:0 "Changes Loris's appearance to his classic and VERY SERIOUSINGS cartoon form."
+
+ building_siegfried_stronghold:0 "Siegfried Fort Complex"
+ building_siegfried_stronghold_desc:0 "The Kaiser has ordered that designs for excessive fortification networks be utilized across the empire. It should now be possible to extend these defences to cover the whole planet."
+
+ building_player_siegfried_centcom:0 "Siegfried Central Command"
+ building_player_siegfried_centcom_desc:0 "This vast network of reinforced bunkers houses the administrative heart of a Katzen Siegfried World, ensuring its defenders are as efficient as possible."
+
+ col_player_katzen_fortress:0 "Katzen Fortress World"
+ col_player_katzen_fortress_desc:0 "The Katzens have dedicated this planet to becoming an impenetrable fortress."
+ pc_player_siegfried_world:0 "Siegfried World"
+ pc_player_siegfried_world_desc:0 "A fortress world of Katzen design, the Siegfried World is designed to be a major roadblock to any hostile empire attempting to reach the heart of the Katzenartig Imperium. These mighty fortifications are rigged to completely detonate if ever seized by enemy forces and as such are only staffed by the most nationalistic and dedicated of Katzens."
+
+ decision_siegfried_world:0 "Construct Siegfried World"
+ decision_siegfried_world_desc:0 "We can expand the Siegfried fortification network to be planet spanning, in order to create a bastion against hostile invasion."
+ need_siegfried_stronghold:0 "£trigger_no£ We need a §YSiegfried Fort Complex§! to expand the defenses of this world!"
+
+ decision_siegfried_anti_jump_on:0 "Activate Siegfried Disruptor System"
+ decision_siegfried_anti_jump_on_desc:0 "Activates the disruption capabilities of the Siegfried world."
+
+ decision_siegfried_anti_jump_off:0 "Deactivate Siegfried Disruptor System"
+ decision_siegfried_anti_jump_off_desc:0 "Disables the disruption capabilities of the Siegfried world."
+
+ edict_katzen_war_forge_construction:0 "Automate Warforge Construction"
+ edict_katzen_war_forge_construction_desc:0 "Our workers will automatically seek out planets that don't have war forges and start constructing them, one by one."
+
+ decision_demotion_modifier:0 "Activate Economic Assistance"
+ decision_demotion_modifier_desc:0 "Enforces rapid class demotion for one month, in order to promote efficiency."
+
+ decision_toggle_relocation: "Toggle Relocation Blocker"
+ decision_toggle_relocation_desc: "Toggles whether relocation is currently allowed or not."
+ no_relocation:0 "Relocation Disallowed"
+
+ decision_depopulate_planet:0 "Migrate Planet"
+ decision_depopulate_planet_desc:0 "Migrates all of the population of this world to Flusion."
