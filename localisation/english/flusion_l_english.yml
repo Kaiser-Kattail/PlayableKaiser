@@ -473,6 +473,22 @@
  misc.6.c.response: "I am the physical representation of Katzen militarism and I have done so since I was born and I will continue to do so for as long as I draw breath."
  misc.6.hire_custom_tooltip: "§Y$NAME_gunfur$§! joins our empire as a §HLeader§!."
 
+
+ leader_trait_neumeyer:0 "Neumeyer's Order"
+ leader_trait_neumeyer_desc:0 "This leader promotes a philosophy of his own design - Neumeyerism. Along with bolstering planetary control through military rule, he alots additional influence to law enforcement, being made to serve as his personal lackeys."
+ NAME_neumeyer: "Emeownuel Neumeyer"
+ misc.18.title: "$NAME_neumeyer$"
+ misc.18.desc: "§HA well dressed, authoritative Katzen enters view. Sunglasses adorn his face, and after a brief moment they are taken off. He looks rather haughty, and finally looks at the screen to face the Kaiser.§!\n\n"Greetings."\n\n§HHis voice suggests a tyrant, a rather cold and disinterested tone.§!\n\n"I am a recent promotion to the rank of Katzgouverneur. What is my assignment?""
+ neumeyerdesc: "Neumeyer is an oppressive autocrat, enforcing his rule through the liberal use of truncheons and military force."
+ neumeyer_catch_phrase: "§L"Together, the unterskatzen will know their place."§!"
+ misc.18.a: "Who are you?"
+ misc.18.a.response: "I am Katzgouverneur Emeownuel Neumeyer, as I'm sure you already know."
+ misc.18.b: "What are you qualified to do?"
+ misc.18.b.response: "I can enforce the rule of law on any planet you assign me to. The lessers need to be thoroughly controlled."
+ misc.18.c: "You don't seem fond of foreigners."
+ misc.18.c.response: "Why should I be? They bring anarchy and disorder to our carefully constructed utopia. With my skillset, we can ensure they never cause us problems."
+ misc.18.hire_custom_tooltip: "§Y$NAME_neumeyer$§! joins our empire as a §HLeader§!."
+
  central_instability: "Flusiocentric Instability"
  central_instability_desc: "This world is suffering governmental breakdown due to an overly large population. We may need to move some pops to Flusion."
 

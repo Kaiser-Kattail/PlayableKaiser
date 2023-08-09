@@ -202,6 +202,9 @@ country_event = {
 	picture = GFX_leader_recruitment_bg_renowned
 	is_triggered_only = yes
 	fire_only_once = yes
+	trigger = {
+		has_paragon_dlc = yes
+	}
 
 	event_window_type = leader_recruit
 
@@ -278,7 +281,6 @@ country_event = {
 							army_type = dominion_tracks
 							army_name = "NAME_dominiontracks"
 							ship_name = "NAME_dominiontracks"
-							
 						}
 						 
 					}
@@ -666,6 +668,87 @@ planet_event = {
 		add_modifier = {
 			modifier = katzen_submarine_subspace_blockade
 			days = 3
+		}
+	}
+}
+
+country_event = {
+	id = misc.18
+	title = misc.18.title
+	desc = misc.18.desc
+	show_sound = par_portrait_14
+	picture = GFX_leader_recruitment_bg_renowned
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_paragon_dlc = yes
+	}
+
+	event_window_type = leader_recruit
+
+	immediate = {
+		ethic_leader_creator = {
+			SPECIES_CLASS = MAM
+			LEADER_PORTRAIT = mam14
+			CLASS = governor
+			NAME = NAME_neumeyer
+			LEVEL = 4
+			GENDER = male
+			IMMORTAL = no
+			ETHIC = xenophobe
+			DESC = neumeyerdesc
+			CATCH_PHRASE = neumeyer_catch_phrase
+		}
+		last_created_leader = {
+			add_trait = subclass_governor_economist
+			add_trait = leader_trait_neumeyer
+			add_trait = katzen_trait_elite
+			add_trait = leader_trait_enlister
+			add_trait = leader_trait_embezzler
+			set_age = 28
+			save_global_event_target_as = neumeyer
+		}
+	}
+
+	picture_event_data = {
+		portrait = event_target:ethic_leader
+		room = ethic_spaceship_room
+	}
+
+	option = {
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:neumeyer = {
+				kill_leader = {
+					flag = neumeyer show_notification = no
+				}
+			}
+		}
+	}
+	option = {
+		name = misc.18.a
+		response_text = misc.18.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = misc.18.b
+		response_text = misc.18.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = misc.18.c
+		response_text = misc.18.c.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = HIRE
+		tag = hire_leader
+		custom_tooltip = misc.18.hire_custom_tooltip
+		hidden_effect = {
+			ethic_leader_hire_effect = {
+				GLOBAL_EVENT_TARGET = neumeyer
+			}
 		}
 	}
 }
