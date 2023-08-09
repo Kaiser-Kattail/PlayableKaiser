@@ -1,0 +1,202 @@
+high_command_set_active = { #PARAM = leader key
+	remove_country_flag = $PARAM$_inactive
+	remove_country_flag = $PARAM$_dead
+	set_country_flag = $PARAM$_active
+}
+high_command_set_inactive = { 
+	remove_country_flag = $PARAM$_active
+	remove_country_flag = $PARAM$_dead
+	set_country_flag = $PARAM$_inactive
+}
+high_command_set_dead = { 
+	remove_country_flag = $PARAM$_inactive
+	remove_country_flag = $PARAM$_active
+	set_country_flag = $PARAM$_dead
+}
+
+#The following effect is used to drastically reduce the code needed to define leader portaits
+#Simply fire the effect with the desired species of the leader, portrait and the species class and the portrait will be available to be referenced with event_target:$LEADER$_portrait
+# Example code for generating the Kayzoo himself
+
+# define_katzen_high_command_portrait = { SPECIES = IMPK LEADER = kaisser CLASS = FLSN }
+
+#Param List
+# SPECIES: 										LEADER:								CLASS: 
+# IMPK = imperial Katzen (AKA kaiser) 			kaiser			katzmann			FLSN = Flusionian
+# KATZ = Katzen									loris			lilith				FLSN_ROB = Flusonian Robot e.g. soulbots
+# SLBT = Soulbot								douclaw			novasum				FLSN_LIT = Flusionian Lithoid			
+# HARN = Haranian								meolson			pawlbert			FLSN_MCH = Flusionian Machine
+# LAUR = Laurnaise								steve			tarynn				
+# SYMB = Symbies								wolfgang		birch				
+# YINJ = Yinjites								dietrich		garf
+# EZIC = Ezicanians								flopparnold		katzhaum
+# KRNK = Kronks									itch			rex
+# SOLK = Solakians								gunfur			strobel
+# MERC = Mercurians								katzsauffe		stron
+# RAVK = Ravkans								kimitz			ungers
+# ZSAN = Zousanians								koko			kaiser_pvz
+# COOK = Cookians								meorwin			loris_cartoon
+# DROG = Droog									pawllas			eloworm
+# CYAT = Cyat									pawtton
+
+define_katzen_high_command_portrait = { 
+	create_species = {
+		name = LEADER_PORTRAIT_SPECIES_NAME_$SPECIES$
+		plural = LEADER_PORTRAIT_SPECIES_PLURAL_$SPECIES$
+		class = $CLASS$
+		portrait = $LEADER$
+		homeworld = event_target:gigaflusion
+		effect = { 
+			save_global_event_target_as = $LEADER$_portrait
+			set_global_flag = $LEADER$_portrait_defined
+			#save_global_event_target_as = portrait_species_pending_traits
+			set_species_flag = $SPECIES$_traits
+
+			if = { 
+				limit = { has_species_flag = IMPK_traits } 
+				change_species_characteristics = { 
+					add_trait = trait_pc_continental_preference
+					add_trait = trait_quick_learners
+					add_trait = trait_talented
+					add_trait = trait_venerable
+				}
+			}
+			if = { 
+				limit = { has_species_flag = KATZ_traits }
+				change_species_characteristics = {
+					add_trait = trait_pc_continental_preference
+					add_trait = katzen_trait_martial_free
+					add_trait = trait_adaptive
+					add_trait = trait_quick_learners
+					add_trait = trait_traditional
+					add_trait = trait_sedentary
+					add_trait = trait_wasteful
+				}
+			}
+			if = { 
+				limit = { has_species_flag = SLBT_traits }
+				change_species_characteristics = {
+					add_trait = trait_mechanical
+					add_trait = trait_robot_enhanced_memory
+					add_trait = trait_robot_learning_algorithms
+					add_trait = trait_robot_luxurious
+					add_trait = trait_robot_custom_made
+				}
+			}
+			if = { 
+				limit = { has_species_flag = HARN_traits }
+				change_species_characteristics = {
+					add_trait = trait_pc_continental_preference
+					add_trait = trait_intelligent
+					add_trait = trait_decadent
+				}
+			}
+			if = { 
+				limit = { has_species_flag = LAUR_traits }
+				change_species_characteristics = {
+					add_trait = trait_pc_continental_preference
+					add_trait = trait_rapid_breeders
+				}
+			}
+			if = { 
+				limit = { has_species_flag = SYMB_traits }
+				change_species_characteristics = { 
+					add_trait = trait_pc_continental_preference
+					add_trait = trait_strong
+					add_trait = trait_nomadic	
+				}
+			}
+			if = { 
+				limit = { has_species_flag = YINJ_traits }
+				change_species_characteristics = {
+					add_trait = trait_pc_continental_preference
+					add_trait = trait_industrious
+					add_trait = trait_sedentary
+				}
+			}
+			if = { 
+				limit = { has_species_flag = EZIC_traits }
+				change_species_characteristics = {
+					add_trait = trait_pc_continental_preference
+					add_trait = trait_venerable
+					add_trait = trait_adaptive
+					add_trait = trait_strong
+					add_trait = trait_slow_learners
+					add_trait = trait_quarrelsome
+					add_trait = trait_slow_learners
+				}
+			}
+			if = {
+				limit = { has_species_flag = KRNK_traits }
+				change_species_characteristics = {
+					add_trait = trait_pc_continental_preference
+					add_trait = trait_industrious
+					add_trait = trait_rapid_breeders
+					add_trait = trait_sedentary
+					add_trait = trait_repugnant
+				}
+			}
+			if = {
+				limit = { has_species_flag = SOLK_traits }
+				change_species_characteristics = {
+					add_trait = trait_pc_continental_preference
+					add_trait = trait_intelligent
+					add_trait = trait_charismatic
+					add_trait = trait_resilient
+					add_trait = trait_wasteful
+				}
+			}
+			if = { 
+				limit = { has_species_flag = MERC_traits }
+				change_species_characteristics = {
+					add_trait = trait_pc_continental_preference
+					add_trait = trait_intelligent
+					add_trait = trait_sedentary
+					add_trait = trait_wasteful
+				}
+			}
+			if = { 
+				limit = { has_species_flag = RAVK_traits }
+				change_species_characteristics = {
+					add_trait = trait_pc_continental_preference
+					add_trait = trait_intelligent
+					add_trait = trait_sedentary
+					add_trait = trait_wasteful
+				}
+			}
+			if = {
+				limit = { has_species_flag = ZSAN_traits }
+				change_species_characteristics = {
+					add_trait = trait_pc_continental_preference
+					add_trait = trait_talented
+					add_trait = trait_traditional
+					add_trait = trait_decadent
+				}
+			}
+			if = { 
+				limit = { has_species_flag = COOK_traits }
+				change_species_characteristics = {
+					add_trait = trait_pc_continental_preference
+					add_trait = trait_delicious
+					add_trait = trait_erudite
+					add_trait = trait_wasteful
+				}
+			}
+			if = {
+				limit = { has_species_flag = DROG_traits }
+				change_species_characteristics = {
+					add_trait = trait_pc_continental_preference
+					add_trait = trait_strong
+				}
+			}
+			if = { 
+				limit = { has_species_flag = CYAT_traits }
+				change_species_characteristics = {
+					add_trait = trait_pc_continental_preference
+					add_trait = trait_strong
+				}
+			}
+			remove_species_flag = $SPECIES$_trait
+		}
+	}
+}

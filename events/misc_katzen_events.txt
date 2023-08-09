@@ -326,7 +326,7 @@ country_event = {
 				}
 			}
 		}
-
+		
 		# If attacking army has a leader with Crusader trait, award Unity.
 		if = {
 			limit = { exists = event_target:gunfur_loot }
@@ -666,6 +666,40 @@ planet_event = {
 		add_modifier = {
 			modifier = katzen_submarine_subspace_blockade
 			days = 3
+		}
+	}
+}
+
+country_event = {
+	id = misc.18
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_katzen
+		has_policy_flag = HD_loris
+	}
+
+	immediate = {
+		event_target:loris = {
+			change_species = event_target:loris_portrait_HD
+			change_leader_portrait = event_target:loris_portrait_HD
+		}
+	}
+}
+
+country_event = {
+	id = misc.19
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_katzen
+		has_policy_flag = cartoon_loris
+	}
+
+	immediate = {
+		event_target:loris = {
+			change_species = event_target:loris_portrait_cartoon
+			change_leader_portrait = event_target:loris_portrait_cartoon
 		}
 	}
 }
