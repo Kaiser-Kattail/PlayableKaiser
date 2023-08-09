@@ -406,7 +406,7 @@ utility_component_template = {
 	size_restriction = { katzen_submarine }
 	component_set = "katzen_combat_computers"
 	ship_behavior = "giga_katzen_submarine"
-	prerequisites = { "tech_combat_computers_1" "tech_torpedoes_1" }
+	prerequisites = { "tech_torpedoes_1" }
 	ai_tags = { explosive explosive_stealth }
 	ai_tag_weight = 0
 
@@ -420,7 +420,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATZEN_BOMBER_COMPUTER"
+	key = "KATZEN_BOMBER_COMPUTER_BASIC"
 	size = small
 	icon = "GFX_ship_part_computer_swarm_basic"
 	icon_frame = 1
@@ -467,12 +467,12 @@ utility_component_template = {
 	size_restriction = { katzen_bomber }
 	component_set = "katzen_combat_computers"
 	ship_behavior = "torpedo"
-	prerequisites = { "tech_combat_computers_1" "tech_torpedoes_1" }
+	prerequisites = { "tech_combat_computers_2" "tech_torpedoes_1" }
 	ai_tags = { explosive explosive_stealth }
 	ai_tag_weight = 0
 
 	modifier = {
-		weapon_type_explosive_weapon_damage_mult = 0.05
+		weapon_type_explosive_weapon_damage_mult = 0.10
 	}
 
 	ai_weight = {

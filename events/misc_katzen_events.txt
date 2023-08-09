@@ -576,7 +576,7 @@ country_event = {
 				random_system_megastructure = {
 					limit = {
 						is_megastructure_type = katzen_war_forge_0
-						planet = { is_same_value = PREVPREVPREV }
+						planet = { is_same_value = PREVPREVPREV } 
 					}
 					upgrade_megastructure_to = katzen_war_forge_1
 				}

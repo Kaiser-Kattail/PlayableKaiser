@@ -1089,7 +1089,7 @@ country_event = {
 	}
 }
 
-country_event = { #work you heck
+country_event = { #work mfer
 	id = conquest.8
 	hide_window = yes
 	is_triggered_only = yes

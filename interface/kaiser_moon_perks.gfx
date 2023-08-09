@@ -125,4 +125,9 @@ spriteTypes = {
 		name = "GFX_katzen_war_forge_1_outliner_icon"
 		textureFile = "gfx/interface/icons/megastructures/katzen_warforge.dds"
 	}
+
+	spriteType = {
+		name = "GFX_katzen_war_forge_0_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/katzen_warforge.dds"
+	}
 }

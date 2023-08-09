@@ -27,8 +27,8 @@
    flunat.0101.b.response:0 "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you."
    flunat.0101.c.response:0 "We knew this day would come. We will fight you until the last $NAME_Solakian$ falls. See you on the battlefield, Kattail."
   #Cookian Steppes
-   NAME_Cookies:0 "Cookian Steppes"
-   NAME_Cookie:0 "Cookian"
+   NAME_Cookies:0 "Galletian Technocracy"
+   NAME_Cookie:0 "Galletian"
  
    flunat.0201.name:0 "$NAME_Cookies$ - §Y[cookie_flunat.GetRulerName]§!"
    flunat.0201a.desc:0 "There is science to be done and experiments to be processed. We have little time to waste with you nukeslingers."
@@ -73,8 +73,8 @@
    flunat.0401.c.response:0 "This is... a most uncouth act. Why is it that you insist on spreading such suffering? This can only end badly."
   #Zousa
 
-    NAME_Zousans:0 "Zousa"
-    NAME_Zousa:0 "Zousan"
+    NAME_Zousans:0 "Linteria"
+    NAME_Zousa:0 "Linterians"
     flunat.0501.name:0 "$NAME_Zousans$ - §Y[zousan_flunat.GetRulerName]§!"
    flunat.0501a.desc:0 "Go away."
    flunat.0501b.desc:0 "We do not care for your kind."
@@ -97,8 +97,8 @@
    flunat.0601.c.response:0 "..."
   #Ezics
 
-    NAME_Ezics:0 "Ezicanian Empire"
-    NAME_Ezic:0 "Ezicanian"
+    NAME_Ezics:0 "Zuspri Intermarium"
+    NAME_Ezic:0 "Zuspris"
     flunat.0701.name:0 "$NAME_Ezics$ - §Y[ezic_flunat.GetRulerName]§!"
    flunat.0701a.desc:0 "Your very existence is a stain upon this universe."
    flunat.0701b.desc:0 "It was the Rapturians yesterday, it will be us tomorrow, am I correct?"
@@ -157,9 +157,9 @@
    flunat.01101.c.response:0 "So be it! Let this glorious combat determine who Flusion's greatest warrior actually is!"
 #Symbyland
 
-    NAME_Symbies:0 "Symbyland"
-    NAME_Symbiess:0 "Symbie"
-    flunat.01201.name:0 "Symbyland -  §Y[symbie_flunat.GetRulerName]§!"
+    NAME_Symbies:0 "Puffyland Republic"
+    NAME_Symbiess:0 "Wacegi"
+    flunat.01201.name:0 "Puffyland Republic -  §Y[symbie_flunat.GetRulerName]§!"
    flunat.01201a.desc:0 "What do you want? Have you not bombed us enough?"
    flunat.01201b.desc:0 "Granted, you liberated us from Godred's grasp... but at what cost?"
    flunat.01201c.desc:0 "Half of our country is nothing but radioactive wasteland thanks to your kind!"

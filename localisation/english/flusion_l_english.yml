@@ -326,7 +326,10 @@
    
     edict_katzen_leader_upgrade:0 "Leader Katzenification"
     edict_katzen_leader_upgrade_desc:0 "Our leaders are national treasures, and should be treated as such. The very latest in anti-aging technology and special training will be made available to choice leaders."
-   
+
+    edict_katzen_conquest_map:0 "Katzenvereinigungsbüro"
+    edict_katzen_conquest_map_desc:0 "Access the Flusionian Conquest Map"
+
     stop_eating_naval_cap_you_hecker:0 "Flusionian Maintenance"
     stop_eating_naval_cap_you_hecker_desc:0 "Project Mondkanone is specially maintained, and as such provides its own naval capacity."
    
@@ -455,7 +458,7 @@
  dominion_tracks_desc:0 "Dominiontracks was one of the earliest Riesigerkatzenpanzer designs the Kaiser made and thus lacks many items for a more comfortable or even efficient warmongering experience. However, its austerity makes it even more of a diabolical war machine than other tanks of its kind."
 
  leader_trait_gunfur:0 "Ole Gunfur"
- leader_trait_gunfur_effect:1 "$ARMY_EFFECTS_TXT$ §EOn Winning§! §YGround Invasion§!:\n$t$Resources per associated £district£ §YDistrict§!:\n$tt$ §G+25§! §YBasic Resources§! £energy£ £food£\n$tt$ §G+100§! £minerals£ §YMinerals§!\n$tt$ §G+100§! £alloys£ §YAlloys§!"
+ leader_trait_gunfur_effect: "$ARMY_EFFECTS_TXT$:\n$t$Every Enemy Army Killed in Combat:\n$tt$§Y[Root.Owner.GetName]§!:\n$ttt$£energy£ £minerals£ £food£ §YBasic Resources§!: §G+25§!\n$ttt$£alloys£ §YAlloys§!: §G+10§!"
  leader_trait_gunfur_desc:1 "This leader has fought on every type of soil and commanded every type of soldier. He blitzed his way through Solakia, overextended and away from supply lines and continued to thrive. His capacity for autonomy should not be understated."
  NAME_gunfur: "Heinrich Gunfur"
  misc.6.title: "$NAME_gunfur$"
@@ -531,11 +534,15 @@
  cartoon_loris:0 "Cartoon Loris"
  cartoon_loris_desc:0 "Changes Loris's appearance to his classic and VERY SERIOUSINGS cartoon form."
 
+
  building_siegfried_stronghold:0 "Siegfried Fort Complex"
  building_siegfried_stronghold_desc:0 "The Kaiser has ordered that designs for excessive fortification networks be utilized across the empire. It should now be possible to extend these defences to cover the whole planet."
 
  building_player_siegfried_centcom:0 "Siegfried Central Command"
  building_player_siegfried_centcom_desc:0 "This vast network of reinforced bunkers houses the administrative heart of a Katzen Siegfried World, ensuring its defenders are as efficient as possible."
+
+building_player_siegfried_centcom:0 "Siegfried Central Command"
+building_player_siegfried_centcom_desc:0 "This vast network of reinforced bunkers houses the administrative heart of a Katzen Siegfried World, ensuring its defenders are as efficient as possible."
 
  col_player_katzen_fortress:0 "Katzen Fortress World"
  col_player_katzen_fortress_desc:0 "The Katzens have dedicated this planet to becoming an impenetrable fortress."

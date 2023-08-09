@@ -113,6 +113,7 @@ tr_flusion_adopt = {
 tr_flusion_finish = {
 	# the refund effect is implemented elsewhere
 	on_enabled = {
+		set_country_flag = finished_flusiocentrism
 		if = {
 			limit = {
 				NOT = {
@@ -210,7 +211,6 @@ tr_flusion_finish = {
 				progress = 0.25
 			}
 		}
-		set_country_flag = finished_flusiocentrism
 	}
 	custom_tooltip = "tr_flusion_finish_effect"
 	modifier = {
