@@ -196,7 +196,7 @@ loris_appearance = {
 		on_enabled = {
 			hidden_effect = {
 				country_event = {
-					id = misc.13
+					id = misc.18
 				}
 			}
 		}
@@ -214,7 +214,7 @@ loris_appearance = {
 		on_enabled = {
 			hidden_effect = {
 				country_event = {
-					id = misc.14
+					id = misc.19
 				}
 			}
 		}

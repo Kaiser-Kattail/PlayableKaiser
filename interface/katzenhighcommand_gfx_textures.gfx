@@ -125,15 +125,11 @@ spriteTypes = {
 	spriteType = { name = "GFX_kaiser_high_command_ungers_dead" 					textureFile = "gfx/interface/katzen_high_command_ui/characters/economy/ungers_dead.dds" 						}
 
 	#Alternative character sprites
-	spriteType = { name = "GFX_kaiser_high_command_kaiser_cattail_active"			textureFile = "gfx/interface/katzen_high_command_ui/characters/kaiser_cattail_active.dds" 						}
-	spriteType = { name = "GFX_kaiser_high_command_kaiser_cattail_inactive"			textureFile = "gfx/interface/katzen_high_command_ui/characters/kaiser_cattail_inactive.dds" 					}
-	spriteType = { name = "GFX_kaiser_high_command_kaiser_cattail_dead"				textureFile = "gfx/interface/katzen_high_command_ui/characters/kaiser_cattail_dead.dds" 						}
+	spriteType = { name = "GFX_kaiser_high_command_kaiser_cattail_active"			textureFile = "gfx/interface/katzen_high_command_ui/characters/silly/kaiser_cattail_active.dds" 				}
+	spriteType = { name = "GFX_kaiser_high_command_kaiser_cattail_inactive"			textureFile = "gfx/interface/katzen_high_command_ui/characters/silly/kaiser_cattail_inactive.dds" 				}
+	spriteType = { name = "GFX_kaiser_high_command_kaiser_cattail_dead"				textureFile = "gfx/interface/katzen_high_command_ui/characters/silly/kaiser_cattail_dead.dds" 					}
 	
-	spriteType = { name = "GFX_kaiser_high_command_loris_silly_active"				textureFile = "gfx/interface/katzen_high_command_ui/characters/loris_silly_active.dds" 							}
-	spriteType = { name = "GFX_kaiser_high_command_loris_silly_inactive"			textureFile = "gfx/interface/katzen_high_command_ui/characters/loris_silly_inactive.dds" 						}
-	spriteType = { name = "GFX_kaiser_high_command_loris_silly_dead"				textureFile = "gfx/interface/katzen_high_command_ui/characters/loris_silly_dead.dds" 							}
-
-	spriteType = { name = "GFX_kaiser_high_command_loris_real_active"				textureFile = "gfx/interface/katzen_high_command_ui/characters/loris_real_active.dds" 							}
-	spriteType = { name = "GFX_kaiser_high_command_loris_real_inactive"				textureFile = "gfx/interface/katzen_high_command_ui/characters/loris_real_inactive.dds" 						}
-	spriteType = { name = "GFX_kaiser_high_command_loris_real_dead"					textureFile = "gfx/interface/katzen_high_command_ui/characters/loris_real_dead.dds" 							}
+	spriteType = { name = "GFX_kaiser_high_command_loris_silly_active"				textureFile = "gfx/interface/katzen_high_command_ui/characters/silly/loris_silly_active.dds" 					}
+	spriteType = { name = "GFX_kaiser_high_command_loris_silly_inactive"			textureFile = "gfx/interface/katzen_high_command_ui/characters/silly/loris_silly_inactive.dds" 					}
+	spriteType = { name = "GFX_kaiser_high_command_loris_silly_dead"				textureFile = "gfx/interface/katzen_high_command_ui/characters/silly/loris_silly_dead.dds" 						}
 }
