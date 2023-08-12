@@ -1,0 +1,32 @@
+quantum_catapult = {
+	name = quantum_catapult_BYPASS
+	is_pathfind = no
+	uses_action = no
+	requires_exploration = no
+	always_active = yes
+	windup_time = 30
+	winddown_time = 360
+	ftl_multiplier = 0			# 0 means instant
+	icon_frame = 25
+	remember_instances = no	# whether countries remember meeting a specific instance of that type, or if they just remember seeing the type in general
+	galactic_map_tooltip_header=quantum_catapult_BYPASS
+	galactic_map_tooltip_desc=quantum_catapult_BYPASS_DESC
+	connection_type = to_any_system
+	animation_time = 1
+	ftl_ship_effect = "gateway_ftl_ship_effect_entity"
+	ftl_bypass_effect = "gateway_ftl_bypass_effect_entity"
+	country_can_use = {
+		custom_tooltip = {
+			fail_text = QUANTUM_CATAPULT_COUNTRY_CANNOT_USE
+			OR = {
+				NOT = { exists = from }
+				is_same_value = from
+				is_in_federation_with = from
+				is_overlord_to = from
+				from = { is_overlord_to = root }
+				NOT = { from = { has_origin = origin_katzen } }
+			}
+		}
+	}
+	on_action = "on_entering_quantum_catapult"
+}

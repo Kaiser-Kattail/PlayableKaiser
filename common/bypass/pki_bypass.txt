@@ -1,0 +1,61 @@
+playable_kaiser_wormhole = {
+	name = playable_kaiser_wormhole
+	is_pathfind = yes
+	uses_action = no
+	requires_exploration = no
+	always_active = yes
+	windup_time = 0
+	winddown_time = 0
+	ftl_multiplier = 0
+	extends_sensors = yes
+	icon_frame = 12
+	remember_instances = no
+	animation_time = 1
+	galactic_map_tooltip_header = playable_kaiser_wormhole_bypass
+	galactic_map_tooltip_desc = playable_kaiser_wormhole_bypass_desc
+	connection_type = scripted_connection
+	ftl_ship_effect = "wormhole_ftl_ship_effect_entity"
+	ftl_bypass_effect = "wormhole_ftl_bypass_effect_entity"
+	potential = {
+		always = yes
+	}
+	country_can_use = {
+		custom_tooltip = {
+			fail_text = NATURAL_WORMHOLE_COUNTRY_CANNOT_USE
+			# Wormhole can be used if...
+			OR = {
+				# System has no owner
+				NOT = {
+					exists = from
+				}
+				# System's owner has not closed borders to you
+				from = {
+					NOT = {
+						has_closed_borders = root
+					}
+				}
+				# System's owner is at war with you
+				from = {
+					is_at_war_with = root
+				}
+				# System's owner is not a proper empire
+				from = {
+					NOR = {
+						is_country_type = default
+						is_country_type = awakened_fallen_empire
+						is_country_type = fallen_empire
+					}
+				}
+				# In federation with EHVE owner
+				is_in_federation_with = root
+				# Is subject of EHVE owner
+				from = { is_overlord_to = root }
+			}
+		}
+	}
+	on_action = "on_entering_quantum_wormhole"
+	scripted_connection = {
+		node = { solar_system = { any_system_megastructure = { has_megastructure_flag = playable_kaiser_wormhole_node } } } # defines endpoints that can only reach the "nexus"
+		nexus = { solar_system = { any_system_megastructure = { has_megastructure_flag = playable_kaiser_wormhole_nexus } } } # defines endpoint(s) that can reach all "nodes" (but not other nexuses)
+	}
+}

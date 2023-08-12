@@ -1,0 +1,65 @@
+create_kaiser_wormholes = {
+	if = {
+		limit = {
+			fromfrom = {
+				NOT = {
+					any_system_planet = {
+						has_planet_flag = pki_yeeted_a_fleet
+					}
+				}
+			}
+		}
+		this = {
+			exists = owner
+			owner = {
+				save_event_target_as = owner_country
+			}
+		}
+		
+		fromfrom = {
+			random_megastructure = {
+				limit = {
+					is_megastructure_type = playable_kaiser_ehve
+				}
+				save_event_target_as = playable_ehve
+			}
+			spawn_megastructure = {
+				type = playable_kaiser_ehve_active
+				owner = event_target:owner_country
+				coords_from = event_target:playable_ehve
+				init_effect = {
+					set_megastructure_flag = playable_kaiser_wormhole_node
+				}
+			}
+			remove_megastructure = event_target:playable_ehve
+		}
+		this = {
+			solar_system = {
+				save_global_event_target_as = playable_kaiser_ehve_target
+				save_global_event_target_as = playable_kaiser_ehve_target@fromfrom
+				spawn_megastructure = {
+					type = playable_kaiser_wormhole
+					owner = event_target:owner_country
+					coords_from = prev
+					init_effect = {
+						set_megastructure_flag = playable_kaiser_wormhole_nexus
+						set_megastructure_flag = is_owned_by_country_@event_target:owner_country
+					}
+				}
+			}
+		}
+	}
+}
+
+pki_clear_yeeted_flag = {
+	if = {
+		limit = {
+			any_system_planet = {
+				has_planet_flag = pki_yeeted_a_fleet
+			}
+		}
+		every_system_planet = {
+			remove_planet_flag = pki_yeeted_a_fleet
+		}
+	}
+}
