@@ -101,6 +101,7 @@ tech_pki_ehve = {
 	potential = {
 		has_country_flag = has_arcane_generator
 		has_origin = origin_katzen
+		has_overlord_dlc = yes
 	}
 
 	modifier = {
