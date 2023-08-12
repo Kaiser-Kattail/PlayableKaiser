@@ -11,6 +11,7 @@ event = {
 	hide_window = yes
 	is_triggered_only = yes	
 	immediate = {
+		set_global_flag = pki_enabled
 		every_playable_country = {
 			limit = { has_origin = origin_katzen }
 			country_event = { id = flusion.4 }
@@ -76,6 +77,15 @@ country_event = {
 			event_chain = "kaiser_docs_chain"
 			location = capital_scope
 		}
+
+		create_point_of_interest = {
+			id = kaiser_docs_chain.4
+			name = "kaiser_docs_4"
+			desc = "kaiser_docs_4_desc"
+			event_chain = "kaiser_docs_chain"
+			location = capital_scope
+		}
+
 
 		#END DOCS
 
@@ -1195,9 +1205,11 @@ event = {
 	is_triggered_only = yes
 
 	immediate = {
+		set_global_flag = kaiser_is_player
 		set_global_flag = katzenartig_disabled
 		set_global_flag = giga_jublio_disabled
 		set_global_flag = giga_jupitwo_disabled
+		set_global_flag = giga_fe_pouchkinn_disabled
 	}
 }
 
