@@ -598,7 +598,6 @@ decision_kaiser_craft_recall = {
 			}
         }
 		has_planet_flag = gigaflusion
-        
     }
 	effect = {
 		from = {
@@ -624,6 +623,7 @@ decision_demotion_modifier = {
     potential = {
         from = {
 			has_origin = origin_katzen
+			has_tradition = tr_flusion_finish
         }
 		has_planet_flag = gigaflusion
     }
@@ -646,10 +646,12 @@ decision_toggle_relocation = {
     potential = {
         from = {
 			has_origin = origin_katzen
+			has_tradition = tr_flusion_finish
         }
 		NOT = {
 			has_planet_flag = gigaflusion
 		}
+		is_colony = yes
     }
 	effect = {
 		if = {
@@ -680,10 +682,12 @@ decision_depopulate_planet = {
     potential = {
         from = {
 			has_origin = origin_katzen
+			has_tradition = tr_flusion_finish
         }
 		NOT = {
 			has_planet_flag = gigaflusion
 		}
+		is_colony = yes
     }
 	effect = {
 		hidden_effect = {
