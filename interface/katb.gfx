@@ -10,6 +10,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_leader_trait_neumeyer"
+		textureFile = gfx/interface/icons/traits/leader_trait_neumeyer.dds
+	}
+
+	spriteType = {
 		name = "GFX_no_preset"
 		textureFile = gfx/event_pictures/no_preset.dds
 	}
