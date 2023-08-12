@@ -2,7 +2,7 @@ entity = {
 	name = "kaiser_planet_entity"
 	pdxmesh = "war_planet_locators_mesh"
 	cull_radius = 10000
-	scale = 0.33
+	scale = 0.66
 
 	locator = { name = "root" position = { 0 0 0 } }
 
@@ -116,7 +116,7 @@ entity = {
 	name = "kaiser_planet_mid_entity"
 	pdxmesh = "kaiser_planet_mid_mesh"
 	cull_radius = 10000
-	scale = 0.33
+	scale = 0.66
 
 	meshsettings = {
 		name = "planet"
@@ -134,7 +134,7 @@ entity = {
 	name = "kaiser_planet_sternthrusters_entity"
 	pdxmesh = "kaiser_planet_sternthrusters_mesh"
 	cull_radius = 10000
-	scale = 0.33
+	scale = 0.66
 
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
@@ -169,7 +169,7 @@ entity = {
 	name = "kaiser_planet_bow_entity"
 	pdxmesh = "kaiser_planet_bow_mesh"
 	cull_radius = 10000
-	scale = 0.33
+	scale = 0.66
 
 	locator = { name = "root" position = { 0 0 0 } }
 }
@@ -178,7 +178,7 @@ entity = {
 	name = "kaiser_planet_bowgun_entity"
 	pdxmesh = "kaiser_planet_bowgun_mesh"
 	cull_radius = 10000
-	scale = 0.33
+	scale = 0.66
 
 	locator = { name = "root" position = { 0 0 0 } }
 }
@@ -187,7 +187,7 @@ entity = {
 	name = "kaiser_planet_stern_entity"
 	pdxmesh = "kaiser_planet_stern_mesh"
 	cull_radius = 10000
-	scale = 0.33
+	scale = 0.66
 
 	locator = { name = "root" position = { 0 0 0 } }
 }
