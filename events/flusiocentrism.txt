@@ -146,6 +146,7 @@ country_event = {
 				add_modifier = {
 					modifier = katzen_colony
 					days = -1
+					clear_on_owner_change = yes
 				}
 			}
 		}
@@ -172,6 +173,7 @@ country_event = {
 		}
 	}
 }
+
 country_event = {
 	id = centrism.7
 	is_triggered_only = yes

@@ -1228,7 +1228,8 @@ country_event = {
 	is_triggered_only = yes #The game will not consider this event for starting on its own. Event will need to be triggered by another event, or by some other effect. Most events will use this.
 	immediate = {
 		add_modifier = {
-			modifier = mod_no_preset = days = -1
+			modifier = mod_no_preset
+			days = -1
 		}
 	}
 	option = {
