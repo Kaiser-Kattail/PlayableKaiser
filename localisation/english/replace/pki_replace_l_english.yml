@@ -1,0 +1,17 @@
+﻿l_english:
+
+  quantum_catapult_BYPASS:0 "Fleet Transport Structure"
+	quantum_catapult_BYPASS_DESC:1 "This system contains a §Y$quantum_catapult_1$§! or §YEHVE§!"
+
+	QUANTUM_CATAPULT_COUNTRY_CANNOT_USE:0 "$TRIGGER_FAIL$ The §Y[From.GetName]§! has denied us access to their Quantum Catapult or EHVE."
+
+	MESSAGE_FLEET_ORDER_CATAPULT_WINDUP_COMPLETE_TITLE:0 "Fleet Transit Complete"
+	MESSAGE_FLEET_ORDER_CATAPULT_WINDUP_COMPLETE_DESC:1 "$FLEET|Y$ has completed its transit, arriving in $SYSTEM|Y$."
+
+	FLEETORDER_QUANTUM_CATAPULT_HEADER:0 "Transport Fleet"
+  FLEETORDER_QUANTUM_CATAPULT_DESC:0 "Transport a fleet from a system with a §YQuantum Catapult§! or §YEHVE§!."
+	QUANTUM_CATAPULT_PENALTY:1 "§YQuantum Catapults§! lose accuracy with range, so fleets will appear in a random system within the indicated scatter radius.\n\nFleets launched this way receive a [GetQuanticAmbushBonus] §YFire Rate§! increase for £time£ §Y120 days§!.\n\n§YEHVE's§! do §Ynot§! lose accuracy with range, but instead create a wormhole where targeted. This wormhole will remain open for transfer of ships until closed."
+	FLEET_ORDER_NO_QUANTUM_CATAPULT:0 "§RFleets can only be catapulted from a system with a Quantum Catapult or EHVE§!"
+  KAISER_FLEET_ORDER_NO_QUANTUM_CATAPULT_IN:0 "§RNo functioning Quantum Catapult or EHVE in $SYSTEM|H$§!"
+
+  FLEETORDER_CATAPULT_WINDUP:1 "Transit Windup: $DAYS|Y0$ Days"

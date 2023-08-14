@@ -1,0 +1,81 @@
+namespace = pki_ehve
+
+fleet_event = {
+	id = pki_ehve.1
+	title = pki_ehve.1.name
+	desc = pki_ehve.1.desc
+	show_sound = event_mystic_reveal
+	picture = GFX_evt_ehof
+	is_triggered_only = yes
+	immediate = {
+		owner = { set_country_flag = pki_ehve_message_1 }
+	}
+	option = {
+		name = pki_ehve.1.a
+		name = pki_ehve.1.b
+		name = pki_ehve.1.c
+	}
+}
+
+country_event = {
+	id = pki_ehve.2
+	title = pki_ehve.2.name
+	desc = pki_ehve.2.desc
+	show_sound = event_mystic_reveal
+	picture = GFX_evt_ehof
+	is_triggered_only = yes
+	location = FROM
+	immediate = {
+		owner = { set_country_flag = pki_ehve_message_2 }
+	}
+	option = {
+		name = pki_ehve.2.a
+		name = pki_ehve.2.b
+		name = pki_ehve.2.c
+	}
+}
+
+fleet_event = {
+	id = pki_ehve.10
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		if = {
+			limit = {
+				fromfrom = {
+					solar_system = {
+						any_system_megastructure = {
+							is_megastructure_type = playable_kaiser_ehve
+						}
+					}
+					owner = {
+						has_technology = tech_mega_engineering
+					}
+				}
+			}
+			create_kaiser_wormholes = yes
+		}
+		fromfrom = {
+			every_system_planet = {
+				if = {
+					limit = {
+						is_planet_class = pc_black_hole
+					}
+					set_planet_flag = pki_yeeted_a_fleet 
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					NOT = {
+						has_country_flag = pki_ehve_message_1
+					}
+				}
+			}
+			fleet_event = { 
+				id = pki_ehve.1
+			}
+		}
+	}
+}

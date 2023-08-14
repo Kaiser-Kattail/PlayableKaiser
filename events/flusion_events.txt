@@ -11,6 +11,7 @@ event = {
 	hide_window = yes
 	is_triggered_only = yes	
 	immediate = {
+		set_global_flag = pki_enabled
 		every_playable_country = {
 			limit = { has_origin = origin_katzen }
 			country_event = { id = flusion.4 }
@@ -46,6 +47,48 @@ country_event = {
 	}
 	immediate = {
 		save_global_event_target_as = katzenartig
+
+		#	#DOCS
+
+		#	begin_event_chain = {
+		#		event_chain = kaiser_docs_chain
+		#	}
+
+		#	create_point_of_interest = {
+		#		id = kaiser_docs_chain.1
+		#		name = "kaiser_docs_1"
+		#		desc = "kaiser_docs_1_desc"
+		#		event_chain = "kaiser_docs_chain"
+		#		location = capital_scope
+		#	}
+
+		#	create_point_of_interest = {
+		#		id = kaiser_docs_chain.2
+		#		name = "kaiser_docs_2"
+		#		desc = "kaiser_docs_2_desc"
+		#		event_chain = "kaiser_docs_chain"
+		#		location = capital_scope
+		#	}
+
+		#	create_point_of_interest = {
+		#		id = kaiser_docs_chain.3
+		#		name = "kaiser_docs_3"
+		#		desc = "kaiser_docs_3_desc"
+		#		event_chain = "kaiser_docs_chain"
+		#		location = capital_scope
+		#	}
+
+		#	create_point_of_interest = {
+		#		id = kaiser_docs_chain.4
+		#		name = "kaiser_docs_4"
+		#		desc = "kaiser_docs_4_desc"
+		#		event_chain = "kaiser_docs_chain"
+		#		location = capital_scope
+		#	}
+
+		#	
+		#END DOCS
+
 		add_modifier = {
 			modifier = no_ftl_capability days = -1
 		}
@@ -453,12 +496,11 @@ country_event = {
 			species = owner_main_species
 			name = "Loris Von Kattensbach"
 			gender = male
-			skill = 6
+			skill = 3
 			immortal = yes
 			traits = {
 				trait = katzen_trait_elite
 				trait = leader_trait_architectural_interest
-				trait = leader_trait_environmental_engineer
 				trait = leader_trait_army_veteran
 			}
 		}
@@ -1163,9 +1205,11 @@ event = {
 	is_triggered_only = yes
 
 	immediate = {
+		set_global_flag = kaiser_is_player
 		set_global_flag = katzenartig_disabled
 		set_global_flag = giga_jublio_disabled
 		set_global_flag = giga_jupitwo_disabled
+		set_global_flag = giga_fe_pouchkinn_disabled
 	}
 }
 
@@ -1196,7 +1240,8 @@ country_event = {
 	is_triggered_only = yes #The game will not consider this event for starting on its own. Event will need to be triggered by another event, or by some other effect. Most events will use this.
 	immediate = {
 		add_modifier = {
-			modifier = mod_no_preset = days = -1
+			modifier = mod_no_preset
+			days = -1
 		}
 	}
 	option = {

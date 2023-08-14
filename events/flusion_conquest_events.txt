@@ -911,8 +911,19 @@ country_event = {
 			95 = {
 			}
 			5 = {
-				country_event = {
-					id = conquest.4
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = just_had_surprise_attack
+						}
+					}
+					country_event = {
+						id = conquest.4
+					}
+					set_timed_country_flag = {
+						flag = just_had_surprise_attack
+						days = 30
+					}
 				}
 			}
 		}

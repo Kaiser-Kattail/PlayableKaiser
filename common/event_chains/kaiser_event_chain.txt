@@ -1,0 +1,5 @@
+
+kaiser_docs_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_modification.dds"
+	picture = GFX_evt_machine_space_battle
+}

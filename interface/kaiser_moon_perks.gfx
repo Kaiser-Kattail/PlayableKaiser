@@ -130,4 +130,34 @@ spriteTypes = {
 		name = "GFX_katzen_war_forge_0_outliner_icon"
 		textureFile = "gfx/interface/icons/megastructures/katzen_warforge.dds"
 	}
+
+	spriteType = {
+		name = GFX_playable_kaiser_ehve_outliner_icon
+		textureFile = gfx/interface/icons/megastructures/ehof.dds
+	}
+	
+	spriteType = {
+		name = GFX_playable_kaiser_ehve_active_outliner_icon
+		textureFile = gfx/interface/icons/megastructures/ehof.dds
+	}
+
+	spriteType = {
+		name = playable_kaiser_ehve_cooldown_dummy_outliner_icon
+		textureFile = gfx/interface/icons/megastructures/ehof.dds
+	}
+
+	spriteType = {
+		name = GFX_playable_kaiser_ehve_cooldown_outliner_icon
+		textureFile = gfx/interface/icons/megastructures/ehof.dds
+	}
+
+	spriteType = {
+		name = GFX_playable_kaiser_ehve_dummy_outliner_icon
+		textureFile = gfx/interface/icons/megastructures/ehof.dds
+	}
+
+	spriteType = {
+		name = GFX_playable_kaiser_ehve_phase0_outliner_icon
+		textureFile = gfx/interface/icons/megastructures/ehof.dds
+	}
 }

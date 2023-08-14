@@ -1,0 +1,23 @@
+entity = {
+	name = "pki_active_ehve"
+	pdxmesh = "ehofmega_locators"
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_speed = 4
+		event = { time = 0.0 node = "beam"				particle = "ehof_c_beam_particle"		trigger_once = yes keep_particle = yes light = "ehof_ambient_light" }
+		event = { time = 0.0 node = "b_rotation"		particle = "ehof_giga_large_white_light_particle"		trigger_once = yes keep_particle = yes sound = { soundeffect = amb_natural_wormhole_thunder } }
+		event = { time = 0.0 node = "high_1"			particle = "ehof_firing_particle"		trigger_once = yes keep_particle = yes sound = { soundeffect = colossus_shield_beam } }
+		event = { time = 0.0 node = "high_2"			particle = "ehof_firing_particle"		trigger_once = yes keep_particle = yes }
+		event = { time = 0.0 node = "high_3"			particle = "ehof_firing_particle"		trigger_once = yes keep_particle = yes }
+		event = { time = 0.0 node = "high_4"			particle = "ehof_firing_particle"		trigger_once = yes keep_particle = yes }
+		event = { time = 0.0 node = "b_wormhole"		particle = "ehof_b_wormhole_particle"	trigger_once = yes keep_particle = yes }
+		event = { time = 0.0 node = "wormhole" 		entity = "ehof_megastructure_wormhole"		trigger_once = yes sound = { soundeffect = incoming_wormhole } }
+	}
+
+	attach = { top_r = "ehof_megastructure_phase3_body_top" }
+	attach = { top_r = "ehof_megastructure_phase4_glass_top" }
+	attach = { bot_r = "ehof_megastructure_phase4_body_bot" }
+	attach = { bot_r = "ehof_megastructure_phase3_glass_bot" }
+
+	scale = 24
+}
