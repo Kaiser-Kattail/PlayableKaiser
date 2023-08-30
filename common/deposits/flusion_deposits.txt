@@ -776,3 +776,18 @@ d_ravaka_volcano = {
 		weight = 0
 	}
 }
+
+######## Jobs Size Deposit #######
+
+d_pki_flusion_societal_restructuring = {
+	is_for_colonizable = yes
+	category = planet_deposits
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_birch_structure
+
+	export_modifier_to_variable = {
+		modifier = giga_planet_job_size
+		variable = pki_flusion_job_size
+	}
+}
