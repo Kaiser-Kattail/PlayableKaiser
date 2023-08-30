@@ -705,3 +705,87 @@ decision_depopulate_planet = {
 		}
 	}
 }
+
+decision_pki_societal_restructuring = {
+	enactment_time = 3600
+	resources = {
+        category = decisions
+        cost = {
+            influence = 800
+			alloys = 30000
+			minerals = 50000
+        }
+    }
+	sound = event_administrative_work
+    potential = {
+        from = {
+			has_origin = origin_katzen
+			has_tradition = tr_flusion_finish
+        }
+		has_planet_flag = gigaflusion
+		is_planet_class = pc_flusion_gaia_ecu
+		is_colony = yes
+    }
+	effect = {
+		hidden_effect = {
+			add_deposit = d_pki_flusion_societal_restructuring
+			add_deposit = giga_planet_job_size
+			every_owned_pop = {
+				random = {
+					chance = 50
+					kill_pop = yes
+				}
+			}
+			export_modifier_to_variable = {
+				modifier = giga_planet_job_size
+				variable = pki_flusion_job_size
+			}
+			multiply_variable = {
+				which = pki_flusion_job_size
+				value = 2
+			}
+		}
+	}
+}
+
+decision_pki_further_restructuring = {
+	enactment_time = 3600
+	resources = {
+        category = decisions
+        cost = {
+			alloys = 30000
+			minerals = 50000
+			unity = 10000
+			multiplier = pki_flusion_job_size
+			influence = 800
+        }
+    }
+	sound = event_administrative_work
+    potential = {
+        from = {
+			has_origin = origin_katzen
+			has_tradition = tr_flusion_finish
+        }
+		has_planet_flag = gigaflusion
+		is_planet_class = pc_flusion_gaia_ecu
+		is_colony = yes
+    }
+	effect = {
+		hidden_effect = {
+			every_owned_pop = {
+				random = {
+					chance = 50
+					kill_pop = yes
+				}
+			}
+			export_modifier_to_variable = {
+				modifier = giga_planet_job_size
+				variable = pki_flusion_job_size
+			}
+			multiply_variable = {
+				which = pki_flusion_job_size
+				value = 2
+			}
+		}
+	}
+}
