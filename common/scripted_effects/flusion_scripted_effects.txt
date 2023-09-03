@@ -950,3 +950,19 @@ player_flusion_liberated_haranian = {
 	}
 }
 
+pki_district_conversion = {
+	export_trigger_value_to_variable = {
+		trigger = num_districts
+		parameters = {
+			type = $DISTRICT$
+		}
+		variable = $VARIABLE$
+	}
+	divide_variable = { which = $VARIABLE$ value = 2 }
+	floor_variable = $VARIABLE$
+	while = {
+		count = $VARIABLE$
+		remove_district = $DISTRICT$
+	}
+	clear_variable = $VARIABLE$
+}

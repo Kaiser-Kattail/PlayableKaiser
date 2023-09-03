@@ -8,7 +8,10 @@ fleet_event = {
 	picture = GFX_evt_ehof
 	is_triggered_only = yes
 	immediate = {
-		owner = { set_country_flag = pki_ehve_message_1 }
+		owner = {
+			set_country_flag = pki_ehve_message_1
+			remove_country_flag = pki_hasnt_used_ehve
+		}
 	}
 	option = {
 		name = pki_ehve.1.a

@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
     
     FLAG_CATEGORY_flusion:0 "PvZRP"
 
@@ -20,6 +20,16 @@ l_english:
     flusion_new_initializer_NAME:0 "Jublio System"
     flusion_new_initializer_DESC:0 "The system in which Flusion and its many species is located.\n\n$system_initializer_DESC$"
    
+    # Planets
+    pc_pki_flusion_ecu:0 "Flusio-Arcology"
+    pc_pki_flusion_ecu_desc:0 "The Flusio-Arcology makes full usage of Flusion's vast natural resources. The cities of Katown, Bundengrad and Teho have been transformed into gargantuan gigacities spanning large portions of the planet and capable of housing dozens of billions of inhabitants each. The rest of the planet has been altered to ecological perfection and now harbors a variety of climates fit for every single species native to Flusion"
+    pc_pki_flusion_ecu_adj:0 "Flusio-Arcology"
+
+    # Modifiers
+    pki_flusion_ecu_modifier:0 "Flusio-Arcology"
+    pki_flusion_ecu_modifier_desc:0 "The Flusio-Arcology takes full advantage of Flusion's vast natural resources, in order to squeeze out every last bit of efficiency from the planet. The Katzen cities of Katown, Bundengrad and Teho have been expanded to gargantuan proportions, housing tens of billions of inhabitants each while a network of hyperefficient transportation highways surrounds the entire planet."
+    
+
     # Deposits
     d_grand_kronk_quarry:0 "Grand Kronk Quarry"
     d_grand_kronk_quarry_desc:0 "A massive quarry built and operated by the Kronks, harvesting untold amounts of minerals."
@@ -139,6 +149,9 @@ l_english:
     d_bureau_of_benefits_desc: "With the empire administered from Flusion, things become simpler to organize. If not less efficient."
     d_bureau_of_colonial_benefits: "Flusionian Administration"
     d_bureau_of_colonial_benefits_desc: "With the empire administered from Flusion, things become simpler to organize. If not less efficient."
+
+    d_pki_flusion_societal_restructuring:0 "Societal Restructuring"
+    d_pki_flusion_societal_restructuring_desc:0 "Society has been redefined with these changes on our Flusio-Arcology. Our production is now limitless."
    
     # Techs
     tech_katzen_luxuries:0 "Katzen Civilian Good Production"
@@ -188,6 +201,8 @@ l_english:
     has_katlantropa_dam:0 "£trigger_no£ §RWe cannot simply remove a sea.§!"
     no_forest:0 "£trigger_no£ We must have cleared the jungle first."
     cannot_be_dry:0 "£trigger_no£ The world must not be a dry world."
+
+    pki_need_orbital_arcology:0 "Requires Upgraded Orbital Arcology"
    
     # Events
     katzen.7.name:0 "Katzen Elite Menu"
@@ -227,6 +242,15 @@ l_english:
    
     decision_katzen_defense_array_1:0 "Construct Katzen Defense Array"
     decision_katzen_defense_array_1_desc:0 "Constructs a §YKatzen Defense Array§! in orbit over a chosen world to provide additional orbital defenses. "
+
+    decision_pki_societal_restructuring:0 "Societal Restructuring"
+    decision_pki_societal_restructuring_desc:0 "By changing how Flusion functions from a ground level, we will be able to achieve an extreme boost in efficiency.\n\n§RWARNING!§!\n§HThis will effectively kill half of the planet's population and destroy half of the districts.§!"
+
+    decision_pki_further_restructuring:0 "Further Restructuring"
+    decision_pki_further_restructuring_desc:0 "By building more and more off of our existing work, we will be able to achieve an further boot in efficiency.\n\n§HThere are deminishing returns with futher restructuring!§!\n\n§RWARNING!§!\n§HThis will effectively kill half of the planet's population and destroy half of the districts.§!"
+
+    pki_expand_flusion:0 "Increses §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow."
+    pki_expand_flusion_more:0 "Increses §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow."
    
     # Project Mondkanone
     decision_mondkanone:0 "Propose Project Mondkanone"
@@ -295,9 +319,25 @@ l_english:
     katzen_war_forge_1:0 "Katzen War Forge"
     katzen_war_forge_1_DESC:0 "A large orbital construct built near an inhabited Katzen colony, harvesting the local system for resources in order to assemble Katzen warships."
    
-    district_flusion_civilian_industry:0 "Flusion Civilian Industry"
-    district_flusion_civilian_industry_desc:0 "A vast array of manufactories and offices, streamlining the production and distribution of Katzen-approved consumer goods."
-    district_flusion_civilian_industry_plural:0 "Flusion Civilian Industries"
+
+    district_pki_flusion_city:0 "Flusionian Housing Complex"
+    district_pki_flusion_city_desc:0 "Colossal stretches of urban housing built within humongous megacities, providing housing and entertainment to its inhabitants. In true Katzen fashion, these housing complexes feature large quantities of anti-air and anti-orbital weaponry mounted onto nearly every rooftop, designed to hamper any invaders attempting to seize Flusion."
+    district_pki_flusion_city_plural:0 "Flusionian Housing Complexes"
+    district_pki_flusion_heavy_industry:0 "Flusionian Heavy Industry"
+    district_pki_flusion_heavy_industry_desc:0 "Vast arrays of underground foundries and power generators designed to fuel Flusion's ever-growing industry with building materials and copious quantities of energy."
+    district_pki_flusion_heavy_industry_plural:0 "Flusionian Heavy Industries"
+    district_pki_flusion_science:0 "Flusionian Research Complex"
+    district_pki_flusion_science_desc:0 "Sprawling expanses consisting of campuses and research laboratories working tirelessly to push the boundaries of Flusionian science even further and synthesize various otherwise unobtainable resources."
+    district_pki_flusion_science_plural:0 "Flusionian Research Complexes"
+    district_pki_flusion_mining:0 "Flusionian Quarry"
+    district_pki_flusion_mining_desc:0 "Gigantic quarries unearthing prodigious quantities of useful fissile material, minerals and rare crystals from Flusion's crust and mantle. The radioactive isotopes harvested from these quarries is used to supplement's Flusion power grid."
+    district_pki_flusion_mining_plural:0 "Flusionian Quarries"
+    district_pki_flusion_farming:0 "Flusionian Hydroponics Farm"
+    district_pki_flusion_farming_desc:0 "These colossal stretches of agrarian land and greenhouses make use of water redirected from Flusion's seas to grow prodigious quantities of food from Flusion's extremely fertile soil. Parts of this land are specifically reshaped to provide Flusion's inhabitants with incredibly scenic views meant to resemble the alien ecosystems found within the rest of the empire, while providing a vast array of different delicacies for loyal populations to enjoy. Bio-engineered plants ensure pollution from other Flusionian industries is properly mitigated, avoiding a runaway collapse of Flusion's ecosystem."
+    district_pki_flusion_farming_plural:0 "Flusionian Hydroponics Farms"
+    district_pki_flusion_civilian_industry:0 "Flusion Civilian Industry"
+    district_pki_flusion_civilian_industry_desc:0 "A vast array of manufactories and offices, streamlining the production and distribution of Katzen-approved consumer goods."
+    district_pki_flusion_civilian_industry_plural:0 "Flusion Civilian Industries"
    
    
     katzensoldaten_army: "Katzensoldaten Army"
