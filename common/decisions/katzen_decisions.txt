@@ -726,6 +726,9 @@ decision_pki_societal_restructuring = {
 		is_planet_class = pc_pki_flusion_ecu
 		is_colony = yes
     }
+	allow = {
+		num_pops >= 750 
+	}
 	effect = {
 		custom_tooltip = pki_expand_flusion
 		hidden_effect = {
@@ -796,6 +799,9 @@ decision_pki_further_restructuring = {
 		is_planet_class = pc_pki_flusion_ecu
 		is_colony = yes
     }
+	allow = {
+		num_pops >= 750 
+	}
 	effect = {
 		custom_tooltip = pki_expand_flusion_more
 		hidden_effect = {

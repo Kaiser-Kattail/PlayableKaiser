@@ -275,10 +275,10 @@ country_event = {
 					}
 				}
 
-			#Solakians
+			#Roqualians
 				create_species = {
-					name = "Solakian"
-					plural = "Solakians"
+					name = "Roqualian"
+					plural = "Roqualians"
 					class = HUM
 					portrait = human
 					homeworld = this
@@ -406,6 +406,7 @@ country_event = {
 			change_leader_class = admiral
 			set_gender = male
 			set_immortal = yes
+			
 			set_age = 189
 			add_trait = leader_trait_ruler_kaiser_cattail
 			add_trait = trait_ruler_charismatic_2
@@ -961,7 +962,7 @@ country_event = {
 			create_leader = {
 				class = scientist
 				species = event_target:solakians
-				name = "Dofus Teknik Makina"
+				name = "Dofus Tequenik Machina"
 				skill = 4
 				set_age = 41
 				gender = male

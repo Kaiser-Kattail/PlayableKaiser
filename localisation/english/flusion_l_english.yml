@@ -9,7 +9,7 @@
     PRESCRIPTED_ruler_name_katzen: "Kattail"
     # Traits
     leader_trait_ruler_kaiser_cattail:0 "The Kaiser"
-    leader_trait_ruler_kaiser_cattail_desc:0 "Kaiser Cattail is a nigh-immortal entity of high charisma yet pronounced goofyness and megalomania."
+    leader_trait_ruler_kaiser_cattail_desc:0 "Kaiser Kattail is a nigh-immortal entity of high charisma yet pronounced goofyness and megalomania."
     katzen_trait_martial_free:0 "Martial Discipline"
     katzen_trait_martial_free_desc:0 "This species is incredibly disciplined, thanks to long-standing martial traditions. They will fight like no other on the battlefield and vow absolute loyalty to their nation. defending it to the very end."
    
@@ -51,8 +51,8 @@
     d_magnetic_puffy_desc:0 "The tallest mountain on Flusion offers both an opportunity to harvest resources and study the planet's geological processes."
     d_cookian_steppes_mining:0 "Great Cookian Steppe"
     d_cookian_steppes_mining_desc:0 "Filled with research campuses, this great steppe also offers an opportunity to conduct mining operations."
-    d_solakian_factory:0 "Solakian Robot Factory"
-    d_solakian_factory_desc:0 "A massive Solakian-built factory, producing large amounts of customized all-purpose robots for the population, as well as Soul-bots."
+    d_solakian_factory:0 "Roqualian Robot Factory"
+    d_solakian_factory_desc:0 "A massive Roqualian-built factory, producing large amounts of customized all-purpose robots for the population, as well as Soul-bots."
     d_katown_palace:0 "Katown Governmental Palace"
     d_katown_palace_desc:0 "A massive construct towering over Katown, housing the untold amount of workers required to run the empire's government."
     d_katown_palace_primitive:0 "Katown Governmental Palace"
@@ -111,8 +111,8 @@
     d_katzen_housing_dam_desc:0 "A series of dams that redirect and filter water into usable forms, so as to allow the construction of new homes."
     d_katzen_industrial_dam:0 "Katzen Industrial Dams"
     d_katzen_industrial_dam_desc:0 "A series of dams that relocates water for use as industrial coolant, allowing more factories to be opened." 
-    d_annexed_region_solak:0 "Solakian Held Territory"
-    d_annexed_region_solak_desc:0 "As long as Solakian forces hold our land, we cannot use it."
+    d_annexed_region_solak:0 "Roqualian Held Territory"
+    d_annexed_region_solak_desc:0 "As long as Roqualian forces hold our land, we cannot use it."
     d_annexed_region_cookie: "Cookian Held Territory"
     d_annexed_region_cookie_desc: "As long as Cookian forces hold our land, we cannot use it."
     d_annexed_region_kronk: "Kronk Held Territory"
@@ -249,8 +249,8 @@
     decision_pki_further_restructuring:0 "Further Restructuring"
     decision_pki_further_restructuring_desc:0 "By building more and more off of our existing work, we will be able to achieve an further boot in efficiency.\n\n§HThere are deminishing returns with futher restructuring!§!\n\n§RWARNING!§!\n§HThis will effectively kill half of the planet's population and destroy half of the districts.§!"
 
-    pki_expand_flusion:0 "Increses §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow."
-    pki_expand_flusion_more:0 "Increses §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow."
+    pki_expand_flusion:0 "Increses §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow.\n\n§RRemoves 50% of the population and districts!§!"
+    pki_expand_flusion_more:0 "Increses §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow.\n\n§RRemoves 50% of the population and districts!§!"
    
     # Project Mondkanone
     decision_mondkanone:0 "Propose Project Mondkanone"
@@ -498,12 +498,12 @@
 
     leader_trait_gunfur:0 "Ole Gunfur"
     leader_trait_gunfur_effect: "$ARMY_EFFECTS_TXT$:\n$t$Every Enemy Army Killed in Combat:\n$tt$§Y[Root.Owner.GetName]§!:\n$ttt$£energy£ £minerals£ £food£ §YBasic Resources§!: §G+25§!\n$ttt$£alloys£ §YAlloys§!: §G+10§!"
-    leader_trait_gunfur_desc:1 "This leader has fought on every type of soil and commanded every type of soldier. He blitzed his way through Solakia, overextended and away from supply lines and continued to thrive. His capacity for autonomy should not be understated."
+    leader_trait_gunfur_desc:1 "This leader has fought on every type of soil and commanded every type of soldier. He blitzed his way through Roqualia, overextended and away from supply lines and continued to thrive. His capacity for autonomy should not be understated."
     NAME_gunfur: "Heinrich Gunfur"
     misc.6.title: "$NAME_gunfur$"
     misc.6.desc: "§HA battle-scarred Katzen in surprisingly advanced power armor approaches the view screen. He is bedecked in dozens of awards from many Flusionian nations although the bulk comes from the Katzenartig Imperium. Their fur is greying yet they seem surprisingly young for a seemingly vaunted military leader.§!\n\n"I offer my services again to you, mein Kaiser."\n\n§HHe speaks in a rough and coarse accent of a northern Herzlander that has been long since flecked in radiation and wounds.§!"
-    gunfurdesc: "This leader has fought on every type of soil and commanded every type of soldier. He blitzed his way through Solakia, overextended and away from supply lines and continued to thrive. His capacity for autonomy should not be understated."
-    gunfur_catch_phrase: "§L"I blitzed through Solakia, and I hold faith that I could do it again."§!"
+    gunfurdesc: "This leader has fought on every type of soil and commanded every type of soldier. He blitzed his way through Roqualia, overextended and away from supply lines and continued to thrive. His capacity for autonomy should not be understated."
+    gunfur_catch_phrase: "§L"I blitzed through Roqualia, and I hold faith that I could do it again."§!"
     misc.6.a: "Who are you?"
     misc.6.a.response: "I am Größterpanzerkommandant Heinrich Gunfur of the Riesigerkatzenpanzer Dominiontracks and conqueror of billions."
     misc.6.b: "What does your army consist of?"
@@ -516,7 +516,7 @@
     leader_trait_neumeyer_desc:0 "This leader promotes a philosophy of his own design - Neumeyerism. Along with bolstering planetary control through military rule, he alots additional influence to law enforcement, being made to serve as his personal lackeys."
     NAME_neumeyer: "Emeownuel Neumeyer"
     misc.18.title: "$NAME_neumeyer$"
-    misc.18.desc: "§HA well dressed, authoritative Katzen enters view. Sunglasses adorn his face, and after a brief moment they are taken off. He looks rather haughty, and finally looks at the screen to face the Kaiser.§!\n\n"Greetings."\n\n§HHis voice suggestsa tyrant, a rather cold and disinterested tone.§!\n\n"I am a recent promotion to the rank of Katzgouverneur. What is my assignment?""
+    misc.18.desc: "§HA well dressed, authoritative Katzen enters view. Sunglasses adorn his face, and after a brief moment they are taken off. He looks rather haughty, and finally looks at the screen to face the Kaiser.§!\n\n"Greetings."\n\n§HHis voice suggests a tyrant, a rather cold and disinterested tone.§!\n\n"I am a recent promotion to the rank of Katzgouverneur. What is my assignment?""
     neumeyerdesc: "Neumeyer is an oppressive autocrat, enforcing his rule through the liberal use of truncheons and military force."
     neumeyer_catch_phrase: "§L"Together, the unterskatzen will know their place."§!"
     misc.18.a: "Who are you?"
@@ -526,6 +526,8 @@
     misc.18.c: "You don't seem fond of foreigners."
     misc.18.c.response: "Why should I be? They bring anarchy and disorder to our carefully constructed utopia. With my skillset, we can ensure they never cause us problems."
     misc.18.hire_custom_tooltip: "§Y$NAME_neumeyer$§! joins our empire as a §HLeader§!."
+
+    kaiserdesc: "Charismatic and mysterious, yet markedly goofy at times, the Kaiser is known for his utterly insane megalomaniac tendencies that drive him to seek the ultimately unattainable goal of conquering all that exists."
 
     central_instability: "Flusiocentric Instability"
     central_instability_desc: "This world is suffering governmental breakdown due to an overly large population. We may need to move some pops to Flusion."
@@ -565,7 +567,7 @@
     kaiser_docs_note:0 "\n\n§YOrigin documentation can be found in the Situation Log.§!"
 
     kaiser_docs_chain_title:0 "Katzenartig Imperium Documentation"
-    kaiser_docs_chain_desc:0 "The §YKatzenartig Imperium§! needs no introduction, but the mechanics incuded in this origin do. With unique technologies and bonuses available, the Katzenartig Imperium will easily become one of the military superpowers of the galaxy. If it will meet its match, remains to be seen. \n\nSee subcategories in this menu for additional details."
+    kaiser_docs_chain_desc:0 "The §YKatzenartig Imperium§! needs no introduction, but the mechanics included in this origin do. With unique technologies and bonuses available, the Katzenartig Imperium will easily become one of the military superpowers of the galaxy. If it will meet its match, remains to be seen. \n\nSee subcategories in this menu for additional details."
 
     kaiser_docs_1:0 "1. Unification"
     kaiser_docs_1_desc:0 "Flusion must first be unified in order for our Kaiser's plans for the rest of the galaxy to be achieved.\n\nThe §YKatzenvereinigungsbüro§! will be the first step in our Unification. There you will be able to engage in diplomacy with the rest of the Flusionian nations. As you conquest, a World Tension situation will progress. If it completes, the remaining Flusionian states will all declare war on you, so be careful. After unification has been achieved, we may then set our eyes on the stars and the other empires that await our unity."
@@ -581,7 +583,7 @@
 
     misc.11.title:0 "Aeternite Knowledge"
     misc.11.desc:0 "§RGRRR ANGRY NO LOC§!"
-    misc.11.a:0 "Excellent"
+    misc.11.a:0 "Excellent."
     misc.11.a.tt:0 "We gain §Y3§! Aeternite Intel"
 
     tech_kaiser_planet_sections:0 "Katzen Superscale Celestial Body Weaponization"
@@ -670,12 +672,12 @@
 
     pki_ehve.1.name:0 "E.H.V.E Active"
     pki_ehve.1.desc:0 "We have successfully established a wormhole connection between our §YE.H.V.E.§! and the §Y[event_target:playable_kaiser_ehve_target.GetName]§! System. We can now transfer our ships between the two systems as we please."
-    pki_ehve.1.a:0 "Fantastic"
-    pki_ehve.1.b:0 "Glorious"
-    pki_ehve.1.c:0 "Marvelous"
+    pki_ehve.1.a:0 "Fantastic!"
+    pki_ehve.1.b:0 "Glorious!"
+    pki_ehve.1.c:0 "Marvelous!"
 
     pki_ehve.2.name:0 "E.H.V.E On Cooldown"
     pki_ehve.2.desc:0 "The wormhole from our §YE.H.V.E.§! located in the §Y[from.GetName]§! System has been severed. It can no longer be used for instant travel. The §YE.H.V.E.§! must now go on cooldown before it may be used again."
-    pki_ehve.2.a:0 "Gates closed"
-    pki_ehve.2.b:0 "Until next time"
-    pki_ehve.2.c:0 "As it should"
+    pki_ehve.2.a:0 "Gates closed."
+    pki_ehve.2.b:0 "Until next time."
+    pki_ehve.2.c:0 "As it should."

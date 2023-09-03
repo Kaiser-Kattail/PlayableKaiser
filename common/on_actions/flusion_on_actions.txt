@@ -54,6 +54,12 @@ on_planet_transfer = {
 	}
 }
 
+on_yearly_pulse_country = {
+	events = {
+		misc.19
+	}
+}
+
 on_leader_death = {
 	events = {
 		katzen.3

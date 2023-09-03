@@ -21,7 +21,7 @@
     kaiser_bureau.douclaw.mid.a:0 "\nA great start to our unification."
     kaiser_bureau.douclaw.mid.b:0 "\nThink of the possibilities once we are united! Peace, prosperity and greatness for all!"
     kaiser_bureau.douclaw.mid.c:0 "\nI believe a bit more land is needed."
-    kaiser_bureau.douclaw.mid.d:0 "\nScrew the Solakians. Metaphorically, of course."
+    kaiser_bureau.douclaw.mid.d:0 "\nScrew the Roqualians. Metaphorically, of course."
 
     kaiser_bureau.douclaw.high.a:0 "\nWe are almost there... "
     kaiser_bureau.douclaw.high.b:0 "\nNo nation will stop us now! And then, we shall take to the stars!"
@@ -63,9 +63,9 @@
     cookie_con_1_tooltip:0 "§TGalletian Technocracy§!\n\n§HCurrent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 4 Pops\n\n§YFEATURES:§!\n\n§H$d_cookian_steppes_mining$§!\n£mod_district_mining_max£ §G+1§! Max Mining Districts"
     cookie_con_2_tooltip:0 "§BLyuinstaat§!\n\n§HCurrent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§H$d_cookian_steppes_mining$§!\n£mod_district_mining_max£ §G+1§! Max Mining Districts"
 
-    solakians_con_0_tooltip:0 "§MSolakian Republic§!\n\n§HCurrent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 5 Pops\n\n§YFEATURES:§!\n\n§H$d_altarian_jungle$§!\n\n§H$d_manglarian_junkyard$§!\n\n§H$d_solakian_factory$§!\n£consumer_goods£ §G+10§! Consumer Goods\n\n§H$d_meowriana_trench$§!"
-    solakians_con_1_tooltip:0 "§MSolakian Republic§!\n\n§HCurrent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 5 Pops\n\n§YFEATURES:§!\n\n§H$d_altarian_jungle$§!\n\n§H$d_manglarian_junkyard$§!\n\n§H$d_solakian_factory$§!\n£consumer_goods£ §G+10§! Consumer Goods\n\n§H$d_meowriana_trench$§!"
-    solakians_con_2_tooltip:0 "§BSolakien§!\n\n§HCurrent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§H$d_altarian_jungle$§!\n\n§H$d_manglarian_junkyard$§!\n\n§H$d_solakian_factory$§!\n£consumer_goods£ §G+10§! Consumer Goods\n\n§H$d_meowriana_trench$§!"
+    solakians_con_0_tooltip:0 "§MRoqualian Republic§!\n\n§HCurrent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 5 Pops\n\n§YFEATURES:§!\n\n§H$d_altarian_jungle$§!\n\n§H$d_manglarian_junkyard$§!\n\n§H$d_solakian_factory$§!\n£consumer_goods£ §G+10§! Consumer Goods\n\n§H$d_meowriana_trench$§!"
+    solakians_con_1_tooltip:0 "§MRoqualian Republic§!\n\n§HCurrent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 5 Pops\n\n§YFEATURES:§!\n\n§H$d_altarian_jungle$§!\n\n§H$d_manglarian_junkyard$§!\n\n§H$d_solakian_factory$§!\n£consumer_goods£ §G+10§! Consumer Goods\n\n§H$d_meowriana_trench$§!"
+    solakians_con_2_tooltip:0 "§BRoqualien§!\n\n§HCurrent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§H$d_altarian_jungle$§!\n\n§H$d_manglarian_junkyard$§!\n\n§H$d_solakian_factory$§!\n£consumer_goods£ §G+10§! Consumer Goods\n\n§H$d_meowriana_trench$§!"
     
 
     ravkan_con_0_tooltip:0 "§HRavkan Commonwealth§!\n\n§HCurrent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n§H$d_ravaka_volcano$§!\n£mod_alloys_produces_mult£ §G+15%§! £alloys£ Alloys from £job_foundry£ Metallurgist Jobs\n£rare_crystals£ §G+3§! Rare Crystals"
