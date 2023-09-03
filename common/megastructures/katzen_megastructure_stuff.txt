@@ -241,6 +241,17 @@ playable_kaiser_ehve_cooldown = {
 		y = 0
 	}
 
+	resources = {
+		category = giga_megastructures
+		cost = {
+			alloys = @phase_2_alloy_cost
+		}
+		upkeep = {
+			minerals = @phase_3_mineral_upkeep
+			energy = @phase_3_energy_upkeep
+		}
+	}
+
 	potential = {
 		always = no
 	}
@@ -265,7 +276,7 @@ playable_kaiser_ehve_cooldown_dummy = {
 		x = 0
 		y = 0
 	}
-	build_time = 180
+	build_time = 270
 	upgrade_from = {
 		playable_kaiser_ehve_cooldown
 	}
@@ -379,7 +390,10 @@ playable_kaiser_ehve = {
 				limit = {
 					from = {
 						NOT = {
-							has_country_flag = pki_ehve_message_2
+							OR = {
+								has_country_flag = pki_ehve_message_2
+								has_country_flag = pki_hasnt_used_ehve
+							}
 						}
 					}
 				}
