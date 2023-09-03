@@ -52,3 +52,29 @@ katzen_submarine_subspace_blockade = {
 	pop_happiness = -0.25
 	planet_stability_add = -25
 }
+
+pki_flusion_ecu_modifier = {
+	planet_jobs_produces_mult = 0.50
+	pop_growth_speed = 0.50
+	planet_max_buildings_add = 256
+	planet_max_districts_mult = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_flusion_arcology.dds"
+	icon_frame = 1
+}
+
+pki_flusion_rich_modifier = {
+	planet_max_districts_add = 4
+	district_farming_max = 2
+	district_generator_max = 2
+	district_mining_max = 2
+	planet_jobs_minerals_produces_mult = 0.10
+	planet_jobs_energy_produces_mult = 0.10
+	planet_jobs_food_produces_mult = 0.10
+	planet_jobs_produces_mult = 0.2
+	building_betharian_power_plant_max = 2
+	pop_environment_tolerance = 0.10
+	planet_max_buildings_add = 12
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_flusion_rich_modifier.dds"
+	icon_frame = 1
+}

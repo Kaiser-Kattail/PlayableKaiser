@@ -21,7 +21,7 @@ decision_flusion_arc = {
 
 			has_planet_flag = gigaflusion
 			NOR = {
-				is_planet_class = pc_flusion_gaia_ecu
+				is_planet_class = pc_pki_flusion_ecu
 				is_planet_class = pc_city
 				is_planet_class = pc_relic
 				has_modifier = resort_colony
@@ -42,22 +42,45 @@ decision_flusion_arc = {
 	}
 
 	effect = { 
+		change_pc = pc_pki_flusion_ecu
 		hidden_effect = {
 			add_modifier ={
 				modifier = temp_job_help
 				days = 1080
 			}
+			add_modifier ={
+				modifier = pki_flusion_ecu_modifier
+				days = -1
+			}
+			pki_district_conversion = {
+				DISTRICT = district_pki_flusion_city
+				VARIABLE = pki_num_city_districts
+			}
+			pki_district_conversion = {
+				DISTRICT = district_pki_flusion_civilian_industry
+				VARIABLE = pki_num_civ_industry_districts
+			}
+			pki_district_conversion = {
+				DISTRICT = district_pki_flusion_heavy_industry
+				VARIABLE = pki_num_heavy_industry_districts
+			}
+			pki_district_conversion = {
+				DISTRICT = district_pki_flusion_science
+				VARIABLE = pki_num_science_districts
+			}
+			pki_district_conversion = {
+				DISTRICT = district_pki_flusion_mining
+				VARIABLE = pki_num_mining_districts
+			}
+			pki_district_conversion = {
+				DISTRICT = district_pki_flusion_farming
+				VARIABLE = pki_num_farming_districts
+			}
+			split_districts_effect = {
+				DISTRICT1 = district_pki_flusion_civilian_industry
+				DISTRICT2 = district_pki_flusion_heavy_industry
+			}
 		}
-		change_pc = pc_flusion_gaia_ecu
-		add_district = district_flusion_city
-		add_district = district_flusion_city
-		add_district = district_flusion_city
-		add_district = district_flusion_city
-
-		add_district = district_flusion_farming
-		add_district = district_flusion_heavy_industry
-		add_district = district_flusion_civilian_industry
-		add_district = district_flusion_mining
 	}
 }
 
@@ -179,32 +202,6 @@ decision_kaiser_moon = {
 		weight = 0
 	}
 }
-
-
-decision_expand_flusio_arcology = {
-	potential = {
-		has_planet_flag = playerflusion
-		is_planet_class = pc_flusion_gaia_ecu
-		from = {
-			has_country_flag = expand_flusion_agenda
-		}
-	}
-	enactment_time = 720
-	resources = {
-		category = decisions
-		cost = {
-			minerals = 30000
-			alloys = 30000
-		}
-	}
-
-	effect = {
-		add_deposit = d_expanded_flusion
-	}
-
-}
-
-
 
 #builds solaktropa dams
 decision_solaktropa = {
@@ -711,38 +708,65 @@ decision_pki_societal_restructuring = {
 	resources = {
         category = decisions
         cost = {
-            influence = 800
+            influence = 500
 			alloys = 30000
 			minerals = 50000
+			unity = 10000
         }
     }
 	sound = event_administrative_work
     potential = {
+		NOT = {
+			has_planet_flag = societal_reconstruction_started
+		}
         from = {
 			has_origin = origin_katzen
-			has_tradition = tr_flusion_finish
         }
 		has_planet_flag = gigaflusion
-		is_planet_class = pc_flusion_gaia_ecu
+		is_planet_class = pc_pki_flusion_ecu
 		is_colony = yes
     }
 	effect = {
+		custom_tooltip = pki_expand_flusion
 		hidden_effect = {
+			set_planet_flag = societal_reconstruction_started
+			planet = {
+				set_variable = {
+					which = pki_flusion_job_size
+					value = 1
+				}
+			}
 			add_deposit = d_pki_flusion_societal_restructuring
-			add_deposit = giga_planet_job_size
+			add_deposit = d_giga_job_size
 			every_owned_pop = {
 				random = {
 					chance = 50
 					kill_pop = yes
 				}
 			}
-			export_modifier_to_variable = {
-				modifier = giga_planet_job_size
-				variable = pki_flusion_job_size
+			pki_district_conversion = {
+				DISTRICT = district_pki_flusion_city
+				VARIABLE = pki_num_city_districts
 			}
-			multiply_variable = {
-				which = pki_flusion_job_size
-				value = 2
+			pki_district_conversion = {
+				DISTRICT = district_pki_flusion_civilian_industry
+				VARIABLE = pki_num_civ_industry_districts
+			}
+			pki_district_conversion = {
+				DISTRICT = district_pki_flusion_heavy_industry
+				VARIABLE = pki_num_heavy_industry_districts
+			}
+			pki_district_conversion = {
+				DISTRICT = district_pki_flusion_science
+				VARIABLE = pki_num_science_districts
+			}
+			pki_district_conversion = {
+				DISTRICT = district_pki_flusion_mining
+				VARIABLE = pki_num_mining_districts
+			}
+			pki_district_conversion = {
+				DISTRICT = district_pki_flusion_farming
+				VARIABLE = pki_num_farming_districts
 			}
 		}
 	}
@@ -757,35 +781,61 @@ decision_pki_further_restructuring = {
 			minerals = 50000
 			unity = 10000
 			multiplier = pki_flusion_job_size
-			influence = 800
         }
+		cost = {
+			influence = 500
+		}
     }
 	sound = event_administrative_work
     potential = {
         from = {
 			has_origin = origin_katzen
-			has_tradition = tr_flusion_finish
         }
+		has_planet_flag = societal_reconstruction_started
 		has_planet_flag = gigaflusion
-		is_planet_class = pc_flusion_gaia_ecu
+		is_planet_class = pc_pki_flusion_ecu
 		is_colony = yes
     }
 	effect = {
+		custom_tooltip = pki_expand_flusion_more
 		hidden_effect = {
+			planet = {
+				multiply_variable = { 
+					which = pki_flusion_job_size
+					value = 1.25
+				}
+			}
 			every_owned_pop = {
 				random = {
 					chance = 50
 					kill_pop = yes
 				}
 			}
-			export_modifier_to_variable = {
-				modifier = giga_planet_job_size
-				variable = pki_flusion_job_size
+			pki_district_conversion = {
+				DISTRICT = district_pki_flusion_city
+				VARIABLE = pki_num_city_districts
 			}
-			multiply_variable = {
-				which = pki_flusion_job_size
-				value = 2
+			pki_district_conversion = {
+				DISTRICT = district_pki_flusion_civilian_industry
+				VARIABLE = pki_num_civ_industry_districts
 			}
+			pki_district_conversion = {
+				DISTRICT = district_pki_flusion_heavy_industry
+				VARIABLE = pki_num_heavy_industry_districts
+			}
+			pki_district_conversion = {
+				DISTRICT = district_pki_flusion_science
+				VARIABLE = pki_num_science_districts
+			}
+			pki_district_conversion = {
+				DISTRICT = district_pki_flusion_mining
+				VARIABLE = pki_num_mining_districts
+			}
+			pki_district_conversion = {
+				DISTRICT = district_pki_flusion_farming
+				VARIABLE = pki_num_farming_districts
+			}
+			add_deposit = d_pki_flusion_societal_restructuring
 		}
 	}
 }

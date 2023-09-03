@@ -1,46 +1,46 @@
-#Consumer Goods + Alloys
-district_flusion_civilian_industry = {
+#Housing: Amenities
+district_pki_flusion_city = {
+	icon = district_flusion_city
 	base_buildtime = 480
 	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
 
 	show_on_uncolonized = {
-		exists = from
-		from = { is_planet_class = pc_flusion_gaia_ecu 	uses_district_set = flusion_gaia_ecu }
-	}
-
-
-	conversion_ratio = 1
-	convert_to = {
-		district_flusion_heavy_industry
+		is_planet_class = pc_pki_flusion_ecu
+		uses_district_set = pki_flusion_ecu
 	}
 
 	potential = {
 		exists = owner
-		owner = {
-			NOT = {
-				has_ethic = ethic_gestalt_consciousness
-			}
-		}
-		is_planet_class = pc_flusion_gaia_ecu
-		uses_district_set = flusion_gaia_ecu
+		is_planet_class = pc_pki_flusion_ecu
+		uses_district_set = pki_flusion_ecu
 	}
 
 	allow = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
 	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_city_katzen
+		district_city
+	}
+
 	resources = {
 		category = planet_districts_industrial
 		cost = {
 			minerals = 720
 		}
 		upkeep = {
-			energy = 5
+			energy = 2
 		}
 	}
 
 	planet_modifier = {
-		pop_environment_tolerance = -0.02
+		planet_housing_add = 24
+		planet_amenities_add = 28
+		planet_orbital_bombardment_damage = -0.05
 	}
 
 	triggered_planet_modifier = {
@@ -49,16 +49,13 @@ district_flusion_civilian_industry = {
 			owner = {
 				OR = {
 					is_country_type = katzenartig_imperium
-					is_regular_empire = yes
-				}
-				NOR = {
-					has_civic = civic_crafters
-					has_civic = civic_corporate_crafters
+					is_gestalt = no
 				}
 			}
 		}
 		modifier = {
-			job_artisan_add = 5
+			job_enforcer_add = 4
+			job_soldier_add = 1
 		}
 	}
 
@@ -66,18 +63,22 @@ district_flusion_civilian_industry = {
 		potential = {
 			exists = owner
 			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					is_regular_empire = yes
-				}
-				OR = {
-					has_civic = civic_crafters
-					has_civic = civic_corporate_crafters
-				}
+				is_gestalt = yes
 			}
 		}
 		modifier = {
-			job_artificer_add = 5
+			job_patrol_drone_add = 4
+			job_warrior_drone_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 3
 		}
 	}
 
@@ -85,16 +86,11 @@ district_flusion_civilian_industry = {
 		potential = {
 			exists = owner
 			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					is_regular_empire = yes
-				}
-				is_megacorp = no
-				is_spiritualist = no
+				has_technology = tech_housing_1
 			}
 		}
 		modifier = {
-			job_bureaucrat_add = 3
+			planet_housing_add = 3
 		}
 	}
 
@@ -102,15 +98,12 @@ district_flusion_civilian_industry = {
 		potential = {
 			exists = owner
 			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-				}
-				is_regular_empire = yes
-				is_megacorp = yes
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
 			}
 		}
 		modifier = {
-			job_manager_add = 3
+			planet_housing_add = 3
 		}
 	}
 
@@ -118,17 +111,83 @@ district_flusion_civilian_industry = {
 		potential = {
 			exists = owner
 			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					is_regular_empire = yes
-				}
-				is_megacorp = no
-				is_spiritualist = yes
+				has_technology = tech_housing_2
+				is_gestalt = yes
 			}
 		}
 		modifier = {
-			job_priest_add = 3
+			job_maintenance_drone_add = 3
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				has_active_tradition = tr_mercantile_trickle_up_economics
+			}
+		}
+		modifier = {
+			job_clerk_add = 3
+		}
+	}
+
+	# Bug Branch
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+				is_bugged_rooftop_farmers = yes
+			}
+		}
+		modifier = {
+			# the roofs are full of AA guns already
+			job_enforcer_add = -1
+			job_farmer_add = 1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_bugged_rooftop_farmers = yes }
+		}
+		text = job_farmer_effect_desc
+	}
+	# Bug Branch
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					is_country_type = katzenartig_imperium
+					is_gestalt = no
+				}
+			}
+		}
+		text = job_enforcer_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				has_active_tradition = tr_mercantile_trickle_up_economics 
+			}
+		}
+		text = job_clerk_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_patrol_drone_effect_desc
 	}
 
 	triggered_desc = {
@@ -137,97 +196,36 @@ district_flusion_civilian_industry = {
 			owner = {
 				OR = {
 					is_country_type = katzenartig_imperium
-					is_regular_empire = yes
-				}
-				NOR = {
-					has_civic = civic_crafters
-					has_civic = civic_corporate_crafters
+					is_gestalt = no
 				}
 			}
 		}
-		text = job_artisan_effect_desc
+		text = job_soldier_effect_desc
 	}
 
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					is_regular_empire = yes
-				}
-				OR = {
-					has_civic = civic_crafters
-					has_civic = civic_corporate_crafters
-				}
-			}
+			owner = { is_gestalt = yes }
 		}
-		text = job_artificer_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					is_regular_empire = yes
-				}
-				is_megacorp = no
-			}
-		}
-		text = job_bureaucrat_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					is_regular_empire = yes
-				}
-				is_megacorp = no
-				is_spiritualist = yes
-			}
-		}
-		text = job_priest_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					is_regular_empire = yes
-				}
-				is_megacorp = yes
-			}
-		}
-		text = job_manager_effect_desc
-	}
-	
-	ai_resource_production = {
-		consumer_goods = 36
-		trigger = { always = yes }
+		text = job_warrior_drone_effect_desc
 	}
 }
 
 #Heavy Industry: Alloys & EC (and Supertensiles)
-district_flusion_heavy_industry = {
+district_pki_flusion_heavy_industry = {
 	base_buildtime = 480
 	is_capped_by_modifier = no
 
 	show_on_uncolonized = {
-		is_planet_class = pc_flusion_gaia_ecu
-		uses_district_set = flusion_gaia_ecu
+		is_planet_class = pc_pki_flusion_ecu
+		uses_district_set = pki_flusion_ecu
 	}
 
 	potential = {
 		exists = owner
-		is_planet_class = pc_flusion_gaia_ecu
-		uses_district_set = flusion_gaia_ecu
+		is_planet_class = pc_pki_flusion_ecu
+		uses_district_set = pki_flusion_ecu
 	}
 
 	allow = {
@@ -473,4 +471,609 @@ district_flusion_heavy_industry = {
 		}
 		text = job_giga_megaengineer_effect_desc
 	}
+}
+
+#Consumer Goods + Alloys
+district_pki_flusion_civilian_industry = {
+	base_buildtime = 480
+	is_capped_by_modifier = no
+
+	show_on_uncolonized = {
+		exists = from
+		from = { is_planet_class = pc_pki_flusion_ecu 	uses_district_set = pki_flusion_ecu }
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_pki_flusion_heavy_industry
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		is_planet_class = pc_pki_flusion_ecu
+		uses_district_set = pki_flusion_ecu
+	}
+
+	allow = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+	resources = {
+		category = planet_districts_industrial
+		cost = {
+			minerals = 720
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	planet_modifier = {
+		pop_environment_tolerance = -0.02
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					is_country_type = katzenartig_imperium
+					is_regular_empire = yes
+				}
+				NOR = {
+					has_civic = civic_crafters
+					has_civic = civic_corporate_crafters
+				}
+			}
+		}
+		modifier = {
+			job_artisan_add = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					is_country_type = katzenartig_imperium
+					is_regular_empire = yes
+				}
+				OR = {
+					has_civic = civic_crafters
+					has_civic = civic_corporate_crafters
+				}
+			}
+		}
+		modifier = {
+			job_artificer_add = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					is_country_type = katzenartig_imperium
+					is_regular_empire = yes
+				}
+				is_megacorp = no
+				is_spiritualist = no
+			}
+		}
+		modifier = {
+			job_bureaucrat_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					is_country_type = katzenartig_imperium
+				}
+				is_regular_empire = yes
+				is_megacorp = yes
+			}
+		}
+		modifier = {
+			job_manager_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					is_country_type = katzenartig_imperium
+					is_regular_empire = yes
+				}
+				is_megacorp = no
+				is_spiritualist = yes
+			}
+		}
+		modifier = {
+			job_priest_add = 3
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					is_country_type = katzenartig_imperium
+					is_regular_empire = yes
+				}
+				NOR = {
+					has_civic = civic_crafters
+					has_civic = civic_corporate_crafters
+				}
+			}
+		}
+		text = job_artisan_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					is_country_type = katzenartig_imperium
+					is_regular_empire = yes
+				}
+				OR = {
+					has_civic = civic_crafters
+					has_civic = civic_corporate_crafters
+				}
+			}
+		}
+		text = job_artificer_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					is_country_type = katzenartig_imperium
+					is_regular_empire = yes
+				}
+				is_megacorp = no
+			}
+		}
+		text = job_bureaucrat_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					is_country_type = katzenartig_imperium
+					is_regular_empire = yes
+				}
+				is_megacorp = no
+				is_spiritualist = yes
+			}
+		}
+		text = job_priest_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					is_country_type = katzenartig_imperium
+					is_regular_empire = yes
+				}
+				is_megacorp = yes
+			}
+		}
+		text = job_manager_effect_desc
+	}
+	
+	ai_resource_production = {
+		consumer_goods = 36
+		trigger = { always = yes }
+	}
+}
+
+#Science + Rare resources
+district_pki_flusion_science = {
+	icon = district_flusion_science
+	base_buildtime = 480
+	is_capped_by_modifier = no
+
+	show_on_uncolonized = {
+		is_planet_class = pc_pki_flusion_ecu
+		uses_district_set = pki_flusion_ecu
+	}
+
+	potential = {
+		exists = owner
+		is_planet_class = pc_pki_flusion_ecu
+		uses_district_set = pki_flusion_ecu
+	}
+
+	allow = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_mining
+	}
+
+	resources = {
+		category = planet_districts_industrial
+		cost = {
+			minerals = 720
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					is_country_type = katzenartig_imperium
+					is_gestalt = no
+				}
+			}
+		}
+		modifier = {
+			job_head_researcher_add = 1
+			job_researcher_add = 6
+			job_chemist_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		modifier = {
+			job_brain_drone_add = 7
+			job_chemist_drone_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		modifier = {
+			job_calculator_add = 7
+			job_chemist_drone_add = 1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					is_country_type = katzenartig_imperium
+					is_gestalt = no
+				}
+			}
+		}
+		text = job_researcher_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		text = job_calculator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		text = job_brain_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_chemist_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_chemist_drone_effect_desc
+	}
+}
+
+#Mining: Minerals, Crystals & Gasses
+district_pki_flusion_mining = {
+	icon = district_flusion_mining
+	base_buildtime = 480
+	is_capped_by_modifier = no
+
+	show_on_uncolonized = {
+		is_planet_class = pc_pki_flusion_ecu
+		uses_district_set = pki_flusion_ecu
+	}
+
+	potential = {
+		exists = owner
+		is_planet_class = pc_pki_flusion_ecu
+		uses_district_set = pki_flusion_ecu
+	}
+
+	allow = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_mining
+	}
+
+	resources = {
+		category = planet_districts_industrial
+		cost = {
+			minerals = 720
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_energy_produces_mult = 0.05
+		pop_environment_tolerance = -0.025
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					is_country_type = katzenartig_imperium
+					is_gestalt = no
+				}
+			}
+		}
+		modifier = {
+			job_miner_add = 6
+			job_crystal_miner_add = 1
+			job_gas_extractor_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_mining_drone_add = 6
+			job_crystal_mining_drone_add = 1
+			job_gas_extraction_drone_add = 1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					is_country_type = katzenartig_imperium
+					is_gestalt = no
+				}
+			}
+		}
+		text = job_miner_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_mining_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_gas_extractor_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_gas_extraction_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_crystal_miner_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_crystal_mining_drone_effect_desc
+	}
+}
+
+#Farming + Unity
+district_pki_flusion_farming = {
+	base_buildtime = 480
+	is_capped_by_modifier = no
+	icon = district_flusion_farming
+	show_on_uncolonized = {
+		is_planet_class = pc_pki_flusion_ecu
+		uses_district_set = pki_flusion_ecu
+	}
+
+	potential = {
+		exists = owner
+		is_planet_class = pc_pki_flusion_ecu
+		uses_district_set = pki_flusion_ecu
+	}
+
+	allow = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_farming
+	}
+
+	resources = {
+		category = planet_districts_industrial
+		cost = {
+			minerals = 720
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	planet_modifier = {
+		pop_environment_tolerance = 0.075
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					is_country_type = katzenartig_imperium
+					is_gestalt = no
+				}
+			}
+		}
+		modifier = {
+			job_farmer_add = 6
+			job_culture_worker_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_hive_empire = yes
+			}
+		}
+		modifier = {
+			job_agri_drone_add = 6
+			job_synapse_drone_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_machine_empire = yes
+			}
+		}
+		modifier = {
+			job_agri_drone_add = 6
+			job_coordinator_add = 2
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					is_country_type = katzenartig_imperium
+					is_gestalt = no
+				}
+			}
+		}
+		text = job_farmer_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					is_country_type = katzenartig_imperium
+					is_gestalt = no
+				}
+			}
+		}
+		text = job_culture_worker_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_agri_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_synapse_drone_effect_desc
+	}
+
 }

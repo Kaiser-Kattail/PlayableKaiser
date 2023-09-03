@@ -786,5 +786,7 @@ d_pki_flusion_societal_restructuring = {
 	potential = { always = no }
 	icon = d_birch_structure
 
-	
+	planet_modifier = {
+		giga_planet_job_size = 1
+	}
 }
