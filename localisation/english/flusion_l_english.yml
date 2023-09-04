@@ -634,6 +634,8 @@
     decision_depopulate_planet:0 "Migrate Planet"
     decision_depopulate_planet_desc:0 "Migrates all of the population of this world to Flusion."
 
+    NAME_Flusion_Defense_Force: "Flusionian Extraterrestrial Defense Force"
+
     #EHVE
     playable_kaiser_ehve:0 "Ereignis Horizont Versatz Einrichtung"
     playable_kaiser_ehve_DESC:0 "A complete and operational Katzen E.H.V.E., capable of generating wormholes to allow Katzen fleets to access otherwise unreachable systems."
