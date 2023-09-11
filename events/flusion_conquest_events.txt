@@ -11,6 +11,9 @@ country_event = { #Flusion is GONE (destroyed, checks monthly)
 			exists = event_target:jublio
 			OR = {
 				event_target:playerflusion = {
+					NOT = {
+                        			is_planet_class = pc_pki_flusion_ecu
+                   			}
 					OR = {
 						is_colony = no #Flusion is not a colony aka destroyed
 						is_planet_class = pc_shattered
