@@ -115,7 +115,7 @@
 	ignore_portrait_duplication=no
 	room="personality_hegemonic_imperialists_room"
 	spawn_enabled=no
-	ethic="ethic_xenophile"
+	ethic="ethic_materialist"
 	ethic="ethic_fanatic_militarist"
 	civics={
 		"civic_distinguished_admiralty"
