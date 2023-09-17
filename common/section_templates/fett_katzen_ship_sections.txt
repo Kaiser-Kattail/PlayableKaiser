@@ -238,14 +238,15 @@ ship_section_template = {
 	component_slot = { name = "KINETIC_02"			template = "large_turret"							locatorname = "medium_gun_03" }
 	component_slot = { name = "KINETIC_03"			template = "large_turret"							locatorname = "medium_gun_05" } #Kinetic
 	component_slot = { name = "KINETIC_04"			template = "large_turret"							locatorname = "medium_gun_04" }
+	component_slot = { name = "MEDIUM_GUN_01"		template = "medium_turret"							locatorname = "medium_gun_01" } 
+	component_slot = { name = "MEDIUM_GUN_02"		template = "medium_turret"							locatorname = "medium_gun_01" } 
+	component_slot = { name = "MEDIUM_GUN_03"		template = "medium_turret"							locatorname = "medium_gun_01" } 
+	component_slot = { name = "MEDIUM_GUN_04"		template = "medium_turret"							locatorname = "medium_gun_01" } 
 	component_slot = { name = "AUTOCANNON_01"		template = "small_turret"							locatorname = "medium_gun_05" } #Small guns
 	component_slot = { name = "AUTOCANNON_02"		template = "small_turret"							locatorname = "medium_gun_04" }
 	component_slot = { name = "AUTOCANNON_03"		template = "small_turret"							locatorname = "medium_gun_04" }
 	component_slot = { name = "AUTOCANNON_04"		template = "small_turret"							locatorname = "medium_gun_05" }
-	component_slot = { name = "AUTOCANNON_05"		template = "small_turret"							locatorname = "medium_gun_01" } 
-	component_slot = { name = "AUTOCANNON_06"		template = "small_turret"							locatorname = "medium_gun_01" } 
-	component_slot = { name = "AUTOCANNON_07"		template = "small_turret"							locatorname = "medium_gun_01" } 
-	component_slot = { name = "AUTOCANNON_08"		template = "small_turret"							locatorname = "medium_gun_01" } 
+
 
 	large_utility_slots = 5
 	aux_utility_slots = 2
