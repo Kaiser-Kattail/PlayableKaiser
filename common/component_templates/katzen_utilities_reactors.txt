@@ -47,12 +47,12 @@
 @starbase_power_5 = 4550
 @starbase_power_6 = 6200
 
-@platform_power_1 = 200
-@platform_power_2 = 260
-@platform_power_3 = 340
-@platform_power_4 = 440
-@platform_power_5 = 575
-@platform_power_6 = 750
+@platform_power_1 = 400
+@platform_power_2 = 520
+@platform_power_3 = 680
+@platform_power_4 = 880
+@platform_power_5 = 1150
+@platform_power_6 = 1500
 
 #############
 #	COST	#

@@ -541,6 +541,8 @@ decision_katzen_war_forge = {
 		}
 		is_artificial = no
 		giga_habitable_structure = no
+		is_colony = yes
+		is_primitive = no
 	}
 	effect = {
 		solar_system = {
@@ -724,6 +726,7 @@ decision_pki_societal_restructuring = {
 			}
 			add_deposit = d_pki_flusion_societal_restructuring
 			add_deposit = d_giga_job_size
+			add_deposit = d_giga_job_upkeep
 			every_owned_pop = {
 				random = {
 					chance = 50
@@ -753,6 +756,10 @@ decision_pki_societal_restructuring = {
 			pki_district_conversion = {
 				DISTRICT = district_pki_flusion_farming
 				VARIABLE = pki_num_farming_districts
+			}
+			pki_district_conversion = {
+				DISTRICT = district_pki_flusion_power
+				VARIABLE = pki_num_energy_districts
 			}
 		}
 	}

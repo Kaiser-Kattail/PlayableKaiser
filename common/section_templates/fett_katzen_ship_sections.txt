@@ -43,15 +43,16 @@ ship_section_template = {
 	}
 
 	component_slot = {
-		name = "TORPEDO_01"
-		template = "medium_missile_turret"
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
 		locatorname = "medium_gun_03"
-	}
 
+	}
 	component_slot = {
-		name = "TORPEDO_02"
-		template = "medium_missile_turret"
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
 		locatorname = "medium_gun_04"
+
 	}
 
 	component_slot = {
@@ -60,6 +61,7 @@ ship_section_template = {
 		rotation = 90
 		locatorname = "strike_craft_locator_01"
 	}
+
 
 	large_utility_slots = 4
 	aux_utility_slots = 2
@@ -144,7 +146,7 @@ ship_section_template = {
 ###SPACE BOMBER###
 @bomber_section_cost = 40
 ship_section_template = {
-	key = "KATZEN_SPACE_BOMBER"
+	key = "KATZEN_SPACE_BOMBER_1"
 	ship_size = katzen_bomber
 	fits_on_slot = "mid"
 	entity = "katzen_plane_entity"
@@ -156,6 +158,33 @@ ship_section_template = {
 	component_slot = { name = "MISSILE_04"			template = "medium_missile_turret"			locatorname = "gunr2" }
 	component_slot = { name = "MISSILE_05"			template = "medium_missile_turret"			locatorname = "gunr3" }
 	component_slot = { name = "MISSILE_06"			template = "medium_missile_turret"			locatorname = "gunr4" }
+	component_slot = { name = "KINETIC_01"			template = "fett_invisible_large_fixed"		locatorname = "gunl1" }
+	component_slot = { name = "KINETIC_02"			template = "fett_invisible_large_fixed"		locatorname = "gunr1" }
+
+	medium_utility_slots = 6
+	aux_utility_slots = 2
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = 120
+		}
+	}
+}
+
+ship_section_template = {
+	key = "KATZEN_SPACE_BOMBER_2"
+	ship_size = katzen_bomber
+	fits_on_slot = "mid"
+	entity = "katzen_plane_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = { name = "AUTOCANNON_01"		template = "small_turret"					locatorname = "gunl2" } #Small guns
+	component_slot = { name = "AUTOCANNON_02"		template = "small_turret"					locatorname = "gunl3" }
+	component_slot = { name = "AUTOCANNON_03"		template = "small_turret"					locatorname = "gunl4" }
+	component_slot = { name = "AUTOCANNON_04"		template = "small_turret"					locatorname = "gunr2" }
+	component_slot = { name = "AUTOCANNON_05"		template = "small_turret"					locatorname = "gunr3" } 
+	component_slot = { name = "AUTOCANNON_06"		template = "small_turret"					locatorname = "gunr4" } 
 	component_slot = { name = "KINETIC_01"			template = "fett_invisible_large_fixed"		locatorname = "gunl1" }
 	component_slot = { name = "KINETIC_02"			template = "fett_invisible_large_fixed"		locatorname = "gunr1" }
 
@@ -205,10 +234,6 @@ ship_section_template = {
 	icon = "GFX_ship_part_core_mid"
 	entity = "katzen_warplatform_invisible_entity"
 
-	component_slot = { name = "MISSILE_01"			template = "medium_missile_turret"					locatorname = "medium_gun_01" } #Missiles
-	component_slot = { name = "MISSILE_02"			template = "medium_missile_turret"					locatorname = "medium_gun_05" }
-	component_slot = { name = "MISSILE_03"			template = "medium_missile_turret"					locatorname = "medium_gun_01" }
-	component_slot = { name = "MISSILE_04"			template = "medium_missile_turret"					locatorname = "medium_gun_05" }
 	component_slot = { name = "KINETIC_01"			template = "large_turret"							locatorname = "medium_gun_03" } #Kinetic
 	component_slot = { name = "KINETIC_02"			template = "large_turret"							locatorname = "medium_gun_03" }
 	component_slot = { name = "KINETIC_03"			template = "large_turret"							locatorname = "medium_gun_05" } #Kinetic
@@ -217,6 +242,10 @@ ship_section_template = {
 	component_slot = { name = "AUTOCANNON_02"		template = "small_turret"							locatorname = "medium_gun_04" }
 	component_slot = { name = "AUTOCANNON_03"		template = "small_turret"							locatorname = "medium_gun_04" }
 	component_slot = { name = "AUTOCANNON_04"		template = "small_turret"							locatorname = "medium_gun_05" }
+	component_slot = { name = "AUTOCANNON_05"		template = "small_turret"							locatorname = "medium_gun_01" } 
+	component_slot = { name = "AUTOCANNON_06"		template = "small_turret"							locatorname = "medium_gun_01" } 
+	component_slot = { name = "AUTOCANNON_07"		template = "small_turret"							locatorname = "medium_gun_01" } 
+	component_slot = { name = "AUTOCANNON_08"		template = "small_turret"							locatorname = "medium_gun_01" } 
 
 	large_utility_slots = 5
 	aux_utility_slots = 2
