@@ -212,7 +212,7 @@ district_pki_flusion_city = {
 	}
 }
 
-#Heavy Industry: Alloys & EC (and Supertensiles)
+#Heavy Industry: Alloys (and Supertensiles)
 district_pki_flusion_heavy_industry = {
 	base_buildtime = 480
 	is_capped_by_modifier = no
@@ -276,8 +276,7 @@ district_pki_flusion_heavy_industry = {
 			}
 		}
 		modifier = {
-			job_technician_add = 3
-			job_foundry_add = 5
+			job_foundry_add = 8
 		}
 	}
 
@@ -290,8 +289,7 @@ district_pki_flusion_heavy_industry = {
 			}
 		}
 		modifier = {
-			job_technician_add = 4
-			job_catalytic_technician_add = 4
+			job_catalytic_technician_add = 8
 		}
 	}
 
@@ -304,8 +302,7 @@ district_pki_flusion_heavy_industry = {
 			}
 		}
 		modifier = {
-			job_technician_drone_add = 4
-			job_alloy_drone_add = 4
+			job_alloy_drone_add = 8
 		}
 	}
 
@@ -318,9 +315,7 @@ district_pki_flusion_heavy_industry = {
 			}
 		}
 		modifier = {
-			job_technician_drone_add = 4
-			job_fabricator_add = 4
-		}
+			job_fabricator_add = 8
 	}
 
 	triggered_planet_modifier = {
@@ -332,8 +327,7 @@ district_pki_flusion_heavy_industry = {
 			}
 		}
 		modifier = {
-			job_technician_drone_add = 4
-			job_catalytic_drone_add = 4
+			job_catalytic_drone_add = 8
 		}
 	}
 	
@@ -347,8 +341,7 @@ district_pki_flusion_heavy_industry = {
 			owner = { has_technology = giga_tech_amb_supertensiles }
 		}
 		modifier = {
-			job_technician_add = -1
-			job_foundry_add = -1
+			job_foundry_add = -2
 			job_giga_megaengineer_add = 2
 		}
 	}
@@ -435,29 +428,6 @@ district_pki_flusion_heavy_industry = {
 			}
 		}
 		text = job_maintenance_drone_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					is_gestalt = no
-				}
-			}
-		}
-		text = job_technician_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		text = job_technician_drone_effect_desc
 	}
 	
 	triggered_desc = {
@@ -1076,4 +1046,113 @@ district_pki_flusion_farming = {
 		text = job_synapse_drone_effect_desc
 	}
 
+}
+
+district_pki_flusion_power = {
+	icon = district_generator
+	base_buildtime = 480
+	is_capped_by_modifier = no
+
+	show_on_uncolonized = {
+		is_planet_class = pc_pki_flusion_ecu
+		uses_district_set = pki_flusion_ecu
+	}
+
+	potential = {
+		exists = owner
+		is_planet_class = pc_pki_flusion_ecu
+		uses_district_set = pki_flusion_ecu
+	}
+
+	allow = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_generator
+	}
+
+	resources = {
+		category = planet_districts_generator
+		cost = {
+			minerals = 720
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	planet_modifier = {
+		pop_environment_tolerance = -0.025
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					is_country_type = katzenartig_imperium
+					is_gestalt = no
+				}
+			}
+		}
+		modifier = {
+			job_technician_add = 7
+			job_mote_harvester_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_technician_drone_add = 7
+			job_mote_harvester_drone_add = 1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					is_country_type = katzenartig_imperium
+					is_gestalt = no
+				}
+			}
+		}
+		text = job_technician_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_technician_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_mote_harvester_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_most_harvester_drone_effect_desc
+	}
 }

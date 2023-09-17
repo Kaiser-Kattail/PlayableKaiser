@@ -66,7 +66,7 @@ katzen_trait_elite = {
 	}
 	immortal_leaders = yes
 	self_modifier = {
-		species_leader_exp_gain = 0.15
+		species_leader_exp_gain = -0.15
 	}
 	leader_class = {
 		admiral general governor scientist

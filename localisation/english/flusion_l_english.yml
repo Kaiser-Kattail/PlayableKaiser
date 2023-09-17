@@ -62,9 +62,9 @@
     d_altarian_island:0 "Altarian Island"
     d_altarian_island_desc:0 "The Altarian Island is rich in rare resources such as the exotic Betharian Stone, which most likely powered the Altarians themselves."
     d_manglarian_junkyard:0 "£blocker£ Manglarian Junkyard"
-    d_manglarian_junkyard_desc:0 "Manglaria is an island completely covered by the ruins of the old Solak city."
-    d_restored_solak:0 "Restored Solak Metropolis"
-    d_restored_solak_desc:0 "The ancient city of Solak, brought back from devastation."
+    d_manglarian_junkyard_desc:0 "Manglaria is an island completely covered by the ruins of the old Roqual city."
+    d_restored_solak:0 "Restored Roqual Metropolis"
+    d_restored_solak_desc:0 "The ancient city of Roqual, brought back from devastation."
     d_catspian_sea:0 "£blocker£ Catspian Sea"
     d_catspian_sea_desc:0 "The Catspian Sea is said to possess untold riches, but the sea itself prevents us from accessing them."
     d_catspian_crystal_mines:0 "Catspian Crystal Mines"
@@ -192,7 +192,7 @@
    
     # Custom fail text
     not_allowed_for_katzen_protektorat:0 "£trigger_no£ Not allowed for level 1 or 2 §YKatzprotektorat§! subjects"
-    need_both_dams:0 "£trigger_no£ Requires both the Solaktropa and Katlantropa dams to be built"
+    need_both_dams:0 "£trigger_no£ Requires both the Roqualtropa and Katlantropa dams to be built"
     must_have_valid_elite_governor:0 "Must have a governor without the §YElite Figure§! trait."
     must_have_valid_elite_scientist:0 "Must have a scientist without the §YElite Figure§! trait."
     must_have_valid_elite_admiral:0 "Must have an admiral without the §YElite Figure§! trait."
@@ -224,8 +224,8 @@
     katzen.11.desc:0 "This is a list of our generals that do not have the §YElite Figure§! trait."
    
     # Decisions
-    decision_solaktropa:0 "Begin Solaktropa Project"
-    decision_solaktropa_desc:0 "Damming the Solakarean Sea and redirecting its evaporated waters towards the freshly-deforested island of Altaria will help boost the development of the island's agriculture. The dam itself shall stand as one of the largest artificial structures on Flusion and will power a huge chunk of the neighboring industries by generating near limitless power."
+    decision_solaktropa:0 "Begin Roqualtropa Project"
+    decision_solaktropa_desc:0 "Damming the Roqualarean Sea and redirecting its evaporated waters towards the freshly-deforested island of Altaria will help boost the development of the island's agriculture. The dam itself shall stand as one of the largest artificial structures on Flusion and will power a huge chunk of the neighboring industries by generating near limitless power."
     decision_katlantropa:0 "Begin Katlantropa Project"
     decision_katlantropa_desc:0 "By damming the Katsula and the Polga, and building a dam across the Catspian Sea's middle section, we can lower the level of the sea's southern lobe and reclaim vast tracts of wet land. The evaporated water alongside the redirected river will then be used to irrigate the vast desert to the south of the Katzen Herzlands, providing massive amounts of arable land and finally eliminating one of the largest hostile areas of Flusion."
     decision_flusion_arc:0 "Construct Flusio-Arcology"
@@ -249,8 +249,8 @@
     decision_pki_further_restructuring:0 "Further Restructuring"
     decision_pki_further_restructuring_desc:0 "By building more and more off of our existing work, we will be able to achieve an further boot in efficiency.\n\n§HThere are deminishing returns with futher restructuring!§!\n\n§RWARNING!§!\n§HThis will effectively kill half of the planet's population and destroy half of the districts.§!"
 
-    pki_expand_flusion:0 "Increses §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow.\n\n§RRemoves 50% of the population and districts!§!"
-    pki_expand_flusion_more:0 "Increses §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow.\n\n§RRemoves 50% of the population and districts!§!"
+    pki_expand_flusion:0 "Increses §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow.§!"
+    pki_expand_flusion_more:0 "Increses §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow.§!"
    
     # Project Mondkanone
     decision_mondkanone:0 "Propose Project Mondkanone"
@@ -324,7 +324,7 @@
     district_pki_flusion_city_desc:0 "Colossal stretches of urban housing built within humongous megacities, providing housing and entertainment to its inhabitants. In true Katzen fashion, these housing complexes feature large quantities of anti-air and anti-orbital weaponry mounted onto nearly every rooftop, designed to hamper any invaders attempting to seize Flusion."
     district_pki_flusion_city_plural:0 "Flusionian Housing Complexes"
     district_pki_flusion_heavy_industry:0 "Flusionian Heavy Industry"
-    district_pki_flusion_heavy_industry_desc:0 "Vast arrays of underground foundries and power generators designed to fuel Flusion's ever-growing industry with building materials and copious quantities of energy."
+    district_pki_flusion_heavy_industry_desc:0 "Vast arrays of underground foundries and factories designed to fuel Flusion's ever-growing industry with building materials and military resources."
     district_pki_flusion_heavy_industry_plural:0 "Flusionian Heavy Industries"
     district_pki_flusion_science:0 "Flusionian Research Complex"
     district_pki_flusion_science_desc:0 "Sprawling expanses consisting of campuses and research laboratories working tirelessly to push the boundaries of Flusionian science even further and synthesize various otherwise unobtainable resources."
@@ -338,6 +338,9 @@
     district_pki_flusion_civilian_industry:0 "Flusion Civilian Industry"
     district_pki_flusion_civilian_industry_desc:0 "A vast array of manufactories and offices, streamlining the production and distribution of Katzen-approved consumer goods."
     district_pki_flusion_civilian_industry_plural:0 "Flusion Civilian Industries"
+    district_pki_flusion_power: "Flusionian Power Plants"  
+    district_pki_flusion_power_plural: "Flusionian Power Plants"
+    district_pki_flusion_power_desc: "A behemoth array of nuclear generators and reactors, providing immense amounts of energy for both the planet and the rest of the empire."
    
    
     katzensoldaten_army: "Katzensoldaten Army"
