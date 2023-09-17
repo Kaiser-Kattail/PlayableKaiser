@@ -12,6 +12,7 @@
     leader_trait_ruler_kaiser_cattail_desc:0 "Kaiser Kattail is a nigh-immortal entity of high charisma yet pronounced goofyness and megalomania."
     katzen_trait_martial_free:0 "Martial Discipline"
     katzen_trait_martial_free_desc:0 "This species is incredibly disciplined, thanks to long-standing martial traditions. They will fight like no other on the battlefield and vow absolute loyalty to their nation. defending it to the very end."
+    katzen_trait_elite_effect: "$t$Does not use Leader Capacity."
    
     # Civics/Origins
     origin_katzen:0 "Katzen Unification"
@@ -37,8 +38,8 @@
     d_katown_desc:0 "The largest urban area on Flusion, Katown is home to hundreds of millions of inhabitants of all species."
     d_katzen_generator:0 "Katzen Megareactor"
     d_katzen_generator_desc:0 "The Megareactor provides Flusion with clean energy thanks to the power of nuclear fusion."
-    d_ezic_farmland:0 "Ezic Pastures"
-    d_ezic_farmland_desc:0 "The vast expanses of the former Ezic Empire have been repurposed into useful farms."
+    d_ezic_farmland:0 "Zuspri Pastures"
+    d_ezic_farmland_desc:0 "The vast expanses of the former Zuspri Intermarium have been repurposed into useful farms."
     d_mercurian_plains:0 "Central Mercurian Plain"
     d_mercurian_plains_desc:0 "Central Mercuria consists of a single large plain which provides plenty of arable land."
     d_yinjite_sea_mines:0 "Yinjite Underwater Mines"
@@ -206,7 +207,7 @@
    
     # Events
     katzen.7.name:0 "Katzen Elite Menu"
-    katzen.7.desc:0 "We are able to choose a leader to promote to be an Elite. First pick a leader type below. This has a cost of 1000 unity."
+    katzen.7.desc:0 "We are able to choose a leader to promote to be an Elite. First pick a leader type below."
     katzen.7.a:0 "Governors"
     katzen.7.b:0 "Scientists"
     katzen.7.c:0 "Admirals"
@@ -215,7 +216,12 @@
     katzen.8.f:0 "Back"
    
     katzen.8.name:0 "Governors"
-    katzen.8.desc:0 "This is a list of our governors that do not have the §YElite Figure§! trait."
+    katzen.8.desc:0 "This is a list of our governors that do not have the §YElite Figure§! trait.\n\nIf the leader you are looking for is not present, go back and reopen this menu to refresh the list. You may have to do this a few times."
+    katzen.8.a: "[leader_1.GetTitle] [leader_1.GetName]"
+    katzen.8.b: "[leader_2.GetTitle] [leader_2.GetName]"
+    katzen.8.c: "[leader_3.GetTitle] [leader_3.GetName]"
+    katzen.8.d: "[leader_4.GetTitle] [leader_4.GetName]"
+    katzen.8.e: "[leader_5.GetTitle] [leader_5.GetName]"
     katzen.9.name:0 "Scientists"
     katzen.9.desc:0 "This is a list of our scientists that do not have the §YElite Figure§! trait."
     katzen.10.name:0 "Admirals"
@@ -686,3 +692,5 @@
     pki_ehve.2.a:0 "Gates closed."
     pki_ehve.2.b:0 "Until next time."
     pki_ehve.2.c:0 "As it should."
+
+    

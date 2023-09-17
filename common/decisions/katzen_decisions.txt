@@ -52,34 +52,17 @@ decision_flusion_arc = {
 				modifier = pki_flusion_ecu_modifier
 				days = -1
 			}
-			pki_district_conversion = {
-				DISTRICT = district_pki_flusion_city
-				VARIABLE = pki_num_city_districts
-			}
-			pki_district_conversion = {
-				DISTRICT = district_pki_flusion_civilian_industry
-				VARIABLE = pki_num_civ_industry_districts
-			}
-			pki_district_conversion = {
-				DISTRICT = district_pki_flusion_heavy_industry
-				VARIABLE = pki_num_heavy_industry_districts
-			}
-			pki_district_conversion = {
-				DISTRICT = district_pki_flusion_science
-				VARIABLE = pki_num_science_districts
-			}
-			pki_district_conversion = {
-				DISTRICT = district_pki_flusion_mining
-				VARIABLE = pki_num_mining_districts
-			}
-			pki_district_conversion = {
-				DISTRICT = district_pki_flusion_farming
-				VARIABLE = pki_num_farming_districts
-			}
-			split_districts_effect = {
-				DISTRICT1 = district_pki_flusion_civilian_industry
-				DISTRICT2 = district_pki_flusion_heavy_industry
-			}
+			add_district = district_pki_flusion_city
+			add_district = district_pki_flusion_city
+			add_district = district_pki_flusion_city
+			add_district = district_pki_flusion_power
+			add_district = district_pki_flusion_power
+			add_district = district_pki_flusion_mining
+			add_district = district_pki_flusion_mining
+			add_district = district_pki_flusion_farming
+			add_district = district_pki_flusion_farming
+			add_district = district_pki_flusion_civilian_industry
+			add_district = district_pki_flusion_civilian_industry
 		}
 	}
 }

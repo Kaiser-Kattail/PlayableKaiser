@@ -71,6 +71,7 @@ katzen_trait_elite = {
 	leader_class = {
 		admiral general governor scientist
 	}
+	custom_tooltip_with_modifiers = katzen_trait_elite_effect
 	initial = no
 	randomized = no
 }
