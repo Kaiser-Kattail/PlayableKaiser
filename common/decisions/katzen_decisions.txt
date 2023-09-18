@@ -541,8 +541,6 @@ decision_katzen_war_forge = {
 		}
 		is_artificial = no
 		giga_habitable_structure = no
-		is_colony = yes
-		is_primitive = no
 	}
 	effect = {
 		solar_system = {
