@@ -564,7 +564,9 @@ country_event = {
 				is_artificial = no
 				giga_habitable_structure = no
 				is_colony = yes
-				is_primitive = no
+				planet_owner = {
+					is_primitive = no
+				}
 			}
 			planet.owner = {
 				add_resource = {
