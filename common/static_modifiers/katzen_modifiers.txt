@@ -17,7 +17,7 @@ stop_eating_naval_cap_you_hecker = {
 }
 
 no_ftl_capability = {
-	ship_speed_mult = -0.75
+	ship_speed_mult = -2.00
 	ship_windup_mult = 2
 	country_starbase_influence_cost_mult = 0.75
 	ship_interstellar_speed_mult = -0.75
