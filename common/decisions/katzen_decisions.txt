@@ -105,7 +105,7 @@ decision_siegfried_world = {
 			has_planet_flag = gigaflusion
 		}
 		NOR = {
-			is_planet_class = pc_flusion_gaia_ecu
+			is_planet_class = pc_pki_flusion_ecu
 			is_planet_class = pc_city
 			is_planet_class = pc_relic
 			has_modifier = resort_colony
@@ -553,11 +553,15 @@ decision_katzen_war_forge = {
 		is_star = no
 		OR = {
 			habitable_planet = yes
-			is_planet_class = pc_flusion_gaia_ecu
+			is_planet_class = pc_pki_flusion_ecu
 			is_planet_class = pc_nuked
 		}
 		is_artificial = no
 		giga_habitable_structure = no
+		is_colony = yes
+		owner = {
+			is_primitive = no
+		}
 	}
 	effect = {
 		solar_system = {

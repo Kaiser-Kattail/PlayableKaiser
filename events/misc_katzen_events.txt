@@ -558,11 +558,15 @@ country_event = {
 				is_star = no
 				OR = {
 					habitable_planet = yes
-					is_planet_class = pc_flusion_gaia_ecu
+					is_planet_class = pc_pki_flusion_ecu
 					is_planet_class = pc_nuked
 				}
 				is_artificial = no
 				giga_habitable_structure = no
+				is_colony = yes
+				owner = {
+					is_primitive = no
+				}
 			}
 			planet.owner = {
 				add_resource = {

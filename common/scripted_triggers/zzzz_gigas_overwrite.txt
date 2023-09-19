@@ -128,22 +128,3 @@ gigas_kilostructure_list = {
 		$CONDITION$ = katzen_war_forge_1
 	}
 }
-
-habitable_planet = {
-	# merger of rules can ignore this, it already covers everything this overwrite does
-	or = {
-		# vanilla
-		habitable_planet_not_urban = yes
-		is_planet_class = pc_relic
-		is_planet_class = pc_city
-		
-		# gigastructures
-		is_planet_class = pc_flusion_gaia_ecu
-		is_planet_class = pc_pki_flusion_ecu
-
-		# Planetary Diversity
-		is_pd_arcology = yes 
-		is_pd_hive_arcology = yes
-		is_pd_robot_arcology = yes
-	}
-}
