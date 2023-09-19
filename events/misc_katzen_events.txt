@@ -756,3 +756,27 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = misc.19
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_paragon_dlc = yes
+		has_origin = origin_katzen
+		has_country_flag = unified_flusion
+		any_owned_sector = {
+			NOT = {
+				has_sector_type = core_sector
+			}
+		}
+	}
+	immediate = {
+		country_event = {
+			id = misc.18
+			days = 180 random = 180
+		}
+	}
+
+}

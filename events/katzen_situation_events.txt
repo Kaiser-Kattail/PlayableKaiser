@@ -104,28 +104,62 @@ situation_event = {
 				}
 				destroy_situation = this
 			}
-			create_fleet = {
-				name = "Projekt Mondkanone"
-				settings = {
-					spawn_debris = no
-					uses_naval_capacity = no
-					can_disband = no
+			create_country = {
+				name = "NAME_Flusion_Defense_Force"
+				type = origin_dragon
+				auto_delete = no
+				use_hostilities_from = root
+				flag = {
+					icon = {
+						category = "spherical"
+						file = "flag_spherical_6.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors = {
+						"dark_blue"
+						"dark_blue"
+						"null"
+						"null"
+					}
 				}
 				effect = {
-					set_owner = event_target:katzenartig
-					create_ship = {
+					establish_communications_no_message = root
+					set_faction_hostility = {
+						target = root
+						set_hostile = no
+						set_neutral = no
+						set_friendly = yes
+					}
+					save_event_target_as = mondkanone_country
+					set_country_flag = mondkanone
+					set_country_flag = mondkanone@root
+					create_fleet = {
 						name = "Projekt Mondkanone"
-						design = "Lunar Defence System"
-						upgradable = no
+						settings = {
+							spawn_debris = no
+							uses_naval_capacity = no
+							can_disband = no
+						}
+						effect = {
+							set_owner = event_target:mondkanone_country
+							create_ship = {
+								name = "Projekt Mondkanone"
+								design = "Lunar Defence System"
+								upgradable = no
+								
+							}
+							
+		
+							set_location = event_target:gigamuno
+							
+						}
+						
 						
 					}
-					
-
-					set_location = event_target:gigamuno
-					
 				}
-				
-				
 			}
 			event_target:gigamuno = {
 				remove_planet = yes
@@ -134,9 +168,6 @@ situation_event = {
 				save_global_event_target_as = kaiser_moon_pls
 			}
 			set_country_flag = ready_for_moon_ap
-			add_modifier = {
-				modifier = stop_eating_naval_cap_you_hecker
-			}
 		}
 		
 	}

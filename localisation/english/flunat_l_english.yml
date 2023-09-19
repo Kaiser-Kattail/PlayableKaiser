@@ -12,8 +12,8 @@
   flunat.0101.c:0 "Enough is enough, this is §RWAR§!!"
   flunat.0101.d:0 "Nothing for now. Goodbye."
   #Solakia
-   NAME_Solakians:0 "Solakian Republic"
-   NAME_Solakian:0 "Solakian"
+   NAME_Solakians:0 "Roqualian Republic"
+   NAME_Solakian:0 "Roqualian"
  
    flunat.0101.name:0 "$NAME_Solakians$ - §Y[solakia_flunat.GetRulerName]§!"
    flunat.0101a.desc:0 "If it isn't our rowdy northern neighbors. What do you desire, Kattail? Know that our mutual border is manned at all times."
@@ -208,11 +208,11 @@
  decision_flusion_strike_attrition:0 "$decision_flusion_strike_cheap$"
  decision_flusion_strike_attrition_desc:0 "$decision_flusion_strike_cheap_desc$"
  situation_world_tension_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
- situation_solakian_conquest:0 "War For Solakia"
+ situation_solakian_conquest:0 "War For Roqualia"
  situation_solakian_conquest_type:0 "Flusionian Conquest"
- situation_solakian_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HSolakian Republic§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
+ situation_solakian_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HRoqualian Republic§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
  situation_solakian_conquest_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
- conquest_situation_conquer_solakia:0 "We annex Solakia, and control their lands and people."
+ conquest_situation_conquer_solakia:0 "We annex Roqualia, and control their lands and people."
  conquest_situation_get_rekt:0 "We lose a region and gain less space!"
  approach_mobile: "Mobile Doctrine"
  approach_mixed: "Mixed Doctrine"
@@ -236,9 +236,9 @@
  region_5: "Fifth Region"
  flunat.0102.desc: "You may have crushed our armies, but you will never crush our spirits. We shall do everything in our power to oppose you."
  flunat.0102.a: "We have won this."
- conquest.102.desc:0 "Face it Kattail; you will never win. The free Solakian spirit cannot be crushed by your farcical war machines."
+ conquest.102.desc:0 "Face it Kattail; you will never win. The free Roqualian spirit cannot be crushed by your farcical war machines."
  conquest.102.a:0 "You will regret this!"
-NAME_solakia_defense: "Solakian Army"
+NAME_solakia_defense: "Roqualian Army"
 
 
 #Cookians

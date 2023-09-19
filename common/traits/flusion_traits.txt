@@ -66,11 +66,12 @@ katzen_trait_elite = {
 	}
 	immortal_leaders = yes
 	self_modifier = {
-		species_leader_exp_gain = 0.15
+		species_leader_exp_gain = -0.15
 	}
 	leader_class = {
 		admiral general governor scientist
 	}
+	custom_tooltip_with_modifiers = katzen_trait_elite_effect
 	initial = no
 	randomized = no
 }
@@ -115,7 +116,7 @@ leader_trait_neumeyer = {
 		planet_enforcers_unity_produces_add = 3
 		job_soldier_stability_add = 5
 		planet_stability_add = 10
-		pop_happiness = -0.1
+		pop_happiness = -0.15
 		defense_armies_add = 6
 	}
 	leader_potential_add = {

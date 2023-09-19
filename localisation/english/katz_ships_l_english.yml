@@ -6,7 +6,8 @@
 
 	katzen_bomber: "Leerekatzenbomber"
 	katzen_bomber_plural: "Leerekatzenbombers"
-	KATZEN_SPACE_BOMBER: "Space Bomber Airframe"
+	KATZEN_SPACE_BOMBER_1: "Dive Bomber Airframe"
+	KATZEN_SPACE_BOMBER_2: "Long Range Bomber Airframe"
 
 	katzen_troop_ship: "Katzkonstrukteur"
 	katzen_troop_ship_plural: "Katzkonstrukteurs"

@@ -91,7 +91,6 @@ namespace = kmoon
 				}
 				destroy_situation = this
 			}
-			remove_modifier = stop_eating_naval_cap_you_hecker
 			create_fleet = {
 				name = "Kaiservorherrschaft"
 				settings = {
