@@ -665,6 +665,7 @@ planet_event = {
 		any_fleet_in_orbit = {
 			any_owned_ship = { is_ship_size = katzen_submarine }
 			owner = { has_origin = origin_katzen }
+			is_cloaked = yes
 		}
 	}
 
