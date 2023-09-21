@@ -186,7 +186,7 @@ KAT = {
 
 		pc_ocean = {
 			names = {
-				KAT_PLANET_Steam_Kommentatortränensee
+				KAT_PLANET_Steam_Kommentatortranensee
 			}
 		}
 
