@@ -18,7 +18,6 @@ tr_katzen_war_machine = {
 	modifier = {
 		ships_upkeep_mult = -0.15
 		starbase_shipyard_build_cost_mult = -0.15
-		country_leader_cap_add = 1
 	}
 
 	ai_weight = {
@@ -33,7 +32,6 @@ tr_katzen_planetside_garrisons = {
 
 	modifier = {
 		planet_soldiers_unity_produces_add = 2
-		country_leader_cap_add = 1
 
 		show_only_custom_tooltip = no
 		custom_tooltip = tr_katzen_planetside_garrisons_effect
@@ -48,7 +46,6 @@ tr_katzen_logistiks = {
 	modifier = {
 		armies_upkeep_mult = -0.35
 		planet_army_build_speed_mult = 0.2
-		country_leader_cap_add = 1
 	}
 
 	ai_weight = {
@@ -66,7 +63,6 @@ tr_katzen_celestial_supremacy = {
 		megastructure_build_speed_mult = 0.05
 		shipsize_giga_planet_behemoth_hull_mult = 0.10
 		shipsize_giga_massive_planet_hull_mult = 0.20
-		country_leader_cap_add = 1
 	}
 
 	ai_weight = {
@@ -81,7 +77,6 @@ tr_katzenkrieglosung = {
 
 	modifier = {
 		country_naval_cap_mult = 0.1
-		country_leader_cap_add = 1
 
 		show_only_custom_tooltip = no
 		custom_tooltip = tr_katzenkrieglosung_effect

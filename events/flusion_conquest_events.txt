@@ -21,6 +21,7 @@ country_event = { #Flusion is GONE (destroyed, checks monthly)
 						num_pops = 0
 						is_planet_habitable = no
 					}
+					NOT = { is_planet_class = pc_pki_flusion_ecu }
 				}
 				NOT = { exists = event_target:playerflusion }
 			}

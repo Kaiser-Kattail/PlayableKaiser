@@ -558,13 +558,13 @@ country_event = {
 				is_star = no
 				OR = {
 					habitable_planet = yes
-					is_planet_class = pc_flusion_gaia_ecu
+					is_planet_class = pc_pki_flusion_ecu
 					is_planet_class = pc_nuked
 				}
 				is_artificial = no
 				giga_habitable_structure = no
 				is_colony = yes
-				planet_owner = {
+				owner = {
 					is_primitive = no
 				}
 			}
@@ -665,6 +665,7 @@ planet_event = {
 		any_fleet_in_orbit = {
 			any_owned_ship = { is_ship_size = katzen_submarine }
 			owner = { has_origin = origin_katzen }
+			is_cloaked = yes
 		}
 	}
 
