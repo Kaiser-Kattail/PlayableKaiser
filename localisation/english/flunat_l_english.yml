@@ -414,4 +414,4 @@ NAME_symbie_defense: "Symby Army"
  agenda_project_celestia_finish:0 "$council_agenda_agenda_project_celestia_name$ $agenda_ref$"
  agenda_project_celestia_finish_desc:0 "$council_agenda_agenda_project_celestia_desc$"
 
- unify_flusion_first_bozo: "We need to unify Flusion first!"
+ unify_flusion_first_bozo: "$TRIGGER_FAIL$We need to unify Flusion first!"
