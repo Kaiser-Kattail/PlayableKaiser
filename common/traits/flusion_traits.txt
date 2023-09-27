@@ -52,7 +52,7 @@ trait_ruler_katzen_bomber_focus = {
 		script = trait/icon
 		CLASS = admiral
 		ICON = GFX_leader_trait_cruiser_focus
-		RARITY = common
+		RARITY = veteran
 		COUNCIL = yes
 		TIER = none
 	}
@@ -82,7 +82,7 @@ trait_ruler_katzen_panzer_focus = {
 		script = trait/icon
 		CLASS = admiral
 		ICON = GFX_leader_trait_destroyer_focus
-		RARITY = common
+		RARITY = veteran
 		COUNCIL = yes
 		TIER = none
 	}
@@ -112,7 +112,7 @@ trait_ruler_katzen_unterraumboot_focus = {
 		script = trait/icon
 		CLASS = admiral
 		ICON = GFX_leader_trait_corvette_focus
-		RARITY = common
+		RARITY = veteran
 		COUNCIL = yes
 		TIER = none
 	}

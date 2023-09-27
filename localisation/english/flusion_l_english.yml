@@ -13,7 +13,16 @@
     katzen_trait_martial_free:0 "Martial Discipline"
     katzen_trait_martial_free_desc:0 "This species is incredibly disciplined, thanks to long-standing martial traditions. They will fight like no other on the battlefield and vow absolute loyalty to their nation. defending it to the very end."
     katzen_trait_elite_effect: "$t$Does not use Leader Capacity."
-   
+
+    trait_ruler_katzen_cruiser_focus:0 "Katzenkreuzer Production Focus"
+    trait_ruler_katzen_cruiser_focus_desc:0 "This leader is intent on promoting the construction of Katzenkreuzers."
+    trait_ruler_katzen_bomber_focus:0 "Leerekatzenbomber Production Focus"
+    trait_ruler_katzen_bomber_focus_desc:0 "This leader is intent on promoting the construction of Leerekatzenbombers."
+    trait_ruler_katzen_panzer_focus:0 "Katzenweltraumpanzer Production Focus"
+    trait_ruler_katzen_panzer_focus_desc:0 "This leader is intent on promoting the construction of Katzenweltraumpanzers."
+    trait_ruler_katzen_unterraumboot_focus:0 "Unterraumboot Production Focus"
+    trait_ruler_katzen_unterraumboot_focus_desc:0 "This leader is intent on promoting the construction of Unterraumboots."
+
     # Civics/Origins
     origin_katzen:0 "Katzen Unification"
     origin_katzen_desc:0 "Through sheer militarism and quite a lot of luck, the extremely militaristic Katzens plan to unite Flusion under their banner. This will prove to be interesting..."
@@ -29,7 +38,15 @@
     # Modifiers
     pki_flusion_ecu_modifier:0 "Flusio-Arcology"
     pki_flusion_ecu_modifier_desc:0 "The Flusio-Arcology takes full advantage of Flusion's vast natural resources, in order to squeeze out every last bit of efficiency from the planet. The Katzen cities of Katown, Bundengrad and Teho have been expanded to gargantuan proportions, housing tens of billions of inhabitants each while a network of hyperefficient transportation highways surrounds the entire planet."
-    
+    mod_katzen_ships_upkeep_mult:0 "Katzen Ship Upkeep Cost"
+    mod_ship_katzen_cruiser_cost_mult:0 "Katzenkreuzer Build Cost"
+    mod_ship_katzen_cruiser_upkeep_mult:0 "Katzenkreuzer Upkeep Cost"
+    mod_ship_katzen_bomber_cost_mult:0 "Leerekatzenbomber Build Cost"
+    mod_ship_katzen_bomber_upkeep_mult:0 "Leerekatzenbomber Build Cost"
+    mod_ship_katzen_panzer_cost_mult:0 "Katzenweltraumpanzer Build Cost"
+    mod_ship_katzen_panzer_upkeep_mult:0 "Katzenweltraumpanzer Upkeep Cost"
+    mod_ship_katzen_submarine_cost_mult:0 "Unterraumboot Build Cost"
+    mod_ship_katzen_submarine_upkeep_mult:0 "Unterraumboot Build Cost"
 
     # Deposits
     d_grand_kronk_quarry:0 "Grand Kronk Quarry"
@@ -572,6 +589,13 @@
     pvz_cattail_desc:0 "Changes the Kaiser's appearance to his classic form."
     derega_kaiser:0 "Canon Kaiser"
     derega_kaiser_desc:0 "Changes the Kaiser's appearance to his more 'normal' form."
+
+    policy_loris_appearance:0 "Build-A-Loris"
+    policy_loris_appearance_desc:0 "Chnages the appearance of Loris Von Kattensbach."
+    HD_loris:0 "HD Loris"
+    HD_loris_desc:0 "Changes Loris's appearance to his more normal and high definition form."
+    cartoon_loris:0 "Cartoon Loris"
+    cartoon_loris_desc:0 "Changes Loris's appearance to his classic and VERY SERIOUSINGS cartoon form."
 
     kaiser_docs_note:0 "\n\n§YOrigin documentation can be found in the Situation Log.§!"
 
