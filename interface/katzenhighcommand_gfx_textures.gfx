@@ -1,7 +1,7 @@
 spriteTypes = {
 	spriteType = { name = "GFX_kaiser_high_command_bg"								textureFile = "gfx/interface/katzen_high_command_ui/katzenprison_bg.dds"   										}
-	spriteType = { name = "GFX_kaiser_high_command_leader_overlay"					texturefile = "gfx/interface/katzen_high_command_ui/katzenprison_portrait_overlay.dds" 							}
-	spriteType = { name = "GFX_kaiser_high_command_close"							textureFile = "gfx/interface/katzen_high_command_ui/button_background.dds" 										}
+#	spriteType = { name = "GFX_kaiser_high_command_leader_overlay"					texturefile = "gfx/interface/katzen_high_command_ui/katzenprison_portrait_overlay.dds" 							}
+#	spriteType = { name = "GFX_kaiser_high_command_close"							textureFile = "gfx/interface/katzen_high_command_ui/button_background.dds" 										}
 
 	#Boxes
 	spriteType = { name = "GFX_kaiser_high_command_economy_box" 					textureFile = "gfx/interface/katzen_high_command_ui/boxes/economy.dds"											}

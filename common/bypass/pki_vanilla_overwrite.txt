@@ -28,5 +28,5 @@ quantum_catapult = {
 			}
 		}
 	}
-	on_action = "on_entering_quantum_catapult"
+	on_action = "on_fleet_quantum_catapult "
 }

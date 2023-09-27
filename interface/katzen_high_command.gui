@@ -102,7 +102,7 @@ guiTypes = {
 			iconType = {
 				name = "portrait"
 				spriteType = "GFX_portrait_gamesetup_mask"
-				clipping = yes
+				#clipping = yes
 				alwaysTransparent = yes
 				position = { x = -3 y = -3 }
 				scale = 0.5

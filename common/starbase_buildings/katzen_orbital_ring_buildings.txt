@@ -23,7 +23,7 @@ katzen_ring_energy_hub = {
 			exotic_gases = 3
 		}
 	}
-	show_in_tech = "katzen_flusioarc"
+	show_in_tech = "tech_katzen_flusioarc"
 	ai_build_at_chokepoint = yes
 	ai_build_outside_chokepoint = yes
 	ai_weight = {
@@ -93,7 +93,7 @@ katzen_ring_alloys_hub = {
 			volatile_motes = 4
 		}
 	}
-	show_in_tech = "katzen_flusioarc"
+	show_in_tech = "tech_katzen_flusioarc"
 	ai_build_at_chokepoint = yes
 	ai_build_outside_chokepoint = yes
 	ai_weight = {

@@ -5,7 +5,7 @@
 
 ### Flusion System
 flusion_new_initializer = {
-	name = "Flusion"
+	name = "NAME_JUBLIO_SYSTEM"
 	class = "sc_g"
 	flags = { flusion_system empire_home_system }
 	asteroid_belt = { type = rocky_asteroid_belt radius = 37 }
@@ -23,7 +23,7 @@ flusion_new_initializer = {
 	}
 
 	planet = {
-		name = "Jublio"
+		name = "NAME_Jublio"
 		class = "pc_g_star"
 		orbit_distance = 0
 		orbit_angle = 1
@@ -37,7 +37,7 @@ flusion_new_initializer = {
 	}
 
 	planet = {
-		name = "Sur"
+		name = "NAME_Sur"
 		class = "pc_asteroid"
 		orbit_distance = 37
 		orbit_angle = 78
@@ -50,7 +50,7 @@ flusion_new_initializer = {
 	}
 
 	planet = {
-		name = "Zefi"
+		name = "NAME_Zefi"
 		class = "pc_asteroid"
 		orbit_distance = 0
 		orbit_angle = 195
@@ -63,7 +63,7 @@ flusion_new_initializer = {
 	}
 
 	planet = {
-		name = "Veene"
+		name = "NAME_Veene"
 		class = "pc_toxic"
 		orbit_distance = 23
 		orbit_angle = 15
@@ -78,7 +78,7 @@ flusion_new_initializer = {
 	}
 
 	planet = {
-		name = "Doughland"
+		name = "NAME_Doughland"
 		class = "pc_barren"
 		orbit_distance = 25
 		orbit_angle = 125
@@ -94,7 +94,7 @@ flusion_new_initializer = {
 	}
 
 	planet = {
-		name = "Flusion"
+		name = "NAME_Flusion"
 		class = "pc_continental"
 		orbit_distance = 25
 		orbit_angle = 120
@@ -102,7 +102,6 @@ flusion_new_initializer = {
 		starting_planet = yes
 		has_ring = no
 		entity = "flusion_planet_entity"
-		modifiers = no
 		init_effect = {
 			add_modifier = { modifier = flusion_rich_modifier days = -1 }
 			prevent_anomaly = yes
@@ -131,7 +130,7 @@ flusion_new_initializer = {
 		}
 
 		moon = {
-			name = "Muno"
+			name = "NAME_Muno"
 			class = "pc_barren_cold"
 			size = 5
 			orbit_distance = 7
@@ -148,7 +147,7 @@ flusion_new_initializer = {
 	}
 
 	planet = {
-		name = "Merries"
+		name = "NAME_Merries"
 		class = "pc_barren"
 		orbit_distance = 25
 		orbit_angle = 60
@@ -163,7 +162,7 @@ flusion_new_initializer = {
 	}
 
 	planet = {
-		name = "Ledigen"
+		name = "NAME_Ledigen"
 		class = "pc_frozen"
 		orbit_distance = 25
 		orbit_angle = -210
@@ -178,7 +177,7 @@ flusion_new_initializer = {
 		}
 
 		moon = {
-			name = "Magmoon"
+			name = "NAME_Magmoon"
 			class = "pc_molten"
 			size = 4
 			orbit_distance = 10
@@ -192,7 +191,7 @@ flusion_new_initializer = {
 	}
 
 	planet = {
-		name = "Glaka"
+		name = "NAME_Glaka"
 		class = "pc_gas_giant"
 		orbit_distance = 25
 		orbit_angle = -95
@@ -207,7 +206,7 @@ flusion_new_initializer = {
 		}
 
 		moon = {
-			name = "Denerth"
+			name = "NAME_Denerth"
 			class = "pc_barren"
 			size = 5
 			orbit_distance = 15
@@ -221,7 +220,7 @@ flusion_new_initializer = {
 	}
 
 	planet = {
-		name = "Nesar"
+		name = "NAME_Nesar"
 		class = "pc_molten"
 		orbit_distance = 25
 		orbit_angle = 285
@@ -236,7 +235,7 @@ flusion_new_initializer = {
 		}
 
 		moon = {
-			name = "Altaselon"
+			name = "NAME_Altaselon"
 			class = "pc_frozen"
 			size = 3
 			orbit_distance = 5
@@ -248,7 +247,7 @@ flusion_new_initializer = {
 			}
 		}
 		moon = {
-			name = "Folia"
+			name = "NAME_Folia"
 			class = "pc_barren_cold"
 			size = 2
 			orbit_distance = 4
@@ -262,7 +261,7 @@ flusion_new_initializer = {
 	}
 
 	planet = {
-		name = "Creeo"
+		name = "NAME_Creeo"
 		class = "pc_frozen"
 		orbit_distance = 25
 		orbit_angle = -80

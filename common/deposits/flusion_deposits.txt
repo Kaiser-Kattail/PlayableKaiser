@@ -8,7 +8,7 @@
 
 # Flusion Deposits (game start)
 d_grand_kronk_quarry = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_ore_rich_caverns
 	
 	planet_modifier = { 
@@ -21,7 +21,7 @@ d_grand_kronk_quarry = {
 }
 
 d_katown = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_city
 	
 	planet_modifier = { 
@@ -78,7 +78,7 @@ d_katown_palace_primitive ={
 }
 
 d_ezic_farmland = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_green_hills
 	
 	planet_modifier = { 
@@ -91,7 +91,7 @@ d_ezic_farmland = {
 }
 
 d_mercurian_plains = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_fertile_lands
 	
 	planet_modifier = { 
@@ -104,7 +104,7 @@ d_mercurian_plains = {
 }
 
 d_yinjite_sea_mines = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_submerged_ore_veins
 	
 	planet_modifier = { 
@@ -117,7 +117,7 @@ d_yinjite_sea_mines = {
 }
 
 d_laurandar_shores = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_tropical_island
 	
 	planet_modifier = { 
@@ -130,7 +130,7 @@ d_laurandar_shores = {
 }
 
 d_propanian_mines = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_gaseous_eruption
 	
 	planet_modifier = { 
@@ -143,7 +143,7 @@ d_propanian_mines = {
 }
 
 d_magnetic_puffy = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_rich_mountain
 	
 	planet_modifier = { 
@@ -156,7 +156,7 @@ d_magnetic_puffy = {
 }
 
 d_cookian_steppes_mining = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_building_complex
 	
 	planet_modifier = { 
@@ -173,7 +173,7 @@ d_altarian_jungle = {
 	icon = d_dense_jungle
 	time = 360
 	
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_blockers	
 	
 	potential = { always = no }
@@ -193,7 +193,7 @@ d_altarian_jungle = {
 }
 
 d_altarian_island = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_betharian_deposit
 	
 	planet_modifier = { 
@@ -210,7 +210,7 @@ d_manglarian_junkyard = {
 	icon = d_city_ruins
 	time = 360
 	
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_blockers	
 	
 	potential = { always = no }
@@ -231,7 +231,7 @@ d_manglarian_junkyard = {
 }
 
 d_restored_solak = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_city
 	
 	planet_modifier = { 
@@ -249,7 +249,7 @@ d_catspian_sea = {
 	icon = d_toxic_kelp
 	time = 420
 	
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_blockers	
 	
 	potential = { always = no }
@@ -279,7 +279,7 @@ d_catspian_sea = {
 }
 
 d_catspian_crystal_mines = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_crystal_forest
 	
 	planet_modifier = { 
@@ -296,7 +296,7 @@ d_northern_ice_cap = {
 	icon = d_massive_glacier
 	time = 360
 	
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_blockers	
 	
 	potential = { always = no }
@@ -317,7 +317,7 @@ d_northern_ice_cap = {
 }
 
 d_polar_mineral_fields = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_mineral_fields
 	
 	planet_modifier = { 
@@ -334,7 +334,7 @@ d_southern_ice_cap = {
 	icon = d_massive_glacier
 	time = 360
 	
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_blockers	
 	
 	potential = { always = no }
@@ -355,7 +355,7 @@ d_southern_ice_cap = {
 }
 
 d_antarctic_uranium_fields = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_buried_lithoids
 	
 	planet_modifier = { 
@@ -372,7 +372,7 @@ d_katzen_mountain_range = {
 	icon = d_mountain_range
 	time = 420
 	
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_blockers	
 	
 	potential = { always = no }
@@ -392,7 +392,7 @@ d_katzen_mountain_range = {
 }
 
 d_katzen_mote_field = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_dust_desert
 	
 	planet_modifier = { 
@@ -411,7 +411,7 @@ d_meowriana_trench = {
 	icon = d_underwater_vent
 	time = 420
 	
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_blockers	
 	
 	potential = { always = no }
@@ -431,7 +431,7 @@ d_meowriana_trench = {
 }
 
 d_flusion_sea_temple = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_ancient_vault
 	
 	planet_modifier = { 
@@ -445,7 +445,7 @@ d_flusion_sea_temple = {
 }
 
 d_solakian_factory = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_building
 
 	resources = {
@@ -462,7 +462,7 @@ d_solakian_factory = {
 
 #Housing Dam
 d_katzen_housing_dam = {
-    is_for_colonizeable = yes
+    is_for_colonizable = yes
 
     planet_modifier = {
         planet_housing_add = 30
@@ -470,11 +470,15 @@ d_katzen_housing_dam = {
         planet_max_districts_add = 3
         pop_environment_tolerance = -0.15
     }
+
+	drop_weight = {
+		weight = 0
+	}
 }
 
 #Industrial Dam
 d_katzen_industrial_dam = {
-    is_for_colonizeable = yes
+    is_for_colonizable = yes
 
     planet_modifier = {
         planet_housing_add = 20
@@ -504,11 +508,14 @@ d_katzen_industrial_dam = {
 			consumer_goods = 15
 		}
     }
+	drop_weight = {
+		weight = 0
+	}
 }
 
 #Mineral Dam
 d_katzen_mineral_dam = {
-    is_for_colonizeable = yes
+    is_for_colonizable = yes
 
     planet_modifier = {
         district_mining_max = 3
@@ -517,12 +524,14 @@ d_katzen_mineral_dam = {
         pop_environment_tolerance = -0.10
 		job_miner_per_pop = 0.1
     }
-    
+	drop_weight = {
+		weight = 0
+	}
 }
 
 #katzen energy dam
 d_katzen_energy_dam = {
-    is_for_colonizeable = yes
+    is_for_colonizable = yes
 
     planet_modifier = {
         district_generator_max = 3
@@ -536,11 +545,14 @@ d_katzen_energy_dam = {
             energy = 30
         }
     }
+	drop_weight = {
+		weight = 0
+	}
 }
 
 #katzen food dam
 d_katzen_food_dam = {
-    is_for_colonizeable = yes
+    is_for_colonizable = yes
 
     planet_modifier = {
         district_farming_max = 3
@@ -549,7 +561,9 @@ d_katzen_food_dam = {
         pop_environment_tolerance = -0.10
 		job_farmer_per_pop = 0.1
     }
-    
+	drop_weight = {
+		weight = 0
+	}
 }
 
 #Reactor
@@ -635,8 +649,11 @@ d_flusion_bureaucracy = {
 	}
 
 	planet_modifier = {
-		empire_size_pops_mult = -0.2
 		planetary_ascension_cost_mult = -0.1
+	}
+
+	country_modifier = {
+		empire_size_pops_mult = -0.2
 	}
 
 	category = deposit_cat_rare
@@ -686,7 +703,7 @@ d_flusion_bounty = {
 
 d_symbyland_battlefield = {
 	time = 420
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_nanite_corpses
     category = deposit_cat_blockers	
 
@@ -715,12 +732,10 @@ d_symbyland_battlefield = {
 }
 
 d_symbyland_power = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_reactor
 
 	potential = { always = no }
-
-	use_weights_for_blocker_swap_types = no
 
 	planet_modifier = {
 		job_technician_add = 2
@@ -733,7 +748,7 @@ d_symbyland_power = {
 }
 
 d_zousa_megalopolis = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_city_ruins
 
 	potential = { always = no }
@@ -756,7 +771,7 @@ d_zousa_megalopolis = {
 }
 
 d_ravaka_volcano = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_active_volcano
 
 	potential = { always = no }

@@ -1099,7 +1099,7 @@ country_event = {
 			id = ftl.1 days = 660
 		}
 		country_event = {
-			id = misc.6 days = 120
+			id = pki_misc.6 days = 120
 		}
 	}
 }

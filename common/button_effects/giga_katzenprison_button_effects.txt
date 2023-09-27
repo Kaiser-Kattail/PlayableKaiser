@@ -87,7 +87,7 @@ katzen_high_command_loris_active = {
     has_country_flag = loris_active
   } 
   allow = { always = yes } 
-  effect = { custom_tooltip = "" }
+  effect = {  }
 }
 katzen_high_command_loris_inactive = { 
   potential = { 

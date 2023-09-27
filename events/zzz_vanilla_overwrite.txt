@@ -1,3 +1,5 @@
+namespace = emperor
+
 country_event = {
 	id = emperor.2
 	title = "emperor.2.name"

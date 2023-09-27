@@ -37,15 +37,15 @@
 
   NAME_koko:0 "Koko Von Beumien"
   koko_catch_phrase:0 "CATCH_PHRASE"
-  misc.51.title:0 "$NAME_koko$"
-  misc.51.desc:0 "DESC"
-  misc.51.a:0 "A"
-  misc.51.a.response:0 "A_RESPONSE"
-  misc.51.b:0 "B"
-  misc.51.b.response:0 "B_RESPONSE"
-  misc.51.c:0 "C"
-  misc.51.c.response:0 "C_RESPONSE"
-  misc.51.hire_custom_tooltip:0 "HIRE_TOOLTIP"
+  pki_misc.51.title:0 "$NAME_koko$"
+  pki_misc.51.desc:0 "DESC"
+  pki_misc.51.a:0 "A"
+  pki_misc.51.a.response:0 "A_RESPONSE"
+  pki_misc.51.b:0 "B"
+  pki_misc.51.b.response:0 "B_RESPONSE"
+  pki_misc.51.c:0 "C"
+  pki_misc.51.c.response:0 "C_RESPONSE"
+  pki_misc.51.hire_custom_tooltip:0 "HIRE_TOOLTIP"
 
   # Misc
 

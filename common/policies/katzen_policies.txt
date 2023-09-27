@@ -150,7 +150,7 @@ kaiser_appearance = {
 		on_enabled = {
 			hidden_effect = {
 				country_event = {
-					id = misc.9
+					id = pki_misc.9
 				}
 			}
 		}
@@ -168,7 +168,7 @@ kaiser_appearance = {
 		on_enabled = {
 			hidden_effect = {
 				country_event = {
-					id = misc.8
+					id = pki_misc.8
 				}
 			}
 		}
@@ -188,6 +188,21 @@ loris_appearance = {
 	}
 
 	option = {
+		name = "real_loris"
+
+		policy_flags = {
+			real_loris
+		}
+		on_enabled = {
+			hidden_effect = {
+				country_event = {
+					id = pki_misc.201
+				}
+			}
+		}
+	}
+
+	option = {
 		name = "HD_loris"
 
 		policy_flags = {
@@ -196,7 +211,7 @@ loris_appearance = {
 		on_enabled = {
 			hidden_effect = {
 				country_event = {
-					id = misc.18
+					id = pki_misc.202
 				}
 			}
 		}
@@ -214,7 +229,7 @@ loris_appearance = {
 		on_enabled = {
 			hidden_effect = {
 				country_event = {
-					id = misc.19
+					id = pki_misc.203
 				}
 			}
 		}
@@ -223,21 +238,21 @@ loris_appearance = {
 		}
 	}
 	
-	# option = {
-	# 	name = "real_loris"
+	option = {
+		name = "vanilla_loris"
 
-	# 	policy_flags = {
-	# 		real_loris
-	# 	}
-	# 	on_enabled = {
-	# 		hidden_effect = {
-	# 			country_event = {
-	# 				id = misc.15
-	# 			}
-	# 		}
-	# 	}
-	# 	AI_weight = {
-	# 		factor = 0
-	# 	}
-	# }
+	 	policy_flags = {
+	 		vanilla_loris
+	 	}
+	 	on_enabled = {
+	 		hidden_effect = {
+	 			country_event = {
+	 				id = pki_misc.204
+	 			}
+	 		}
+	 	}
+	 	AI_weight = {
+	 		factor = 0
+	 	}
+	}
 }

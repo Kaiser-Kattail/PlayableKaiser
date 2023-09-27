@@ -672,7 +672,7 @@ utility_component_template = {
 ########################
 
 utility_component_template = {
-	key = "KATPLATFORM_ZERO_POIMT_REACTOR"
+	key = "KATPLATFORM_ZERO_POINT_REACTOR"
 	size = small
 	icon = "GFX_ship_part_reactor_5"
 	icon_frame = 1
