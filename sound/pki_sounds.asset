@@ -1,0 +1,11 @@
+sound = {
+	name = "pki_wardec"
+	file = "event/pki_wardec.wav"
+    volume = 0.6
+}
+
+sound = {
+	name = "pki_code_message"
+	file = "event/pki_code_message.wav"
+	volume = 0.6
+}

@@ -16,11 +16,14 @@ katzen_conquest_map = {
 	length = 1
 	resources = { category = edicts }
 	potential = { has_origin = origin_katzen has_country_flag = kaiser_bureau_formed }
-	hidden_effect = {
-		country_event = {
-			id = kaiser_bureau.2
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = kaiser_bureau.2
+			}
 		}
 	}
+
 	ai_weight = { weight = 0 }
 }
 

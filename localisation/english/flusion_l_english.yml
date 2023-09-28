@@ -74,7 +74,7 @@
     d_northern_ice_cap_desc:0 "A thick sheet of ice covering the north pole, blocking access to hidden mineral wealth."
     d_polar_mineral_fields:0 "Polar Mineral Fields"
     d_polar_mineral_fields_desc:0 "Made accessible by removing the ice cap, the northern continent is home to untold mineral riches."
-    d_southern_ice_cap:0 "£blocker Southern Ice Cap"
+    d_southern_ice_cap:0 "£blocker£ Southern Ice Cap"
     d_southern_ice_cap_desc:0 "A thick sheet of ice covering the south pole, preventing the extraction of valuable uranium."
     d_antarctic_uranium_fields:0 "Antarctic Uranium Fields"
     d_antarctic_uranium_fields_desc:0 "Massive deposits of precious Uranium mineral that can be used for power generation."
@@ -183,14 +183,7 @@
     sm_katzen_ring_energy_hub_desc:0 "Orbital surveying and transport infrastructure greatly aids the harvesting of thorium and other elements on the colony."
     sm_katzen_ring_alloys_hub:0 "Katzen Orbital Forge"
     sm_katzen_ring_alloys_hub_desc:0 "Orbital metallurgy infrastructure aids the production of alloys planetside."
-   
-    # Subject
-    katzen_protektorat_name:0 "Katzprotektorat [Capital_star.GetName]"
-    specialist_katzen_protektorat:0 "Katzprotektorat"
-    preset_katzen_protektorat:0 "Katzprotektorat"
-    preset_katzen_protektorat_desc:0 "A Katzprotektorat is a form of puppet government set up by the Katzenartig Imperium. They are effectively regional governors of the Imperium, and enjoy some limited autonomy."
-    preset_katzen_protektorat_flavor_desc:0 "A Katzprotektorat is effectively semi-autonomous province of the Katzen empire. Its purpose is to stabilize newly-conquered lands, enact Katzenification onto populations and pave the way for future annexation and integration into the Katzen heartland."
-   
+
     # Custom fail text
     not_allowed_for_katzen_protektorat:0 "£trigger_no£ Not allowed for level 1 or 2 §YKatzprotektorat§! subjects"
     need_both_dams:0 "£trigger_no£ Requires both the Roqualtropa and Katlantropa dams to be built"
@@ -630,7 +623,7 @@
     decision_siegfried_anti_jump_off:0 "Deactivate Siegfried Disruptor System"
     decision_siegfried_anti_jump_off_desc:0 "Disables the disruption capabilities of the Siegfried world."
 
-    edict_katzen_war_forge_construction:0 "Automate Warforge Construction"
+    edict_katzen_war_forge_construction:0 "Automate War forge Construction"
     edict_katzen_war_forge_construction_desc:0 "Our workers will automatically seek out planets that don't have war forges and start constructing them, one by one."
 
     decision_demotion_modifier:0 "Activate Economic Assistance"
@@ -659,7 +652,7 @@
     playable_kaiser_wormhole:0 "§BE.H.V.E. Wormhole§!"
     playable_kaiser_wormhole_DESC:0 "A wormhole created by a Katzen E.H.V.E."
 
-    playable_kaiser_ehve_phase0:0 "E.H.V.E. Construction Site"
+    playable_kaiser_ehve_phase0:0 "$gc_mega$E.H.V.E. Construction Site"
     playable_kaiser_ehve_phase0_DESC:0 "A construction site for a future Katzen E.H.V.E."
     playable_kaiser_ehve_phase0_MEGASTRUCTURE_DETAILS:0 "£galwonders£ $giga_list_category_megastructure$ - $giga_list_category_transportation$\nTransports §YFleets§! across the galaxy by creating a §YWormhole§!.\n§LA device that stabilizes micro black holes that form in quantum foam to create tunnles through space.§!"
 
@@ -693,4 +686,49 @@
     pki_ehve.2.b:0 "Until next time."
     pki_ehve.2.c:0 "As it should."
 
-    
+    specialist_katzprotektorat: "Katzprotektorat"
+    specialist_katzprotektorat_desc: "A Katzprotektorat is a form of puppet government set up by the Katzenartig Imperium. They are effectively regional governors of the Imperium, and enjoy some limited autonomy."
+    specialist_katzprotektorat_neighbor: "REPLACE_PIECAT"
+    specialist_katzprotektorat_neighbor_desc: "REPLACE_PIECAT"
+
+    preset_katzen: "Katzprotektorat"
+    preset_katzen_desc: "A Katzprotektorat is a form of puppet government set up by the Katzenartig Imperium. They are effectively regional governors of the Imperium, and enjoy some limited autonomy."
+    preset_katzen_flavor_desc: "A Katzprotektorat is effectively semi-autonomous province of the Katzen empire. Its purpose is to stabilize newly-conquered lands, enact Katzenification onto populations and pave the way for future annexation and integration into the Katzen heartland."
+
+    pki_katzprotektorat_1_modifier: "Katzprotektorat Bonuses I"
+    pki_katzprotektorat_1_penalties: "Katzprotektorat Penalties I"
+    pki_katzprotektorat_1_overlord_modifier: "REPLACE_PIECAT"
+    pki_katzprotektorat_1_neighbor_bonuses: "REPLACE_PIECAT"
+    pki_katzprotektorat_1_katzprotektorat_array: "REPLACE_PIECAT"
+    pki_katzprotektorat_1_katzprotektorat_insight: "Katzprotektorat Insight I"
+    pki_katzprotektorat_2_modifier: "Katzprotektorat Bonuses II"
+    pki_katzprotektorat_2_penalties: "Katzprotektorat Penalties II"
+    pki_katzprotektorat_2_katzprotektorat_insight: "Katzprotektorat Insight II"
+    pki_katzprotektorat_2_leaders: "REPLACE_PIECAT"
+    pki_katzprotektorat_2_traits: "REPLACE_PIECAT"
+    pki_katzprotektorat_3_modifier: "Katzprotektorat Bonuses III"
+    pki_katzprotektorat_3_penalties: "Katzprotektorat Penalties III"
+    pki_katzprotektorat_3_katzprotektorat_insight: "Katzprotektorat Insight III"
+    pki_katzprotektorat_3_battlewright: "REPLACE_PIECAT"
+    pki_katzprotektorat_3_disintegrator_field: "REPLACE_PIECAT"
+    katzprotektorat_1_katzprotektorat_insight_desc: "REPLACE_PIECAT"
+    katzprotektorat_2_katzprotektorat_insight_desc: "REPLACE_PIECAT"
+    katzprotektorat_2_leaders_desc: "REPLACE_PIECAT"
+    katzprotektorat_2_traits_desc: "REPLACE_PIECAT"
+    katzprotektorat_3_battlewright_desc: "REPLACE_PIECAT"
+    katzprotektorat_3_katzprotektorat_insight_desc: "REPLACE_PIECAT"
+    pki_katzprotektorat_1_neighbor_bonuses_desc: "REPLACE_PIECAT"
+
+    pki_only_tier_3_subject_integration: "$TRIGGER_FAIL$Not allowed for §YKatzprotectorat§! preset until §YSubject Level 3§!"
+    pki_not_only_tier_3_not_subject_integration: "$TRIGGER_FAIL$Not allowed for §YKatzprotectorat§! preset at §YSubject Level 3§!."
+
+    katzen_protektorat_name: "Katzprotektorat [Capital.solar_system.GetName]"
+
+    pki_warforge_in_orbit: "Katzen War forge in Orbit"
+    pki_warforge_in_orbit_desc: "REPLACE_PIECAT"
+
+    sm_katzen_warforge_shipyard: "Katzen Shipyard Array"
+    sm_katzen_warforge_shipyard_desc: "REPLACE_PIECAT"
+
+    pki_warforge_shipyard_add: "£alloys£ Alloys from £job£ Jobs §G+2.50%§!\nAdds §G+1§! Shipyard and §G+2.5%§! Ship Build Speed to the system's starbase if §YKatzen Shipyard Array§! is built"
+    pki_warforge_building: "§G+1§! Shipyard and §G+2.5%§! Ship Build Speed for each §YKatzen War forge§! in the system"

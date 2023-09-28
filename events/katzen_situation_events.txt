@@ -109,18 +109,18 @@ situation_event = {
 				type = origin_dragon
 				auto_delete = no
 				use_hostilities_from = root
-				flag = {
-					icon = {
-						category = "spherical"
-						file = "flag_spherical_6.dds"
+				flag={
+					icon={
+						category="human"
+						file="flag_human_1.dds"
 					}
-					background = {
-						category = "backgrounds"
-						file = "00_solid.dds"
+					background={
+						category="backgrounds"
+						file="circle.dds"
 					}
-					colors = {
-						"dark_blue"
-						"dark_blue"
+					colors={
+						"dark_green"
+						"teal"
 						"null"
 						"null"
 					}

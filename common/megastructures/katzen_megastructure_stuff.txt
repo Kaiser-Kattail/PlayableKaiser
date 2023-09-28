@@ -64,6 +64,22 @@ katzen_war_forge_1 = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				space_owner = {
+					is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 2}
+				}
+			}
+			every_system_planet = {
+				limit = {
+					has_planet_flag = war_forge
+				}
+				add_modifier = {
+					modifier = pki_warforge_in_orbit
+					days = -1
+				}
+			}
+		}
 	}	
 }	
 

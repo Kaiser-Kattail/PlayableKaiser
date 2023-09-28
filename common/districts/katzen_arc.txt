@@ -316,6 +316,7 @@ district_pki_flusion_heavy_industry = {
 		}
 		modifier = {
 			job_fabricator_add = 8
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -1113,7 +1114,7 @@ district_pki_flusion_power = {
 		}
 		modifier = {
 			job_technician_drone_add = 7
-			job_mote_harvester_drone_add = 1
+			job_mote_harvesting_drone_add = 1
 		}
 	}
 
@@ -1153,6 +1154,6 @@ district_pki_flusion_power = {
 			exists = owner
 			owner = { is_gestalt = yes }
 		}
-		text = job_most_harvester_drone_effect_desc
+		text = job_mote_harvesting_drone_effect_desc
 	}
 }
