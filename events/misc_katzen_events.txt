@@ -1,4 +1,4 @@
-namespace = pki_misc
+namespace = misc
 
 country_event = {
 	id = misc.1
