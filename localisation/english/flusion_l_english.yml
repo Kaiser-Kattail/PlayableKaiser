@@ -20,7 +20,9 @@
     
     flusion_new_initializer_NAME:0 "Jublio System"
     flusion_new_initializer_DESC:0 "The system in which Flusion and its many species is located.\n\n$system_initializer_DESC$"
-   
+
+    NO_REFORMING_DOFUS: "We are a Katzprotektorat and thus cannot reform our government type."
+
     # Planets
     pc_pki_flusion_ecu:0 "Flusio-Arcology"
     pc_pki_flusion_ecu_desc:0 "The Flusio-Arcology makes full usage of Flusion's vast natural resources. The cities of Katown, Bundengrad and Teho have been transformed into gargantuan gigacities spanning large portions of the planet and capable of housing dozens of billions of inhabitants each. The rest of the planet has been altered to ecological perfection and now harbors a variety of climates fit for every single species native to Flusion"
