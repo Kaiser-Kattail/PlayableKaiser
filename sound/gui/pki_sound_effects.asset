@@ -1,0 +1,15 @@
+soundeffect = {
+	name = pki_wardec
+	sounds = { sound = pki_wardec }
+	volume = 0.6
+    max_audible = 99
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = pki_code_message
+	sounds = { sound = pki_code_message }
+	volume = 0.6
+	max_audible = 99
+	max_audible_behaviour = fail
+}

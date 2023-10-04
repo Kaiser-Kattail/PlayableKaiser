@@ -47,6 +47,12 @@ on_terraforming_complete = {
 on_planet_attackers_win = {		events = { conquest.0 conquest.1 } }
 on_planet_defenders_win = {		events = { conquest.6	}}
 
+on_megastructure_change_owner = {
+	events = {
+		pki_misc.20
+	}
+}
+
 on_planet_transfer = {
 	events = { 
 		centrism.4

@@ -27,7 +27,7 @@ katzen_cruiser = { #Battleship-Titan, designed to "sit back" and assist the flee
 	num_target_locators = 4
 	is_space_station = no
 	icon = ship_size_military_8
-	
+
 	combat_disengage_chance = 1.25
 
 	resources = {
@@ -239,8 +239,8 @@ katzen_player_warforge_platform = { #Katzen war forge platform
 	potential_country = {
 		has_origin = origin_katzen
 	}
-	
 	class = shipclass_military_station
+	icon = ship_size_military_station
 	enable_default_design = yes
 	is_designable = yes
 	required_component_set = "katzen_power_core"

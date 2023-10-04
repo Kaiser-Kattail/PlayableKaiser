@@ -10,9 +10,7 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
-}
 
-spriteTypes = {
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_katzen"
 		textureFile = "gfx/interface/traditions/tiles/tradition_hex_bg_katzen.dds"
@@ -51,9 +49,7 @@ spriteTypes = {
 		name = "GFX_tr_katzenkrieglosung"
 		textureFile = "gfx/interface/traditions/tradition_katzenkrieglosung.dds"
 	}
-}
 
-spriteTypes = {
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_flusion"
 		textureFile = "gfx/interface/traditions/tiles/tradition_hex_bg_flusion.dds"
@@ -92,35 +88,26 @@ spriteTypes = {
 		name = "GFX_tr_imperial_management"
 		textureFile = "gfx/interface/traditions/tradition_imperial_management.dds"
 	}
-}
 
-spriteTypes = {
 	spriteType = {
 		name = "GFX_council_agenda_icon_agenda_project_mondkanone"
 		texturefile = "gfx/interface/icons/agenda_icons/agenda_project_mondkanone.dds"
 	}
-}
 
-spriteTypes = {
 	spriteType = {
 		name = "GFX_council_agenda_icon_agenda_project_dominance"
 		texturefile = "gfx/interface/icons/agenda_icons/agenda_project_dominance.dds"
 	}
-}
 
-spriteTypes = {
 	spriteType = {
 		name = "GFX_council_agenda_icon_agenda_project_celestia"
 		texturefile = "gfx/interface/icons/agenda_icons/agenda_project_celestia.dds"
 	}
-}
 
-spriteTypes = {
 	spriteType = { name = "GFX_wg_player_katzen"			texturefile = "gfx/interface/icons/diplomacy/diplomacy_katzen_conquest.dds" }
+
 	spriteType = { name = "GFX_wg_end_katzen_threat"			texturefile = "gfx/interface/icons/diplomacy/diplomacy_katzen_defence.dds" }
-}
-	
-spriteTypes = {
+
 	spriteType = {
 		name = "GFX_katzen_war_forge_1_outliner_icon"
 		textureFile = "gfx/interface/icons/megastructures/katzen_warforge.dds"
@@ -159,5 +146,50 @@ spriteTypes = {
 	spriteType = {
 		name = GFX_playable_kaiser_ehve_phase0_outliner_icon
 		textureFile = gfx/interface/icons/megastructures/ehof.dds
+	}
+
+	spriteType = {
+		name = GFX_diplomacy_specialist_subject_katzprotektorat
+		textureFile = gfx/interface/icons/diplomacy/diplomacy_specialist_subject_katzprotektorat.dds
+	}
+
+	spriteType = {
+		name = GFX_diplomacy_specialist_subject_katzprotektorat_large
+		textureFile = gfx/interface/subjugation/specialists_icons/specialist_subject_katzprotektorat_icon.dds
+	}
+
+	spriteType = {
+		name = "GFX_specialist_tier_specialist_katzprotektorat_1_off"
+		textureFile = "gfx/interface/subjugation/specialist_tiers/specialist_tier_katzprotektorat_1_off.dds"
+	}
+
+	spriteType = {
+		name = "GFX_specialist_tier_specialist_katzprotektorat_1_on"
+		textureFile = "gfx/interface/subjugation/specialist_tiers/specialist_tier_katzprotektorat_1_on.dds"
+	}
+
+	spriteType = {
+		name = "GFX_specialist_tier_specialist_katzprotektorat_2_off"
+		textureFile = "gfx/interface/subjugation/specialist_tiers/specialist_tier_katzprotektorat_2_off.dds"
+	}
+
+	spriteType = {
+		name = "GFX_specialist_tier_specialist_katzprotektorat_2_on"
+		textureFile = "gfx/interface/subjugation/specialist_tiers/specialist_tier_katzprotektorat_2_on.dds"
+	}
+
+	spriteType = {
+		name = "GFX_specialist_tier_specialist_katzprotektorat_3_off"
+		textureFile = "gfx/interface/subjugation/specialist_tiers/specialist_tier_katzprotektorat_3_off.dds"
+	}
+
+	spriteType = {
+		name = "GFX_specialist_tier_specialist_katzprotektorat_3_on"
+		textureFile = "gfx/interface/subjugation/specialist_tiers/specialist_tier_katzprotektorat_3_on.dds"
+	}
+
+	spriteType = {
+		name = "GFX_message_katzprotektorat_level_up"
+		texturefile = "gfx/interface/icons/message/message_scholarium_level_up.dds"
 	}
 }

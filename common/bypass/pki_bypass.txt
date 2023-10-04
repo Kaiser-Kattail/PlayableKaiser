@@ -53,7 +53,6 @@ playable_kaiser_wormhole = {
 			}
 		}
 	}
-	on_action = "on_entering_quantum_wormhole"
 	scripted_connection = {
 		node = { solar_system = { any_system_megastructure = { has_megastructure_flag = playable_kaiser_wormhole_node } } } # defines endpoints that can only reach the "nexus"
 		nexus = { solar_system = { any_system_megastructure = { has_megastructure_flag = playable_kaiser_wormhole_nexus } } } # defines endpoint(s) that can reach all "nodes" (but not other nexuses)

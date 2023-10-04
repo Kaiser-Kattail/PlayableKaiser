@@ -12,3 +12,14 @@ leader_katzenification_cost = {
     base = 100
     mult = trigger:empire_size
 }
+
+pki_num_warforges = {
+    complex_trigger_modifier = {
+        trigger = count_system_planet
+        trigger_scope = solar_system
+        parameters = {
+            limit = { has_planet_flag = war_forge }
+        }
+        mode = add
+    }
+}

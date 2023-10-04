@@ -1,4 +1,4 @@
-namespace = misc
+namespace = pki_misc
 
 country_event = {
 	id = misc.1
@@ -671,7 +671,7 @@ planet_event = {
 
 	immediate = {
 		add_modifier = {
-			modifier = katzen_submarine_subspace_blockade
+			modifier = pki_katzen_submarine_subspace_blockade
 			days = 3
 		}
 	}
@@ -779,5 +779,62 @@ country_event = {
 			days = 180 random = 180
 		}
 	}
+}
 
+event = {
+	id = pki_misc.20
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		any_country = {
+			has_origin = origin_katzen
+		}
+	}
+	immediate = {
+		every_megastructure = { #Delete any finished war forges in system with ONLY hostile ships
+			limit = {
+				is_megastructure_type = katzen_war_forge_1
+				solar_system = {
+					NOT = {
+						any_fleet_in_system = { #no hostiles
+							controller = {
+								OR = {
+									is_at_war_with = event_target:katzenartig
+									is_hostile = event_target:katzenartig
+								}
+							}
+						}
+					}
+				}
+			}
+			set_owner = event_target:katzenartig
+			if = {
+				limit = {
+					solar_system = {
+						NOT = {
+							any_fleet_in_system = {
+								has_fleet_flag = warforge_platform
+							}
+						}
+					}
+				}
+				create_fleet = {
+					name = "Katzenkriegsschmiedekanone"
+					settings = {
+						spawn_debris = no
+					}
+					effect = {
+						set_owner = event_target:katzenartig
+						create_ship = {
+							name = "Katzenkriegsschmiedekanone"
+							design = "Rhawn"
+							upgradable = no
+						}
+						set_location = prev
+						set_fleet_flag = warforge_platform
+					}
+				}
+			}
+		}
+	}
 }

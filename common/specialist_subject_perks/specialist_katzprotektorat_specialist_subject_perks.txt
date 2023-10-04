@@ -1,0 +1,200 @@
+######################
+# Katzprotektorat SPECIALIST #
+######################
+
+pki_katzprotektorat_1_modifier = {
+	main_perk = yes
+	subject_modifier = {
+		planet_metallurgists_alloys_produces_add = 1
+		planet_soldiers_energy_produces_add = 0.5
+		planet_soldiers_minerals_produces_add = 0.5
+		planet_soldiers_food_produces_add = 0.5
+		job_soldier_per_pop = 0.0166
+	}
+}
+
+pki_katzprotektorat_1_penalties = {
+	main_perk = yes
+	subject_modifier = {
+		country_naval_capacity_contribution_to_overlord_mult = 0.20
+		country_engineering_research_produces_mult = -0.15
+		country_society_research_produces_mult = -0.15
+		country_physics_research_produces_mult = -0.15
+	}
+}
+
+pki_katzprotektorat_1_overlord_modifier = {
+	icon = "GFX_specialist_perk_katzprotektorat_1_overlord_modifier"
+	overlord_modifier = {
+		starbase_upgrade_cost_mult = -0.2
+		starbase_upgrade_speed_mult = 0.2
+	}
+}
+
+pki_katzprotektorat_1_neighbor_bonuses = {
+	icon = "GFX_specialist_perk_katzprotektorat_1_neighbor_bonuses"
+
+	overlord_relay_network_modifier = {
+		pki_specialist_katzprotektorat_neighbor = 1
+	}
+
+	desc = {
+		description = pki_katzprotektorat_1_neighbor_bonuses_desc
+	}
+}
+
+pki_katzprotektorat_1_katzprotektorat_array = {
+	icon = "GFX_specialist_perk_katzprotektorat_1_katzprotektorat_array"
+	
+}
+
+pki_katzprotektorat_1_katzprotektorat_insight = {
+	icon = "GFX_specialist_perk_katzprotektorat_1_katzprotektorat_insight"
+	activate_effect = {
+		target = {
+			if = {
+				limit = { NOT = { has_technology = tech_ftl_inhibitor } }
+				give_technology = {
+					tech = tech_ftl_inhibitor
+					message = yes
+				}
+			}
+			append_technology = { TECH = starbase_3 }
+			append_technology = { TECH = planetary_shield_generator }
+		}
+	}
+
+	desc = {
+		description = katzprotektorat_1_katzprotektorat_insight_desc
+	}
+}
+
+pki_katzprotektorat_2_modifier = {
+	main_perk = yes
+	subject_modifier = {
+		planet_metallurgists_alloys_produces_add = 1.5
+		planet_soldiers_energy_produces_add = 1
+		planet_soldiers_minerals_produces_add = 1
+		planet_soldiers_food_produces_add = 1
+		job_soldier_per_pop = 0.025
+	}
+}
+
+pki_katzprotektorat_2_penalties = {
+	main_perk = yes
+	subject_modifier = {
+		country_naval_capacity_contribution_to_overlord_mult = 0.40
+		country_engineering_research_produces_mult = -0.15
+		country_society_research_produces_mult = -0.15
+		country_physics_research_produces_mult = -0.15
+	}
+}
+
+pki_katzprotektorat_2_katzprotektorat_insight = {
+	icon = "GFX_specialist_perk_katzprotektorat_2_katzprotektorat_insight"
+
+	deactivate_effect = {
+		target = {
+			every_owned_planet = {
+				limit = {
+					has_planet_flag = war_forge
+				}
+				remove_modifier = pki_warforge_in_orbit
+			}
+		}
+	}
+
+	desc = {
+		description = katzprotektorat_2_katzprotektorat_insight_desc
+	}
+}
+
+pki_katzprotektorat_2_leaders = {
+	icon = "GFX_specialist_perk_katzprotektorat_2_leaders"
+	subject_modifier = {
+		admiral_exp_gain = 0.2
+	}
+
+	activate_effect = {
+		target = {
+			add_specialist_leaders = {
+				TYPE = katzprotektorat
+				CLASS = admiral
+			}
+		}
+	}
+
+	deactivate_effect = {
+		target = {
+			remove_specialist_leaders = {
+				TYPE = katzprotektorat
+				CLASS = admiral
+			}
+		}
+	}
+
+	desc = {
+		description = katzprotektorat_2_leaders_desc
+	}
+}
+
+pki_katzprotektorat_2_traits = {
+	icon = "GFX_specialist_perk_katzprotektorat_2_traits"
+	desc = {
+		description = katzprotektorat_2_traits_desc
+	}
+}
+
+pki_katzprotektorat_3_modifier = {
+	main_perk = yes
+	subject_modifier = {
+		planet_metallurgists_alloys_produces_add = 2
+		planet_soldiers_energy_produces_add = 1.5
+		planet_soldiers_minerals_produces_add = 1.5
+		planet_soldiers_food_produces_add = 1.5
+		job_soldier_per_pop = 0.05
+	}
+}
+
+pki_katzprotektorat_3_penalties = {
+	main_perk = yes
+	subject_modifier = {
+		country_naval_capacity_contribution_to_overlord_mult = 0.60
+		country_engineering_research_produces_mult = -0.15
+		country_society_research_produces_mult = -0.15
+		country_physics_research_produces_mult = -0.15
+	}
+}
+
+pki_katzprotektorat_3_katzprotektorat_insight = {
+	icon = "GFX_specialist_perk_katzprotektorat_3_katzprotektorat_insight"
+	activate_effect = {
+		target = {
+			append_technology = { TECH = starbase_5 }
+		}
+	}
+
+	desc = {
+		description = katzprotektorat_3_katzprotektorat_insight_desc
+	}
+}
+
+pki_katzprotektorat_3_battlewright = {
+	icon = "GFX_specialist_perk_katzprotektorat_3_battlewright"
+	activate_effect = {
+
+	}
+
+	deactivate_effect = {
+
+	}
+
+	desc = {
+		description = katzprotektorat_3_battlewright_desc
+	}
+}
+
+pki_katzprotektorat_3_disintegrator_field = {
+	icon = "GFX_specialist_perk_katzprotektorat_3_disintegrator_field"
+	
+}

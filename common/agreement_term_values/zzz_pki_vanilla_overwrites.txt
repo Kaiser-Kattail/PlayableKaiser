@@ -1,0 +1,635 @@
+#########################
+# RESOURCE CONTRIBUTION #
+#########################
+
+@subsidy_multiplier_basic = 0.5
+@subsidy_multiplier_advanced = 0.5
+@subsidy_multiplier_research = 1
+@subsidy_multiplier_strategic = 1.5
+
+@subsidy_monthly_multiplier_basic = 5
+@subsidy_monthly_multiplier_advanced = 5
+@subsidy_monthly_multiplier_research = 5
+@subsidy_monthly_multiplier_strategic = 5
+
+# When changing the maximum and minimum values here the following should also be updated:
+# In agreement_negotiation_view.gui
+#	maxValue =
+#	minValue =
+#	stepSize =
+# In 00_defines.txt:
+#	AGREEMENT_RESOURCE_SUBSIDIES_MIN
+#	AGREEMENT_RESOURCE_SUBSIDIES_MAX
+@subsidy_minimum = -0.75
+@subsidy_maximum = 0.75
+
+@set_factor_0 = 0.15
+@set_factor_0_neg = -0.15
+@set_factor_1 = 0.30
+@set_factor_1_neg = -0.30
+@set_factor_2 = 0.45
+@set_factor_2_neg = -0.45
+@set_factor_3 = 0.60
+@set_factor_3_neg = -0.60
+
+subject_can_be_integrated = {
+    term = subject_integration
+    loyalty_change = -50
+    ai_acceptance = {
+        overlord = 300
+        subject = -250
+    }
+    activate_effect = {
+        set_rule_can_subject_be_integrated = yes
+    }
+    target_modifier = {
+        monthly_loyalty = -4
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = not_allowed_for_bulwark
+            NOT = {
+                agreement_preset = preset_bulwark
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_scholarium
+            NOT = {
+                agreement_preset = preset_scholarium
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_prospectorium
+            NOT = {
+                agreement_preset = preset_prospectorium
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_tributary
+            NOT = {
+                agreement_preset = preset_tributary
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_subsidiary
+            NOT = {
+                agreement_preset = preset_subsidiary
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_satrapy
+            NOT = {
+                agreement_preset = preset_relic_satrapy
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_galcom_resolution
+            not_allowed_for_galcom_resolution_trigger = { RESOLUTION = resolution_intergalacticdirective_ensured_sovereignty }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_galcom_resolution
+            not_allowed_for_galcom_resolution_trigger = { RESOLUTION = resolution_intergalacticdirective_a_voice_for_all }
+        }
+        custom_tooltip = {
+            fail_text = pki_only_tier_3_subject_integration
+            AND = {
+                agreement_preset = preset_katzen
+                NOR = {
+                    specialist_tier = 1
+                    specialist_tier = 2
+                }
+            }
+        }
+    }
+}
+
+subject_can_not_be_integrated = {
+    term = subject_integration
+    loyalty_change = 5
+    ai_acceptance = {
+        overlord = -30
+        subject = 25
+    }
+    activate_effect = {
+        set_rule_can_subject_be_integrated = no
+    }
+    target_modifier = {
+        monthly_loyalty = 0.5
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = pki_not_only_tier_3_not_subject_integration
+            NAND = {
+                agreement_preset = preset_katzen
+                NOR = {
+                    specialist_tier = 1
+                    specialist_tier = 2
+                }
+            }
+        }
+    }
+}
+
+resource_subsidies_advanced = {
+    term = resource_subsidies
+
+    resources = {
+        alloys
+        consumer_goods
+    }
+
+    subsidy_multiplier = @subsidy_multiplier_advanced
+    subsidy_monthly_multiplier = @subsidy_monthly_multiplier_advanced
+
+    resource_min = {
+        base = @subsidy_minimum
+
+        modifier = {
+            set = @set_factor_0
+            agreement_preset = preset_prospectorium
+        }
+
+        modifier = {
+            set = 0.0
+            OR = {
+                agreement_preset = preset_subsidiary
+                agreement_preset = preset_tributary
+                agreement_preset = preset_relic_satrapy
+            }
+        }
+
+        modifier = {
+            set = @set_factor_2_neg
+            OR = {
+                agreement_preset = preset_vassal
+                agreement_preset = preset_scholarium
+            }
+        }
+
+        modifier = {
+            set = @set_factor_1
+            agreement_preset = preset_katzen
+        }
+    }
+
+    resource_max = {
+        base = @subsidy_maximum
+
+        modifier = {
+            set = 0.0
+            OR = {
+                agreement_preset = preset_protectorate
+                agreement_preset = preset_bulwark
+            }
+        }
+
+        modifier = {
+            set = @set_factor_2
+            OR = {
+                agreement_preset = preset_vassal
+                agreement_preset = preset_scholarium
+                agreement_preset = preset_relic_satrapy
+            }
+        }
+    }
+}
+
+resource_subsidies_research = {
+    term = resource_subsidies
+
+    resources = {
+        physics_research
+        society_research
+        engineering_research
+    }
+
+    subsidy_multiplier = @subsidy_multiplier_research
+    subsidy_monthly_multiplier = @subsidy_monthly_multiplier_research
+
+    resource_min = {
+        base = @subsidy_minimum
+
+        modifier = {
+            set = 0.0
+            OR = {
+                agreement_preset = preset_subsidiary
+                agreement_preset = preset_tributary
+                agreement_preset = preset_relic_satrapy
+            }
+        }
+
+        modifier = {
+            set = @set_factor_1
+            agreement_preset = preset_scholarium
+        }
+
+        modifier = {
+            set = @set_factor_2_neg
+            OR = {
+                agreement_preset = preset_vassal
+                agreement_preset = preset_bulwark
+            }
+        }
+    }
+
+    resource_max = {
+        base = @subsidy_maximum
+
+        modifier = {
+            set = 0.0
+            OR = {
+                agreement_preset = preset_protectorate
+                agreement_preset = preset_relic_satrapy
+            }
+        }
+
+        modifier = {
+            set = @set_factor_1_neg
+            agreement_preset = preset_prospectorium
+        }
+
+        modifier = {
+            set = @set_factor_2_neg
+            agreement_preset = preset_prospectorium
+            has_active_specialization = specialist_prospectorium
+            specialist_tier = 2
+        }
+
+        modifier = {
+            set = @set_factor_3_neg
+            agreement_preset = preset_prospectorium
+            has_active_specialization = specialist_prospectorium
+            specialist_tier = 3
+        }
+
+        modifier = {
+            set = @set_factor_2
+            OR = {
+                agreement_preset = preset_vassal
+                agreement_preset = preset_bulwark
+            }
+        }
+
+        modifier = {
+            set = @set_factor_0_neg
+            agreement_preset = preset_katzen
+        }
+
+        modifier = {
+            set = @set_factor_1_neg
+            agreement_preset = preset_katzen
+            has_active_specialization = specialist_katzprotektorat
+            specialist_tier = 2
+        }
+
+        modifier = {
+            set = @set_factor_2_neg
+            agreement_preset = preset_katzen
+            has_active_specialization = specialist_katzprotektorat
+            specialist_tier = 3
+        }
+    }
+}
+
+joins_overlord_wars_none = {
+    term = joins_overlord_wars
+    activate_effect = {
+        set_rule_join_overlord_wars = none
+    }
+    deactivate_effect = {
+        set_rule_join_overlord_wars = none
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = not_allowed_for_bulwark
+            NOT = {
+                agreement_preset = preset_bulwark
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_subsidiary
+            NOT = {
+                agreement_preset = preset_subsidiary
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_katzen_protektorat
+            NOT = {
+                agreement_preset = preset_katzen
+            }
+        }
+    }
+}
+
+joins_overlord_wars_defensive = {
+    term = joins_overlord_wars
+    loyalty_change = -10
+    ai_acceptance = {
+        overlord = 60
+        subject = -50
+    }
+    triggered_loyalty_change = {
+        trigger = {
+            target = {
+                OR = {
+                    has_ethic = ethic_pacifist
+                    has_ethic = ethic_fanatic_pacifist
+                }
+            }
+        }
+        loyalty_change = -10
+        ai_acceptance = {
+            subject = -50
+        }
+    }
+    activate_effect = {
+        set_rule_join_overlord_wars = defensive
+    }
+    deactivate_effect = {
+        set_rule_join_overlord_wars = none
+    }
+    target_modifier = {
+        monthly_loyalty = -1
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = not_allowed_for_tributary
+            NOT = {
+                agreement_preset = preset_tributary
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_satrapy
+            NOT = {
+                agreement_preset = preset_relic_satrapy
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_katzen_protektorat
+            NOT = {
+                agreement_preset = preset_katzen
+            }
+        }
+    }
+}
+
+joins_overlord_wars_offensive = {
+    term = joins_overlord_wars
+    loyalty_change = -20
+    ai_acceptance = {
+        overlord = 120
+        subject = -100
+    }
+    triggered_loyalty_change = {
+        trigger = {
+            target = {
+                OR = {
+                    has_ethic = ethic_pacifist
+                    has_ethic = ethic_fanatic_pacifist
+                }
+            }
+        }
+        loyalty_change = -20
+        ai_acceptance = {
+            subject = -100
+        }
+    }
+    activate_effect = {
+        set_rule_join_overlord_wars = offensive
+    }
+    deactivate_effect = {
+        set_rule_join_overlord_wars = none
+    }
+    target_modifier = {
+        monthly_loyalty = -2
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = not_allowed_for_tributary
+            NOT = {
+                agreement_preset = preset_tributary
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_katzen_protektorat
+            NOT = {
+                agreement_preset = preset_katzen
+            }
+        }
+    }
+}
+
+joins_subject_wars_none = {
+    term = joins_subject_wars
+    loyalty_change = -10
+    ai_acceptance = {
+        overlord = 60
+        subject = -50
+    }
+    activate_effect = {
+        set_rule_join_subject_wars = none
+    }
+    deactivate_effect = {
+        set_rule_join_subject_wars = none
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = not_allowed_for_scholarium
+            NOT = {
+                agreement_preset = preset_scholarium
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_protectorate
+            NOT = {
+                agreement_preset = preset_protectorate
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_tributary
+            NOT = {
+                agreement_preset = preset_tributary
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_feudal_society
+            NOT = {
+                owner = { has_civic = civic_feudal_realm }
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_subsidiary
+            NOT = {
+                agreement_preset = preset_subsidiary
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_katzen_protektorat
+            NOT = {
+                agreement_preset = preset_katzen
+            }
+        }
+    }
+}
+
+joins_subject_wars_defensive = {
+    term = joins_subject_wars
+    loyalty_change = 5
+    ai_acceptance = {
+        overlord = -30
+        subject = 25
+    }
+    activate_effect = {
+        set_rule_join_subject_wars = defensive
+    }
+    deactivate_effect = {
+        set_rule_join_subject_wars = none
+    }
+    target_modifier = {
+        monthly_loyalty = 0.5
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = not_allowed_for_satrapy
+            NOT = {
+                agreement_preset = preset_relic_satrapy
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_katzen_protektorat
+            NOT = {
+                agreement_preset = preset_katzen
+            }
+        }
+    }
+}
+
+joins_subject_wars_offensive = {
+    term = joins_subject_wars
+    loyalty_change = 10
+    ai_acceptance = {
+        overlord = -60
+        subject = 50
+    }
+    activate_effect = {
+        set_rule_join_subject_wars = offensive
+    }
+    deactivate_effect = {
+        set_rule_join_subject_wars = none
+    }
+    target_modifier = {
+        monthly_loyalty = 1
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = not_allowed_for_scholarium
+            NOT = {
+                agreement_preset = preset_scholarium
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_protectorate
+            NOT = {
+                agreement_preset = preset_protectorate
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_tributary
+            NOT = {
+                agreement_preset = preset_tributary
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_imperial_fiefdom
+            NOT = { owner = { has_ai_personality = imperial_origin_overlord_ai } }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_katzen_protektorat
+            NOT = {
+                agreement_preset = preset_katzen
+            }
+        }
+    }
+}
+
+subject_cannot_expand = {
+    term = subject_expand
+    loyalty_change = -15
+    ai_acceptance = {
+        overlord = 90
+        subject = -75
+    }
+    activate_effect = {
+        set_rule_can_subject_expand = cannot_expand
+    }
+    target_modifier = {
+        monthly_loyalty = -1
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = not_allowed_for_bulwark
+            NOT = {
+                agreement_preset = preset_bulwark
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_scholarium
+            NOT = {
+                agreement_preset = preset_scholarium
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_prospectorium
+            NOT = {
+                agreement_preset = preset_prospectorium
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_tributary
+            NOT = {
+                agreement_preset = preset_tributary
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_subsidiary
+            NOT = {
+                agreement_preset = preset_subsidiary
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_satrapy
+            NOT = {
+                agreement_preset = preset_relic_satrapy
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_feudal_society
+            NOT = {
+                owner = { has_civic = civic_feudal_realm }
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_franchising
+            NOT = {
+                owner = { has_civic = civic_franchising }
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_katzen_protektorat
+            NOT = {
+                agreement_preset = preset_katzen
+            }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_galcom_resolution
+            not_allowed_for_galcom_resolution_trigger = { RESOLUTION = resolution_intergalacticdirective_ensured_sovereignty }
+        }
+        custom_tooltip = {
+            fail_text = not_allowed_for_galcom_resolution
+            not_allowed_for_galcom_resolution_trigger = { RESOLUTION = resolution_intergalacticdirective_a_voice_for_all }
+        }
+    }
+}
