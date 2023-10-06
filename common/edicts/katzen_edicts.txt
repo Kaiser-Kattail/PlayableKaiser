@@ -28,13 +28,13 @@ katzen_conquest_map = {
 }
 
 katzen_war_forge_construction = {
-	length = @EdictPerpetual
+	length = -1
 	icon = "GFX_edict_type_policy"
 
 	resources = {
 		category = edicts
 		upkeep = {
-			unity = @Edict1Cost
+			unity = 10
 			multiplier = value:edict_size_effect
 		}
 	}

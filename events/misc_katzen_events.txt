@@ -1,4 +1,5 @@
 namespace = pki_misc
+namespace = misc
 
 country_event = {
 	id = misc.1
@@ -656,25 +657,65 @@ country_event = { #Warforge destroyed
 	}
 }
 
-planet_event = {
+
+fleet_event = {
 	id = misc.17
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-		any_fleet_in_orbit = {
-			any_owned_ship = { is_ship_size = katzen_submarine }
-			owner = { has_origin = origin_katzen }
-			is_cloaked = yes
+		from = {
+			NOT = { owner = { has_origin = origin_katzen} }
+			any_fleet_in_orbit = {
+				is_ship_size = katzen_submarine
+				owner = { has_origin = origin_katzen }
+				is_cloaked = yes
+			}
 		}
 	}
 
 	immediate = {
-		add_modifier = {
-			modifier = pki_katzen_submarine_subspace_blockade
-			days = 3
+		from = {
+			add_modifier = {
+				modifier = pki_katzen_submarine_subspace_blockade
+				days = -1
+			}
+			planet_event = {
+				id = misc.171
+				days = 30
+			}
 		}
 	}
+}
+
+planet_event = {
+	id = misc.171
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				any_fleet_in_orbit = {
+					is_ship_size = katzen_submarine
+					owner = { has_origin = origin_katzen }
+					is_cloaked = yes
+				}
+			}
+			add_modifier = {
+				modifier = pki_katzen_submarine_subspace_blockade
+				days = -1
+			}
+			planet_event = {
+				id = misc.171
+				days = 30
+			}
+		}
+		else = {
+			remove_modifier = pki_katzen_submarine_subspace_blockade
+		}
+	}
+
 }
 
 country_event = {
@@ -782,7 +823,7 @@ country_event = {
 }
 
 event = {
-	id = pki_misc.20
+	id = misc.20
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
@@ -808,33 +849,6 @@ event = {
 				}
 			}
 			set_owner = event_target:katzenartig
-			if = {
-				limit = {
-					solar_system = {
-						NOT = {
-							any_fleet_in_system = {
-								has_fleet_flag = warforge_platform
-							}
-						}
-					}
-				}
-				create_fleet = {
-					name = "Katzenkriegsschmiedekanone"
-					settings = {
-						spawn_debris = no
-					}
-					effect = {
-						set_owner = event_target:katzenartig
-						create_ship = {
-							name = "Katzenkriegsschmiedekanone"
-							design = "Rhawn"
-							upgradable = no
-						}
-						set_location = prev
-						set_fleet_flag = warforge_platform
-					}
-				}
-			}
 		}
 	}
 }

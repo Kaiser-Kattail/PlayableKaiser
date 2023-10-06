@@ -51,3 +51,26 @@ flusion_coalition = {
 		standard_event_module = {}
 	}
 }
+
+pki_katzen_ship = { #origin_here_be_dragons dragon. Settings copied from a leviathan, for now
+	scaled_difficulty_bonuses = 0.5	# scales to setting
+	government = no
+	blocks_piracy = yes
+	destroys_starbases = yes
+	observable = no
+	has_deficits = no
+	ai = {
+		enabled = no
+	}
+	faction = {
+		hostile = yes
+		needs_border_access = no
+		generate_borders = no
+		needs_colony = no
+	}
+	modules = {
+		exclusive_diplomacy_module = { contact_rule = on_action_only } # Nothing is allowed, but we need this for relationships.
+		basic_technology_module = {}
+		standard_event_module = {} # For bouncing events
+	}
+}

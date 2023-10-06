@@ -48,7 +48,7 @@ pki_katzprotektorat_1_katzprotektorat_array = {
 	
 }
 
-pki_katzprotektorat_1_katzprotektorat_insight = {
+pki_katzprotektorat_1_katzprotektorat_tech = {
 	icon = "GFX_specialist_perk_katzprotektorat_1_katzprotektorat_insight"
 	activate_effect = {
 		target = {

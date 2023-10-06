@@ -491,7 +491,6 @@ decision_katzen_defense_array_1 = {
 				has_fleet_flag = katzen_planet_platform_player_1
 			}
 		}
-		
 	}
 
 	effect = { 

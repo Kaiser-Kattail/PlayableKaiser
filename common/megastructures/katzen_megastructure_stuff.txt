@@ -46,22 +46,20 @@ katzen_war_forge_1 = {
 	on_build_start = {}
 	on_build_cancel = {}
 	on_build_complete = {
-		event_target:katzenartig = {
-			create_fleet = {
-				name = "Katzenkriegsschmiedekanone"
-				settings = {
-					spawn_debris = no
+		create_fleet = {
+			name = "Katzenkriegsschmiedekanone"
+			settings = {
+				spawn_debris = no
+			}
+			effect = {
+				set_owner = event_target:katzenartig
+				create_ship = {
+					name = "Katzenkriegsschmiedekanone"
+					design = "Rhawn"
+					upgradable = no
 				}
-				effect = {
-					set_owner = event_target:katzenartig
-					create_ship = {
-						name = "Katzenkriegsschmiedekanone"
-						design = "Rhawn"
-						upgradable = no
-					}
-					set_location = fromfrom
-					set_fleet_flag = warforge_platform
-				}
+				set_location = fromfrom
+				set_fleet_flag = warforge_platform
 			}
 		}
 		if = {
@@ -69,6 +67,9 @@ katzen_war_forge_1 = {
 				space_owner = {
 					is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 2}
 				}
+			}
+			last_created_fleet = {
+				set_owner = event_target:pki_warforge_country
 			}
 			every_system_planet = {
 				limit = {
