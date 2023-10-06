@@ -75,6 +75,40 @@ specialist_katzprotektorat = {
 			store_country_backup_data = {
 				flag = yes
 				name = yes
+				government = yes
+				room = yes
+			}
+			if = {
+				limit = {
+					is_gestalt = no
+				}
+				ruler = {
+					save_global_event_target_as = pki_katzprotektorat_prev_leader@prev
+					unassign_leader = this
+				}
+				change_government = {
+					authority = auth_pki_katzeprotektorat
+				}
+				create_leader = {
+					name = random
+					species = event_target:pki_katzen_species
+					class = governor
+					skill = 3
+					traits = {
+						trait = katzen_trait_elite
+					}
+					leader_age_min = 30
+					leader_age_max = 50
+					effect = {
+						save_global_event_target_as = pki_katzprotektorat_new_leader@prev
+						prev = {
+							assign_leader = prev
+						}
+					}
+					background_planet = event_target:flusionhome
+					background_job = bureaucrat
+					background_ethic = ethic_militarist
+				}
 			}
 			set_name = {
 				key = "katzen_protektorat_name"
@@ -102,6 +136,17 @@ specialist_katzprotektorat = {
 	deactivate_effect = {
 		target = {
 			restore_country_backup_data = yes
+			event_target:pki_katzprotektorat_new_leader@this = {
+				kill_leader = {
+					show_notification = no
+				}
+			}
+			if = {
+				limit = {
+					exists = event_target:pki_katzprotektorat_prev_leader@this
+				}
+				assign_leader = event_target:pki_katzprotektorat_prev_leader@this
+			}
 		}
 	}
 

@@ -47,7 +47,9 @@ country_event = {
 	}
 	immediate = {
 		save_global_event_target_as = katzenartig
-
+		owner_species = {
+			save_global_event_target_as = pki_katzen_species
+		}
 		#	#DOCS
 
 		#	begin_event_chain = {

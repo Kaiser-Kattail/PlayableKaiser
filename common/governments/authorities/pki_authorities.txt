@@ -1,0 +1,29 @@
+auth_pki_katzeprotektorat = {
+    election_type = oligarchic
+
+    can_reform = no
+    has_agendas = yes
+
+    ruler_council_position = councilor_ruler_katzprotektorat
+
+    potential = {
+        always = no
+    }
+
+    possible = {
+        always = no
+    }
+
+    country_modifier = {
+        # All modifiers are on "councilor_ruler_dictatorial".
+    }
+
+    random_weight = {
+        base = 0
+    }
+
+    tags = {
+        AUTHORITY_ELECTION_ON_RULER_DEATH
+        NO_REFORMING_DOFUS
+    }
+}
