@@ -1,4 +1,4 @@
-auth_pki_katzeprotektorat = {
+auth_pki_katzprotektorat = {
     election_type = oligarchic
 
     can_reform = no
@@ -11,7 +11,7 @@ auth_pki_katzeprotektorat = {
     }
 
     possible = {
-        always = no
+        always = yes
     }
 
     country_modifier = {

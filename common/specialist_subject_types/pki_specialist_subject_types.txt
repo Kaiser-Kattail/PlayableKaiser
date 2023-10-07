@@ -8,6 +8,7 @@ specialist_katzprotektorat = {
 	base_conversion_time = 0
 
 	on_progress_complete = {
+
 	}
 
 	levels = {
@@ -17,10 +18,10 @@ specialist_katzprotektorat = {
 			perks = {
 				pki_katzprotektorat_1_modifier
 				pki_katzprotektorat_1_penalties
-				pki_katzprotektorat_1_katzprotektorat_insight
+				pki_katzprotektorat_1_katzprotektorat_tech
 				pki_katzprotektorat_1_overlord_modifier
 				pki_katzprotektorat_1_neighbor_bonuses
-				pki_katzprotektorat_1_katzprotektorat_array
+				pki_katzprotektorat_1_katzprotektorat_ethics
 			}
 		}
 		# Level 2
@@ -29,7 +30,7 @@ specialist_katzprotektorat = {
 			perks = {
 				pki_katzprotektorat_2_modifier
 				pki_katzprotektorat_2_penalties
-				pki_katzprotektorat_2_katzprotektorat_insight
+				pki_katzprotektorat_2_katzprotektorat_tech
 				pki_katzprotektorat_2_traits
 				pki_katzprotektorat_2_leaders
 			}
@@ -39,7 +40,7 @@ specialist_katzprotektorat = {
 			perks = {
 				pki_katzprotektorat_3_modifier
 				pki_katzprotektorat_3_penalties
-				pki_katzprotektorat_3_katzprotektorat_insight
+				pki_katzprotektorat_3_katzprotektorat_tech
 				pki_katzprotektorat_3_battlewright
 				pki_katzprotektorat_3_disintegrator_field
 			}

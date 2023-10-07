@@ -26,8 +26,7 @@ pki_katzprotektorat_1_penalties = {
 pki_katzprotektorat_1_overlord_modifier = {
 	icon = "GFX_specialist_perk_katzprotektorat_1_overlord_modifier"
 	overlord_modifier = {
-		starbase_upgrade_cost_mult = -0.2
-		starbase_upgrade_speed_mult = 0.2
+
 	}
 }
 
@@ -43,24 +42,20 @@ pki_katzprotektorat_1_neighbor_bonuses = {
 	}
 }
 
-pki_katzprotektorat_1_katzprotektorat_array = {
+pki_katzprotektorat_1_katzprotektorat_ethics = {
 	icon = "GFX_specialist_perk_katzprotektorat_1_katzprotektorat_array"
-	
+
+	subject_modifier = {
+		pop_ethic_materialist_attraction_mult = 0.20
+		pop_ethic_militarist_attraction_mult = 0.20
+	}
 }
 
 pki_katzprotektorat_1_katzprotektorat_tech = {
 	icon = "GFX_specialist_perk_katzprotektorat_1_katzprotektorat_insight"
 	activate_effect = {
 		target = {
-			if = {
-				limit = { NOT = { has_technology = tech_ftl_inhibitor } }
-				give_technology = {
-					tech = tech_ftl_inhibitor
-					message = yes
-				}
-			}
-			append_technology = { TECH = starbase_3 }
-			append_technology = { TECH = planetary_shield_generator }
+
 		}
 	}
 
@@ -84,13 +79,13 @@ pki_katzprotektorat_2_penalties = {
 	main_perk = yes
 	subject_modifier = {
 		country_naval_capacity_contribution_to_overlord_mult = 0.40
-		country_engineering_research_produces_mult = -0.15
-		country_society_research_produces_mult = -0.15
-		country_physics_research_produces_mult = -0.15
+		country_engineering_research_produces_mult = -0.30
+		country_society_research_produces_mult = -0.30
+		country_physics_research_produces_mult = -0.30
 	}
 }
 
-pki_katzprotektorat_2_katzprotektorat_insight = {
+pki_katzprotektorat_2_katzprotektorat_tech = {
 	icon = "GFX_specialist_perk_katzprotektorat_2_katzprotektorat_insight"
 
 	deactivate_effect = {
@@ -105,7 +100,7 @@ pki_katzprotektorat_2_katzprotektorat_insight = {
 	}
 
 	desc = {
-		description = katzprotektorat_2_katzprotektorat_insight_desc
+		description = katzprotektorat_2_katzprotektorat_tech_desc
 	}
 }
 
@@ -160,13 +155,13 @@ pki_katzprotektorat_3_penalties = {
 	main_perk = yes
 	subject_modifier = {
 		country_naval_capacity_contribution_to_overlord_mult = 0.60
-		country_engineering_research_produces_mult = -0.15
-		country_society_research_produces_mult = -0.15
-		country_physics_research_produces_mult = -0.15
+		country_engineering_research_produces_mult = -0.45
+		country_society_research_produces_mult = -0.45
+		country_physics_research_produces_mult = -0.45
 	}
 }
 
-pki_katzprotektorat_3_katzprotektorat_insight = {
+pki_katzprotektorat_3_katzprotektorat_tech = {
 	icon = "GFX_specialist_perk_katzprotektorat_3_katzprotektorat_insight"
 	activate_effect = {
 		target = {

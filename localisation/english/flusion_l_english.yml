@@ -21,7 +21,7 @@
     flusion_new_initializer_NAME:0 "Jublio System"
     flusion_new_initializer_DESC:0 "The system in which Flusion and its many species is located.\n\n$system_initializer_DESC$"
 
-    NO_REFORMING_DOFUS: "We are a Katzprotektorat and thus cannot reform our government type."
+    NO_REFORMING_DOFUS: "Under the rule of the Katzenartig Imperium."
 
     # Planets
     pc_pki_flusion_ecu:0 "Flusio-Arcology"
@@ -690,36 +690,31 @@
 
     specialist_katzprotektorat: "Katzprotektorat"
     specialist_katzprotektorat_desc: "A Katzprotektorat is a form of puppet government set up by the Katzenartig Imperium. They are effectively regional governors of the Imperium, and enjoy some limited autonomy."
-    specialist_katzprotektorat_neighbor: "REPLACE_PIECAT"
-    specialist_katzprotektorat_neighbor_desc: "REPLACE_PIECAT"
 
     preset_katzen: "Katzprotektorat"
     preset_katzen_desc: "A Katzprotektorat is a form of puppet government set up by the Katzenartig Imperium. They are effectively regional governors of the Imperium, and enjoy some limited autonomy."
     preset_katzen_flavor_desc: "A Katzprotektorat is effectively semi-autonomous province of the Katzen empire. Its purpose is to stabilize newly-conquered lands, enact Katzenification onto populations and pave the way for future annexation and integration into the Katzen heartland."
 
+    auth_pki_katzprotektorat: "Katzprotektorat"
+    auth_pki_katzprotektorat_desc: "REPLACE_PIECAT"
+
+    councilor_ruler_katzprotektorat: "Katzgouverneur"
+    councilor_ruler_katzprotektorat_desc: "REPLACE_PIECAT"
+    mod_councilor_ruler_katzprotektorat_exp_gain: "REPLACE_PIECAT"
+
     pki_katzprotektorat_1_modifier: "Katzprotektorat Bonuses I"
     pki_katzprotektorat_1_penalties: "Katzprotektorat Penalties I"
-    pki_katzprotektorat_1_overlord_modifier: "REPLACE_PIECAT"
-    pki_katzprotektorat_1_neighbor_bonuses: "REPLACE_PIECAT"
-    pki_katzprotektorat_1_katzprotektorat_array: "REPLACE_PIECAT"
     pki_katzprotektorat_1_katzprotektorat_tech: "Katzen Technology I"
     pki_katzprotektorat_2_modifier: "Katzprotektorat Bonuses II"
     pki_katzprotektorat_2_penalties: "Katzprotektorat Penalties II"
     pki_katzprotektorat_2_katzprotektorat_tech: "Katzen Technology II"
-    pki_katzprotektorat_2_leaders: "REPLACE_PIECAT"
-    pki_katzprotektorat_2_traits: "REPLACE_PIECAT"
+
     pki_katzprotektorat_3_modifier: "Katzprotektorat Bonuses III"
     pki_katzprotektorat_3_penalties: "Katzprotektorat Penalties III"
     pki_katzprotektorat_3_katzprotektorat_tech: "Katzen Technology III"
-    pki_katzprotektorat_3_battlewright: "REPLACE_PIECAT"
-    pki_katzprotektorat_3_disintegrator_field: "REPLACE_PIECAT"
+
     katzprotektorat_1_katzprotektorat_tech_desc: "REPLACE_PIECAT"
     katzprotektorat_2_katzprotektorat_tech_desc: "Permits the building and use of Katzen War Forges"
-    katzprotektorat_2_leaders_desc: "REPLACE_PIECAT"
-    katzprotektorat_2_traits_desc: "REPLACE_PIECAT"
-    katzprotektorat_3_battlewright_desc: "REPLACE_PIECAT"
-    katzprotektorat_3_katzprotektorat_tech_desc: "REPLACE_PIECAT"
-    pki_katzprotektorat_1_neighbor_bonuses_desc: "REPLACE_PIECAT"
 
     pki_only_tier_3_subject_integration: "$TRIGGER_FAIL$Not allowed for §YKatzprotectorat§! preset until §YSubject Level 3§!"
     pki_not_only_tier_3_not_subject_integration: "$TRIGGER_FAIL$Not allowed for §YKatzprotectorat§! preset at §YSubject Level 3§!."
