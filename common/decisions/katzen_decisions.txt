@@ -531,7 +531,8 @@ decision_katzen_war_forge = {
 				has_country_flag = unified_flusion
 			}
 			from = {
-				is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 2}
+				has_technology = tech_pki_warforge
+				is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 1}
 			}
 		}
 		NOT = {
@@ -566,6 +567,9 @@ decision_katzen_war_forge = {
 			}
 		}
 		set_planet_flag = war_forge
+	}
+	ai_weight = {
+		base = 1000
 	}
 }
 

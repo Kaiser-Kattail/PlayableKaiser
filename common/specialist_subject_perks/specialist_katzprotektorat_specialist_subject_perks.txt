@@ -6,9 +6,7 @@ pki_katzprotektorat_1_modifier = {
 	main_perk = yes
 	subject_modifier = {
 		planet_metallurgists_alloys_produces_add = 1
-		planet_soldiers_energy_produces_add = 0.5
-		planet_soldiers_minerals_produces_add = 0.5
-		planet_soldiers_food_produces_add = 0.5
+		planet_soldiers_unity_produces_add = 0.5
 		job_soldier_per_pop = 0.0166
 	}
 }
@@ -26,41 +24,63 @@ pki_katzprotektorat_1_penalties = {
 pki_katzprotektorat_1_overlord_modifier = {
 	icon = "GFX_specialist_perk_katzprotektorat_1_overlord_modifier"
 	overlord_modifier = {
-
+		country_power_projection_unity_produces_add = 100
+		empire_size_mult = 0.5
 	}
 }
 
-pki_katzprotektorat_1_neighbor_bonuses = {
-	icon = "GFX_specialist_perk_katzprotektorat_1_neighbor_bonuses"
+pki_katzprotektorat_1_soldiers = {
+	icon = "GFX_specialist_perk_katzprotektorat_1_soldiers"
 
-	overlord_relay_network_modifier = {
-		pki_specialist_katzprotektorat_neighbor = 1
+	subject_modifier = {
+		planet_soldiers_energy_produces_add = 0.5
+		planet_soldiers_minerals_produces_add = 0.5
+		planet_soldiers_food_produces_add = 0.5
 	}
 
 	desc = {
-		description = pki_katzprotektorat_1_neighbor_bonuses_desc
+		description = pki_katzprotektorat_1_soldiers_desc
 	}
 }
 
 pki_katzprotektorat_1_katzprotektorat_ethics = {
-	icon = "GFX_specialist_perk_katzprotektorat_1_katzprotektorat_array"
+	icon = "GFX_specialist_perk_katzprotektorat_1_katzprotektorat_ethics"
 
 	subject_modifier = {
 		pop_ethic_materialist_attraction_mult = 0.20
 		pop_ethic_militarist_attraction_mult = 0.20
 	}
+
+	desc = {
+		description = pki_katzprotektorat_1_ethics_desc
+	}
 }
 
 pki_katzprotektorat_1_katzprotektorat_tech = {
-	icon = "GFX_specialist_perk_katzprotektorat_1_katzprotektorat_insight"
+	icon = "GFX_specialist_perk_katzprotektorat_1_katzprotektorat_tech"
+
 	activate_effect = {
 		target = {
+			add_tech_progress = {
+				tech = tech_pki_warforge
+				progress = 0.25
+			}
+		}
+	}
 
+	deactivate_effect = {
+		target = {
+			every_owned_planet = {
+				limit = {
+					has_planet_flag = war_forge
+				}
+				remove_modifier = pki_warforge_in_orbit
+			}
 		}
 	}
 
 	desc = {
-		description = katzprotektorat_1_katzprotektorat_insight_desc
+		description = pki_katzprotektorat_1_katzprotektorat_tech_desc
 	}
 }
 
@@ -68,9 +88,7 @@ pki_katzprotektorat_2_modifier = {
 	main_perk = yes
 	subject_modifier = {
 		planet_metallurgists_alloys_produces_add = 1.5
-		planet_soldiers_energy_produces_add = 1
-		planet_soldiers_minerals_produces_add = 1
-		planet_soldiers_food_produces_add = 1
+		planet_soldiers_unity_produces_add = 1
 		job_soldier_per_pop = 0.025
 	}
 }
@@ -86,21 +104,43 @@ pki_katzprotektorat_2_penalties = {
 }
 
 pki_katzprotektorat_2_katzprotektorat_tech = {
-	icon = "GFX_specialist_perk_katzprotektorat_2_katzprotektorat_insight"
+	icon = "GFX_specialist_perk_katzprotektorat_2_katzprotektorat_tech"
 
-	deactivate_effect = {
+	activate_effect = {
 		target = {
-			every_owned_planet = {
-				limit = {
-					has_planet_flag = war_forge
-				}
-				remove_modifier = pki_warforge_in_orbit
+			add_tech_progress = {
+				tech = tech_katzen_luxuries
+				progress = 0.25
+			}
+			add_tech_progress = {
+				tech = tech_katzen_reactor
+				progress = 0.25
+			}
+			add_tech_progress = {
+				tech = tech_katzen_habitability
+				progress = 0.25
+			}
+			add_tech_progress = {
+				tech = tech_katzen_rr
+				progress = 0.25
+			}
+			add_tech_progress = {
+				tech = tech_katzen_forge
+				progress = 0.25
+			}
+			add_tech_progress = {
+				tech = tech_katzen_theater
+				progress = 0.25
+			}
+			add_tech_progress = {
+				tech = tech_katzen_lab
+				progress = 0.25
 			}
 		}
 	}
 
 	desc = {
-		description = katzprotektorat_2_katzprotektorat_tech_desc
+		description = pki_katzprotektorat_2_katzprotektorat_tech_desc
 	}
 }
 
@@ -144,9 +184,7 @@ pki_katzprotektorat_3_modifier = {
 	main_perk = yes
 	subject_modifier = {
 		planet_metallurgists_alloys_produces_add = 2
-		planet_soldiers_energy_produces_add = 1.5
-		planet_soldiers_minerals_produces_add = 1.5
-		planet_soldiers_food_produces_add = 1.5
+		planet_soldiers_unity_produces_add = 1.5
 		job_soldier_per_pop = 0.05
 	}
 }
@@ -162,15 +200,17 @@ pki_katzprotektorat_3_penalties = {
 }
 
 pki_katzprotektorat_3_katzprotektorat_tech = {
-	icon = "GFX_specialist_perk_katzprotektorat_3_katzprotektorat_insight"
+	icon = "GFX_specialist_perk_katzprotektorat_3_katzprotektorat_tech"
 	activate_effect = {
 		target = {
-			append_technology = { TECH = starbase_5 }
+			add_tech_progress = { tech = tech_pki_bomber progress = 0.25 }
+			add_tech_progress = { tech = tech_pki_cruiser progress = 0.25 }
+			add_tech_progress = { tech = tech_pki_panzer progress = 0.25 }
 		}
 	}
 
 	desc = {
-		description = katzprotektorat_3_katzprotektorat_insight_desc
+		description = katzprotektorat_3_katzprotektorat_tech_desc
 	}
 }
 

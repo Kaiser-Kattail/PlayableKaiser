@@ -1,6 +1,6 @@
 katzen_war_forge_0 = {
-	entity = "construction_platform_entity"
-	construction_entity = "construction_platform_entity"
+	entity = ""
+	construction_entity = ""
 	portrait = "GFX_megastructure_construction_background"
 	place_entity_on_planet_plane = no
 	construction_blocks_others = no
@@ -14,9 +14,7 @@ katzen_war_forge_0 = {
 	on_build_start = {}
 	on_build_cancel = {}
 	on_build_complete = {}
-	
-	}	
-
+	}
 	
 katzen_war_forge_1 = {
 	entity = "katzen_war_forge_entity"
@@ -46,40 +44,8 @@ katzen_war_forge_1 = {
 	on_build_start = {}
 	on_build_cancel = {}
 	on_build_complete = {
-		create_fleet = {
-			name = "Katzenkriegsschmiedekanone"
-			settings = {
-				spawn_debris = no
-			}
-			effect = {
-				set_owner = event_target:katzenartig
-				create_ship = {
-					name = "Katzenkriegsschmiedekanone"
-					design = "Rhawn"
-					upgradable = no
-				}
-				set_location = fromfrom
-				set_fleet_flag = warforge_platform
-			}
-		}
-		if = {
-			limit = {
-				space_owner = {
-					is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 2}
-				}
-			}
-			last_created_fleet = {
-				set_owner = event_target:pki_warforge_country
-			}
-			every_system_planet = {
-				limit = {
-					has_planet_flag = war_forge
-				}
-				add_modifier = {
-					modifier = pki_warforge_in_orbit
-					days = -1
-				}
-			}
+		pki_spawn_warforge = {
+			OWNER = event_target:katzenartig_imperium
 		}
 	}	
 }	

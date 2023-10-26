@@ -665,7 +665,7 @@ fleet_event = {
 
 	trigger = {
 		from = {
-			NOT = { owner = { has_origin = origin_katzen} }
+			NOT = { controller = { has_origin = origin_katzen} }
 			any_fleet_in_orbit = {
 				is_ship_size = katzen_submarine
 				owner = { has_origin = origin_katzen }
@@ -832,9 +832,12 @@ event = {
 		}
 	}
 	immediate = {
-		every_megastructure = { #Delete any finished war forges in system with ONLY hostile ships
+		every_megastructure = {
 			limit = {
-				is_megastructure_type = katzen_war_forge_1
+				OR = {
+					is_megastructure_type = katzen_war_forge_0
+					is_megastructure_type = katzen_war_forge_1
+				}
 				solar_system = {
 					NOT = {
 						any_fleet_in_system = { #no hostiles

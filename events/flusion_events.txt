@@ -46,6 +46,7 @@ country_event = {
 		NOT = { has_country_flag = flusion_setup_complete }
 	}
 	immediate = {
+		set_country_flag = starting_event
 		save_global_event_target_as = katzenartig
 		owner_species = {
 			save_global_event_target_as = pki_katzen_species

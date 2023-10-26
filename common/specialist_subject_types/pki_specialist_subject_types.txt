@@ -20,7 +20,7 @@ specialist_katzprotektorat = {
 				pki_katzprotektorat_1_penalties
 				pki_katzprotektorat_1_katzprotektorat_tech
 				pki_katzprotektorat_1_overlord_modifier
-				pki_katzprotektorat_1_neighbor_bonuses
+				pki_katzprotektorat_1_soldiers
 				pki_katzprotektorat_1_katzprotektorat_ethics
 			}
 		}

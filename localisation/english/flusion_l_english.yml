@@ -179,7 +179,20 @@
     # Buildings
     building_katzen_civilian_forge:0 "Katzen Factories"
     building_katzen_civilian_forge_desc:0 "Massive industrial complexes dedicated to mixed industrial use."
-   
+    building_pki_flusion_fusion_power_plant: "Katzen Megareactor"
+    building_pki_flusion_fusion_power_plant_desc: "A colossal Katzen-built Fusion Reactor located under the Katzen capital, providing vast amounts of clean energy."
+    building_pki_katzen_terraformer: "Katzen Environmental Reshaper"
+    building_pki_katzen_terraformer_desc: "This large array of complex structures helps the Katzens adapt the planet's environment to their liking, effectively rendering it more habitable and facilitating colonization efforts."
+    building_pki_katzen_synthetizer: "Katzen Megarefineries"
+    building_pki_katzen_synthetizer_desc: "A vast network of Katzen-built refineries designed to artificially synthetize strategic resources."
+    building_pki_foundry:0 "Katzen Megafoundry"
+    building_pki_foundry_desc:0 "The Katzen Megafoundry produces large quantities of usable alloys with the unfortunate side-effect of damaging its planet's climate."
+    building_pki_theater:0 "Katzen Entertainment Complex"
+    building_pki_theater_desc:0 "These vast complexes provide citizens with large quantities of Katzen-approved mass media which primarily focuses on warfare and militarism."
+    building_pki_science:0 "Katzen Research Center"
+    building_pki_science_desc:0 "A large facility where researchers work tirelessly to push the boundaries of Katzen science (reportedly the \"best in the galaxy\") further and further. The nature of the experiments conducted within are however somewhat... controversial, at times."
+
+
     # Starbase/Orbital Ring
     sm_katzen_ring_energy_hub:0 "Katzen Orbital Actinide Harvesting"
     sm_katzen_ring_energy_hub_desc:0 "Orbital surveying and transport infrastructure greatly aids the harvesting of thorium and other elements on the colony."
@@ -705,6 +718,10 @@
     pki_katzprotektorat_1_modifier: "Katzprotektorat Bonuses I"
     pki_katzprotektorat_1_penalties: "Katzprotektorat Penalties I"
     pki_katzprotektorat_1_katzprotektorat_tech: "Katzen Technology I"
+
+    pki_katzprotektorat_1_soldiers_desc: "REPLACE_PIECAT"
+    pki_katzprotektorat_1_katzprotektorat_tech_desc: "Permits the building and use of §HKatzen War Forges§!"
+
     pki_katzprotektorat_2_modifier: "Katzprotektorat Bonuses II"
     pki_katzprotektorat_2_penalties: "Katzprotektorat Penalties II"
     pki_katzprotektorat_2_katzprotektorat_tech: "Katzen Technology II"
@@ -713,8 +730,7 @@
     pki_katzprotektorat_3_penalties: "Katzprotektorat Penalties III"
     pki_katzprotektorat_3_katzprotektorat_tech: "Katzen Technology III"
 
-    katzprotektorat_1_katzprotektorat_tech_desc: "REPLACE_PIECAT"
-    katzprotektorat_2_katzprotektorat_tech_desc: "Permits the building and use of Katzen War Forges"
+    pki_katzprotektorat_2_katzprotektorat_tech_desc: "REPLACE_PIECAT"
 
     pki_only_tier_3_subject_integration: "$TRIGGER_FAIL$Not allowed for §YKatzprotectorat§! preset until §YSubject Level 3§!"
     pki_not_only_tier_3_not_subject_integration: "$TRIGGER_FAIL$Not allowed for §YKatzprotectorat§! preset at §YSubject Level 3§!."
@@ -729,3 +745,27 @@
 
     pki_warforge_shipyard_add: "£alloys£ Alloys from £job£ Jobs §G+2.50%§!\nAdds §G+1§! Shipyard and §G+2.5%§! Ship Build Speed to the system's starbase if §YKatzen Shipyard Array§! is built"
     pki_warforge_building: "§G+1§! Shipyard and §G+2.5%§! Ship Build Speed for each §YKatzen War Forge§! in the system"
+
+    tech_pki_warforge: "Katzen Warforge"
+    tech_pki_warforge_desc: "REPLACE_PIECAT"
+    tech_pki_panzer: "Katzenweltraumpanzer"
+    tech_pki_panzer_desc: "REPLACE_PIECAT"
+    tech_pki_bomber: "Leerekatzenbomber"
+    tech_pki_bomber_desc: "REPLACE_PIECAT"
+    tech_pki_cruiser: "Katzenkreuzer"
+    tech_pki_cruiser_desc: "REPLACE_PIECAT"
+    PKI_TECH_UNLOCK_BOMBER_CONSTRUCTION_DESC: "REPLACE_PIECAT"
+    PKI_TECH_UNLOCK_BOMBER_CONSTRUCTION_TITLE: "§HUnlocks Ship Type:§! Leerekatzenbomber"
+    PKI_TECH_UNLOCK_CRUISER_CONSTRUCTION_DESC: "REPLACE_PIECAT"
+    PKI_TECH_UNLOCK_CRUISER_CONSTRUCTION_TITLE: "§HUnlocks Ship Type:§! Katzenkreuzer"
+    PKI_TECH_UNLOCK_PANZER_CONSTRUCTION_DESC: "REPLACE_PIECAT"
+    PKI_TECH_UNLOCK_PANZER_CONSTRUCTION_TITLE: "§HUnlocks Ship Type:§! Katzenweltraumpanzer"
+    tech_pki_submarine: "Unterraumboot"
+    tech_pki_submarine_desc: "REPLACE_PIECAT"
+    PKI_TECH_UNLOCK_SUBMARINE_CONSTRUCTION_DESC: "REPLACE_PIECAT"
+    PKI_TECH_UNLOCK_SUBMARINE_CONSTRUCTION_TITLE: "§HUnlocks Ship Type:§! Unterraumboot"
+    PKI_TECH_UNLOCK_WARFORGE_CONSTRUCTION_TITLE: "§HUnlocks Decision:§! Katzen Warforge"
+    PKI_TECH_UNLOCK_WARFORGE_CONSTRUCTION_DESC: "REPLACE_PIECAT"
+
+    mod_country_power_projection_unity_produces_add:1 "Max £unity£ $unity$ from $country_power_projection$"
+    mod_country_power_projection_unity_produces_mult:1 "£unity£ $unity$ from $country_power_projection$"
