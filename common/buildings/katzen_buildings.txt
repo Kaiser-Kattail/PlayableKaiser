@@ -6,7 +6,10 @@ building_katzen_civilian_forge = {
 
 	potential = { 
 		owner = {
-			has_origin = origin_katzen 
+			OR = {
+				has_origin = origin_katzen
+				is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 1}
+			}
 		}
 	}
 
@@ -19,46 +22,21 @@ building_katzen_civilian_forge = {
 		cost = {
 			minerals = @b2_minerals
 		}
-		produces = {
-			consumer_goods = 30
-		}
         upkeep = {
             energy = 4
 			
         }
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				OR = {
-					is_regular_empire = yes
-					has_origin = origin_fear_of_the_dark
-				}
-				is_crafter_empire = no
-			}
-		}
-		job_artisan_add = 6
+	inline_script = {
+		script = jobs/factory_add
+		AMOUNT = 6
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_crafter_empire = yes }
-		}
-		modifier = {
-			job_artificer_add = 6
-		}
+	destroy_trigger = {
+		is_gestalt = yes
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		job_technician_drone_add = 2
-	}
 }
 
 building_siegfried_stronghold = {
@@ -264,5 +242,318 @@ building_player_siegfried_centcom = {
 			owner = { is_gestalt = no }
 		}
 		text = job_maginot_bunker_officer_effect_desc
+	}
+}
+
+#Katzen reactor
+building_pki_flusion_fusion_power_plant = {
+	base_buildtime = 360
+	icon = building_giga_flusion_fusion_power_plant
+	category = resource
+
+	potential = {
+		owner = {
+			OR = {
+				has_origin = origin_katzen
+				is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 1}
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_katzen_reactor"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		produces = {
+			energy = 25
+		}
+	}
+
+	inline_script = {
+		script = jobs/technicians_add
+		AMOUNT = 2
+	}
+}
+
+#Katzen habitability
+building_pki_katzen_terraformer = {
+	base_buildtime = 360
+	icon = building_giga_katzen_terraformer
+	potential = {
+		owner = {
+			OR = {
+				has_origin = origin_katzen
+				is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 1}
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_katzen_habitability"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	planet_modifier = {
+		pop_environment_tolerance = 0.20
+	}
+}
+
+#Katzen rare resources
+building_pki_katzen_synthetizer = {
+	base_buildtime = 360
+	icon = building_giga_katzen_synthetizer
+	category = manufacturing
+
+	potential = {
+		owner = {
+			OR = {
+				has_origin = origin_katzen
+				is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 1}
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_katzen_rr"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	inline_script = {
+		script = jobs/refiner_add
+		AMOUNT = 2
+	}
+
+	inline_script = {
+		script = jobs/chemist_add
+		AMOUNT = 2
+	}
+
+	inline_script = {
+		script = jobs/translucer_add
+		AMOUNT = 2
+	}
+}
+
+#Katzen foundry
+building_pki_foundry = {
+	base_buildtime = @b2_time
+	icon = building_katzen_foundry
+	category = manufacturing
+
+	potential = {
+		owner = {
+			OR = {
+				has_origin = origin_katzen
+				is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 1}
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_katzen_forge"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	planet_modifier = {
+		pop_environment_tolerance = -0.075
+	}
+
+	inline_script = {
+		script = jobs/foundry_add
+		AMOUNT = 8
+	}
+}
+
+#Katzen theater
+building_pki_theater = {
+	base_buildtime = @b2_time
+	icon = building_katzen_theater
+	category = amenity
+
+	potential = {
+		owner = {
+			OR = {
+				has_origin = origin_katzen
+				is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 1}
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_katzen_theater"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			owner = {
+				is_gestalt = yes
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 24
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			NOT = {
+				owner = {
+					has_origin = origin_katzen
+				}
+			}
+		}
+		pop_ethic_militarist_attraction_mult = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				has_origin = origin_katzen
+			}
+		}
+		pop_government_ethic_attraction = 2
+	}
+}
+
+#Katzen science lab
+building_pki_science = {
+	base_buildtime = @b2_time
+	icon = building_katzen_science
+	category = research
+
+	potential = {
+		owner = {
+			OR = {
+				has_origin = origin_katzen
+				is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 1}
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_katzen_lab"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	planet_modifier = {
+		pop_happiness = -0.025
+	}
+
+	inline_script = {
+		script = jobs/researchers_add
+		AMOUNT = 8
+	}
+}
+
+building_pki_katzen_outpost = {
+	base_buildtime = @b1_time
+	owner_type = subject_holding
+	icon = building_dread_encampment
+	base_cap_amount = 1
+
+	category = army
+
+	potential = {
+		owner.overlord = {
+			has_origin = origin_katzen
+		}
+	}
+
+	resources = {
+		category = planet_holdings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	on_built = {
+		set_planet_flag = pki_has_katzen_outpost
+	}
+
+	planet_modifier = {
+		defense_armies_add = -999
+	}
+
+	on_destroy = {
+		remove_planet_flag = pki_has_katzen_outpost
+	}
+
+	destroy_trigger = {
+		owner = {
+			pki_is_katzenartig_imperium = no
+		}
 	}
 }

@@ -1,0 +1,5 @@
+default = {
+	ship_of_size_limits = {
+		pki_submarines_ships_limit
+	}
+}

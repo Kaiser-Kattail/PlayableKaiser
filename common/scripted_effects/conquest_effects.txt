@@ -84,3 +84,8 @@ check_flusionian_war = {
 		remove_country_flag = flusionian_war
 	}
 }
+
+pki_wardec_sound = {
+	play_sound = pki_wardec
+	play_sound = pki_code_message
+}

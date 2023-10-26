@@ -106,21 +106,21 @@ situation_event = {
 			}
 			create_country = {
 				name = "NAME_Flusion_Defense_Force"
-				type = origin_dragon
+				type = pki_katzen_ship
 				auto_delete = no
 				use_hostilities_from = root
-				flag = {
-					icon = {
-						category = "spherical"
-						file = "flag_spherical_6.dds"
+				flag={
+					icon={
+						category="human"
+						file="flag_human_1.dds"
 					}
-					background = {
-						category = "backgrounds"
-						file = "00_solid.dds"
+					background={
+						category="backgrounds"
+						file="circle.dds"
 					}
-					colors = {
-						"dark_blue"
-						"dark_blue"
+					colors={
+						"dark_green"
+						"teal"
 						"null"
 						"null"
 					}

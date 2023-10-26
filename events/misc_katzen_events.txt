@@ -667,25 +667,64 @@ country_event = { #Warforge destroyed
 	}
 }
 
-planet_event = {
+fleet_event = {
 	id = pki_misc.17
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-		any_fleet_in_orbit = {
-			any_owned_ship = { is_ship_size = katzen_submarine }
-			owner = { has_origin = origin_katzen }
-			is_cloaked = yes
+		from = {
+			NOT = { controller = { has_origin = origin_katzen} }
+			any_fleet_in_orbit = {
+				is_ship_size = katzen_submarine
+				owner = { has_origin = origin_katzen }
+				is_cloaked = yes
+			}
 		}
 	}
 
 	immediate = {
-		add_modifier = {
-			modifier = katzen_submarine_subspace_blockade
-			days = 3
+		from = {
+			add_modifier = {
+				modifier = pki_katzen_submarine_subspace_blockade
+				days = -1
+			}
+			planet_event = {
+				id = pki_misc.171
+				days = 30
+			}
 		}
 	}
+}
+
+planet_event = {
+	id = pki_misc.171
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				any_fleet_in_orbit = {
+					is_ship_size = katzen_submarine
+					owner = { has_origin = origin_katzen }
+					is_cloaked = yes
+				}
+			}
+			add_modifier = {
+				modifier = pki_katzen_submarine_subspace_blockade
+				days = -1
+			}
+			planet_event = {
+				id = pki_misc.171
+				days = 30
+			}
+		}
+		else = {
+			remove_modifier = pki_katzen_submarine_subspace_blockade
+		}
+	}
+
 }
 
 country_event = {
@@ -791,163 +830,37 @@ country_event = {
 		}
 	}
 }
-
-country_event = {
-	id = pki_misc.201
+      
+event = {
+	id = pki_misc.20
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
-		has_origin = origin_katzen
+		any_country = {
+			has_origin = origin_katzen
+		}
 	}
 	immediate = {
-		event_target:loris = {
-			change_leader_portrait = lorisreal
-		}
-	}
-}
-
-country_event = {
-	id = pki_misc.202
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		has_origin = origin_katzen
-	}
-	immediate = {
-		event_target:loris = {
-			change_leader_portrait = lorishd
-		}
-	}
-}
-
-country_event = {
-	id = pki_misc.203
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		has_origin = origin_katzen
-	}
-	immediate = {
-		event_target:loris = {
-			change_leader_portrait = lorissilly
-		}
-	}
-}
-
-country_event = {
-	id = pki_misc.204
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		has_origin = origin_katzen
-	}
-	immediate = {
-		event_target:loris = {
-			change_leader_portrait = lorisvanilla
-		}
-	}
-}
-
-country_event = { #Koko von beumien
-	id = pki_misc.51
-	title = pki_misc.51.title
-	desc = pki_misc.51.desc
-	show_sound = par_portrait_02
-	picture = GFX_leader_recruitment_bg_renowned
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	trigger = {
-		last_increased_tech = tech_cloaking_1
-	}
-
-	event_window_type = leader_recruit
-
-	immediate = {
-		define_katzen_high_command_portrait = { SPECIES = KATZ LEADER = koko CLASS = FLSN }
-		ethic_leader_creator = {
-			SPECIES_CLASS = MAM
-			LEADER_PORTRAIT = mam14
-			CLASS = admiral
-			NAME = "NAME_koko"
-			LEVEL = 4
-			GENDER = FEMALE
-			IMMORTAL = no
-			ETHIC = militarist
-			DESC = kokodesc
-			CATCH_PHRASE = koko_catch_phrase
-		}
-		last_created_leader = {
-			add_trait = subclass_admiral_tactician
-			add_trait = leader_trait_koko
-			add_trait = katzen_trait_elite
-			add_trait = leader_trait_trickster_2
-			add_trait = leader_trait_micromanager
-			set_age = 28
-			save_global_event_target_as = koko
-		}
-	}
-
-	picture_event_data = {
-		portrait = event_target:ethic_leader
-		room = ethic_spaceship_room
-	}
-
-	option = {
-		name = DISMISS
-		tag = dismiss_leader
-		hidden_effect = {
-			event_target:koko = {
-				kill_leader = {
-					show_notification = no fire = no
+		every_megastructure = {
+			limit = {
+				OR = {
+					is_megastructure_type = katzen_war_forge_0
+					is_megastructure_type = katzen_war_forge_1
 				}
-			}
-		}
-	}
-	option = {
-		name = pki_misc.51.a
-		response_text = pki_misc.51.a.response
-		is_dialog_only = yes
-	}
-	option = {
-		name = pki_misc.51.b
-		response_text = pki_misc.51.b.response
-		is_dialog_only = yes
-	}
-	option = {
-		name = pki_misc.51.c
-		response_text = pki_misc.51.c.response
-		is_dialog_only = yes
-	}
-	option = {
-		name = HIRE
-		tag = hire_leader
-		custom_tooltip = pki_misc.51.hire_custom_tooltip
-		hidden_effect = {
-			set_country_flag = koko_active
-			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = koko
-			}
-			create_fleet = {
-				name = "Experimental-Unterraumboot"
-				effect = {
-					set_owner = root
-					while = {
-						count = 5
-						create_ship = {
-							name = "U-Boot"
-							design = "Koko"
-							prefix = yes
+				solar_system = {
+					NOT = {
+						any_fleet_in_system = { #no hostiles
+							controller = {
+								OR = {
+									is_at_war_with = event_target:katzenartig
+									is_hostile = event_target:katzenartig
+								}
+							}
 						}
 					}
-					set_location = root.capital_scope
-					assign_leader = event_target:koko
 				}
 			}
+			set_owner = event_target:katzenartig
 		}
 	}
 }

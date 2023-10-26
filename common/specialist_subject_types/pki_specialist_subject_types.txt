@@ -1,0 +1,49 @@
+@level_2_xp_cost = 1200 # 10 years at 100 Loyalty.
+@level_3_xp_cost = 3600 # 30 years at 100 Loyalty.
+
+specialist_katzprotektorat = {
+	icon = "GFX_diplomacy_specialist_subject_katzprotektorat"
+	icon_large = "GFX_diplomacy_specialist_subject_katzprotektorat_large"
+	preferred_ethic = ethic_militarist
+	base_conversion_time = 0
+
+	on_progress_complete = {
+
+	}
+
+	levels = {
+		# Level 1
+		{
+			experience_needed_for_next_level = @level_2_xp_cost
+			perks = {
+				pki_katzprotektorat_1_modifier
+				pki_katzprotektorat_1_penalties
+				pki_katzprotektorat_1_katzprotektorat_tech
+				pki_katzprotektorat_1_overlord_modifier
+				pki_katzprotektorat_1_soldiers
+				pki_katzprotektorat_1_katzprotektorat_ethics
+			}
+		}
+		# Level 2
+		{
+			experience_needed_for_next_level = @level_3_xp_cost
+			perks = {
+				pki_katzprotektorat_2_modifier
+				pki_katzprotektorat_2_penalties
+				pki_katzprotektorat_2_katzprotektorat_tech
+				pki_katzprotektorat_2_traits
+				pki_katzprotektorat_2_leaders
+			}
+		}
+		# Level 3
+		{
+			perks = {
+				pki_katzprotektorat_3_modifier
+				pki_katzprotektorat_3_penalties
+				pki_katzprotektorat_3_katzprotektorat_tech
+				pki_katzprotektorat_3_battlewright
+				pki_katzprotektorat_3_disintegrator_field
+			}
+		}
+	}
+}

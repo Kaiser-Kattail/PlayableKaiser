@@ -46,8 +46,11 @@ country_event = {
 		NOT = { has_country_flag = flusion_setup_complete }
 	}
 	immediate = {
+		set_country_flag = starting_event
 		save_global_event_target_as = katzenartig
-
+		owner_species = {
+			save_global_event_target_as = pki_katzen_species
+		}
 		#	#DOCS
 
 		#	begin_event_chain = {
@@ -132,6 +135,7 @@ country_event = {
 			
 		}
 
+		#Here comes funny kaiser
 		create_species = {
 			name = "Imperial Katzen"
 			plural = "Imperial Katzens"
@@ -538,6 +542,38 @@ country_event = {
 			save_global_event_target_as = douclaw
 		}
 
+		create_country = {
+			name = "NAME_katzen_warforge"
+			type = pki_katzen_ship
+			auto_delete = no
+			use_hostilities_from = root
+			flag={
+				icon={
+					category="domination"
+					file="domination_8.dds"
+				}
+				background={
+					category="backgrounds"
+					file="v.dds"
+				}
+				colors={
+					"blue"
+					"dark_blue"
+					"black"
+					"null"
+				}
+			}
+			effect = {
+				establish_communications_no_message = root
+				set_faction_hostility = {
+					target = root
+					set_hostile = no
+					set_neutral = no
+					set_friendly = yes
+				}
+				save_global_event_target_as = pki_warforge_country
+			}
+		}
 	#Create Flusion Nations
 	#Haranians
 	create_country = {
@@ -1100,16 +1136,29 @@ country_event = {
 			random_pop = { kill_pop = yes }
 			random_pop = { kill_pop = yes }
 			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
+
+			if = {
+				limit = {
+					NOT = {
+						root = {
+							has_valid_civic = civic_eager_explorers
+							has_valid_civic = civic_privatized_exploration
+							has_valid_civic = civic_hive_stargazers
+							has_valid_civic = civic_machine_exploration_protocol
+						}
+					}
+				}
+				random_pop = { kill_pop = yes }
+				random_pop = { kill_pop = yes }
+				random_pop = { kill_pop = yes }
+				random_pop = { kill_pop = yes }
+				random_pop = { kill_pop = yes }
+				random_pop = { kill_pop = yes }
+				random_pop = { kill_pop = yes }
+				random_pop = { kill_pop = yes }
+				random_pop = { kill_pop = yes }
+				random_pop = { kill_pop = yes }
+			}
 
 			# while = {
 			# 	count = 5

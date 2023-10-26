@@ -491,7 +491,6 @@ decision_katzen_defense_array_1 = {
 				has_fleet_flag = katzen_planet_platform_player_1
 			}
 		}
-		
 	}
 
 	effect = { 
@@ -526,9 +525,15 @@ decision_katzen_war_forge = {
 		}
 	}
 	potential = {
-		from = {
-			has_origin = origin_katzen
-			has_country_flag = unified_flusion
+		OR = {
+			from = {
+				has_origin = origin_katzen
+				has_country_flag = unified_flusion
+			}
+			from = {
+				has_technology = tech_pki_warforge
+				is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 1}
+			}
 		}
 		NOT = {
 			has_planet_flag = war_forge
@@ -551,7 +556,7 @@ decision_katzen_war_forge = {
 			spawn_megastructure = {
 				type = katzen_war_forge_0
 				planet = ROOT
-				owner = space_owner
+				owner = event_target:katzenartig
 			}
 			random_system_megastructure = {
 				limit = {
@@ -562,6 +567,9 @@ decision_katzen_war_forge = {
 			}
 		}
 		set_planet_flag = war_forge
+	}
+	ai_weight = {
+		base = 1000
 	}
 }
 

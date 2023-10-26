@@ -1,0 +1,8 @@
+category = {
+    name = "PKI Sounds"
+    soundeffects = {
+        pki_wardec
+        pki_code_message
+	}
+}
+
