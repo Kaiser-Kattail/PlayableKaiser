@@ -1,8 +1,7 @@
 namespace = pki_misc
-namespace = misc
 
 country_event = {
-	id = misc.1
+	id = pki_misc.1
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
@@ -33,7 +32,7 @@ country_event = {
 }
 
 country_event = {
-	id = misc.3
+	id = pki_misc.3
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
@@ -107,8 +106,8 @@ country_event = {
 					"null"
 				}
 			}
-			set_name = "Großkatzenartig Imperium"
-			every_country = { country_event = { id = misc.4 } }
+			set_name = "NAME_BIG_KATZEN_EMPIRE"
+			every_country = { country_event = { id = pki_misc.4 } }
 		}
 		if = {
 			limit = {
@@ -137,16 +136,16 @@ country_event = {
 					"null"
 				}
 			}
-			set_name = "Galaktisches Katzimperium"
-			every_country = { country_event = { id = misc.5 } }
+			set_name = "NAME_GALACTIC_KATZEN_EMPIRE"
+			every_country = { country_event = { id = pki_misc.5 } }
 		}
 	}
 }
 
 country_event = { #big
-	id = misc.4
-	title = "misc.4.name"
-	desc = "misc.4.desc"
+	id = pki_misc.4
+	title = "pki_misc.4.name"
+	desc = "pki_misc.4.desc"
 
 	picture = GFX_evt_announcement
 	show_sound = event_celebration
@@ -154,7 +153,7 @@ country_event = { #big
 	is_triggered_only = yes
 
 	option = { #aw
-		name = "misc.4.a"
+		name = "pki_misc.4.a"
 		trigger = {
 			NOT = {
 				has_origin = origin_katzen
@@ -162,7 +161,7 @@ country_event = { #big
 		}
 	}
 	option = { #:KaiserPog:
-		name = "misc.4.b"
+		name = "pki_misc.4.b"
 		trigger = {
 			has_origin = origin_katzen
 		}
@@ -170,9 +169,9 @@ country_event = { #big
 }
 
 country_event = { #galactic
-	id = misc.5
-	title = "misc.5.name"
-	desc = "misc.5.desc"
+	id = pki_misc.5
+	title = "pki_misc.5.name"
+	desc = "pki_misc.5.desc"
 
 	picture = GFX_evt_binary_stars
 	show_sound = event_celebration
@@ -180,7 +179,7 @@ country_event = { #galactic
 	is_triggered_only = yes
 
 	option = { #aw
-		name = "misc.5.a"
+		name = "pki_misc.5.a"
 		trigger = {
 			NOT = {
 				has_origin = origin_katzen
@@ -188,7 +187,7 @@ country_event = { #galactic
 		}
 	}
 	option = { #:KaiserPog:
-		name = "misc.5.b"
+		name = "pki_misc.5.b"
 		trigger = {
 			has_origin = origin_katzen
 		}
@@ -196,9 +195,9 @@ country_event = { #galactic
 }
 
 country_event = {
-	id = misc.6
-	title = misc.6.title
-	desc = misc.6.desc
+	id = pki_misc.6
+	title = pki_misc.6.title
+	desc = pki_misc.6.desc
 	show_sound = par_portrait_02
 	picture = GFX_leader_recruitment_bg_renowned
 	is_triggered_only = yes
@@ -244,30 +243,30 @@ country_event = {
 		hidden_effect = {
 			event_target:gunfur = {
 				kill_leader = {
-					flag = gunfur show_notification = no
+					show_notification = no fire = no
 				}
 			}
 		}
 	}
 	option = {
-		name = misc.6.a
-		response_text = misc.6.a.response
+		name = pki_misc.6.a
+		response_text = pki_misc.6.a.response
 		is_dialog_only = yes
 	}
 	option = {
-		name = misc.6.b
-		response_text = misc.6.b.response
+		name = pki_misc.6.b
+		response_text = pki_misc.6.b.response
 		is_dialog_only = yes
 	}
 	option = {
-		name = misc.6.c
-		response_text = misc.6.c.response
+		name = pki_misc.6.c
+		response_text = pki_misc.6.c.response
 		is_dialog_only = yes
 	}
 	option = {
 		name = HIRE
 		tag = hire_leader
-		custom_tooltip = misc.6.hire_custom_tooltip
+		custom_tooltip = pki_misc.6.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = gunfur
@@ -298,54 +297,65 @@ country_event = {
 }
 
 country_event = {
-	id = misc.7
+	id = pki_misc.7
 	is_triggered_only = yes
 	hide_window = yes
 
 	immediate = {
-		FROMFROMFROM = { # Planet where ground combat is taking place.
-			OR = {
-				random_ground_combat_attacker = {
-					limit = {
-						exists = leader
-						leader = {
-							has_trait = leader_trait_gunfur
-						}
-					}
-					leader = {
-						save_event_target_as = gunfur_loot
-					}
+		#FROMFROMFROM = { # Planet where ground combat is taking place.
+		#	random_ground_combat_attacker = {
+		#		limit = {
+		#			exists = leader
+		#			leader = {
+		#				has_trait = leader_trait_gunfur
+		#			}
+		#		}
+		#		leader = {
+		#			save_event_target_as = gunfur_loot
+		#		}
+		#	}
+		#	random_ground_combat_defender = {
+		#		limit = {
+		#			exists = leader
+		#			leader = {
+		#				has_trait = leader_trait_gunfur
+		#			}
+		#		}
+		#		leader = {
+		#			save_event_target_as = gunfur_loot
+		#		}
+		#	}
+		#}
+		#
+		## If attacking army has a leader with Crusader trait, award Unity.
+		#if = {
+		#	limit = { exists = event_target:gunfur_loot }
+		#	FROMFROM = {
+		#		if = {
+		#			limit = {
+		#				event_target:gunfur_loot = {
+		#					has_trait = leader_trait_gunfur
+		#				}
+		#			}
+		#			add_resource = {
+		#				alloys = 10
+		#				energy = 25
+		#				minerals = 25
+		#				food = 25
+		#			}
+		#		}
+		#	}
+		from = {
+			if = {
+				limit = {
+					exists = leader
+					leader = { has_trait = leader_trait_gunfur }
 				}
-				random_ground_combat_defender = {
-					limit = {
-						exists = leader
-						leader = {
-							has_trait = leader_trait_gunfur
-						}
-					}
-					leader = {
-						save_event_target_as = gunfur_loot
-					}
-				}
-			}
-		}
-
-		# If attacking army has a leader with Crusader trait, award Unity.
-		if = {
-			limit = { exists = event_target:gunfur_loot }
-			FROMFROM = {
-				if = {
-					limit = {
-						event_target:gunfur_loot = {
-							has_trait = leader_trait_gunfur
-						}
-					}
-					add_resource = {
-						alloys = 10
-						energy = 25
-						minerals = 25
-						food = 25
-					}
+				add_resource = {
+					alloys = 10
+					energy = 25
+					minerals = 25
+					food = 25
 				}
 			}
 		}
@@ -353,7 +363,7 @@ country_event = {
 }
 
 country_event = {
-	id = misc.9
+	id = pki_misc.9
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
@@ -370,7 +380,7 @@ country_event = {
 }
 
 country_event = {
-	id = misc.8
+	id = pki_misc.8
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
@@ -387,7 +397,7 @@ country_event = {
 }
 
 country_event = {
-	id = misc.10
+	id = pki_misc.10
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
@@ -450,10 +460,10 @@ country_event = {
 
 #Aeternum Insights
 country_event = {
-	id = misc.11
+	id = pki_misc.11
 	is_triggered_only = yes
-	title = misc.11.title
-	desc = misc.11.desc
+	title = pki_misc.11.title
+	desc = pki_misc.11.desc
 	picture = GFX_evt_legendary_leader
 	show_sound = event_factions
 	event_window_type = leader_story
@@ -464,8 +474,8 @@ country_event = {
 	}
 
 	option = {
-		name = misc.11.a
-		custom_tooltip = misc.11.a.tt
+		name = pki_misc.11.a
+		custom_tooltip = pki_misc.11.a.tt
 		hidden_effect = {
 			increase_aeternite_intel = yes
 			increase_aeternite_intel = yes
@@ -475,7 +485,7 @@ country_event = {
 }
 
 planet_event = {
-	id = misc.12
+	id = pki_misc.12
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -490,7 +500,7 @@ planet_event = {
 			if = {
 				limit = { is_colony = yes }
 				save_event_target_as = destroyed_siegfried_world
-				owner = { country_event = { id = misc.13 } }
+				owner = { country_event = { id = pki_misc.13 } }
 				destroy_colony = yes
 			}
 			remove_all_buildings = yes
@@ -513,13 +523,13 @@ planet_event = {
 			}
 		}
 		else = {
-			planet_event = { id = misc.12 days = 30 }
+			planet_event = { id = pki_misc.12 days = 30 }
 		}
 	}
 }
 
 country_event = {
-	id = misc.13
+	id = pki_misc.13
 	title = "giga_katzen.121.name"
 	desc = "giga_katzen.121.desc"
 	is_triggered_only = yes
@@ -535,7 +545,7 @@ country_event = {
 }
 
 country_event = {
-	id = misc.14
+	id = pki_misc.14
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
@@ -594,7 +604,7 @@ country_event = {
 }
 
 country_event = {
-	id = misc.15
+	id = pki_misc.15
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
@@ -630,14 +640,14 @@ country_event = {
 					limit = { has_planet_flag = war_forge }
 					remove_planet_flag = war_forge
 				}
-				space_owner = { country_event = { id = misc.16 } }
+				space_owner = { country_event = { id = pki_misc.16 } }
 			}
 		}
 	}
 }
 
 country_event = { #Warforge destroyed
-	id = misc.16
+	id = pki_misc.16
 	title = "giga_katzen.031.name"
 	desc = "giga_katzen.031.desc"
 	picture = GFX_evt_large_explosion
@@ -657,9 +667,8 @@ country_event = { #Warforge destroyed
 	}
 }
 
-
 fleet_event = {
-	id = misc.17
+	id = pki_misc.17
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -681,7 +690,7 @@ fleet_event = {
 				days = -1
 			}
 			planet_event = {
-				id = misc.171
+				id = pki_misc.171
 				days = 30
 			}
 		}
@@ -689,7 +698,7 @@ fleet_event = {
 }
 
 planet_event = {
-	id = misc.171
+	id = pki_misc.171
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -707,7 +716,7 @@ planet_event = {
 				days = -1
 			}
 			planet_event = {
-				id = misc.171
+				id = pki_misc.171
 				days = 30
 			}
 		}
@@ -719,9 +728,9 @@ planet_event = {
 }
 
 country_event = {
-	id = misc.18
-	title = misc.18.title
-	desc = misc.18.desc
+	id = pki_misc.18
+	title = pki_misc.18.title
+	desc = pki_misc.18.desc
 	show_sound = par_portrait_14
 	picture = GFX_leader_recruitment_bg_renowned
 	is_triggered_only = yes
@@ -767,30 +776,30 @@ country_event = {
 		hidden_effect = {
 			event_target:neumeyer = {
 				kill_leader = {
-					flag = neumeyer show_notification = no
+					show_notification = no fire = no
 				}
 			}
 		}
 	}
 	option = {
-		name = misc.18.a
-		response_text = misc.18.a.response
+		name = pki_misc.18.a
+		response_text = pki_misc.18.a.response
 		is_dialog_only = yes
 	}
 	option = {
-		name = misc.18.b
-		response_text = misc.18.b.response
+		name = pki_misc.18.b
+		response_text = pki_misc.18.b.response
 		is_dialog_only = yes
 	}
 	option = {
-		name = misc.18.c
-		response_text = misc.18.c.response
+		name = pki_misc.18.c
+		response_text = pki_misc.18.c.response
 		is_dialog_only = yes
 	}
 	option = {
 		name = HIRE
 		tag = hire_leader
-		custom_tooltip = misc.18.hire_custom_tooltip
+		custom_tooltip = pki_misc.18.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = neumeyer
@@ -800,7 +809,7 @@ country_event = {
 }
 
 country_event = {
-	id = misc.19
+	id = pki_misc.19
 	hide_window = yes
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -816,14 +825,14 @@ country_event = {
 	}
 	immediate = {
 		country_event = {
-			id = misc.18
+			id = pki_misc.18
 			days = 180 random = 180
 		}
 	}
 }
-
+      
 event = {
-	id = misc.20
+	id = pki_misc.20
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
@@ -855,3 +864,4 @@ event = {
 		}
 	}
 }
+

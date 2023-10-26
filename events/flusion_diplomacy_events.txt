@@ -710,7 +710,7 @@ planet_event = {
 }
 
 situation_event = {
-	id = flunat.311
+	id = flunat.0311
 	title = flunat.0111.title
 	desc = flunat.0111.desc
 	picture = GFX_evt_burning_settlement
@@ -967,7 +967,7 @@ planet_event = {
 }
 
 situation_event = {
-	id = flunat.411
+	id = flunat.0411
 	title = flunat.0111.title
 	desc = flunat.0111.desc
 	picture = GFX_evt_burning_settlement
@@ -1224,7 +1224,7 @@ planet_event = {
 }
 
 situation_event = {
-	id = flunat.511
+	id = flunat.0511
 	title = flunat.0111.title
 	desc = flunat.0111.desc
 	picture = GFX_evt_burning_settlement
@@ -1464,7 +1464,7 @@ planet_event = {
 }
 
 situation_event = {
-	id = flunat.611
+	id = flunat.0611
 	title = flunat.0111.title
 	desc = flunat.0111.desc
 	picture = GFX_evt_burning_settlement
@@ -1488,7 +1488,7 @@ situation_event = {
 }
 
 country_event = {
-	id = flunat.602
+	id = flunat.0602
 	title = flunat.0601.name
 	desc = flunat.0602.desc
 
@@ -1706,7 +1706,7 @@ planet_event = {
 }
 
 situation_event = {
-	id = flunat.711
+	id = flunat.0711
 	title = flunat.0111.title
 	desc = flunat.0111.desc
 	picture = GFX_evt_burning_settlement
@@ -1730,7 +1730,7 @@ situation_event = {
 }
 
 country_event = {
-	id = flunat.702
+	id = flunat.0702
 	title = flunat.0701.name
 	desc = flunat.0702.desc
 
@@ -1953,7 +1953,7 @@ planet_event = {
 }
 
 situation_event = {
-	id = flunat.811
+	id = flunat.0811
 	title = flunat.0111.title
 	desc = flunat.0111.desc
 	picture = GFX_evt_burning_settlement
@@ -1977,7 +1977,7 @@ situation_event = {
 }
 
 country_event = {
-	id = flunat.802
+	id = flunat.0802
 	title = flunat.0801.name
 	desc = flunat.0802.desc
 
@@ -2211,7 +2211,7 @@ planet_event = {
 }
 
 situation_event = {
-	id = flunat.911
+	id = flunat.0911
 	title = flunat.0111.title
 	desc = flunat.0111.desc
 	picture = GFX_evt_burning_settlement
@@ -2235,7 +2235,7 @@ situation_event = {
 }
 
 country_event = {
-	id = flunat.902
+	id = flunat.0902
 	title = flunat.0901.name
 	desc = flunat.0902.desc
 
@@ -2467,7 +2467,7 @@ planet_event = {
 }
 
 situation_event = {
-	id = flunat.1111
+	id = flunat.01111
 	title = flunat.0111.title
 	desc = flunat.0111.desc
 	picture = GFX_evt_burning_settlement
@@ -2491,7 +2491,7 @@ situation_event = {
 }
 
 country_event = {
-	id = flunat.1102
+	id = flunat.01102
 	title = flunat.01101.name
 	desc = flunat.01102.desc
 
@@ -2568,7 +2568,7 @@ country_event = {
 	is_triggered_only = yes
 	diplomatic = yes
 	picture_event_data = {
-		portrait = event_target:neko_flunat
+		portrait = event_target:james_flunat
 		planet_background = pc_nuked
 		graphical_culture = mammalian_01
 		city_level = root.owner
@@ -2724,7 +2724,7 @@ planet_event = {
 }
 
 situation_event = {
-	id = flunat.1211
+	id = flunat.01211
 	title = flunat.0111.title
 	desc = flunat.0111.desc
 	picture = GFX_evt_burning_settlement
@@ -2748,15 +2748,15 @@ situation_event = {
 }
 
 country_event = {
-	id = flunat.1202
+	id = flunat.01202
 	title = flunat.01201.name
 	desc = flunat.01202.desc
 
 	is_triggered_only = yes
 	diplomatic = yes
 	picture_event_data = {
-		portrait = event_target:neko_flunat
-		planet_background = root.owner
+		portrait = event_target:james_flunat
+		planet_background = pc_nuked
 		graphical_culture = humanoid_01
 		city_level = root.owner
 		room = personality_xenophobic_isolationists_room
@@ -2981,7 +2981,7 @@ planet_event = {
 }
 
 situation_event = {
-	id = flunat.1311
+	id = flunat.01311
 	title = flunat.0111.title
 	desc = flunat.0111.desc
 	picture = GFX_evt_burning_settlement
@@ -3005,7 +3005,7 @@ situation_event = {
 }
 
 country_event = {
-	id = flunat.1302
+	id = flunat.01302
 	title = flunat.01301.name
 	desc = flunat.01302.desc
 
@@ -3237,7 +3237,7 @@ planet_event = {
 }
 
 situation_event = {
-	id = flunat.1411
+	id = flunat.01411
 	title = flunat.0111.title
 	desc = flunat.0111.desc
 	picture = GFX_evt_burning_settlement
