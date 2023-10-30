@@ -7,26 +7,4 @@ portraits = {
 		greeting_sound = "mammalian_01_greetings"
 	}
 
-	lorissilly = {
-		texturefile = "gfx/models/portraits/lorissilly.dds"
-		clothes_selector = "no_texture"
-		hair_selector = "no_texture"
-		greeting_sound = "mammalian_01_greetings"
-	}
-
-	lorishd = {
-		texturefile = "gfx/models/portraits/lorishd.dds"
-		clothes_selector = "no_texture"
-		hair_selector = "no_texture"
-		greeting_sound = "mammalian_01_greetings"
-	}
-
-	lorisvanilla = {
-		entity = "portrait_mammalian_14_entity"
-		clothes_selector = "loris_massive_clothes_01"
-		attachment_selector = "no_texture"
-		greeting_sound = "mammalian_01_greetings"
-		character_textures = { "gfx/models/portraits/mammalian/mammalian_massive_14_beige.dds" }
-	}
-
 }

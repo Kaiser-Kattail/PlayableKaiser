@@ -16,124 +16,26 @@
 # leader_class has to be set to include "ruler" for a ruler to be valid for a trait
 # modifiers granted to rulers are applied to the entire Empire
 
-trait_ruler_katzen_cruiser_focus = {
+leader_trait_ruler_kaiser_cattail = {
 	councilor_trait = yes
+	immortal_leaders = yes
 	inline_script = {
 		script = trait/icon
-		CLASS = admiral
-		ICON = GFX_leader_trait_battleship_focus
-		RARITY = veteran
+		CLASS = leader
+		ICON = "GFX_leader_trait_ruler_kaiser_kattail"
+		RARITY = paragon
 		COUNCIL = yes
 		TIER = none
 	}
 	modifier = {
-		ship_katzen_cruiser_cost_mult = -0.3
+		army_morale = 0.25
+		ship_weapon_damage = 0.05
+		pop_government_ethic_attraction = 0.10
+		
 	}
-	leader_potential_add = {
-		has_paragon_dlc = no
-		from = { has_country_flag = kaiser_preset }
-	}
-	leader_class = { admiral }
-	prerequisites = { tech_battleships }
-	opposites = {
-		trait_ruler_corvette_focus
-		trait_ruler_destroyer_focus
-		trait_ruler_cruiser_focus
-		trait_ruler_battleship_focus
-		trait_ruler_katzen_panzer_focus
-		trait_ruler_katzen_unterraumboot_focus
-		trait_ruler_katzen_bomber_focus
-	}
-}
-
-trait_ruler_katzen_bomber_focus = {
-	councilor_trait = yes
-	inline_script = {
-		script = trait/icon
-		CLASS = admiral
-		ICON = GFX_leader_trait_cruiser_focus
-		RARITY = veteran
-		COUNCIL = yes
-		TIER = none
-	}
-	modifier = {
-		ship_katzen_bomber_cost_mult = -0.3
-	}
-	leader_potential_add = {
-		has_paragon_dlc = no
-		from = { has_country_flag = kaiser_preset }
-	}
-	leader_class = { admiral }
-	prerequisites = { tech_cruisers }
-	opposites = {
-		trait_ruler_corvette_focus
-		trait_ruler_destroyer_focus
-		trait_ruler_cruiser_focus
-		trait_ruler_battleship_focus
-		trait_ruler_katzen_panzer_focus
-		trait_ruler_katzen_unterraumboot_focus
-		trait_ruler_katzen_cruiser_focus
-	}
-}
-
-trait_ruler_katzen_panzer_focus = {
-	councilor_trait = yes
-	inline_script = {
-		script = trait/icon
-		CLASS = admiral
-		ICON = GFX_leader_trait_destroyer_focus
-		RARITY = veteran
-		COUNCIL = yes
-		TIER = none
-	}
-	modifier = {
-		ship_katzen_panzer_cost_mult = -0.3
-	}
-	leader_potential_add = {
-		has_paragon_dlc = no
-		from = { has_country_flag = kaiser_preset }
-	}
-	leader_class = { admiral }
-	prerequisites = { tech_destroyers }
-	opposites = {
-		trait_ruler_corvette_focus
-		trait_ruler_destroyer_focus
-		trait_ruler_cruiser_focus
-		trait_ruler_battleship_focus
-		trait_ruler_katzen_bomber_focus
-		trait_ruler_katzen_unterraumboot_focus
-		trait_ruler_katzen_cruiser_focus
-	}
-}
-
-trait_ruler_katzen_unterraumboot_focus = {
-	councilor_trait = yes
-	inline_script = {
-		script = trait/icon
-		CLASS = admiral
-		ICON = GFX_leader_trait_corvette_focus
-		RARITY = veteran
-		COUNCIL = yes
-		TIER = none
-	}
-	modifier = {
-		ship_katzen_submarine_cost_mult = -0.3
-	}
-	leader_potential_add = {
-		has_paragon_dlc = no
-		from = { has_country_flag = kaiser_preset }
-	}
-	leader_class = { admiral }
-	prerequisites = { tech_cloaking_1 }
-	opposites = {
-		trait_ruler_corvette_focus
-		trait_ruler_destroyer_focus
-		trait_ruler_cruiser_focus
-		trait_ruler_battleship_focus
-		trait_ruler_katzen_bomber_focus
-		trait_ruler_katzen_panzer_focus
-		trait_ruler_katzen_cruiser_focus
-	}
+	leader_class = { scientist governor admiral general }
+	initial = no
+	randomized = no
 }
 
 katzen_trait_martial_free = {
@@ -153,27 +55,23 @@ katzen_trait_martial_free = {
 	}
 }
 
-
-# Leader Traits
-
-leader_trait_ruler_kaiser_cattail = {
-	destiny_trait = yes
-	councilor_trait = yes
-	immortal_leaders = yes
+katzen_trait_elite = {
 	inline_script = {
 		script = trait/icon
 		CLASS = leader
-		ICON = "GFX_leader_trait_ruler_kaiser_kattail"
-		RARITY = paragon
-		COUNCIL = yes
+		ICON = "GFX_leader_trait_from_the_ranks"
+		RARITY = veteran
+		COUNCIL = no
 		TIER = none
 	}
-	modifier = {
-		army_morale = 0.25
-		ship_weapon_damage = 0.05
-		pop_government_ethic_attraction = 0.10
+	immortal_leaders = yes
+	self_modifier = {
+		species_leader_exp_gain = -0.15
 	}
-	leader_class = { scientist governor admiral general }
+	leader_class = {
+		admiral general governor scientist
+	}
+	custom_tooltip_with_modifiers = katzen_trait_elite_effect
 	initial = no
 	randomized = no
 }
@@ -218,7 +116,7 @@ leader_trait_neumeyer = {
 		planet_enforcers_unity_produces_add = 3
 		job_soldier_stability_add = 5
 		planet_stability_add = 10
-		pop_happiness = -0.1
+		pop_happiness = -0.15
 		defense_armies_add = 6
 	}
 	leader_potential_add = {
