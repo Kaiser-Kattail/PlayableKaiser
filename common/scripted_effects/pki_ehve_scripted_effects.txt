@@ -10,7 +10,7 @@ create_kaiser_wormholes = {
 			}
 		}
 		this = {
-			exists = owner
+			limit = { exists = owner }
 			owner = {
 				save_event_target_as = owner_country
 			}

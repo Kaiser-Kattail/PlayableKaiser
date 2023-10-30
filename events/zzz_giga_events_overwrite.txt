@@ -33,7 +33,7 @@ country_event = {
             #    limit = {
             #        has_origin = origin_katzen
             #    }
-            #    country_event = { id = misc.11 days = 30}
+            #    country_event = { id = pki_misc.11 days = 30}
             #}
 		}
 	}

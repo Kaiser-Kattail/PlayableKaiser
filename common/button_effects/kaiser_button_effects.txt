@@ -9,6 +9,7 @@ kaiser_bureau = {
 			}
 		}
 	}
+	allow = { HIDDEN_TRIGGER = { NOT = { has_country_flag = conquest_map_active } } }
 	effect = { custom_tooltip = "kaiser_bureau_tooltip" hidden_effect = { from = { country_event = { id = kaiser_bureau.2 } } } }
 }
 

@@ -157,9 +157,9 @@
    flunat.01101.c.response:0 "So be it! Let this glorious combat determine who Flusion's greatest warrior actually is!"
 #Symbyland
 
-    NAME_Symbies:0 "Puffyland Republic"
+    NAME_Symbies:0 "Puffiland Republic"
     NAME_Symbiess:0 "Wacegi"
-    flunat.01201.name:0 "Puffyland Republic -  §Y[symbie_flunat.GetRulerName]§!"
+    flunat.01201.name:0 "Puffiland Republic -  §Y[symbie_flunat.GetRulerName]§!"
    flunat.01201a.desc:0 "What do you want? Have you not bombed us enough?"
    flunat.01201b.desc:0 "Granted, you liberated us from Godred's grasp... but at what cost?"
    flunat.01201c.desc:0 "Half of our country is nothing but radioactive wasteland thanks to your kind!"
@@ -243,14 +243,14 @@ NAME_solakia_defense: "Roqualian Army"
 
 #Cookians
 #I cannot organize lmao
- situation_cookian_conquest:0 "War for the Cookian Steppes"
+ situation_cookian_conquest:0 "War for the Galletian Technocracy"
  situation_cookian_conquest_type:0 "Flusionian Conquest"
- situation_cookian_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HCookian Steppes§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
+ situation_cookian_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HGalletian Technocracy§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
  situation_cookian_conquest_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
- conquest_situation_conquer_cookian_steppes:0 "We annex the Cookian Steppes, and control their lands and people."
- conquest_situation_conquer_cookie: "We annex the Cookian Steppes, and control their lands and people."
+ conquest_situation_conquer_cookian_steppes:0 "We annex the Galletian Technocracy, and control their lands and people."
+ conquest_situation_conquer_cookie: "We annex the Galletian Technocracy, and control their lands and people."
  flunat.0202.desc:0 "The flame of progress can never be extinguished. We shall rise again once more."
-NAME_cookie_defense: "Cookian Army"
+NAME_cookie_defense: "Galletian Army"
  conquest.202.desc:0 "Intellect has once more triumphed over barbarism."
 
 #Kronk
@@ -275,13 +275,13 @@ NAME_ravka_defense: "Ravkan Army"
  conquest.402.desc:0 "Face it Kattail; you will never win. The Ravkanian spirit cannot be crushed by your farcical war machines."
 
 #Zousa
- situation_zousa_conquest:0 "War for the Zousans"
+ situation_zousa_conquest:0 "War for the Linterians"
  situation_zousa_conquest_type:0 "Flusionian Conquest"
- situation_zousa_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on §HZousa§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
+ situation_zousa_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on §HLinteria§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
  situation_zousa_conquest_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
- conquest_situation_conquer_zousa: "We annex Zousa, and control their lands and people."
+ conquest_situation_conquer_zousa: "We annex Linteria, and control their lands and people."
  flunat.0502.desc:0 "...this...this cannot be..."
-NAME_zousa_defense: "Zousan Army"
+NAME_zousa_defense: "Linterian Army"
  conquest.502.desc:0 "Let this be a rightful lesson to you, foolish felines."
 
 #Droog
@@ -296,14 +296,14 @@ NAME_droog_defense: "Droog Army"
 
 
 #Ezic
- situation_ezic_conquest:0 "War for the Ezicanian Empire"
+ situation_ezic_conquest:0 "War for the Zuspri Intermarium"
  situation_ezic_conquest_type:0 "Flusionian Conquest"
- situation_ezic_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HEzicanian Empire§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
+ situation_ezic_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HZuspri Intermarium§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
  situation_ezic_conquest_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
- conquest_situation_conquer_ezic: "We annex the Ezics, and control their lands and people."
+ conquest_situation_conquer_ezic: "We annex the Zuspri, and control their lands and people."
  flunat.0702.desc:0 "You will pay for this in blood, Katzens."
-NAME_ezic_defense: "Ezicanian Army"
- conquest.702.desc:0 "Our idyllic and resilient Ezicanian spirit will forevermore stand defiant to your metal monstrosities."
+NAME_ezic_defense: "Zuspri Army"
+ conquest.702.desc:0 "Our idyllic and resilient Zuspri spirit will forevermore stand defiant to your metal monstrosities."
 
 #Mercuria
  situation_mercurian_conquest:0 "War for Mercuria"
@@ -336,13 +336,13 @@ NAME_yinja_defense: "Yinjite Army"
  conquest.1102.desc:0 "A most exhilarating conflict. You felines have been swept away by our might!"
 
 #Symbieland
- situation_symbie_conquest:0 "War for Symbyland"
+ situation_symbie_conquest:0 "War for Puffiland"
  situation_symbie_conquest_type:0 "Flusionian Conquest"
- situation_symbie_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HSymbies§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
+ situation_symbie_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HWacegi§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
  situation_symbie_conquest_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
- conquest_situation_conquer_symbie: "We annex the Symbies, and control their lands and people."
+ conquest_situation_conquer_symbie: "We annex the Wacegi, and control their lands and people."
  flunat.01202.desc:0 "And so we fall once more. This is the end, is it not?"
-NAME_symbie_defense: "Symby Army"
+NAME_symbie_defense: "Wacegi Army"
  conquest.1202.desc:0 "Let this be a lesson to you. One day, we shall turn Katown to rubble."
 
 #Laurandar
