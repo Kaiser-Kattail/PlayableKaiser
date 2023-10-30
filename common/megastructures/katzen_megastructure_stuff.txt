@@ -1,6 +1,6 @@
 katzen_war_forge_0 = {
-	entity = ""
-	construction_entity = ""
+	entity = "construction_platform_entity"
+	construction_entity = "katzen_war_forge_entity"
 	portrait = "GFX_megastructure_construction_background"
 	place_entity_on_planet_plane = no
 	construction_blocks_others = no
@@ -44,7 +44,7 @@ katzen_war_forge_1 = {
 	on_build_start = {}
 	on_build_cancel = {}
 	on_build_complete = {
-		pki_spawn_warforge = {
+		pki_spawn_warforge_fleet = {
 			OWNER = event_target:katzenartig_imperium
 		}
 	}	

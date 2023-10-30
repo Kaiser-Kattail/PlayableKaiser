@@ -327,10 +327,6 @@ flusion_conversion_effect_step_2 = {
 	clear_variable = farm_u_count
 }
 
-katzen_elite = {
-	add_trait = katzen_trait_elite
-}
-
 player_flusion_unify_flusion = {
 	event_target:playerflusion = {
 		remove_deposit = d_flunat
@@ -967,7 +963,7 @@ pki_district_conversion = {
 	clear_variable = $VARIABLE$
 }
 
-pki_spawn_warforge = {
+pki_spawn_warforge_fleet = {
 	create_fleet = {
 		name = "Katzenkriegsschmiedekanone"
 		settings = {
@@ -975,6 +971,14 @@ pki_spawn_warforge = {
 		}
 		effect = {
 			set_owner = $OWNER$
+			if = {
+				limit = {
+					NOT = {
+						space_owner = $OWNER$
+					}
+				}
+				set_owner = event_target:pki_warforge_country
+			}
 			create_ship = {
 				name = "Katzenkriegsschmiedekanone"
 				design = "Rhawn"
@@ -987,7 +991,7 @@ pki_spawn_warforge = {
 	if = {
 		limit = {
 			space_owner = {
-				is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 2}
+				is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 1 }
 			}
 		}
 		every_system_planet = {

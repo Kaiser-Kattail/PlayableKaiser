@@ -61,7 +61,7 @@
 	KATCRUISER_FISSION_REACTOR: "Katzen Fission Reactor"
 	KATCRUISER_FISSION_REACTOR_desc: "A Katzen designed fission reactor, built for the Leerekatzenbombers."
 	KATTITAN_FISSION_REACTOR: "Katzen Fission Reactor"
-	KATCRUISER_FISSION_REACTOR_desc: "A Katzen designed fission reactor, built for the Weltraumkatzenmarine."
+	KATTITAN_FISSION_REACTOR_desc: "A Katzen designed fission reactor, built for the Weltraumkatzenmarine."
  	KATSUB_FISSION_REACTOR:0 "Katzen Fission Reactor"
 	KATSUB_FISSION_REACTOR_desc: "A Katzen designed fission reactor, built for the Unterraumboots."
  	KATSUB_FUSION_REACTOR:0 "Katzenfusionsreaktor"
@@ -98,7 +98,7 @@
 	KATCRUISER_FUSION_REACTOR: "Katzenfusionsreaktor"
 	KATCRUISER_FUSION_REACTOR_desc: "A drastic improvement on ancient fission reactors, these new Fusionsreaktoren are a staple power provider on Flusion, and are now adapted for the Leerekatzenbombers."
 	KATTITAN_FUSION_REACTOR: "Katzenfusionreaktor"
-	KATCRUISER_FUSION_REACTOR_desc: "A drastic improvement on ancient fission reactors, these new Fusionsreaktoren are a staple power provider on Flusion, and are now adapted for the massive power needs of the Weltraumkatzenmarine."
+	KATTITAN_FUSION_REACTOR_desc: "A drastic improvement on ancient fission reactors, these new Fusionsreaktoren are a staple power provider on Flusion, and are now adapted for the massive power needs of the Weltraumkatzenmarine."
 
 	KATDESTROYER_COLD_FUSION_REACTOR: "Cold Katzenfusionsreaktor"
 	KATDESTROYER_COLD_FUSION_REACTOR_desc: "With additional technological advancements, these new reactors no longer require massive, overly heavy heat sinks, therefore freeing up space for more power generation components."

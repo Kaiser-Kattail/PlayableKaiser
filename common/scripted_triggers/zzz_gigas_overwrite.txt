@@ -128,3 +128,12 @@ gigas_kilostructure_list = {
 		$CONDITION$ = katzen_war_forge_1
 	}
 }
+
+is_maginotable_restricted = {
+	OR = {
+		# planetary computer
+		is_planet_class = pc_giga_planetary_computer
+		has_planet_flag = has_planet_pc_mega
+		is_planet_class = pc_pki_flusion_ecu
+	}
+}

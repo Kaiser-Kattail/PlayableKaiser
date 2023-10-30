@@ -7,7 +7,7 @@ auth_pki_katzprotektorat = {
     ruler_council_position = councilor_ruler_katzprotektorat
 
     potential = {
-        always = no
+        authority = { value = auth_pki_katzprotektorat }
     }
 
     possible = {
@@ -15,7 +15,6 @@ auth_pki_katzprotektorat = {
     }
 
     country_modifier = {
-        # All modifiers are on "councilor_ruler_dictatorial".
     }
 
     random_weight = {
@@ -23,7 +22,6 @@ auth_pki_katzprotektorat = {
     }
 
     tags = {
-        AUTHORITY_ELECTION_ON_RULER_DEATH
-        NO_REFORMING_DOFUS
+        KATZEN_VASSAL
     }
 }

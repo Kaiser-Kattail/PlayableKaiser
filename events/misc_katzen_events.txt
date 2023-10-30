@@ -20,13 +20,16 @@ country_event = {
 				has_ground_combat = no
 				is_colony = yes
 			}
-			while = { count = 1	create_army = { 
-				name = "Katzenarmee Peacekeeper Garrison"	
-				owner = event_target:katzenartig 
-				species = owner_main_species 
-				type = "peacekeeper_army"
-				land_army = yes
-			} }
+			while = {
+				count = 1
+				create_army = {
+					name = "Katzenarmee Peacekeeper Garrison"
+					owner = event_target:katzenartig
+					species = owner_main_species
+					type = "peacekeeper_army"
+
+				}
+			}
 		}
 	}
 }
@@ -224,7 +227,7 @@ country_event = {
 		last_created_leader = {
 			add_trait = subclass_general_invader
 			add_trait = leader_trait_gunfur
-			add_trait = katzen_trait_elite
+			add_trait = pki_katzen_trait_elite
 			add_trait = leader_trait_butcher_2
 			add_trait = leader_trait_victory_or_death
 			set_age = 32
@@ -243,7 +246,7 @@ country_event = {
 		hidden_effect = {
 			event_target:gunfur = {
 				kill_leader = {
-					show_notification = no fire = no
+					show_notification = no
 				}
 			}
 		}
@@ -757,7 +760,7 @@ country_event = {
 		last_created_leader = {
 			add_trait = subclass_governor_economist
 			add_trait = leader_trait_neumeyer
-			add_trait = katzen_trait_elite
+			add_trait = pki_katzen_trait_elite
 			add_trait = leader_trait_enlister
 			add_trait = leader_trait_embezzler
 			set_age = 28
@@ -776,7 +779,7 @@ country_event = {
 		hidden_effect = {
 			event_target:neumeyer = {
 				kill_leader = {
-					show_notification = no fire = no
+					show_notification = no
 				}
 			}
 		}

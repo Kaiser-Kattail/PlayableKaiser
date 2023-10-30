@@ -262,76 +262,11 @@ district_pki_flusion_heavy_industry = {
 		pop_environment_tolerance = -0.025
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					AND = {
-						is_gestalt = no
-						is_catalytic_empire = no
-					}
-				}
-			}
-		}
-		modifier = {
-			job_foundry_add = 8
-		}
+	inline_script = {
+		script = jobs/foundry_add
+		AMOUNT = 8
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-				is_catalytic_empire = yes
-			}
-		}
-		modifier = {
-			job_catalytic_technician_add = 8
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_hive_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		modifier = {
-			job_alloy_drone_add = 8
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		modifier = {
-			job_fabricator_add = 8
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-				is_catalytic_empire = yes
-			}
-		}
-		modifier = {
-			job_catalytic_drone_add = 8
-		}
-	}
-	
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -345,66 +280,6 @@ district_pki_flusion_heavy_industry = {
 			job_foundry_add = -2
 			job_giga_megaengineer_add = 2
 		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					AND = {
-						is_gestalt = no
-						is_catalytic_empire = no
-					}
-				}
-			}
-		}
-		text = job_foundry_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-				is_catalytic_empire = yes
-			}
-		}
-		text = job_catalytic_technician_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		text = job_fabricator_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_hive_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		text = job_alloy_drone_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-				is_catalytic_empire = yes
-			}
-		}
-		text = job_catalytic_drone_effect_desc
 	}
 
 	triggered_planet_modifier = {
@@ -488,42 +363,9 @@ district_pki_flusion_civilian_industry = {
 		pop_environment_tolerance = -0.02
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					is_regular_empire = yes
-				}
-				NOR = {
-					has_civic = civic_crafters
-					has_civic = civic_corporate_crafters
-				}
-			}
-		}
-		modifier = {
-			job_artisan_add = 5
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					is_regular_empire = yes
-				}
-				OR = {
-					has_civic = civic_crafters
-					has_civic = civic_corporate_crafters
-				}
-			}
-		}
-		modifier = {
-			job_artificer_add = 5
-		}
+	inline_script = {
+		script = jobs/factory_add
+		AMOUNT = 5
 	}
 
 	triggered_planet_modifier = {
@@ -574,40 +416,6 @@ district_pki_flusion_civilian_industry = {
 		modifier = {
 			job_priest_add = 3
 		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					is_regular_empire = yes
-				}
-				NOR = {
-					has_civic = civic_crafters
-					has_civic = civic_corporate_crafters
-				}
-			}
-		}
-		text = job_artisan_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					is_regular_empire = yes
-				}
-				OR = {
-					has_civic = civic_crafters
-					has_civic = civic_corporate_crafters
-				}
-			}
-		}
-		text = job_artificer_effect_desc
 	}
 
 	triggered_desc = {
@@ -696,6 +504,16 @@ district_pki_flusion_science = {
 		}
 	}
 
+	inline_script = {
+		script = jobs/researchers_add
+		AMOUNT = 7
+	}
+
+	inline_script = {
+		script = jobs/chemist_add
+		AMOUNT = 1
+	}
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -708,34 +526,7 @@ district_pki_flusion_science = {
 		}
 		modifier = {
 			job_head_researcher_add = 1
-			job_researcher_add = 6
-			job_chemist_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_hive_empire = yes
-			}
-		}
-		modifier = {
-			job_brain_drone_add = 7
-			job_chemist_drone_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-			}
-		}
-		modifier = {
-			job_calculator_add = 7
-			job_chemist_drone_add = 1
+			job_researcher_add = -1
 		}
 	}
 
@@ -749,43 +540,7 @@ district_pki_flusion_science = {
 				}
 			}
 		}
-		text = job_researcher_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-			}
-		}
-		text = job_calculator_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_hive_empire = yes
-			}
-		}
-		text = job_brain_drone_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		text = job_chemist_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		text = job_chemist_drone_effect_desc
+		text = job_head_researcher_effect_desc
 	}
 }
 
@@ -831,18 +586,19 @@ district_pki_flusion_mining = {
 		pop_environment_tolerance = -0.025
 	}
 
+	inline_script = {
+		script = jobs/miners_add
+		AMOUNT = 6
+	}
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					is_gestalt = no
-				}
+				is_gestalt = no
 			}
 		}
 		modifier = {
-			job_miner_add = 6
 			job_crystal_miner_add = 1
 			job_gas_extractor_add = 1
 		}
@@ -856,33 +612,9 @@ district_pki_flusion_mining = {
 			}
 		}
 		modifier = {
-			job_mining_drone_add = 6
 			job_crystal_mining_drone_add = 1
 			job_gas_extraction_drone_add = 1
 		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					is_gestalt = no
-				}
-			}
-		}
-		text = job_miner_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		text = job_mining_drone_effect_desc
 	}
 
 	triggered_desc = {
@@ -958,18 +690,19 @@ district_pki_flusion_farming = {
 		pop_environment_tolerance = 0.075
 	}
 
+	inline_script = {
+		script = jobs/farmers_add
+		FARMER_AMOUNT = 6
+	}
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					is_gestalt = no
-				}
+				is_gestalt = no
 			}
 		}
 		modifier = {
-			job_farmer_add = 6
 			job_culture_worker_add = 2
 		}
 	}
@@ -983,7 +716,6 @@ district_pki_flusion_farming = {
 			}
 		}
 		modifier = {
-			job_agri_drone_add = 6
 			job_synapse_drone_add = 2
 		}
 	}
@@ -996,8 +728,7 @@ district_pki_flusion_farming = {
 			}
 		}
 		modifier = {
-			job_agri_drone_add = 6
-			job_coordinator_add = 2
+			job_evaluator_add = 2
 		}
 	}
 
@@ -1005,36 +736,21 @@ district_pki_flusion_farming = {
 		trigger = {
 			exists = owner
 			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					is_gestalt = no
-				}
-			}
-		}
-		text = job_farmer_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					is_gestalt = no
-				}
+				is_gestalt = no
 			}
 		}
 		text = job_culture_worker_effect_desc
 	}
-	
+
 	triggered_desc = {
 		trigger = {
 			exists = owner
 			owner = {
 				is_gestalt = yes
+				is_hive_empire = yes
 			}
 		}
-		text = job_agri_drone_effect_desc
+		text = job_synapse_drone_effect_desc
 	}
 
 	triggered_desc = {
@@ -1042,9 +758,10 @@ district_pki_flusion_farming = {
 			exists = owner
 			owner = {
 				is_gestalt = yes
+				is_machine_empire = yes
 			}
 		}
-		text = job_synapse_drone_effect_desc
+		text = job_evaluator_effect_desc
 	}
 
 }
@@ -1089,18 +806,19 @@ district_pki_flusion_power = {
 		pop_environment_tolerance = -0.025
 	}
 
+	inline_script = {
+		script = jobs/technicians_add
+		AMOUNT = 7
+	}
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					is_gestalt = no
-				}
+				is_gestalt = no
 			}
 		}
 		modifier = {
-			job_technician_add = 7
 			job_mote_harvester_add = 1
 		}
 	}
@@ -1113,32 +831,8 @@ district_pki_flusion_power = {
 			}
 		}
 		modifier = {
-			job_technician_drone_add = 7
 			job_mote_harvesting_drone_add = 1
 		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					is_gestalt = no
-				}
-			}
-		}
-		text = job_technician_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		text = job_technician_drone_effect_desc
 	}
 
 	triggered_desc = {

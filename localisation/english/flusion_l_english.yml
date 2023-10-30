@@ -51,6 +51,10 @@
     NAME_BIG_KATZEN_EMPIRE:0 "Großkatzenartig Imperium"
     NAME_GALACTIC_KATZEN_EMPIRE:0 "Galaktisches Katzimperium"
     # Traits
+
+    pki_katzen_trait_elite:0 "Großewichtigekatze"
+    pki_katzen_trait_elite_desc:0 "This leader is an extremely important figure within Flusionian society, and their skills are far beyond average. They are given the latest in anti-aging technology and cybernetics in order to keep them alive."
+
     leader_trait_ruler_kaiser_cattail:0 "The Kaiser"
     leader_trait_ruler_kaiser_cattail_desc:0 "Kaiser Kattail is a nigh-immortal entity of high charisma yet pronounced goofyness and megalomania."
     katzen_trait_martial_free:0 "Martial Discipline"
@@ -79,7 +83,7 @@
     flusion_new_initializer_NAME:0 "Jublio System"
     flusion_new_initializer_DESC:0 "The system in which Flusion and its many species is located.\n\n$system_initializer_DESC$"
 
-    NO_REFORMING_DOFUS: "Under the rule of the Katzenartig Imperium."
+    KATZEN_VASSAL: "Ruler replaced by a Katzen §HKatzgouverneur§!.\nCannot reform authority."
 
     # Planets
     pc_pki_flusion_ecu:0 "Flusio-Arcology"
@@ -792,7 +796,7 @@
     preset_katzen_desc: "A Katzprotektorat is a form of puppet government set up by the Katzenartig Imperium. They are effectively regional governors of the Imperium, and enjoy some limited autonomy."
     preset_katzen_flavor_desc: "A Katzprotektorat is effectively semi-autonomous province of the Katzen empire. Its purpose is to stabilize newly-conquered lands, enact Katzenification onto populations and pave the way for future annexation and integration into the Katzen heartland."
 
-    auth_pki_katzprotektorat: "Katzprotektorat"
+    auth_pki_katzprotektorat: "Katzen Subject"
     auth_pki_katzprotektorat_desc: "REPLACE_PIECAT"
 
     councilor_ruler_katzprotektorat: "Katzgouverneur"
@@ -853,3 +857,14 @@
 
     mod_country_power_projection_unity_produces_add:1 "Max £unity£ $unity$ from $country_power_projection$"
     mod_country_power_projection_unity_produces_mult:1 "£unity£ $unity$ from $country_power_projection$"
+
+    RT_PKI_KATZGOUVERNEUR:0 "Katzgouverneur"
+    RT_PKI_KATZGOUVERNEUR_FEMALE:0 "$RT_PKI_KATZGOUVERNEUR$"
+
+    gov_pki_katprotektorat: "Katzen Military Occupation"
+    gov_pki_katprotektorat_desc: "REPLACE_PIECAT"
+
+    NAME_katzen_warforge:0 "Katzen Occupying Force"
+
+    PKI_KAISER_CATCH_PHRASE: "ITS KAISERING TIME"
+    PKI_KAISER_DESC: "Kaiser Kattail is cool"

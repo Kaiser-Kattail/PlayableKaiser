@@ -4,7 +4,7 @@ councilor_ruler_katzprotektorat = {
     is_leader_possible = { always = yes }
     modifier = {
         shipclass_military_build_speed_mult = 0.10
-        monthly_loyalty = 0.25
+        monthly_loyalty = 0.10
     }
     icon = "GFX_icon_councilor_ruler"
 }

@@ -216,7 +216,7 @@ leader_trait_neumeyer = {
 	}
 	modifier = {
 		planet_enforcers_unity_produces_add = 3
-		job_soldier_stability_add = 5
+		job_soldier_stability_add = 1
 		planet_stability_add = 10
 		pop_happiness = -0.1
 		defense_armies_add = 6
@@ -227,4 +227,22 @@ leader_trait_neumeyer = {
 	leader_class = { governor }
 	selectable_weight = 0
 	destiny_background_icon = "GFX_leader_background_destiny_1"
+}
+
+pki_katzen_trait_elite = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_from_the_ranks"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = none
+	}
+	immortal_leaders = yes
+	self_modifier = {
+		species_leader_exp_gain = -0.15
+	}
+	leader_class = all
+	initial = no
+	randomized = no
 }
