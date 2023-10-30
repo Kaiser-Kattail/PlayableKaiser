@@ -43,16 +43,16 @@
     laurn_con_1_tooltip:0 "§YLaurandar§!\n\n§HCurrent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n§HLush Laurnaise Shores§!\n£mod_planet_amenities_add£ §G+10§! Amenities"
     laurn_con_2_tooltip:0 "§BLaurendaar§!\n\n§HCurrent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§HLush Laurnaise Shores§!\n£mod_planet_amenities_add£ §G+10§! Amenities"
 
-    ezicania_con_0_tooltip:0 "§WZuspri Intermarium§!\n\n§HCurrent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§HZuspri Pastures§!\n£mod_district_farming_max£ §G+3§! Max Agriculture Districts\n\n§HMagnetic Puffy Point§!\n£mod_district_mining_max£ §G+1§! Max Mining Districts"
-    ezicania_con_1_tooltip:0 "§WZuspri Intermarium§!\n\n§HCurrent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§HZuspri Pastures§!\n£mod_district_farming_max£ §G+3§! Max Agriculture Districts\n\n§HMagnetic Puffy Point§!\n£mod_district_mining_max£ §G+1§! Max Mining Districts"
-    ezicania_con_2_tooltip:0 "§BZuspri§!\n\n§HCurrent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§HZuspri Pastures§!\n£mod_district_farming_max£ §G+3§! Max Agriculture Districts\n\n§HMagnetic Puffy Point§!\n£mod_district_mining_max£ §G+1§! Max Mining Districts"
+    ezicania_con_0_tooltip:0 "§WZuspri Intermarium§!\n\n§HCurrent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§HEzic Pastures§!\n£mod_district_farming_max£ §G+3§! Max Agriculture Districts\n\n§HMagnetic Puffy Point§!\n£mod_district_mining_max£ §G+1§! Max Mining Districts"
+    ezicania_con_1_tooltip:0 "§WZuspri Intermarium§!\n\n§HCurrent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 1 Pops\n\n§YFEATURES:§!\n\n§HEzic Pastures§!\n£mod_district_farming_max£ §G+3§! Max Agriculture Districts\n\n§HMagnetic Puffy Point§!\n£mod_district_mining_max£ §G+1§! Max Mining Districts"
+    ezicania_con_2_tooltip:0 "§BZuspri§!\n\n§HCurrent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§HEzic Pastures§!\n£mod_district_farming_max£ §G+3§! Max Agriculture Districts\n\n§HMagnetic Puffy Point§!\n£mod_district_mining_max£ §G+1§! Max Mining Districts"
 
     kronk_con_0_tooltip:0 "§PKronk§!\n\n§HCurrent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 3 Pops\n\n§YFEATURES:§!\n\n§HGrand Kronk Quarry§!\n£mod_district_mining_max£ §G+5§! Max Mining Districts"
     kronk_con_1_tooltip:0 "§PKronk§!\n\n§HCurrent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 3 Pops\n\n§YFEATURES:§!\n\n§HGrand Kronk Quarry§!\n£mod_district_mining_max£ §G+5§! Max Mining Districts"
     kronk_con_2_tooltip:0 "§BKrönkenstaat§!\n\n§HCurrent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n§HGrand Kronk Quarry§!\n£mod_district_mining_max£ §G+5§! Max Mining Districts"
 
-    symbies_con_0_tooltip:0 "§RPuffiland Republic§!\n\n§HCurrent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n£blocker£ §HRapturian War Battlefields§!\n£energy£ §G+20§! Energy Credits\n£volatile_motes£ §G+3§! Volitile Motes"
-    symbies_con_1_tooltip:0 "§RPuffiland Republic§!\n\n§HCurrent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n£blocker£ §HRapturian War Battlefields§!\n£energy£ §G+20§! Energy Credits\n£volatile_motes£ §G+3§! Volitile Motes"
+    symbies_con_0_tooltip:0 "§RPuffyland Republic§!\n\n§HCurrent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n£blocker£ §HRapturian War Battlefields§!\n£energy£ §G+20§! Energy Credits\n£volatile_motes£ §G+3§! Volitile Motes"
+    symbies_con_1_tooltip:0 "§RPuffyland Republic§!\n\n§HCurrent Katzen Grasp: §!§HGrowing§!\n\n§YPOPULATION:§! £pop£ 2 Pops\n\n§YFEATURES:§!\n\n£blocker£ §HRapturian War Battlefields§!\n£energy£ §G+20§! Energy Credits\n£volatile_motes£ §G+3§! Volitile Motes"
     symbies_con_2_tooltip:0 "§BOst-Geschwollen§!\n\n§HCurrent Katzen Grasp: §!§GStrong§!\n\n§YFEATURES:§!\n\n£blocker£ §HRapturian War Battlefields§!\n£energy£ §G+20§! Energy Credits\n£volatile_motes£ §G+3§! Volitile Motes"
 
     yinja_con_0_tooltip:0 "§GYinjite Thalassocracy§!\n\n§HCurrent Katzen Grasp: §!§RNone§!\n\n§YPOPULATION:§! £pop£ 3 Pops\n\n§YFEATURES:§!\n\n§HYinjite Underwater Mines§!\n£mod_district_mining_max£ §G+2§! Max Mining Districts"

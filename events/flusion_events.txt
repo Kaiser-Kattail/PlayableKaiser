@@ -405,7 +405,7 @@ country_event = {
 		ruler = {
 			change_species = event_target:kaiser_portrait_hd
 			change_leader_portrait = event_target:kaiser_portrait_hd
-			set_name = "NAME_Kattail"
+			set_name = "Kattail"
 			set_skill = 4
 			change_leader_class = admiral
 			set_gender = male
@@ -433,7 +433,7 @@ country_event = {
 				}
 			} 
 			set_leader_flag = kill_yourself_now
-			kill_leader = { show_notification = no fire = no }
+			kill_leader = { flag = kill_yourself_now show_notification = no }
 		}
 
 		random_owned_leader = {
@@ -443,8 +443,8 @@ country_event = {
 					has_leader_flag = flusion_modified
 				}
 			}
-			set_gender = male
-			set_name = "NAME_Pawlbert"
+			set_is_female = no
+			set_name = "Pawlbert"
 			set_leader_flag = flusion_modified
 			add_trait = katzen_trait_elite
 		}
@@ -488,7 +488,7 @@ country_event = {
 			immortal = yes
 			traits = {
 				trait = katzen_trait_elite
-				trait = katzen_trait_nukelad
+				trait = katzen_trait_nukelad_general
 			}
 		}	
 		last_created_leader = {
@@ -512,7 +512,7 @@ country_event = {
 			}
 		}
 		last_created_leader = {
-			change_leader_portrait = lorisreal
+			change_leader_portrait = loris
 			set_leader_flag = loris
 			save_global_event_target_as = loris
 		}
@@ -656,7 +656,7 @@ country_event = {
 	#Symbies
 	create_country = {
 		name = "NAME_Symbies"
-		adjective = "NAME_Symbiess"
+		adjective = "NAME_Symbie"
 		ethos = {
 			ethic = ethic_fanatic_egalitarian
 			ethic = ethic_xenophile
@@ -772,7 +772,7 @@ country_event = {
 	#Mercuria
 		create_country = {
 			name = "NAME_Mercurians"
-			adjective = "NAME_Mercurian"
+			adjective = "NAME_Mercuria"
 			ethos = {
 				ethic = ethic_fanatic_spiritualist
 				ethic = ethic_militarist
@@ -830,7 +830,7 @@ country_event = {
 			create_leader = {
 				class = governor
 				species = event_target:ezic
-				name = "Tyukl Kaau"
+				name = "Hornsfelt"
 				skill = 5
 				set_age = 46
 				gender = male
@@ -1243,12 +1243,12 @@ country_event = {
 			}
 			delete_ship = this
 		}
-
 	 }
-		set_country_flag = flusion_setup_complete
+		
 	#Create Jublio
 		}
-
+		set_country_flag = flusion_setup_complete
+		
 	}
 
 event = {

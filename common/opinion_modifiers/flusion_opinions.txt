@@ -5,25 +5,13 @@
 opinion_katzen_militarism = {
 	opinion = {
 		modifier = {
-			add = 100
-			has_ethic = ethic_fanatic_militarist
-			#FROM = { has_ethic = "ethic_frantic_fanatic_militarist" }
-		}
-		modifier = {
-			add = 50
-			has_ethic = ethic_militarist
-		}
-		modifier = {
 			add = -25
-			#FROM = { has_ethic = "ethic_frantic_fanatic_militarist" }
-		}
+			has_ethic = ethic_fanatic_militarist
+			FROM = { has_ethic = "ethic_frantic_fanatic_militarist" }
+		}	
 		modifier = {
 			add = -50
-			has_ethic = ethic_pacifist
-		}
-		modifier = {
-			add = -100
-			has_ethic = ethic_fanatic_pacifist
-		}
+			FROM = { has_ethic = "ethic_frantic_fanatic_militarist" }
+		}		
 	}
 }

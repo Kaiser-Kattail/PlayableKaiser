@@ -90,7 +90,7 @@
  KATPLATFORM_FUSION_REACTOR:0 "Katzenfusionsreaktor"
  KATPLATFORM_COLD_FUSION_REACTOR:0 "Cold Katzenfusionsreaktor"
  KATPLATFORM_ANTIMATTER_REACTOR:0 "Katzen Antimatter Reactor"
- KATPLATFORM_ZERO_POINT_REACTOR:0 "Katzen Zero Point Generator"
+ KATPLATFORM_ZERO_POIMT_REACTOR:0 "Katzen Zero Point Generator"
  KATPLATFORM_DARK_MATTER_REACTOR:0 "Katzen Dark Matter Reactor"
 
 	KATDESTROYER_FUSION_REACTOR: "Katzenfusionsreaktor"

@@ -293,7 +293,7 @@ country_event = {
 	}
 
 	immediate = {
-		#check_ezics_pops = yes
+		check_ezics_pops = yes
 		update_total_flusion_con_value = yes
 		set_country_flag = conquest_map_active
 	}

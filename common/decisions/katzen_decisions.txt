@@ -118,7 +118,7 @@ decision_siegfried_world = {
 				every_neighbor_system = { set_star_flag = siegfried_anti_jump_star }
 			}
 			planet_event = {
-				id = pki_misc.12
+				id = misc.12
 			}
 		}
 		change_pc = {
