@@ -145,7 +145,7 @@ country_event = {
 		give_technology = {
 			tech = giga_tech_war_moon_specialization
 		}
-		#create_ship_design = { design = "Kaiser Attack Moon" }
+		create_ship_design = { design = "Kaiser Attack Moon" }
 		add_ship_design = last_created_design
 		
 	}

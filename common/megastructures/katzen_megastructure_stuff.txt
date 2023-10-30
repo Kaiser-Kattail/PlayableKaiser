@@ -140,7 +140,7 @@ playable_kaiser_ehve_phase1 = {
 	}
 
 	country_modifier = {
-		fleet_mia_time_mult = -0.075
+		country_mia_time_mult = -0.075
 	}
 
 	on_build_complete = {
@@ -197,7 +197,7 @@ playable_kaiser_ehve_dummy = {
 		playable_kaiser_ehve_active
 	}
 	country_modifier = {
-		fleet_mia_time_mult = -0.15
+		country_mia_time_mult = -0.15
 	}
 	on_build_complete = {
 		spawn_megastructure = {
@@ -244,7 +244,7 @@ playable_kaiser_ehve_cooldown = {
 	}
 
 	country_modifier = {
-		fleet_mia_time_mult = -0.15
+		country_mia_time_mult = -0.15
 	}
 }
 
@@ -264,7 +264,7 @@ playable_kaiser_ehve_cooldown_dummy = {
 		playable_kaiser_ehve_cooldown
 	}
 	country_modifier = {
-		fleet_mia_time_mult = -0.15
+		country_mia_time_mult = -0.15
 	}
 	on_build_complete = {
 		spawn_megastructure = {
@@ -303,7 +303,7 @@ playable_kaiser_ehve_active = {
 	}
 
 	country_modifier = {
-		fleet_mia_time_mult = -0.15
+		country_mia_time_mult = -0.15
 	}
 
 	bypass_type = playable_kaiser_wormhole
