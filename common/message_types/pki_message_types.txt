@@ -1,0 +1,21 @@
+message_type = {
+    key = "SUBJECT_LEVEL_UP_specialist_katzprotektorat"
+    icon = "GFX_message_katzprotektorat_level_up"
+    icon_frame = 1
+
+    sound = "discovery"
+    ping = "mixed_notification_green"
+
+    category = diplomacy
+}
+
+message_type = {
+    key = "SUBJECT_LEVEL_UP_specialist_katzprotektorat_gestalt"
+    icon = "GFX_message_katzprotektorat_level_up"
+    icon_frame = 1
+
+    sound = "discovery"
+    ping = "mixed_notification_green"
+
+    category = diplomacy
+}

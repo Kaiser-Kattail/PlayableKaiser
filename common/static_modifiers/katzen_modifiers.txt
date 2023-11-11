@@ -44,7 +44,7 @@ no_relocation = {
 	icon = gfx/interface/icons/planet_modifiers/pm_default.dds
 }
 
-katzen_submarine_subspace_blockade = {
+pki_katzen_submarine_subspace_blockade = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_surreal_visions.dds"
 	icon_frame = 3
 
@@ -77,4 +77,15 @@ pki_flusion_rich_modifier = {
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_flusion_rich_modifier.dds"
 	icon_frame = 1
+}
+
+pki_warforge_in_orbit = {
+	icon = gfx/interface/icons/planet_modifiers/pm_satellite_in_orbit.dds
+	planet_jobs_alloys_produces_mult = 0.025
+	custom_tooltip = pki_warforge_shipyard_add
+}
+
+pki_yeah = {
+	weapon_type_kinetic_weapon_damage_mult = 0.30
+	weapon_type_energy_weapon_damage_mult = -0.30
 }

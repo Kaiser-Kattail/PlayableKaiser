@@ -1,4 +1,4 @@
-@war_planet_scale = 0.66
+@war_planet_scale = 0.50
 
 entity = {
 	name = "war_planet_phase_01_entity"
@@ -36,7 +36,7 @@ entity = {
 	name = "war_planet_phase_01_construction_entity"
 	pdxmesh = "war_planet_phase_01_mesh"
 	cull_radius = 10000
-	scale = @war_planet_scale
+	scale = 0.25
 
 	meshsettings = {
 		name = "planet"
@@ -57,7 +57,7 @@ entity = {
 	name = "war_planet_phase_02_construction_entity"
 	pdxmesh = "war_planet_phase_02_mesh"
 	cull_radius = 10000
-	scale = @war_planet_scale
+	scale = 0.25
 
 	game_data = {
 		size = 450.0
@@ -69,7 +69,7 @@ entity = {
 	name = "war_planet_phase_03_construction_entity"
 	pdxmesh = "war_planet_phase_03_mesh"
 	cull_radius = 10000
-	scale = @war_planet_scale
+	scale = 0.25
 
 	game_data = {
 		size = 450.0

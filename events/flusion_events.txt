@@ -46,8 +46,11 @@ country_event = {
 		NOT = { has_country_flag = flusion_setup_complete }
 	}
 	immediate = {
+		set_country_flag = starting_event
 		save_global_event_target_as = katzenartig
-
+		owner_species = {
+			save_global_event_target_as = pki_katzen_species
+		}
 		#	#DOCS
 
 		#	begin_event_chain = {
@@ -132,6 +135,7 @@ country_event = {
 			
 		}
 
+		#Here comes funny kaiser
 		create_species = {
 			name = "Imperial Katzen"
 			plural = "Imperial Katzens"
@@ -397,29 +401,46 @@ country_event = {
 			}
 		}
 
-
-		ruler = {
-			change_species = event_target:kaiser_portrait_hd
-			change_leader_portrait = event_target:kaiser_portrait_hd
-			set_name = "Kattail"
-			set_skill = 4
-			change_leader_class = admiral
-			set_gender = male
-			set_immortal = yes
-			
+		create_leader = {
+			name = NAME_Kattail
+			species = event_target:kaiser_portrait_hd
+			class = admiral
+			skill = 4
 			set_age = 189
-			add_trait = leader_trait_ruler_kaiser_cattail
-			add_trait = trait_ruler_charismatic_2
-			add_trait = trait_ruler_military_pioneer
-			add_trait = leader_trait_intimidator
-			add_trait = subclass_admiral_strategist
-			set_leader_flag = kaiser_kattail
-			set_leader_flag = legendary_leader
-			set_leader_flag = immune_to_negative_traits
-			set_leader_flag = leader_death_events_blocked
-			save_global_event_target_as = kaiser_kattail
+			randomize_traits = no
+			traits = {
+				trait = leader_trait_ruler_kaiser_cattail
+				trait = trait_ruler_charismatic_2
+				trait = trait_ruler_military_pioneer
+				trait = leader_trait_intimidator
+				trait = subclass_admiral_strategist
+			}
+			gender = male
+			immortal = yes
+			background_ethic = ethic_fanatic_militarist
+
+			effect = {
+				set_leader_flag = kaiser_kattail
+				set_leader_flag = legendary_leader
+				set_leader_flag = immune_to_negative_traits
+				set_leader_flag = leader_death_events_blocked
+				save_global_event_target_as = kaiser_kattail
+			}
+			custom_description = PKI_KAISER_DESC
+			custom_catch_phrase = PKI_KAISER_CATCH_PHRASE
 		}
 
+		ruler = {
+			save_event_target_as = pki_old_leader
+		}
+
+		assign_leader = last_created_leader
+
+		event_target:pki_old_leader = {
+			kill_leader = {
+				show_notification = no
+			}
+		}
 
 		random_owned_leader = {
 			limit = {
@@ -427,9 +448,9 @@ country_event = {
 				NOT = {
 					has_leader_flag = flusion_modified
 				}
-			} 
+			}
 			set_leader_flag = kill_yourself_now
-			kill_leader = { flag = kill_yourself_now show_notification = no }
+			kill_leader = { show_notification = no }
 		}
 
 		random_owned_leader = {
@@ -439,10 +460,10 @@ country_event = {
 					has_leader_flag = flusion_modified
 				}
 			}
-			set_is_female = no
-			set_name = "Pawlbert"
+			set_gender = male
+			set_name = "NAME_Pawlbert"
 			set_leader_flag = flusion_modified
-			add_trait = katzen_trait_elite
+			add_trait = pki_katzen_trait_elite
 		}
 
 	#	random_owned_leader = {
@@ -456,7 +477,7 @@ country_event = {
 	#		set_name = "Gatorynn"
 	#		set_leader_flag = flusion_modified
 	#		add_trait = leader_trait_stubborn
-	#		add_trait = katzen_trait_elite
+	#		add_trait = pki_katzen_trait_elite
 	#	}
 
 		# random_owned_leader = {
@@ -471,7 +492,7 @@ country_event = {
 		# 	change_leader_portrait = species
 		# 	set_name = "Karrette"
 		# 	set_leader_flag = flusion_modified
-		# 	add_trait = katzen_trait_elite
+		# 	add_trait = pki_katzen_trait_elite
 		# }
 
 	#Create Pawtton
@@ -483,8 +504,8 @@ country_event = {
 			skill = 3
 			immortal = yes
 			traits = {
-				trait = katzen_trait_elite
-				trait = katzen_trait_nukelad_general
+				trait = pki_katzen_trait_elite
+				trait = katzen_trait_nukelad
 			}
 		}	
 		last_created_leader = {
@@ -502,13 +523,13 @@ country_event = {
 			skill = 3
 			immortal = yes
 			traits = {
-				trait = katzen_trait_elite
+				trait = pki_katzen_trait_elite
 				trait = leader_trait_architectural_interest
 				trait = leader_trait_army_veteran
 			}
 		}
 		last_created_leader = {
-			change_leader_portrait = loris
+			change_leader_portrait = lorisvanilla
 			set_leader_flag = loris
 			save_global_event_target_as = loris
 		}
@@ -527,7 +548,7 @@ country_event = {
 			immortal = yes
 			set_age = 57
 			traits = {
-				trait = katzen_trait_elite
+				trait = pki_katzen_trait_elite
 				trait = katzen_trait_nukelad
 				trait = katzen_trait_blitzkrieg
 			}
@@ -538,6 +559,38 @@ country_event = {
 			save_global_event_target_as = douclaw
 		}
 
+		create_country = {
+			name = "NAME_katzen_warforge"
+			type = pki_katzen_ship
+			auto_delete = no
+			use_hostilities_from = root
+			flag={
+				icon={
+					category="domination"
+					file="domination_8.dds"
+				}
+				background={
+					category="backgrounds"
+					file="v.dds"
+				}
+				colors={
+					"blue"
+					"dark_blue"
+					"black"
+					"null"
+				}
+			}
+			effect = {
+				establish_communications_no_message = root
+				set_faction_hostility = {
+					target = root
+					set_hostile = no
+					set_neutral = no
+					set_friendly = yes
+				}
+				save_global_event_target_as = pki_warforge_country
+			}
+		}
 	#Create Flusion Nations
 	#Haranians
 	create_country = {
@@ -568,7 +621,7 @@ country_event = {
 			set_age = 52
 			gender = female
 			traits = {
-				trait = katzen_trait_elite
+				trait = pki_katzen_trait_elite
 			}
 			effect = {
 				set_leader_flag = fantasia
@@ -607,7 +660,7 @@ country_event = {
 			set_age = 36
 			gender = male
 			traits = {
-				trait = katzen_trait_elite
+				trait = pki_katzen_trait_elite
 			}
 			effect = {
 				set_leader_flag = aaron
@@ -620,7 +673,7 @@ country_event = {
 	#Symbies
 	create_country = {
 		name = "NAME_Symbies"
-		adjective = "NAME_Symbie"
+		adjective = "NAME_Symbiess"
 		ethos = {
 			ethic = ethic_fanatic_egalitarian
 			ethic = ethic_xenophile
@@ -645,7 +698,7 @@ country_event = {
 			set_age = 43
 			gender = female
 			traits = {
-				trait = katzen_trait_elite
+				trait = pki_katzen_trait_elite
 			}
 			effect = {
 				set_leader_flag = james
@@ -684,7 +737,7 @@ country_event = {
 				set_age = 46
 				gender = female
 				traits = {
-					trait = katzen_trait_elite
+					trait = pki_katzen_trait_elite
 				}
 				effect = {
 					set_leader_flag = tezu
@@ -723,7 +776,7 @@ country_event = {
 				set_age = 46
 				gender = female
 				traits = {
-					trait = katzen_trait_elite
+					trait = pki_katzen_trait_elite
 				}
 				effect = {
 					set_leader_flag = kittita
@@ -736,7 +789,7 @@ country_event = {
 	#Mercuria
 		create_country = {
 			name = "NAME_Mercurians"
-			adjective = "NAME_Mercuria"
+			adjective = "NAME_Mercurian"
 			ethos = {
 				ethic = ethic_fanatic_spiritualist
 				ethic = ethic_militarist
@@ -761,7 +814,7 @@ country_event = {
 				set_age = 46
 				gender = male
 				traits = {
-					trait = katzen_trait_elite
+					trait = pki_katzen_trait_elite
 				}
 				effect = {
 					set_leader_flag = cattail
@@ -799,7 +852,7 @@ country_event = {
 				set_age = 46
 				gender = male
 				traits = {
-					trait = katzen_trait_elite
+					trait = pki_katzen_trait_elite
 				}
 				effect = {
 					set_leader_flag = hornsfelt
@@ -837,7 +890,7 @@ country_event = {
 			set_age = 28
 			gender = male
 			traits = {
-				trait = katzen_trait_elite
+				trait = pki_katzen_trait_elite
 			}
 			effect = {
 				set_leader_flag = xavier
@@ -875,7 +928,7 @@ country_event = {
 			set_age = 34
 			gender = female
 			traits = {
-				trait = katzen_trait_elite
+				trait = pki_katzen_trait_elite
 			}
 			effect = {
 				set_leader_flag = dimora
@@ -914,7 +967,7 @@ country_event = {
 			set_age = 87
 			gender = male
 			traits = {
-				trait = katzen_trait_elite
+				trait = pki_katzen_trait_elite
 			}
 			effect = {
 				set_leader_flag = sunchen
@@ -967,7 +1020,7 @@ country_event = {
 				set_age = 41
 				gender = male
 				traits = {
-					trait = katzen_trait_elite
+					trait = pki_katzen_trait_elite
 				}
 				effect = {
 					set_leader_flag = dofus
@@ -1020,7 +1073,7 @@ country_event = {
 				set_age = 41
 				gender = male
 				traits = {
-					trait = katzen_trait_elite
+					trait = pki_katzen_trait_elite
 				}
 				effect = {
 					set_leader_flag = cookie
@@ -1074,14 +1127,14 @@ country_event = {
 				set_age = 41
 				gender = male
 				traits = {
-					trait = katzen_trait_elite
+					trait = pki_katzen_trait_elite
 				}
 				effect = {
 					set_leader_flag = kronk
 					save_global_event_target_as = kronk_lead_flunat
 				}
 			}
-			set_leader = event_target:kronk_lead_flunat
+			set_leader = last_created_leader
 			establish_communications_no_message = root
 		}
 
@@ -1091,25 +1144,6 @@ country_event = {
 			set_planet_size = 16
 			clear_blockers = yes
 			clear_deposits = yes
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
 
 			# while = {
 			# 	count = 5
@@ -1177,6 +1211,40 @@ country_event = {
 			# add_deposit = d_grand_kronk_quarry
 			add_deposit = d_flunat
 			planet_event = { id = flusion.3 days = 1 }
+
+			while = {
+				count = 9
+				random_pop = {
+					limit = {
+						is_pop_category = specialist
+					}
+					kill_pop = yes
+				}
+			}
+
+			if = {
+				limit = {
+					NOT = {
+						root = {
+							OR = {
+								has_valid_civic = civic_eager_explorers
+								has_valid_civic = civic_privatized_exploration
+								has_valid_civic = civic_hive_stargazers
+								has_valid_civic = civic_machine_exploration_protocol
+							}
+						}
+					}
+				}
+				while = {
+					count = 10
+					random_pop = {
+						limit = {
+							is_pop_category = specialist
+						}
+						kill_pop = yes
+					}
+				}
+			}
 		}
 	#Remove mining station
 	 event_target:katzenartig = {
@@ -1194,12 +1262,12 @@ country_event = {
 			}
 			delete_ship = this
 		}
+
 	 }
-		
+		set_country_flag = flusion_setup_complete
 	#Create Jublio
 		}
-		set_country_flag = flusion_setup_complete
-		
+
 	}
 
 event = {
@@ -1296,7 +1364,7 @@ country_event = {
 				has_leader_flag = soulbot
 			}
 			#Must be elite
-			has_trait = katzen_trait_elite
+			has_trait = pki_katzen_trait_elite
 			#Must own Solakia
 			has_global_flag = solakia_conquered 
 		}
@@ -1418,7 +1486,7 @@ country_event = {
 				any_owned_leader = {
 					leader_class = governor
 					NOT = {
-						has_trait = katzen_trait_elite
+						has_trait = pki_katzen_trait_elite
 					}
 				}
 			}
@@ -1438,7 +1506,7 @@ country_event = {
 				any_owned_leader = {
 					leader_class = scientist
 					NOT = {
-						has_trait = katzen_trait_elite
+						has_trait = pki_katzen_trait_elite
 					}
 				}
 			}
@@ -1458,7 +1526,7 @@ country_event = {
 				any_owned_leader = {
 					leader_class = admiral
 					NOT = {
-						has_trait = katzen_trait_elite
+						has_trait = pki_katzen_trait_elite
 					}
 				}
 			}
@@ -1478,7 +1546,7 @@ country_event = {
 				any_owned_leader = {
 					leader_class = general
 					NOT = {
-						has_trait = katzen_trait_elite
+						has_trait = pki_katzen_trait_elite
 					}
 				}
 			}
@@ -1507,7 +1575,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				NOR = {
-					has_trait = katzen_trait_elite
+					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
 				leader_class = governor
@@ -1517,7 +1585,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				NOR = {
-					has_trait = katzen_trait_elite
+					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
 				leader_class = governor
@@ -1528,7 +1596,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				NOR = {
-					has_trait = katzen_trait_elite
+					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
 				leader_class = governor
@@ -1540,7 +1608,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				NOR = {
-					has_trait = katzen_trait_elite
+					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
 				leader_class = governor
@@ -1553,7 +1621,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				NOR = {
-					has_trait = katzen_trait_elite
+					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
 				leader_class = governor
@@ -1568,7 +1636,7 @@ country_event = {
 	option = {
 		name = "katzen.8.a"
 		event_target:leader_1 = {
-			katzen_elite = yes
+			add_trait = pki_katzen_trait_elite
 		}
 		allow = {
 			resource_stockpile_compare = {
@@ -1584,7 +1652,7 @@ country_event = {
 	option = {
 		name = "katzen.8.b"
 		event_target:leader_2 = {
-			katzen_elite = yes
+			add_trait = pki_katzen_trait_elite
 		}
 		allow = {
 			resource_stockpile_compare = {
@@ -1603,7 +1671,7 @@ country_event = {
 	option = {
 		name = "katzen.8.c"
 		event_target:leader_3 = {
-			katzen_elite = yes
+			add_trait = pki_katzen_trait_elite
 		}
 		trigger = {
 			exists = event_target:leader_3
@@ -1623,7 +1691,7 @@ country_event = {
 	option = {
 		name = "katzen.8.d"
 		event_target:leader_4 = {
-			katzen_elite = yes
+			add_trait = pki_katzen_trait_elite
 		}
 		trigger = {
 			exists = event_target:leader_4
@@ -1642,7 +1710,7 @@ country_event = {
 	option = {
 		name = "katzen.8.e"
 		event_target:leader_5 = {
-			katzen_elite = yes
+			add_trait = pki_katzen_trait_elite
 		}
 		trigger = {
 			exists = event_target:leader_5
@@ -1658,7 +1726,7 @@ country_event = {
 			mult = value:leader_katzenification_cost
 		}
 	}
-	
+
 
 	option = { # Back
 		default_hide_option = yes
@@ -1667,7 +1735,7 @@ country_event = {
 			country_event = {
 				id = katzen.7
 			}
-		} 
+		}
 	}
 }
 
@@ -1683,7 +1751,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				NOR = {
-					has_trait = katzen_trait_elite
+					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
 				leader_class = scientist
@@ -1693,7 +1761,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				NOR = {
-					has_trait = katzen_trait_elite
+					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
 				leader_class = scientist
@@ -1704,7 +1772,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				NOR = {
-					has_trait = katzen_trait_elite
+					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
 				leader_class = scientist
@@ -1716,7 +1784,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				NOR = {
-					has_trait = katzen_trait_elite
+					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
 				leader_class = scientist
@@ -1729,7 +1797,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				NOR = {
-					has_trait = katzen_trait_elite
+					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
 				leader_class = scientist
@@ -1744,7 +1812,7 @@ country_event = {
 	option = {
 		name = "katzen.8.a"
 		event_target:leader_1 = {
-			katzen_elite = yes
+			add_trait = pki_katzen_trait_elite
 		}
 		allow = {
 			resource_stockpile_compare = {
@@ -1760,7 +1828,7 @@ country_event = {
 	option = {
 		name = "katzen.8.b"
 		event_target:leader_2 = {
-			katzen_elite = yes
+			add_trait = pki_katzen_trait_elite
 		}
 		allow = {
 			resource_stockpile_compare = {
@@ -1779,7 +1847,7 @@ country_event = {
 	option = {
 		name = "katzen.8.c"
 		event_target:leader_3 = {
-			katzen_elite = yes
+			add_trait = pki_katzen_trait_elite
 		}
 		trigger = {
 			exists = event_target:leader_3
@@ -1799,7 +1867,7 @@ country_event = {
 	option = {
 		name = "katzen.8.d"
 		event_target:leader_4 = {
-			katzen_elite = yes
+			add_trait = pki_katzen_trait_elite
 		}
 		trigger = {
 			exists = event_target:leader_4
@@ -1818,7 +1886,7 @@ country_event = {
 	option = {
 		name = "katzen.8.e"
 		event_target:leader_5 = {
-			katzen_elite = yes
+			add_trait = pki_katzen_trait_elite
 		}
 		trigger = {
 			exists = event_target:leader_5
@@ -1834,7 +1902,7 @@ country_event = {
 			mult = value:leader_katzenification_cost
 		}
 	}
-	
+
 
 	option = { # Back
 		default_hide_option = yes
@@ -1843,7 +1911,7 @@ country_event = {
 			country_event = {
 				id = katzen.7
 			}
-		} 
+		}
 	}
 }
 
@@ -1859,7 +1927,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				NOR = {
-					has_trait = katzen_trait_elite
+					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
 				leader_class = admiral
@@ -1869,7 +1937,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				NOR = {
-					has_trait = katzen_trait_elite
+					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
 				leader_class = admiral
@@ -1880,7 +1948,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				NOR = {
-					has_trait = katzen_trait_elite
+					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
 				leader_class = admiral
@@ -1892,7 +1960,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				NOR = {
-					has_trait = katzen_trait_elite
+					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
 				leader_class = admiral
@@ -1905,7 +1973,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				NOR = {
-					has_trait = katzen_trait_elite
+					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
 				leader_class = admiral
@@ -1920,7 +1988,7 @@ country_event = {
 	option = {
 		name = "katzen.8.a"
 		event_target:leader_1 = {
-			katzen_elite = yes
+			add_trait = pki_katzen_trait_elite
 		}
 		allow = {
 			resource_stockpile_compare = {
@@ -1936,7 +2004,7 @@ country_event = {
 	option = {
 		name = "katzen.8.b"
 		event_target:leader_2 = {
-			katzen_elite = yes
+			add_trait = pki_katzen_trait_elite
 		}
 		allow = {
 			resource_stockpile_compare = {
@@ -1955,7 +2023,7 @@ country_event = {
 	option = {
 		name = "katzen.8.c"
 		event_target:leader_3 = {
-			katzen_elite = yes
+			add_trait = pki_katzen_trait_elite
 		}
 		trigger = {
 			exists = event_target:leader_3
@@ -1975,7 +2043,7 @@ country_event = {
 	option = {
 		name = "katzen.8.d"
 		event_target:leader_4 = {
-			katzen_elite = yes
+			add_trait = pki_katzen_trait_elite
 		}
 		trigger = {
 			exists = event_target:leader_4
@@ -1994,7 +2062,7 @@ country_event = {
 	option = {
 		name = "katzen.8.e"
 		event_target:leader_5 = {
-			katzen_elite = yes
+			add_trait = pki_katzen_trait_elite
 		}
 		trigger = {
 			exists = event_target:leader_5
@@ -2010,7 +2078,7 @@ country_event = {
 			mult = value:leader_katzenification_cost
 		}
 	}
-	
+
 
 	option = { # Back
 		default_hide_option = yes
@@ -2019,7 +2087,7 @@ country_event = {
 			country_event = {
 				id = katzen.7
 			}
-		} 
+		}
 	}
 }
 
@@ -2035,7 +2103,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				NOR = {
-					has_trait = katzen_trait_elite
+					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
 				leader_class = general
@@ -2045,7 +2113,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				NOR = {
-					has_trait = katzen_trait_elite
+					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
 				leader_class = general
@@ -2056,7 +2124,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				NOR = {
-					has_trait = katzen_trait_elite
+					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
 				leader_class = general
@@ -2068,7 +2136,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				NOR = {
-					has_trait = katzen_trait_elite
+					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
 				leader_class = general
@@ -2081,7 +2149,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				NOR = {
-					has_trait = katzen_trait_elite
+					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
 				leader_class = general
@@ -2096,7 +2164,7 @@ country_event = {
 	option = {
 		name = "katzen.8.a"
 		event_target:leader_1 = {
-			katzen_elite = yes
+			add_trait = pki_katzen_trait_elite
 		}
 		allow = {
 			resource_stockpile_compare = {
@@ -2112,7 +2180,7 @@ country_event = {
 	option = {
 		name = "katzen.8.b"
 		event_target:leader_2 = {
-			katzen_elite = yes
+			add_trait = pki_katzen_trait_elite
 		}
 		allow = {
 			resource_stockpile_compare = {
@@ -2131,7 +2199,7 @@ country_event = {
 	option = {
 		name = "katzen.8.c"
 		event_target:leader_3 = {
-			katzen_elite = yes
+			add_trait = pki_katzen_trait_elite
 		}
 		trigger = {
 			exists = event_target:leader_3
@@ -2151,7 +2219,7 @@ country_event = {
 	option = {
 		name = "katzen.8.d"
 		event_target:leader_4 = {
-			katzen_elite = yes
+			add_trait = pki_katzen_trait_elite
 		}
 		trigger = {
 			exists = event_target:leader_4
@@ -2170,7 +2238,7 @@ country_event = {
 	option = {
 		name = "katzen.8.e"
 		event_target:leader_5 = {
-			katzen_elite = yes
+			add_trait = pki_katzen_trait_elite
 		}
 		trigger = {
 			exists = event_target:leader_5

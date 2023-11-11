@@ -221,8 +221,6 @@ ship_section_template = {
 		category = ships
 		cost = {
 			alloys = 120
-			exotic_gases = @cloak_s_t3_cost_strategic_resources
-			rare_crystals = @cloak_s_t3_cost_strategic_resources
 		}
 	}
 }

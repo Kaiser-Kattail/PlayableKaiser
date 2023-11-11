@@ -1,0 +1,15 @@
+gov_pki_katprotektorat = {
+    ruler_title = RT_PKI_KATZGOUVERNEUR
+    ruler_title_female = RT_PKI_KATZGOUVERNEUR_FEMALE
+
+    should_force_rename = yes
+
+    possible = {
+        has_authority = auth_pki_katzprotektorat
+        pki_is_katzprotektorat = yes
+    }
+
+    weight = {
+        base = 99999
+    }
+}

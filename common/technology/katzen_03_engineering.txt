@@ -128,3 +128,250 @@ tech_kaiser_planet_sections = {
 		weight = 0
 	}
 }
+
+tech_pki_ehve = {
+	area = engineering
+	cost = @tier3cost1
+	weight = @tier3weight1
+	tier = 3
+	is_dangerous = yes
+	category = { voidcraft }
+
+	prerequisites = {
+		"tech_wormhole_stabilization"
+	}
+
+	potential = {
+		has_country_flag = has_arcane_generator
+		has_origin = origin_katzen
+		has_overlord_dlc = yes
+	}
+
+	modifier = {
+		country_influence_produces_mult = 0.1
+	}
+
+	weight_modifier = {
+		modifier = { factor = 1	years_passed < 5 }
+		modifier = { factor = 2	years_passed < 10 }
+		modifier = { factor = 3		years_passed > 20 }
+		modifier = { factor = 4		years_passed > 30 }
+		modifier = { factor = 5		years_passed > 40 }
+		modifier = { factor = 1.25	has_trait_in_council = { TRAIT = leader_trait_expertise_voidcraft } }
+		modifier = { factor = 999 has_technology = tech_ehof_phase_01 }
+	}
+
+	prereqfor_desc = {
+		custom = {
+			title = "allow_ehve"
+			desc = "ehve_megastructure_DESC"
+		}
+	}
+}
+
+tech_pki_warforge = {
+	area = engineering
+	cost = @tier2cost2
+	weight = @tier2cost2
+	tier = 2
+	category = { voidcraft }
+
+	potential = {
+		pki_is_katzprotektorat = yes
+	}
+
+	prereqfor_desc = {
+		ship = {
+			title = "PKI_TECH_UNLOCK_WARFORGE_CONSTRUCTION_TITLE"
+			desc = "PKI_TECH_UNLOCK_WARFORGE_CONSTRUCTION_DESC"
+		}
+	}
+
+	ai_weight = {
+		base = 9999
+	}
+}
+
+tech_pki_panzer = {
+	cost = @tier2cost1
+	area = engineering
+	tier = 2
+	category = { voidcraft }
+	prerequisites = { "tech_destroyers" }
+	weight = @tier2weight1
+
+	potential = {
+		OR = {
+			pki_is_katzprotektorat_tier_2 = yes
+			pki_is_katzenartig_imperium = yes
+		}
+	}
+
+	is_rare = yes
+
+	gateway = ship
+
+	prereqfor_desc = {
+		ship = {
+			title = "PKI_TECH_UNLOCK_PANZER_CONSTRUCTION_TITLE"
+			desc = "PKI_TECH_UNLOCK_PANZER_CONSTRUCTION_DESC"
+		}
+	}
+
+	modifier = {
+		ship_experience_gain_mult = 0.05
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOT = { years_passed > 10 }
+		}
+		modifier = {
+			factor = 15
+			has_technology = tech_destroyers
+		}
+		modifier = {
+			factor = 2
+			years_passed > 15
+		}
+		modifier = {
+			factor = 3
+			years_passed > 20
+		}
+		modifier = {
+			factor = 4
+			years_passed > 30
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+	}
+
+	ai_weight = {
+		factor = @ai_ship_types_factor
+	}
+}
+
+tech_pki_bomber = {
+	cost = @tier3cost1
+	area = engineering
+	tier = 3
+	category = { voidcraft }
+	prerequisites = { "tech_cruisers" }
+	weight = @tier3weight1
+
+	is_rare = yes
+
+	gateway = ship
+
+	potential = {
+		OR = {
+			pki_is_katzprotektorat_tier_3 = yes
+			pki_is_katzenartig_imperium = yes
+		}
+	}
+
+	prereqfor_desc = {
+		ship = {
+			title = "PKI_TECH_UNLOCK_BOMBER_CONSTRUCTION_TITLE"
+			desc = "PKI_TECH_UNLOCK_BOMBER_CONSTRUCTION_DESC"
+		}
+	}
+
+	modifier = {
+		ship_experience_gain_mult = 0.05
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOT = { years_passed > 20 }
+		}
+		modifier = {
+			factor = 15
+			has_technology = tech_cruisers
+		}
+		modifier = {
+			factor = 2
+			years_passed > 30
+		}
+		modifier = {
+			factor = 3
+			years_passed > 35
+		}
+		modifier = {
+			factor = 4
+			years_passed > 40
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+	}
+
+	ai_weight = {
+		factor = @ai_ship_types_factor
+	}
+}
+
+tech_pki_cruiser = {
+	cost = @tier4cost1
+	area = engineering
+	tier = 4
+	category = { voidcraft }
+	prerequisites = { "tech_battleships" }
+	weight = @tier4weight1
+
+	is_rare = yes
+
+	potential = {
+		OR = {
+			pki_is_katzprotektorat_tier_3 = yes
+			pki_is_katzenartig_imperium = yes
+		}
+	}
+
+	prereqfor_desc = {
+		ship = {
+			title = "PKI_TECH_UNLOCK_CRUISER_CONSTRUCTION_TITLE"
+			desc = "PKI_TECH_UNLOCK_CRUISER_CONSTRUCTION_DESC"
+		}
+	}
+
+	modifier = {
+		ship_experience_gain_mult = 0.05
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOT = { years_passed > 50 }
+		}
+		modifier = {
+			factor = 15
+			has_technology = tech_battleships
+		}
+		modifier = {
+			factor = 2
+			years_passed > 60
+		}
+		modifier = {
+			factor = 3
+			years_passed > 65
+		}
+		modifier = {
+			factor = 4
+			years_passed > 70
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+	}
+
+	ai_weight = {
+		factor = @ai_ship_types_factor
+	}
+}

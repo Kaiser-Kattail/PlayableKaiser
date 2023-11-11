@@ -1,0 +1,23 @@
+pki_alloy_expenditure_decisions = {
+	resource = alloys
+	type = expenditure
+	category = decisions
+	potential = {
+		has_technology = tech_pki_warforge
+		any_owned_planet = {
+			NOT = {
+				has_planet_flag = war_forge
+			}
+		}
+		has_resource = {
+			type = alloys
+			amount > 2000
+		}
+	}
+	weight = {
+		weight = 0.8
+	}
+	desired_max = {
+		base = 4000
+	}
+}

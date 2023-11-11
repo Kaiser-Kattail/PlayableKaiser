@@ -118,7 +118,7 @@ decision_siegfried_world = {
 				every_neighbor_system = { set_star_flag = siegfried_anti_jump_star }
 			}
 			planet_event = {
-				id = misc.12
+				id = pki_misc.12
 			}
 		}
 		change_pc = {
@@ -341,20 +341,11 @@ decision_katzen_food_dam = {
 			fail_text = cannot_be_dry
 			NOR = {
 				is_planet_class = pc_desert
-				is_planet_class = pc_outback
-				is_planet_class = pc_coastal
-				is_planet_class = pc_sandsea
-				is_planet_class = pc_oasis
 				is_planet_class = pc_arid
 				is_planet_class = pc_savannah
-				is_planet_class = pc_steppe
-				is_planet_class = pc_mesa
-				is_planet_class = pc_badlands
-				is_planet_class = pc_hadesert
-				is_planet_class = pc_prairie
-				is_planet_class = pc_veld
-				is_planet_class = pc_semiarid
-				is_planet_class = pc_med
+				is_pd_arid = yes
+				is_pd_desert = yes
+				is_pd_savannah = yes
 			}
 		}
 	}
@@ -491,7 +482,6 @@ decision_katzen_defense_array_1 = {
 				has_fleet_flag = katzen_planet_platform_player_1
 			}
 		}
-		
 	}
 
 	effect = { 
@@ -526,9 +516,15 @@ decision_katzen_war_forge = {
 		}
 	}
 	potential = {
-		from = {
-			has_origin = origin_katzen
-			has_country_flag = unified_flusion
+		OR = {
+			from = {
+				has_origin = origin_katzen
+				has_country_flag = unified_flusion
+			}
+			from = {
+				has_technology = tech_pki_warforge
+				pki_is_katzprotektorat = yes
+			}
 		}
 		NOT = {
 			has_planet_flag = war_forge
@@ -547,11 +543,12 @@ decision_katzen_war_forge = {
 		}
 	}
 	effect = {
+		custom_tooltip = pki_warforge_decision
 		solar_system = {
 			spawn_megastructure = {
 				type = katzen_war_forge_0
 				planet = ROOT
-				owner = space_owner
+				owner = event_target:katzenartig
 			}
 			random_system_megastructure = {
 				limit = {
@@ -562,6 +559,9 @@ decision_katzen_war_forge = {
 			}
 		}
 		set_planet_flag = war_forge
+	}
+	ai_weight = {
+		base = 1000
 	}
 }
 

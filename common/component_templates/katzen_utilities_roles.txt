@@ -81,6 +81,32 @@ utility_component_template = {
 	}
 }
 
+utility_component_template = {
+	key = "SUBMARINE_COMPUTER_DEFAULT"
+	size = small
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	power =@power0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost0
+		}
+	}
+
+	class_restriction = { shipclass_military }
+	size_restriction = { katzen_submarine }
+	component_set = "katzen_combat_computers"
+	ship_behavior = "giga_katzen_submarine"
+	upgrades_to = "SUBMARINE_COMPUTER_BASIC"
+	ai_tags = { explosive explosive_stealth }
+	ai_tag_weight = 0
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
 #####################
 # 'SWARM' COMPUTERS #
 #####################
@@ -390,7 +416,7 @@ utility_component_template = {
 ######################
 
 utility_component_template = {
-	key = "SUBMARINE_COMPUTER"
+	key = SUBMARINE_COMPUTER_BASIC
 	size = small
 	icon = "GFX_ship_part_computer_swarm_basic"
 	icon_frame = 1
@@ -405,13 +431,44 @@ utility_component_template = {
 	class_restriction = { shipclass_military }
 	size_restriction = { katzen_submarine }
 	component_set = "katzen_combat_computers"
-	ship_behavior = "giga_katzen_submarine"
-	prerequisites = { "tech_torpedoes_1" }
+	ship_behavior = "pki_giga_katzen_submarine"
+	prerequisites = { "tech_combat_computers_1" "tech_torpedoes_1" }
+	upgrades_to = "SUBMARINE_COMPUTER_ADVANCED"
 	ai_tags = { explosive explosive_stealth }
 	ai_tag_weight = 0
 
 	modifier = {
 		weapon_type_explosive_weapon_damage_mult = 0.05
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "SUBMARINE_COMPUTER_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_swarm_advanced"
+	icon_frame = 1
+	power = @power1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost1
+		}
+	}
+
+	class_restriction = { shipclass_military }
+	size_restriction = { katzen_submarine }
+	component_set = "katzen_combat_computers"
+	ship_behavior = "pki_giga_katzen_submarine"
+	prerequisites = { "tech_combat_computers_2" "tech_torpedoes_1" }
+	ai_tags = { explosive explosive_stealth }
+	ai_tag_weight = 0
+
+	modifier = {
+		weapon_type_explosive_weapon_damage_mult = 0.10
 	}
 
 	ai_weight = {

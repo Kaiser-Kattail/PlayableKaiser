@@ -1,116 +1,70 @@
-"Katzenartig Imperium"={
-	key="Katzenartig Imperium"
-	ship_prefix={
-		key="KSS"
-		literal=yes
-	}
-	species={
-		class="MAM"
-		portrait="mam14"
-		species_name={
-			key="Katzen"
-			literal=yes
-		}
-		species_plural={
-			key="Katzens"
-			literal=yes
-		}
-		species_adjective={
-			key="%ADJECTIVE%"
-			variables={
-				{
-					key="adjective"
-					value={
-						key="Katzen"
-						literal=yes
-					}
-				}
- 
-			}
-		}
+katzenartig_imperium= {
+	name = "PKI_PRESCRIPTED_EMPIRE_NAME"
+	adjective = "PKI_PRESCRIPTED_EMPIRE_ADJ"
+
+	ship_prefix = "PKI_PRESCRIPTED_SHIP_PREFIX"
+
+	species = {
+		class = "MAM"
+		portrait = "mam14"
+		name = "PKI_PRESCRIPTED_SPECIES_NAME"
+		plural = "PKI_PRESCRIPTED_SPECIES_PLURAL"
+		adjective = "PKI_PRESCRIPTED_SPECIES_ADJ"
 		name_list="KAT"
 		gender=not_set
-		trait="katzen_trait_martial_free"
-		trait="trait_adaptive"
-		trait="trait_quick_learners"
-		trait="trait_traditional"
-		trait="trait_sedentary"
-		trait="trait_wasteful"
+		trait = "katzen_trait_martial_free"
+		trait = "trait_adaptive"
+		trait = "trait_quick_learners"
+		trait = "trait_traditional"
+		trait = "trait_sedentary"
+		trait = "trait_wasteful"
 	}
-	name={
-		key="Katzenartig Imperium"
-		literal=yes
-	}
-	adjective={
-		key="%ADJ%"
-		variables={
-			{
-				key="adjective"
-				value={
-					key="Katzenartig"
-					literal=yes
-				}
-			}
- 
-		}
-	}
+
 	authority="auth_dictatorial"
 	government="gov_military_dictatorship"
 	advisor_voice_type="l_the_soldier"
-	planet_name={
-		key="Flusion"
-		literal=yes
-	}
+
+	planet_name = "PKI_PRESCRIPTED_CAPITAL_PLANET_NAME"
 	planet_class="pc_continental"
-	system_name={
-		key="Jublio"
-		literal=yes
-	}
+	system_name = "PKI_PRESCRIPTED_CAPITAL_SYSTEM_NAME"
+
 	initializer="flusion_new_initializer"
 	graphical_culture="reptilian_01"
 	city_graphical_culture="mammalian_01"
-	empire_flag={
-		icon={
+	empire_flag = {
+		icon = {
 			category="domination"
 			file="domination_8.dds"
 		}
-		background={
+		background = {
 			category="backgrounds"
 			file="v.dds"
 		}
-		colors={
+		colors = {
 			"blue"
 			"dark_blue"
 			"black"
 			"null"
 		}
 	}
-	ruler={
-		gender=male
-		name={
-			full_names={
-				key="Kattail"
-				literal=yes
-			}
-		}
+
+	ruler = {
+		gender = male
+		name = "PKI_PRESCRIPTED_RULER_NAME"
 		portrait="mam14"
 		texture=0
 		attachment=0
 		clothes=4
-		ruler_title={
-			key="Kaiser"
-			literal=yes
-		}
-		ruler_title_female={
-			key="Kaiserin"
-			literal=yes
-		}
+		ruler_title = "PKI_PRESCRIPTED_RULER_TITLE_MALE"
+		ruler_title_female = "PKI_PRESCRIPTED_RULER_TITLE_FEMALE"
 		trait="trait_ruler_charismatic"
 		leader_class="admiral"
 	}
+
 	flags = {
 		kaiser_preset
 	}
+
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
 	room="personality_hegemonic_imperialists_room"

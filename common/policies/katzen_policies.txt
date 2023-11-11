@@ -150,7 +150,7 @@ kaiser_appearance = {
 		on_enabled = {
 			hidden_effect = {
 				country_event = {
-					id = misc.9
+					id = pki_misc.9
 				}
 			}
 		}
@@ -168,7 +168,7 @@ kaiser_appearance = {
 		on_enabled = {
 			hidden_effect = {
 				country_event = {
-					id = misc.8
+					id = pki_misc.8
 				}
 			}
 		}

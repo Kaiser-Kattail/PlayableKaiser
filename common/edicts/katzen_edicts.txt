@@ -16,22 +16,25 @@ katzen_conquest_map = {
 	length = 1
 	resources = { category = edicts }
 	potential = { has_origin = origin_katzen has_country_flag = kaiser_bureau_formed }
-	hidden_effect = {
-		country_event = {
-			id = kaiser_bureau.2
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = kaiser_bureau.2
+			}
 		}
 	}
+
 	ai_weight = { weight = 0 }
 }
 
 katzen_war_forge_construction = {
-	length = @EdictPerpetual
+	length = -1
 	icon = "GFX_edict_type_policy"
 
 	resources = {
 		category = edicts
 		upkeep = {
-			unity = @Edict1Cost
+			unity = 10
 			multiplier = value:edict_size_effect
 		}
 	}

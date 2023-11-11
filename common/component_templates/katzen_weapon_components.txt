@@ -42,7 +42,7 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery }
 	ai_tag_weight = 0
 	ai_weight = {
-		weight = 100
+		weight = 999
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = volatile_motes }
@@ -76,7 +76,7 @@ weapon_component_template = {
 	tracking = 0.2
 	missile_speed = 40 # Reduced from 70 because they were previously too fast to actually properly trigger their hit / redirect / miss check.
 	missile_evasion = 0.10
-	missile_health = 500.0
+	missile_health = 250.0
 	shield_penetration = 1.00
 	shield_damage = 1.00
 	armor_damage = 1.50
@@ -97,7 +97,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 100
+		weight = 999
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = volatile_motes }

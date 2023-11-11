@@ -128,14 +128,40 @@ country_event = {
 	}
 }
 
-country_event = {
+planet_event = {
 	id = centrism.6
 	is_triggered_only = yes
 	hide_window = yes
 
 	immediate = {
+		from = {
+			if = {
+				limit = { has_origin = origin_katzen has_tradition = tr_border_colonies }
+				every_owned_planet = {
+					limit = {
+						NOR = {
+							has_planet_flag = playerflusion
+							has_modifier = katzen_colony
+						}
+					}
+					add_modifier = {
+						modifier = katzen_colony
+						days = -1
+						clear_on_owner_change = yes
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = centrism.61
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
 		if = {
-			limit = { has_origin = origin_katzen has_tradition = tr_border_colonies}
+			limit = { has_origin = origin_katzen has_tradition = tr_border_colonies }
 			every_owned_planet = {
 				limit = {
 					NOR = {

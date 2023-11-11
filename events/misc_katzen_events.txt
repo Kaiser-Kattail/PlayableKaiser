@@ -1,7 +1,7 @@
-namespace = misc
+namespace = pki_misc
 
 country_event = {
-	id = misc.1
+	id = pki_misc.1
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
@@ -20,19 +20,22 @@ country_event = {
 				has_ground_combat = no
 				is_colony = yes
 			}
-			while = { count = 1	create_army = { 
-				name = "Katzenarmee Peacekeeper Garrison"	
-				owner = event_target:katzenartig 
-				species = owner_main_species 
-				type = "peacekeeper_army"
-				land_army = yes
-			} }
+			while = {
+				count = 1
+				create_army = {
+					name = "Katzenarmee Peacekeeper Garrison"
+					owner = event_target:katzenartig
+					species = owner_main_species
+					type = "peacekeeper_army"
+
+				}
+			}
 		}
 	}
 }
 
 country_event = {
-	id = misc.3
+	id = pki_misc.3
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
@@ -52,20 +55,20 @@ country_event = {
 			}
 		}
 		set_variable = { #count katzen systems, used so kaiser can change the name
-			which = "player_katzen_total_system_count"
+			which = player_katzen_total_system_count
 			value = 0
 		}
 		every_system_within_border = { #count katzen systems
 			event_target:katzenartig = {
 				change_variable = {
-					which = "player_katzen_total_system_count"
+					which = player_katzen_total_system_count
 					value = 1
 				}
 			}
 		}
 		set_variable = { #check for greater katzen imperium
 			which = "player_greater_imperium_limit"
-			value = "player_katzen_galaxy_total_system_count"
+			value = player_katzen_galaxy_total_system_count
 		}
 		multiply_variable = { #the limit to form greater imperium is 45% the total systems
 			which = "player_greater_imperium_limit"
@@ -73,7 +76,7 @@ country_event = {
 		}
 		set_variable = { #check for galactic katzen imperium
 			which = "player_galactic_imperium_limit"
-			value = "player_katzen_galaxy_total_system_count"
+			value = player_katzen_galaxy_total_system_count
 		}
 		multiply_variable = { #the limit to form galactic imperium is 75% the total systems
 			which = "player_galactic_imperium_limit"
@@ -85,8 +88,8 @@ country_event = {
 					has_country_flag = player_big_katzen_empire_formed
 				}
 				check_variable = {
-					which = "player_katzen_total_system_count"
-					value >= "player_greater_imperium_limit"
+					which = player_katzen_total_system_count
+					value >= player_greater_imperium_limit
 				}
 			}
 			set_country_flag = player_big_katzen_empire_formed
@@ -106,8 +109,8 @@ country_event = {
 					"null"
 				}
 			}
-			set_name = "Großkatzenartig Imperium"
-			every_country = { country_event = { id = misc.4 } }
+			set_name = "NAME_BIG_KATZEN_EMPIRE"
+			every_country = { country_event = { id = pki_misc.4 } }
 		}
 		if = {
 			limit = {
@@ -115,8 +118,8 @@ country_event = {
 					has_country_flag = player_galactic_katzen_empire_formed
 				}
 				check_variable = {
-					which = "player_katzen_total_system_count"
-					value >= "player_galactic_imperium_limit"
+					which = player_katzen_total_system_count
+					value >= player_galactic_imperium_limit
 				}
 			}
 			set_country_flag = player_galactic_katzen_empire_formed
@@ -136,16 +139,16 @@ country_event = {
 					"null"
 				}
 			}
-			set_name = "Galaktisches Katzimperium"
-			every_country = { country_event = { id = misc.5 } }
+			set_name = "NAME_GALACTIC_KATZEN_EMPIRE"
+			every_country = { country_event = { id = pki_misc.5 } }
 		}
 	}
 }
 
 country_event = { #big
-	id = misc.4
-	title = "misc.4.name"
-	desc = "misc.4.desc"
+	id = pki_misc.4
+	title = "pki_misc.4.name"
+	desc = "pki_misc.4.desc"
 
 	picture = GFX_evt_announcement
 	show_sound = event_celebration
@@ -153,7 +156,7 @@ country_event = { #big
 	is_triggered_only = yes
 
 	option = { #aw
-		name = "misc.4.a"
+		name = "pki_misc.4.a"
 		trigger = {
 			NOT = {
 				has_origin = origin_katzen
@@ -161,7 +164,7 @@ country_event = { #big
 		}
 	}
 	option = { #:KaiserPog:
-		name = "misc.4.b"
+		name = "pki_misc.4.b"
 		trigger = {
 			has_origin = origin_katzen
 		}
@@ -169,9 +172,9 @@ country_event = { #big
 }
 
 country_event = { #galactic
-	id = misc.5
-	title = "misc.5.name"
-	desc = "misc.5.desc"
+	id = pki_misc.5
+	title = "pki_misc.5.name"
+	desc = "pki_misc.5.desc"
 
 	picture = GFX_evt_binary_stars
 	show_sound = event_celebration
@@ -179,7 +182,7 @@ country_event = { #galactic
 	is_triggered_only = yes
 
 	option = { #aw
-		name = "misc.5.a"
+		name = "pki_misc.5.a"
 		trigger = {
 			NOT = {
 				has_origin = origin_katzen
@@ -187,7 +190,7 @@ country_event = { #galactic
 		}
 	}
 	option = { #:KaiserPog:
-		name = "misc.5.b"
+		name = "pki_misc.5.b"
 		trigger = {
 			has_origin = origin_katzen
 		}
@@ -195,9 +198,9 @@ country_event = { #galactic
 }
 
 country_event = {
-	id = misc.6
-	title = misc.6.title
-	desc = misc.6.desc
+	id = pki_misc.6
+	title = pki_misc.6.title
+	desc = pki_misc.6.desc
 	show_sound = par_portrait_02
 	picture = GFX_leader_recruitment_bg_renowned
 	is_triggered_only = yes
@@ -224,7 +227,7 @@ country_event = {
 		last_created_leader = {
 			add_trait = subclass_general_invader
 			add_trait = leader_trait_gunfur
-			add_trait = katzen_trait_elite
+			add_trait = pki_katzen_trait_elite
 			add_trait = leader_trait_butcher_2
 			add_trait = leader_trait_victory_or_death
 			set_age = 32
@@ -243,30 +246,30 @@ country_event = {
 		hidden_effect = {
 			event_target:gunfur = {
 				kill_leader = {
-					flag = gunfur show_notification = no
+					show_notification = no
 				}
 			}
 		}
 	}
 	option = {
-		name = misc.6.a
-		response_text = misc.6.a.response
+		name = pki_misc.6.a
+		response_text = pki_misc.6.a.response
 		is_dialog_only = yes
 	}
 	option = {
-		name = misc.6.b
-		response_text = misc.6.b.response
+		name = pki_misc.6.b
+		response_text = pki_misc.6.b.response
 		is_dialog_only = yes
 	}
 	option = {
-		name = misc.6.c
-		response_text = misc.6.c.response
+		name = pki_misc.6.c
+		response_text = pki_misc.6.c.response
 		is_dialog_only = yes
 	}
 	option = {
 		name = HIRE
 		tag = hire_leader
-		custom_tooltip = misc.6.hire_custom_tooltip
+		custom_tooltip = pki_misc.6.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = gunfur
@@ -297,54 +300,65 @@ country_event = {
 }
 
 country_event = {
-	id = misc.7
+	id = pki_misc.7
 	is_triggered_only = yes
 	hide_window = yes
 
 	immediate = {
-		FROMFROMFROM = { # Planet where ground combat is taking place.
-			OR = {
-				random_ground_combat_attacker = {
-					limit = {
-						exists = leader
-						leader = {
-							has_trait = leader_trait_gunfur
-						}
-					}
-					leader = {
-						save_event_target_as = gunfur_loot
-					}
+		#FROMFROMFROM = { # Planet where ground combat is taking place.
+		#	random_ground_combat_attacker = {
+		#		limit = {
+		#			exists = leader
+		#			leader = {
+		#				has_trait = leader_trait_gunfur
+		#			}
+		#		}
+		#		leader = {
+		#			save_event_target_as = gunfur_loot
+		#		}
+		#	}
+		#	random_ground_combat_defender = {
+		#		limit = {
+		#			exists = leader
+		#			leader = {
+		#				has_trait = leader_trait_gunfur
+		#			}
+		#		}
+		#		leader = {
+		#			save_event_target_as = gunfur_loot
+		#		}
+		#	}
+		#}
+		#
+		## If attacking army has a leader with Crusader trait, award Unity.
+		#if = {
+		#	limit = { exists = event_target:gunfur_loot }
+		#	FROMFROM = {
+		#		if = {
+		#			limit = {
+		#				event_target:gunfur_loot = {
+		#					has_trait = leader_trait_gunfur
+		#				}
+		#			}
+		#			add_resource = {
+		#				alloys = 10
+		#				energy = 25
+		#				minerals = 25
+		#				food = 25
+		#			}
+		#		}
+		#	}
+		from = {
+			if = {
+				limit = {
+					exists = leader
+					leader = { has_trait = leader_trait_gunfur }
 				}
-				random_ground_combat_defender = {
-					limit = {
-						exists = leader
-						leader = {
-							has_trait = leader_trait_gunfur
-						}
-					}
-					leader = {
-						save_event_target_as = gunfur_loot
-					}
-				}
-			}
-		}
-
-		# If attacking army has a leader with Crusader trait, award Unity.
-		if = {
-			limit = { exists = event_target:gunfur_loot }
-			FROMFROM = {
-				if = {
-					limit = {
-						event_target:gunfur_loot = {
-							has_trait = leader_trait_gunfur
-						}
-					}
-					add_resource = {
-						alloys = 10
-						energy = 25
-						minerals = 25
-						food = 25
-					}
+				add_resource = {
+					alloys = 10
+					energy = 25
+					minerals = 25
+					food = 25
 				}
 			}
 		}
@@ -352,7 +366,7 @@ country_event = {
 }
 
 country_event = {
-	id = misc.9
+	id = pki_misc.9
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
@@ -369,7 +383,7 @@ country_event = {
 }
 
 country_event = {
-	id = misc.8
+	id = pki_misc.8
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
@@ -386,7 +400,7 @@ country_event = {
 }
 
 country_event = {
-	id = misc.10
+	id = pki_misc.10
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
@@ -449,10 +463,10 @@ country_event = {
 
 #Aeternum Insights
 country_event = {
-	id = misc.11
+	id = pki_misc.11
 	is_triggered_only = yes
-	title = misc.11.title
-	desc = misc.11.desc
+	title = pki_misc.11.title
+	desc = pki_misc.11.desc
 	picture = GFX_evt_legendary_leader
 	show_sound = event_factions
 	event_window_type = leader_story
@@ -463,8 +477,8 @@ country_event = {
 	}
 
 	option = {
-		name = misc.11.a
-		custom_tooltip = misc.11.a.tt
+		name = pki_misc.11.a
+		custom_tooltip = pki_misc.11.a.tt
 		hidden_effect = {
 			increase_aeternite_intel = yes
 			increase_aeternite_intel = yes
@@ -474,7 +488,7 @@ country_event = {
 }
 
 planet_event = {
-	id = misc.12
+	id = pki_misc.12
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -489,7 +503,7 @@ planet_event = {
 			if = {
 				limit = { is_colony = yes }
 				save_event_target_as = destroyed_siegfried_world
-				owner = { country_event = { id = misc.13 } }
+				owner = { country_event = { id = pki_misc.13 } }
 				destroy_colony = yes
 			}
 			remove_all_buildings = yes
@@ -512,13 +526,13 @@ planet_event = {
 			}
 		}
 		else = {
-			planet_event = { id = misc.12 days = 30 }
+			planet_event = { id = pki_misc.12 days = 30 }
 		}
 	}
 }
 
 country_event = {
-	id = misc.13
+	id = pki_misc.13
 	title = "giga_katzen.121.name"
 	desc = "giga_katzen.121.desc"
 	is_triggered_only = yes
@@ -534,7 +548,7 @@ country_event = {
 }
 
 country_event = {
-	id = misc.14
+	id = pki_misc.14
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
@@ -593,7 +607,7 @@ country_event = {
 }
 
 country_event = {
-	id = misc.15
+	id = pki_misc.15
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
@@ -629,14 +643,14 @@ country_event = {
 					limit = { has_planet_flag = war_forge }
 					remove_planet_flag = war_forge
 				}
-				space_owner = { country_event = { id = misc.16 } }
+				space_owner = { country_event = { id = pki_misc.16 } }
 			}
 		}
 	}
 }
 
 country_event = { #Warforge destroyed
-	id = misc.16
+	id = pki_misc.16
 	title = "giga_katzen.031.name"
 	desc = "giga_katzen.031.desc"
 	picture = GFX_evt_large_explosion
@@ -656,31 +670,74 @@ country_event = { #Warforge destroyed
 	}
 }
 
-planet_event = {
-	id = misc.17
+fleet_event = {
+	id = pki_misc.17
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-		any_fleet_in_orbit = {
-			any_owned_ship = { is_ship_size = katzen_submarine }
-			owner = { has_origin = origin_katzen }
-			is_cloaked = yes
+		from = {
+			exists = planet
+			NOT = { planet_owner  = { has_origin = origin_katzen} }
+			planet_owner  = {
+				is_at_war_with = event_target:katzenartig_imperium
+			}
+			any_fleet_in_orbit = {
+				is_ship_size = katzen_submarine
+				owner = { has_origin = origin_katzen }
+				is_cloaked = yes
+			}
 		}
 	}
 
 	immediate = {
-		add_modifier = {
-			modifier = katzen_submarine_subspace_blockade
-			days = 3
+		from = {
+			add_modifier = {
+				modifier = pki_katzen_submarine_subspace_blockade
+				days = -1
+			}
+			planet_event = {
+				id = pki_misc.171
+				days = 30
+			}
 		}
 	}
 }
 
+planet_event = {
+	id = pki_misc.171
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				any_fleet_in_orbit = {
+					is_ship_size = katzen_submarine
+					owner = { has_origin = origin_katzen }
+					is_cloaked = yes
+				}
+			}
+			add_modifier = {
+				modifier = pki_katzen_submarine_subspace_blockade
+				days = -1
+			}
+			planet_event = {
+				id = pki_misc.171
+				days = 30
+			}
+		}
+		else = {
+			remove_modifier = pki_katzen_submarine_subspace_blockade
+		}
+	}
+
+}
+
 country_event = {
-	id = misc.18
-	title = misc.18.title
-	desc = misc.18.desc
+	id = pki_misc.18
+	title = pki_misc.18.title
+	desc = pki_misc.18.desc
 	show_sound = par_portrait_14
 	picture = GFX_leader_recruitment_bg_renowned
 	is_triggered_only = yes
@@ -707,7 +764,7 @@ country_event = {
 		last_created_leader = {
 			add_trait = subclass_governor_economist
 			add_trait = leader_trait_neumeyer
-			add_trait = katzen_trait_elite
+			add_trait = pki_katzen_trait_elite
 			add_trait = leader_trait_enlister
 			add_trait = leader_trait_embezzler
 			set_age = 28
@@ -726,30 +783,30 @@ country_event = {
 		hidden_effect = {
 			event_target:neumeyer = {
 				kill_leader = {
-					flag = neumeyer show_notification = no
+					show_notification = no
 				}
 			}
 		}
 	}
 	option = {
-		name = misc.18.a
-		response_text = misc.18.a.response
+		name = pki_misc.18.a
+		response_text = pki_misc.18.a.response
 		is_dialog_only = yes
 	}
 	option = {
-		name = misc.18.b
-		response_text = misc.18.b.response
+		name = pki_misc.18.b
+		response_text = pki_misc.18.b.response
 		is_dialog_only = yes
 	}
 	option = {
-		name = misc.18.c
-		response_text = misc.18.c.response
+		name = pki_misc.18.c
+		response_text = pki_misc.18.c.response
 		is_dialog_only = yes
 	}
 	option = {
 		name = HIRE
 		tag = hire_leader
-		custom_tooltip = misc.18.hire_custom_tooltip
+		custom_tooltip = pki_misc.18.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = neumeyer
@@ -759,7 +816,7 @@ country_event = {
 }
 
 country_event = {
-	id = misc.19
+	id = pki_misc.19
 	hide_window = yes
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -775,9 +832,323 @@ country_event = {
 	}
 	immediate = {
 		country_event = {
-			id = misc.18
+			id = pki_misc.18
 			days = 180 random = 180
 		}
 	}
+}
 
+### Vassal Stuff
+
+event = {
+	id = pki_misc.20
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		any_country = {
+			has_origin = origin_katzen
+		}
+	}
+	immediate = {
+		every_megastructure = {
+			limit = {
+				OR = {
+					is_megastructure_type = katzen_war_forge_0
+					is_megastructure_type = katzen_war_forge_1
+				}
+				solar_system = {
+					NOT = {
+						any_fleet_in_system = { #no hostiles
+							controller = {
+								OR = {
+									is_at_war_with = event_target:katzenartig
+									is_hostile = event_target:katzenartig
+								}
+							}
+						}
+					}
+				}
+			}
+			set_owner = event_target:katzenartig
+		}
+	}
+}
+
+#Spawns peacekeepers
+country_event = {
+	id = pki_misc.211
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		pki_is_katzprotektorat = yes
+		NOT = { is_at_war_with = event_target:katzenartig }
+	}
+	immediate = {
+		every_controlled_planet = {
+			limit = {
+				NOT = {
+					any_planet_army = {
+						army_type = peacekeeper_army
+					}
+				}
+				has_ground_combat = no
+				is_colony = yes
+			}
+			while = {
+				count = @pki_vassal_peacekeeper_amt
+				create_army = {
+					name = "Katzenarmee Peacekeeper Garrison"
+					owner = event_target:katzenartig
+					species = event_target:pki_katzen_species
+					type = "peacekeeper_army"
+
+				}
+			}
+		}
+	}
+}
+
+#makes peacekeepers attack at start of war
+country_event = {
+	id = pki_misc.212
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		pki_is_katzenartig_imperium = no
+		root = { is_at_war_with = event_target:katzenartig }
+		from = { NOT = { has_war_flag = pki_war_peacekeepers_attack } }
+		any_controlled_planet = {
+			any_planet_army = {
+				army_type = peacekeeper_army
+			}
+		}
+	}
+	immediate = {
+		from = {
+			set_war_flag = pki_war_peacekeepers_attack
+		}
+		every_controlled_planet = {
+			limit = {
+				any_planet_army = {
+					army_type = peacekeeper_army
+				}
+				is_colony = yes
+			}
+			every_planet_army = {
+				limit = {
+					army_type = peacekeeper_army
+				}
+				remove_army = yes
+			}
+			while = {
+				count = @pki_vassal_peacekeeper_amt
+				create_army = {
+					name = "Katzenarmee Peacekeeper Garrison"
+					owner = event_target:katzenartig
+					species = event_target:pki_katzen_species
+					type = "peacekeeper_army"
+
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pki_misc.2122
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		pki_is_katzenartig_imperium = no
+		root = { is_at_war_with = event_target:katzenartig }
+		from = { NOT = { has_war_flag = pki_war_katzen_ships_attack } }
+		any_controlled_fleet = {
+			any_controlled_ship = {
+				pki_is_katzen_ship = yes
+			}
+		}
+	}
+	immediate = {
+		from = {
+			set_war_flag = pki_war_katzen_ships_attack
+		}
+		every_controlled_fleet = {
+			limit = {
+				any_controlled_ship = {
+					pki_is_katzen_ship = yes
+				}
+			}
+			set_fleet_flag = pki_has_katzen_ships
+			pki_count_ships = {
+				SHIP = katzen_panzer
+			}
+			pki_count_ships = {
+				SHIP = katzen_bomber
+			}
+			pki_count_ships = {
+				SHIP = katzen_panzer
+			}
+			create_fleet = {
+				name = "pki_katzen_captured_ships"
+				effect = {
+					set_owner = event_target:katzenartig
+					set_location = prev
+					while = {
+						count = prev.pki_katzen_panzer_count
+						create_ship = {
+							name = random
+							random_existing_design = katzen_panzer
+							prefix = no
+							graphical_culture = reptilian_01
+							upgradable = yes
+
+						}
+					}
+					while = {
+						count = prev.pki_katzen_bomber_count
+						create_ship = {
+							name = random
+							random_existing_design = katzen_bomber
+							prefix = no
+							graphical_culture = reptilian_01
+							upgradable = yes
+						}
+					}
+					while = {
+						count = prev.pki_katzen_cruiser_count
+						create_ship = {
+							name = random
+							random_existing_design = katzen_cruiser
+							prefix = no
+							graphical_culture = reptilian_01
+							upgradable = yes
+						}
+					}
+				}
+			}
+			every_controlled_ship = {
+				limit = {
+					pki_is_katzen_ship = yes
+				}
+				delete_ship = this
+			}
+		}
+	}
+}
+
+#War ended katzen loses
+country_event = {
+	id = pki_misc.213
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		fromfrom = {
+			any_attacker = { pki_is_katzprotektorat = yes }
+		}
+		#Only fire if the loser of the war is katzen
+		root = {
+			pki_is_katzenartig_imperium = yes
+		}
+	}
+	immediate = {
+		fromfrom = {
+			every_attacker = {
+				limit = {
+					pki_is_katzprotektorat = yes
+				}
+				remove_country_flag = pki_katzprotectorat
+				set_country_flag = pki_katzprotectorat_uprising
+				country_event = {
+					id = pki_misc.21301
+				}
+			}
+		}
+	}
+}
+
+#Remove peacekeepers from uprising countries
+country_event = {
+	id = pki_misc.21301
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		any_controlled_planet = {
+			any_planet_army = {
+				army_type = peacekeeper_army
+			}
+		}
+	}
+	immediate = {
+		every_controlled_planet = {
+			limit = {
+				any_planet_army = {
+					army_type = peacekeeper_army
+				}
+				is_colony = yes
+			}
+			every_planet_army = {
+				limit = {
+					army_type = peacekeeper_army
+				}
+				remove_army = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pki_misc.220
+	title = "pki_misc.220.name"
+	desc = "pki_misc.220.desc"
+	is_triggered_only = yes
+	location = capital_scope
+	picture = GFX_evt_coronation
+	show_sound = event_celebration
+	trigger = {
+		pki_is_katzprotektorat = yes
+		NOT = { exists = overlord }
+	}
+
+	option = {
+		name = "pki_misc.220.a"
+	}
+
+	immediate = {
+		remove_country_flag = pki_katzprotectorat
+		country_event = {
+			id = pki_misc.221
+			days = 15 random = 15
+		}
+	}
+}
+
+country_event = {
+	id = pki_misc.221
+	title = "pki_misc.221.name"
+	desc = "pki_misc.221.desc"
+	is_triggered_only = yes
+	location = capital_scope
+	picture = GFX_evt_fleet_from_surface
+	show_sound = event_ship_thrusters
+
+	option = {
+		name = "pki_misc.221.a"
+	}
+
+	immediate = {
+		every_controlled_planet = {
+			limit = {
+				any_planet_army = {
+					army_type = peacekeeper_army
+				}
+				is_colony = yes
+			}
+			every_planet_army = {
+				limit = {
+					army_type = peacekeeper_army
+				}
+				remove_army = yes
+			}
+		}
+	}
 }

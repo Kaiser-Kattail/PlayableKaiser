@@ -1,0 +1,51 @@
+specialist_katzprotektorat = {
+	term = specialist_type
+	triggered_loyalty_change = {
+		trigger = {
+			target = { is_militarist = yes }
+		}
+		loyalty_change = 5
+		ai_acceptance = {
+			subject = 25
+		}
+	}
+
+	triggered_loyalty_change = {
+		trigger = {
+			target = { is_pacifist = yes }
+		}
+		loyalty_change = -20
+		ai_acceptance = {
+			subject = -100
+		}
+	}
+
+	activate_effect = {
+		convert_to_specialist = specialist_katzprotektorat
+	}
+
+	potential = {
+		agreement_preset = preset_katzen
+	}
+}
+
+specialist_katzprotektorat_gestalt = {
+	term = specialist_type
+	triggered_loyalty_change = {
+		trigger = {
+			target = { is_gestalt = yes }
+		}
+		loyalty_change = -10
+		ai_acceptance = {
+			subject = -50
+		}
+	}
+
+	activate_effect = {
+		convert_to_specialist = specialist_katzprotektorat_gestalt
+	}
+
+	potential = {
+		agreement_preset = preset_katzen_gestalt
+	}
+}

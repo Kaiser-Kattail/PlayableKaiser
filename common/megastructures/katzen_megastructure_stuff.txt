@@ -1,6 +1,6 @@
 katzen_war_forge_0 = {
 	entity = "construction_platform_entity"
-	construction_entity = "construction_platform_entity"
+	construction_entity = "katzen_war_forge_entity"
 	portrait = "GFX_megastructure_construction_background"
 	place_entity_on_planet_plane = no
 	construction_blocks_others = no
@@ -14,9 +14,7 @@ katzen_war_forge_0 = {
 	on_build_start = {}
 	on_build_cancel = {}
 	on_build_complete = {}
-	
-	}	
-
+	}
 	
 katzen_war_forge_1 = {
 	entity = "katzen_war_forge_entity"
@@ -32,37 +30,22 @@ katzen_war_forge_1 = {
 	resources = {
 		category = giga_kilostructures
 		cost = { }
-		produces = { alloys = 4 }
+		produces = { alloys = 5 }
 	}
 	upgrade_from = {
 		katzen_war_forge_0
 	}
 	country_modifier = {
-		country_naval_cap_add = 2
-		starbase_shipyard_build_speed_mult = 0.02
+		country_naval_cap_mult = 0.01
+		starbase_shipyard_build_speed_mult = 0.025
 	}
 	potential = { always = yes }
 	ai_weight = { factor = 0 }
 	on_build_start = {}
 	on_build_cancel = {}
 	on_build_complete = {
-		event_target:katzenartig = {
-			create_fleet = {
-				name = "Katzenkriegsschmiedekanone"
-				settings = {
-					spawn_debris = no
-				}
-				effect = {
-					set_owner = event_target:katzenartig
-					create_ship = {
-						name = "Katzenkriegsschmiedekanone"
-						design = "Rhawn"
-						upgradable = no
-					}
-					set_location = fromfrom
-					set_fleet_flag = warforge_platform
-				}
-			}
+		pki_spawn_warforge_fleet = {
+			OWNER = event_target:katzenartig_imperium
 		}
 	}	
 }	
@@ -157,7 +140,7 @@ playable_kaiser_ehve_phase1 = {
 	}
 
 	country_modifier = {
-		country_mia_time_mult = -0.075
+		fleet_mia_time_mult = -0.075
 	}
 
 	on_build_complete = {
@@ -214,7 +197,7 @@ playable_kaiser_ehve_dummy = {
 		playable_kaiser_ehve_active
 	}
 	country_modifier = {
-		country_mia_time_mult = -0.15
+		fleet_mia_time_mult = -0.15
 	}
 	on_build_complete = {
 		spawn_megastructure = {
@@ -261,7 +244,7 @@ playable_kaiser_ehve_cooldown = {
 	}
 
 	country_modifier = {
-		country_mia_time_mult = -0.15
+		fleet_mia_time_mult = -0.15
 	}
 }
 
@@ -281,7 +264,7 @@ playable_kaiser_ehve_cooldown_dummy = {
 		playable_kaiser_ehve_cooldown
 	}
 	country_modifier = {
-		country_mia_time_mult = -0.15
+		fleet_mia_time_mult = -0.15
 	}
 	on_build_complete = {
 		spawn_megastructure = {
@@ -320,7 +303,7 @@ playable_kaiser_ehve_active = {
 	}
 
 	country_modifier = {
-		country_mia_time_mult = -0.15
+		fleet_mia_time_mult = -0.15
 	}
 
 	bypass_type = playable_kaiser_wormhole

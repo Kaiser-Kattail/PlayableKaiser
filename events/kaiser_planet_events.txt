@@ -48,7 +48,7 @@ country_event = {
 		give_technology = {
 			tech = tech_kaiser_planet_sections
 		}
-		create_ship_design = { design = "Kaiser Behemoth Planet" }
+		#create_ship_design = { design = "Kaiser Behemoth Planet" }
 		add_ship_design = last_created_design
 	}
 }
