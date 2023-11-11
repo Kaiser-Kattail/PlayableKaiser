@@ -177,7 +177,7 @@ tech_pki_warforge = {
 	category = { voidcraft }
 
 	potential = {
-		is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 1}
+		pki_is_katzprotektorat = yes
 	}
 
 	prereqfor_desc = {
@@ -199,6 +199,13 @@ tech_pki_panzer = {
 	category = { voidcraft }
 	prerequisites = { "tech_destroyers" }
 	weight = @tier2weight1
+
+	potential = {
+		OR = {
+			pki_is_katzprotektorat_tier_2 = yes
+			pki_is_katzenartig_imperium = yes
+		}
+	}
 
 	is_rare = yes
 
@@ -244,8 +251,6 @@ tech_pki_panzer = {
 
 	ai_weight = {
 		factor = @ai_ship_types_factor
-		factor = 999
-
 	}
 }
 
@@ -260,6 +265,13 @@ tech_pki_bomber = {
 	is_rare = yes
 
 	gateway = ship
+
+	potential = {
+		OR = {
+			pki_is_katzprotektorat_tier_3 = yes
+			pki_is_katzenartig_imperium = yes
+		}
+	}
 
 	prereqfor_desc = {
 		ship = {
@@ -301,8 +313,6 @@ tech_pki_bomber = {
 
 	ai_weight = {
 		factor = @ai_ship_types_factor
-		factor = 999
-
 	}
 }
 
@@ -315,6 +325,13 @@ tech_pki_cruiser = {
 	weight = @tier4weight1
 
 	is_rare = yes
+
+	potential = {
+		OR = {
+			pki_is_katzprotektorat_tier_3 = yes
+			pki_is_katzenartig_imperium = yes
+		}
+	}
 
 	prereqfor_desc = {
 		ship = {
@@ -356,6 +373,5 @@ tech_pki_cruiser = {
 
 	ai_weight = {
 		factor = @ai_ship_types_factor
-		factor = 999
 	}
 }

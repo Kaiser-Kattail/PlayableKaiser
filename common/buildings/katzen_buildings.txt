@@ -6,10 +6,7 @@ building_katzen_civilian_forge = {
 
 	potential = { 
 		owner = {
-			OR = {
-				has_origin = origin_katzen
-				is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 1}
-			}
+			pki_is_katzenartig_imperium = yes
 		}
 	}
 
@@ -253,10 +250,7 @@ building_pki_flusion_fusion_power_plant = {
 
 	potential = {
 		owner = {
-			OR = {
-				has_origin = origin_katzen
-				is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 1}
-			}
+			pki_is_katzenartig_imperium = yes
 		}
 	}
 
@@ -286,10 +280,7 @@ building_pki_katzen_terraformer = {
 	icon = building_giga_katzen_terraformer
 	potential = {
 		owner = {
-			OR = {
-				has_origin = origin_katzen
-				is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 1}
-			}
+			pki_is_katzenartig_imperium = yes
 		}
 	}
 
@@ -320,10 +311,7 @@ building_pki_katzen_synthetizer = {
 
 	potential = {
 		owner = {
-			OR = {
-				has_origin = origin_katzen
-				is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 1}
-			}
+			pki_is_katzenartig_imperium = yes
 		}
 	}
 
@@ -365,10 +353,7 @@ building_pki_foundry = {
 
 	potential = {
 		owner = {
-			OR = {
-				has_origin = origin_katzen
-				is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 1}
-			}
+			pki_is_katzenartig_imperium = yes
 		}
 	}
 
@@ -412,10 +397,7 @@ building_pki_theater = {
 
 	potential = {
 		owner = {
-			OR = {
-				has_origin = origin_katzen
-				is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 1}
-			}
+			pki_is_katzenartig_imperium = yes
 		}
 	}
 
@@ -477,10 +459,7 @@ building_pki_science = {
 
 	potential = {
 		owner = {
-			OR = {
-				has_origin = origin_katzen
-				is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 1}
-			}
+			pki_is_katzenartig_imperium = yes
 		}
 	}
 
@@ -539,21 +518,38 @@ building_pki_katzen_outpost = {
 		}
 	}
 
-	on_built = {
-		set_planet_flag = pki_has_katzen_outpost
+	country_modifier = {
+		defense_armies_add = 2
+		country_naval_cap_mult = 0.05
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			planet.owner = { is_gestalt = no }
+		}
+		job_overlord_propagandist_add = 1
+		job_pki_recruiter_per_pop = 0.033
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			planet.owner = { is_gestalt = yes }
+		}
+		job_overlord_propagandist_drone_add = 1
+		job_pki_recruiter_drone_per_pop = 0.033
 	}
 
 	planet_modifier = {
-		defense_armies_add = -999
+		monthly_loyalty = -0.5
 	}
 
-	on_destroy = {
-		remove_planet_flag = pki_has_katzen_outpost
+	triggered_desc = {
+		text = job_pki_recruiter_effect_desc
+		trigger = { planet.owner = { is_gestalt = no } }
 	}
 
-	destroy_trigger = {
-		owner = {
-			pki_is_katzenartig_imperium = no
-		}
+	triggered_desc = {
+		text = job_pki_recruiter_drone_effect_desc
+		trigger = { planet.owner = { is_gestalt = yes } }
 	}
 }

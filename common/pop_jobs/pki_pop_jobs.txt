@@ -1,0 +1,76 @@
+pki_recruiter = {
+    category = specialist
+    icon = soldier
+    can_set_priority = no
+    is_capped_by_modifier = yes
+    building_icon = holding_dread_outpost
+    clothes_texture_index = 1
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        complex_specialist_job_check_trigger = yes
+    }
+
+    resources = {
+        category = planet_overlord_recruiters
+        upkeep = {
+            energy = 5
+            unity = 2
+        }
+    }
+
+    pop_modifier = {
+        pop_defense_armies_add = 3
+    }
+
+    weight = {
+        weight = @overlord_job_weight
+    }
+}
+
+pki_recruiter_drone = {
+    category = complex_drone
+
+    can_set_priority = no
+    is_capped_by_modifier = yes
+    building_icon = holding_dread_outpost
+    clothes_texture_index = 1
+    icon = overlord_beholder
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_drone_job
+    possible = {
+        can_think = yes
+    }
+
+    resources = {
+        category = planet_overlord_recruiters
+        upkeep = {
+            energy = 5
+            unity = 2
+        }
+    }
+
+    pop_modifier = {
+        pop_defense_armies_add = 3
+    }
+
+    weight = {
+        weight = @overlord_job_weight
+    }
+}

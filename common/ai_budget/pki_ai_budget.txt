@@ -15,7 +15,7 @@ pki_alloy_expenditure_decisions = {
 		}
 	}
 	weight = {
-		weight = 999
+		weight = 0.8
 	}
 	desired_max = {
 		base = 4000

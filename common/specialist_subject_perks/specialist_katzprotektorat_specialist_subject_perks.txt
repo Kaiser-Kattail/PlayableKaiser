@@ -5,9 +5,150 @@
 pki_katzprotektorat_1_modifier = {
 	main_perk = yes
 	subject_modifier = {
-		planet_metallurgists_alloys_produces_add = 1
-		planet_soldiers_unity_produces_add = 0.5
+		planet_metallurgists_alloys_produces_add = 1.5
+		planet_soldiers_unity_produces_add = 1
 		job_soldier_per_pop = 0.0166
+	}
+
+	activate_effect = {
+		target = {
+			save_event_target_as = pki_katzprotektorat
+			set_country_flag = pki_katzprotectorat
+			remove_country_flag = pki_katzprotectorat_uprising
+			store_country_backup_data = {
+				flag = yes
+				name = yes
+				government = yes
+				room = yes
+			}
+			set_name = {
+				key = "katzen_protektorat_name"
+				variable_string = "[Capital.solar_system.GetName]"
+			}
+			change_country_flag = {
+				icon = {
+					category = "flusionian"
+					file = "katzen_flag.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "circle.dds"
+				}
+				colors = {
+					"blue"
+					"dark_blue"
+					"dark_blue"
+					"null"
+				}
+			}
+			ruler = {
+				save_global_event_target_as = pki_katzprotektorat_prev_leader@prev
+				unassign_leader = prev
+			}
+			change_government = {
+				authority = auth_pki_katzprotektorat
+			}
+			create_leader = {
+				name = random
+				species = event_target:pki_katzen_species
+				class = governor
+				skill = 3
+				traits = {
+					trait = pki_katzen_trait_elite
+				}
+				leader_age_min = 30
+				leader_age_max = 50
+				effect = {
+					save_global_event_target_as = pki_katzprotektorat_new_leader@prev
+					event_target:pki_katzprotektorat = {
+						assign_leader = prev
+					}
+				}
+				background_planet = event_target:flusionhome
+				background_job = bureaucrat
+				background_ethic = ethic_militarist
+			}
+		}
+	}
+
+	deactivate_effect = {
+		target = {
+			restore_country_backup_data = yes
+			event_target:pki_katzprotektorat_new_leader@this = {
+				kill_leader = {
+					show_notification = no
+				}
+			}
+			if = {
+				limit = {
+					exists = event_target:pki_katzprotektorat_prev_leader@this
+				}
+				assign_leader = event_target:pki_katzprotektorat_prev_leader@this
+			}
+			clear_global_event_target = pki_katzprotektorat_new_leader@this
+			clear_global_event_target = pki_katzprotektorat_prev_leader@this
+		}
+	}
+}
+
+pki_katzprotektorat_gestalt_1_modifier = {
+	main_perk = yes
+	subject_modifier = {
+		planet_metallurgists_alloys_produces_add = 1.5
+		planet_soldiers_unity_produces_add = 1
+		job_warrior_drone_per_pop = 0.0166
+	}
+
+	activate_effect = {
+		target = {
+			save_event_target_as = pki_katzprotektorat
+			set_country_flag = pki_katzprotectorat_gestalt
+			remove_country_flag = pki_katzprotectorat_uprising
+			store_country_backup_data = {
+				flag = yes
+				name = yes
+				government = yes
+				room = yes
+			}
+			set_name = {
+				key = "katzen_protektorat_name"
+				variable_string = "[Capital.solar_system.GetName]"
+			}
+			change_country_flag = {
+				icon = {
+					category = "flusionian"
+					file = "katzen_flag.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "circle.dds"
+				}
+				colors = {
+					"blue"
+					"dark_blue"
+					"dark_blue"
+					"null"
+				}
+			}
+			if = {
+				limit = {
+					is_gestalt = no
+				}
+				ruler = {
+					save_global_event_target_as = pki_katzprotektorat_prev_leader@prev
+					unassign_leader = prev
+				}
+				change_government = {
+					authority = auth_pki_katzprotektorat
+				}
+			}
+		}
+	}
+
+	deactivate_effect = {
+		target = {
+			restore_country_backup_data = yes
+		}
 	}
 }
 
@@ -25,7 +166,7 @@ pki_katzprotektorat_1_overlord_modifier = {
 	icon = "GFX_specialist_perk_katzprotektorat_1_overlord_modifier"
 	overlord_modifier = {
 		country_power_projection_unity_produces_add = 100
-		empire_size_mult = 0.5
+		empire_size_mult = 0.25
 	}
 }
 
@@ -36,6 +177,19 @@ pki_katzprotektorat_1_soldiers = {
 		planet_soldiers_energy_produces_add = 0.5
 		planet_soldiers_minerals_produces_add = 0.5
 		planet_soldiers_food_produces_add = 0.5
+	}
+
+	desc = {
+		description = pki_katzprotektorat_1_soldiers_desc
+	}
+}
+
+pki_katzprotektorat_gestalt_1_soldiers = {
+	icon = "GFX_specialist_perk_katzprotektorat_1_soldiers"
+
+	subject_modifier = {
+		planet_soldiers_energy_produces_add = 0.75
+		planet_soldiers_minerals_produces_add = 0.75
 	}
 
 	desc = {
@@ -79,9 +233,7 @@ pki_katzprotektorat_1_katzprotektorat_tech = {
 		}
 	}
 
-	desc = {
-		description = pki_katzprotektorat_1_katzprotektorat_tech_desc
-	}
+	desc = { description = pki_pki_katzprotektorat_1_katzprotektorat_tech_desc }
 }
 
 pki_katzprotektorat_2_modifier = {
@@ -90,6 +242,15 @@ pki_katzprotektorat_2_modifier = {
 		planet_metallurgists_alloys_produces_add = 1.5
 		planet_soldiers_unity_produces_add = 1
 		job_soldier_per_pop = 0.025
+	}
+}
+
+pki_katzprotektorat_gestalt_2_modifier = {
+	main_perk = yes
+	subject_modifier = {
+		planet_metallurgists_alloys_produces_add = 1.5
+		planet_soldiers_unity_produces_add = 1
+		job_warrior_drone_per_pop = 0.025
 	}
 }
 
@@ -109,31 +270,7 @@ pki_katzprotektorat_2_katzprotektorat_tech = {
 	activate_effect = {
 		target = {
 			add_tech_progress = {
-				tech = tech_katzen_luxuries
-				progress = 0.25
-			}
-			add_tech_progress = {
-				tech = tech_katzen_reactor
-				progress = 0.25
-			}
-			add_tech_progress = {
-				tech = tech_katzen_habitability
-				progress = 0.25
-			}
-			add_tech_progress = {
-				tech = tech_katzen_rr
-				progress = 0.25
-			}
-			add_tech_progress = {
-				tech = tech_katzen_forge
-				progress = 0.25
-			}
-			add_tech_progress = {
-				tech = tech_katzen_theater
-				progress = 0.25
-			}
-			add_tech_progress = {
-				tech = tech_katzen_lab
+				tech = tech_pki_panzer
 				progress = 0.25
 			}
 		}
@@ -152,19 +289,29 @@ pki_katzprotektorat_2_leaders = {
 
 	activate_effect = {
 		target = {
-			add_specialist_leaders = {
-				TYPE = katzprotektorat
-				CLASS = admiral
+			create_leader = {
+				name = random
+				species = event_target:pki_katzen_species
+				class = governor
+				skill = 3
+				traits = {
+					trait = pki_katzen_trait_elite
+				}
+				leader_age_min = 30
+				leader_age_max = 50
+				effect = {
+
+				}
+				background_planet = event_target:flusionhome
+				background_job = bureaucrat
+				background_ethic = ethic_militarist
 			}
 		}
 	}
 
 	deactivate_effect = {
 		target = {
-			remove_specialist_leaders = {
-				TYPE = katzprotektorat
-				CLASS = admiral
-			}
+
 		}
 	}
 
@@ -182,10 +329,25 @@ pki_katzprotektorat_2_traits = {
 
 pki_katzprotektorat_3_modifier = {
 	main_perk = yes
+	overlord_modifier = {
+		country_subject_integration_speed_add = 5
+	}
 	subject_modifier = {
 		planet_metallurgists_alloys_produces_add = 2
 		planet_soldiers_unity_produces_add = 1.5
 		job_soldier_per_pop = 0.05
+	}
+}
+
+pki_katzprotektorat_gestalt_3_modifier = {
+	main_perk = yes
+	overlord_modifier = {
+		country_subject_integration_speed_add = 5
+	}
+	subject_modifier = {
+		planet_metallurgists_alloys_produces_add = 2
+		planet_soldiers_unity_produces_add = 1.5
+		job_warrior_drone_per_pop = 0.05
 	}
 }
 
@@ -205,12 +367,11 @@ pki_katzprotektorat_3_katzprotektorat_tech = {
 		target = {
 			add_tech_progress = { tech = tech_pki_bomber progress = 0.25 }
 			add_tech_progress = { tech = tech_pki_cruiser progress = 0.25 }
-			add_tech_progress = { tech = tech_pki_panzer progress = 0.25 }
 		}
 	}
 
 	desc = {
-		description = katzprotektorat_3_katzprotektorat_tech_desc
+		description = pki_katzprotektorat_3_katzprotektorat_tech_desc
 	}
 }
 

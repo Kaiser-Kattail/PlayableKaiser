@@ -11,10 +11,8 @@ agenda_project_mondkanone = {
 			has_country_flag = mondkanone_started
 		}
 	}
-	modifiers = {
-		{
-			country_unity_produces_mult = -0.10
-		}
+	modifier = {
+		country_modifiers_unity_produces_mult = -0.10
 	}
 	effect = {
 		country_event = {
@@ -35,10 +33,8 @@ agenda_project_dominance = {
 			has_country_flag = dominance_started
 		}
 	}
-	modifiers = {
-		{
-			country_unity_produces_mult = -0.10
-		}
+	modifier = {
+		country_modifiers_unity_produces_mult = -0.10
 	}
 	effect = {
 		country_event = {
@@ -60,10 +56,8 @@ agenda_project_celestia = {
 		has_technology = tech_mega_engineering
 		has_country_flag = dominance_started
 	}
-	modifiers = {
-		{
-			country_unity_produces_mult = -0.10
-		}
+	modifier = {
+		country_modifiers_unity_produces_mult = -0.10
 	}
 	effect = {
 		country_event = {

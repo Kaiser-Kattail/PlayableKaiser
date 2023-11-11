@@ -10,7 +10,10 @@ katzen_panzer = { #Destroyerish, designed to conduct Blitzkrieg and overwhelm en
 	can_have_federation_design = no
 	enable_default_design = yes
 	potential_country = {
-		has_origin = origin_katzen
+		OR = {
+			has_origin = origin_katzen
+			pki_is_katzprotektorat_tier_2 = yes
+		}
 	}
 	prerequisites = {
 		tech_pki_panzer
@@ -49,6 +52,38 @@ katzen_panzer = { #Destroyerish, designed to conduct Blitzkrieg and overwhelm en
 	required_component_set = "katzen_thruster_components"
 	required_component_set = "sensor_components"
 	required_component_set = "katzen_combat_computers"
+
+	ai_ship_data = {
+		fraction = {
+			base = 0
+			modifier = {
+				add = 20
+				uses_standard_ship_sizes = yes
+			}
+			modifier = {
+				factor = 2
+				pki_is_katzprotektorat = yes
+			}
+			modifier = {
+				factor = 1.5
+				has_valid_ai_personality = yes
+				OR = {
+					has_ai_personality = erudite_explorers
+					has_ai_personality = federation_builders
+					has_ai_personality = peaceful_traders
+				}
+			}
+			modifier = {
+				factor = 1.5
+				has_valid_civic = civic_hive_devouring_swarm
+			}
+			modifier = {
+				factor = 1.5
+				has_valid_civic = civic_hive_devouring_swarm
+				NOT = { has_technology = tech_battleships }
+			}
+		}
+	}
 }
 
 katzen_bomber = { #Cruiser, bomber designed to assault enemy worlds and fortifications from afar.
@@ -77,7 +112,10 @@ katzen_bomber = { #Cruiser, bomber designed to assault enemy worlds and fortific
 
 	enable_default_design = yes
 	potential_country = {
-		has_origin = origin_katzen
+		OR = {
+			has_origin = origin_katzen
+			pki_is_katzprotektorat_tier_3 = yes
+		}
 	}
 	prerequisites = {
 		tech_pki_bomber
@@ -104,6 +142,33 @@ katzen_bomber = { #Cruiser, bomber designed to assault enemy worlds and fortific
 	min_upgrade_cost = {
 		alloys = 4
 	}
+
+	ai_ship_data = {
+		fraction = {
+			base = 0
+			modifier = {
+				add = 30
+				uses_standard_ship_sizes = yes
+			}
+			modifier = {
+				factor = 2
+				pki_is_katzprotektorat = yes
+			}
+			modifier = {
+				factor = 1.5
+				is_preferred_weapons = weapon_type_strike_craft
+			}
+			modifier = {
+				factor = 1.5
+				has_valid_ai_personality = yes
+				OR = {
+					has_ai_personality = evangelising_zealots
+					has_ai_personality = spiritual_seekers
+					has_ai_personality = slaving_despots
+				}
+			}
+		}
+	}
 }
 
 katzen_cruiser = { #Battleship-Titan, designed to "sit back" and assist the fleet
@@ -117,7 +182,10 @@ katzen_cruiser = { #Battleship-Titan, designed to "sit back" and assist the flee
 	can_have_federation_design = no
 	enable_default_design = yes
 	potential_country = {
-		has_origin = origin_katzen
+		OR = {
+			has_origin = origin_katzen
+			pki_is_katzprotektorat_tier_3 = yes
+		}
 	}
 	prerequisites = {
 		tech_pki_cruiser
@@ -157,6 +225,42 @@ katzen_cruiser = { #Battleship-Titan, designed to "sit back" and assist the flee
 	required_component_set = "katzen_thruster_components"
 	required_component_set = "sensor_components"
 	required_component_set = "katzen_combat_computers"
+
+	ai_ship_data = {
+		fraction = {
+			base = 0
+			modifier = {
+				add = 55
+				uses_standard_ship_sizes = yes
+			}
+			modifier = {
+				factor = 2
+				pki_is_katzprotektorat = yes
+			}
+			modifier = {
+				factor = 1.5
+				is_preferred_weapons = weapon_type_strike_craft
+			}
+			modifier = {
+				factor = 1.5
+				has_valid_civic = civic_hive_devouring_swarm
+			}
+			modifier = {
+				factor = 1.5
+				is_machine_empire = yes
+			}
+			modifier = {
+				factor = 1.5
+				has_valid_ai_personality = yes
+				OR = {
+					has_ai_personality = honorbound_warriors
+					has_ai_personality = hegemonic_imperialists
+					has_ai_personality = democratic_crusaders
+					has_ai_personality = became_the_crisis
+				}
+			}
+		}
+	}
 }
 
 katzen_submarine = {

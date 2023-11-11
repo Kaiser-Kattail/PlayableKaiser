@@ -93,9 +93,12 @@ subject_can_be_integrated = {
         }
         custom_tooltip = {
             fail_text = pki_only_tier_3_subject_integration
-            AND = {
-                agreement_preset = preset_katzen
-                NOR = {
+            NAND = {
+                OR = {
+                    agreement_preset = preset_katzen
+                    agreement_preset = preset_katzen_gestalt
+                }
+                OR = {
                     specialist_tier = 1
                     specialist_tier = 2
                 }
@@ -121,7 +124,10 @@ subject_can_not_be_integrated = {
         custom_tooltip = {
             fail_text = pki_not_only_tier_3_not_subject_integration
             NAND = {
-                agreement_preset = preset_katzen
+                OR = {
+                    agreement_preset = preset_katzen
+                    agreement_preset = preset_katzen_gestalt
+                }
                 NOR = {
                     specialist_tier = 1
                     specialist_tier = 2
@@ -169,7 +175,10 @@ resource_subsidies_advanced = {
 
         modifier = {
             set = @set_factor_1
-            agreement_preset = preset_katzen
+            OR = {
+                agreement_preset = preset_katzen
+                agreement_preset = preset_katzen_gestalt
+            }
         }
     }
 
@@ -273,20 +282,35 @@ resource_subsidies_research = {
 
         modifier = {
             set = @set_factor_0_neg
-            agreement_preset = preset_katzen
+            OR = {
+                agreement_preset = preset_katzen
+                agreement_preset = preset_katzen_gestalt
+            }
         }
 
         modifier = {
             set = @set_factor_1_neg
-            agreement_preset = preset_katzen
-            has_active_specialization = specialist_katzprotektorat
+            OR = {
+                agreement_preset = preset_katzen
+                agreement_preset = preset_katzen_gestalt
+            }
+            OR = {
+                has_active_specialization = specialist_katzprotektorat
+                has_active_specialization = specialist_katzprotektorat_gestalt
+            }
             specialist_tier = 2
         }
 
         modifier = {
             set = @set_factor_2_neg
-            agreement_preset = preset_katzen
-            has_active_specialization = specialist_katzprotektorat
+            OR = {
+                agreement_preset = preset_katzen
+                agreement_preset = preset_katzen_gestalt
+            }
+            OR = {
+                has_active_specialization = specialist_katzprotektorat
+                has_active_specialization = specialist_katzprotektorat_gestalt
+            }
             specialist_tier = 3
         }
     }
@@ -317,7 +341,10 @@ joins_overlord_wars_none = {
         custom_tooltip = {
             fail_text = not_allowed_for_katzen_protektorat
             NOT = {
-                agreement_preset = preset_katzen
+                OR = {
+                    agreement_preset = preset_katzen
+                    agreement_preset = preset_katzen_gestalt
+                }
             }
         }
     }
@@ -369,7 +396,10 @@ joins_overlord_wars_defensive = {
         custom_tooltip = {
             fail_text = not_allowed_for_katzen_protektorat
             NOT = {
-                agreement_preset = preset_katzen
+                OR = {
+                    agreement_preset = preset_katzen
+                    agreement_preset = preset_katzen_gestalt
+                }
             }
         }
     }
@@ -415,7 +445,10 @@ joins_overlord_wars_offensive = {
         custom_tooltip = {
             fail_text = not_allowed_for_katzen_protektorat
             NOT = {
-                agreement_preset = preset_katzen
+                OR = {
+                    agreement_preset = preset_katzen
+                    agreement_preset = preset_katzen_gestalt
+                }
             }
         }
     }
@@ -469,7 +502,10 @@ joins_subject_wars_none = {
         custom_tooltip = {
             fail_text = not_allowed_for_katzen_protektorat
             NOT = {
-                agreement_preset = preset_katzen
+                OR = {
+                    agreement_preset = preset_katzen
+                    agreement_preset = preset_katzen_gestalt
+                }
             }
         }
     }
@@ -501,7 +537,10 @@ joins_subject_wars_defensive = {
         custom_tooltip = {
             fail_text = not_allowed_for_katzen_protektorat
             NOT = {
-                agreement_preset = preset_katzen
+                OR = {
+                    agreement_preset = preset_katzen
+                    agreement_preset = preset_katzen_gestalt
+                }
             }
         }
     }
@@ -549,7 +588,10 @@ joins_subject_wars_offensive = {
         custom_tooltip = {
             fail_text = not_allowed_for_katzen_protektorat
             NOT = {
-                agreement_preset = preset_katzen
+                OR = {
+                    agreement_preset = preset_katzen
+                    agreement_preset = preset_katzen_gestalt
+                }
             }
         }
     }
@@ -620,7 +662,10 @@ subject_cannot_expand = {
         custom_tooltip = {
             fail_text = not_allowed_for_katzen_protektorat
             NOT = {
-                agreement_preset = preset_katzen
+                OR = {
+                    agreement_preset = preset_katzen
+                    agreement_preset = preset_katzen_gestalt
+                }
             }
         }
         custom_tooltip = {

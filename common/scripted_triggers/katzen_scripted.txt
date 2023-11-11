@@ -3,3 +3,32 @@ pki_is_katzenartig_imperium = {
 		has_origin = origin_katzen
 	}
 }
+
+pki_is_katzprotektorat = {
+	OR = {
+		has_country_flag = pki_katzprotectorat
+		has_country_flag = pki_katzprotectorat_gestalt
+	}
+}
+
+pki_is_katzprotektorat_tier_2 = {
+	OR = {
+		is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 2}
+		is_specialist_subject_tier = { TYPE = katzprotektorat_gestalt TIER = 2}
+	}
+}
+
+pki_is_katzprotektorat_tier_3 = {
+	OR = {
+		is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 3}
+		is_specialist_subject_tier = { TYPE = katzprotektorat_gestalt TIER = 3}
+	}
+}
+
+pki_is_katzen_ship = {
+	OR = {
+		is_ship_size = katzen_panzer
+		is_ship_size = katzen_bomber
+		is_ship_size = katzen_cruiser
+	}
+}

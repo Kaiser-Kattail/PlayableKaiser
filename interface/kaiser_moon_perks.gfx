@@ -189,8 +189,38 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_specialist_tier_specialist_katzprotektorat_gestalt_1_off"
+		textureFile = "gfx/interface/subjugation/specialist_tiers/specialist_tier_katzprotektorat_1_off.dds"
+	}
+
+	spriteType = {
+		name = "GFX_specialist_tier_specialist_katzprotektorat_gestalt_1_on"
+		textureFile = "gfx/interface/subjugation/specialist_tiers/specialist_tier_katzprotektorat_1_on.dds"
+	}
+
+	spriteType = {
+		name = "GFX_specialist_tier_specialist_katzprotektorat_gestalt_2_off"
+		textureFile = "gfx/interface/subjugation/specialist_tiers/specialist_tier_katzprotektorat_2_off.dds"
+	}
+
+	spriteType = {
+		name = "GFX_specialist_tier_specialist_katzprotektorat_gestalt_2_on"
+		textureFile = "gfx/interface/subjugation/specialist_tiers/specialist_tier_katzprotektorat_2_on.dds"
+	}
+
+	spriteType = {
+		name = "GFX_specialist_tier_specialist_katzprotektorat_gestalt_3_off"
+		textureFile = "gfx/interface/subjugation/specialist_tiers/specialist_tier_katzprotektorat_3_off.dds"
+	}
+
+	spriteType = {
+		name = "GFX_specialist_tier_specialist_katzprotektorat_gestalt_3_on"
+		textureFile = "gfx/interface/subjugation/specialist_tiers/specialist_tier_katzprotektorat_3_on.dds"
+	}
+
+	spriteType = {
 		name = "GFX_message_katzprotektorat_level_up"
-		texturefile = "gfx/interface/icons/message/message_scholarium_level_up.dds"
+		textureFile = "gfx/interface/icons/message/message_katzprotektorat_level_up.dds"
 	}
 }
 

@@ -85,5 +85,85 @@ preset_katzen = {
 		from = {
 			has_origin = origin_katzen
 		}
+		is_gestalt = no
+	}
+}
+
+preset_katzen_gestalt = {
+	specialist_type = specialist_katzprotektorat_gestalt
+	term_data = {
+		resource_terms = {
+			{
+				key = resource_subsidies_advanced
+				value = 0.3
+			}
+		}
+		discrete_terms = {
+			{
+				key = specialist_type
+				value = specialist_katzprotektorat_gestalt
+			}
+			{
+				key = subject_integration
+				value = subject_can_not_be_integrated
+			}
+			{
+				key = subject_diplomacy
+				value = subject_can_do_diplomacy_but_not_vote
+			}
+			{
+				key = subject_expand
+				value = subject_can_expand
+			}
+			{
+				key = joins_overlord_wars
+				value = joins_overlord_wars_all
+			}
+			{
+				key = joins_subject_wars
+				value = joins_subject_wars_all
+			}
+			{
+				key = subject_holdings_limit
+				value = subject_holdings_limit_1
+			}
+			{
+				key = subject_loyalty
+				value = subject_loyalty_effects
+			}
+			{
+				key = protectorate
+				value = subject_is_not_protectorate
+			}
+		}
+	}
+
+	overlord_weight = {
+		base = 50
+		modifier = {
+			factor = 0.5
+			has_specialist_subject_type = { TYPE = bulwark }
+			NOT = { FROM = { is_specialist_subject_type = { TYPE = bulwark } } }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { is_specialist_subject_type = { TYPE = bulwark } }
+		}
+		modifier = {
+			factor = 1.2
+			num_rivals > 0
+		}
+	}
+
+	subject_weight = {
+		base =  10
+	}
+
+	potential = {
+		has_overlord_dlc = yes
+		from = {
+			has_origin = origin_katzen
+		}
+		is_gestalt = yes
 	}
 }

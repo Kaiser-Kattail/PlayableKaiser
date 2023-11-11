@@ -6,7 +6,7 @@ gov_pki_katprotektorat = {
 
     possible = {
         has_authority = auth_pki_katzprotektorat
-        has_country_flag = pki_katzprotectorat
+        pki_is_katzprotektorat = yes
     }
 
     weight = {

@@ -2,7 +2,6 @@ on_game_start = {
 	events = {
 		flusion.1
 		flusion.43
-		high_command.1
 	}
 }
 
@@ -32,6 +31,8 @@ on_monthly_pulse_country = {
 		centrism.65
 		pki_misc.15
 		pki_misc.14
+		pki_misc.211
+		pki_misc.220
 	}
 }
 
@@ -102,5 +103,18 @@ on_fleet_quantum_catapult = {
 on_tradition_picked = {
 	events = {
 		centrism.61
+	}
+}
+
+on_war_beginning = {
+	events = {
+		pki_misc.212
+		pki_misc.2122
+	}
+}
+
+on_war_lost = {
+	events = {
+		pki_misc.213
 	}
 }

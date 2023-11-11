@@ -991,7 +991,7 @@ pki_spawn_warforge_fleet = {
 	if = {
 		limit = {
 			space_owner = {
-				is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 1 }
+				pki_is_katzprotektorat = yes
 			}
 		}
 		every_system_planet = {
@@ -1001,6 +1001,26 @@ pki_spawn_warforge_fleet = {
 			add_modifier = {
 				modifier = pki_warforge_in_orbit
 				days = -1
+			}
+		}
+	}
+}
+
+pki_count_ships = {
+	every_controlled_ship = {
+		fleet = {
+			set_variable = {
+				which = pki_$SHIP$_count
+				value = 0
+			}
+		}
+		limit = {
+			is_ship_size = $SHIP$
+		}
+		fleet = {
+			change_variable = {
+				which = pki_$SHIP$_count
+				value = 1
 			}
 		}
 	}

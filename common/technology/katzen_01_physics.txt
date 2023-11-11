@@ -103,8 +103,12 @@ tech_pki_submarine = {
 		}
 	}
 
+	potential = {
+		pki_is_katzenartig_imperium = yes
+	}
+
 	modifier = {
-		cloaking_cooldown = 0.33
+
 	}
 
 	weight_modifier = {

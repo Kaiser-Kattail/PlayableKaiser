@@ -523,7 +523,7 @@ decision_katzen_war_forge = {
 			}
 			from = {
 				has_technology = tech_pki_warforge
-				is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 1}
+				pki_is_katzprotektorat = yes
 			}
 		}
 		NOT = {
@@ -543,6 +543,7 @@ decision_katzen_war_forge = {
 		}
 	}
 	effect = {
+		custom_tooltip = pki_warforge_decision
 		solar_system = {
 			spawn_megastructure = {
 				type = katzen_war_forge_0
