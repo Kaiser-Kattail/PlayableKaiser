@@ -1,5 +1,5 @@
 katzensoldaten_army = {
-	damage = 7.0
+	damage = 6.5
 	health = 2.0
 	morale = 2.5
 	morale_damage = 1.0
@@ -182,9 +182,9 @@ corrona_army = {
 }
 
 peacekeeper_army = {
-	damage = 4
-	health = 7
-	morale = 7
+	damage = 2
+	health = 3.5
+	morale = 4
 	defensive = yes
 	icon = GFX_army_type_imperial
 	potential = {
@@ -212,5 +212,30 @@ dominion_tracks = {
 	
 	potential = { 
 		always = no 
+	}
+}
+
+meowrine_company = {
+	damage = 8
+	health = 7.5
+	#morale = 2.5
+	morale_damage = 2.0
+	collateral_damage = 1.0
+	war_exhaustion = 3.0
+	has_morale = no
+	has_species = no
+	icon = GFX_army_type_gene_warrior
+	
+	resources = {
+		category = armies
+
+		upkeep = {
+			energy = 10
+			alloys = 0.25				
+		}
+	}
+	
+	potential = {		
+		always = no
 	}
 }

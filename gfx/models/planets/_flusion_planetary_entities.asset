@@ -1,5 +1,5 @@
 entity = {
-	name = "flusion_planet_entity"
+	name = "flusion_planet_01_entity"
 	pdxmesh = "planet_clouded_mesh"
 	
 	meshsettings = {

@@ -1025,3 +1025,212 @@ pki_count_ships = {
 		}
 	}
 }
+
+create_meowrines = {
+	if = {
+		limit = { planet_owner = { NOT = { has_country_flag = recruited_befreier } } }
+		create_fleet = {
+			name = "Legion Befreier"
+			effect = {
+				set_owner = prev.owner
+				while = {
+					count = 8
+					create_army_transport = {
+						army_type = meowrine_company
+					}
+				}
+				set_location = {
+					target = root
+				}
+			}
+		}
+		planet.owner = {
+			set_country_flag = recruited_befreier
+		}
+	}
+	else_if = {
+		limit = { planet_owner = { NOT = { has_country_flag = recruited_purrgund } } }
+		create_fleet = {
+			name = "Reichslegion Purrgund"
+			effect = {
+				set_owner = prev.owner
+				while = {
+					count = 8
+					create_army_transport = {
+						army_type = meowrine_company
+					}
+				}
+				set_location = {
+					target = root
+				}
+			}
+		}
+		planet.owner = {
+			set_country_flag = recruited_purrgund
+		}
+	}
+	else_if = {
+		limit = { planet_owner = { NOT = { has_country_flag = recruited_kattail } } }
+		create_fleet = {
+			name = "Reichslegion Kattail"
+			effect = {
+				set_owner = prev.owner
+				while = {
+					count = 8
+					create_army_transport = {
+						army_type = meowrine_company
+					}
+				}
+				set_location = {
+					target = root
+				}
+			}
+		}
+		planet.owner = {
+			set_country_flag = recruited_kattail
+		}
+	}
+	else_if = {
+		limit = { planet_owner = { NOT = { has_country_flag = recruited_gloria } } }
+		create_fleet = {
+			name = "Reichslegion Gloria"
+			effect = {
+				set_owner = prev.owner
+				while = {
+					count = 8
+					create_army_transport = {
+						army_type = meowrine_company
+					}
+				}
+				set_location = {
+					target = root
+				}
+			}
+		}
+		planet.owner = {
+			set_country_flag = recruited_gloria
+		}
+	}
+	else_if = {
+		limit = { planet_owner = { NOT = { has_country_flag = recruited_zerstorer } } }
+		create_fleet = {
+			name = "Legion Zerstörer"
+			effect = {
+				set_owner = prev.owner
+				while = {
+					count = 8
+					create_army_transport = {
+						army_type = meowrine_company
+					}
+				}
+				set_location = {
+					target = root
+				}
+			}
+		}
+		planet.owner = {
+			set_country_flag = recruited_zerstorer
+		}
+	}
+	else_if = {
+		limit = { planet_owner = { NOT = { has_country_flag = recruited_verteidiger } } }
+		create_fleet = {
+			name = "Legion Verteidiger"
+			effect = {
+				set_owner = prev.owner
+				while = {
+					count = 8
+					create_army_transport = {
+						army_type = meowrine_company
+					}
+				}
+				set_location = {
+					target = root
+				}
+			}
+		}
+		planet.owner = {
+			set_country_flag = recruited_verteidiger
+		}
+	}
+	else_if = {
+		limit = { planet_owner = { NOT = { has_country_flag = recruited_kettenbrecher } } }
+		create_fleet = {
+			name = "Legion Kettenbrecher"
+			effect = {
+				set_owner = prev.owner
+				while = {
+					count = 8
+					create_army_transport = {
+						army_type = meowrine_company
+					}
+				}
+				set_location = {
+					target = root
+				}
+			}
+		}
+		planet.owner = {
+			set_country_flag = recruited_kettenbrecher
+		}
+	}
+	else_if = {
+		limit = { planet_owner = { NOT = { has_country_flag = recruited_unserblich } } } #misspelled but that's how they were named originally so I won't change it
+		create_fleet = {
+			name = "Legion Unserblich"
+			effect = {
+				set_owner = prev.owner
+				while = {
+					count = 8
+					create_army_transport = {
+						army_type = meowrine_company
+					}
+				}
+				set_location = {
+					target = root
+				}
+			}
+		}
+		planet.owner = {
+			set_country_flag = recruited_unserblich
+		}
+	}
+	else_if = {
+		limit = { planet_owner = { NOT = { has_country_flag = recruited_wachter } } }
+		create_fleet = {
+			name = "Legion Wächter"
+			effect = {
+				set_owner = prev.owner
+				while = {
+					count = 8
+					create_army_transport = {
+						army_type = meowrine_company
+					}
+				}
+				set_location = {
+					target = root
+				}
+			}
+		}
+		planet.owner = {
+			set_country_flag = recruited_wachter
+		}
+	}
+	else = {
+		create_fleet = {
+			name = "Meowrine Legion"
+			effect = {
+				set_owner = prev.owner
+				while = {
+					count = 8
+					create_army_transport = {
+						army_type = meowrine_company
+					}
+				}
+				set_location = {
+					target = root
+				}
+			}
+		}
+	}
+}

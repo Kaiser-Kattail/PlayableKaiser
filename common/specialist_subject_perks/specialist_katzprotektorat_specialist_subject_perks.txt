@@ -45,9 +45,14 @@ pki_katzprotektorat_1_modifier = {
 				save_global_event_target_as = pki_katzprotektorat_prev_leader@prev
 				unassign_leader = prev
 			}
+			shift_ethic = ethic_fanatic_militarist
+			shift_ethic = ethic_materialist
 			change_government = {
-				authority = auth_pki_katzprotektorat
+				authority = auth_dictatorial
+				remove_invalid_civics = yes
 			}
+			set_male_ruler_title = RT_PKI_KATZGOUVERNEUR
+			set_female_ruler_title = RT_PKI_KATZGOUVERNEUR_FEMALE
 			create_leader = {
 				name = random
 				species = event_target:pki_katzen_species
@@ -128,18 +133,6 @@ pki_katzprotektorat_gestalt_1_modifier = {
 					"dark_blue"
 					"dark_blue"
 					"null"
-				}
-			}
-			if = {
-				limit = {
-					is_gestalt = no
-				}
-				ruler = {
-					save_global_event_target_as = pki_katzprotektorat_prev_leader@prev
-					unassign_leader = prev
-				}
-				change_government = {
-					authority = auth_pki_katzprotektorat
 				}
 			}
 		}
@@ -300,7 +293,7 @@ pki_katzprotektorat_2_leaders = {
 				leader_age_min = 30
 				leader_age_max = 50
 				effect = {
-
+					add_trait_no_notify = leader_trait_katzen_overseer
 				}
 				background_planet = event_target:flusionhome
 				background_job = bureaucrat

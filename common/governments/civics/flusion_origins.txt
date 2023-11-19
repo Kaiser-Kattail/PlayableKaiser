@@ -22,6 +22,10 @@ origin_katzen = {
 		trait = katzen_trait_martial_free
 	}
 
+	modifier = {
+		country_subject_acceptance_add = -10000
+	}
+
 	random_weight = {
 		base = -5
 	}

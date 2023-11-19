@@ -74,3 +74,41 @@ pki_recruiter_drone = {
         weight = @overlord_job_weight
     }
 }
+
+katzen_administrator = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_capital
+	clothes_texture_index = 1
+	icon = bureaucrat
+    can_set_priority = no
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+
+	resources = {
+		category = planet_administrators
+		upkeep = {
+			consumer_goods = 1
+		}
+	}
+
+	planet_modifier = {
+		pop_ethic_militarist_attraction_mult = 0.2
+	}
+
+    country_modifier = {
+        monthly_loyalty = 0.25
+    }
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+}

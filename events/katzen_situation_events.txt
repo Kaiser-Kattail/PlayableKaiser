@@ -171,5 +171,9 @@ situation_event = {
 		}
 		
 	}
+	option = {
+		name = katsit.11.a
+		
+	}
 }
 

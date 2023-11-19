@@ -54,12 +54,12 @@
 
     pki_katzen_trait_elite:0 "Großewichtigekatze"
     pki_katzen_trait_elite_desc:0 "This leader is an extremely important figure within Flusionian society, and their skills are far beyond average. They are given the latest in anti-aging technology and cybernetics in order to keep them alive."
+    pki_katzen_trait_elite_effect: "$t$Does not use Leader Capacity."
 
     leader_trait_ruler_kaiser_cattail:0 "The Kaiser"
     leader_trait_ruler_kaiser_cattail_desc:0 "Kaiser Kattail is a nigh-immortal entity of high charisma yet pronounced goofyness and megalomania."
     katzen_trait_martial_free:0 "Martial Discipline"
-    katzen_trait_martial_free_desc:0 "This species is incredibly disciplined, thanks to long-standing martial traditions. They will fight like no other on the battlefield and vow absolute loyalty to their nation. defending it to the very end."
-    katzen_trait_elite_effect: "$t$Does not use Leader Capacity."
+    katzen_trait_martial_free_desc:0 "This species is incredibly disciplined, thanks to long-standing martial traditions. They will fight like no other on the battlefield and vow absolute loyalty to their nation, defending it to the very end."
 
     trait_ruler_katzen_cruiser_focus:0 "Katzenkreuzer Production Focus"
     trait_ruler_katzen_cruiser_focus_desc:0 "This leader is intent on promoting the construction of Katzenkreuzers."
@@ -71,10 +71,10 @@
     trait_ruler_katzen_unterraumboot_focus_desc:0 "This leader is intent on promoting the construction of Unterraumboots."
 
     trait_pc_player_siegfried_world_preference:0 "Siegfried World Preference"
-    trait_pc_player_siegfried_world_preference_desc:0 "This species have evolved to prefer the endless bunkers and artillery batteries of a Siegfried World"
+    trait_pc_player_siegfried_world_preference_desc:0 "This species have evolved to prefer the endless bunkers and artillery batteries of a Siegfried World."
 
     trait_pc_pki_flusion_ecu_preference:0 "Flusio-Arcology Preference"
-    trait_pc_pki_flusion_ecu_preference_desc:0 "This species have evolved to prefer the endless cityscapes of the rich Flusio-Arcology"
+    trait_pc_pki_flusion_ecu_preference_desc:0 "This species have evolved to prefer the endless cityscapes of the rich Flusio-Arcology."
 
     # Civics/Origins
     origin_katzen:0 "Katzen Unification"
@@ -87,7 +87,7 @@
 
     # Planets
     pc_pki_flusion_ecu:0 "Flusio-Arcology"
-    pc_pki_flusion_ecu_desc:0 "The Flusio-Arcology makes full usage of Flusion's vast natural resources. The cities of Katown, Bundengrad and Teho have been transformed into gargantuan gigacities spanning large portions of the planet and capable of housing dozens of billions of inhabitants each. The rest of the planet has been altered to ecological perfection and now harbors a variety of climates fit for every single species native to Flusion"
+    pc_pki_flusion_ecu_desc:0 "The Flusio-Arcology makes full usage of Flusion's vast natural resources. The cities of Katown, Bundengrad and Teho have been transformed into gargantuan gigacities spanning large portions of the planet and capable of housing dozens of billions of inhabitants each. The rest of the planet has been altered to ecological perfection and now harbors a variety of climates fit for every single species native to Flusion."
     pc_pki_flusion_ecu_adj:0 "Flusio-Arcology"
 
     pc_player_siegfried_world_adj:0 "Siegfried"
@@ -234,7 +234,7 @@
     d_pki_flusion_societal_restructuring_desc:0 "Society has been redefined with these changes on our Flusio-Arcology. Our production is now limitless."
 
     # Opinions
-    opinion_katzen_militarism:0 "Hypermilitarists"
+    opinion_katzen_militarism:0 "Katzen Menace"
 
     # Techs
     tech_katzen_luxuries:0 "Katzen Civilian Good Production"
@@ -260,7 +260,7 @@
     building_katzen_civilian_forge:0 "Katzen Factories"
     building_katzen_civilian_forge_desc:0 "Massive industrial complexes dedicated to mixed industrial use."
     building_pki_flusion_fusion_power_plant: "Katzen Megareactor"
-    building_pki_flusion_fusion_power_plant_desc: "A colossal Katzen-built Fusion Reactor located under the Katzen capital, providing vast amounts of clean energy."
+    building_pki_flusion_fusion_power_plant_desc: "A colossal Katzen-built Fusion Reactor, providing vast amounts of clean energy."
     building_pki_katzen_terraformer: "Katzen Environmental Reshaper"
     building_pki_katzen_terraformer_desc: "This large array of complex structures helps the Katzens adapt the planet's environment to their liking, effectively rendering it more habitable and facilitating colonization efforts."
     building_pki_katzen_synthetizer: "Katzen Megarefineries"
@@ -276,7 +276,7 @@
     building_player_siegfried_centcom:0 "Siegfried Central Command"
     building_player_siegfried_centcom_desc:0 "This vast network of reinforced bunkers houses the administrative heart of a Katzen Siegfried World, ensuring its defenders are as efficient as possible."
     building_pki_katzen_outpost: "Katzen Recruitment Camp"
-    building_pki_katzen_outpost_desc: "REPLACE_PIECAT"
+    building_pki_katzen_outpost_desc: "A sprawling recruitment office, propaganda center, and barracks offers a live-fire training program and exercise regimen to coax the population into signing on to the Katzenarmee, for a better galaxy."
 
     job_pki_recruiter: "Katzen Recruiter"
     job_pki_recruiter_plural: "$job_pki_recruiter$s"
@@ -293,6 +293,17 @@
     mod_job_pki_recruiter_drone_add: "$job_pki_recruiter_drone$ Jobs"
     mod_job_pki_recruiter_drone_per_pop: "§G+1§! $job_pki_recruiter_drone$ Job per $VALUE$ Pops"
     mod_job_pki_recruiter_drone_per_pop_short: "\n§G+1§! £job_pki_recruiter_drone£ per $VALUE$ £pop£"
+
+    job_katzen_administrator: "Katzen Integration Overseer"
+    job_katzen_administrator_plural: "$job_katzen_administrator$s"
+    job_katzen_administrator_desc: "Officers trained to manage a planet and ensure a smooth Katzenification of the local populace."
+    job_katzen_administrator_effect_desc: "£job_katzen_administrator£ $job_katzen_administrator_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £loyalty£ §YLoyalty§! and §YMilitarist Ethic Attraction§!."
+    mod_job_katzen_administrator_add: "$job_katzen_administrator$ Jobs"
+    mod_job_katzen_administrator_per_pop: "§G+1§! $job_katzen_administrator$ Job per $VALUE$ Pops"
+    mod_job_katzen_administrator_per_pop_short: "\n§G+1§! £job_katzen_administrator£ per $VALUE$ £pop£"
+
+    leader_trait_katzen_overseer:0 "Katzenbürgermeister"
+    leader_trait_katzen_overseer_desc:0 "This leader is a transfer from specialized Katown training programs, and is qualified to enact Katzenification onto foreign worlds."
 
     mod_planet_building_katzen_civilian_forge_build_speed_mult: "REPLACE_PIECAT"
     mod_building_katzen_civilian_forge_max: "REPLACE_PIECAT"
@@ -363,11 +374,11 @@
 
     pki_misc.220.name: "Katzenartig releases [root.GetName]"
     pki_misc.220.desc: "After many years under the iron fist of the §YKatzenartig Imperium§!, we are finally free. Deciding we are not fit for the Imperium, Kaiser Kattail has released us and given us our well deserved freedom.\n\nAs the chains of subjugation are lifted from us, so too will the boons that the Imperium brought us will recede. Soon the peacekeepers will leave, along with any ships and leaders the Kaiser has lent us. We can once again write the story of our empire."
-    pki_misc.220.a: "Finally"
+    pki_misc.220.a: "Finally..."
 
     pki_misc.221.name: "Katzen Peacekeepers leave [capital_planet.GetName]"
-    pki_misc.221.desc: "The §YKatzen Peacekeepers§! that once protected our glorious capital have left, along with the rest of the planets within the [root.GetName].\n\nAnother step towards contiunuing our independence. £mod_country_naval_cap_add£"
-    pki_misc.221.a: "Excellent"
+    pki_misc.221.desc: "The §YKatzen Peacekeepers§! that once protected our glorious capital have left, along with the rest of the planets within the [root.GetName].\n\nAnother step towards continuing our independence. £mod_country_naval_cap_add£"
+    pki_misc.221.a: "Excellent!"
 
 
    
@@ -411,7 +422,7 @@
     mondkanone_proposition:0 "Starts the §Y$situation_mandakanone$§! situation. We may be able to §Rseize the moon§! at a later date, should we so desire."
     situation_mandakanone:0 "Project Mondkanone"
     situation_mandakanone_type:0 "Project Mondkanone"
-    situation_mandakanone_desc:0 "Kaiser Kattail has proposed a ludicrous project; the transformation of Flusion's second furthest moon, Muno, into a gargantuan defensive system against potential threats. Years of work and resource allocation will be required to complete this massive project."
+    situation_mandakanone_desc:0 "The Kaiser has declared that the potential for an alien invasion is far too great for Flusion to simply ignore, and as such has proposed a ludicrous project; placing a permanent defensive station in and on Flusion's furthest moon, Muno. The project will cost a massive amount of resources and take many years, however will permanently secure Flusion against a dangerous galaxy."
     approach_no_invest:0 "No investment"
     approach_no_invest_tooltip:0 "We cannot afford this right now."
     approach_low_invest:0 "Low investment"
@@ -421,13 +432,14 @@
     approach_big_invest:0 "Large investment"
     approach_big_invest_tooltip:0 "We will invest a large amount of alloys into this project."
     katsit.10.name:0 "Project Mondkanone"
-    katsit.10.desc:0 "The Kaiser, in a recent speech to the rest of Flusion, proposed Project Mondkanone; a plan to ensure Flusionian security across all of Flusion. The various nations are requested to contribute in any way they can."
+    katsit.10.desc:0 "Kaiser Kattail has today officially given the greenlight for what is perhaps going to be the greatest engineering project of Flusion's history. Conceptualized by the Kaiser himself and designed by the Katzenartig Imperium's finest minds, §YProject Mondkanone§! aims to construct a gargantuan railgun emplacement known as the Mondkanone embedded into the surface of Muno itself.\n\nThis marvelous device, measuring several kilometers in size, shall be capable of accelerating a kinetic projectile to a significant fraction of the speed of light across interplanetary distances, which should ensure the safety of Flusion's people in the event of a hostile incursion from potential extraflusional invaders.\n\nAlready, numerous bases have popped up on Muno's surface, laying the groundwork for Project Mondkanone's construction site which shall be overseen by an ambitious Katzen astronaut known as Fuzz Pawldrin. Alongside these bases are numerous shipments of both skilled personnel and excavation equipment being brought to Muno, which shall work tirelessly during the coming decades in order to bring the Kaiser's vision to reality. \n\nWhile Flusion's other nations have expressed concerns at this endeavor, Kaiser Kattail has personally reassured them that this project is, and will remain a defensive weapon meant to protect all of Flusion, and that worries of it being turned against Flusion itself are unfounded, even offering Flusion's leading powers to participate in the project as a show of goodwill."
     katsit.10.A:0 "No investment"
     katsit.10.B:0 "Low investment"
     katsit.10.C:0 "Medium investment"
     katsit.10.D:0 "Large investment"
     katsit.11.name:0 "Project Mondkanone Complete"
-    katsit.11.desc:0 "It is done. After years of design, labor, and material expense, Project Mondkanone has been completed. Flusion is now defended by an entire lunar body."
+    katsit.11.desc:0 "Following decades of uncertain, arduous and hazardous work, the finest minds and greatest workers of Katzenartig Imperium and Flusion have finally realized the impossible. Indeed, standing as a symbol of our unwavering determination to realizing the Kaiser's vision, the kilometers-large Mondkanone railgun now sits embedded into Muno's equator, keeping a watchful eye over our glorious Imperium and Flusion as a whole.\n\nThis momentous occasion was met with spectacular celebration across the entire Katzenartig Imperium, with the Kaiser himself giving a series of resounding speech congratulating and thanking all of the brave Katzens and Flusionians whose tireless work made this endeavor possible, once more reaffirming the Katzen species' unity behind the Kaiser's grand vision of a prosperous Flusion. Fuzz Pawldrin himself has been promoted to the Mondkanone's chief engineering supervisor, while famed general Douclaw MacCathur is now in charge of managing potential military operations involving the weapon.\n\nFlusion's other nations however had a more mixed reaction to the project's completion, with some even going as far as calling the Mondkanone little more than another one of the Kaiser's schemes to forcefully take over the world, claims which the Kaiser has and continues to systematically refuse... although it isn't certain how long he will be able to keep refuting them, as, consciously or not, everyone within the Imperium starting with the Kaiser knows that this project isn't the end, but merely the beginning."
+    katsit.11.a: "The Imperium's will, made reality."
     situation_mandakanone_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
    
     # Kaiser Moon
@@ -440,7 +452,7 @@
 
     situation_project_celestia:0 "Project Höchstedominanz"
     situation_project_celestia_type:0 "Project Höchstedominanz"
-    situation_project_celestia_desc:0 "Placeholder text until I can get someone else to make it :KaiserTroll:"
+    situation_project_celestia_desc:0 ""
     situation_project_celestia_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
    
     kmoon.1.title:0 "Project Dominance"
@@ -523,6 +535,9 @@
     edict_katzen_conquest_map:0 "Contact the Katzenvereinigungsbüro"
     edict_katzen_conquest_map_desc:0 "Access the Flusionian Conquest Map"
 
+    dont_build_here_pls:0 "A Grand Agenda"
+    dont_build_here_pls_desc: "The Kaiser has a particular agenda for this world. Until such time that said agenda can be fulfilled, it is heavily advised that this world remain undisturbed and uncolonized."
+
     stop_eating_naval_cap_you_hecker:0 "Flusionian Maintenance"
     stop_eating_naval_cap_you_hecker_desc:0 "Project Mondkanone is specially maintained, and as such provides its own naval capacity."
    
@@ -587,7 +602,7 @@
     tr_katzen_war_machine:0 "Katzen War Machine"
     tr_katzen_war_machine_delayed:0 "The war machine will span the galaxy, and bring about a new dawn."
     tr_katzen_planetside_garrisons:0 "Planetside Garrisons"
-    tr_katzen_planetside_garrisons_effect: "Every planet apart from §YFlusion§! gains a unique §YKatzenarmee Peacekeeper Garrison§! defensive army."
+    tr_katzen_planetside_garrisons_effect: "Every planet apart from §YFlusion§! gains a unique §YKatzenarmee Colonial Garrison§! defensive army."
     tr_katzen_planetside_garrisons_delayed:0 "We must reinforce our colonies, and ensure loyalty to Flusion and the Kaiser."
     tr_katzen_logistiks:0 "Katzenlogistiks"
     tr_katzen_logistiks_delayed:0 "The Logistical Corps are granted sweeping new powers to ensure our forces are well supplied."
@@ -628,6 +643,9 @@
     peacekeeper_army:0 "Peacekeeper Army"
     peacekeeper_army_desc:0 "A foreign taskforce sent to oversee and defend a Katzen colony, and to ensure loyalty to Flusion."
 
+    meowrine_company:0 "Meowrine Company"
+    meowrine_company_desc: "A company of meowrines, genetically and surgically augmented and trained to use power armor, they are the scalpel of the Imperium."
+
     katzen_colony:0 "Katzenkolonie"
     katzen_colony_desc:0 "This world is one of the colonies of our imperium, and as such is less productive. People tend to start families on the frontier more often, however."
 
@@ -664,20 +682,42 @@
     pki_misc.6.c.response: "I am the physical representation of Katzen militarism and I have done so since I was born and I will continue to do so for as long as I draw breath."
     pki_misc.6.hire_custom_tooltip: "§Y$NAME_gunfur$§! joins our empire as a §HLeader§!."
 
-    leader_trait_neumeyer:0 "Neumeyer's Order"
-    leader_trait_neumeyer_desc:0 "This leader promotes a philosophy of his own design - Neumeyerism. Along with bolstering planetary control through military rule, he alots additional influence to law enforcement, being made to serve as his personal lackeys."
-    NAME_neumeyer: "Emeownuel Neumeyer"
+    leader_trait_neumeyer:0 "Neumayer's Order"
+    leader_trait_neumeyer_desc:0 "This leader promotes a philosophy of his own design - Neumayerism. Along with bolstering planetary control through military rule, he alots additional influence to law enforcement, being made to serve as his personal lackeys."
+    NAME_neumeyer: "Emmeownuel Neumayer"
     pki_misc.18.title: "$NAME_neumeyer$"
     pki_misc.18.desc: "§HA well dressed, authoritative Katzen enters view. Sunglasses adorn his face, and after a brief moment they are taken off. He looks rather haughty, and finally looks at the screen to face the Kaiser.§!\n\n"Greetings."\n\n§HHis voice suggests a tyrant, a rather cold and disinterested tone.§!\n\n"I am a recent promotion to the rank of Katzgouverneur. What is my assignment?""
-    neumeyerdesc: "Neumeyer is an oppressive autocrat, enforcing his rule through the liberal use of truncheons and military force."
+    neumeyerdesc: "Neumayer is an oppressive autocrat, enforcing his rule through the liberal use of truncheons and military force."
     neumeyer_catch_phrase: "§L"Together, the unterskatzen will know their place."§!"
     pki_misc.18.a: "Who are you?"
-    pki_misc.18.a.response: "I am Katzgouverneur Emeownuel Neumeyer, as I'm sure you already know."
+    pki_misc.18.a.response: "I am Katzgouverneur Emmeownuel Neumayer, as I'm sure you already know."
     pki_misc.18.b: "What are you qualified to do?"
     pki_misc.18.b.response: "I can enforce the rule of law on any planet you assign me to. The lessers need to be thoroughly controlled."
     pki_misc.18.c: "You don't seem fond of foreigners."
     pki_misc.18.c.response: "Why should I be? They bring anarchy and disorder to our carefully constructed utopia. With my skillset, we can ensure they never cause us problems."
     pki_misc.18.hire_custom_tooltip: "§Y$NAME_neumeyer$§! joins our empire as a §HLeader§!."
+
+    leader_trait_schulz: "Mind of the Imperium"
+    leader_trait_schulz_desc: "This leader is an exceptionally skilled geneticist, surgeon, and military designer. With the creation of super soldiers, they are ready to serve the Kaiser."
+    leader_trait_schulz_effect: "Able to recruit §YMeowrine Legions§! when assisting research on a planet."
+    NAME_schulz: "Dr. Pawtto Schulz"
+    schulzdesc: "Dr. Pawtto Schulz is a brilliant mind, dedicated to augmenting and refining meowrines."
+    schulz_catch_phrase: "§L"Y'know, the serum the meowrines use helps keep your fur from falling out..."§!"
+    pki_paragons.1.title:0 "$NAME_schulz$"
+    pki_paragons.1.desc:0 "§HThe doctor is making use of a cane to enter view. He is clearly quite an old man, but the glint of cybernetics betrays the fact that he will live for quite some time.§!\n\n"Well, hello again!"\n\n§HHe is quite jovial sounding.§!\n\n"My formulas are always getting better, and my soldiers keep getting stronger. What do you say mein Kaiser?""
+    pki_paragons.1.a:0 "What was your old assignment?"
+    pki_paragons.1.a.response: "Well, you had me begin work on the Kaiser's- or, well, I suppose your legions. Legions of space meowrines, one might say! I am an expert at the creation of super soldiers."
+    pki_paragons.1.b:0 "How powerful are these soldiers?"
+    pki_paragons.1.b.response:0 "Hoo wee! With power armor, soldier serum, surgeries, genetic augmentation, weapons heavier than you or I could pick up... they hit like a hochgeschwindigkeitszug!"
+    pki_paragons.1.c:0 "How many can we recruit from you?"
+    pki_paragons.1.c.response:0 "If you got the supplies and the time, I can keep as many coming as you need."
+    pki_paragons.1.hire_custom_tooltip:0 "§Y$NAME_schulz$§! joins our empire as a §HLeader§!."
+    needs_schulz: "§RWe cannot recruit meowrines here if Dr. Pawtto Schulz is not assisting research on this world!§!"
+    meowrine_world:0 "Meowrine Facilities"
+    meowrine_world_desc:0 "Due to Dr. Pawtto Schulz, this world currently has the capability to produce legions of meowrines via planet decisions."
+    decision_create_kaiser_legion:0 "Recruit Meowrine Legion"
+    decision_create_kaiser_legion_desc:0 "We can recruit a legion of the Katzenartig Imperium's finest soldiers. This will be costly and time consuming, but well worth it."
+    decision_create_kaiser_legion_effect:0 "Spawns 8 powerful $meowrine_company$ armies on the planet's surface, which can embark to be used offensively."
 
     kaiserdesc: "Charismatic and mysterious, yet markedly goofy at times, the Kaiser is known for his utterly insane megalomaniac tendencies that drive him to seek the ultimately unattainable goal of conquering all that exists."
 
@@ -696,7 +736,7 @@
     kaiser_war_planet.7.desc:0 "More placeholder text to make someone else do :Trokk:"
     kaiser_war_planet.7.a:0 "Wunderbar!"
     kaiser_war_planet.8.title:0 "Project Höchstedominanz"
-    kaiser_war_planet.8.desc:0 "Sorry, am too lazy to write loc now"
+    kaiser_war_planet.8.desc:0 "Work has begun on the Kaiser's latest celestial weaponization project; The transformation of Nesar, a hostile and molten world, into fully operational and incredibly powerful warship. Using the engineering lessons learned from projects Mondkannone and Dominance, Project Höchstedominanz will act as the new flagship for the Katzenartig Navy.\n\nThe entire surface of the planet will be converted into a city, for housing the computing operations and crew for the enormous warship. Equipped with a railgun that absolutely dwarfs the comparatively small device on Project Mondkannone, the ship will be able to completely annihilate enemy fleets with it's combined complement of railguns, missile batteries, and hangar bays.\n\nThe project begins with the effort to cool down the high volcanic activity of Nesar, with efforts ranging from high-tech solutions such as machinery to slow tectonic activity and cool down the mantle, all the way to simply pouring water on the lava streams. Workers are provided with powerful suits, able to protect them from the high temperatures and toxic atmosphere of the highly volcanic world.\n\nCertain politicians on Flusion have expressed concern regarding the project, claiming that it may harm the economy of Flusion for little gain. Psychological evaluations have begun to figure out where they got these ridiculous, pacifistic ideas from."
 
     kaiser_planet_0:0 "Kaiser-Behemoth Planetcraft Construction Site"
     kaiser_planet_0_DESC:0 "The construction site for a future Kaiser Planet, an insane spacecraft built around an entire planet. Lots of work lies ahead."

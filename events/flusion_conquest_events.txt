@@ -1135,3 +1135,168 @@ country_event = { #work mfer
 		}
 	}
 }
+
+country_event = {
+	id = conquest.9
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		from = {
+			has_origin = origin_katzen
+		}
+		fromfrom = {
+			has_planet_flag = playerflusion
+		}
+		this = {
+			is_country_type = flusion_nation
+		}
+	}
+	immediate = {
+		if = {
+			limit = { from = { has_country_flag = war_with_solakia } }
+			event_target:solakia_flunat = {
+				every_owned_army = {
+					remove_army = yes
+				}
+				set_faction_hostility = {
+					set_hostile = no
+				}
+			}
+		}
+		else_if = {
+			limit = { from = { has_country_flag = war_with_cookie } }
+			event_target:cookie_flunat = {
+				every_owned_army = {
+					remove_army = yes
+				}
+				set_faction_hostility = {
+					set_hostile = no
+				}
+			}
+		}
+		else_if = {
+			limit = { from = { has_country_flag = war_with_kronk } }
+			event_target:kronk_flunat = {
+				every_owned_army = {
+					remove_army = yes
+				}
+				set_faction_hostility = {
+					set_hostile = no
+				}
+			}
+		}
+		else_if = {
+			limit = { from = { has_country_flag = war_with_ravka } }
+			event_target:ravkan_flunat = {
+				every_owned_army = {
+					remove_army = yes
+				}
+				set_faction_hostility = {
+					set_hostile = no
+				}
+			}
+		}
+		else_if = {
+			limit = { from = { has_country_flag = war_with_zousa } }
+			event_target:zousan_flunat = {
+				every_owned_army = {
+					remove_army = yes
+				}
+				set_faction_hostility = {
+					set_hostile = no
+				}
+			}
+		}
+		else_if = {
+			limit = { from = { has_country_flag = war_with_droog } }
+			event_target:droog_flunat = {
+				every_owned_army = {
+					remove_army = yes
+				}
+				set_faction_hostility = {
+					set_hostile = no
+				}
+			}
+		}
+		else_if = {
+			limit = { from = { has_country_flag = war_with_ezic } }
+			event_target:ezic_flunat = {
+				every_owned_army = {
+					remove_army = yes
+				}
+				set_faction_hostility = {
+					set_hostile = no
+				}
+			}
+		}
+		else_if = {
+			limit = { from = { has_country_flag = war_with_mercuria } }
+			event_target:mercuria_flunat = {
+				every_owned_army = {
+					remove_army = yes
+				}
+				set_faction_hostility = {
+					set_hostile = no
+				}
+			}
+		}
+		else_if = {
+			limit = { from = { has_country_flag = war_with_cyatianala } }
+			event_target:cyatianala_flunat = {
+				every_owned_army = {
+					remove_army = yes
+				}
+				set_faction_hostility = {
+					set_hostile = no
+				}
+			}
+		}
+		else_if = {
+			limit = { from = { has_country_flag = war_with_yinja } }
+			event_target:yinjite_flunat = {
+				every_owned_army = {
+					remove_army = yes
+				}
+				set_faction_hostility = {
+					set_hostile = no
+				}
+			}
+		}
+		else_if = {
+			limit = { from = { has_country_flag = war_with_laurandaar } }
+			event_target:lauranaise_flunat = {
+				every_owned_army = {
+					remove_army = yes
+				}
+				set_faction_hostility = {
+					set_hostile = no
+				}
+			}
+		}
+		else_if = {
+			limit = { from = { has_country_flag = war_with_symbie } }
+			event_target:symbie_flunat = {
+				every_owned_army = {
+					remove_army = yes
+				}
+				set_faction_hostility = {
+					set_hostile = no
+				}
+			}
+		}
+		else_if = {
+			limit = { from = { has_country_flag = war_with_harania } }
+			event_target:haranian_flunat = {
+				every_owned_army = {
+					remove_army = yes
+				}
+				set_faction_hostility = {
+					set_hostile = no
+				}
+			}
+		}
+		event_target:playerflusion = {
+			set_owner = event_target:katzenartig
+		}
+	}
+}

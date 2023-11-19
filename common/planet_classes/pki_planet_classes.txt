@@ -1,5 +1,5 @@
 pc_player_siegfried_world = {
-	entity = "pc_giga_siegfried_world"
+	entity = "pc_giga_siegfried_world_01_entity"
 	overlay_entity = "pc_giga_siegfried_world_dummy_entity"
 	entity_scale = @planet_standard_scale
 	enable_tilt = no # this doesn't actually disable tilt... but it does keep it from tipping over 90 degrees, don't ask me why
@@ -48,7 +48,7 @@ pc_player_siegfried_world = {
 }
 
 pc_pki_flusion_ecu = {
-	entity = "flusion_planet_ecugaia" #planetclasses always try to append xx_entity to whatever is listed as their entity so its best practice to have the entity actually just be 01_entity
+	entity = "flusion_planet_ecugaia_01_entity" #planetclasses always try to append xx_entity to whatever is listed as their entity so its best practice to have the entity actually just be 01_entity
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_gaia
 

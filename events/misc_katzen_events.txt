@@ -23,7 +23,7 @@ country_event = {
 			while = {
 				count = 1
 				create_army = {
-					name = "Katzenarmee Peacekeeper Garrison"
+					name = "Katzenarmee Colonial Garrison"
 					owner = event_target:katzenartig
 					species = owner_main_species
 					type = "peacekeeper_army"
@@ -838,6 +838,8 @@ country_event = {
 	}
 }
 
+
+
 ### Vassal Stuff
 
 event = {
@@ -882,6 +884,9 @@ country_event = {
 	trigger = {
 		pki_is_katzprotektorat = yes
 		NOT = { is_at_war_with = event_target:katzenartig }
+		NOT = {
+			has_war_flag = pki_war_peacekeepers_attack
+		}
 	}
 	immediate = {
 		every_controlled_planet = {
@@ -898,7 +903,7 @@ country_event = {
 				count = @pki_vassal_peacekeeper_amt
 				create_army = {
 					name = "Katzenarmee Peacekeeper Garrison"
-					owner = event_target:katzenartig
+					owner = root
 					species = event_target:pki_katzen_species
 					type = "peacekeeper_army"
 
@@ -927,12 +932,11 @@ country_event = {
 		from = {
 			set_war_flag = pki_war_peacekeepers_attack
 		}
-		every_controlled_planet = {
+		every_owned_planet = {
 			limit = {
 				any_planet_army = {
 					army_type = peacekeeper_army
 				}
-				is_colony = yes
 			}
 			every_planet_army = {
 				limit = {

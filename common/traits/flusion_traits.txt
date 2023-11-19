@@ -229,6 +229,35 @@ leader_trait_neumeyer = {
 	destiny_background_icon = "GFX_leader_background_destiny_1"
 }
 
+leader_trait_schulz = {
+	destiny_trait = yes
+	ethic_destiny_trait = no
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_legendary_xenophobe_one"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_self_modifier = {
+		potential = {
+			always = yes
+		}
+		leader_scientists_physics_research_produces_add = 2
+		leader_scientists_society_research_produces_add = 3
+		leader_scientists_engineering_research_produces_add = 2
+		mult = trigger:has_skill
+	}
+	leader_potential_add = {
+		always = no
+	}
+	leader_class = { scientist }
+	custom_tooltip_with_modifiers = leader_trait_schulz_effect
+	selectable_weight = 0
+	destiny_background_icon = "GFX_leader_background_destiny_1"
+}
+
 pki_katzen_trait_elite = {
 	inline_script = {
 		script = trait/icon
@@ -245,4 +274,29 @@ pki_katzen_trait_elite = {
 	leader_class = all
 	initial = no
 	randomized = no
+	custom_tooltip_with_modifiers = pki_katzen_trait_elite_effect
+}
+
+leader_trait_katzen_overseer = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_micromanager"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = none
+	}
+	modifier = {
+		planet_stability_add = 10
+		planet_jobs_upkeep_mult = -0.1
+		job_katzen_administrator_add = 1
+	}
+	
+	leader_class = { governor }
+	initial = no
+	randomized = no
+	selectable_weight = 0
+	leader_potential_add = {
+		always = no
+	}
 }

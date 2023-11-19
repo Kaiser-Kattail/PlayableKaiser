@@ -56,7 +56,7 @@ situation_mandakanone = {
 		modifier = {
 			desc = string_current_approach
 			current_situation_approach = approach_no_invest
-			add = 0
+			add = 0.25
 		}
 		modifier = {
 			desc = string_current_approach
