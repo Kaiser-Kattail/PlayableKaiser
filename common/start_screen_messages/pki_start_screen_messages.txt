@@ -1,0 +1,20 @@
+part = {
+    location = 0
+    localization = "START_SCREEN_PKI_PRESET"
+
+    trigger = {
+        AND = {
+            has_country_flag = kaiser_preset
+            has_origin = origin_katzen
+        }
+    }
+}
+
+#part = {
+#    location = 1
+#    localization = START_SCREEN_PKI_DOCS
+#
+#    trigger = {
+#        has_origin = origin_katzen
+#    }
+#}

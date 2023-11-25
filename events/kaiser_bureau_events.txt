@@ -310,11 +310,3 @@ country_event = {
 		}
 	}
 }
-
-country_event = {
-	id = kaiser_bureau.999
-	title = "kaiser_bureau.999.name"
-	desc = "kaiser_bureau.999.desc"
-
-	is_triggered_only = yes
-}

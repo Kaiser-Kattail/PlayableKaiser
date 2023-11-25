@@ -1,7 +1,7 @@
 origin_katzen = {
 	is_origin = yes
 	icon = "gfx/interface/icons/origins/origins_life_seeded.dds"
-	picture = GFX_origin_life_seeded
+	picture = GFX_evt_flusion
 	
 	description = "civic_tooltip_flusion_effects"
 
@@ -13,8 +13,6 @@ origin_katzen = {
 		}
 	}
 
-
-
 	flags = { custom_start_screen }
 	initializers = { flusion_new_initializer }
 
@@ -23,7 +21,7 @@ origin_katzen = {
 	}
 
 	modifier = {
-		country_subject_acceptance_add = -10000
+		country_subject_acceptance_add = -1000
 	}
 
 	random_weight = {

@@ -222,5 +222,11 @@ spriteTypes = {
 		name = "GFX_message_katzprotektorat_level_up"
 		textureFile = "gfx/interface/icons/message/message_katzprotektorat_level_up.dds"
 	}
+
+	spriteType = {
+		name = "GFX_wg_pki_subjugation"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_isvassal.dds"
+	}
+
 }
 

@@ -57,8 +57,8 @@ katzenartig_imperium= {
 		clothes=4
 		ruler_title = "PKI_PRESCRIPTED_RULER_TITLE_MALE"
 		ruler_title_female = "PKI_PRESCRIPTED_RULER_TITLE_FEMALE"
-		trait="trait_ruler_charismatic"
-		leader_class="admiral"
+		trait= "trait_ruler_charismatic"
+		leader_class= "commander"
 	}
 
 	flags = {
@@ -69,7 +69,7 @@ katzenartig_imperium= {
 	ignore_portrait_duplication=no
 	room="personality_hegemonic_imperialists_room"
 	spawn_enabled=no
-	ethic="ethic_materialist"
+	ethic="ethic_xenophile"
 	ethic="ethic_fanatic_militarist"
 	civics={
 		"civic_distinguished_admiralty"

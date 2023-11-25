@@ -760,7 +760,6 @@ guiTypes = {
 				position = { x = 485 y = -297 }
 				size = { x = 250 y = 60 }
 				spacing = 1
-				scrollbartype = ""
 				borderSize = { x = 0 y = 0 }
 				Orientation = "UPPER_LEFT"
 			}

@@ -28,10 +28,9 @@ country_event = {
 			CATCH_PHRASE = schulz_catch_phrase
 		}
 		last_created_leader = {
-			add_trait = subclass_scientist_analyst
+			add_trait = subclass_scientist_governor
 			add_trait = leader_trait_schulz
 			add_trait = pki_katzen_trait_elite
-			add_trait = leader_trait_experimenter
 			add_trait = leader_trait_stubborn
 			set_age = 63
 			save_global_event_target_as = schulz
@@ -81,67 +80,81 @@ country_event = {
 	}
 }
 
-fleet_event = {
-	id = pki_paragons.2
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		from = {
-			exists = planet
-			planet_owner  = { has_origin = origin_katzen}
-			any_fleet_in_orbit = {
-				is_ship_class = shipclass_science_ship
-				owner = { has_origin = origin_katzen }
-				leader = {
-					has_trait = leader_trait_schulz
-				}
-			}
-		}
-	}
-
-	immediate = {
-		from = {
-			add_modifier = {
-				modifier = meowrine_world
-				days = -1
-			}
-			planet_event = {
-				id = pki_paragons.3
-				days = 30
-			}
-		}
-	}
-}
-
-planet_event = {
-	id = pki_paragons.3
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		if = {
-			limit = {
-				any_fleet_in_orbit = {
-					is_ship_class = shipclass_science_ship
-					owner = { has_origin = origin_katzen }
-					leader = {
-						has_trait = leader_trait_schulz
-					}
-				}
-			}
-			add_modifier = {
-				modifier = meowrine_world
-				days = -1
-			}
-			planet_event = {
-				id = pki_paragons.3
-				days = 30
-			}
-		}
-		else = {
-			remove_modifier = meowrine_world
-		}
-	}
-
-}
+#country_event = {
+#	id = pki_paragons.2
+#	title = pki_paragons.2.title
+#	desc = pki_paragons.2.desc
+#	show_sound = par_portrait_07
+#	picture = GFX_leader_recruitment_bg_renowned
+#	is_triggered_only = yes
+#	fire_only_once = yes
+#	trigger = {
+#		has_paragon_dlc = yes
+#	}
+#
+#	event_window_type = leader_recruit
+#
+#	immediate = {
+#		ethic_leader_creator = {
+#			SPECIES_CLASS = MAM
+#			LEADER_PORTRAIT = mam14
+#			CLASS = official
+#			NAME = NAME_loris
+#			LEVEL = 4
+#			GENDER = male
+#			IMMORTAL = no
+#			ETHIC = materialist
+#			DESC = lorisdesc
+#			CATCH_PHRASE = loris_catch_phrase
+#		}
+#		last_created_leader = {
+#			add_trait = subclass_official_governor
+#			add_trait = leader_trait_architectural_interest
+#			add_trait = pki_katzen_trait_elite
+#			add_trait = leader_trait_
+#			set_age = 63
+#			save_global_event_target_as = loris
+#		}
+#	}
+#
+#	picture_event_data = {
+#		portrait = event_target:ethic_leader
+#		room = ethic_spaceship_room
+#	}
+#
+#	option = {
+#		name = DISMISS
+#		tag = dismiss_leader
+#		hidden_effect = {
+#			event_target:loris = {
+#				kill_leader = {
+#					show_notification = no
+#				}
+#			}
+#		}
+#	}
+#	option = {
+#		name = pki_paragons.2.a
+#		response_text = pki_paragons.2.a.response
+#		is_dialog_only = yes
+#	}
+#	option = {
+#		name = pki_paragons.2.b
+#		response_text = pki_paragons.2.b.response
+#		is_dialog_only = yes
+#	}
+#	option = {
+#		name = pki_paragons.2.c
+#		response_text = pki_paragons.2.c.response
+#		is_dialog_only = yes
+#	}
+#	option = {
+#		name = HIRE
+#		tag = hire_leader
+#		hidden_effect = {
+#			ethic_leader_hire_effect = {
+#				GLOBAL_EVENT_TARGET = loris
+#			}
+#		}
+#	}
+#}

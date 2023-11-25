@@ -174,7 +174,7 @@ resource_subsidies_advanced = {
         }
 
         modifier = {
-            set = @set_factor_1
+            set = @set_factor_0
             OR = {
                 agreement_preset = preset_katzen
                 agreement_preset = preset_katzen_gestalt

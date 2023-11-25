@@ -5,7 +5,6 @@ gov_pki_katprotektorat = {
     should_force_rename = yes
 
     possible = {
-        has_authority = auth_pki_katzprotektorat
         pki_is_katzprotektorat = yes
     }
 
