@@ -48,9 +48,10 @@ country_event = {
 	immediate = {
 		set_country_flag = starting_event
 		save_global_event_target_as = katzenartig
-		owner_species = {
+		owner_main_species = {
 			save_global_event_target_as = pki_katzen_species
 		}
+
 		#	#DOCS
 
 		#	begin_event_chain = {
@@ -91,30 +92,30 @@ country_event = {
 
 		#	
 		#END DOCS
-			
+
 		set_country_flag = pki_hasnt_used_ehve
 
 		add_modifier = {
-			modifier = no_ftl_capability days = -1
+			modifier = no_ftl_capability
+			days = -1
 		}
 		#Target flusion
-		every_galaxy_planet = { 
+		every_galaxy_planet = {
 			if = {
 				limit = {
 					solar_system = { has_star_flag = flusion_system }
-					}	
-				save_global_event_target_as = jublio_system
 				}
+				save_global_event_target_as = jublio_system
+			}
 			if = {
 				limit = {
-						planet = { has_planet_flag = gigaflusion }
-					}
-				save_global_event_target_as = flusionhome
+					planet = { has_planet_flag = gigaflusion }
 				}
+				save_global_event_target_as = flusionhome
 			}
+		}
 
 		#Leader Portraits
-
 		create_species = {
 			name = "Imperial Katzen"
 			plural = "Imperial Katzens"
@@ -127,12 +128,11 @@ country_event = {
 				trait = trait_talented
 				trait = trait_venerable
 			}
-			
+
 			effect = {
 				set_global_flag = kaiser_portrait_defined
 				save_global_event_target_as = kaiser_portrait_hd
 			}
-			
 		}
 
 		#Here comes funny kaiser
@@ -152,9 +152,7 @@ country_event = {
 				set_global_flag = kaiser_portrait_defined
 				save_global_event_target_as = kaiser_portrait_pvz
 			}
-
 		}
-		
 
 		#Make the soulbot species
 		create_species = {
@@ -174,237 +172,12 @@ country_event = {
 			}
 		}
 
-		event_target:flusionhome = {
-		#Flusion Species
-		#Haranians
-		create_species = {
-			name = "Haranian"
-			plural = "Haranians"
-			class = HUM
-			portrait = humanoid_05
-			homeworld = this
-			traits = {
-				trait = trait_pc_continental_preference
-				trait = trait_intelligent
-				trait = trait_decadent
-			}
-			effect = {
-				save_global_event_target_as = haranians
-			}
-		} 
-		#Lauranaise
-		 create_species = {
-			name = "Lauranaise"
-			plural = "Lauranaise"
-			class = REP
-			portrait = rep8
-			homeworld = this
-			traits = {
-				trait = trait_pc_continental_preference
-				trait = trait_rapid_breeders
-			}
-			effect = {
-				save_global_event_target_as = lauranaise
-			}
-		}
-		 #SYmbies
-		 create_species = {
-			name = "Wacegi"
-			plural = "Wacegis"
-			class = FUN
-			portrait = fun11
-			homeworld = this
-			traits = {
-				trait = trait_pc_continental_preference
-				trait = trait_strong
-				trait = trait_nomadic
-			}
-			effect = {
-				save_global_event_target_as = symbies
-			}
-		}
-		 #Yinjites
-		 create_species = {
-			name = "Yinjite"
-			plural = "Yinjites"
-			class = HUM
-			portrait = humanoid_hp_09
-			homeworld = this
-			traits = {
-				trait = trait_pc_continental_preference
-				trait = trait_industrious
-				trait = trait_sedentary
-			}
-			effect = {
-				save_global_event_target_as = yinjites
-			}
-		}
-			#Ezics
-				create_species = {
-					name = "Zuspri"
-					plural = "Zuspri"
-					class = REP
-					portrait = rep10
-					homeworld = this
-					traits = {
-						trait = trait_pc_continental_preference
-						trait = trait_venerable
-						trait = trait_adaptive
-						trait = trait_strong
-						trait = trait_slow_learners
-						trait = trait_quarrelsome
-						trait = trait_slow_breeders
-					}
-					effect = {
-						save_global_event_target_as = ezics
-					}
-				}
-
-			#Kronks
-				create_species = {
-					name = "Kronk"
-					plural = "Kronks"
-					class = ART
-					portrait = art15
-					homeworld = this
-					traits = {
-						trait = trait_pc_continental_preference
-						trait = trait_industrious
-						trait = trait_rapid_breeders
-						trait = trait_sedentary
-						trait = trait_repugnant
-					}
-					effect = {
-						save_global_event_target_as = kronks
-					}
-				}
-
-			#Roqualians
-				create_species = {
-					name = "Roqualian"
-					plural = "Roqualians"
-					class = HUM
-					portrait = human
-					homeworld = this
-					traits = {
-						trait = trait_pc_continental_preference
-						trait = trait_intelligent
-						trait = trait_charismatic
-						trait = trait_resilient
-						trait = trait_wasteful
-					}
-					effect = {
-						save_global_event_target_as = solakians
-					}
-				}
-
-			#Mercurians
-				create_species = {
-					name = "Mercurian"
-					plural = "Mercurians"
-					class = PLANT
-					portrait = pla14
-					homeworld = this
-					traits = {
-						trait = trait_pc_continental_preference
-						trait = trait_intelligent
-						trait = trait_sedentary
-						trait = trait_wasteful
-					}
-					effect = {
-						save_global_event_target_as = mercurians
-					}
-				}
-			#Ravkanians
-			create_species = {
-				name = "Ravkan"
-				plural = "Ravkans"
-				class = HUM
-				portrait = humanoid_hp_01
-				homeworld = this
-				traits = {
-					trait = trait_pc_continental_preference
-					trait = trait_intelligent
-					trait = trait_sedentary
-					trait = trait_wasteful
-				}
-				effect = {
-					save_global_event_target_as = ravkans
-				}
-			}
-			
-			#Zousanians
-			create_species = {
-				name = "Linterian"
-				plural = "Linterians"
-				class = AVI
-				portrait = avi11
-				homeworld = this
-				traits = {
-					trait = trait_pc_continental_preference
-					trait = trait_talented
-					trait = trait_traditional
-					trait = trait_decadent
-				}
-				effect = {
-					save_global_event_target_as = zousans
-				}
-			}
-
-			#Cookians
-				create_species = {
-					name = "Galletian"
-					plural = "Galletians"
-					class = FUN
-					portrait = fun1
-					homeworld = this
-					traits = {
-						trait = trait_pc_continental_preference
-						trait = trait_delicious
-						trait = trait_erudite
-						trait = trait_wasteful
-					}
-					effect = {
-						save_global_event_target_as = cookians
-					}
-				}
-			#Droog
-			create_species = {
-				name = "Droog"
-				plural = "Droog"
-				class = HUM
-				portrait = humanoid_03
-				homeworld = this
-				traits = {
-					trait = trait_pc_continental_preference
-					trait = trait_strong
-				}
-				effect = {
-					save_global_event_target_as = droog
-				}
-			}
-
-			#Cyat
-			create_species = {
-				name = "Cyat"
-				plural = "Cyats"
-				class = MAM
-				portrait = mam14
-				homeworld = this
-				traits = {
-					trait = trait_pc_continental_preference
-					trait = trait_strong
-				}
-				effect = {
-					save_global_event_target_as = cyatianalas
-				}
-			}
-		}
+		pki_create_flusion_nations = yes
 
 		create_leader = {
 			name = NAME_Kattail
 			species = event_target:kaiser_portrait_hd
-			class = admiral
+			class = commander
 			skill = 4
 			set_age = 189
 			randomize_traits = no
@@ -413,17 +186,20 @@ country_event = {
 				trait = trait_ruler_charismatic_2
 				trait = trait_ruler_military_pioneer
 				trait = leader_trait_intimidator
-				trait = subclass_admiral_strategist
+				trait = subclass_commander_councilor
 			}
 			gender = male
 			immortal = yes
+			background_job = none
 			background_ethic = ethic_fanatic_militarist
+			background_planet = event_target:playerflusion
 
 			effect = {
 				set_leader_flag = kaiser_kattail
 				set_leader_flag = legendary_leader
 				set_leader_flag = immune_to_negative_traits
 				set_leader_flag = leader_death_events_blocked
+				set_leader_flag = flusion_modified
 				save_global_event_target_as = kaiser_kattail
 			}
 			custom_description = PKI_KAISER_DESC
@@ -442,138 +218,21 @@ country_event = {
 			}
 		}
 
-		random_owned_leader = {
-			limit = {
-				leader_class = governor
-				NOT = {
-					has_leader_flag = flusion_modified
-				}
-			}
-			set_leader_flag = kill_yourself_now
-			kill_leader = { show_notification = no }
-		}
-
-		random_owned_leader = {
-			limit = {
-				leader_class = scientist
-				NOT = {
-					has_leader_flag = flusion_modified
-				}
-			}
-			set_gender = male
-			set_name = "NAME_Pawlbert"
-			set_leader_flag = flusion_modified
-			add_trait = pki_katzen_trait_elite
-		}
-
-	#	random_owned_leader = {
-	#		limit = {
-	#			leader_class = scientist
-	#			NOT = {
-	#				has_leader_flag = flusion_modified
-	#			}
-	#		}
-	#		set_is_female = yes
-	#		set_name = "Gatorynn"
-	#		set_leader_flag = flusion_modified
-	#		add_trait = leader_trait_stubborn
-	#		add_trait = pki_katzen_trait_elite
-	#	}
-
-		# random_owned_leader = {
-		# 	limit = {
-		# 		leader_class = scientist
-		# 		NOT = {
-		# 			has_leader_flag = flusion_modified
-		# 		}
-		# 	}
-		# 	change_species = event_target:ezics
-		# 	set_is_female = yes
-		# 	change_leader_portrait = species
-		# 	set_name = "Karrette"
-		# 	set_leader_flag = flusion_modified
-		# 	add_trait = pki_katzen_trait_elite
-		# }
-
-	#Create Pawtton
-		create_leader = {
-			class = general
-			species = owner_main_species
-			name = "Meorge Pawtton"
-			gender = male
-			skill = 3
-			immortal = yes
-			traits = {
-				trait = pki_katzen_trait_elite
-				trait = katzen_trait_nukelad
-			}
-		}	
-		last_created_leader = {
-			set_leader_flag = pawtton
-			save_global_event_target_as = pawtton
-			clear_global_event_target = kaiser_portrait
-		}
-
-	#Create Loris
-		create_leader = {
-			class = governor
-			species = owner_main_species
-			name = "Loris Von Kattensbach"
-			gender = male
-			skill = 3
-			immortal = yes
-			traits = {
-				trait = pki_katzen_trait_elite
-				trait = leader_trait_architectural_interest
-				trait = leader_trait_army_veteran
-			}
-		}
-		last_created_leader = {
-			change_leader_portrait = lorisvanilla
-			set_leader_flag = loris
-			save_global_event_target_as = loris
-		}
-
-		event_target:playerflusion = {
-			assign_leader = event_target:loris
-		}
-
-	#Create Douclaw
-		create_leader = {
-			class = admiral
-			species = owner_main_species
-			name = "Douclaw MacCathur"
-			gender = male
-			skill = 3
-			immortal = yes
-			set_age = 57
-			traits = {
-				trait = pki_katzen_trait_elite
-				trait = katzen_trait_nukelad
-				trait = katzen_trait_blitzkrieg
-			}
-		}
-		last_created_leader = {
-			change_leader_portrait = douclaw
-			set_leader_flag = douclaw
-			save_global_event_target_as = douclaw
-		}
-
 		create_country = {
 			name = "NAME_katzen_warforge"
 			type = pki_katzen_ship
 			auto_delete = no
 			use_hostilities_from = root
-			flag={
-				icon={
-					category="domination"
-					file="domination_8.dds"
+			flag = {
+				icon = {
+					category = "domination"
+					file = "domination_8.dds"
 				}
-				background={
-					category="backgrounds"
-					file="v.dds"
+				background = {
+					category = "backgrounds"
+					file = "v.dds"
 				}
-				colors={
+				colors = {
 					"blue"
 					"dark_blue"
 					"black"
@@ -591,554 +250,8 @@ country_event = {
 				save_global_event_target_as = pki_warforge_country
 			}
 		}
-	#Create Flusion Nations
-	#Haranians
-	create_country = {
-		name = "NAME_Haranian"
-		adjective = "NAME_Haranians"
-		ethos = {
-			ethic = ethic_authoritarian
-			ethic = ethic_xenophobe
-			ethic = ethic_pacifist
-		}
-		authority = auth_imperial
-		civics = random
-		origin = origin_default_pre_ftl
-		flag = random
-		species = event_target:haranians
-		type = flusion_nation
-		effect = {
-			save_global_event_target_as = haranian_flunat
-			set_country_flag = flusion_nation_haranian
-		}
-	}
-	event_target:haranian_flunat = {
-		create_leader = {
-			class = general
-			species = event_target:haranian
-			name = "Fantasia"
-			skill = 5
-			set_age = 52
-			gender = female
-			traits = {
-				trait = pki_katzen_trait_elite
-			}
-			effect = {
-				set_leader_flag = fantasia
-				save_global_event_target_as = fantasia_flunat
-			}
-		}
-		set_leader = event_target:fantasia_flunat
-		establish_communications_no_message = root
-	}
-	#Lauranaise
-	create_country = {
-		name = "NAME_Lauranaise"
-		adjective = "NAME_Lauranaises"
-		ethos = {
-			ethic = ethic_authoritarian
-			ethic = ethic_xenophobe
-			ethic = ethic_militarist
-		}
-		authority = auth_oligarchic
-		civics = random
-		origin = origin_default_pre_ftl
-		flag = random
-		species = event_target:lauranaise
-		type = flusion_nation
-		effect = {
-			save_global_event_target_as = lauranaise_flunat
-			set_country_flag = flusion_nation_lauranaise
-		}
-	}
-	event_target:lauranaise_flunat = {
-		create_leader = {
-			class = admiral
-			species = event_target:lauranaise
-			name = "Aaron N. Bleu"
-			skill = 4
-			set_age = 36
-			gender = male
-			traits = {
-				trait = pki_katzen_trait_elite
-			}
-			effect = {
-				set_leader_flag = aaron
-				save_global_event_target_as = aaron_flunat
-			}
-		}
-		set_leader = event_target:aaron_flunat
-		establish_communications_no_message = root
-	}
-	#Symbies
-	create_country = {
-		name = "NAME_Symbies"
-		adjective = "NAME_Symbiess"
-		ethos = {
-			ethic = ethic_fanatic_egalitarian
-			ethic = ethic_xenophile
-		}
-		authority = auth_democratic
-		civics = random
-		origin = origin_default_pre_ftl
-		flag = random
-		species = event_target:symbies
-		type = flusion_nation
-		effect = {
-			save_global_event_target_as = symbie_flunat
-			set_country_flag = flusion_nation_symbies
-		}
-	}
-	event_target:symbie_flunat = {
-		create_leader = {
-			class = governor
-			species = event_target:symbies
-			name = "James Madjacks"
-			skill = 2
-			set_age = 43
-			gender = female
-			traits = {
-				trait = pki_katzen_trait_elite
-			}
-			effect = {
-				set_leader_flag = james
-				save_global_event_target_as = james_flunat
-			}
-		}
-		set_leader = event_target:james_flunat
-		establish_communications_no_message = root
-	}		
-	#Yinjites
-		create_country = {
-			name = "NAME_Yinjites"
-			adjective = "NAME_Yinjite"
-			ethos = {
-				ethic = ethic_materialist
-				ethic = ethic_egalitarian
-				ethic = ethic_militarist
-			}
-			authority = auth_democratic
-			civics = random
-			origin = origin_default_pre_ftl
-			flag = random
-			species = event_target:yinjites
-			type = flusion_nation
-			effect = {
-				save_global_event_target_as = yinjite_flunat
-				set_country_flag = flusion_nation_yinjites
-			}
-		}
-		event_target:yinjite_flunat = {
-			create_leader = {
-				class = scientist
-				species = event_target:yinjites
-				name = "Tezu Doe"
-				skill = 5
-				set_age = 46
-				gender = female
-				traits = {
-					trait = pki_katzen_trait_elite
-				}
-				effect = {
-					set_leader_flag = tezu
-					save_global_event_target_as = tezu_flunat
-				}
-			}
-			set_leader = event_target:tezu_flunat
-			establish_communications_no_message = root
-		}	
-	#Cyatianala
-		create_country = {
-			name = "NAME_Cyatianalas"
-			adjective = "NAME_Cyatianala"
-			ethos = {
-				ethic = ethic_spiritualist
-				ethic = ethic_militarist
-				ethic = ethic_xenophile
-			}
-			authority = auth_imperial
-			civics = random
-			origin = origin_default_pre_ftl
-			flag = random
-			species = event_target:cyatianalas
-			type = flusion_nation
-			effect = {
-				save_global_event_target_as = cyatianala_flunat
-				set_country_flag = flusion_nation_cyatianala
-			}
-		}
-		event_target:cyatianala_flunat = {
-			create_leader = {
-				class = scientist
-				species = event_target:cyatianalas
-				name = "Kittita"
-				skill = 5
-				set_age = 46
-				gender = female
-				traits = {
-					trait = pki_katzen_trait_elite
-				}
-				effect = {
-					set_leader_flag = kittita
-					save_global_event_target_as = kittita_flunat
-				}
-			}
-			set_leader = event_target:kittita_flunat
-			establish_communications_no_message = root
-		}	
-	#Mercuria
-		create_country = {
-			name = "NAME_Mercurians"
-			adjective = "NAME_Mercurian"
-			ethos = {
-				ethic = ethic_fanatic_spiritualist
-				ethic = ethic_militarist
-			}
-			authority = auth_imperial
-			civics = random
-			origin = origin_default_pre_ftl
-			flag = random
-			species = event_target:mercurians
-			type = flusion_nation
-			effect = {
-				save_global_event_target_as = mercuria_flunat
-				set_country_flag = flusion_nation_mercuria
-			}
-		}
-		event_target:mercuria_flunat = {
-			create_leader = {
-				class = admiral
-				species = event_target:mercurians
-				name = "King Aven Moll"
-				skill = 5
-				set_age = 46
-				gender = male
-				traits = {
-					trait = pki_katzen_trait_elite
-				}
-				effect = {
-					set_leader_flag = cattail
-					save_global_event_target_as = cattail_flunat
-				}
-			}
-			set_leader = event_target:cattail_flunat
-			establish_communications_no_message = root
-		}  
-		#Ezicanian Empire
-		 create_country = {
-			name = "NAME_Ezics"
-			adjective = "NAME_Ezic"
-			ethos = {
-				ethic = ethic_fanatic_pacifist
-				ethic = ethic_xenophobe
-			}
-			authority = auth_oligarchic
-			civics = random
-			origin = origin_default_pre_ftl
-			flag = random
-			species = event_target:ezics
-			type = flusion_nation
-			effect = {
-				save_global_event_target_as = ezic_flunat
-				set_country_flag = flusion_nation_ezic
-			}
-		}
-		event_target:ezic_flunat = {
-			create_leader = {
-				class = governor
-				species = event_target:ezic
-				name = "Tyukl Kaau"
-				skill = 5
-				set_age = 46
-				gender = male
-				traits = {
-					trait = pki_katzen_trait_elite
-				}
-				effect = {
-					set_leader_flag = hornsfelt
-					save_global_event_target_as = hornsfelt_flunat
-				}
-			}
-			set_leader = event_target:hornsfelt_flunat
-			establish_communications_no_message = root
-		} 
-	#Droog
-	 create_country = {
-		name = "NAME_Droog"
-		adjective = "NAME_Droogs"
-		ethos = {
-			ethic = ethic_fanatic_xenophile
-			ethic = ethic_egalitarian
-		}
-		authority = auth_democratic
-		civics = random
-		origin = origin_default_pre_ftl
-		flag = random
-		species = event_target:droog
-		type = flusion_nation
-		effect = {
-			save_global_event_target_as = droog_flunat
-			set_country_flag = flusion_nation_droog
-		}
-	}
-	event_target:droog_flunat = {
-		create_leader = {
-			class = scientist
-			species = event_target:droog
-			name = "Xavier Damascus"
-			skill = 4
-			set_age = 28
-			gender = male
-			traits = {
-				trait = pki_katzen_trait_elite
-			}
-			effect = {
-				set_leader_flag = xavier
-				save_global_event_target_as = xavier_flunat
-			}
-		}
-		set_leader = event_target:xavier_flunat
-		establish_communications_no_message = root
-	}
-	#Zousa 
-	create_country = {
-		name = "NAME_Zousans"
-		adjective = "NAME_Zousan"
-		ethos = {
-			ethic = ethic_fanatic_spiritualist
-			ethic = ethic_authoritarian
-		}
-		authority = auth_imperial
-		civics = random
-		origin = origin_default_pre_ftl
-		flag = random
-		species = event_target:zousans
-		type = flusion_nation
-		effect = {
-			save_global_event_target_as = zousan_flunat
-			set_country_flag = flusion_nation_zousa
-		}
-	}
-	event_target:zousan_flunat = {
-		create_leader = {
-			class = governor
-			species = event_target:zousans
-			name = "Dimora"
-			skill = 2
-			set_age = 34
-			gender = female
-			traits = {
-				trait = pki_katzen_trait_elite
-			}
-			effect = {
-				set_leader_flag = dimora
-				save_global_event_target_as = dimora_flunat
-			}
-		}
-		set_leader = event_target:dimora_flunat
-		establish_communications_no_message = root
-	}
-	 #Ravkans
-	 create_country = {
-		name = "NAME_Ravkans"
-		adjective = "NAME_Ravkan"
-		ethos = {
-			ethic = ethic_xenophobe
-			ethic = ethic_spiritualist
-			ethic = ethic_authoritarian
-		}
-		authority = auth_dictatorial
-		civics = random
-		origin = origin_default_pre_ftl
-		flag = random
-		species = event_target:ravkans
-		type = flusion_nation
-		effect = {
-			save_global_event_target_as = ravkan_flunat
-			set_country_flag = flusion_nation_ravka
-		}
-	}
-	event_target:ravkan_flunat = {
-		create_leader = {
-			class = general
-			species = event_target:ravkans
-			name = "Sunchen Muhame"
-			skill = 3
-			set_age = 87
-			gender = male
-			traits = {
-				trait = pki_katzen_trait_elite
-			}
-			effect = {
-				set_leader_flag = sunchen
-				save_global_event_target_as = sunchen_flunat
-			}
-		}
-		set_leader = event_target:sunchen_flunat
-		establish_communications_no_message = root
-	}
-	 	create_country = {
-			name = "NAME_Solakians"
-			adjective = "NAME_Solakian"
-			ethos = {
-				ethic = ethic_xenophile
-				ethic = ethic_materialist
-				ethic = ethic_egalitarian
-			}
-			authority = auth_democratic
-			civics = random
-		    origin = origin_default_pre_ftl
-			flag = {
-				icon={
-					category="flusionian"
-					file="solakia_flag.dds"
-				}
-				background={
-					category="backgrounds"
-					file="circle.dds"
-				}
-				colors={
-					"dark_purple"
-					"purple"
-					"null"
-					"null"
-				}
-			}
-			species = event_target:solakians
-			type = flusion_nation
-			effect = {
-				save_global_event_target_as = solakia_flunat
-				set_country_flag = flusion_nation_solakia
-			}
-		}
-		event_target:solakia_flunat = {
-			create_leader = {
-				class = scientist
-				species = event_target:solakians
-				name = "Dofus Tequenik Machina"
-				skill = 4
-				set_age = 41
-				gender = male
-				traits = {
-					trait = pki_katzen_trait_elite
-				}
-				effect = {
-					set_leader_flag = dofus
-					save_global_event_target_as = dofus_flunat
-				}
-			}
-			set_leader = event_target:dofus_flunat
-			establish_communications_no_message = root
-		}
-	 #Cookian Steppes
-		create_country = {
-			name = "NAME_Cookies"
-			adjective = "NAME_Cookie"
-			ethos = {
-				ethic = ethic_authoritarian
-				ethic = ethic_fanatic_materialist
-			}
-			authority = auth_dictatorial
-			civics = random
-		    origin = origin_default_pre_ftl
-			flag = {
-				icon={
-					category="ornate"
-					file="flag_ornate_14.dds"
-				}
-				background={
-					category="backgrounds"
-					file="pattern_01.dds"
-				}
-				colors={
-					"ochre_brown"
-					"white"
-					"null"
-					"null"
-				}
-			}
-			species = event_target:cookians
-			type = flusion_nation
-			effect = {
-				save_global_event_target_as = cookie_flunat
-				set_country_flag = flusion_nation_cookie
-			}
-		}
-		event_target:cookie_flunat = {
-			create_leader = {
-				class = governor
-				species = event_target:cookians
-				name = "Troy Baker"
-				skill = 4
-				set_age = 41
-				gender = male
-				traits = {
-					trait = pki_katzen_trait_elite
-				}
-				effect = {
-					set_leader_flag = cookie
-					save_global_event_target_as = cookie_lead_flunat
-				}
-			}
-			set_leader = event_target:cookie_lead_flunat
-			establish_communications_no_message = root
-		}
-	 #Kronk
-		create_country = {
-			name = "NAME_Kronks"
-			adjective = "NAME_Kronk"
-			ethos = {
-				ethic = ethic_authoritarian
-				ethic = ethic_xenophobe
-				ethic = ethic_spiritualist
-			}
-			authority = auth_oligarchic
-			civics = random
-		    origin = origin_default_pre_ftl
-			flag = {
-				icon={
-					category="domination"
-					file="domination_6.dds"
-				}
-				background={
-					category="backgrounds"
-					file="stripe.dds"
-				}
-				colors={
-					"dark_red"
-					"blue"
-					"null"
-					"null"
-				}
-			}
-			species = event_target:kronks
-			type = flusion_nation
-			effect = {
-				save_global_event_target_as = kronk_flunat
-				set_country_flag = flusion_nation_kronk
-			}
-		}
-		event_target:kronk_flunat = {
-			create_leader = {
-				class = admiral
-				species = event_target:kronks
-				name = "Kronk"
-				skill = 4
-				set_age = 41
-				gender = male
-				traits = {
-					trait = pki_katzen_trait_elite
-				}
-				effect = {
-					set_leader_flag = kronk
-					save_global_event_target_as = kronk_lead_flunat
-				}
-			}
-			set_leader = last_created_leader
-			establish_communications_no_message = root
-		}
 
-	#Setup Flusion
+		#Setup Flusion
 		save_event_target_as = flusion_owner
 		capital_scope = {
 			set_planet_size = 16
@@ -1165,7 +278,7 @@ country_event = {
 			# 		species = event_target:flusionians
 			# 	}
 			# }
-			
+
 			# while = {
 			# 	count = 4
 			# 	create_pop = {
@@ -1246,29 +359,138 @@ country_event = {
 				}
 			}
 		}
-	#Remove mining station
-	 event_target:katzenartig = {
-		every_owned_ship = {
-			limit = {
-				is_ship_size = mining_station
-				# is_ship_size = research_station
+		#Remove mining station
+		this = {
+			every_owned_ship = {
+				limit = {
+					is_ship_size = mining_station
+				}
+				delete_ship = this
 			}
-			delete_ship = this
-		}
-		every_owned_ship = {
-			limit = {
-				# is_ship_size = mining_station
-				is_ship_size = research_station
+			every_owned_ship = {
+				limit = {
+					is_ship_size = research_station
+				}
+				delete_ship = this
 			}
-			delete_ship = this
 		}
-
-	 }
 		set_country_flag = flusion_setup_complete
-	#Create Jublio
-		}
+		#Create Jublio
 
 	}
+}
+
+country_event = {
+	id = flusion.41
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		this = {
+			pki_is_katzenartig_imperium = yes
+		}
+	}
+
+	immediate = {
+		this = {
+			every_owned_leader = {
+				limit = {
+					leader_class = official
+				}
+				set_leader_flag = kill_yourself_now
+				kill_leader = { show_notification = no }
+			}
+
+			random_owned_leader = {
+				limit = {
+					leader_class = scientist
+					NOT = {
+						has_leader_flag = flusion_modified
+					}
+				}
+				set_gender = male
+				set_name = "NAME_Pawlbert"
+				set_leader_flag = flusion_modified
+				add_trait = pki_katzen_trait_elite
+			}
+
+			#Create Pawtton
+			create_leader = {
+				class = commander
+				species = owner_main_species
+				name = "Meorge Pawtton"
+				gender = male
+				skill = 3
+				randomize_traits = no
+				immortal = yes
+				traits = {
+					trait = pki_katzen_trait_elite
+					trait = katzen_trait_nukelad
+					trait = subclass_commander_general
+				}
+			}
+			
+			last_created_leader = {
+				set_leader_flag = pawtton
+				save_global_event_target_as = pawtton
+				clear_global_event_target = kaiser_portrait
+			}
+
+			#Create Loris
+			create_leader = {
+				class = official
+				species = owner_main_species
+				name = "Loris Von Kattensbach"
+				gender = male
+				skill = 3
+				randomize_traits = no
+				immortal = yes
+				traits = {
+					trait = pki_katzen_trait_elite
+					trait = leader_trait_architectural_interest
+					trait = leader_trait_army_veteran
+					trait = subclass_official_governor
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = lorisvanilla
+				set_leader_flag = loris
+				save_global_event_target_as = loris
+			}
+			
+			event_target:playerflusion = {
+				assign_leader = event_target:loris
+			}
+
+			#Create Douclaw
+			create_leader = {
+				class = commander
+				species = owner_main_species
+				name = "Douclaw MacCathur"
+				gender = male
+				skill = 3
+				immortal = yes
+				set_age = 57
+				randomize_traits = no
+				traits = {
+					trait = pki_katzen_trait_elite
+					trait = pki_leader_trait_armored_warfare
+					trait = pki_leader_trait_nukelad
+					trait = subclass_commander_admiral
+				}
+				custom_description = PKI_DOUCLAW_DESC
+				background_planet = event_target:playerflusion
+				background_job = soldier
+				background_ethic = ethic_materialist
+			}
+			last_created_leader = {
+				change_leader_portrait = douclaw
+				set_leader_flag = douclaw
+				save_global_event_target_as = douclaw
+			}
+		}
+	}
+}
 
 event = {
 	id = flusion.42
@@ -1484,7 +706,7 @@ country_event = {
 			custom_tooltip = {
 				fail_text = "must_have_valid_elite_governor"
 				any_owned_leader = {
-					leader_class = governor
+					leader_class = official
 					NOT = {
 						has_trait = pki_katzen_trait_elite
 					}
@@ -1524,7 +746,7 @@ country_event = {
 			custom_tooltip = {
 				fail_text = "must_have_valid_elite_admiral"
 				any_owned_leader = {
-					leader_class = admiral
+					leader_class = commander
 					NOT = {
 						has_trait = pki_katzen_trait_elite
 					}
@@ -1534,26 +756,6 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = katzen.10
-			}
-		} 
-	}
-	#Generals
-	option = {
-		name = "katzen.7.d"
-		allow = {
-			custom_tooltip = {
-				fail_text = "must_have_valid_elite_general"
-				any_owned_leader = {
-					leader_class = general
-					NOT = {
-						has_trait = pki_katzen_trait_elite
-					}
-				}
-			}
-		}
-		hidden_effect = {
-			country_event = {
-				id = katzen.11
 			}
 		} 
 	}
@@ -1578,7 +780,7 @@ country_event = {
 					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
-				leader_class = governor
+				leader_class = official
 			}
 			save_event_target_as = leader_1
 		}
@@ -1588,7 +790,7 @@ country_event = {
 					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
-				leader_class = governor
+				leader_class = official
 				NOT = { is_same_value = event_target:leader_1 }
 			}
 			save_event_target_as = leader_2
@@ -1599,7 +801,7 @@ country_event = {
 					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
-				leader_class = governor
+				leader_class = official
 				NOT = { is_same_value = event_target:leader_1 }
 				NOT = { is_same_value = event_target:leader_2 }
 			}
@@ -1611,7 +813,7 @@ country_event = {
 					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
-				leader_class = governor
+				leader_class = official
 				NOT = { is_same_value = event_target:leader_1 }
 				NOT = { is_same_value = event_target:leader_2 }
 				NOT = { is_same_value = event_target:leader_3 }
@@ -1624,7 +826,7 @@ country_event = {
 					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
-				leader_class = governor
+				leader_class = official
 				NOT = { is_same_value = event_target:leader_1 }
 				NOT = { is_same_value = event_target:leader_2 }
 				NOT = { is_same_value = event_target:leader_3 }
@@ -1930,7 +1132,7 @@ country_event = {
 					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
-				leader_class = admiral
+				leader_class = commander
 			}
 			save_event_target_as = leader_1
 		}
@@ -1940,7 +1142,7 @@ country_event = {
 					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
-				leader_class = admiral
+				leader_class = commander
 				NOT = { is_same_value = event_target:leader_1 }
 			}
 			save_event_target_as = leader_2
@@ -1951,7 +1153,7 @@ country_event = {
 					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
-				leader_class = admiral
+				leader_class = commander
 				NOT = { is_same_value = event_target:leader_1 }
 				NOT = { is_same_value = event_target:leader_2 }
 			}
@@ -1963,7 +1165,7 @@ country_event = {
 					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
-				leader_class = admiral
+				leader_class = commander
 				NOT = { is_same_value = event_target:leader_1 }
 				NOT = { is_same_value = event_target:leader_2 }
 				NOT = { is_same_value = event_target:leader_3 }
@@ -1976,7 +1178,7 @@ country_event = {
 					has_trait = pki_katzen_trait_elite
 					has_trait = leader_trait_ruler_kaiser_cattail
 				}
-				leader_class = admiral
+				leader_class = commander
 				NOT = { is_same_value = event_target:leader_1 }
 				NOT = { is_same_value = event_target:leader_2 }
 				NOT = { is_same_value = event_target:leader_3 }
@@ -2088,181 +1290,5 @@ country_event = {
 				id = katzen.7
 			}
 		}
-	}
-}
-
-
-#Make Elite general
-country_event = {
-	id = katzen.11
-	title = "katzen.11.name"
-	desc = "katzen.11.desc"
-	is_triggered_only = yes
-
-	immediate = {
-		random_owned_leader = {
-			limit = {
-				NOR = {
-					has_trait = pki_katzen_trait_elite
-					has_trait = leader_trait_ruler_kaiser_cattail
-				}
-				leader_class = general
-			}
-			save_event_target_as = leader_1
-		}
-		random_owned_leader = {
-			limit = {
-				NOR = {
-					has_trait = pki_katzen_trait_elite
-					has_trait = leader_trait_ruler_kaiser_cattail
-				}
-				leader_class = general
-				NOT = { is_same_value = event_target:leader_1 }
-			}
-			save_event_target_as = leader_2
-		}
-		random_owned_leader = {
-			limit = {
-				NOR = {
-					has_trait = pki_katzen_trait_elite
-					has_trait = leader_trait_ruler_kaiser_cattail
-				}
-				leader_class = general
-				NOT = { is_same_value = event_target:leader_1 }
-				NOT = { is_same_value = event_target:leader_2 }
-			}
-			save_event_target_as = leader_3
-		}
-		random_owned_leader = {
-			limit = {
-				NOR = {
-					has_trait = pki_katzen_trait_elite
-					has_trait = leader_trait_ruler_kaiser_cattail
-				}
-				leader_class = general
-				NOT = { is_same_value = event_target:leader_1 }
-				NOT = { is_same_value = event_target:leader_2 }
-				NOT = { is_same_value = event_target:leader_3 }
-			}
-			save_event_target_as = leader_4
-		}
-		random_owned_leader = {
-			limit = {
-				NOR = {
-					has_trait = pki_katzen_trait_elite
-					has_trait = leader_trait_ruler_kaiser_cattail
-				}
-				leader_class = general
-				NOT = { is_same_value = event_target:leader_1 }
-				NOT = { is_same_value = event_target:leader_2 }
-				NOT = { is_same_value = event_target:leader_3 }
-				NOT = { is_same_value = event_target:leader_4 }
-			}
-			save_event_target_as = leader_5
-		}
-	}
-	option = {
-		name = "katzen.8.a"
-		event_target:leader_1 = {
-			add_trait = pki_katzen_trait_elite
-		}
-		allow = {
-			resource_stockpile_compare = {
-				resource = unity
-				value >= value:leader_katzenification_cost
-			}
-		}
-		add_resource = {
-			unity = -1
-			mult = value:leader_katzenification_cost
-		}
-	}
-	option = {
-		name = "katzen.8.b"
-		event_target:leader_2 = {
-			add_trait = pki_katzen_trait_elite
-		}
-		allow = {
-			resource_stockpile_compare = {
-				resource = unity
-				value >= value:leader_katzenification_cost
-			}
-		}
-		trigger = {
-			exists = event_target:leader_2
-		}
-		add_resource = {
-			unity = -1
-			mult = value:leader_katzenification_cost
-		}
-	}
-	option = {
-		name = "katzen.8.c"
-		event_target:leader_3 = {
-			add_trait = pki_katzen_trait_elite
-		}
-		trigger = {
-			exists = event_target:leader_3
-		}
-		allow = {
-			resource_stockpile_compare = {
-				resource = unity
-				value >= value:leader_katzenification_cost
-			}
-		}
-		add_resource = {
-			unity = -1
-			mult = value:leader_katzenification_cost
-		}
-	}
-
-	option = {
-		name = "katzen.8.d"
-		event_target:leader_4 = {
-			add_trait = pki_katzen_trait_elite
-		}
-		trigger = {
-			exists = event_target:leader_4
-		}
-		allow = {
-			resource_stockpile_compare = {
-				resource = unity
-				value >= value:leader_katzenification_cost
-			}
-		}
-		add_resource = {
-			unity = -1
-			mult = value:leader_katzenification_cost
-		}
-	}
-	option = {
-		name = "katzen.8.e"
-		event_target:leader_5 = {
-			add_trait = pki_katzen_trait_elite
-		}
-		trigger = {
-			exists = event_target:leader_5
-		}
-		allow = {
-			resource_stockpile_compare = {
-				resource = unity
-				value >= value:leader_katzenification_cost
-			}
-		}
-		add_resource = {
-			unity = -1
-			mult = value:leader_katzenification_cost
-		}
-	}
-	
-
-	option = { # Back
-		default_hide_option = yes
-		name = "katzen.8.f"
-		hidden_effect = {
-			country_event = {
-				id = katzen.7
-			}
-		} 
 	}
 }

@@ -66,6 +66,16 @@ country_event = {
 				}
 			}
 		}
+		every_subject = {
+			every_system_within_border = { #count katzen systems
+				event_target:katzenartig = {
+					change_variable = {
+						which = player_katzen_total_system_count
+						value = 1
+					}
+				}
+			}
+		}
 		set_variable = { #check for greater katzen imperium
 			which = "player_greater_imperium_limit"
 			value = player_katzen_galaxy_total_system_count
@@ -215,7 +225,7 @@ country_event = {
 		ethic_leader_creator = {
 			SPECIES_CLASS = MAM
 			LEADER_PORTRAIT = mam14
-			CLASS = general
+			CLASS = commander
 			NAME = NAME_gunfur
 			LEVEL = 4
 			GENDER = male
@@ -225,7 +235,7 @@ country_event = {
 			CATCH_PHRASE = gunfur_catch_phrase
 		}
 		last_created_leader = {
-			add_trait = subclass_general_invader
+			add_trait = subclass_commander_general
 			add_trait = leader_trait_gunfur
 			add_trait = pki_katzen_trait_elite
 			add_trait = leader_trait_butcher_2
@@ -419,7 +429,7 @@ country_event = {
 				}
 			} }
 			create_leader = {
-				class = admiral
+				class = commander
 				species = event_target:kaiser_portrait_hd
 				name = "Kattail"
 				skill = 4
@@ -427,11 +437,11 @@ country_event = {
 				immortal = yes
 				set_age = 189
 				traits = {
+					trait = subclass_commander_councilor
 					trait = leader_trait_ruler_kaiser_cattail
 					trait = trait_ruler_charismatic_2
 					trait = trait_ruler_military_pioneer
 					trait = leader_trait_intimidator
-					trait = subclass_admiral_strategist
 				}
 				effect = {
 					set_leader_flag = kaiser_kattail
@@ -678,9 +688,11 @@ fleet_event = {
 	trigger = {
 		from = {
 			exists = planet
-			NOT = { planet_owner  = { has_origin = origin_katzen} }
-			planet_owner  = {
-				is_at_war_with = event_target:katzenartig_imperium
+			planet.controller  = {
+				is_at_war_with = event_target:katzenartig
+				NOT = {
+					has_origin = origin_katzen
+				}
 			}
 			any_fleet_in_orbit = {
 				is_ship_size = katzen_submarine
@@ -752,7 +764,7 @@ country_event = {
 		ethic_leader_creator = {
 			SPECIES_CLASS = MAM
 			LEADER_PORTRAIT = mam14
-			CLASS = governor
+			CLASS = official
 			NAME = NAME_neumeyer
 			LEVEL = 4
 			GENDER = male
@@ -762,7 +774,7 @@ country_event = {
 			CATCH_PHRASE = neumeyer_catch_phrase
 		}
 		last_created_leader = {
-			add_trait = subclass_governor_economist
+			add_trait = subclass_official_governor
 			add_trait = leader_trait_neumeyer
 			add_trait = pki_katzen_trait_elite
 			add_trait = leader_trait_enlister
@@ -884,9 +896,6 @@ country_event = {
 	trigger = {
 		pki_is_katzprotektorat = yes
 		NOT = { is_at_war_with = event_target:katzenartig }
-		NOT = {
-			has_war_flag = pki_war_peacekeepers_attack
-		}
 	}
 	immediate = {
 		every_controlled_planet = {
@@ -903,7 +912,7 @@ country_event = {
 				count = @pki_vassal_peacekeeper_amt
 				create_army = {
 					name = "Katzenarmee Peacekeeper Garrison"
-					owner = root
+					owner = event_target:katzenartig
 					species = event_target:pki_katzen_species
 					type = "peacekeeper_army"
 
@@ -932,7 +941,7 @@ country_event = {
 		from = {
 			set_war_flag = pki_war_peacekeepers_attack
 		}
-		every_owned_planet = {
+		every_controlled_planet = {
 			limit = {
 				any_planet_army = {
 					army_type = peacekeeper_army
@@ -1028,6 +1037,7 @@ country_event = {
 							upgradable = yes
 						}
 					}
+					set_mia = mia_return_home
 				}
 			}
 			every_controlled_ship = {
@@ -1123,6 +1133,10 @@ country_event = {
 			id = pki_misc.221
 			days = 15 random = 15
 		}
+		country_event = {
+			id = pki_misc.222
+			days = 30 random = 30
+		}
 	}
 }
 
@@ -1153,6 +1167,101 @@ country_event = {
 				}
 				remove_army = yes
 			}
+		}
+	}
+}
+
+country_event = {
+	id = pki_misc.222
+	title = "pki_misc.222.name"
+	desc = "pki_misc.222.desc"
+	is_triggered_only = yes
+	location = capital_scope
+	picture = GFX_evt_hangar_bay
+	show_sound = event_ship_thrusters
+
+	option = {
+		name = "pki_misc.222.a"
+	}
+
+	immediate = {
+		every_owned_fleet = {
+			limit = {
+				pki_is_katzen_ship = yes
+			}
+			set_fleet_flag = pki_has_katzen_ships
+			pki_count_ships = {
+				SHIP = katzen_panzer
+			}
+			pki_count_ships = {
+				SHIP = katzen_bomber
+			}
+			pki_count_ships = {
+				SHIP = katzen_panzer
+			}
+			create_fleet = {
+				name = "pki_katzen_captured_ships"
+				effect = {
+					set_owner = event_target:katzenartig
+					set_location = prev
+					while = {
+						count = prev.pki_katzen_panzer_count
+						create_ship = {
+							name = random
+							random_existing_design = katzen_panzer
+							prefix = no
+							graphical_culture = reptilian_01
+							upgradable = yes
+
+						}
+					}
+					while = {
+						count = prev.pki_katzen_bomber_count
+						create_ship = {
+							name = random
+							random_existing_design = katzen_bomber
+							prefix = no
+							graphical_culture = reptilian_01
+							upgradable = yes
+						}
+					}
+					while = {
+						count = prev.pki_katzen_cruiser_count
+						create_ship = {
+							name = random
+							random_existing_design = katzen_cruiser
+							prefix = no
+							graphical_culture = reptilian_01
+							upgradable = yes
+						}
+					}
+					set_mia = mia_return_home
+				}
+			}
+			every_controlled_ship = {
+				limit = {
+					pki_is_katzen_ship = yes
+				}
+				delete_ship = this
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pki_misc.23
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { pki_is_katzenartig_imperium = yes }
+		has_opinion_modifier = { modifier = opinion_katzen_militarism who = this }
+	}
+
+	immediate = {
+		add_opinion_modifier = {
+			modifier = opinion_katzen_militarism
+			who = this
 		}
 	}
 }
