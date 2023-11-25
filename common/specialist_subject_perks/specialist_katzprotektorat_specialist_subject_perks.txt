@@ -46,7 +46,7 @@ pki_katzprotektorat_1_modifier = {
 				unassign_leader = prev
 			}
 			shift_ethic = ethic_fanatic_militarist
-			shift_ethic = ethic_materialist
+			shift_ethic = ethic_xenophile
 			change_government = {
 				authority = auth_dictatorial
 				remove_invalid_civics = yes
@@ -56,9 +56,10 @@ pki_katzprotektorat_1_modifier = {
 			create_leader = {
 				name = random
 				species = event_target:pki_katzen_species
-				class = governor
+				class = official
 				skill = 3
 				traits = {
+					trait = subclass_official_diplomacy_councilor
 					trait = pki_katzen_trait_elite
 				}
 				leader_age_min = 30
@@ -159,7 +160,7 @@ pki_katzprotektorat_1_overlord_modifier = {
 	icon = "GFX_specialist_perk_katzprotektorat_1_overlord_modifier"
 	overlord_modifier = {
 		country_power_projection_unity_produces_add = 100
-		empire_size_mult = 0.25
+		empire_size_mult = 0.125
 	}
 }
 
@@ -194,12 +195,8 @@ pki_katzprotektorat_1_katzprotektorat_ethics = {
 	icon = "GFX_specialist_perk_katzprotektorat_1_katzprotektorat_ethics"
 
 	subject_modifier = {
-		pop_ethic_materialist_attraction_mult = 0.20
+		pop_ethic_xenophile_attraction_mult = 0.20
 		pop_ethic_militarist_attraction_mult = 0.20
-	}
-
-	desc = {
-		description = pki_katzprotektorat_1_ethics_desc
 	}
 }
 
@@ -277,44 +274,24 @@ pki_katzprotektorat_2_katzprotektorat_tech = {
 pki_katzprotektorat_2_leaders = {
 	icon = "GFX_specialist_perk_katzprotektorat_2_leaders"
 	subject_modifier = {
-		admiral_exp_gain = 0.2
-	}
-
-	activate_effect = {
-		target = {
-			create_leader = {
-				name = random
-				species = event_target:pki_katzen_species
-				class = governor
-				skill = 3
-				traits = {
-					trait = pki_katzen_trait_elite
-				}
-				leader_age_min = 30
-				leader_age_max = 50
-				effect = {
-					add_trait_no_notify = leader_trait_katzen_overseer
-				}
-				background_planet = event_target:flusionhome
-				background_job = bureaucrat
-				background_ethic = ethic_militarist
-			}
-		}
-	}
-
-	deactivate_effect = {
-		target = {
-
-		}
-	}
-
-	desc = {
-		description = katzprotektorat_2_leaders_desc
+		leader_initial_skill = 1
+		leader_trait_selection_options_add = 1
 	}
 }
 
 pki_katzprotektorat_2_traits = {
 	icon = "GFX_specialist_perk_katzprotektorat_2_traits"
+
+	deactivate_effect = {
+		hidden_effect = {
+			target = {
+				every_owned_leader = {
+					remove_trait = leader_trait_katzen_trained
+				}
+			}
+		}
+	}
+
 	desc = {
 		description = katzprotektorat_2_traits_desc
 	}
@@ -322,9 +299,6 @@ pki_katzprotektorat_2_traits = {
 
 pki_katzprotektorat_3_modifier = {
 	main_perk = yes
-	overlord_modifier = {
-		country_subject_integration_speed_add = 5
-	}
 	subject_modifier = {
 		planet_metallurgists_alloys_produces_add = 2
 		planet_soldiers_unity_produces_add = 1.5
@@ -334,9 +308,6 @@ pki_katzprotektorat_3_modifier = {
 
 pki_katzprotektorat_gestalt_3_modifier = {
 	main_perk = yes
-	overlord_modifier = {
-		country_subject_integration_speed_add = 5
-	}
 	subject_modifier = {
 		planet_metallurgists_alloys_produces_add = 2
 		planet_soldiers_unity_produces_add = 1.5
@@ -368,22 +339,21 @@ pki_katzprotektorat_3_katzprotektorat_tech = {
 	}
 }
 
-pki_katzprotektorat_3_battlewright = {
-	icon = "GFX_specialist_perk_katzprotektorat_3_battlewright"
-	activate_effect = {
+pki_katzprotektorat_3_kinetic_weapons = {
+	icon = "GFX_specialist_perk_katzprotektorat_3_kinetic_weapons"
 
-	}
-
-	deactivate_effect = {
-
-	}
-
-	desc = {
-		description = katzprotektorat_3_battlewright_desc
+	subject_modifier = {
+		weapon_type_kinetic_weapon_damage_mult = 0.3
+		weapon_type_energy_weapon_damage_mult = -0.3
 	}
 }
 
-pki_katzprotektorat_3_disintegrator_field = {
-	icon = "GFX_specialist_perk_katzprotektorat_3_disintegrator_field"
-	
+pki_katzprotektorat_3_integration = {
+	icon = "GFX_specialist_perk_katzprotektorat_3_integration"
+
+	overlord_modifier = {
+		country_unity_produces_mult = -0.25
+		ships_upkeep_mult = 0.25
+		country_subject_integration_speed_add = 5
+	}
 }

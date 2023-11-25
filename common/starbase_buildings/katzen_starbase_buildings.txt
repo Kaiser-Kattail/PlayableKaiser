@@ -3,21 +3,30 @@ katzen_warforge_shipyard = {
 	construction_days = 360
 	potential = {
 		from = {
-			is_specialist_subject_tier = { TYPE = katzprotektorat TIER = 2}
-		}
-	}
-
-	possible = {
-		solar_system = {
-			any_system_planet = {
-				has_planet_flag = war_forge
+			OR = {
+				AND = {
+					pki_is_katzenartig_imperium = yes
+					has_country_flag = unified_flusion
+				}
+				pki_is_katzprotektorat_tier_2 = yes
 			}
 		}
 	}
 
+	possible = {
+		hidden_trigger = {
+			solar_system = {
+				any_system_planet = {
+					has_planet_flag = war_forge
+				}
+			}
+		}
+		text = PKI_NEEDS_WARFORGE
+	}
+
 	triggered_station_modifier = {
 		starbase_shipyard_capacity_add = 1
-		starbase_shipyard_build_speed_mult = 0.025
+		starbase_shipyard_build_speed_mult = 0.05
 		mult = value:pki_num_warforges
 	}
 

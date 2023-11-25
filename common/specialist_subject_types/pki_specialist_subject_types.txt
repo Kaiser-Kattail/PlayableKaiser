@@ -37,8 +37,8 @@ specialist_katzprotektorat = {
 				pki_katzprotektorat_3_modifier
 				pki_katzprotektorat_3_penalties
 				pki_katzprotektorat_3_katzprotektorat_tech
-				pki_katzprotektorat_3_battlewright
-				pki_katzprotektorat_3_disintegrator_field
+				pki_katzprotektorat_3_kinetic_weapons
+				pki_katzprotektorat_3_integration
 			}
 		}
 	}
@@ -79,8 +79,8 @@ specialist_katzprotektorat_gestalt = {
 				pki_katzprotektorat_gestalt_3_modifier
 				pki_katzprotektorat_3_penalties
 				pki_katzprotektorat_3_katzprotektorat_tech
-				pki_katzprotektorat_3_battlewright
-				pki_katzprotektorat_3_disintegrator_field
+				pki_katzprotektorat_3_kinetic_weapons
+				pki_katzprotektorat_3_integration
 			}
 		}
 	}
