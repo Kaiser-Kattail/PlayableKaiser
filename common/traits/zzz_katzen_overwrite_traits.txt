@@ -1,21 +1,22 @@
 #Focus traits overwrote as we added our own
+
+
 trait_ruler_corvette_focus = {
-    councilor_trait = yes
     inline_script = {
         script = trait/icon
-        CLASS = admiral
+        CLASS = commander
         ICON = GFX_leader_trait_corvette_focus
         RARITY = common
         COUNCIL = yes
         TIER = none
     }
-    modifier = {
+    councilor_modifier = {
         ship_corvette_cost_mult = -0.3
     }
     leader_potential_add = {
         has_paragon_dlc = no
     }
-    leader_class = { admiral }
+    leader_class = { commander }
     prerequisites = { tech_destroyers } # 'corvette focus' is a bit silly when it's the only available ship
     opposites = {
         trait_ruler_destroyer_focus
@@ -26,26 +27,28 @@ trait_ruler_corvette_focus = {
         trait_ruler_katzen_unterraumboot_focus
         trait_ruler_katzen_bomber_focus
     }
-    selectable_weight = @class_trait_weight
+    selectable_weight = {
+        weight = @class_trait_weight
+        inline_script = paragon/council_weight_mult
+    }
 }
 
 trait_ruler_destroyer_focus = {
-    councilor_trait = yes
     inline_script = {
         script = trait/icon
-        CLASS = admiral
+        CLASS = commander
         ICON = GFX_leader_trait_destroyer_focus
         RARITY = common
         COUNCIL = yes
         TIER = none
     }
-    modifier = {
+    councilor_modifier = {
         ship_destroyer_cost_mult = -0.3
     }
     leader_potential_add = {
         has_paragon_dlc = no
     }
-    leader_class = { admiral }
+    leader_class = { commander }
     prerequisites = { tech_destroyers }
     opposites = {
         trait_ruler_corvette_focus
@@ -56,26 +59,28 @@ trait_ruler_destroyer_focus = {
         trait_ruler_katzen_unterraumboot_focus
         trait_ruler_katzen_bomber_focus
     }
-    selectable_weight = @class_trait_weight
+    selectable_weight = {
+        weight = @class_trait_weight
+        inline_script = paragon/council_weight_mult
+    }
 }
 
 trait_ruler_cruiser_focus = {
-    councilor_trait = yes
     inline_script = {
         script = trait/icon
-        CLASS = admiral
+        CLASS = commander
         ICON = GFX_leader_trait_cruiser_focus
         RARITY = common
         COUNCIL = yes
         TIER = none
     }
-    modifier = {
+    councilor_modifier = {
         ship_cruiser_cost_mult = -0.3
     }
     leader_potential_add = {
         has_paragon_dlc = no
     }
-    leader_class = { admiral }
+    leader_class = { commander }
     prerequisites = { tech_cruisers }
     opposites = {
         trait_ruler_corvette_focus
@@ -86,26 +91,28 @@ trait_ruler_cruiser_focus = {
         trait_ruler_katzen_unterraumboot_focus
         trait_ruler_katzen_bomber_focus
     }
-    selectable_weight = @class_trait_weight
+    selectable_weight = {
+        weight = @class_trait_weight
+        inline_script = paragon/council_weight_mult
+    }
 }
 
 trait_ruler_battleship_focus = {
-    councilor_trait = yes
     inline_script = {
         script = trait/icon
-        CLASS = admiral
+        CLASS = commander
         ICON = GFX_leader_trait_battleship_focus
         RARITY = common
         COUNCIL = yes
         TIER = none
     }
-    modifier = {
+    councilor_modifier = {
         ship_battleship_cost_mult = -0.3
     }
     leader_potential_add = {
         has_paragon_dlc = no
     }
-    leader_class = { admiral }
+    leader_class = { commander }
     prerequisites = { tech_battleships }
     opposites = {
         trait_ruler_corvette_focus
@@ -116,6 +123,9 @@ trait_ruler_battleship_focus = {
         trait_ruler_katzen_unterraumboot_focus
         trait_ruler_katzen_bomber_focus
     }
-    selectable_weight = @class_trait_weight
+    selectable_weight = {
+        weight = @class_trait_weight
+        inline_script = paragon/council_weight_mult
+    }
 }
 

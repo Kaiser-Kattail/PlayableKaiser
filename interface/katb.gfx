@@ -17,5 +17,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_no_preset"
 		textureFile = gfx/event_pictures/no_preset.dds
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 	}
 }
