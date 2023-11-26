@@ -33,5 +33,9 @@ country_event = {
 			destroy_situation = this
 		}
 		remove_modifier = no_ftl_capability
+		country_event = {
+			id = pki_paragons.1
+			days = 180
+		}
 	}
 }

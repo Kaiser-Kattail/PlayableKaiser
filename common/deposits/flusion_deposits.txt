@@ -650,11 +650,9 @@ d_flusion_bureaucracy = {
 
 	planet_modifier = {
 		planetary_ascension_cost_mult = -0.1
-	}
-
-	country_modifier = {
 		empire_size_pops_mult = -0.2
 	}
+
 
 	category = deposit_cat_rare
 
@@ -672,7 +670,7 @@ d_flusion_bounty_colony = {
 
 	planet_modifier = {
 		planet_max_districts_add = -1
-		pop_happiness = -0.15
+		pop_happiness = -0.5
 	}
 
 	category = deposit_cat_rare

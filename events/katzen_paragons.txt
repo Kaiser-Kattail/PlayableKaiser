@@ -31,6 +31,7 @@ country_event = {
 			add_trait = subclass_scientist_governor
 			add_trait = leader_trait_schulz
 			add_trait = pki_katzen_trait_elite
+			add_trait = leader_trait_collaborator
 			add_trait = leader_trait_stubborn
 			set_age = 63
 			save_global_event_target_as = schulz
