@@ -45,8 +45,8 @@ pki_katzprotektorat_1_modifier = {
 				save_global_event_target_as = pki_katzprotektorat_prev_leader@prev
 				unassign_leader = prev
 			}
-			shift_ethic = ethic_fanatic_militarist
-			shift_ethic = ethic_xenophile
+			shift_ethic = "ethic_xenophile"
+			shift_ethic = "ethic_fanatic_militarist"
 			change_government = {
 				authority = auth_dictatorial
 				remove_invalid_civics = yes

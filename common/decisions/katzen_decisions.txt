@@ -595,28 +595,28 @@ decision_kaiser_craft_recall = {
 	}
 }
 
-decision_demotion_modifier = {
-	enactment_time = 10
-    resources = {
-        category = decisions
-        cost = {
-            influence = 100
-        }
-    }
-	sound = event_administrative_work
-    potential = {
-        from = {
-			has_origin = origin_katzen
-			has_tradition = tr_flusion_finish
-        }
-		has_planet_flag = gigaflusion
-    }
-	effect = {
-		add_modifier = {
-			modifier = temp_job_help days = 30
-		}
-	}
-}
+#decision_demotion_modifier = {
+#	enactment_time = 10
+#    resources = {
+#        category = decisions
+#        cost = {
+#            influence = 100
+#        }
+#    }
+#sound = event_administrative_work
+#  potential = {
+#       from = {
+#			has_origin = origin_katzen
+#			has_tradition = tr_flusion_finish
+#        }
+#		has_planet_flag = gigaflusion
+#   }
+#	effect = {
+#		add_modifier = {
+#			modifier = temp_job_help days = 30
+#		}
+#	}
+#}
 
 decision_toggle_relocation = {
 	enactment_time = 10
@@ -840,9 +840,20 @@ decision_pki_further_restructuring = {
 
 decision_create_kaiser_legion = {
 	potential = {
-		planet = {
-			leader = {
+		planet.owner = {
+			any_owned_leader = {
 				has_trait = leader_trait_schulz
+			}
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = needs_schulz
+			planet = {
+				leader = {
+					has_trait = leader_trait_schulz
+				}
 			}
 		}
 	}
