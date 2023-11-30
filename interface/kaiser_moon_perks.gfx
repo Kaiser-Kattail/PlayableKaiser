@@ -219,6 +219,16 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_specialist_perk_katzprotektorat_3_katzprotektorat_tech"
+		textureFile = "gfx/interface/subjugation/specialist_perks/pki_katzprotektorat_3_katzprotektorat_tech.dds"
+	}
+
+	spriteType = {
+		name = "GFX_specialist_perk_katzprotektorat_1_soldiers"
+		textureFile = "gfx/interface/subjugation/specialist_perks/pki_katzprotektorat_1_soldiers.dds"
+	}
+
+	spriteType = {
 		name = "GFX_message_katzprotektorat_level_up"
 		textureFile = "gfx/interface/icons/message/message_katzprotektorat_level_up.dds"
 	}

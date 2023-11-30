@@ -43,10 +43,13 @@ decision_flusion_arc = {
 
 	effect = { 
 		change_pc = pc_pki_flusion_ecu
+		set_planet_entity = {
+			entity = flusion_planet_ecugaia_01_entity
+		}
 		hidden_effect = {
 			add_modifier ={
 				modifier = temp_job_help
-				days = 1080
+				days = 360
 			}
 			add_modifier ={
 				modifier = pki_flusion_ecu_modifier
@@ -128,7 +131,48 @@ decision_siegfried_world = {
 	}
 }
 
+decision_pki_scaling_colony = {
+	icon = decision_expel_population
+	sound = building_built_01
+	prerequisites = {
+		"tech_katzen_housing"
+	}
+	enactment_time = 720
+	resources = {
+		category = decisions
+		cost = {
+			influence = 50
+			minerals = 7500
+		}
+	}
+	potential = {
+		is_colony = yes
+		from = {
+			has_origin = origin_katzen
+		}
+		NOR = {
+			has_planet_flag = gigaflusion
+			has_planet_flag = pki_scaling_colony
+		}
+	}
+	allow = {
+		text = resort
+		hidden_trigger = {
+			num_buildings = {
+				type = any
+				value = 1
+			}
+		}
+	}
+	effect = {
 
+		hidden_effect = {
+			set_planet_flag = pki_scaling_colony
+			add_modifier = { modifier = pki_scaling_colony days = -1 }
+			add_building = building_pki_katzen_housing
+		}
+	}
+}
 
 
 decision_kaiser_moon = {
@@ -282,10 +326,11 @@ decision_katzen_housing_dam = {
 		custom_tooltip = {
 			fail_text = no_other_dam
         	NOR = {
-            	has_deposit = d_katzen_housing_dam
+				has_deposit = d_katzen_housing_dam
 				has_deposit = d_katzen_food_dam
 				has_deposit = d_katzen_mineral_dam
 				has_deposit = d_katzen_energy_dam
+				has_deposit = d_katzen_industrial_dam
         	}
 		}
 	}
@@ -331,10 +376,11 @@ decision_katzen_food_dam = {
 		custom_tooltip = {
 			fail_text = no_other_dam
         	NOR = {
-            	has_deposit = d_katzen_housing_dam
+				has_deposit = d_katzen_housing_dam
 				has_deposit = d_katzen_food_dam
 				has_deposit = d_katzen_mineral_dam
 				has_deposit = d_katzen_energy_dam
+				has_deposit = d_katzen_industrial_dam
         	}
 		}
 		custom_tooltip = {
@@ -391,10 +437,11 @@ decision_katzen_mineral_dam = {
 		custom_tooltip = {
 			fail_text = no_other_dam
         	NOR = {
-            	has_deposit = d_katzen_housing_dam
+				has_deposit = d_katzen_housing_dam
 				has_deposit = d_katzen_food_dam
 				has_deposit = d_katzen_mineral_dam
 				has_deposit = d_katzen_energy_dam
+				has_deposit = d_katzen_industrial_dam
         	}
 		}
 	}
@@ -445,6 +492,7 @@ decision_katzen_energy_dam = {
 				has_deposit = d_katzen_food_dam
 				has_deposit = d_katzen_mineral_dam
 				has_deposit = d_katzen_energy_dam
+				has_deposit = d_katzen_industrial_dam
         	}
 		}
 	}
@@ -460,6 +508,57 @@ decision_katzen_energy_dam = {
     effect = {
 		add_deposit = d_katzen_energy_dam
     }
+}
+
+#katzen Industrial Dam
+decision_katzen_industrial_dam = {
+	owned_planets_only = yes
+	prerequisites = {
+		"tech_capital_productivity_2"
+	}
+	enactment_time = 720
+	resources = {
+		category = decisions
+		cost = {
+			influence = 50
+			minerals = 7500
+		}
+	}
+	potential = {
+		from = {
+			has_origin = origin_katzen
+		}
+		NOT = {
+			has_planet_flag = gigaflusion
+		}
+
+		is_artificial = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = no_other_dam
+			NOR = {
+				has_deposit = d_katzen_housing_dam
+				has_deposit = d_katzen_food_dam
+				has_deposit = d_katzen_mineral_dam
+				has_deposit = d_katzen_energy_dam
+				has_deposit = d_katzen_industrial_dam
+			}
+		}
+	}
+
+	on_queued = {
+		set_planet_flag = katzen_dam
+	}
+
+	on_unqueued = {
+		remove_planet_flag = katzen_dam
+	}
+
+	effect = {
+		add_deposit = d_katzen_industrial_dam
+	}
 }
 
 decision_katzen_defense_array_1 = {
@@ -729,10 +828,15 @@ decision_pki_societal_restructuring = {
 			add_deposit = d_pki_flusion_societal_restructuring
 			add_deposit = d_giga_job_size
 			add_deposit = d_giga_job_upkeep
-			every_owned_pop = {
-				random = {
-					chance = 50
-					kill_pop = yes
+			export_trigger_value_to_variable = { trigger = num_pops variable = pki_flusion_pops }
+			divide_variable = { which = pki_flusion_pops value = 2 }
+			floor_variable = pki_flusion_pops
+			while = {
+				count = pki_flusion_pops
+				this = {
+					random_pop = {
+						kill_pop = yes
+					}
 				}
 			}
 			pki_district_conversion = {
@@ -803,10 +907,15 @@ decision_pki_further_restructuring = {
 					value = 1.25
 				}
 			}
-			every_owned_pop = {
-				random = {
-					chance = 50
-					kill_pop = yes
+			export_trigger_value_to_variable = { trigger = num_pops variable = pki_flusion_pops }
+			divide_variable = { which = pki_flusion_pops value = 2 }
+			floor_variable = pki_flusion_pops
+			while = {
+				count = pki_flusion_pops
+				this = {
+					random_pop = {
+						kill_pop = yes
+					}
 				}
 			}
 			pki_district_conversion = {
@@ -840,7 +949,7 @@ decision_pki_further_restructuring = {
 
 decision_create_kaiser_legion = {
 	potential = {
-		planet.owner = {
+		from = {
 			any_owned_leader = {
 				has_trait = leader_trait_schulz
 			}

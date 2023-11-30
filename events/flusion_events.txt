@@ -425,7 +425,7 @@ country_event = {
 				immortal = yes
 				traits = {
 					trait = pki_katzen_trait_elite
-					trait = katzen_trait_nukelad
+					trait = pki_leader_trait_nukelad
 					trait = subclass_commander_general
 				}
 			}

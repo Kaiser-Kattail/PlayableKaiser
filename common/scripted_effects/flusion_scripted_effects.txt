@@ -1549,8 +1549,12 @@ pki_spawn_warforge_fleet = {
 			set_owner = $OWNER$
 			if = {
 				limit = {
-					NOT = {
-						space_owner = $OWNER$
+					fromfrom = {
+						space_owner = {
+							NOT = {
+								pki_is_katzenartig_imperium = yes
+							}
+						}
 					}
 				}
 				set_owner = event_target:pki_warforge_country

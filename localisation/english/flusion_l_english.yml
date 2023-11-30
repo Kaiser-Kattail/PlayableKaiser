@@ -189,7 +189,7 @@
     d_katzen_food_dam_desc:0 "A series of dams that redirect water for agricultural purposes."
     d_katzen_housing_dam:0 "Katzen Housing Dams"
     d_katzen_housing_dam_desc:0 "A series of dams that redirect and filter water into usable forms, so as to allow the construction of new homes."
-    d_katzen_industrial_dam:0 "Katzen Industria\l Dams"
+    d_katzen_industrial_dam:0 "Katzen Industria Dams"
     d_katzen_industrial_dam_desc:0 "A series of dams that relocates water for use as industrial coolant, allowing more factories to be opened." 
     d_annexed_region_solak:0 "Roqualian Held Territory"
     d_annexed_region_solak_desc:0 "As long as Roqualian forces hold our land, we cannot use it."
@@ -324,6 +324,8 @@
     has_katlantropa_dam:0 "£trigger_no£ §RWe cannot simply remove a sea.§!"
     no_forest:0 "£trigger_no£ We must have cleared the jungle first."
     cannot_be_dry:0 "£trigger_no£ The world must not be a dry world."
+
+    PKI_MUST_NOT_HAVE_BUILDINGS: "trigger_no Requres no buildings "
 
     pki_need_orbital_arcology:0 "Requires Upgraded Orbital Arcology."
    
@@ -606,7 +608,7 @@
     tr_imperial_management_delayed:0 "Centralization around Flusion lessens our administrative burden for the empire and makes infrastructure projects easier as well."
     tr_flusions_bounty:0 "Flusion's Bounty"
     tr_flusions_bounty_delayed:0 "Flusion is the single greatest planet in the entire galaxy; we must learn to use it and love it to its fullest extent."
-    tr_flusions_bounty_effect: "All colonies but §YFlusion§! receive §R-1§! districts and §R-5%§! happiness."
+    tr_flusions_bounty_effect: "All colonies but §YFlusion§! receive §R-1§! districts and §R-15%§! happiness."
     tr_centralization:0 "Centralization"
     tr_centralization_delayed:0 "Any world coming close to Flusion in greatness is a shame to the homeworld's magnificence; any that is blinded by its light will be vaunted."
     tr_centralization_effect:0 "Gain §G+1%§! monthly §YUnity§! per colony not suffering from §YFlusiocentric Instability§!."
@@ -834,8 +836,8 @@
     tech_pki_ehve:0 "Ereignis Horizont Versatz Einrichtung Construction"
     tech_pki_ehve_desc:0 "Utilizes the $r_arcane_manipulator_1$ and squeezed electromagnetic fields to inflate and stabilize probabilistic $ehof_wormholes$."
 
-    allow_ehve:0 "§HUnlocks Megastructure:§! Ereignis Horizont Versatz Einrichtung"
-    ehve_megastructure_DESC:0 "A feat of Katzen engineering, we will soon be able to send our fleets anywhere!"
+    pki_allow_ehve:0 "§HUnlocks Megastructure:§! Ereignis Horizont Versatz Einrichtung"
+    ehve_megastructure_DESC:0 "§HEreignis Horizont Versatz Einrichtung§!\nA feat of Katzen engineering, we will soon be able to send our fleets anywhere!"
 
     playable_kaiser_ehve_phase1:0 "Quantum Foam Stabilizers"
     playable_kaiser_ehve_phase1_DESC:0 "A partially completed Katzen E.H.V.E."
@@ -878,29 +880,34 @@
     pki_katzprotektorat_1_modifier: "Katzprotektorat Bonuses I"
 
     pki_katzprotektorat_1_penalties: "Katzprotektorat Penalties I"
-    pki_katzprotektorat_1_katzprotektorat_tech: "Katzen Insight I"
+    pki_katzprotektorat_gestalt_1_modifier: "$pki_katzprotektorat_1_penalties$"
+    pki_katzprotektorat_1_katzprotektorat_tech: "Katzen Technology I"
     pki_katzprotektorat_1_overlord_modifier: "Katzprotektorat Advisory"
 	pki_katzprotektorat_1_soldiers: "Katzprotektorat Garrison"
-	pki_katzprotektorat_1_katzprotektorat_ethics: "Katzprotektorat Administration I"
-
+    pki_katzprotektorat_gestalt_1_soldiers: "$pki_katzprotektorat_1_soldiers$"
+	pki_katzprotektorat_1_katzprotektorat_ethics: "Katzprotektorat Administration"
 
     pki_pki_katzprotektorat_1_katzprotektorat_tech_desc: "§YProgress on the following technologies:§!\n   £engineering£$tech_pki_warforge$"
 
     pki_katzprotektorat_1_soldiers_desc: "§ESubject Planets:§!\n   §G+2§! £defense_army£ §YKatzen Peacekeepers§! \n\n§RWARNING:§!\n§PThese armies will fight for the Imperium in the event of an independence war.§!\n\n"
 
     pki_katzprotektorat_2_modifier: "Katzprotektorat Bonuses II"
+    pki_katzprotektorat_gestalt_2_modifier: "$pki_katzprotektorat_2_modifier$"
     pki_katzprotektorat_2_penalties: "Katzprotektorat Penalties II"
-    pki_katzprotektorat_2_katzprotektorat_tech: "Katzen Insight II"
-    pki_katzprotektorat_2_traits: "Katzprotektorat Traits"
-	pki_katzprotektorat_2_leaders: "Katzprotektorat Leaders"
+    pki_katzprotektorat_2_katzprotektorat_tech: "Katzen Technology II"
+    pki_katzprotektorat_2_traits: "Katzen Education"
+	pki_katzprotektorat_2_leaders: "Katzen Leadership Conditioning"
+
+    pki_katzprotektorat_2_traits_desc: "REPLACE_PIECAT"
 
     pki_katzprotektorat_2_katzprotektorat_tech_desc: "§YProgress on the following technologies:§!\n   £engineering£$tech_pki_panzer$"
 
     pki_katzprotektorat_3_modifier: "Katzprotektorat Bonuses III"
+    pki_katzprotektorat_gestalt_3_modifier: "$pki_katzprotektorat_3_modifier$"
     pki_katzprotektorat_3_penalties: "Katzprotektorat Penalties III"
-    pki_katzprotektorat_3_katzprotektorat_tech: "Katzen Insight III"
+    pki_katzprotektorat_3_katzprotektorat_tech: "Katzen Technology III"
     pki_katzprotektorat_3_kinetic_weapons: "Katzen Weaponry"
-	pki_katzprotektorat_3_integration: "Katzprotektorat Administration II"
+	pki_katzprotektorat_3_integration: "Imperium Integration"
 
     pki_katzprotektorat_3_katzprotektorat_tech_desc: "§YProgress on the following technologies:§!\n   £engineering£$tech_pki_bomber$\n   £engineering£$tech_pki_cruiser$"
 

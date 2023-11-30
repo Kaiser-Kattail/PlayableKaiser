@@ -1,5 +1,5 @@
 temp_job_help = {
-	pop_demotion_time_mult = -99.99
+	pop_demotion_time_mult = -0.6
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_expel_population.dds"
 	icon_frame = 1
@@ -48,16 +48,17 @@ pki_katzen_submarine_subspace_blockade = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_surreal_visions.dds"
 	icon_frame = 3
 
-	planet_jobs_produces_mult = -0.8
+	planet_jobs_produces_mult = -0.5
 	pop_happiness = -0.25
-	planet_stability_add = -25
+	planet_stability_add = -20
 }
 
 pki_flusion_ecu_modifier = {
-	planet_jobs_produces_mult = 0.50
-	pop_growth_speed = 0.50
-	planet_max_buildings_add = 256
-	planet_max_districts_mult = 3
+	planet_jobs_produces_mult = 0.25
+	pop_growth_speed = 0.15
+	planet_max_buildings_add = 36
+	planet_max_districts_mult = 2
+	planet_resettlement_unemployed_destination_mult = 0.5
 	icon = "gfx/interface/icons/planet_modifiers/pm_flusion_arcology.dds"
 	icon_frame = 1
 }
@@ -87,4 +88,15 @@ pki_warforge_in_orbit = {
 
 pki_yeah = {
 	country_trust_growth = 100
+}
+
+pki_scaling_colony = {
+	icon = gfx/interface/icons/planet_modifiers/pm_land_appropriated.dds
+	icon_frame = 2
+
+	pop_demotion_time_mult = -0.6
+	planet_carry_cap_add = 50
+	planet_max_buildings_add = -1000
+	planet_max_districts_mult = -0.5
+	planet_jobs_produces_mult = -0.20
 }

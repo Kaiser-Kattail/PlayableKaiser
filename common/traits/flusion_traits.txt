@@ -381,7 +381,7 @@ leader_trait_katzen_trained = {
 	}
 
 	leader_class = all
-	selectable_weight = 1000
+	selectable_weight = 1500
 
 	leader_potential_add = {
 		has_paragon_dlc = yes

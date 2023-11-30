@@ -159,6 +159,15 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 
+	trigger = {
+		any_owned_planet = {
+			NOR = {
+				has_planet_flag = playerflusion
+				has_modifier = katzen_colony
+			}
+		}
+	}
+
 	immediate = {
 		if = {
 			limit = { has_origin = origin_katzen has_tradition = tr_border_colonies }

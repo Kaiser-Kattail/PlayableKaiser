@@ -82,6 +82,7 @@ weapon_component_template = {
 	armor_damage = 1.50
 	missile_retarget_range = 100
 	size_damage_factor = 1
+	
 
 	resources = {
 		category = ship_components
