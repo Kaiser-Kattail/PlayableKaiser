@@ -862,6 +862,11 @@ building_pki_katzen_housing = {
 		}
 		job_enforcer_per_pop = 0.07 # 7 per 100
 	}
+
+	triggered_planet_modifier = {
+		planet_amenities_add = 1
+		multiplier = value:giga_elysium_clerk_count
+	}
 }
 
 building_pki_katzen_outpost = {

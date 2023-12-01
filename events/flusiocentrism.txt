@@ -204,6 +204,7 @@ country_event = {
 				remove_modifier = katzen_colony
 				remove_deposit = d_bureau_of_colonial_benefits
 				remove_deposit = d_flusion_bounty_colony
+				remove_modifier = pki_scaling_colony
 			}
 		}
 	}

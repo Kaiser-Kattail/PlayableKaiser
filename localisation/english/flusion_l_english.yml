@@ -110,6 +110,8 @@
     mod_pc_player_siegfried_world_habitability:0 "Siegfried World Habitability"
     mod_pc_pki_flusion_ecu_habitability: "Flusio-Arcology Habitability"
     pki_katzen_submarine_subspace_blockade: "Subspace Blockage"
+    pki_scaling_colony: "Semiautonomous Katzenkolonie"
+    pki_scaling_colony_desc: "This world is one of the more autonomous planets of the Imperium. Provided with a significant amount of autonomy, alongside hosting a Katzen Employment Center, the world efficiently assigns workers their jobs, if at a minor productivity cost."
 
     # Deposits
     d_grand_kronk_quarry:0 "Grand Kronk Quarry"
@@ -189,7 +191,7 @@
     d_katzen_food_dam_desc:0 "A series of dams that redirect water for agricultural purposes."
     d_katzen_housing_dam:0 "Katzen Housing Dams"
     d_katzen_housing_dam_desc:0 "A series of dams that redirect and filter water into usable forms, so as to allow the construction of new homes."
-    d_katzen_industrial_dam:0 "Katzen Industria Dams"
+    d_katzen_industrial_dam:0 "Katzen Industrial Dams"
     d_katzen_industrial_dam_desc:0 "A series of dams that relocates water for use as industrial coolant, allowing more factories to be opened." 
     d_annexed_region_solak:0 "Roqualian Held Territory"
     d_annexed_region_solak_desc:0 "As long as Roqualian forces hold our land, we cannot use it."
@@ -247,8 +249,8 @@
     tech_katzen_reactor_desc:0 "A number of potential innovations in the field of fusion power exist. The Katzens are eager to get started."
     tech_katzen_lab:0 "Katzen Science"
     tech_katzen_lab_desc:0 "Katzen science is the finest in the galaxy! In order to prove this fact, new facilities must be constructed and numerous bureacratic inhibitors must be cleared to further push our knowledge."
-    tech_katzen_housing:0 "Katzen Housing Complexes"
-    tech_katzen_housing_desc:0 "The Flusionian housing of old will be phased out in favor of new, Katzen-approved designs."
+    tech_katzen_housing:0 "Katzen Employment Centers"
+    tech_katzen_housing_desc:0 "The Katzen Employment Center is an enormous building designed for the management of the fringe worlds of the Imperium. Made with efficiency in mind, it is designed so that the Kaiser never even has to look at the world for it to be incredibly productive."
     tech_katzen_habitability:0 "Katzen Micro-Terraformation"
     tech_katzen_habitability_desc:0 "Certain planets do not require a drastic shift in climate to be made suitable for life, just a few small touches. Micro-terraformation will provide those small touches."
     tech_katzen_theater:0 "Katzen Media"
@@ -278,6 +280,10 @@
     building_pki_katzen_outpost: "Katzen Recruitment Camp"
     building_pki_katzen_outpost_desc: "A sprawling recruitment office, propaganda center, and barracks offers a live-fire training program and exercise regimen to coax the population into signing on to the Katzenarmee, for a better galaxy."
 
+    building_pki_katzen_housing: "Katzen Employment Office"
+    building_pki_katzen_housing_desc: "A centralized position from which the Katzen governors of the planet issue quotas and assign jobs to the populace."
+
+    #JOBS
     job_pki_recruiter: "Katzen Recruiter"
     job_pki_recruiter_plural: "$job_pki_recruiter$s"
     job_pki_recruiter_desc: "Recruiters for the grandest army the galaxy has ever seen."
@@ -318,14 +324,14 @@
     need_both_dams:0 "£trigger_no£ Requires both the Roqualtropa and Katlantropa dams to be built."
     must_have_valid_elite_governor:0 "Must have a governor without the §YElite Figure§! trait."
     must_have_valid_elite_scientist:0 "Must have a scientist without the §YElite Figure§! trait."
-    must_have_valid_elite_admiral:0 "Must have an admiral without the §YElite Figure§! trait."
+    must_have_valid_elite_admiral:0 "Must have an commander without the §YElite Figure§! trait."
     must_have_valid_elite_general:0 "Must have a general without the §YElite Figure§! trait."
     no_other_dam:0 "£trigger_no£ Must not have another Katzen Dam built."
     has_katlantropa_dam:0 "£trigger_no£ §RWe cannot simply remove a sea.§!"
     no_forest:0 "£trigger_no£ We must have cleared the jungle first."
     cannot_be_dry:0 "£trigger_no£ The world must not be a dry world."
 
-    PKI_MUST_NOT_HAVE_BUILDINGS: "trigger_no Requres no buildings "
+    PKI_MUST_NOT_HAVE_BUILDINGS: "£trigger_no£ The planet must be unspoiled by building development."
 
     pki_need_orbital_arcology:0 "Requires Upgraded Orbital Arcology."
    
@@ -334,7 +340,7 @@
     katzen.7.desc:0 "We are able to choose a leader to promote to be an Elite. First pick a leader type below."
     katzen.7.a:0 "Governors"
     katzen.7.b:0 "Scientists"
-    katzen.7.c:0 "Admirals"
+    katzen.7.c:0 "Commanders"
     katzen.7.e:0 "Exit"
     katzen.8.f:0 "Back"
    
@@ -347,8 +353,8 @@
     katzen.8.e: "[leader_5.GetTitle] [leader_5.GetName]"
     katzen.9.name:0 "Scientists"
     katzen.9.desc:0 "This is a list of our scientists that do not have the §YElite Figure§! trait."
-    katzen.10.name:0 "Admirals"
-    katzen.10.desc:0 "This is a list of our admirals that do not have the §YElite Figure§! trait."
+    katzen.10.name:0 "Commanders"
+    katzen.10.desc:0 "This is a list of our commanders that do not have the §YElite Figure§! trait."
 
     pki_misc.220.name: "Katzenartig releases [root.GetName]"
     pki_misc.220.desc: "After many years under the iron fist of the §YKatzenartig Imperium§!, we are finally free. Deciding we are not fit for The Imperium, Kaiser Kattail has released us and given us our well deserved freedom.\n\nAs the chains of subjugation are lifted from us, so too will the boons that the Imperium brought us will recede. Soon the peacekeepers will leave, along with any ships and leaders the Kaiser has lent us. We can once again write the story of our empire."
@@ -378,6 +384,9 @@
     decision_katzen_food_dam_desc:0 "By using the large amounts of excess water created by these dams to irrigate our crops, we can greatly increase the agricultural output of this world."
     decision_katzen_housing_dam:0 "Construct Housing Dams"
     decision_katzen_housing_dam_desc:0 "By constructing dams to drain various seas, new housing and residential developments may be opened up on this world."
+
+    decision_katzen_industrial_dam: "Construct Industiral Dams"
+    decision_katzen_industrial_dam_desc: "By constructing dams to provide increased cooling capabilities to our foundries and factories, industrial output can be increased."
    
     decision_katzen_defense_array_1:0 "Construct Katzen Defense Array"
     decision_katzen_defense_array_1_desc:0 "A new defense station in orbit will provide us with increased system security."
@@ -395,7 +404,15 @@
 
     pki_expand_flusion:0 "Increses §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow.§!"
     pki_expand_flusion_more:0 "Increses §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow.§!"
-   
+
+    decision_pki_scaling_colony: "Create Semiautonomous Colony"
+    decision_pki_scaling_colony_desc: "By handing over some control to the local government, the jobs can be managed with reduced effort."
+
+    PKI_SCALING_COLONY: "Constructs a §Y$building_pki_katzen_housing$§!, providing jobs scaling with planet population while blocking additional buildings."
+
+    PKI_NO_RELOCATION: "Prevents migration to §Y[capital_scope.GetName]§!."
+    PKI_DEPOPULATE: "Migrates all pops from §Y[planet.GetName]§! to §Y[capital_scope.GetName]§!"
+
     # Project Mondkanone
     decision_mondkanone:0 "Propose Project Mondkanone"
     decision_mondkanone_desc:0 "Propose the potentially insane plan of arming the entirety of Muno, effectively turning the moon into an orbital weapons platform."
@@ -507,7 +524,7 @@
     temp_job_help:0 "Katzen Economical Reinforcement"
     temp_job_help_desc:0 "The Kaiser has ordered specific, somewhat harsh measures to ensure a smooth transition into the Flusio-Arcology."
    
-    civic_tooltip_flusion_effects:0 "Start with Jublio as your home system, a set of special leaders, and the ability to perform special Katzen decisions on colonies. More can be unlocked through research. Project Mondkanone will start 10 years into the game."
+    civic_tooltip_flusion_effects:0 "Start with Jublio as your home system, a set of special leaders, and the ability to perform special Katzen decisions on colonies. More can be unlocked through research. Project Mondkanone can be started by taking the Kaiserism tradition."
    
     edict_katzen_leader_upgrade:0 "Leader Katzenification"
     edict_katzen_leader_upgrade_desc:0 "Our leaders are national treasures, and should be treated as such. The very latest in anti-aging technology and special training will be made available to choice leaders."
@@ -858,10 +875,14 @@
     pki_ehve.1.c:0 "Marvelous!"
 
     pki_ehve.2.name:0 "E.H.V.E On Cooldown"
-    pki_ehve.2.desc:0 "The wormhole from our §YE.H.V.E.§! located in the §Y[from.GetName]§! System has been severed. It can no longer be used for instant travel. The §YE.H.V.E.§! must now go on cooldown before it may be used again."
+    pki_ehve.2.desc:0 "The wormhole from our §YE.H.V.E.§! located in the §Y[from.GetName]§! system has been severed. It can no longer be used for instant travel. The §YE.H.V.E.§! must now go on cooldown before it may be used again."
     pki_ehve.2.a:0 "Gates closed."
     pki_ehve.2.b:0 "Until next time."
     pki_ehve.2.c:0 "As it should."
+
+    pki_ehve.3.name: "E.H.V.E. Construction Completed"
+    pki_ehve.3.desc: "We have completed our §YE.H.V.E.§! in §Y[from.GetName]§! We may"
+    pki_ehve.3.a: "Excellent."
 
     specialist_katzprotektorat: "Katzprotektorat"
     specialist_katzprotektorat_desc: "A Katzprotektorat is a form of puppet government set up by the Katzenartig Imperium. They are effectively regional governors of the Imperium, and enjoy some limited autonomy."
@@ -898,7 +919,7 @@
     pki_katzprotektorat_2_traits: "Katzen Education"
 	pki_katzprotektorat_2_leaders: "Katzen Leadership Conditioning"
 
-    pki_katzprotektorat_2_traits_desc: "REPLACE_PIECAT"
+    pki_katzprotektorat_2_traits_desc: "§ELeaders:§!\nChance of gaining the §Y$leader_trait_katzen_trained$§! trait providing bonuses based on the leader type."
 
     pki_katzprotektorat_2_katzprotektorat_tech_desc: "§YProgress on the following technologies:§!\n   £engineering£$tech_pki_panzer$"
 
@@ -925,7 +946,7 @@
     PKI_NEEDS_WARFORGE: "£trigger_no£ Requires at least one §YKatzen War Forge§! in system"
     needs_schulz: "£trigger_no£ We can only recruit meowrines on a world governed by §Y$NAME_schulz$§!!"
 
-    pki_warforge_shipyard_add: "£alloys£ Alloys from £job£ Jobs §G+2.50%§!\nAdds §G+1§! Shipyard and §G+5%§! Ship Build Speed to the system's starbase if §YKatzen Shipyard Array§! is built"
+    pki_warforge_shipyard_add: "£alloys£ Alloys from £job£ Jobs §G+5.0%§!\nAdds §G+1§! Shipyard and §G+5%§! Ship Build Speed to the system's starbase if §YKatzen Shipyard Array§! is built"
     pki_warforge_building: "§G+1§! Shipyard and §G+5%§! Ship Build Speed for each §YKatzen War Forge§! in the system"
 
     tech_pki_warforge: "Katzen Warforge"

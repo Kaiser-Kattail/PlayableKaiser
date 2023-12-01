@@ -411,7 +411,7 @@ country_event = {
 				set_gender = male
 				set_name = "NAME_Pawlbert"
 				set_leader_flag = flusion_modified
-				add_trait = pki_katzen_trait_elite
+				add_trait_no_notify = pki_katzen_trait_elite
 			}
 
 			#Create Pawtton
@@ -451,13 +451,14 @@ country_event = {
 					trait = leader_trait_army_veteran
 					trait = subclass_official_governor
 				}
+				effect = {
+					change_leader_portrait = lorisvanilla
+					set_leader_flag = loris
+					save_global_event_target_as = loris
+					set_council_position = councilor_state
+				}
 			}
-			last_created_leader = {
-				change_leader_portrait = lorisvanilla
-				set_leader_flag = loris
-				save_global_event_target_as = loris
-			}
-			
+
 			event_target:playerflusion = {
 				assign_leader = event_target:loris
 			}

@@ -132,7 +132,7 @@ pki_katzprotektorat_gestalt_1_modifier = {
 				colors = {
 					"blue"
 					"dark_blue"
-					"dark_blue"
+					"black"
 					"null"
 				}
 			}
@@ -159,8 +159,13 @@ pki_katzprotektorat_1_penalties = {
 pki_katzprotektorat_1_overlord_modifier = {
 	icon = "GFX_specialist_perk_katzprotektorat_1_overlord_modifier"
 	overlord_modifier = {
-		country_power_projection_unity_produces_add = 100
-		empire_size_mult = 0.125
+		diplo_weight_mult = 0.1
+		country_subject_technology_sharing_mult = 0.15
+		empire_size_mult = 0.15
+	}
+	subject_modifier = {
+		subject_tech_cost_mult = -0.15
+		empire_size_mult = -0.15
 	}
 }
 

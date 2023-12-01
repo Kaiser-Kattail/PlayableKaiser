@@ -219,13 +219,28 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_specialist_perk_katzprotektorat_1_soldiers"
+		textureFile = "gfx/interface/subjugation/specialist_perks/pki_katzprotektorat_1_soldiers.dds"
+	}
+
+	spriteType = {
+		name = "GFX_specialist_perk_katzprotektorat_1_overlord_modifier"
+		textureFile = "gfx/interface/subjugation/specialist_perks/pki_katzprotektorat_1_overlord_modifier.dds"
+	}
+
+	spriteType = {
+		name = "GFX_specialist_perk_katzprotektorat_1_katzprotektorat_ethics"
+		textureFile = "gfx/interface/subjugation/specialist_perks/pki_katzprotektorat_1_katzprotektorat_ethics.dds"
+	}
+
+	spriteType = {
 		name = "GFX_specialist_perk_katzprotektorat_3_katzprotektorat_tech"
 		textureFile = "gfx/interface/subjugation/specialist_perks/pki_katzprotektorat_3_katzprotektorat_tech.dds"
 	}
 
 	spriteType = {
-		name = "GFX_specialist_perk_katzprotektorat_1_soldiers"
-		textureFile = "gfx/interface/subjugation/specialist_perks/pki_katzprotektorat_1_soldiers.dds"
+		name = "GFX_specialist_perk_katzprotektorat_3_integration"
+		textureFile = "gfx/interface/subjugation/specialist_perks/pki_katzprotektorat_3_integration.dds.dds"
 	}
 
 	spriteType = {

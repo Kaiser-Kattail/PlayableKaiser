@@ -142,7 +142,7 @@ decision_pki_scaling_colony = {
 		category = decisions
 		cost = {
 			influence = 50
-			minerals = 7500
+			minerals = 2000
 		}
 	}
 	potential = {
@@ -156,16 +156,16 @@ decision_pki_scaling_colony = {
 		}
 	}
 	allow = {
-		text = resort
-		hidden_trigger = {
+		custom_tooltip = {
+			fail_text = PKI_MUST_NOT_HAVE_BUILDINGS
 			num_buildings = {
 				type = any
-				value = 1
+				value < 2
 			}
 		}
 	}
 	effect = {
-
+		custom_tooltip = PKI_SCALING_COLONY
 		hidden_effect = {
 			set_planet_flag = pki_scaling_colony
 			add_modifier = { modifier = pki_scaling_colony days = -1 }
@@ -583,7 +583,8 @@ decision_katzen_defense_array_1 = {
 		}
 	}
 
-	effect = { 
+	effect = {
+		custom_tooltip = pki_defence_array_decision
 		create_fleet = {
 			name = "Katzenplanetenverteidigung"
 			settings = { spawn_debris = no }
@@ -718,7 +719,6 @@ decision_kaiser_craft_recall = {
 #}
 
 decision_toggle_relocation = {
-	enactment_time = 10
     resources = {
         category = decisions
         cost = {
@@ -773,6 +773,7 @@ decision_depopulate_planet = {
 		is_colony = yes
     }
 	effect = {
+		custom_tooltip = PKI_DEPOPULATE
 		hidden_effect = {
 			every_owned_pop = {
 				resettle_pop = {
