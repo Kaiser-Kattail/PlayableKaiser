@@ -40,7 +40,7 @@ katzen_war_forge_1 = {
 
 	on_build_complete = {
 		pki_spawn_warforge_fleet = {
-			OWNER = event_target:katzenartig_imperium
+			OWNER = event_target:katzenartig
 		}
 	}	
 }	
@@ -70,7 +70,6 @@ playable_kaiser_ehve_phase0 = {
 
 	prerequisites = { "tech_pki_ehve" }
 	potential = {
-		NOT = { has_global_flag = ehof_disabled }
 		has_origin = origin_katzen
 	}
 
@@ -204,6 +203,23 @@ playable_kaiser_ehve_dummy = {
 			}
 		}
 		remove_megastructure = fromfrom
+		event_target:playable_kaiser_ehve_target@this = {
+			solar_system = {
+				every_megastructure = {
+					limit = {
+						is_megastructure_type = playable_kaiser_wormhole
+					}
+					remove_megastructure = this
+				}
+			}
+		}
+		clear_global_event_target = playable_kaiser_ehve_target@this
+		pki_clear_yeeted_flag = yes
+		from = {
+			country_event = {
+				id = pki_ehve.2
+			}
+		}
 	}
 }
 
@@ -258,9 +274,11 @@ playable_kaiser_ehve_cooldown_dummy = {
 	upgrade_from = {
 		playable_kaiser_ehve_cooldown
 	}
+
 	country_modifier = {
 		fleet_mia_time_mult = -0.15
 	}
+
 	on_build_complete = {
 		spawn_megastructure = {
 			type = playable_kaiser_ehve
@@ -348,40 +366,10 @@ playable_kaiser_ehve = {
 
 	bypass_type = quantum_catapult
 	on_build_complete = {
-		event_target:playable_kaiser_ehve_target@this = {
-			solar_system = {
-				random_megastructure = {
-					limit = {
-						is_megastructure_type = playable_kaiser_wormhole
-					}
-					remove_megastructure = this
-				}
-			}
-		}
 		from = {
 			set_country_flag = has_built_or_repaired_megastructure
+			country_event = { id = pki_ehve.3 }
 		}
-		clear_global_event_target = playable_kaiser_ehve_target@this
-		pki_clear_yeeted_flag = yes
-		this = {
-			if = {
-				limit = {
-					from = {
-						NOT = {
-							OR = {
-								has_country_flag = pki_ehve_message_2
-								has_country_flag = pki_hasnt_used_ehve
-							}
-						}
-					}
-				}
-				from = {
-					country_event = {
-						id = pki_ehve.2
-					}
-				}
-			}
-		}
-		
+
 	}
 }

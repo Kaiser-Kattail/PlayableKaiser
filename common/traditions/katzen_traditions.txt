@@ -204,7 +204,7 @@ tr_flusion_finish = {
 			}
 		}
 	}
-	custom_tooltip = "tr_flusion_finish_effect"
+	custom_tooltip_with_modifiers = "tr_flusion_finish_effect"
 	modifier = {
 		ascension_perks_add = 1
 	}

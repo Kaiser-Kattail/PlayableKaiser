@@ -103,6 +103,7 @@ flusion_new_initializer = {
 		has_ring = no
 		entity = "flusion_planet_entity"
 		init_effect = {
+			clear_planet_modifiers = yes
 			add_modifier = { modifier = pki_flusion_rich_modifier days = -1 }
 			prevent_anomaly = yes
 			save_global_event_target_as = gigaflusion

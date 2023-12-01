@@ -364,11 +364,13 @@ country_event = {
 					exists = leader
 					leader = { has_trait = leader_trait_gunfur }
 				}
-				add_resource = {
-					alloys = 10
-					energy = 25
-					minerals = 25
-					food = 25
+				prev = {
+					add_resource = {
+						alloys = 10
+						energy = 25
+						minerals = 25
+						food = 25
+					}
 				}
 			}
 		}
@@ -688,7 +690,8 @@ fleet_event = {
 	trigger = {
 		from = {
 			exists = planet
-			planet.controller  = {
+			exists = planet_owner
+			planet_owner = {
 				is_at_war_with = event_target:katzenartig
 				NOT = {
 					has_origin = origin_katzen

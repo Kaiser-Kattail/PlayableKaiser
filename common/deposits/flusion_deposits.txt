@@ -481,33 +481,29 @@ d_katzen_industrial_dam = {
     is_for_colonizable = yes
 
     planet_modifier = {
-        planet_housing_add = 20
+        planet_housing_add = 10
         planet_max_districts_add = 3
         pop_environment_tolerance = -0.15
+		planet_metallurgists_alloys_produces_add = 0.5
+		planet_artisans_consumer_goods_produces_add = 0.5
     }
-    resources = {
-        category = planet_deposits
-        produces = {
-            alloys = 7.5
-			consumer_goods = 15
-        }
-		produces = {
-			trigger = {
-				has_designation = col_foundry
-				exists = owner
-			}
-			alloys = 7.5
-			consumer_goods = -15
+	triggered_planet_modifier = {
+		potential = {
+			has_designation = col_foundry
+			exists = owner
 		}
-		produces = {
-			trigger = {
-				has_designation = col_factory
-				exists = owner
-			}
-			alloys = -7.5
-			consumer_goods = 15
+		planet_metallurgists_alloys_produces_add = 1
+		planet_artisans_consumer_goods_produces_add = -0.5
+
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_designation = col_factory
+			exists = owner
 		}
-    }
+		planet_artisans_consumer_goods_produces_add = 1
+		planet_metallurgists_alloys_produces_add = -0.5
+	}
 	drop_weight = {
 		weight = 0
 	}
@@ -519,7 +515,7 @@ d_katzen_mineral_dam = {
 
     planet_modifier = {
         district_mining_max = 3
-        planet_housing_add = 20
+        planet_housing_add = 15
         planet_max_districts_add = 2
         pop_environment_tolerance = -0.10
 		job_miner_per_pop = 0.1
@@ -535,7 +531,7 @@ d_katzen_energy_dam = {
 
     planet_modifier = {
         district_generator_max = 3
-        planet_housing_add = 20
+        planet_housing_add = 15
         planet_max_districts_add = 2
         pop_environment_tolerance = -0.10
     }
@@ -556,7 +552,7 @@ d_katzen_food_dam = {
 
     planet_modifier = {
         district_farming_max = 3
-        planet_housing_add = 20
+        planet_housing_add = 15
         planet_max_districts_add = 2
         pop_environment_tolerance = -0.10
 		job_farmer_per_pop = 0.1
@@ -575,14 +571,8 @@ d_katown_reactor = {
 	}
 	planet_modifier = {
 		job_technician_add = 2
-		planet_technician_energy_produces_add = 1
+		planet_technician_energy_produces_add = 0.5
 	}
-	# resources = {
-	# 	category = planet_deposits
-	# 	produces = {
-	# 		energy = 40
-	# 	}
-	# }
 }
 
 d_bureau_of_benefits = {
@@ -650,9 +640,7 @@ d_flusion_bureaucracy = {
 
 	planet_modifier = {
 		planetary_ascension_cost_mult = -0.1
-		empire_size_pops_mult = -0.2
 	}
-
 
 	category = deposit_cat_rare
 
@@ -670,7 +658,7 @@ d_flusion_bounty_colony = {
 
 	planet_modifier = {
 		planet_max_districts_add = -1
-		pop_happiness = -0.5
+		pop_happiness = -0.15
 	}
 
 	category = deposit_cat_rare
@@ -737,7 +725,7 @@ d_symbyland_power = {
 
 	planet_modifier = {
 		job_technician_add = 2
-		planet_technician_energy_produces_add = 1
+		planet_technician_energy_produces_add = 0.5
 	}
 
 	drop_weight = {
@@ -800,5 +788,6 @@ d_pki_flusion_societal_restructuring = {
 
 	planet_modifier = {
 		giga_planet_job_size = 1
+		planet_building_build_speed_mult = 0.1
 	}
 }

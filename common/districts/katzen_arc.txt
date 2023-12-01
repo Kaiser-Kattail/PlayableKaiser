@@ -33,14 +33,15 @@ district_pki_flusion_city = {
 			minerals = 720
 		}
 		upkeep = {
-			energy = 2
+			energy = 5
 		}
 	}
 
 	planet_modifier = {
-		planet_housing_add = 24
-		planet_amenities_add = 28
-		planet_orbital_bombardment_damage = -0.05
+		planet_housing_add = 20
+		planet_amenities_add = 8
+		planet_orbital_bombardment_damage = -0.01
+		planet_max_buildings_add = 1.5
 	}
 
 	triggered_planet_modifier = {
@@ -54,8 +55,8 @@ district_pki_flusion_city = {
 			}
 		}
 		modifier = {
-			job_enforcer_add = 4
-			job_soldier_add = 1
+			job_enforcer_add = 2
+			job_soldier_add = 2
 		}
 	}
 
@@ -67,7 +68,7 @@ district_pki_flusion_city = {
 			}
 		}
 		modifier = {
-			job_patrol_drone_add = 4
+			job_patrol_drone_add = 1
 			job_warrior_drone_add = 1
 		}
 	}
@@ -144,7 +145,6 @@ district_pki_flusion_city = {
 		}
 		modifier = {
 			# the roofs are full of AA guns already
-			job_enforcer_add = -1
 			job_farmer_add = 1
 		}
 	}
@@ -169,17 +169,6 @@ district_pki_flusion_city = {
 			}
 		}
 		text = job_enforcer_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-				has_active_tradition = tr_mercantile_trickle_up_economics 
-			}
-		}
-		text = job_clerk_effect_desc
 	}
 
 	triggered_desc = {
@@ -244,7 +233,7 @@ district_pki_flusion_heavy_industry = {
 			minerals = 720
 		}
 		upkeep = {
-			energy = 2
+			energy = 5
 		}
 
 		upkeep = {
@@ -259,7 +248,7 @@ district_pki_flusion_heavy_industry = {
 	}
 
 	planet_modifier = {
-		pop_environment_tolerance = -0.025
+		pop_environment_tolerance = -0.05
 	}
 
 	inline_script = {
@@ -279,6 +268,21 @@ district_pki_flusion_heavy_industry = {
 		modifier = {
 			job_foundry_add = -2
 			job_giga_megaengineer_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			has_global_flag = @giga_amb_flag
+			owner = { has_technology = giga_tech_amb_supertensiles }
+		}
+		modifier = {
+			job_alloy_drone_add = -2
+			job_giga_megaengineer_drone_add = 2
 		}
 	}
 
@@ -316,6 +320,18 @@ district_pki_flusion_heavy_industry = {
 			owner = { has_technology = giga_tech_amb_supertensiles }
 		}
 		text = job_giga_megaengineer_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			has_global_flag = @giga_amb_flag
+			owner = { has_technology = giga_tech_amb_supertensiles }
+		}
+		text = job_giga_megaengineer_drone_effect_desc
 	}
 }
 
@@ -360,7 +376,7 @@ district_pki_flusion_civilian_industry = {
 	}
 
 	planet_modifier = {
-		pop_environment_tolerance = -0.02
+		pop_environment_tolerance = -0.05
 	}
 
 	inline_script = {
@@ -494,24 +510,23 @@ district_pki_flusion_science = {
 		district_mining
 	}
 
+	planet_modifier = {
+		pop_happiness = -0.05
+	}
+
 	resources = {
 		category = planet_districts_industrial
 		cost = {
 			minerals = 720
 		}
 		upkeep = {
-			energy = 2
+			energy = 5
 		}
 	}
 
 	inline_script = {
 		script = jobs/researchers_add
-		AMOUNT = 7
-	}
-
-	inline_script = {
-		script = jobs/chemist_add
-		AMOUNT = 1
+		AMOUNT = 8
 	}
 
 	triggered_planet_modifier = {
@@ -577,18 +592,17 @@ district_pki_flusion_mining = {
 			minerals = 720
 		}
 		upkeep = {
-			energy = 2
+			energy = 5
 		}
 	}
 
 	planet_modifier = {
-		planet_jobs_energy_produces_mult = 0.05
 		pop_environment_tolerance = -0.025
 	}
 
 	inline_script = {
 		script = jobs/miners_add
-		AMOUNT = 6
+		AMOUNT = 5
 	}
 
 	triggered_planet_modifier = {
@@ -601,6 +615,7 @@ district_pki_flusion_mining = {
 		modifier = {
 			job_crystal_miner_add = 1
 			job_gas_extractor_add = 1
+			job_mote_harvester_add = 1
 		}
 	}
 
@@ -614,6 +629,7 @@ district_pki_flusion_mining = {
 		modifier = {
 			job_crystal_mining_drone_add = 1
 			job_gas_extraction_drone_add = 1
+			job_mote_harvesting_drone_add = 1
 		}
 	}
 
@@ -647,6 +663,22 @@ district_pki_flusion_mining = {
 			owner = { is_gestalt = yes }
 		}
 		text = job_crystal_mining_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_mote_harvester_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_mote_harvesting_drone_effect_desc
 	}
 }
 
@@ -682,17 +714,18 @@ district_pki_flusion_farming = {
 			minerals = 720
 		}
 		upkeep = {
-			energy = 2
+			energy = 5
 		}
 	}
 
 	planet_modifier = {
-		pop_environment_tolerance = 0.075
+		pop_environment_tolerance = 0.20
 	}
 
 	inline_script = {
 		script = jobs/farmers_add
 		FARMER_AMOUNT = 6
+		ANGLER_AMOUNT = 6
 	}
 
 	triggered_planet_modifier = {
@@ -798,7 +831,7 @@ district_pki_flusion_power = {
 			minerals = 720
 		}
 		upkeep = {
-			energy = 2
+			energy = 5
 		}
 	}
 
@@ -808,46 +841,6 @@ district_pki_flusion_power = {
 
 	inline_script = {
 		script = jobs/technicians_add
-		AMOUNT = 7
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		modifier = {
-			job_mote_harvester_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		modifier = {
-			job_mote_harvesting_drone_add = 1
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		text = job_mote_harvester_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		text = job_mote_harvesting_drone_effect_desc
+		AMOUNT = 8
 	}
 }

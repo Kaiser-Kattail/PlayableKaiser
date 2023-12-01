@@ -1,5 +1,5 @@
-@level_2_xp_cost = 1200 # 10 years at 100 Loyalty.
-@level_3_xp_cost = 3600 # 30 years at 100 Loyalty.
+@level_2_xp_cost = 1200
+@level_3_xp_cost = 1800
 
 specialist_katzprotektorat = {
 	icon = "GFX_diplomacy_specialist_subject_katzprotektorat"

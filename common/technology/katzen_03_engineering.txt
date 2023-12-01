@@ -142,7 +142,6 @@ tech_pki_ehve = {
 	}
 
 	potential = {
-		has_country_flag = has_arcane_generator
 		has_origin = origin_katzen
 		has_overlord_dlc = yes
 	}
@@ -163,7 +162,7 @@ tech_pki_ehve = {
 
 	prereqfor_desc = {
 		custom = {
-			title = "allow_ehve"
+			title = "pki_allow_ehve"
 			desc = "ehve_megastructure_DESC"
 		}
 	}

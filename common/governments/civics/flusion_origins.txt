@@ -21,7 +21,9 @@ origin_katzen = {
 	}
 
 	modifier = {
-		country_subject_acceptance_add = -1000
+		country_subject_acceptance_add = -50
+		weapon_type_kinetic_weapon_damage_mult = 0.3
+		weapon_type_energy_weapon_damage_mult = -0.3
 	}
 
 	random_weight = {

@@ -193,11 +193,11 @@ peacekeeper_army = {
 }
 
 dominion_tracks = {
-	damage = 50.0
-	health = 50.0
+	damage = 25.0
+	health = 25.0
 	has_morale = no
 	collateral_damage = 1
-	war_exhaustion = 5.0
+	war_exhaustion = 30.0
 	has_species = no
 
 	icon = GFX_army_type_katzen_panzer

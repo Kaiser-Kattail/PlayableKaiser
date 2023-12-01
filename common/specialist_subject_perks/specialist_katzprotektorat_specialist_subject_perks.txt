@@ -132,7 +132,7 @@ pki_katzprotektorat_gestalt_1_modifier = {
 				colors = {
 					"blue"
 					"dark_blue"
-					"dark_blue"
+					"black"
 					"null"
 				}
 			}
@@ -159,8 +159,13 @@ pki_katzprotektorat_1_penalties = {
 pki_katzprotektorat_1_overlord_modifier = {
 	icon = "GFX_specialist_perk_katzprotektorat_1_overlord_modifier"
 	overlord_modifier = {
-		country_power_projection_unity_produces_add = 100
-		empire_size_mult = 0.125
+		diplo_weight_mult = 0.1
+		country_subject_technology_sharing_mult = 0.15
+		empire_size_mult = 0.15
+	}
+	subject_modifier = {
+		subject_tech_cost_mult = -0.15
+		empire_size_mult = -0.15
 	}
 }
 
@@ -201,7 +206,7 @@ pki_katzprotektorat_1_katzprotektorat_ethics = {
 }
 
 pki_katzprotektorat_1_katzprotektorat_tech = {
-	icon = "GFX_specialist_perk_katzprotektorat_1_katzprotektorat_tech"
+	icon = "GFX_specialist_perk_prospectorium_2_mining_tech"
 
 	activate_effect = {
 		target = {
@@ -255,7 +260,7 @@ pki_katzprotektorat_2_penalties = {
 }
 
 pki_katzprotektorat_2_katzprotektorat_tech = {
-	icon = "GFX_specialist_perk_katzprotektorat_2_katzprotektorat_tech"
+	icon = "GFX_specialist_perk_prospectorium_3_mining_tech"
 
 	activate_effect = {
 		target = {
@@ -272,7 +277,7 @@ pki_katzprotektorat_2_katzprotektorat_tech = {
 }
 
 pki_katzprotektorat_2_leaders = {
-	icon = "GFX_specialist_perk_katzprotektorat_2_leaders"
+	icon = "GFX_specialist_perk_bulwark_2_leaders"
 	subject_modifier = {
 		leader_initial_skill = 1
 		leader_trait_selection_options_add = 1
@@ -280,7 +285,7 @@ pki_katzprotektorat_2_leaders = {
 }
 
 pki_katzprotektorat_2_traits = {
-	icon = "GFX_specialist_perk_katzprotektorat_2_traits"
+	icon = "GFX_specialist_perk_bulwark_2_traits"
 
 	deactivate_effect = {
 		hidden_effect = {
@@ -293,7 +298,7 @@ pki_katzprotektorat_2_traits = {
 	}
 
 	desc = {
-		description = katzprotektorat_2_traits_desc
+		description = pki_katzprotektorat_2_traits_desc
 	}
 }
 
@@ -340,7 +345,7 @@ pki_katzprotektorat_3_katzprotektorat_tech = {
 }
 
 pki_katzprotektorat_3_kinetic_weapons = {
-	icon = "GFX_specialist_perk_katzprotektorat_3_kinetic_weapons"
+	icon = "GFX_specialist_perk_scholarium_3_arctrellis"
 
 	subject_modifier = {
 		weapon_type_kinetic_weapon_damage_mult = 0.3

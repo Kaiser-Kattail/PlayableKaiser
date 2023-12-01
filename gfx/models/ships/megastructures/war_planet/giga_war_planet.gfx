@@ -15,7 +15,7 @@ objectTypes = {
 	pdxmesh = {
 		name = "war_planet_locators_mesh"
 		file = "gfx/models/ships/megastructures/war_planet/war_planet_locators.mesh"
-		scale = 1
+		scale = 0.5
 	}
 
 	pdxmesh = {
@@ -58,6 +58,12 @@ objectTypes = {
 		name = "war_planet_sternthrusters_mesh"
 		file = "gfx/models/ships/megastructures/war_planet/war_planet_sternthrusters.mesh"
 		scale = 1
+	}
+
+	pdxmesh = {
+		name = "war_planet_complete_mesh"
+		file = "gfx/models/ships/megastructures/war_planet/war_planet_complete.mesh"
+		scale = 0.5
 	}
 
 	pdxmesh = {
