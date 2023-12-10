@@ -91,7 +91,10 @@ tech_pki_submarine = {
 	area = physics
 	tier = 2
 	category = { field_manipulation }
-		prerequisites = { "tech_cloaking_1" }
+	prerequisites = {
+		"tech_cloaking_1"
+		"tech_torpedoes_1"
+	}
 	weight = @tier2weight3
 
 	is_rare = yes
