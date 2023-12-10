@@ -1522,7 +1522,7 @@ player_flusion_liberated_haranian = {
 	}
 }
 
-pki_district_conversion = {
+pki_district_half = {
 	export_trigger_value_to_variable = {
 		trigger = num_districts
 		parameters = {
@@ -1535,6 +1535,26 @@ pki_district_conversion = {
 	while = {
 		count = $VARIABLE$
 		remove_district = $DISTRICT$
+	}
+	clear_variable = $VARIABLE$
+}
+
+pki_district_var_set = {
+	export_trigger_value_to_variable = {
+		trigger = num_districts
+		parameters = {
+			type = $DISTRICT$
+		}
+		variable = $VARIABLE$
+	}
+	divide_variable = { which = $VARIABLE$ value = 2 }
+	floor_variable = $VARIABLE$
+}
+
+pki_district_convert = {
+	while = {
+		count = $VARIABLE$
+		add_district = $DISTRICT$
 	}
 	clear_variable = $VARIABLE$
 }
@@ -1582,6 +1602,28 @@ pki_spawn_warforge_fleet = {
 				modifier = pki_warforge_in_orbit
 				days = -1
 			}
+		}
+	}
+}
+
+pki_spawn_defense_fleet = {
+	create_fleet = {
+		name = "Katzenplanetenverteidigung"
+		settings = { spawn_debris = no }
+		effect = {
+			set_owner = ROOT
+			create_ship = {
+				name = "Katzenplanetenverteidigung"
+				random_existing_design = katzen_player_warforge_platform
+				upgradable = yes
+			}
+			set_location = {
+				target = ROOT
+				distance = 10
+				angle = @\[90*($NUMBER$ - 1) ]
+			}
+			set_fleet_flag = pki_platform_planet_@root
+			set_fleet_flag = pki_platform_$NUMBER$_@root
 		}
 	}
 }

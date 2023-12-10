@@ -9,7 +9,7 @@ flusion_empire_ratio_five = {
 }
 
 leader_katzenification_cost = {
-    base = 75
+    base = 20
     mult = trigger:empire_size
 }
 
