@@ -1,0 +1,433 @@
+namespace = giga_fallen_empire
+# At the start
+country_event = {
+	id = giga_fallen_empire.1000
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		every_country = {
+			limit = {
+				is_country_type = fallen_empire
+			}
+			set_variable = {
+				which = giga_fe_repeatable_count
+				value = 2
+			}
+			#Give FE repeatables
+			country_event = { id = giga_fallen_empire_repeatables.1 days = 15 }
+
+			# Adjust FE buildings for supertensiles if enabled
+			if = {
+				limit = {
+					has_global_flag = @giga_amb_flag
+				}
+				country_event = { id = giga_fallen_empire_misc.1047 days = 15 }
+			}
+		}
+		if = { #Generic war moons for all FEs
+			limit = { NOT = { has_global_flag = giga_fe_planetcrafts_0 } }
+			if = {
+				limit = { has_global_flag = giga_fe_planetcrafts_1 }
+				every_country = {
+					limit = { is_country_type = fallen_empire }
+					change_variable = {
+						which = giga_fe_repeatable_count
+						value = 10
+					}
+					add_modifier = { modifier = giga_fe_ehof_sr_upkeep_help days = -1 }
+				}
+				event_target:global_event_country = {
+					set_variable = {
+						which = giga_fe_mooncraft_min_count
+						value = 0
+					}
+					set_variable = {
+						which = giga_fe_mooncraft_max_count
+						value = 3
+					}
+					set_variable = {
+						which = giga_fe_planetcraft_min_count
+						value = 0
+					}
+					set_variable = {
+						which = giga_fe_planetcraft_max_count
+						value = 0
+					}
+
+					set_variable = {
+						which = giga_ae_mooncraft_min_count
+						value = 1
+					}
+					set_variable = {
+						which = giga_ae_mooncraft_max_count
+						value = 5
+					}
+					set_variable = {
+						which = giga_ae_planetcraft_min_count
+						value = 0
+					}
+					set_variable = {
+						which = giga_ae_planetcraft_max_count
+						value = 1
+					}
+				}
+			}
+
+			else_if = {
+				limit = { has_global_flag = giga_fe_planetcrafts_2 }
+				every_country = {
+					limit = { is_country_type = fallen_empire }
+					change_variable = {
+						which = giga_fe_repeatable_count
+						value = 30
+					}
+				}
+				event_target:global_event_country = {
+					set_variable = {
+						which = giga_fe_mooncraft_min_count
+						value = 2
+					}
+					set_variable = {
+						which = giga_fe_mooncraft_max_count
+						value = 5
+					}
+					set_variable = {
+						which = giga_fe_planetcraft_min_count
+						value = 0
+					}
+					set_variable = {
+						which = giga_fe_planetcraft_max_count
+						value = 1
+					}
+
+					set_variable = {
+						which = giga_ae_mooncraft_min_count
+						value = 2
+					}
+					set_variable = {
+						which = giga_ae_mooncraft_max_count
+						value = 8
+					}
+					set_variable = {
+						which = giga_ae_planetcraft_min_count
+						value = 1
+					}
+					set_variable = {
+						which = giga_ae_planetcraft_max_count
+						value = 2
+					}
+				}
+			}
+
+			else_if = {
+				limit = { has_global_flag = giga_fe_planetcrafts_3 }
+				every_country = {
+					limit = { is_country_type = fallen_empire }
+					change_variable = {
+						which = giga_fe_repeatable_count
+						value = 60
+					}
+				}
+				event_target:global_event_country = {
+					set_variable = {
+						which = giga_fe_mooncraft_min_count
+						value = 5
+					}
+					set_variable = {
+						which = giga_fe_mooncraft_max_count
+						value = 10
+					}
+					set_variable = {
+						which = giga_fe_planetcraft_min_count
+						value = 1
+					}
+					set_variable = {
+						which = giga_fe_planetcraft_max_count
+						value = 3
+					}
+
+					set_variable = {
+						which = giga_ae_mooncraft_min_count
+						value = 6
+					}
+					set_variable = {
+						which = giga_ae_mooncraft_max_count
+						value = 12
+					}
+					set_variable = {
+						which = giga_ae_planetcraft_min_count
+						value = 2
+					}
+					set_variable = {
+						which = giga_ae_planetcraft_max_count
+						value = 3
+					}
+				}
+			}
+
+			else_if = {
+				limit = { has_global_flag = giga_fe_planetcrafts_4 }
+				every_country = {
+					limit = { is_country_type = fallen_empire }
+					change_variable = {
+						which = giga_fe_repeatable_count
+						value = 100
+					}
+				}
+				event_target:global_event_country = {
+					set_variable = {
+						which = giga_fe_mooncraft_min_count
+						value = 10
+					}
+					set_variable = {
+						which = giga_fe_mooncraft_max_count
+						value = 20
+					}
+					set_variable = {
+						which = giga_fe_planetcraft_min_count
+						value = 3
+					}
+					set_variable = {
+						which = giga_fe_planetcraft_max_count
+						value = 6
+					}
+
+					set_variable = {
+						which = giga_ae_mooncraft_min_count
+						value = 15
+					}
+					set_variable = {
+						which = giga_ae_mooncraft_max_count
+						value = 30
+					}
+					set_variable = {
+						which = giga_ae_planetcraft_min_count
+						value = 4
+					}
+					set_variable = {
+						which = giga_ae_planetcraft_max_count
+						value = 8
+					}
+				}
+			}
+			country_event = { id = giga_fallen_empire_moons.1000 days = 2 }
+		}
+		if = { #megas
+			limit = { NOT = { has_global_flag = giga_fe_megas_disabled } }
+			country_event = { id = giga_fallen_empire_megas.1000 days = 2 }
+		}
+		#The Pouchkinn FE (why)
+		if = {
+			limit = {
+				NOT = { has_global_flag = meopa_spawned_as_fe }
+				any_country = {
+					is_country_type = fallen_empire
+					has_ethic = ethic_fanatic_materialist
+				}
+				NOR = {
+					has_global_flag = giga_fe_pouchkinn_disabled
+					has_global_flag = giga_gatzo_disabled
+					has_global_flag = katzenartig_always
+					has_global_flag = katzenartig_deathwish
+					has_global_flag = katzenartig_stellarite
+					has_global_flag = katzenartig_improbable
+					has_global_flag = giga_tyaur_guaranteed
+					has_global_flag = matrioshka_brain_disabled
+					has_global_flag = asteroid_artillery_disabled
+					has_global_flag = planetary_computer_disabled
+				}
+				host_has_dlc = Nemesis
+				NOT = { any_country = { has_origin = origin_scion } }
+			}
+			random_list = {
+				30 = {
+					set_global_flag = meopa_spawned_as_fe
+					random_country = {
+						limit = {
+							is_country_type = fallen_empire
+							has_ethic = ethic_fanatic_materialist
+						}
+						save_global_event_target_as = giga_meopa_fe
+					}
+					modifier = {
+						add = 10
+						has_global_flag = katzenartig_disabled
+					}
+					modifier = {
+						add = 10
+						has_global_flag = katzenartig_never
+					}
+				}
+				70 = { #CHANGE TO 70
+					modifier = {
+						add = -10
+						has_global_flag = katzenartig_disabled
+					}
+					modifier = {
+						add = -10
+						has_global_flag = katzenartig_never
+					}
+				}
+			}
+		}
+		#The Meopa FE (comical!)
+		if = {
+			limit = {
+				NOT = { has_global_flag = meopa_spawned_as_fe }
+				any_country = {
+					is_country_type = fallen_empire
+					OR = {
+						has_ethic = ethic_fanatic_xenophile
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				}
+				NOR = {
+					has_global_flag = kaiser_is_player
+					has_global_flag = katzenartig_always
+					has_global_flag = katzenartig_deathwish
+					has_global_flag = katzenartig_stellarite
+					has_global_flag = katzenartig_improbable
+				}
+				NOT = { has_global_flag = giga_gatzo_disabled }
+				NOT = { any_country = { has_origin = origin_scion } }
+			}
+			random_list = {
+				25 = {
+					set_global_flag = meopa_spawned_as_fe
+					random_country = {
+						limit = {
+							is_country_type = fallen_empire
+							OR = {
+								has_ethic = ethic_fanatic_xenophile
+								has_ethic = ethic_fanatic_xenophobe
+							}
+						}
+						save_global_event_target_as = giga_meopa_fe
+					}
+					modifier = {
+						add = 20
+						has_global_flag = katzenartig_disabled
+					}
+					modifier = {
+						add = 40
+						has_global_flag = katzenartig_never
+					}
+				}
+				75 = {
+					modifier = {
+						add = -20
+						has_global_flag = katzenartig_disabled
+					}
+					modifier = {
+						add = -40
+						has_global_flag = katzenartig_never
+					}
+				}
+			}
+		}
+		if = {
+			limit = { has_global_flag = meopa_spawned_as_fe }
+			event_target:giga_meopa_fe = {
+				if = { #Good Gatzo :)
+					limit = { has_ethic = ethic_fanatic_xenophile }
+					set_global_flag = nice_gatzo_fe
+					country_event = { id = giga_fallen_empire_misc.1000 days = 1 }
+				}
+				if = { #Evil Meopa
+					limit = { has_ethic = ethic_fanatic_xenophobe }
+					set_global_flag = evil_gatzo_fe
+					country_event = { id = giga_fallen_empire_misc.1005 days = 1 }
+				}
+				if = { #Pouchkinn
+					limit = { has_ethic = ethic_fanatic_materialist }
+					set_global_flag = pouchkinn_gatzo_fe
+					country_event = { id = giga_fallen_empire_misc.1020 days = 1 }
+				}
+				capital_scope = {
+					spawn_system = {
+						min_distance = 10
+						max_distance = 15
+						initializer = giga_paluush_initializer
+						hyperlane = yes
+						is_discovered = yes
+					}
+				}
+				last_created_system = {
+					# Add extra hyperlane
+					random_list = {
+						1 = { while = { count = 1 giga_generate_hyperlane = yes } }
+						1 = { while = { count = 2 giga_generate_hyperlane = yes } }
+					}
+				}
+			}
+		}
+		set_spawn_system_batch = begin
+		if = {
+			limit = {
+				NOT = { any_system = { has_star_flag = Paluush_system } }
+				NOT = { has_global_flag = giga_gatzo_disabled }
+				NOT = { has_global_flag = giga_gatzo_feonly } #Since this is gonna be after it being chosen by an FE don't do it
+			}
+			random_system = {
+				limit = {
+					NOR = {
+						is_fe_cluster = yes
+						any_neighbor_system = {
+							is_fe_cluster = yes
+						}
+					}
+					hyperlane_eligible = yes #Changed to the blanket hyperlane eligible for easier maintenance, slightly more restricive than before.
+				}
+				spawn_system = { initializer = "giga_paluush_initializer" }
+			}
+			last_created_system = {
+				# Add extra hyperlane
+				random_list = {
+					1 = { while = { count = 1 giga_generate_hyperlane = yes } }
+					1 = { while = { count = 2 giga_generate_hyperlane = yes } }
+				}
+			}
+		}
+
+
+		#Remove Paluushia if disabled
+		if = {
+			limit = {
+				has_global_flag = giga_gatzo_nopaluushia
+				any_system = { has_star_flag = giga_system_six }
+			}
+			random_system = {
+				limit = { has_star_flag = giga_system_six }
+				random_system_planet = {
+					limit = { has_planet_flag = paluushia }
+					change_pc = pc_shrouded
+					remove_planet_flag = paluushia
+					remove_modifier = "paluush_shield"
+					every_owned_pop = { kill_pop = yes }
+					set_planet_flag = shrouded_paluushia
+				}
+			}
+		}
+		set_spawn_system_batch = end
+		every_country = {
+			limit = {
+				is_country_type = fallen_empire
+				NOT = { is_same_empire = event_target:giga_meopa_fe }
+			}
+			capital_scope = {
+				set_planet_flag = cant_target_this_planet #NDB immunity
+				create_ambient_object = { #funny shield system effect
+					type = "giga_fe_shield"
+					location = star
+					use_3d_location = yes
+					entity_offset = { min = 0 max = 0 }
+					entity_offset_angle = { min = 0 max = 0 }
+					entity_offset_height = { min = -15 max = -15 } #places lower than the star so that you can more easily actually get to the tooltip
+					scale = 1
+				}
+			}
+		}
+	}
+}
