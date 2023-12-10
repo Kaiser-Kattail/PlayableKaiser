@@ -91,22 +91,6 @@ namespace = kmoon
 				}
 				destroy_situation = this
 			}
-			create_fleet = {
-				name = "Kaiservorherrschaft"
-				settings = {
-					spawn_debris = no
-				}
-				effect = {
-					set_owner = event_target:katzenartig
-					create_ship = {
-						name = "Kaiservorherrschaft"
-						design = "Kaiser Attack Moon"
-						upgradable = yes
-					}
-					set_fleet_flag = current_katzen_flagship
-					set_location = event_target:gigaflusion
-				}
-			}
 		country_event = {
 			id = kmoon.21
 		}	
@@ -127,27 +111,28 @@ country_event = {
 		clear_global_event_target = kaiser_moon_pls
 		set_country_flag = do_you_wanna_build_a_moon_man
 		set_country_flag = kaiser_moon_tech_possible
-		give_technology = {
-			tech = giga_tech_war_moon_1
+		add_modifier = {
+			modifier = stop_eating_naval_cap_you_hecker
+			days = -1
 		}
 		give_technology = {
-			tech = giga_tech_war_moon_2
+			tech = giga_tech_kaiser_moon message = no }
+		create_fleet = {
+			name = "Kaiservorherrschaft"
+			settings = {
+				spawn_debris = no
+			}
+			effect = {
+				set_owner = event_target:katzenartig
+				create_ship = {
+					name = "Kaiservorherrschaft"
+					design = "NAME_PKI_ATTACK_MOON"
+					upgradable = yes
+				}
+				set_fleet_flag = current_katzen_flagship
+				set_location = event_target:gigaflusion
+			}
 		}
-		give_technology = {
-			tech = giga_tech_war_moon_artillery
-		}
-		give_technology = {
-			tech = giga_tech_war_moon_sections
-		}
-		give_technology = {
-			tech = giga_tech_kaiser_moon
-		}
-		give_technology = {
-			tech = giga_tech_war_moon_specialization
-		}
-		#create_ship_design = { design = "Kaiser Attack Moon" }
-		add_ship_design = last_created_design
-		
 	}
  }
 
@@ -250,7 +235,7 @@ country_event = {
 					set_owner = event_target:katzenartig
 					create_ship = {
 						name = "Kaiservorherrschaft"
-						design = "Kaiser Attack Moon"
+						design = "NAME_PKI_ATTACK_MOON"
 						upgradable = yes
 					}
 					set_fleet_flag = current_katzen_flagship
