@@ -3,25 +3,21 @@ katzen_warforge_shipyard = {
 	construction_days = 360
 	potential = {
 		from = {
-			OR = {
-				AND = {
-					pki_is_katzenartig_imperium = yes
-					has_country_flag = unified_flusion
-				}
-				pki_is_katzprotektorat_tier_2 = yes
-			}
+			has_technology = tech_pki_warforge
 		}
 	}
 
+	show_in_tech = tech_pki_warforge
+
 	possible = {
-		hidden_trigger = {
+		custom_tooltip = {
+			fail_text = PKI_NEEDS_WARFORGE
 			solar_system = {
 				any_system_planet = {
 					has_planet_flag = war_forge
 				}
 			}
 		}
-		text = PKI_NEEDS_WARFORGE
 	}
 
 	triggered_station_modifier = {
