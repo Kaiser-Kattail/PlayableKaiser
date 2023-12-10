@@ -176,11 +176,17 @@ tech_pki_warforge = {
 	category = { voidcraft }
 
 	potential = {
-		pki_is_katzprotektorat = yes
+		OR = {
+			pki_is_katzprotektorat = yes
+			AND = {
+				pki_is_katzenartig_imperium = yes
+				has_country_flag = unified_flusion
+			}
+		}
 	}
 
 	prereqfor_desc = {
-		ship = {
+		custom = {
 			title = "PKI_TECH_UNLOCK_WARFORGE_CONSTRUCTION_TITLE"
 			desc = "PKI_TECH_UNLOCK_WARFORGE_CONSTRUCTION_DESC"
 		}
