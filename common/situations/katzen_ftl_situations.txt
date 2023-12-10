@@ -28,7 +28,7 @@ situation_ftl_development = {
 		hidden_effect = {
 			owner = {
 				country_event = {
-					id = ftl.2
+					id = pki_ftl.2
 				}
 			}
 		}
