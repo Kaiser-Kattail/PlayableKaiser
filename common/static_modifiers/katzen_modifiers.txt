@@ -91,6 +91,11 @@ pki_yeah = {
 	country_trust_growth = 100
 }
 
+pki_katzen_weaponry = {
+	weapon_type_energy_weapon_damage_mult = -0.3
+	weapon_type_kinetic_weapon_damage_mult = 0.3
+}
+
 pki_scaling_colony = {
 	icon = gfx/interface/icons/planet_modifiers/pm_medieval_alien_civilization.dds
 	icon_frame = 2

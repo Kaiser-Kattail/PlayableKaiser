@@ -527,3 +527,81 @@ situation_project_celestia = {
 		}
 	}
 }
+
+situation_naitonal_focus = {
+	picture = GFX_evt_grand_speech
+	category = positive
+	complete_icon = GFX_situation_outcome_meh
+	complete_icon_frame = GFX_situation_outcome_frame_blue
+
+	on_start = {
+	}
+	on_abort = {
+	}
+
+	start_value = 0
+	stages = {
+		stage_1 = {
+			icon = GFX_pki_situation_stage_focus
+			icon_background = GFX_situation_stage_frame_blue
+			end = 60
+		}
+	}
+
+	on_progress_complete = {
+		pki_complete_national_focus = yes
+		hidden_effect = {
+			create_message = {
+				type = PKI_NATIONAL_FOCUS_COMPLETE
+				localization = REPLACE_ME_LOC
+				days = 30
+			}
+			owner = {
+				every_situation = {
+					limit = {
+						is_situation_type = situation_naitonal_focus
+					}
+					destroy_situation = this
+				}
+			}
+		}
+	}
+	on_fail = {
+		hidden_effect = { destroy_situation = this }
+	}
+	monthly_progress = {
+		base = 30
+	}
+
+	approach = {
+		name = approach_focus
+		icon = GFX_situation_approach_unity
+		icon_background = GFX_situation_approach_bg_green
+		default = yes
+		on_select = {
+			custom_tooltip = approach_focus_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				influence = 1
+			}
+		}
+	}
+	approach = {
+		name = approach_open_focus_tree
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_open_focus_tree_tooltip
+			hidden_effect = {
+				set_situation_approach = approach_focus
+				owner = {
+					country_event = { id = kaiser_bureau.2 }
+					pki_clear_gui_flags = yes
+					set_country_flag = pki_focus_tree_tab
+				}
+			}
+		}
+	}
+}

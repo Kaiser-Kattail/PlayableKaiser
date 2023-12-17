@@ -41,3 +41,15 @@ message_type = {
 
     category = diplomacy
 }
+
+message_type = {
+    key = "PKI_NATIONAL_FOCUS_COMPLETE"
+    icon = "GFX_message_other_alert"
+    icon_frame = 1
+
+    sound = "tradition_available"
+    ping = "mixed_notification_green"
+
+    category = government
+    auto_opens = others
+}

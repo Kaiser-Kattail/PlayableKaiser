@@ -411,67 +411,67 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = pki_misc.10
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		has_origin = origin_katzen
-		ruler = {
-			NOT = {
-				has_leader_flag = kaiser_kattail
-			}
-		}
-	}
-	immediate = {
-		if = {
-			limit = { NOT = {
-				any_owned_leader = {
-					has_leader_flag = kaiser_kattail
-				}
-			} }
-			create_leader = {
-				class = commander
-				species = event_target:kaiser_portrait_hd
-				name = "Kattail"
-				skill = 4
-				gender = male
-				immortal = yes
-				set_age = 189
-				traits = {
-					trait = subclass_commander_councilor
-					trait = leader_trait_ruler_kaiser_cattail
-					trait = trait_ruler_charismatic_2
-					trait = trait_ruler_military_pioneer
-					trait = leader_trait_intimidator
-				}
-				effect = {
-					set_leader_flag = kaiser_kattail
-					save_global_event_target_as = kaiser_kattail
-					event_target:katzenartig = {
-						ruler = {
-							unassign_leader = this
-						}
-						assign_leader = event_target:kaiser_kattail
-					}
-				}
-			}
-		}
-		else = {
-			if = {
-				limit = { ruler = {
-					NOT = {
-						has_leader_flag = kaiser_kattail
-					}
-				} }
-				ruler = {
-					unassign_leader = this
-				}
-				assign_leader = event_target:kaiser_kattail
-			}
-		}
-	}
-}
+#country_event = {
+#	id = pki_misc.10
+#	hide_window = yes
+#	is_triggered_only = yes
+#	trigger = {
+#		has_origin = origin_katzen
+#		ruler = {
+#			NOT = {
+#				has_leader_flag = kaiser_kattail
+#			}
+#		}
+#	}
+#	immediate = {
+#		if = {
+#			limit = { NOT = {
+#				any_owned_leader = {
+#					has_leader_flag = kaiser_kattail
+#				}
+#			} }
+#			create_leader = {
+#				class = commander
+#				species = event_target:kaiser_portrait_hd
+#				name = "Kattail"
+#				skill = 4
+#				gender = male
+#				immortal = yes
+#				set_age = 189
+#				traits = {
+#					trait = subclass_commander_councilor
+#					trait = leader_trait_ruler_kaiser_cattail
+#					trait = trait_ruler_charismatic_2
+#					trait = trait_ruler_military_pioneer
+#					trait = leader_trait_intimidator
+#				}
+#				effect = {
+#					set_leader_flag = kaiser_kattail
+#					save_global_event_target_as = kaiser_kattail
+#					event_target:katzenartig = {
+#						ruler = {
+#							unassign_leader = this
+#						}
+#						assign_leader = event_target:kaiser_kattail
+#					}
+#				}
+#			}
+#		}
+#		else = {
+#			if = {
+#				limit = { ruler = {
+#					NOT = {
+#						has_leader_flag = kaiser_kattail
+#					}
+#				} }
+#				ruler = {
+#					unassign_leader = this
+#				}
+#				assign_leader = event_target:kaiser_kattail
+#			}
+#		}
+#	}
+#}
 
 #Aeternum Insights
 country_event = {

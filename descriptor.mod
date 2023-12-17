@@ -5,6 +5,6 @@ tags={
 	"Gameplay"
 	"Military"
 }
-name="Playable Katzenartig Imperium"
+name="Playable Katzenartig Imperium - PIECAT"
 supported_version="3.10.*"
 remote_file_id="2981429115"

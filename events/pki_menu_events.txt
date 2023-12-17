@@ -1,0 +1,300 @@
+namespace = kaiser_bureau
+
+country_event = {
+	id = kaiser_bureau.0
+	title = "kaiser_bureau.0.name"
+	desc = "kaiser_bureau.0.desc"
+
+	is_triggered_only = yes
+	
+	show_sound = event_radio_chatter
+	picture = GFX_evt_voting
+
+	immediate = {
+		start_situation = {
+			type = situation_world_tension
+			target = root
+			effect = {
+				save_event_target_as = world_tension_sit
+			}
+		}
+		event_target:world_tension_sit = {
+			set_situation_approach = approach_ignore
+		}
+		set_country_flag = kaiser_bureau_formed
+		update_total_flusion_con_value = yes
+		event_target:playerflusion = {
+				#state control
+				set_variable = {
+					which = "haranian_con"
+					value = 0
+				}
+				set_variable = {
+					which = "lauranaise_con"
+					value = 0
+				}
+				set_variable = {
+					which = "symbies_con"
+					value = 0
+				}
+				set_variable = {
+					which = "yinjites_con"
+					value = 0
+				}
+				set_variable = {
+					which = "cyatianalas_con"
+					value = 0
+				}
+				set_variable = {
+					which = "mercurians_con"
+					value = 0
+				}
+				set_variable = {
+					which = "ezics_con"
+					value = 0
+				}
+				set_variable = {
+					which = "droog_con"
+					value = 0
+				}
+				set_variable = {
+					which = "zousans_con"
+					value = 0
+				}
+				set_variable = {
+					which = "ravkan_con"
+					value = 0
+				}
+				set_variable = {
+					which = "solakians_con"
+					value = 0
+				}
+				set_variable = {
+					which = "cookie_con"
+					value = 0
+				}
+				set_variable = {
+					which = "kronk_con"
+					value = 0
+				}
+			}
+		}	
+	option = {
+		name = "kaiser_bureau.0.a"
+		hidden_effect = {
+			country_event = { id = kaiser_bureau.1 }
+		}
+	}
+}
+
+country_event = {
+	id = kaiser_bureau.1
+	title = "kaiser_bureau.1.name"
+	desc = "kaiser_bureau.1.desc"
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = douclaw
+		room = "flusion_katown_room"
+	}
+
+	immediate = {
+		set_country_flag = kaiser_bureau_opened
+	}
+
+	option = {
+		default_hide_option = yes
+		name = "kaiser_bureau.1.a"
+		custom_tooltip = "kaiser_bureau.1.a.tooltip"
+		hidden_effect = {
+			pki_clear_gui_flags = yes
+			country_event = { id = kaiser_bureau.2 }
+		}
+	}
+}
+
+country_event = {
+	id = kaiser_bureau.2
+	title = "kaiser_bureau.2.name"
+
+	diplomatic = yes
+	custom_gui = "pki_menu"
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = conquest_map_active }
+	}
+
+	immediate = {
+		update_total_flusion_con_value = yes
+		set_country_flag = conquest_map_active
+	}
+
+	picture_event_data = {
+		portrait = douclaw
+		room = "flusion_katown_room"
+	}
+
+	option = {
+		name = EXIT
+		hidden_effect = {
+			remove_country_flag = conquest_map_active
+		}
+	}
+}
+
+country_event = {
+	id = kaiser_bureau.3
+	title = "kaiser_bureau.3.name"
+
+	diplomatic = yes
+	custom_gui = "focus_confirm_screen"
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = pki_selected_focus
+	}
+
+	picture_event_data = {
+		portrait = douclaw
+		room = "flusion_katown_room"
+	}
+
+	option = {
+		name = pki_confirm
+		custom_gui = "pki_focus_confirm"
+		default_hide_option = no
+		start_situation = {
+			type = situation_naitonal_focus
+			effect = {
+				owner = {
+					switch = {
+						trigger = has_country_flag
+						inline_script = {
+							script = pki_focuses/pki_situation_flag
+							FOCUS = kaiser_arrival
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = pki_cancel
+		custom_gui = "pki_focus_confirm"
+		default_hide_option = yes
+		remove_country_flag = pki_selected_focus
+		switch = {
+			trigger = has_country_flag
+			inline_script = {
+				script = pki_focuses/pki_situation_flag
+				FOCUS = kaiser_arrival
+			}
+		}
+	}
+}
+
+namespace = pki_focus
+
+country_event = {
+	id = pki_focus.1
+	title = pki_focus.1.title
+	desc = pki_focus.1.desc
+
+	show_sound = par_portrait_07
+	picture = GFX_leader_recruitment_bg_renowned
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_recruit
+
+	immediate = {
+		ethic_leader_creator = {
+			SPECIES_CLASS = Flusionian
+			LEADER_PORTRAIT = Kattail_1
+			CLASS = commander
+			NAME = NAME_Kattail
+			LEVEL = 4
+			GENDER = male
+			IMMORTAL = yes
+			ETHIC = militarist
+			DESC = PKI_KAISER_DESC
+			CATCH_PHRASE = PKI_KAISER_CATCH_PHRASE
+		}
+		last_created_leader = {
+			add_trait = subclass_commander_councilor
+			add_trait = trait_ruler_charismatic_2
+			add_trait = trait_ruler_military_pioneer
+			add_trait = leader_trait_intimidator
+			add_trait = leader_trait_ruler_kaiser_cattail
+			set_age = 189
+			set_leader_flag = kaiser_kattail
+			remove_leader_flag = renowned_leader
+			set_leader_flag = legendary_leader
+			set_leader_flag = immune_to_negative_traits
+			set_leader_flag = leader_death_events_blocked
+			set_leader_flag = flusion_modified
+			save_global_event_target_as = kaiser_kattail
+		}
+	}
+
+	picture_event_data = {
+		portrait = event_target:ethic_leader
+		room = ethic_spaceship_room
+	}
+
+	option = {
+		name = pki_kaiser_decline
+		tag = dismiss_leader
+		remove_modifier = pki_destabilized_government
+		add_modifier = {
+			modifier = pki_continued_destabilization
+			days = -1
+		}
+		hidden_effect = {
+			event_target:schulz = {
+				kill_leader = {
+					show_notification = no
+				}
+			}
+		}
+	}
+	option = {
+		name = pki_focus.1.a
+		response_text = pki_focus.1.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = pki_focus.1.b
+		response_text = pki_focus.1.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = pki_focus.1.c
+		response_text = pki_focus.1.c.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = pki_kaiser_accept
+		tag = hire_leader
+		custom_tooltip = pki_focus.1.hire_custom_tooltip
+		hidden_effect = {
+			ethic_leader_hire_effect = {
+				GLOBAL_EVENT_TARGET = kaiser_kattail
+			}
+			leader = {
+				save_event_target_as = old_leader
+			}
+			assign_leader = event_target:kaiser_kattail
+			event_target:old_leader = {
+				kill_leader = {
+					show_notification = yes
+				}
+			}
+		}
+	}
+}

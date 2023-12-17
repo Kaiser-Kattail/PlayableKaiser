@@ -104,6 +104,11 @@ country_event = {
 				days = -1
 			}
 		}
+
+		add_modifier = {
+			modifier = pki_destabilized_government
+			days = -1
+		}
 		#Target flusion
 		every_galaxy_planet = {
 			if = {
@@ -179,49 +184,49 @@ country_event = {
 
 		pki_create_flusion_nations = yes
 
-		create_leader = {
-			name = NAME_Kattail
-			species = event_target:kaiser_portrait_hd
-			class = commander
-			skill = 4
-			set_age = 189
-			randomize_traits = no
-			traits = {
-				trait = leader_trait_ruler_kaiser_cattail
-				trait = trait_ruler_charismatic_2
-				trait = trait_ruler_military_pioneer
-				trait = leader_trait_intimidator
-				trait = subclass_commander_councilor
-			}
-			gender = male
-			immortal = yes
-			background_job = none
-			background_ethic = ethic_fanatic_militarist
-			background_planet = event_target:playerflusion
+		#create_leader = {
+		#	name = NAME_Kattail
+		#	species = event_target:kaiser_portrait_hd
+		#	class = commander
+		#	skill = 4
+		#	set_age = 189
+		#	randomize_traits = no
+		#	traits = {
+		#		trait = leader_trait_ruler_kaiser_cattail
+		#		trait = trait_ruler_charismatic_2
+		#		trait = trait_ruler_military_pioneer
+		#		trait = leader_trait_intimidator
+		#		trait = subclass_commander_councilor
+		#	}
+		#	gender = male
+		#	immortal = yes
+		#	background_job = none
+		#	background_ethic = ethic_fanatic_militarist
+		#	background_planet = event_target:playerflusion
 
-			effect = {
-				set_leader_flag = kaiser_kattail
-				set_leader_flag = legendary_leader
-				set_leader_flag = immune_to_negative_traits
-				set_leader_flag = leader_death_events_blocked
-				set_leader_flag = flusion_modified
-				save_global_event_target_as = kaiser_kattail
-			}
-			custom_description = PKI_KAISER_DESC
-			custom_catch_phrase = PKI_KAISER_CATCH_PHRASE
-		}
+		#	effect = {
+		#		set_leader_flag = kaiser_kattail
+		#		set_leader_flag = legendary_leader
+		#		set_leader_flag = immune_to_negative_traits
+		#		set_leader_flag = leader_death_events_blocked
+		#		set_leader_flag = flusion_modified
+		#		save_global_event_target_as = kaiser_kattail
+		#	}
+		#	custom_description = PKI_KAISER_DESC
+		#	custom_catch_phrase = PKI_KAISER_CATCH_PHRASE
+		#}
 
-		ruler = {
-			save_event_target_as = pki_old_leader
-		}
+		#ruler = {
+		#	save_event_target_as = pki_old_leader
+		#}
 
-		assign_leader = last_created_leader
+		#assign_leader = last_created_leader
 
-		event_target:pki_old_leader = {
-			kill_leader = {
-				show_notification = no
-			}
-		}
+		#event_target:pki_old_leader = {
+		#	kill_leader = {
+		#		show_notification = no
+		#	}
+		#}
 
 		create_country = {
 			name = "NAME_katzen_warforge"
@@ -536,7 +541,7 @@ country_event = {
 	desc = flusion.44.desc
 	picture = GFX_no_preset
 	show_sound = event_assembly_fight
-	is_triggered_only = yes #The game will not consider this event for starting on its own. Event will need to be triggered by another event, or by some other effect. Most events will use this.
+	is_triggered_only = yes
 	immediate = {
 		add_modifier = {
 			modifier = mod_no_preset

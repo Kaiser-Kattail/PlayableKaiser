@@ -253,5 +253,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/diplomacy/diplomacy_isvassal.dds"
 	}
 
+	spriteType = {
+		name = "GFX_pki_situation_stage_focus"
+		texturefile = "gfx/interface/icons/situation_log/situations/stages/situation_severity_level_pki_national_focus.dds"
+	}
+
 }
 

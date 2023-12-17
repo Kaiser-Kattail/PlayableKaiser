@@ -1,0 +1,32 @@
+﻿l_english:
+    situation_naitonal_focus: "National Focus"
+    situation_naitonal_focus_type: "National Focus"
+    situation_naitonal_focus_desc: "National Focuses usually represent plans or ideas an empire wishes to accomplish. While they vary in length, most take five years or 60 months to complete."
+    approach_focus: "National Focus"
+    approach_open_focus_tree: "Open Focus Tree"
+
+    approach_focus_tooltip: "Pursue our National Focus"
+    approach_open_focus_tree_tooltip: "Opens the focus tree (duh)"
+
+    PKI_FINISH_FOCUS: "National Focus Completed."
+
+    PKI_CONQUEST_MAP: "Conquest Map"
+    PKI_FOCUS_TREE: "Focus Tree"
+
+    pki_map_title: "Flusion"
+    pki_focus_title: "Katzenartig Imperium Focus Tree"
+
+    PKI_ALREADY_SELECTED_FOCUS: "We have already selected a focus."
+
+    pki_confirm_focus_message: "Select Focus"
+    pki_confirm_focus: "Select this focus?"
+    pki_confirm: "Confirm"
+    pki_cancel: "Cancel"
+
+    #### FOCUS NAMES
+
+    pki_focus_katzen_weaponry: "Katzen Weaponry"
+
+    #### FOCUS EFFECTS AND STUFF
+
+    pki_katzen_weaponry: "Katzen Weaponry"

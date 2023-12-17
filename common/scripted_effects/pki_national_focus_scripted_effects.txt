@@ -1,0 +1,18 @@
+pki_clear_gui_flags = {
+    remove_country_flag = pki_conquest_map_tab
+    remove_country_flag = pki_focus_tree_tab
+}
+
+pki_complete_national_focus = {
+    switch = {
+        trigger = has_situation_flag
+        pki_kaiser_arrival = {
+           owner = {
+               country_event = {
+                    id = pki_focus.1
+               }
+               set_country_flag = pki_kaiser_arrival_completed
+           }
+        }
+    }
+}

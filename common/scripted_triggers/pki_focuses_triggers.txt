@@ -1,0 +1,6 @@
+pki_kaiser_arrival_focus_requirements = {
+    hidden_trigger = {
+        always = yes
+    }
+}
+

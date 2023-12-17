@@ -1,0 +1,11 @@
+pki_focus_$FOCUS$_effect = {
+    potential = { event_target:katzenartig = { has_country_flag = pki_focus_tree_tab NOT = { has_country_flag = pki_$FOCUS$_completed } } }
+    allow = {  event_target:katzenartig = { pki_$FOCUS$_focus_requirements = yes } custom_tooltip_fail = { event_target:katzenartig = { NOT = { has_country_flag = pki_selected_focus } } text = PKI_ALREADY_SELECTED_FOCUS  } }
+    effect = { hidden_effect = { event_target:katzenartig = { country_event = { id = kaiser_bureau.3 } set_country_flag = pki_selected_$FOCUS$ } } }
+}
+
+pki_focus_$FOCUS$_completed_effect = {
+    potential = { event_target:katzenartig = { has_country_flag = pki_focus_tree_tab has_country_flag = pki_$FOCUS$_completed } }
+    allow = { always = yes }
+    effect = {}
+}
