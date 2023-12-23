@@ -250,7 +250,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_wg_pki_subjugation"
-		texturefile = "gfx/interface/icons/diplomacy/diplomacy_isvassal.dds"
+		textureFile = "gfx/interface/icons/diplomacy/diplomacy_isvassal.dds"
 	}
 
 	spriteType = {
@@ -258,5 +258,184 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/situation_log/situations/stages/situation_severity_level_pki_national_focus.dds"
 	}
 
+	spriteType = {
+		name = "GFX_focus_line_up_ext"
+		textureFile = "gfx/interface/focus_tree/focus_line_u_ex.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_up_ext_completed"
+		textureFile = "gfx/interface/focus_tree/focus_line_u_ex_c.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_down_ext"
+		textureFile = "gfx/interface/focus_tree/focus_line_d_ex.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_down_ext_completed"
+		textureFile = "gfx/interface/focus_tree/focus_line_d_ex_c.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_left_ext"
+		textureFile = "gfx/interface/focus_tree/focus_line_l_ex.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_left_ext_completed"
+		textureFile = "gfx/interface/focus_tree/focus_line_l_ex_c.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_right_ext"
+		textureFile = "gfx/interface/focus_tree/focus_line_r_ex.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_right_ext_completed"
+		textureFile = "gfx/interface/focus_tree/focus_line_r_ex_c.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_down_left"
+		textureFile = "gfx/interface/focus_tree/focus_line_d_l.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_down_left_completed"
+		textureFile = "gfx/interface/focus_tree/focus_line_d_l_c.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_down_left_right"
+		textureFile = "gfx/interface/focus_tree/focus_line_d_l_r.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_down_left_right_completed"
+		textureFile = "gfx/interface/focus_tree/focus_line_d_l_r_c.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_down_right"
+		textureFile = "gfx/interface/focus_tree/focus_line_d_r.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_down_right_completed"
+		textureFile = "gfx/interface/focus_tree/focus_line_d_r_c.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_left_right"
+		textureFile = "gfx/interface/focus_tree/focus_line_l_r.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_left_right_completed"
+		textureFile = "gfx/interface/focus_tree/focus_line_l_r_c.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_up_down"
+		textureFile = "gfx/interface/focus_tree/focus_line_u_d.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_up_down_completed"
+		textureFile = "gfx/interface/focus_tree/focus_line_u_d_c.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_up_down_left"
+		textureFile = "gfx/interface/focus_tree/focus_line_u_d_l.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_up_down_left_completed"
+		textureFile = "gfx/interface/focus_tree/focus_line_u_d_l_c.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_up_down_left_right"
+		textureFile = "gfx/interface/focus_tree/focus_line_u_d_l_r.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_up_down_left_right_completed"
+		textureFile = "gfx/interface/focus_tree/focus_line_u_d_l_r_c.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_up_down_right"
+		textureFile = "gfx/interface/focus_tree/focus_line_u_d_r.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_up_down_right_completed"
+		textureFile = "gfx/interface/focus_tree/focus_line_u_d_r_c.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_up_left"
+		textureFile = "gfx/interface/focus_tree/focus_line_u_l.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_up_left_completed"
+		textureFile = "gfx/interface/focus_tree/focus_line_u_l_c.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_up_left_right"
+		textureFile = "gfx/interface/focus_tree/focus_line_u_l_r.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_up_left_right_completed"
+		textureFile = "gfx/interface/focus_tree/focus_line_u_l_r_c.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_up_right"
+		textureFile = "gfx/interface/focus_tree/focus_line_u_r.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_focus_line_up_right_completed"
+		textureFile = "gfx/interface/focus_tree/focus_line_u_r_c.dds"
+		alwaysTransparent = yes
+	}
 }
 

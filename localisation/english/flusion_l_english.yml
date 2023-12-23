@@ -13,17 +13,19 @@
     PRESCRIPTED_ruler_name_katzen: "$NAME_Kattail$"
     #Prescripted Empire
     EMPIRE_DESIGN_katzenartig_imperium_desc:0 "Flusion stands on the edge of all out war, with the militarist Katzens gearing up for war under the watchful eye of the mysterious Kaiser Kattail, all it takes is a match to ignite this uranium filled powder keg.\n\nThe Kaiser's story begins in Katown, but given the right circumstances and enough skill his legacy can define the future of the Universe as a whole."
-    PKI_PRESCRIPTED_EMPIRE_NAME:0 "Katzenartig Imperium"
-    PKI_PRESCRIPTED_EMPIRE_ADJ:0 "Katzenartig"
+    PKI_PRESCRIPTED_EMPIRE_NAME:0 "Cat Kingdom"
+    PKI_PRESCRIPTED_EMPIRE_ADJ:0 "Cat"
     PKI_PRESCRIPTED_SHIP_PREFIX:0 "KSS"
     PKI_PRESCRIPTED_SPECIES_NAME:0 "Katzen"
     PKI_PRESCRIPTED_SPECIES_PLURAL:0 "Katzens"
     PKI_PRESCRIPTED_SPECIES_ADJ:0 "Katzen"
     PKI_PRESCRIPTED_CAPITAL_PLANET_NAME:0 "Flusion"
     PKI_PRESCRIPTED_CAPITAL_SYSTEM_NAME:0 "Jublio"
-    PKI_PRESCRIPTED_RULER_NAME:0 "$NAME_Kattail$"
+    PKI_PRESCRIPTED_RULER_NAME:0 "Mewtail III"
     PKI_PRESCRIPTED_RULER_TITLE_MALE:0 "Kaiser"
     PKI_PRESCRIPTED_RULER_TITLE_FEMALE:0 "Kaiserin"
+
+    PKI_KATZENARTIG_IMPERIUM: "Katzenartig Imperium"
 
     NAME_Coalition:0 "Flusionian Coalition"
     ADJ_Coalition:0 "Coalition"
@@ -527,7 +529,7 @@
     temp_job_help:0 "Katzen Economical Reinforcement"
     temp_job_help_desc:0 "The Kaiser has ordered specific, somewhat harsh measures to ensure a smooth transition into the Flusio-Arcology."
    
-    civic_tooltip_flusion_effects:0 "Start with Jublio as your home system, a set of special leaders, and the ability to perform special Katzen decisions on colonies. More can be unlocked through research. Project Mondkanone can be started by taking the Kaiserism tradition."
+    civic_tooltip_flusion_effects:0 "$TABBED_NEW_LINE$- $PLANETARY_MODIFIERS$ ['concept_prosp_uni']$NEW_LINE$"
    
     edict_katzen_leader_upgrade:0 "Leader Katzenification"
     edict_katzen_leader_upgrade_desc:0 "Our leaders are national treasures, and should be treated as such. The very latest in anti-aging technology and special training will be made available to choice leaders."

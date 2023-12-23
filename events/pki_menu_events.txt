@@ -218,7 +218,7 @@ country_event = {
 			LEADER_PORTRAIT = Kattail_1
 			CLASS = commander
 			NAME = NAME_Kattail
-			LEVEL = 4
+			LEVEL = 8
 			GENDER = male
 			IMMORTAL = yes
 			ETHIC = militarist
@@ -256,7 +256,7 @@ country_event = {
 			days = -1
 		}
 		hidden_effect = {
-			event_target:schulz = {
+			event_target:kaiser_kattail = {
 				kill_leader = {
 					show_notification = no
 				}
@@ -282,6 +282,24 @@ country_event = {
 		name = pki_kaiser_accept
 		tag = hire_leader
 		custom_tooltip = pki_focus.1.hire_custom_tooltip
+		set_empire_name = PKI_KATZENARTIG_IMPERIUM
+		change_country_flag = {
+			icon = {
+				category="domination"
+				file="domination_8.dds"
+			}
+			background = {
+				category="backgrounds"
+				file="v.dds"
+			}
+			colors = {
+				"blue"
+				"indigo"
+				"black"
+				"null"
+			}
+		}
+		remove_modifier = pki_destabilized_government
 		hidden_effect = {
 			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = kaiser_kattail

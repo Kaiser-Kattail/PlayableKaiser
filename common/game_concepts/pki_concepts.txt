@@ -1,0 +1,3 @@
+concept_pki_destabilized_government  ={
+    icon = "gfx/interface/icons/modifiers/"
+}

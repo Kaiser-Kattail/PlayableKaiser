@@ -24,6 +24,7 @@ origin_katzen = {
 		country_subject_acceptance_add = -50
 		weapon_type_kinetic_weapon_damage_mult = 0.3
 		weapon_type_energy_weapon_damage_mult = -0.3
+		pki_destabilized_government = 1
 	}
 
 	random_weight = {

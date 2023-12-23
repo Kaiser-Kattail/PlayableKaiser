@@ -45,6 +45,12 @@ pki_flusion_focus_inactive_effect = {
 	effect = { event_target:katzenartig = { pki_clear_gui_flags = yes set_country_flag = pki_focus_tree_tab } }
 }
 
+pki_focus_line_no_effect = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {}
+}
+
 ### ADD FOCUSES HERE
 
 inline_script = {
