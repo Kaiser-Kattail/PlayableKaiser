@@ -41,12 +41,62 @@ decision_flusion_arc = {
 		}
 	}
 
-	effect = { 
-		change_pc = pc_pki_flusion_ecu
-		set_planet_entity = {
-			entity = flusion_planet_ecugaia_01_entity
-		}
+	effect = {
 		hidden_effect = {
+			pki_district_var_set = {
+				VARIABLE = pki_num_city_districts
+				DISTRICT = district_city
+			}
+			pki_district_var_set = {
+				VARIABLE = pki_num_foundry_districts
+				DISTRICT = district_industrial
+			}
+			pki_district_var_set = {
+				VARIABLE = pki_num_factory_districts
+				DISTRICT = district_industrial
+			}
+			pki_district_var_set = {
+				VARIABLE = pki_num_mining_districts
+				DISTRICT = district_mining
+			}
+			pki_district_var_set = {
+				VARIABLE = pki_num_energy_districts
+				DISTRICT = district_generator
+			}
+			pki_district_var_set = {
+				VARIABLE = pki_num_food_districts
+				DISTRICT = district_farming
+			}
+		}
+		change_pc = pc_pki_flusion_ecu
+		hidden_effect = {
+			pki_district_convert = {
+				VARIABLE = pki_num_city_districts
+				DISTRICT = district_pki_flusion_city
+			}
+			pki_district_convert = {
+				VARIABLE = pki_num_foundry_districts
+				DISTRICT = district_pki_flusion_heavy_industry
+			}
+			pki_district_convert = {
+				VARIABLE = pki_num_factory_districts
+				DISTRICT = district_pki_flusion_civilian_industry
+			}
+			pki_district_convert = {
+				VARIABLE = pki_num_mining_districts
+				DISTRICT = district_pki_flusion_mining
+			}
+			pki_district_convert = {
+				VARIABLE = pki_num_energy_districts
+				DISTRICT = district_pki_flusion_power
+			}
+			pki_district_convert = {
+				VARIABLE = pki_num_food_districts
+				DISTRICT = district_pki_flusion_farming
+			}
+			set_planet_entity = {
+				entity = flusion_planet_ecugaia_01_entity
+			}
 			add_modifier ={
 				modifier = temp_job_help
 				days = 360
@@ -55,17 +105,6 @@ decision_flusion_arc = {
 				modifier = pki_flusion_ecu_modifier
 				days = -1
 			}
-			add_district = district_pki_flusion_city
-			add_district = district_pki_flusion_city
-			add_district = district_pki_flusion_city
-			add_district = district_pki_flusion_power
-			add_district = district_pki_flusion_power
-			add_district = district_pki_flusion_mining
-			add_district = district_pki_flusion_mining
-			add_district = district_pki_flusion_farming
-			add_district = district_pki_flusion_farming
-			add_district = district_pki_flusion_civilian_industry
-			add_district = district_pki_flusion_civilian_industry
 		}
 	}
 }
@@ -576,31 +615,97 @@ decision_katzen_defense_array_1 = {
 			has_origin = origin_katzen
 			has_country_flag = unified_flusion
 		}
-		NOT = {
-			any_fleet_in_orbit = {
-				has_fleet_flag = katzen_planet_platform_player_1
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = PKI_AT_DEFENSE_ARRAY_MAX
+			solar_system = {
+				NOT = {
+					count_fleet_in_system = {
+						count = 4
+						limit = {
+							has_fleet_flag = pki_platform_planet_@root
+						}
+					}
+				}
 			}
 		}
 	}
 
 	effect = {
 		custom_tooltip = pki_defence_array_decision
-		create_fleet = {
-			name = "Katzenplanetenverteidigung"
-			settings = { spawn_debris = no }
-			effect = {
-				set_owner = ROOT
-				create_ship = {
-					name = "Katzenplanetenverteidigung"
-					random_existing_design = katzen_player_warforge_platform
-					upgradable = yes
+		if = {
+			limit = {
+				solar_system = {
+					NOT = {
+						count_fleet_in_system = {
+							count = 1
+							limit = {
+								has_fleet_flag = pki_platform_planet_@root
+								has_fleet_flag = pki_platform_1_@root
+							}
+						}
+					}
 				}
-				set_location = {
-					target = ROOT
-					distance = 0
-					angle = 0
+			}
+			pki_spawn_defense_fleet = {
+				NUMBER = 1
+			}
+		}
+		else_if = {
+			limit = {
+				solar_system = {
+					NOT = {
+						count_fleet_in_system = {
+							count = 1
+							limit = {
+								has_fleet_flag = pki_platform_planet_@root
+								has_fleet_flag = pki_platform_2_@root
+							}
+						}
+					}
 				}
-				set_fleet_flag = katzen_planet_platform_player_1			}
+			}
+			pki_spawn_defense_fleet = {
+				NUMBER = 2
+			}
+		}
+		else_if = {
+			limit = {
+				solar_system = {
+					NOT = {
+						count_fleet_in_system = {
+							count = 1
+							limit = {
+								has_fleet_flag = pki_platform_planet_@root
+								has_fleet_flag = pki_platform_3_@root
+							}
+						}
+					}
+				}
+			}
+			pki_spawn_defense_fleet = {
+				NUMBER = 3
+			}
+		}
+		else_if = {
+			limit = {
+				solar_system = {
+					NOT = {
+						count_fleet_in_system = {
+							count = 1
+							limit = {
+								has_fleet_flag = pki_platform_planet_@root
+								has_fleet_flag = pki_platform_4_@root
+							}
+						}
+					}
+				}
+			}
+			pki_spawn_defense_fleet = {
+				NUMBER = 4
+			}
 		}
 	}
 }
@@ -616,13 +721,15 @@ decision_katzen_war_forge = {
 		}
 	}
 	potential = {
+		from = {
+			has_technology = tech_pki_warforge
+		}
 		OR = {
 			from = {
-				has_origin = origin_katzen
+				pki_is_katzenartig_imperium = yes
 				has_country_flag = unified_flusion
 			}
 			from = {
-				has_technology = tech_pki_warforge
 				pki_is_katzprotektorat = yes
 			}
 		}
@@ -634,6 +741,7 @@ decision_katzen_war_forge = {
 			habitable_planet = yes
 			is_planet_class = pc_pki_flusion_ecu
 			is_planet_class = pc_nuked
+			is_planet_class = pc_player_siegfried_world
 		}
 		is_artificial = no
 		giga_habitable_structure = no
@@ -840,31 +948,31 @@ decision_pki_societal_restructuring = {
 					}
 				}
 			}
-			pki_district_conversion = {
+			pki_district_half = {
 				DISTRICT = district_pki_flusion_city
 				VARIABLE = pki_num_city_districts
 			}
-			pki_district_conversion = {
+			pki_district_half = {
 				DISTRICT = district_pki_flusion_civilian_industry
 				VARIABLE = pki_num_civ_industry_districts
 			}
-			pki_district_conversion = {
+			pki_district_half = {
 				DISTRICT = district_pki_flusion_heavy_industry
 				VARIABLE = pki_num_heavy_industry_districts
 			}
-			pki_district_conversion = {
+			pki_district_half = {
 				DISTRICT = district_pki_flusion_science
 				VARIABLE = pki_num_science_districts
 			}
-			pki_district_conversion = {
+			pki_district_half = {
 				DISTRICT = district_pki_flusion_mining
 				VARIABLE = pki_num_mining_districts
 			}
-			pki_district_conversion = {
+			pki_district_half = {
 				DISTRICT = district_pki_flusion_farming
 				VARIABLE = pki_num_farming_districts
 			}
-			pki_district_conversion = {
+			pki_district_half = {
 				DISTRICT = district_pki_flusion_power
 				VARIABLE = pki_num_energy_districts
 			}
@@ -919,27 +1027,27 @@ decision_pki_further_restructuring = {
 					}
 				}
 			}
-			pki_district_conversion = {
+			pki_district_half = {
 				DISTRICT = district_pki_flusion_city
 				VARIABLE = pki_num_city_districts
 			}
-			pki_district_conversion = {
+			pki_district_half = {
 				DISTRICT = district_pki_flusion_civilian_industry
 				VARIABLE = pki_num_civ_industry_districts
 			}
-			pki_district_conversion = {
+			pki_district_half = {
 				DISTRICT = district_pki_flusion_heavy_industry
 				VARIABLE = pki_num_heavy_industry_districts
 			}
-			pki_district_conversion = {
+			pki_district_half = {
 				DISTRICT = district_pki_flusion_science
 				VARIABLE = pki_num_science_districts
 			}
-			pki_district_conversion = {
+			pki_district_half = {
 				DISTRICT = district_pki_flusion_mining
 				VARIABLE = pki_num_mining_districts
 			}
-			pki_district_conversion = {
+			pki_district_half = {
 				DISTRICT = district_pki_flusion_farming
 				VARIABLE = pki_num_farming_districts
 			}
@@ -950,6 +1058,7 @@ decision_pki_further_restructuring = {
 
 decision_create_kaiser_legion = {
 	potential = {
+		is_colony = yes
 		from = {
 			any_owned_leader = {
 				has_trait = leader_trait_schulz

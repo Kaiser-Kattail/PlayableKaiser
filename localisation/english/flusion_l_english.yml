@@ -394,7 +394,7 @@
 
     decision_katzen_war_forge:0 "Construct Katzen War Forge"
     decision_katzen_war_forge_desc:0 "A new military station in orbit will assist in the creation of a larger navy."
-    pki_warforge_decision: "Begins §YKatzen War Forge§! construction in §Y[planet.GetName] Orbit§!, at a base build time of §Y480 days§!."
+    pki_warforge_decision: "Begins §YKatzen War Forge§! construction in §Y[planet.GetName]§! Orbit, at a base build time of §Y480 days§!."
 
     decision_pki_societal_restructuring:0 "Societal Restructuring"
     decision_pki_societal_restructuring_desc:0 "By changing how Flusion functions from the ground up, we will be able to achieve an extreme boost in efficiency.\n\n§RWARNING:§!\n§HThis will effectively kill half of the planet's population and destroy half of the districts.§!"
@@ -412,6 +412,8 @@
 
     PKI_NO_RELOCATION: "Prevents migration to §Y[capital_scope.GetName]§!."
     PKI_DEPOPULATE: "Migrates all pops from §Y[planet.GetName]§! to §Y[capital_scope.GetName]§!"
+
+    PKI_AT_DEFENSE_ARRAY_MAX: "£trigger_no£ We cannot build any more §YDefense Arrays§!."
 
     # Project Mondkanone
     decision_mondkanone:0 "Propose Project Mondkanone"
@@ -472,6 +474,7 @@
     situation_new_moon_type:0 "$situation_kaiser_moon$"
     situation_new_moon_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
 
+    NAME_PKI_ATTACK_MOON: "Kaiser Moon"
    
     # War forges
     katzen_war_forge_0:0 "Katzen War Forge Site"
@@ -584,12 +587,12 @@
     much_migration:0 "Major Relocation"
     much_migration_desc:0 "Flusion is the center of the galaxy and the imperium; we must centralize as many as possible.\n§H15%§! §Lof every colony's population will migrate to §HFlusion§L every five years."
 
-    ftl.1.title:0 "FTL Inquiries"
-    ftl.1.desc:0 "The Kaiser has insisted that we do not stop at just Flusion; nay, we are to develop faster-than-light travel and reach the stars."
-    ftl.1.a:0 "Sure, why not?"
-    ftl.2.title:0 "FTL Complete"
-    ftl.2.desc:0 "After years of trials and experiments, the Katzenartig Research Division has successfully created FTL drives!\n\nWe may now reach for the very stars themselves!"
-    ftl.2.a:0 "Awesome!"
+    pki_ftl.1.title:0 "FTL Inquiries"
+    pki_ftl.1.desc:0 "The Kaiser has insisted that we do not stop at just Flusion; nay, we are to develop faster-than-light travel and reach the stars."
+    pki_ftl.1.a:0 "Sure, why not?"
+    pki_ftl.2.title:0 "FTL Complete"
+    pki_ftl.2.desc:0 "After years of trials and experiments, the Katzenartig Research Division has successfully created FTL drives!\n\nWe may now reach for the very stars themselves!"
+    pki_ftl.2.a:0 "Awesome!"
 
     tradition_katzen:0 "Kaiserism"
     tradition_katzen_desc:0 "The Kaiser's ambitions for both Flusion and the galaxy require an immense war machine to back it."
@@ -881,7 +884,7 @@
     pki_ehve.2.c:0 "As it should."
 
     pki_ehve.3.name: "E.H.V.E. Construction Completed"
-    pki_ehve.3.desc: "We have completed our §YE.H.V.E.§! in §Y[from.GetName]§! We may"
+    pki_ehve.3.desc: "We have completed our §YE.H.V.E.§! in §Y[from.GetName]§! We may now transport our ships nearly everywhere!\n\n§YTo use the E.H.V.E. use the Transport Fleet action.§!"
     pki_ehve.3.a: "Excellent."
 
     specialist_katzprotektorat: "Katzprotektorat"
@@ -946,8 +949,10 @@
     PKI_NEEDS_WARFORGE: "£trigger_no£ Requires at least one §YKatzen War Forge§! in system"
     needs_schulz: "£trigger_no£ We can only recruit meowrines on a world governed by §Y$NAME_schulz$§!!"
 
-    pki_warforge_shipyard_add: "£alloys£ Alloys from £job£ Jobs §G+5.0%§!\nAdds §G+1§! Shipyard and §G+5%§! Ship Build Speed to the system's starbase if §YKatzen Shipyard Array§! is built"
-    pki_warforge_building: "§G+1§! Shipyard and §G+5%§! Ship Build Speed for each §YKatzen War Forge§! in the system"
+    pki_warforge_shipyard_add: "£alloys£ Alloys from £job£ Jobs §G+5%§!\nAdds §G+1§! Shipyard and §G+5%§! Ship Build Speed to the system's starbase if §YKatzen Shipyard Array§! is built"
+    pki_warforge_building: "Starbase Modifier\n    Per §YKatzen War Forge§! in [solar_system.GetName]:\n        Shipyard Capactiy: §G+1§!\n        Ship Build Speed: §G+5%§!"
+
+    katzen_combat_computers_DESC: "Katzen combat computers are computing devices engineered by the Katzenartig Imperium. They simplify movement, weaponry, and shield activation such that the crew can easily defeat enemy fleets."
 
     tech_pki_warforge: "Katzen Warforge"
     tech_pki_warforge_desc: "A design initially drawn up by the Kaiser himself, a Katzen Warforge is a large orbital platform designed to act as a multipurpose military installation. It has defensive installations, alloy fabricators, and dockyards to supplement our navy."
@@ -957,18 +962,18 @@
     tech_pki_bomber_desc: "Leerkatzenbombers are vessels designed to deploy vast amounts of explosive weapons on the battlefield. They are able to field either vast amounts of torpedoes, or swarms of more traditional missiles."
     tech_pki_cruiser: "Katzenkreuzer"
     tech_pki_cruiser_desc: "Born out of a need for heavier firepower, Katzenkreuzers are the largest non-celestial ships in the Katzen arsenal. They can field a large amount of large weaponry, as well as some strike craft and missiles."
-    PKI_TECH_UNLOCK_BOMBER_CONSTRUCTION_DESC: "§HKatzenweltraumpanzers§!\nKatzenweltraumpanzers form the frontal line of all Katzen fleets, using their powerful railgun batteries to simply break apart enemy ships."
-    PKI_TECH_UNLOCK_BOMBER_CONSTRUCTION_TITLE: "§HUnlocks Ship Type:§! Leerekatzenbomber"
-    PKI_TECH_UNLOCK_CRUISER_CONSTRUCTION_DESC: "§HLeerekatzenbombers§!\nLeerekatzenbombers provide a significant amount of missile armament to our fleets. They come in 2 forms: Dive bombers, delivering torpedoes, and long-range bombers, using conventional missiles."
-    PKI_TECH_UNLOCK_CRUISER_CONSTRUCTION_TITLE: "§HUnlocks Ship Type:§! Katzenkreuzer"
-    PKI_TECH_UNLOCK_PANZER_CONSTRUCTION_DESC: "§HKatzenkreuzers§!\nKatzenkreuzers are the backbone of any fleet they are in, being equipped ample armor and shields, and utilizing large railguns and missile batteries to overwhelm enemies. Katzenkreuzers are also equipped with small hangar bays."
+    PKI_TECH_UNLOCK_PANZER_CONSTRUCTION_DESC: "§HKatzenweltraumpanzers§!\nKatzenweltraumpanzers form the frontal line of all Katzen fleets, using their powerful railgun batteries to simply break apart enemy ships."
     PKI_TECH_UNLOCK_PANZER_CONSTRUCTION_TITLE: "§HUnlocks Ship Type:§! Katzenweltraumpanzer"
+    PKI_TECH_UNLOCK_BOMBER_CONSTRUCTION_DESC: "§HLeerekatzenbombers§!\nLeerekatzenbombers provide a significant amount of missile armament to our fleets. They come in 2 forms: Dive bombers, delivering torpedoes, and long-range bombers, using conventional missiles."
+    PKI_TECH_UNLOCK_BOMBER_CONSTRUCTION_TITLE: "§HUnlocks Ship Type:§! Leerekatzenbomber"
+    PKI_TECH_UNLOCK_CRUISER_CONSTRUCTION_DESC: "§HKatzenkreuzers§!\nKatzenkreuzers are the backbone of any fleet they are in, being equipped ample armor and shields, and utilizing large railguns and missile batteries to overwhelm enemies. Katzenkreuzers are also equipped with small hangar bays."
+    PKI_TECH_UNLOCK_CRUISER_CONSTRUCTION_TITLE: "§HUnlocks Ship Type:§! Katzenkreuzer"
 
     tech_pki_submarine: "Unterraumboot"
     tech_pki_submarine_desc: "An extrapolation of the stealthy water vessels used by the Imperium's navy, Unterraumboots are equipped with powerful cloaking devices that allow them to go entirely undetected by enemy ships."
     PKI_TECH_UNLOCK_SUBMARINE_CONSTRUCTION_DESC: "§HUnterraumboots§!\nUnterraumboots are cloaked vessels, capable of sneaking behind enemy lines for reconnaisance missions, as well as using their powerful torpedoes to simply rip apart larger enemy vessels."
     PKI_TECH_UNLOCK_SUBMARINE_CONSTRUCTION_TITLE: "§HUnlocks Ship Type:§! Unterraumboot"
-    PKI_TECH_UNLOCK_WARFORGE_CONSTRUCTION_TITLE: "§HUnlocks Decision:§! Katzen Warforge"
+    PKI_TECH_UNLOCK_WARFORGE_CONSTRUCTION_TITLE: "§HUnlocks Decision:§! Katzen Warforge Construction"
     PKI_TECH_UNLOCK_WARFORGE_CONSTRUCTION_DESC: "§HKatzen War Forge§!\nThese metal masses allow for increased naval prowess, producing alloys as well as improving ship building speed."
 
     mod_country_power_projection_unity_produces_add:1 "Max £unity£ $unity$ from $country_power_projection$"
@@ -1001,3 +1006,6 @@
 
     pki_leader_trait_nukelad: "Nuclear Enthusiast"
     pki_leader_trait_nukelad_desc: "Nuclear and atomic weaponry holds a special place in this leader's heart. They do not hesitate to employ such weapons during warfare."
+
+    pki_leader_trait_command_limit: "Katzen Admiral"
+    pki_leader_trait_command_limit_desc: "Excelling at logistic and strategic planning, this commander is able to command fleets that would overburden their lesser peers."

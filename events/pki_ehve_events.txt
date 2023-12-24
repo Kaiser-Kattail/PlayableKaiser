@@ -59,7 +59,7 @@ fleet_event = {
 						}
 					}
 					owner = {
-						has_technology = tech_mega_engineering
+						has_technology = tech_pki_ehve
 					}
 				}
 			}

@@ -381,7 +381,7 @@ NAME_symbie_defense: "Wacegi Army"
  conquest.090909.desc:0 "Success! After years of violent wars, conquests, and death, Flusion is now unified under one banner.\n\nOur banner!"
  conquest.090909.a:0 "Hear, hear!"
 
- no_ftl_capability:0 "No FTL Discovered"
+ pki_no_ftl_capability:0 "No FTL Discovered"
  central_stability:0 "Central Stability"
 
  situation_ftl_development:0 "Development of FTL"

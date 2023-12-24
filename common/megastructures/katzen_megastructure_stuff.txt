@@ -77,7 +77,6 @@ playable_kaiser_ehve_phase0 = {
 		exists = starbase
 		custom_tooltip = { fail_text = "requires_inside_border"					is_inside_border = from }
 		custom_tooltip = { fail_text = "requires_surveyed_system"				giga_system_is_surveyed = yes }
-		custom_tooltip = { fail_text = "requires_no_existing_ehof"				from = { NOT = { any_owned_megastructure = { is_any_ehof = yes } } } }
 		custom_tooltip = { fail_text = "requires_no_existing_megastructure"		has_no_non_gate_megastructure = yes }
 		custom_tooltip = { fail_text = "requires_no_gargantua"					NOT = { has_star_flag = guardians_technosphere_system } }
 	}
@@ -225,7 +224,7 @@ playable_kaiser_ehve_dummy = {
 
 playable_kaiser_ehve_cooldown = {
 	entity = "ehof_megastructure_phase3_entity"
-	construction_entity = "ehof_megastructure_phase3_entity"
+	construction_entity = ""
 	portrait = GFX_megastructure_ehof
 	place_entity_on_planet_plane = yes
 	construction_blocks_and_blocked_by = none
@@ -292,7 +291,7 @@ playable_kaiser_ehve_cooldown_dummy = {
 playable_kaiser_ehve_active = {
 	portrait = GFX_megastructure_ehof
 	entity = "pki_active_ehve"
-	construction_entity = "pki_active_ehve"
+	construction_entity = ""
 	entity_offset = {
 		x = 0
 		y = 0
@@ -330,7 +329,7 @@ playable_kaiser_ehve_active = {
 
 playable_kaiser_ehve = {
 	entity = "ehof_megastructure_phase3_entity"
-	construction_entity = "ehof_megastructure_phase3_con_entity"
+	construction_entity = ""
 	portrait = GFX_megastructure_ehof
 	place_entity_on_planet_plane = yes
 	show_galactic_map_icon = no

@@ -436,3 +436,76 @@ pki_leader_trait_nukelad = {
 		always = no
 	}
 }
+
+pki_leader_trait_command_limit = {
+	veteran_class_locked_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_supreme_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+
+	fleet_modifier = {
+		command_limit_mult = 1
+	}
+
+	leader_potential_add = {
+		from = {
+			pki_is_katzenartig_imperium = yes
+		}
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_admiral
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 300
+		inline_script = paragon/pilot_weight_mult
+		inline_script = {
+			script = paragon/subclass_weight_mult
+			SUBCLASS = commander_admiral
+		}
+	}
+}
+
+pki_leader_trait_command_limit_2 = {
+	veteran_class_locked_trait = yes
+	replace_traits = { pki_leader_trait_command_limit }
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_supreme_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+
+	fleet_modifier = {
+		command_limit_mult = 1.5
+	}
+
+	leader_class = { commander }
+}
+
+pki_leader_trait_command_limit_3 = {
+	veteran_class_locked_trait = yes
+	replace_traits = { pki_leader_trait_command_limit_2 }
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_supreme_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+
+	fleet_modifier = {
+		command_limit_mult = 2
+	}
+
+	leader_class = { commander }
+}
