@@ -400,7 +400,7 @@
     decision_pki_societal_restructuring_desc:0 "By changing how Flusion functions from the ground up, we will be able to achieve an extreme boost in efficiency.\n\n§RWARNING:§!\n§HThis will effectively kill half of the planet's population and destroy half of the districts.§!"
 
     decision_pki_further_restructuring:0 "Further Restructuring"
-    decision_pki_further_restructuring_desc:0 "By building more and more off of our existing work, we will be able to achieve an further boot in efficiency.\n\n§HThere are deminishing returns with futher restructuring!§!\n\n§RWARNING:§!\n§HThis will effectively kill half of the planet's population and destroy half of the districts.§!"
+    decision_pki_further_restructuring_desc:0 "By building more and more off of our existing work, we will be able to achieve an further boost in efficiency.\n\n§HThere are deminishing returns with futher restructuring!§!\n\n§RWARNING:§!\n§HThis will effectively kill half of the planet's population and destroy half of the districts.§!"
 
     pki_expand_flusion:0 "Increses §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow.§!"
     pki_expand_flusion_more:0 "Increses §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow.§!"
