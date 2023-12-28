@@ -511,7 +511,7 @@ district_pki_flusion_science = {
 	}
 
 	planet_modifier = {
-		pop_happiness = -0.05
+		pop_happiness = -0.025
 	}
 
 	resources = {
