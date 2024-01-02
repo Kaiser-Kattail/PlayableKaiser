@@ -385,7 +385,7 @@
     decision_katzen_housing_dam:0 "Construct Housing Dams"
     decision_katzen_housing_dam_desc:0 "By constructing dams to drain various seas, new housing and residential developments may be opened up on this world."
 
-    decision_katzen_industrial_dam: "Construct Industiral Dams"
+    decision_katzen_industrial_dam: "Construct Industrial Dams"
     decision_katzen_industrial_dam_desc: "By constructing dams to provide increased cooling capabilities to our foundries and factories, industrial output can be increased."
    
     decision_katzen_defense_array_1:0 "Construct Katzen Defense Array"
@@ -702,7 +702,7 @@
 
     leader_trait_schulz: "Mind of the Imperium"
     leader_trait_schulz_desc: "This leader is an exceptionally skilled geneticist, surgeon, and military designer. With the creation of super soldiers, they are ready to serve the Kaiser."
-    leader_trait_schulz_effect: "Able to recruit §YMeowrine Legions§! when assisting research on a planet."
+    leader_trait_schulz_effect: "Able to recruit §YMeowrine Legions§! while governing a planet."
     NAME_schulz: "Dr. Pawtto Schulz"
     schulzdesc: "Dr. Pawtto Schulz is a brilliant mind, dedicated to augmenting and refining meowrines."
     schulz_catch_phrase: "§L"Y'know, the serum the meowrines use helps keep your fur from falling out..."§!"
