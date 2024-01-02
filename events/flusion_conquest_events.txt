@@ -926,7 +926,7 @@ country_event = {
 					}
 					set_timed_country_flag = {
 						flag = just_had_surprise_attack
-						days = 30
+						days = 120
 					}
 				}
 			}
