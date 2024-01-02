@@ -7,7 +7,7 @@
 flusion_new_initializer = {
 	name = "NAME_JUBLIO_SYSTEM"
 	class = "sc_g"
-	flags = { flusion_system empire_home_system }
+	flags = { flusion_system empire_home_system  }
 	asteroid_belt = { type = rocky_asteroid_belt radius = 37 }
 
 	usage = origin

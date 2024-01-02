@@ -3,10 +3,16 @@
     situation_naitonal_focus_type: "National Focus"
     situation_naitonal_focus_desc: "National Focuses usually represent plans or ideas an empire wishes to accomplish. While they vary in length, most take five years or 60 months to complete."
     approach_focus: "National Focus"
+    approach_focus_fast: "Hastened National Focus"
     approach_open_focus_tree: "Open Focus Tree"
 
+    pki_focus_speed: "Focus Length"
+
     approach_focus_tooltip: "Pursue our National Focus"
-    approach_open_focus_tree_tooltip: "Opens the focus tree (duh)"
+    approach_focus_tooltip_fast: "Pursue our National Focus faster, though with increased upkeep"
+    approach_open_focus_tree_tooltip: "Opens the Focus Tree for §Y[owner.GetName]§!"
+
+    situation_naitonal_focus_monthly_change_tooltip: ""
 
     PKI_FINISH_FOCUS: "National Focus Completed."
 
@@ -16,19 +22,47 @@
     pki_map_title: "Flusion"
     pki_focus_title: "Katzenartig Imperium Focus Tree"
 
-    PKI_ALREADY_SELECTED_FOCUS: "We have already selected a focus."
+    PKI_ALREADY_SELECTED_FOCUS: "    £trigger_no£We have already selected a focus."
 
     pki_confirm_focus_message: "Select Focus"
     pki_confirm_focus: "Select this focus?"
     pki_confirm: "Confirm"
     pki_cancel: "Cancel"
 
-    #### FOCUS NAMES
+    MESSAGE_PKI_NATIONAL_FOCUS_COMPLETE_TITLE: "National Focus Complete"
+    REPLACE_ME_LOC: "We have completed our §YNational Focus§!"
 
-    pki_kaiser_arrival
+
+    #### FOCUS LOC
+
+    pki_focus_spacer: "                                                      "
+    pki_completed_focus: "Has completed focus "
+
+
+    pki_focus_kaiser_arrival: "Arrival of the Kaiser"
+    pki_focus_kaiser_arrival_desc: "$pki_focus_spacer$§C5 years§!\n\n\n$pki_focus_kaiser_arrival_effects_desc$\n--------------\n§g$pki_focus_kaiser_arrival_flavor$§!"
+    pki_focus_kaiser_arrival_effects_desc: "§Y$pki_focus_kaiser_arrival$§!\nEffects\n\n§Y[owner.GetName]§! gets event §Y$pki_focus.1.title$§!"
+    pki_focus_kaiser_arrival_flavor: "For the past decade, the Cat Kingdom has been in a period of severe political turmoil, with rising political violence, extreme polarization, and low opinions on the government. Kattail, a veteran of the Wacegi War, has an ambitious plan to stabilize the nation, and it starts by removing Mewtail III."
+    pki_completed_kaiser_arrival: "$pki_completed_focus$§Y$pki_focus_kaiser_arrival$§!"
+
+    pki_focus_neighbors: "Reassure the Neighbors"
+    pki_focus_neighbors_desc: "$pki_focus_spacer$§C5 years§!\n\n\n$pki_focus_neighbors_effects_desc$\n--------------\n§g$pki_focus_neighbors_flavor$§!"
+    pki_focus_neighbors_effects_desc: "§Y$pki_focus_neighbors$§!\nEffects\n\n§Y[owner.GetName]§! gets\n§Y$pki_neighbors_modifier$§!:\n    Available Envoys: §G+1§!\n    Trade Value: §G+10%§!\n    Pop Amenities Usage §Y-0.50§!"
+    pki_focus_neighbors_flavor: "Reassurance go brrrr"
+    pki_completed_neighbors: "$pki_completed_focus$§Y$pki_focus_neighbors$§!"
+
+    pki_focus_harania: "The Haranian Question"
+    pki_focus_harania_desc: "$pki_focus_spacer$§C2.5 years§!\n\n\n$pki_focus_harania_effects_desc$\n--------------\n§g$pki_focus_harania_flavor$§!"
+    pki_focus_harania_effects_desc: "§Y$pki_focus_harania$§!\nEffects\n\n§Y[owner.GetName]§! declares war on §YHarania§!."
+    pki_focus_harania_flavor: "Harania taking the L"
+    pki_completed_harania: "$pki_completed_focus$§Y$pki_focus_harania$§!"
 
     pki_focus_katzen_weaponry: "Katzen Weaponry"
+    
+    #### FOCUS EVENTS
 
-    #### FOCUS EFFECTS AND STUFF
+    pki_focus.1.title: "Kaiser Kattail"
 
-    pki_katzen_weaponry: "Katzen Weaponry"
+    #### FOCUS MODIFIERS
+
+    pki_neighbors_modifier: "Neighbors Reassured"

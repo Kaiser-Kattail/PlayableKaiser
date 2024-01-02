@@ -13,16 +13,6 @@ kaiser_bureau = {
 	effect = { custom_tooltip = "kaiser_bureau_tooltip" hidden_effect = { from = { country_event = { id = kaiser_bureau.2 } } } }
 }
 
-pki_focus_title = {
-	potential = { event_target:katzenartig = { has_country_flag = pki_focus_tree_tab } }
-	allow = { always = yes }
-}
-
-pki_map_title = {
-	potential = { event_target:katzenartig = { has_country_flag = pki_conquest_map_tab } }
-	allow = { always = yes }
-}
-
 pki_flusion_map_active_effect = {
 	potential = { event_target:katzenartig = { has_country_flag = pki_conquest_map_tab } }
 	allow = { always = yes }
@@ -46,7 +36,7 @@ pki_flusion_focus_inactive_effect = {
 }
 
 pki_focus_line_no_effect = {
-	potential = { always = yes }
+	potential = { event_target:katzenartig = { has_country_flag = pki_focus_tree_tab } }
 	allow = { always = yes }
 	effect = {}
 }
@@ -58,3 +48,12 @@ inline_script = {
 	FOCUS = kaiser_arrival
 }
 
+inline_script = {
+	script = pki_focuses/pki_focus_button_effects
+	FOCUS = neighbors
+}
+
+inline_script = {
+	script = pki_focuses/pki_focus_button_effects
+	FOCUS = harania
+}

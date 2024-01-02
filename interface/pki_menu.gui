@@ -1,0 +1,568 @@
+guiTypes = {
+
+	@view_w = 1620
+	@view_h = 900
+	@tabs_y = 898
+
+	@tile_x_100 = 0
+	@tile_x_150 = 90
+	@tile_x_200 = 180
+	@tile_x_250 = 270
+	@tile_x_300 = 360
+	@tile_x_350 = 450
+	@tile_x_400 = 540
+	@tile_x_450 = 630
+	@tile_x_500 = 720
+	@tile_x_550 = 810
+	@tile_x_600 = 900
+	@tile_x_650 = 990
+	@tile_x_700 = 1080
+	@tile_x_750 = 1170
+	@tile_x_800 = 1260
+
+	@tile_y_100 = 0
+	@tile_y_200 = 140
+	@tile_y_300 = 280
+	@tile_y_400 = 420
+	@tile_y_500 = 560
+	@tile_y_600 = 700
+	@tile_y_700 = 840
+	@tile_y_800 = 980
+
+	containerWindowType = {
+		name = "pki_menu"
+
+		size = { width = @view_w height = @view_h }
+
+		position = { x = -1270 y = 70 }
+		show_position = { x = 40 y = 70 }
+		hide_position = { x = -1270 y = 70 }
+		animation_time = 200
+		show_animation_type = decelerated
+		hide_animation_type = decelerated
+
+		orientation = UPPER_LEFT
+		clipping = no
+		moveable = yes
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+		}
+
+		containerWindowType = {
+			name = "pki_stop_moving_the_menu"
+			size = { width = @view_w height = @view_h }
+
+			background = {
+				name = "background_no_moving"
+				quadTextureSprite = "GFX_invisible"
+			}
+
+			moveable = no
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -10 y = -14 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_long"
+			position = { x = 6 y = 22 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "heading"
+			font = "malgun_goth_24"
+			text = ""
+			position = { x = -1120 y = -1115 } # hide
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -42 y = 12 }
+			orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+		}
+
+		effectButtonType = {
+			position = { x = -20 y = @tabs_y }
+			buttonFont = cg_16b
+			buttonText = "PKI_CONQUEST_MAP"
+			name = pki_flusion_map_tab_active
+			quadTextureSprite = "GFX_tab_1_active"
+			effect = pki_flusion_map_active_effect
+			clicksound = "tab_click"
+			shortcut = z
+		}
+
+		effectButtonType = {
+			position = { x = -20 y = @tabs_y }
+			buttonFont = cg_16b
+			buttonText = "PKI_CONQUEST_MAP"
+			name = pki_flusion_map_tab_inactive
+			quadTextureSprite = "GFX_tab_1_inactive"
+			effect = pki_flusion_map_inactive_effect
+			clicksound = "tab_click"
+			shortcut = z
+		}
+
+		effectButtonType = {
+			position = { x = 100 y = @tabs_y }
+			buttonFont = cg_16b
+			buttonText = "PKI_FOCUS_TREE"
+			name = pki_focus_tab_active
+			quadTextureSprite = "GFX_tab_2_active"
+			effect = pki_flusion_focus_active_effect
+			clicksound = "tab_click"
+			shortcut = x
+		}
+
+		effectButtonType = {
+			position = { x = 100 y = @tabs_y }
+			buttonFont = cg_16b
+			buttonText = "PKI_FOCUS_TREE"
+			name = pki_focus_tab_inactive
+			quadTextureSprite = "GFX_tab_2_inactive"
+			effect = pki_flusion_focus_inactive_effect
+			clicksound = "tab_click"
+			shortcut = x
+		}
+
+		### HIDDEN STUFF ###
+
+		buttonType = { name = "focus_button" position = { x = -1180 y = 9999 } spriteType = "GFX_fleetview_focus" } # hidden
+		buttonType = { name = "alien_message_background" size = { x = 0 y = 0 } position = { x = -1110 y = 9999 } spriteType = "GFX_tiles_dark_area_cut_8" } # hidden
+		buttonType = { name = "confirm_button" quadTextureSprite = "GFX_standard_button_142_34_button" } # hidden
+
+		containerWindowType = {
+			name = "portrait_background"
+			position = { x = -1117 y = 9999 }
+			size = { width = 0 height = 0 }    # hide portrait window
+			iconType = { name = "event_picture" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+			iconType = { name = "portrait" spriteType = "GFX_portrait_character" } # hidden
+		}
+		containerWindowType = {
+			name = "portrait"
+			position = { x = -1117 y = 9999 }
+			size = { width = 0 height = 0 } # hide portrait window
+			iconType = { name = "portrait" spriteType = "GFX_portrait_gamesetup_mask" } # hidden
+			iconType = { name = "black_frame" spriteType = "GFX_diplomacy_portrait_shadow_frame" } # hidden
+			iconType = { name = "stripes_1" spriteType = "GFX_diplomacy_stripes_2" } # hidden
+			iconType = { name = "city_frame" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+		}
+
+		iconType = { name = "empire_info_bg" spriteType = "GFX_diplomacy_dark_fade_bg" } # hidden
+		instantTextBoxType = { name = "empire_name" font = "malgun_goth_24" } # hidden
+		instantTextBoxType = { name = "empire_government_type" font = "cg_16b" } # hidden
+		instantTextBoxType = { name = "empire_personality_type" font = "cg_16b" } # hidden
+		overlappingElementsBoxType = { name = "empire_ethics_icons" position = { x = -1145 y = 9999 } } # hidden
+		iconType = { name = "empire_flag" spriteType = "GFX_empire_flag_128" position = { x = -1125 y = 9999 } } # hidden
+
+		containerWindowType = {
+			name = "leader_details"
+			position = { x = -1125 y = 9999 }
+			containerWindowType = { name = "empire_traits_box" } # hidden
+			instantTextBoxType = { name = "empire_traits_label" font = "cg_16b" } # hidden
+			overlappingElementsBoxType = { name = "leader_traits" } # hidden
+			instantTextBoxType = { name = "leader_name" font = "cg_16b" } # hidden
+			instantTextBoxType = { name = "leader_species" font = "cg_16b" } # hidden
+		}
+		containerWindowType = {
+			name = "opinion_window"
+			position = { x = -1127 y = 9999 }
+			size = { width = 94 height = 30 }
+			iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
+			instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
+		}
+
+		### END HIDDEN STUFF ###
+
+		### EVENT DIPLO ###
+
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = 2 y = 50 }
+			#size = { width = 563 height = 220 }
+			moveable = no
+
+			instantTextBoxType = {
+				name = "action_title"
+				font = "malgun_goth_24"
+				position = { x = 20 y = 0 }
+				maxWidth = 200
+				alwaysTransparent = yes
+			}
+			instantTextBoxType = {
+				name = "action_desc"
+				font = "malgun_goth_24"
+				position = { x = 490 y = 0 }
+				maxWidth = 500
+				maxHeight = 180
+				orientation = "UPPER_LEFT"
+				format = center
+				alwaysTransparent = yes
+				text_color_code = "H"
+			}
+			listboxType = { name = "option_list" position = { x = -11500 y = -1130 } } # hidden option list
+		}
+
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "cg_16b"
+			position = { x = 20 y = 9999 }
+			maxWidth = 465
+			maxHeight = 220
+			format = left
+			scrollbartype = "standardtext_slider"
+		}
+
+		effectButtonType = {
+			name = "pki_focus_title"
+			font = "malgun_goth_24"
+			text = "pki_focus_title"
+			position = { x = 16 y = 2 }
+			format = left
+			size = { width = 1000 height = 32 }
+			alwaysTransparent = no
+			quadTextureSprite = "GFX_invisible"
+			effect = pki_flusion_focus_active_effect
+		}
+
+		effectButtonType = {
+			name = "pki_map_title"
+			font = "malgun_goth_24"
+			text = "pki_map_title"
+			position = { x = 16 y = 2 }
+			format = left
+			size = { width = 1000 height = 32 }
+			alwaysTransparent = no
+			quadTextureSprite = "GFX_invisible"
+			effect = pki_flusion_map_active_effect
+		}
+
+		containerWindowType = {
+			name = map
+
+			effectButtonType = {
+				name = focus_tree_background
+				position = { x = +10 y = +56 }
+				size = { width = 1416 height = 708 }
+				orientation = upper_left
+				alwaysTransparent = yes
+
+				quadTextureSprite = "GFX_tiles_frame"
+
+				effect = pki_flusion_map_active_effect
+			}
+
+		}
+
+		effectButtonType = {
+			name = focus_tree_background
+			position = { x = +10 y = +56 }
+			size = { width = 1602 height = 836 }
+			orientation = upper_left
+			alwaysTransparent = yes
+
+			quadTextureSprite = "GFX_tiles_frame"
+
+			effect = pki_flusion_focus_active_effect
+		}
+
+		containerWindowType = {
+			name = focuses
+			origo = UPPER_LEFT
+			position = { x = +10 y = +64 }
+			size = { width = 1598 height = 820 }
+			verticalScrollbar = "right_vertical_slider"
+			clipping = yes
+			background = { name = "focuses_background" quadTextureSprite = "GFX_invisible" }
+
+			gridBoxType = {
+				orientation = upper_left
+				name = "focuses_box"
+				size = { width = 1270 height = 1652 }
+				slotSize = { width = 1270 height = 652 } #required for the scrollbar to function
+				format = UPPER_LEFT
+			}
+
+			### ADD FOCUSES HERE
+
+			containerWindowType = { name = focus_kaiser_arrival position = { x = @tile_x_500 y = @tile_y_100 } containerWindowType = { name = focus orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_kaiser_arrival_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_kaiser_arrival" effect = pki_focus_kaiser_arrival_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_kaiser_arrival_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_kaiser_arrival" quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_kaiser_arrival_effect } } containerWindowType = { name = focus_in_progress orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_kaiser_arrival_in_progress_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_kaiser_arrival" effect = pki_focus_kaiser_arrival_in_progress_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_kaiser_arrival_in_progress_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_kaiser_arrival" quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_kaiser_arrival_in_progress_effect } } containerWindowType = { name = focus_completed orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_kaiser_arrival_completed_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_kaiser_arrival" effect = pki_focus_kaiser_arrival_completed_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_kaiser_arrival_completed_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_kaiser_arrival" quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_kaiser_arrival_completed_effect } } }
+			containerWindowType = { name = focus_neighbors position = { x = @tile_x_550 y = @tile_y_200 } containerWindowType = { name = focus orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_neighbors_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_neighbors" effect = pki_focus_neighbors_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_neighbors_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_neighbors" quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_neighbors_effect } } containerWindowType = { name = focus_in_progress orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_neighbors_in_progress_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_neighbors" effect = pki_focus_neighbors_in_progress_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_neighbors_in_progress_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_neighbors" quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_neighbors_in_progress_effect } } containerWindowType = { name = focus_completed orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_neighbors_completed_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_neighbors" effect = pki_focus_neighbors_completed_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_neighbors_completed_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_neighbors" quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_neighbors_completed_effect } } }
+			containerWindowType = { name = focus_harania position = { x = @tile_x_550 y = @tile_y_300 } containerWindowType = { name = focus orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_harania_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_harania" effect = pki_focus_harania_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_harania_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_harania" quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_harania_effect } } containerWindowType = { name = focus_in_progress orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_harania_in_progress_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_harania" effect = pki_focus_harania_in_progress_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_harania_in_progress_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_harania" quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_harania_in_progress_effect } } containerWindowType = { name = focus_completed orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_harania_completed_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_harania" effect = pki_focus_harania_completed_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_harania_completed_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_harania" quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_harania_completed_effect } } }
+
+
+			containerWindowType = {
+				name = focus_lines
+				position = { x = 3 y = 12 }
+
+				effectButtonType = {
+					name = 1
+					position = { x = @tile_x_500 y = @tile_y_100 }
+					effect = pki_focus_line_no_effect
+					quadTextureSprite = "GFX_pki_focus_line_h_s"
+				}
+
+				effectButtonType = {
+					name = 2
+					position = { x = @tile_x_500 y = @tile_y_100 }
+					effect = pki_focus_line_no_effect
+					quadTextureSprite = "GFX_pki_focus_line_u_s"
+				}
+
+				effectButtonType = {
+					name = 3
+					position = { x = @tile_x_550 y = @tile_y_100 }
+					effect = pki_focus_line_no_effect
+					quadTextureSprite = "GFX_pki_focus_line_d_s"
+				}
+
+				effectButtonType = {
+					name = 4
+					position = { x = @tile_x_550 y = @tile_y_200 }
+					effect = pki_focus_line_no_effect
+					quadTextureSprite = "GFX_pki_focus_line_d_s"
+				}
+
+				effectButtonType = {
+					name = 5
+					position = { x = @tile_x_550 y = @tile_y_200 }
+					effect = pki_focus_line_no_effect
+					quadTextureSprite = "GFX_pki_focus_line_u_s"
+				}
+
+			}
+
+
+		}
+	}
+
+	containerWindowType = {
+		name = focus_confirm_screen
+		orientation = center
+
+		origo = center
+
+		size = { width = 400 height = 600 }
+
+		position = { x = 0 y = 0 }
+
+		click_to_front = yes
+
+		background = { name = background quadTextureSprite = GFX_tile_outliner_bg }
+
+		moveable = yes
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -10 y = -14 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = 6 y = 22 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "heading"
+			font = "malgun_goth_24"
+			text = "pki_focus_title"
+			position = { x = -9999 y = 0 } # hide
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "pki_focus_message"
+			font = "cg_16b"
+			text = "pki_confirm_focus"
+			position = { x = 16 y = 60 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = time_background
+			position = { x = 220 y = 51 }
+			size = { width = 74 height = 34 }
+			alwaysTransparent = yes
+			background = {
+				name = background
+				alwaysTransparent = yes
+				quadTextureSprite = "GFX_framed_area_tile"
+			}
+		}
+
+		containerWindowType = {
+			name = desc_background
+			position = { x = 8 y = 102 }
+			size = { width = 384 height = 490 }
+			alwaysTransparent = yes
+			background = {
+				name = background
+				alwaysTransparent = yes
+				quadTextureSprite = "GFX_dark_area_cut"
+			}
+		}
+
+		instantTextboxType = {
+			name = "pki_focus_title"
+			font = "malgun_goth_24"
+			text = "pki_confirm_focus_message"
+			position = { x = 16 y = 5 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -42 y = 12 }
+			orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+		}
+
+		### HIDDEN STUFF ###
+
+		buttonType = { name = "focus_button" position = { x = -1180 y = 9999 } spriteType = "GFX_fleetview_focus" } # hidden
+		buttonType = { name = "alien_message_background" size = { x = 0 y = 0 } position = { x = -1110 y = 9999 } spriteType = "GFX_tiles_dark_area_cut_8" } # hidden
+		buttonType = { name = "confirm_button" quadTextureSprite = "GFX_standard_button_142_34_button" } # hidden
+
+		containerWindowType = {
+			name = "portrait_background"
+			position = { x = -1117 y = 9999 }
+			size = { width = 0 height = 0 }    # hide portrait window
+			iconType = { name = "event_picture" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+			iconType = { name = "portrait" spriteType = "GFX_portrait_character" } # hidden
+		}
+		containerWindowType = {
+			name = "portrait"
+			position = { x = -1117 y = 9999 }
+			size = { width = 0 height = 0 } # hide portrait window
+			iconType = { name = "portrait" spriteType = "GFX_portrait_gamesetup_mask" } # hidden
+			iconType = { name = "black_frame" spriteType = "GFX_diplomacy_portrait_shadow_frame" } # hidden
+			iconType = { name = "stripes_1" spriteType = "GFX_diplomacy_stripes_2" } # hidden
+			iconType = { name = "city_frame" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+		}
+
+		iconType = { name = "empire_info_bg" spriteType = "GFX_diplomacy_dark_fade_bg" } # hidden
+		instantTextBoxType = { name = "empire_name" font = "malgun_goth_24" } # hidden
+		instantTextBoxType = { name = "empire_government_type" font = "cg_16b" } # hidden
+		instantTextBoxType = { name = "empire_personality_type" font = "cg_16b" } # hidden
+		overlappingElementsBoxType = { name = "empire_ethics_icons" position = { x = -1145 y = 9999 } } # hidden
+		iconType = { name = "empire_flag" spriteType = "GFX_empire_flag_128" position = { x = -1125 y = 9999 } } # hidden
+
+		containerWindowType = {
+			name = "leader_details"
+			position = { x = -1125 y = 9999 }
+			containerWindowType = { name = "empire_traits_box" } # hidden
+			instantTextBoxType = { name = "empire_traits_label" font = "cg_16b" } # hidden
+			overlappingElementsBoxType = { name = "leader_traits" } # hidden
+			instantTextBoxType = { name = "leader_name" font = "cg_16b" } # hidden
+			instantTextBoxType = { name = "leader_species" font = "cg_16b" } # hidden
+		}
+		containerWindowType = {
+			name = "opinion_window"
+			position = { x = -1127 y = 9999 }
+			size = { width = 94 height = 30 }
+			iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
+			instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
+		}
+
+		### END HIDDEN STUFF ###
+
+		### EVENT DIPLO ###
+
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = 2 y = 50 }
+			#size = { width = 563 height = 220 }
+			moveable = no
+
+			instantTextBoxType = {
+				name = "action_title"
+				font = "malgun_goth_24"
+				position = { x = 20 y = 0 }
+				maxWidth = 200
+				alwaysTransparent = yes
+			}
+			instantTextBoxType = {
+				name = "action_desc"
+				font = "malgun_goth_24"
+				position = { x = 490 y = 0 }
+				maxWidth = 500
+				maxHeight = 180
+				orientation = "UPPER_LEFT"
+				format = center
+				alwaysTransparent = yes
+				text_color_code = "H"
+			}
+			listboxType = {
+				name = "option_list"
+				position = { x = 283 y = -6 }
+				size = { x = 100 y = 30 }
+				spacing = 1
+				borderSize = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "cg_16b"
+			position = { x = 16 y = 60 }
+			maxWidth = 370
+			maxHeight = 550
+			format = left
+			scrollbartype = "standardtext_slider"
+			alwaysTransparent = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "pki_focus_confirm"
+		position = { x = 0 y = 0 }
+		size = { width = 100 height = 30 }
+		moveable = no
+
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_button_95_24"
+			position = { x = 0 y = 0 }
+			font = "cg_16b"
+			format = center
+			orientation = top_left
+			text = "OPTION_TEXT"
+		}
+
+		OverlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = 0 y = 10 }
+			size = { x = 65 y = 28 }
+		}
+	}
+}

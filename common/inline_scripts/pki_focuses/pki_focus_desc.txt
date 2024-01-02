@@ -1,0 +1,6 @@
+desc = {
+    text = "pki_focus_$FOCUS$_desc"
+    trigger = {
+        has_country_flag = pki_selected_$FOCUS$
+    }
+}

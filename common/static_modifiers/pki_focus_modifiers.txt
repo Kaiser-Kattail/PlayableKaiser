@@ -1,5 +1,4 @@
 pki_destabilized_government = {
-    icon = 
     pop_happiness = -0.15
     planet_stability_add = -10
 }
@@ -7,4 +6,15 @@ pki_destabilized_government = {
 pki_continued_destabilization = {
     pop_happiness = -0.25
     planet_stability_add = -20
+}
+
+pki_neighbors_modifier = {
+    envoys_add = 1
+    trade_value_mult = 0.3
+    pop_amenities_usage_add = -0.5
+}
+
+pki_streamline_nation = {
+    country_edict_fund_add = 50
+    council_agenda_progress_speed = 0.3
 }

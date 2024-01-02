@@ -1059,23 +1059,13 @@ decision_pki_further_restructuring = {
 decision_create_kaiser_legion = {
 	potential = {
 		is_colony = yes
-		from = {
-			any_owned_leader = {
+		planet = {
+			leader = {
 				has_trait = leader_trait_schulz
 			}
 		}
 	}
 
-	allow = {
-		custom_tooltip = {
-			fail_text = needs_schulz
-			planet = {
-				leader = {
-					has_trait = leader_trait_schulz
-				}
-			}
-		}
-	}
 	enactment_time = 480
 	resources = {
 		category = decisions

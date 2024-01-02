@@ -431,3 +431,67 @@ country_event = {
 		}
 	}
 }
+
+namespace = giga_blokkat_join
+
+#What do we do?
+country_event = {
+	id = giga_blokkat_join.1000
+	title = "giga_blokkat_join.1000.name"
+	desc = "giga_blokkat_join.1000.desc"
+	is_triggered_only = yes
+	show_sound = event_radio_chatter
+	picture = GFX_evt_alien_propaganda
+
+	option = { #FIGHT
+		name = "giga_blokkat_join.1000.a"
+		custom_tooltip = "giga_blokkat_join.1000.a.tooltip"
+		hidden_effect = { set_country_flag = giga_decided_to_fight_blokkats }
+	}
+
+	option = { #FLEE
+		name = "giga_blokkat_join.1000.b"
+		allow = {
+			custom_tooltip = {
+				text = "giga_blokkat_join.1000.b.tooltip"
+				always = no
+			}
+		}
+		hidden_effect = { set_country_flag = giga_decided_to_flee_blokkats }
+	}
+
+	option = { #JOIN
+		name = "giga_blokkat_join.1000.c"
+		custom_tooltip = "giga_blokkat_join.1000.c.tooltip"
+		hidden_effect = {
+			set_country_flag = giga_decided_to_join_blokkats
+			country_event = { id = giga_blokkat_join.1001 }
+		}
+		allow = {
+			custom_tooltip_fail = {
+				text = "giga_blokkat_join.1000.c.deathmode"
+				hidden_trigger = {
+					NOT = { has_global_flag = giga_blokkats_deathmode }
+				}
+			}
+			custom_tooltip_fail = {
+				text = "pki_join_blokkats"
+				hidden_trigger = {
+					pki_is_katzenartig_imperium = no
+				}
+			}
+		}
+		trigger = { #Only 1 player can do it.
+			NOT = { any_country = { has_country_flag = giga_decided_to_join_blokkats } }
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+				is_gestalt = yes
+				is_galactic_custodian = yes
+				is_galactic_emperor = yes
+				has_ascension_perk = ap_become_the_crisis
+			}
+		}
+	}
+}

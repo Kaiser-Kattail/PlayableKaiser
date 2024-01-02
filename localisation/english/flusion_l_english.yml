@@ -704,7 +704,7 @@
 
     leader_trait_schulz: "Mind of the Imperium"
     leader_trait_schulz_desc: "This leader is an exceptionally skilled geneticist, surgeon, and military designer. With the creation of super soldiers, they are ready to serve the Kaiser."
-    leader_trait_schulz_effect: "Able to recruit §YMeowrine Legions§! when assisting research on a planet."
+    leader_trait_schulz_effect: "Able to recruit §YMeowrine Legions§! while governing a planet."
     NAME_schulz: "Dr. Pawtto Schulz"
     schulzdesc: "Dr. Pawtto Schulz is a brilliant mind, dedicated to augmenting and refining meowrines."
     schulz_catch_phrase: "§L"Y'know, the serum the meowrines use helps keep your fur from falling out..."§!"
@@ -1011,3 +1011,5 @@
 
     pki_leader_trait_command_limit: "Katzen Admiral"
     pki_leader_trait_command_limit_desc: "Excelling at logistic and strategic planning, this commander is able to command fleets that would overburden their lesser peers."
+
+    pki_join_blokkats: "§RThe [owner.GetName] cannot join the Blokkats.§!"

@@ -1,9 +1,15 @@
 pki_selected_$FOCUS$ = {
     remove_country_flag = pki_selected_$FOCUS$
     prev = {
-        limit = {
-            exists = this
+        if = {
+            limit = {
+                exists = this
+            }
+            set_variable = {
+                which = pki_focus_speed
+                value = $SPEED$
+            }
+            set_situation_flag = pki_$FOCUS$
         }
-        set_situation_flag = pki_$FOCUS$
     }
 }
