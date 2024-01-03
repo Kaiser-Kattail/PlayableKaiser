@@ -523,6 +523,9 @@
    
     PLAYABLE_PANZER_ARTILLERY_1:0 "Weltraumpanzergewehr"
     PLAYABLE_PANZER_ARTILLERY_1_DESC:0 "A heavy forward cannon designed for use in the Katzenweltraumpanzers."
+       
+    KREUZER_KANNONE:0 "Kreuzerkannone"
+    KREUZER_KANNONE_DESC:0 "A huge forward cannon designed for use on Katzenkreuzers. Rushed development means it's not as effective as some other models, but it will do for now..."
    
     temp_job_help:0 "Katzen Economical Reinforcement"
     temp_job_help_desc:0 "The Kaiser has ordered specific, somewhat harsh measures to ensure a smooth transition into the Flusio-Arcology."
