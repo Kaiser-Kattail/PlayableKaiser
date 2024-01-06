@@ -17,7 +17,7 @@ tr_katzen_finish = {
 tr_katzen_war_machine = {
 	modifier = {
 		ships_upkeep_mult = -0.15
-		starbase_shipyard_build_cost_mult = -0.15
+		starbase_shipyard_build_cost_mult = -0.10
 	}
 
 	ai_weight = {

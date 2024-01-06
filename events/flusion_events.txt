@@ -104,11 +104,11 @@ country_event = {
 				days = -1
 			}
 		}
-
 		add_modifier = {
 			modifier = pki_destabilized_government
 			days = -1
 		}
+
 		#Target flusion
 		every_galaxy_planet = {
 			if = {
@@ -184,50 +184,6 @@ country_event = {
 
 		pki_create_flusion_nations = yes
 
-		#create_leader = {
-		#	name = NAME_Kattail
-		#	species = event_target:kaiser_portrait_hd
-		#	class = commander
-		#	skill = 4
-		#	set_age = 189
-		#	randomize_traits = no
-		#	traits = {
-		#		trait = leader_trait_ruler_kaiser_cattail
-		#		trait = trait_ruler_charismatic_2
-		#		trait = trait_ruler_military_pioneer
-		#		trait = leader_trait_intimidator
-		#		trait = subclass_commander_councilor
-		#	}
-		#	gender = male
-		#	immortal = yes
-		#	background_job = none
-		#	background_ethic = ethic_fanatic_militarist
-		#	background_planet = event_target:playerflusion
-
-		#	effect = {
-		#		set_leader_flag = kaiser_kattail
-		#		set_leader_flag = legendary_leader
-		#		set_leader_flag = immune_to_negative_traits
-		#		set_leader_flag = leader_death_events_blocked
-		#		set_leader_flag = flusion_modified
-		#		save_global_event_target_as = kaiser_kattail
-		#	}
-		#	custom_description = PKI_KAISER_DESC
-		#	custom_catch_phrase = PKI_KAISER_CATCH_PHRASE
-		#}
-
-		#ruler = {
-		#	save_event_target_as = pki_old_leader
-		#}
-
-		#assign_leader = last_created_leader
-
-		#event_target:pki_old_leader = {
-		#	kill_leader = {
-		#		show_notification = no
-		#	}
-		#}
-
 		create_country = {
 			name = "NAME_katzen_warforge"
 			type = pki_katzen_ship
@@ -268,34 +224,6 @@ country_event = {
 			clear_blockers = yes
 			clear_deposits = yes
 
-			# while = {
-			# 	count = 5
-			# 	create_pop = {
-			# 		species = event_target:ezics
-			# 	}
-			# }
-
-			# while = {
-			# 	count = 5
-			# 	create_pop = {
-			# 		species = event_target:kronks
-			# 	}
-			# }
-
-			# while = {
-			# 	count = 6
-			# 	create_pop = {
-			# 		species = event_target:flusionians
-			# 	}
-			# }
-
-			# while = {
-			# 	count = 4
-			# 	create_pop = {
-			# 		species = event_target:solakians
-			# 	}
-			# }
-
 			remove_district = district_city
 			remove_district = district_city
 
@@ -317,21 +245,7 @@ country_event = {
 			add_deposit = d_katzen_mountain_range
 			add_deposit = d_katown_palace_primitive
 			add_deposit = d_katown_reactor
-			# add_deposit = d_altarian_jungle
-			# add_deposit = d_manglarian_junkyard
-			# add_deposit = d_catspian_sea
-			# add_deposit = d_northern_ice_cap
-			# add_deposit = d_southern_ice_cap
-			# add_deposit = d_meowriana_trench
-			# add_deposit = d_solakian_factory
-			# add_deposit = d_cookian_steppes_mining
-			# add_deposit = d_magnetic_puffy
-			# add_deposit = d_propanian_mines
-			# add_deposit = d_laurandar_shores
-			# add_deposit = d_yinjite_sea_mines
-			# add_deposit = d_mercurian_plains
-			# add_deposit = d_ezic_farmland
-			# add_deposit = d_grand_kronk_quarry
+
 			add_deposit = d_flunat
 			planet_event = { id = flusion.3 days = 1 }
 
@@ -385,6 +299,10 @@ country_event = {
 			}
 		}
 		set_country_flag = flusion_setup_complete
+
+		pki_set_army_limits = yes
+		pki_refresh_all_army_limits = yes
+
 		#Create Jublio
 
 	}
@@ -431,7 +349,6 @@ country_event = {
 				name = "Meorge Pawtton"
 				gender = male
 				skill = 3
-				randomize_traits = no
 				immortal = yes
 				traits = {
 					trait = pki_katzen_trait_elite
@@ -482,7 +399,6 @@ country_event = {
 				skill = 3
 				immortal = yes
 				set_age = 57
-				randomize_traits = no
 				traits = {
 					trait = pki_katzen_trait_elite
 					trait = pki_leader_trait_armored_warfare

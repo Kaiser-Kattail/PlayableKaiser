@@ -131,6 +131,52 @@ entity = {
 	cull_radius = 10000
 	scale = @war_planet_scale
 
+
+}
+
+entity = {
+	name = "war_planet_complete_entity"
+	pdxmesh = "war_planet_locators_mesh"
+	cull_radius = 10000
+	scale = @war_planet_scale
+}
+
+entity = {
+	name = "war_planet_bow_section_entity"
+	pdxmesh = "war_planet_bow_mesh"
+	cull_radius = 10000
+	scale = @war_planet_scale
+}
+
+entity = {
+	name = "arthropoid_01_war_planet_mid_section_entity"
+	pdxmesh = "war_planet_mid_mesh"
+	cull_radius = 10000
+	scale = @war_planet_scale
+
+	meshsettings = {
+		name = "planet"
+		index = 0
+		texture_diffuse = "city_planet_arthropoid_01_diffuse.dds"
+		texture_normal = "city_planet_arthropoid_01_normal.dds"
+		texture_specular = "city_planet_arthropoid_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+}
+
+entity = {
+	name = "war_planet_stern_section_entity"
+	pdxmesh = "war_planet_stern_mesh"
+	cull_radius = 10000
+	scale = @war_planet_scale
+}
+
+entity = {
+	name = "war_planet_sternthrusters_section_entity"
+	pdxmesh = "war_planet_sternthrusters_mesh"
+	cull_radius = 10000
+	scale = @war_planet_scale
+
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
 		event = { time = 0 node = "engine_large_up_01" particle = "giga_planetcraft_large_idle_particle" trigger_once = yes keep_particle = yes }
@@ -179,50 +225,6 @@ entity = {
 			"engine_large_down_03" =	{ width = 100 length = 150 height = 20 }
 		}
 	}
-}
-
-entity = {
-	name = "war_planet_complete_entity"
-	pdxmesh = "war_planet_locators_mesh"
-	cull_radius = 10000
-	scale = @war_planet_scale
-}
-
-entity = {
-	name = "war_planet_bow_section_entity"
-	pdxmesh = "war_planet_bow_mesh"
-	cull_radius = 10000
-	scale = @war_planet_scale
-}
-
-entity = {
-	name = "arthropoid_01_war_planet_mid_section_entity"
-	pdxmesh = "war_planet_mid_mesh"
-	cull_radius = 10000
-	scale = @war_planet_scale
-
-	meshsettings = {
-		name = "planet"
-		index = 0
-		texture_diffuse = "city_planet_arthropoid_01_diffuse.dds"
-		texture_normal = "city_planet_arthropoid_01_normal.dds"
-		texture_specular = "city_planet_arthropoid_01_specular.dds"
-		shader = "PdxMeshTerra"
-	}
-}
-
-entity = {
-	name = "war_planet_stern_section_entity"
-	pdxmesh = "war_planet_stern_mesh"
-	cull_radius = 10000
-	scale = @war_planet_scale
-}
-
-entity = {
-	name = "war_planet_sternthrusters_section_entity"
-	pdxmesh = "war_planet_sternthrusters_mesh"
-	cull_radius = 10000
-	scale = @war_planet_scale
 }
 
 entity = {

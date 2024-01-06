@@ -106,3 +106,7 @@ pki_scaling_colony = {
 	planet_max_districts_mult = -0.25
 	planet_jobs_produces_mult = -0.20
 }
+
+pki_combat_width = {
+	planet_combat_width_add = 25
+}

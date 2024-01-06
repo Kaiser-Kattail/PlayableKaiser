@@ -139,6 +139,9 @@
     # Army Names
     KAT_xx_ORD:0 "$ORD$ Katzenbodentruppen"
     KAT1_xx_ORD:0 "Flusionian Army $C$"
+    KAT2_xx_ORD:0 "$ORD$ Katzenjagertruppen"
+    KAT3_xx_ORD:0 "$ORD$ Katzenpanzertruppen"
+    KAT4_xx_ORD:0 "$ORD$ Katzenluftwaffe"
    
     # Names (Full)
     KAT_NAME_Meowkins:0 "Meowkins"

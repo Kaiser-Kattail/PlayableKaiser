@@ -150,3 +150,13 @@ tech_katzen_flusioarc = {
 		}
 	}
 }
+
+
+pki_tech_panzers_1 = {
+	icon = giga_tech_katzen_panzers
+	cost = @tier2cost2
+	area = society
+	tier = 2
+	category = { military_theory }
+	weight = 0
+}

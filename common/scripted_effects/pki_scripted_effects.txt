@@ -1,0 +1,45 @@
+pki_refrest_army_limit = {
+    set_variable = {
+        which = pki_$ARMY$_current
+        value = 0
+    }
+    every_owned_army = {
+        if = {
+            limit = {
+                army_type = $ARMY$_army
+            }
+            prev = {
+                change_variable = {
+                    which = pki_$ARMY$_current
+                    value = 1
+                }
+            }
+        }
+    }
+}
+
+pki_set_army_limits = {
+    set_variable = {
+        which = pki_katzensoldaten_limit
+        value = 5
+    }
+
+    set_variable = {
+        which = pki_gepanzertertank_limit
+        value = 3
+    }
+
+    set_variable = {
+        which = pki_atmospharischekatzenbomber_limit
+        value = 3
+    }
+
+    add_modifier = {
+        modifier = pki_combat_width
+        days = -1
+    }
+}
+
+pki_refresh_all_army_limits = {
+    pki_refrest_army_limit =  {ARMY = katzensoldaten}
+}

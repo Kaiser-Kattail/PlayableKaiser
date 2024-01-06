@@ -4,7 +4,6 @@
 KAT = {
 	category = "Katzen"
 	ship_names = {
-
 		generic = {
 			KAT_SHIP_Kassburg KAT_SHIP_Attax KAT_SHIP_Mear KAT_SHIP_Pouchkinio KAT_SHIP_Emmeowirich KAT_SHIP_Katchy KAT_SHIP_Mice KAT_SHIP_Detmeowld KAT_SHIP_Douburg KAT_SHIP_Kaisergrad KAT_SHIP_Miegen KAT_SHIP_Zitrone KAT_SHIP_Lauren KAT_SHIP_Chesse KAT_SHIP_Kaiserslauten KAT_SHIP_Miaderkorn KAT_SHIP_Wuff KAT_SHIP_Katnik KAT_SHIP_Kiekeld KAT_SHIP_Kattertail KAT_SHIP_Chaster KAT_SHIP_Rhawnland KAT_SHIP_Stielem KAT_SHIP_Erlowin KAT_SHIP_Kara KAT_SHIP_Kattbus KAT_SHIP_Kattailsund KAT_SHIP_Teuyaka KAT_SHIP_Leipig KAT_SHIP_Kelle KAT_SHIP_Meoderbrucke KAT_SHIP_Challe KAT_SHIP_Douclawien KAT_SHIP_Kaiserkatstadt KAT_SHIP_Meoderschluss KAT_SHIP_Blau KAT_SHIP_Westerforden KAT_SHIP_Blauestadt KAT_SHIP_Zentralder KAT_SHIP_Derdoux KAT_SHIP_Kasini KAT_SHIP_Meowdeburg KAT_SHIP_Kattailshaven KAT_SHIP_Mleokante KAT_SHIP_Cattan KAT_SHIP_Katzenheim KAT_SHIP_Kochi KAT_SHIP_Dawnseldorf KAT_SHIP_Charkangel KAT_SHIP_Connon KAT_SHIP_Binette KAT_SHIP_Eoven KAT_SHIP_Kostov KAT_SHIP_Miev KAT_SHIP_Zentralis KAT_SHIP_Kugelstatd KAT_SHIP_Stevenshutten KAT_SHIP_Blasbucht KAT_SHIP_Kreiburk KAT_SHIP_Extremeboden KAT_SHIP_Ulmeow
 		}
@@ -88,6 +87,18 @@ KAT = {
 		}
 		postatomic_army = {
 			sequential_name = KAT1_xx_ORD
+		}
+
+		katzensoldaten_army = {
+			sequential_name = KAT2_xx_ORD
+		}
+
+		gepanzertertank_army = {
+			sequential_name = KAT3_xx_ORD
+		}
+
+		atmospharischekatzenbomber_army = {
+			sequential_name = KAT4_xx_ORD
 		}
 	}
 

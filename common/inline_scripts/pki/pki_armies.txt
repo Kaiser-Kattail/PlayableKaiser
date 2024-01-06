@@ -1,0 +1,34 @@
+allow = {
+    custom_tooltip = {
+        text = pki_$ARMY$_army_limit
+    }
+    custom_tooltip_fail = {
+        text = pki_$ARMY$_reached_limit
+        hidden_trigger = {
+            event_target:katzenartig = {
+                check_variable = {
+                    which = pki_$ARMY$_current
+                    value < pki_$ARMY$_limit
+                }
+            }
+        }
+    }
+}
+
+on_queued = {
+    event_target:katzenartig = {
+        change_variable = {
+            which = pki_$ARMY$_current
+            value = 1
+        }
+    }
+}
+
+on_unqueued = {
+    event_target:katzenartig = {
+        change_variable = {
+            which = pki_$ARMY$_current
+            value = -1
+        }
+    }
+}
