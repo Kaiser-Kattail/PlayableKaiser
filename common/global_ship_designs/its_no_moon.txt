@@ -11,6 +11,12 @@ ship_design = {
 		component = { slot = "EXTRALARGE_GUN_02"	template = "MASS_ACCELERATOR_2" }
 		component = { slot = "EXTRALARGE_GUN_07"	template = "GIGA_FLUSION_AUTOCANNON_02" }
 		component = { slot = "EXTRALARGE_GUN_08"	template = "GIGA_FLUSION_AUTOCANNON_02" }
+		component = { slot = "LARGE_UTILITY_1" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_2" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_3" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_4" template = "LARGE_SHIELD_3" }
+		component = { slot = "LARGE_UTILITY_5" template = "LARGE_SHIELD_3" }
+		component = { slot = "LARGE_UTILITY_6" template = "LARGE_SHIELD_3" }
 	}
 
 	section = {
@@ -20,6 +26,12 @@ ship_design = {
 		component = { slot = "LARGE_GUN_02"		template = "KINETIC_ARTILLERY_2" }
 		component = { slot = "LARGE_GUN_03"		template = "KINETIC_ARTILLERY_2" }
 		component = { slot = "LARGE_GUN_04"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_UTILITY_1" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_2" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_3" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_4" template = "LARGE_SHIELD_3" }
+		component = { slot = "LARGE_UTILITY_5" template = "LARGE_SHIELD_3" }
+		component = { slot = "LARGE_UTILITY_6" template = "LARGE_SHIELD_3" }
 	}
 
 	section = {
@@ -29,6 +41,12 @@ ship_design = {
 		component = { slot = "STRIKE_CRAFT_02"		template = "STRIKE_CRAFT_HANGAR_3" }
 		component = { slot = "STRIKE_CRAFT_03"		template = "STRIKE_CRAFT_HANGAR_3" }
 		component = { slot = "STRIKE_CRAFT_04"		template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "LARGE_UTILITY_1" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_2" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_3" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_4" template = "LARGE_SHIELD_3" }
+		component = { slot = "LARGE_UTILITY_5" template = "LARGE_SHIELD_3" }
+		component = { slot = "LARGE_UTILITY_6" template = "LARGE_SHIELD_3" }
 	}
 
 	section = {
@@ -38,6 +56,12 @@ ship_design = {
 		component = { slot = "MISSILE_02"		template = "GIGA_FLUSION_MISSILE_01" }
 		component = { slot = "PD_01"			template = "FLAK_BATTERY_3" }
 		component = { slot = "PD_02"			template = "FLAK_BATTERY_3" }
+		component = { slot = "LARGE_UTILITY_1" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_2" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_3" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_4" template = "LARGE_SHIELD_3" }
+		component = { slot = "LARGE_UTILITY_5" template = "LARGE_SHIELD_3" }
+		component = { slot = "LARGE_UTILITY_6" template = "LARGE_SHIELD_3" }
 	}
 
 	required_component = "GIGA_MOON_COMPUTER"
