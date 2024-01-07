@@ -152,6 +152,8 @@ ship_section_template = {
 	entity = "katzen_plane_entity"
 	icon = "GFX_ship_part_core_mid"
 
+	prerequisites = { tech_torpedoes_1 }
+
 	component_slot = { name = "MISSILE_01"			template = "medium_missile_turret"			locatorname = "gunl2" }
 	component_slot = { name = "MISSILE_02"			template = "medium_missile_turret"			locatorname = "gunl3" }
 	component_slot = { name = "MISSILE_03"			template = "medium_missile_turret"			locatorname = "gunl4" }
@@ -185,6 +187,35 @@ ship_section_template = {
 	component_slot = { name = "AUTOCANNON_04"		template = "small_turret"					locatorname = "gunr2" }
 	component_slot = { name = "AUTOCANNON_05"		template = "small_turret"					locatorname = "gunr3" } 
 	component_slot = { name = "AUTOCANNON_06"		template = "small_turret"					locatorname = "gunr4" } 
+	component_slot = { name = "KINETIC_01"			template = "fett_invisible_large_fixed"		locatorname = "gunl1" }
+	component_slot = { name = "KINETIC_02"			template = "fett_invisible_large_fixed"		locatorname = "gunr1" }
+
+	medium_utility_slots = 6
+	aux_utility_slots = 2
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = 120
+		}
+	}
+}
+
+ship_section_template = {
+	key = "KATZEN_SPACE_BOMBER_3"
+	ship_size = katzen_bomber
+	fits_on_slot = "mid"
+	entity = "katzen_plane_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	prerequisites = { tech_swarmer_missiles_1 }
+
+	component_slot = { name = "AUTOCANNON_01"		template = "medium_turret"					locatorname = "gunl2" } #Medium guns
+	component_slot = { name = "AUTOCANNON_02"		template = "medium_turret"					locatorname = "gunl3" }
+	component_slot = { name = "AUTOCANNON_03"		template = "medium_turret"					locatorname = "gunl4" }
+	component_slot = { name = "AUTOCANNON_04"		template = "medium_turret"					locatorname = "gunr2" }
+	component_slot = { name = "AUTOCANNON_05"		template = "medium_turret"					locatorname = "gunr3" } 
+	component_slot = { name = "AUTOCANNON_06"		template = "medium_turret"					locatorname = "gunr4" } 
 	component_slot = { name = "KINETIC_01"			template = "fett_invisible_large_fixed"		locatorname = "gunl1" }
 	component_slot = { name = "KINETIC_02"			template = "fett_invisible_large_fixed"		locatorname = "gunr1" }
 

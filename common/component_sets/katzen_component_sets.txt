@@ -25,3 +25,10 @@ component_set = {
 	icon = "GFX_ship_part_torpedo_3"
 	icon_frame = 1
 }
+
+component_set = {
+	key = "KREUZER_KANNONE"
+
+	icon = "GFX_ship_part_mass_accelerator_1"
+	icon_frame = 1
+}

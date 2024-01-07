@@ -183,16 +183,14 @@ interference = {
                 fail_text = is_not_a_signatory_vassal_fail
                 NOT = { any_agreement = { agreement_preset = preset_signatory } }
             }
-            NOR = {
-                has_ethic = "ethic_pacifist"
-                has_ethic = "ethic_fanatic_pacifist"
-                has_valid_civic = civic_machine_exploration_protocol
-                NAND = {
-                    OR = {
-                        has_ethic = "ethic_xenophile"
-                        has_ethic = "ethic_fanatic_xenophile"
-                    }
-                    pki_is_katzenartig_imperium = yes
+            OR = {
+                hidden_trigger = { pki_is_katzenartig_imperium = yes }
+                NOR = {
+                    has_ethic = "ethic_pacifist"
+                    has_ethic = "ethic_fanatic_pacifist"
+                    has_valid_civic = civic_machine_exploration_protocol
+                    has_ethic = "ethic_xenophile"
+                    has_ethic = "ethic_fanatic_xenophile"
                 }
             }
         }

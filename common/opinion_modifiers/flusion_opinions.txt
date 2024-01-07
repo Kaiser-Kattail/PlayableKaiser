@@ -5,6 +5,9 @@
 opinion_katzen_militarism = {
 	trigger = {
 		is_country_type = default
+		NOT = {
+			pki_is_katzprotektorat = yes
+		}
 		from = {
 			has_origin = origin_katzen
 		}

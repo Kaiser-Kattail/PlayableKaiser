@@ -70,6 +70,7 @@ decision_flusion_arc = {
 		}
 		change_pc = pc_pki_flusion_ecu
 		hidden_effect = {
+			add_deposit = d_giga_job_upkeep
 			pki_district_convert = {
 				VARIABLE = pki_num_city_districts
 				DISTRICT = district_pki_flusion_city
@@ -123,6 +124,7 @@ decision_siegfried_world = {
 	}
 
 	potential = {
+		has_building = building_siegfried_stronghold
 		from = {
 			has_origin = origin_katzen
 		}
@@ -143,10 +145,6 @@ decision_siegfried_world = {
 
 	allow = {
 		num_uncleared_blockers < 1
-		custom_tooltip = {
-			fail_text = need_siegfried_stronghold
-			has_building = building_siegfried_stronghold
-		}
 	}
 
 	effect = { 
@@ -936,7 +934,6 @@ decision_pki_societal_restructuring = {
 			}
 			add_deposit = d_pki_flusion_societal_restructuring
 			add_deposit = d_giga_job_size
-			add_deposit = d_giga_job_upkeep
 			export_trigger_value_to_variable = { trigger = num_pops variable = pki_flusion_pops }
 			divide_variable = { which = pki_flusion_pops value = 2 }
 			floor_variable = pki_flusion_pops
