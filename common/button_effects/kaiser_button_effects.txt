@@ -16,6 +16,7 @@ kaiser_bureau = {
 pki_flusion_map_active_effect = {
 	potential = { event_target:katzenartig = { has_country_flag = pki_conquest_map_tab } }
 	allow = { always = yes }
+	effect = {}
 }
 
 pki_flusion_map_inactive_effect = {
@@ -27,6 +28,7 @@ pki_flusion_map_inactive_effect = {
 pki_flusion_focus_active_effect = {
 	potential = { event_target:katzenartig = { has_country_flag = pki_focus_tree_tab } }
 	allow = { always = yes }
+	effect = {}
 }
 
 pki_flusion_focus_inactive_effect = {
@@ -37,6 +39,12 @@ pki_flusion_focus_inactive_effect = {
 
 pki_focus_line_no_effect = {
 	potential = { event_target:katzenartig = { has_country_flag = pki_focus_tree_tab } }
+	allow = { always = yes }
+	effect = {}
+}
+
+pki_map_no_effect = {
+	potential = { event_target:katzenartig = { has_country_flag = pki_conquest_map_tab } }
 	allow = { always = yes }
 	effect = {}
 }

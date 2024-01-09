@@ -3,6 +3,7 @@ guiTypes = {
 	@view_w = 1620
 	@view_h = 900
 	@tabs_y = 898
+	@map_scale = 0.80
 
 	@tile_x_100 = 0
 	@tile_x_150 = 90
@@ -252,23 +253,6 @@ guiTypes = {
 			effect = pki_flusion_map_active_effect
 		}
 
-		containerWindowType = {
-			name = map
-
-			effectButtonType = {
-				name = focus_tree_background
-				position = { x = +10 y = +56 }
-				size = { width = 1416 height = 708 }
-				orientation = upper_left
-				alwaysTransparent = yes
-
-				quadTextureSprite = "GFX_tiles_frame"
-
-				effect = pki_flusion_map_active_effect
-			}
-
-		}
-
 		effectButtonType = {
 			name = focus_tree_background
 			position = { x = +10 y = +56 }
@@ -278,74 +262,128 @@ guiTypes = {
 
 			quadTextureSprite = "GFX_tiles_frame"
 
-			effect = pki_flusion_focus_active_effect
+			effect = pki_focus_line_no_effect
 		}
 
 		containerWindowType = {
-			name = focuses
+			name = scrolling_section
 			origo = UPPER_LEFT
 			position = { x = +10 y = +64 }
 			size = { width = 1598 height = 820 }
 			verticalScrollbar = "right_vertical_slider"
 			clipping = yes
-			background = { name = "focuses_background" quadTextureSprite = "GFX_invisible" }
+			background = { name = "background" quadTextureSprite = "GFX_invisible" }
 
 			gridBoxType = {
 				orientation = upper_left
-				name = "focuses_box"
+				name = "box"
 				size = { width = 1270 height = 1652 }
 				slotSize = { width = 1270 height = 652 } #required for the scrollbar to function
 				format = UPPER_LEFT
 			}
 
-			### ADD FOCUSES HERE
-
-			containerWindowType = { name = focus_kaiser_arrival position = { x = @tile_x_500 y = @tile_y_100 } containerWindowType = { name = focus orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_kaiser_arrival_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_kaiser_arrival" effect = pki_focus_kaiser_arrival_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_kaiser_arrival_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_kaiser_arrival" quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_kaiser_arrival_effect } } containerWindowType = { name = focus_in_progress orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_kaiser_arrival_in_progress_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_kaiser_arrival" effect = pki_focus_kaiser_arrival_in_progress_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_kaiser_arrival_in_progress_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_kaiser_arrival" quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_kaiser_arrival_in_progress_effect } } containerWindowType = { name = focus_completed orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_kaiser_arrival_completed_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_kaiser_arrival" effect = pki_focus_kaiser_arrival_completed_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_kaiser_arrival_completed_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_kaiser_arrival" quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_kaiser_arrival_completed_effect } } }
-			containerWindowType = { name = focus_neighbors position = { x = @tile_x_550 y = @tile_y_200 } containerWindowType = { name = focus orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_neighbors_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_neighbors" effect = pki_focus_neighbors_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_neighbors_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_neighbors" quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_neighbors_effect } } containerWindowType = { name = focus_in_progress orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_neighbors_in_progress_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_neighbors" effect = pki_focus_neighbors_in_progress_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_neighbors_in_progress_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_neighbors" quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_neighbors_in_progress_effect } } containerWindowType = { name = focus_completed orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_neighbors_completed_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_neighbors" effect = pki_focus_neighbors_completed_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_neighbors_completed_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_neighbors" quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_neighbors_completed_effect } } }
-			containerWindowType = { name = focus_harania position = { x = @tile_x_550 y = @tile_y_300 } containerWindowType = { name = focus orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_harania_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_harania" effect = pki_focus_harania_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_harania_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_harania" quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_harania_effect } } containerWindowType = { name = focus_in_progress orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_harania_in_progress_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_harania" effect = pki_focus_harania_in_progress_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_harania_in_progress_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_harania" quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_harania_in_progress_effect } } containerWindowType = { name = focus_completed orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_harania_completed_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_harania" effect = pki_focus_harania_completed_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_harania_completed_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_harania" quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_harania_completed_effect } } }
-
-
 			containerWindowType = {
-				name = focus_lines
-				position = { x = 3 y = 12 }
+				name = focus_tree
 
-				effectButtonType = {
-					name = 1
-					position = { x = @tile_x_500 y = @tile_y_100 }
-					effect = pki_focus_line_no_effect
-					quadTextureSprite = "GFX_pki_focus_line_h_s"
+				### ADD FOCUSES HERE
+
+				containerWindowType = { name = focus_kaiser_arrival position = { x = @tile_x_500 y = @tile_y_100 } containerWindowType = { name = focus orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_kaiser_arrival_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_kaiser_arrival" effect = pki_focus_kaiser_arrival_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_kaiser_arrival_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_kaiser_arrival" quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_kaiser_arrival_effect } } containerWindowType = { name = focus_in_progress orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_kaiser_arrival_in_progress_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_kaiser_arrival" effect = pki_focus_kaiser_arrival_in_progress_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_kaiser_arrival_in_progress_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_kaiser_arrival" quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_kaiser_arrival_in_progress_effect } } containerWindowType = { name = focus_completed orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_kaiser_arrival_completed_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_kaiser_arrival" effect = pki_focus_kaiser_arrival_completed_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_kaiser_arrival_completed_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_kaiser_arrival" quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_kaiser_arrival_completed_effect } } }
+				containerWindowType = { name = focus_neighbors position = { x = @tile_x_550 y = @tile_y_200 } containerWindowType = { name = focus orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_neighbors_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_neighbors" effect = pki_focus_neighbors_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_neighbors_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_neighbors" quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_neighbors_effect } } containerWindowType = { name = focus_in_progress orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_neighbors_in_progress_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_neighbors" effect = pki_focus_neighbors_in_progress_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_neighbors_in_progress_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_neighbors" quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_neighbors_in_progress_effect } } containerWindowType = { name = focus_completed orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_neighbors_completed_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_neighbors" effect = pki_focus_neighbors_completed_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_neighbors_completed_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_neighbors" quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_neighbors_completed_effect } } }
+				containerWindowType = { name = focus_harania position = { x = @tile_x_550 y = @tile_y_300 } containerWindowType = { name = focus orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_harania_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_harania" effect = pki_focus_harania_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_harania_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_harania" quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_harania_effect } } containerWindowType = { name = focus_in_progress orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_harania_in_progress_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_harania" effect = pki_focus_harania_in_progress_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_harania_in_progress_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_harania" quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_harania_in_progress_effect } } containerWindowType = { name = focus_completed orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_harania_completed_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_harania" effect = pki_focus_harania_completed_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_harania_completed_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_harania" quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_harania_completed_effect } } }
+
+				containerWindowType = {
+					name = focus_lines
+					position = { x = 3 y = 12 }
+
+					effectButtonType = {
+						name = 1
+						position = { x = @tile_x_500 y = @tile_y_100 }
+						effect = pki_focus_line_no_effect
+						quadTextureSprite = "GFX_pki_focus_line_h_s"
+					}
+
+					effectButtonType = {
+						name = 2
+						position = { x = @tile_x_500 y = @tile_y_100 }
+						effect = pki_focus_line_no_effect
+						quadTextureSprite = "GFX_pki_focus_line_u_s"
+					}
+
+					effectButtonType = {
+						name = 3
+						position = { x = @tile_x_550 y = @tile_y_100 }
+						effect = pki_focus_line_no_effect
+						quadTextureSprite = "GFX_pki_focus_line_d_s"
+					}
+
+					effectButtonType = {
+						name = 4
+						position = { x = @tile_x_550 y = @tile_y_200 }
+						effect = pki_focus_line_no_effect
+						quadTextureSprite = "GFX_pki_focus_line_d_s"
+					}
+
+					effectButtonType = {
+						name = 5
+						position = { x = @tile_x_550 y = @tile_y_200 }
+						effect = pki_focus_line_no_effect
+						quadTextureSprite = "GFX_pki_focus_line_u_s"
+					}
 				}
+			}
+		}
 
-				effectButtonType = {
-					name = 2
-					position = { x = @tile_x_500 y = @tile_y_100 }
-					effect = pki_focus_line_no_effect
-					quadTextureSprite = "GFX_pki_focus_line_u_s"
-				}
+		containerWindowType = {
+			name = map
 
-				effectButtonType = {
-					name = 3
-					position = { x = @tile_x_550 y = @tile_y_100 }
-					effect = pki_focus_line_no_effect
-					quadTextureSprite = "GFX_pki_focus_line_d_s"
-				}
+			effectButtonType = {
+				name = map_bg
+				position = { x = +10 y = +56 }
+				size = { width = 1416 height = 708 }
+				scale = @map_scale
+				orientation = upper_left
+				alwaysTransparent = yes
 
-				effectButtonType = {
-					name = 4
-					position = { x = @tile_x_550 y = @tile_y_200 }
-					effect = pki_focus_line_no_effect
-					quadTextureSprite = "GFX_pki_focus_line_d_s"
-				}
+				quadTextureSprite = "GFX_pki_map_bg"
 
-				effectButtonType = {
-					name = 5
-					position = { x = @tile_x_550 y = @tile_y_200 }
-					effect = pki_focus_line_no_effect
-					quadTextureSprite = "GFX_pki_focus_line_u_s"
-				}
-
+				effect = pki_map_no_effect
 			}
 
+			effectButtonType = {
+				name = ATA
+				position = { x = +10 y = +56 }
+				size = { width = 1416 height = 708 }
+				scale = @map_scale
+				orientation = upper_left
+
+				quadTextureSprite = "GFX_pki_map_ATA"
+
+				effect = pki_flusion_focus_inactive_effect
+			}
+
+			effectButtonType = {
+				name = ATA_occupied
+				position = { x = +10 y = +56 }
+				size = { width = 1416 height = 708 }
+				scale = @map_scale
+				orientation = upper_left
+
+				quadTextureSprite = "GFX_pki_map_ATA_occupation"
+
+				effect = pki_map_no_effect
+			}
+
+			effectButtonType = {
+				name = ATA_captured
+				position = { x = +10 y = +56 }
+				size = { width = 1416 height = 708 }
+				scale = @map_scale
+				orientation = upper_left
+
+				quadTextureSprite = "GFX_pki_map_ATA_captured"
+
+				effect = pki_map_no_effect
+			}
 
 		}
 	}

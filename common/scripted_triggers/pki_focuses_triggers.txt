@@ -9,17 +9,13 @@ pki_neighbors_focus_requirements = {
         script = pki_focuses/pki_focus_trigger_loc
         FOCUS = kaiser_arrival
     }
-    text = pki_focus_neighbors_effects_desc
+    text = pki_focus_neighbors_tt
 }
 
 pki_harania_focus_requirements = {
     inline_script = {
         script = pki_focuses/pki_focus_trigger_loc
-        FOCUS = kaiser_arrival
-    }
-    inline_script = {
-        script = pki_focuses/pki_focus_trigger_loc
         FOCUS = neighbors
     }
-    text = pki_focus_harania_effects_desc
+    text = pki_focus_harania_tt
 }

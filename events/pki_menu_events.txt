@@ -182,26 +182,28 @@ country_event = {
 		name = pki_confirm
 		custom_gui = "pki_focus_confirm"
 		default_hide_option = no
-		start_situation = {
-			type = situation_naitonal_focus
-			effect = {
-				owner = {
-					switch = {
-						trigger = has_country_flag
-						inline_script = {
-							script = pki_focuses/pki_situation_flag
-							FOCUS = kaiser_arrival
-							SPEED = 1
-						}
-						inline_script = {
-							script = pki_focuses/pki_situation_flag
-							FOCUS = neighbors
-							SPEED = 1
-						}
-						inline_script = {
-							script = pki_focuses/pki_situation_flag
-							FOCUS = harania
-							SPEED = 2
+		hidden_effect = {
+			start_situation = {
+				type = situation_naitonal_focus
+				effect = {
+					owner = {
+						switch = {
+							trigger = has_country_flag
+							inline_script = {
+								script = pki_focuses/pki_situation_flag
+								FOCUS = kaiser_arrival
+								SPEED = 1
+							}
+							inline_script = {
+								script = pki_focuses/pki_situation_flag
+								FOCUS = neighbors
+								SPEED = 1
+							}
+							inline_script = {
+								script = pki_focuses/pki_situation_flag
+								FOCUS = harania
+								SPEED = 2
+							}
 						}
 					}
 				}

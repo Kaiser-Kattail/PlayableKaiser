@@ -33,13 +33,10 @@ pki_set_army_limits = {
         which = pki_atmospharischekatzenbomber_limit
         value = 3
     }
-
-    add_modifier = {
-        modifier = pki_combat_width
-        days = -1
-    }
 }
 
 pki_refresh_all_army_limits = {
     pki_refrest_army_limit =  {ARMY = katzensoldaten}
+    pki_refrest_army_limit =  {ARMY = gepanzertertank}
+    pki_refrest_army_limit =  {ARMY = atmospharischekatzenbomber}
 }
