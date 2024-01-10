@@ -3,13 +3,13 @@
   
      # Ship names 
  KAT_SHIP_Kassburg: "Kassburg"  <"Кассбург">  #NT!
- KAT_SHIP_Attax: "Attax"  <"Атакс">  #NT!
- KAT_SHIP_Mear: "Mear"  <"Мир">  #NT!
+ KAT_SHIP_Attax: "Attax"  <"Аттакс">  #NT!
+ KAT_SHIP_Mear: "Mear"  <"Миэр">  #NT!
  KAT_SHIP_Pouchkinio: "Pouchkinio"  <"Пушкинио">  #NT!
  KAT_SHIP_Emmeowirich: "Emmeowirich"  <"Эммеовирих">  #NT!
  KAT_SHIP_Katchy: "Katchy"  <"Кэтчи">  #NT!
- KAT_SHIP_Mice: "Mice"  <"Мыши">  #NT!
- KAT_SHIP_Detmeowld: "Detmeowld"  <"Детмеоульд">  #NT!
+ KAT_SHIP_Mice: "Mice"  <"Майс">  #NT!
+ KAT_SHIP_Detmeowld: "Detmeowld"  <"Детмяульд">  #NT!
  KAT_SHIP_Douburg: "Douburg"  <"Дубург">  #NT!
  KAT_SHIP_Kaisergrad: "Kaisergrad"  <"Кайзерград">  #NT!
  KAT_SHIP_Miegen: "Miegen"  <"Миген">  #NT!
@@ -28,9 +28,9 @@
  KAT_SHIP_Erlowin: "Erlowin"  <"Эрловин">  #NT!
  KAT_SHIP_Kara: "Kara"  <"Кара">  #NT!
  KAT_SHIP_Kattbus: "Kattbus"  <"Катбус">  #NT!
- KAT_SHIP_Kattailsund: "Kattailsund"  <"Каттайлсунд">  #NT!
+ KAT_SHIP_Kattailsund: "Kattailsund"  <"Каттейлсунд">  #NT!
  KAT_SHIP_Teuyaka: "Teuyaka"  <"Теуяка">  #NT!
- KAT_SHIP_Leipig: "Leipig"  <"Лейпиг">  #NT!
+ KAT_SHIP_Leipig: "Leipig"  <"Лейпциг">  #NT!
  KAT_SHIP_Kelle: "Kelle"  <"Келле">  #NT!
  KAT_SHIP_Meoderbrucke: "Meoderbrücke"  <"Меодербрюке">  #NT!
  KAT_SHIP_Challe: "Challe"  <"Шалле">  #NT!
@@ -41,9 +41,9 @@
  KAT_SHIP_Westerforden: "Westerforden"  <"Вестерфорден">  #NT!
  KAT_SHIP_Blauestadt: "Blauestadt"  <"Блауэштадт">  #NT!
  KAT_SHIP_Zentralder: "Zentralder"  <"Централдер">  #NT!
- KAT_SHIP_Derdoux: "Derdoux"  <"Дерду">  #NT!
+ KAT_SHIP_Derdoux: "Derdoux"  <"Дердукс">  #NT!
  KAT_SHIP_Kasini: "Kasini"  <"Касини">  #NT!
- KAT_SHIP_Meowdeburg: "Meowdeburg"  <"Меудебург">  #NT!
+ KAT_SHIP_Meowdeburg: "Meowdeburg"  <"Мяудебург">  #NT!
  KAT_SHIP_Kattailshaven: "Kattailshaven"  <"Каттайлсхавен">  #NT!
  KAT_SHIP_Mleokante: "Mleokante"  <"Млеоканте">  #NT!
  KAT_SHIP_Cattan: "Cattan"  <"Каттан">  #NT!
@@ -68,10 +68,10 @@
  KAT_xxFLEET_ORD: "$ORD$ Katzenweltraumtruppen Task Force"  <"$ORD$ Оперативная группа Katzenweltraumtruppen">  #NT!
   
      # Planet names 
- KAT_PLANET_Steam_Kommentatortranensee: "Steam-Kommentatortränensee"  <"Steam-КомментаторTränensee">  #NT!
+ KAT_PLANET_Steam_Kommentatortranensee: "Steam-Kommentatortränensee"  <"Steam-Коmmentatortränensee">  #NT!
  KAT_PLANET_Cocoville: "Cocoville"  <"Коковилль">  #NT!
  KAT_PLANET_Nova_Flusionia: "Nova Flusionia"  <"Нова Флюсиония">  #NT!
- KAT_PLANET_Neu_Katown: "Neu Katown"  <"Ной-Катаун">  #NT!
+ KAT_PLANET_Neu_Katown: "Neu Katown"  <"Нью-Кейтаун">  #NT!
  KAT_PLANET_Felinida: "Felinida"  <"Фелинида">  #NT!
  KAT_PLANET_Kattails_Haven: "Kattail's Haven"  <"Гавань Каттейла">  #NT!
  KAT_PLANET_Minoulis: "Minoulis"  <"Минулис">  #NT!
@@ -83,16 +83,16 @@
  KAT_PLANET_Fellkugel: "Fellkugel"  <"Феллькугель">  #NT!
  KAT_PLANET_Meokins: "Meokins"  <"Меокинс">  #NT!
  KAT_PLANET_Treiblio: "Treiblio"  <"Трейблио">  #NT!
- KAT_PLANET_Katzenila: "Katzenila"  <"Каценила">  #NT!
+ KAT_PLANET_Katzenila: "Katzenila"  <"Катценила">  #NT!
  KAT_PLANET_Derkatez: "Derkatez"  <"Деркатез">  #NT!
- KAT_PLANET_Kattailand: "Kattailand"  <"Каттайленд">  #NT!
+ KAT_PLANET_Kattailand: "Kattailand"  <"Каттейленд">  #NT!
  KAT_PLANET_Kittykat: "Kittykat"  <"Киттикат">  #NT!
- KAT_PLANET_Cattenip: "Cattenip"  <"Кошачья мякоть">  #NT!
+ KAT_PLANET_Cattenip: "Cattenip"  <"Каттенип">  #NT!
  KAT_PLANET_Furrbalia: "Furrbalia"  <"Фуррбалия">  #NT!
  KAT_PLANET_Blasteria: "Blasteria"  <"Бластерия">  #NT!
  KAT_PLANET_Gatoshores: "Gatoshores"  <"Гатошорс">  #NT!
  KAT_PLANET_Nordikat: "Nordikat"  <"Нордикат">  #NT!
- KAT_PLANET_Cuddlezone: "Cuddlezone"  <"зона объятий">  #NT!
+ KAT_PLANET_Cuddlezone: "Cuddlezone"  <"Кюдлезонэ">  #NT!
  KAT_PLANET_Itchilia: "Itchilia"  <"Ичилия">  #NT!
  KAT_PLANET_Ataria: "Ataria"  <"Атария">  #NT!
  KAT_PLANET_Lionita: "Lionita"  <"Лионита">  #NT!
@@ -121,23 +121,23 @@
  KAT_PLANET_Purrlin: "Purrlin"  <"Муррлин">  #NT!
  KAT_PLANET_Frankfurr: "Frankfurr"  <"Франкфурр">  #NT!
  KAT_PLANET_Meownich: "Meownich"  <"Мяунич">  #NT!
- KAT_PLANET_Katzhausen: "Katzhausen"  <"Кацхаузен">  #NT!
+ KAT_PLANET_Katzhausen: "Katzhausen"  <"Катцхаузен">  #NT!
  KAT_PLANET_Erfurt: "Erfurt"  <"Эрфурт">  #NT!
- KAT_PLANET_Germewring: "Germewring"  <"Гермерюринг">  #NT!
+ KAT_PLANET_Germewring: "Germewring"  <"Гермьюринг">  #NT!
  KAT_PLANET_Raftown: "Raftown"  <"Рафтаун">  #NT!
- KAT_PLANET_Ceceburg: "Ceceburg"  <"Сецебург">  #NT!
+ KAT_PLANET_Ceceburg: "Ceceburg"  <"Цецебург">  #NT!
  KAT_PLANET_Leopzig: "Leopzig"  <"Леопциг">  #NT!
  KAT_PLANET_Ninaachen: "Ninaachen"  <"Нинаахен">  #NT!
  KAT_PLANET_Henrielberg: "Henrielberg"  <"Генрильберг">  #NT!
  KAT_PLANET_Katopia: "Katopia"  <"Катопия">  #NT!
  KAT_PLANET_Chonkberg: "Chonkberg"  <"Чонкберг">  #NT!
  KAT_PLANET_Katzenberg: "Katzenberg"  <"Катценберг">  #NT!
- KAT_PLANET_Weimiau: "Weimiau"  <"Weimiau">  #NT!
- KAT_PLANET_Weimeow: "Weimeow"  <"Веймеоу">  #NT!
+ KAT_PLANET_Weimiau: "Weimiau"  <"Веймиау">  #NT!
+ KAT_PLANET_Weimeow: "Weimeow"  <"Веймьяу">  #NT!
  KAT_PLANET_Schnurrfurt: "Schnurrfurt"  <"Шнурфурт">  #NT!
   
      # Army Names 
- KAT_xx_ORD: "$ORD$ Katzenbodentruppen"  <"$ORD$ Катценбодентруппен">  #NT!
+ KAT_xx_ORD: "$ORD$ Katzenbodentruppen"  <"$ORD$ Katzenbodentruppen">  #NT!
  KAT1_xx_ORD: "Flusionian Army $C$"  <"Флюзионская армия $C$">  #NT!
   
      # Names (Full) 
@@ -150,7 +150,7 @@
  KAT_NAME_Alexander: "Alexander"  <"Александр">  #NT!
  KAT_NAME_Alois: "Alois"  <"Алоис">  #NT!
  KAT_NAME_Alwin: "Alwin"  <"Элвин">  #NT!
- KAT_NAME_Andreois: "Andreois"  <"Андреуа">  #NT!
+ KAT_NAME_Andreois: "Andreois"  <"Андреа">  #NT!
  KAT_NAME_Ekkehard: "Ekkehard"  <"Эккехард">  #NT!
  KAT_NAME_Elias: "Elias"  <"Элиас">  #NT!
  KAT_NAME_Elimar: "Elimar"  <"Элимар">  #NT!
@@ -161,7 +161,7 @@
  KAT_NAME_Jasper: "Jasper"  <"Джаспер">  #NT!
  KAT_NAME_Calvin: "Calvin"  <"Кальвин">  #NT!
  KAT_NAME_Karl: "Karl"  <"Карл">  #NT!
- KAT_NAME_Christian: "Christian"  <"христианин">  #NT!
+ KAT_NAME_Christian: "Christian"  <"Кристиан">  #NT!
  KAT_NAME_Christof: "Christof"  <"Кристоф">  #NT!
  KAT_NAME_Guido: "Guido"  <"Гвидо">  #NT!
  KAT_NAME_Hauke: "Hauke"  <"Хауке">  #NT!
@@ -204,12 +204,12 @@
  KAT_NAME_Frida: "Frida"  <"Фрида">  #NT!
  KAT_NAME_Friedl: "Friedl"  <"Фридл">  #NT!
  KAT_NAME_Cornelia: "Corbelia"  <"Корбелия">  #NT!
- KAT_NAME_Sophoe: "Sophoe"  <"Софо">  #NT!
+ KAT_NAME_Sophoe: "Sophoe"  <"София">  #NT!
  KAT_NAME_Svenja: "Svenja"  <"Свенья">  #NT!
   
      # Names (Second) 
  KAT_NAME_Katzesir: "Katzeser"  <"Катцесер">  #NT!
- KAT_NAME_Cattail: "Cattail"  <"Рогоз">  #NT!
+ KAT_NAME_Cattail: "Cattail"  <"Каттейл">  #NT!
  KAT_NAME_Muller: "Müller"  <"Мюллер">  #NT!
  KAT_NAME_Schmidt: "Schmidt"  <"Шмидт">  #NT!
  KAT_NAME_Schneider: "Schneider"  <"Шнайдер">  #NT!
@@ -225,7 +225,7 @@
  KAT_NAME_Bauer: "Bauer"  <"Бауэр">  #NT!
  KAT_NAME_Richter: "Richter"  <"Рихтер">  #NT!
  KAT_NAME_Klein: "Klein"  <"Кляйн">  #NT!
- KAT_NAME_Wolf: "Wolf"  <"Волк">  #NT!
+ KAT_NAME_Wolf: "Wolf"  <"Вульф">  #NT!
  KAT_NAME_Neumann: "Neumann"  <"Нойманн">  #NT!
  KAT_NAME_Schwarz: "Schwarz"  <"Шварц">  #NT!
  KAT_NAME_Lange: "Lange"  <"Ланге">  #NT!
@@ -233,7 +233,7 @@
  KAT_NAME_Werner: "Werner"  <"Вернер">  #NT!
  KAT_NAME_Schmitz: "Schmitz"  <"Шмитц">  #NT!
  KAT_NAME_Krause: "Krause"  <"Краузе">  #NT!
- KAT_NAME_Frank: "Frank"  <"Откровенный">  #NT!
+ KAT_NAME_Frank: "Frank"  <"Франк">  #NT!
  KAT_NAME_Peters: "Peters"  <"Питерс">  #NT!
  KAT_NAME_Lang: "Lang"  <"Ланг">  #NT!
  KAT_NAME_Scholz: "Scholz"  <"Шольц">  #NT!
