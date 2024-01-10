@@ -1,76 +1,76 @@
 ﻿l_english:
- d_flunat: "Flusonian Nations"  <"Флузонианские нации">  #NT!
- d_flunat_desc: "There are many other nations on Flusion, ready to be conquered."  <"На Флюжене есть много других наций, готовых быть завоеванными.">  #NT!
+ d_flunat: "Flusonian Nations"  <"Флюзионские нации">  #NT!
+ d_flunat_desc: "There are many other nations on Flusion, ready to be conquered."  <"На Флюжионе есть много других наций, которые ждут, когда их завоюют.">  #NT!
   
   ###DIPLOMACY EVENTS### 
- flunat_get_lore: "Learn about their nation's history and culture."  <"Узнайте об истории и культуре своей страны.">  #NT!
- flunat_demand_land: "Demand that they give up land, with compensation of course."  <"Требуйте отдать землю, естественно с компенсацией.">  #NT!
- flunat_war_dec: "Declare war to conquer their lands."  <"Объявите войну, чтобы завоевать их земли.">  #NT!
-  
- flunat.0101.a: "Tell me about your nation."  <"Расскажи мне о своей нации.">  #NT!
+ flunat_get_lore: "Learn about their nation's history and culture."  <"Узнайть об истории и культуре их страны.">  #NT!
+ flunat_demand_land: "Demand that they give up land, with compensation of course."  <"Потребовать отдать землю, естественно с компенсацией.">  #NT!
+ flunat_war_dec: "Declare war to conquer their lands."  <"Объявить войну, чтобы завоевать их земли.">  #NT!
+
+ flunat.0101.a: "Tell me about your nation."  <"Расскажите мне о своей нации.">  #NT!
  flunat.0101.b: "Could we purchase some of your land?"  <"Можем ли мы купить часть вашей земли?">  #NT!
- flunat.0101.c: "Enough is enough, this is §RWAR§!!"  <"Хватит, это §RWAR§!!">  #NT!
- flunat.0101.d: "Nothing for now. Goodbye."  <"Ничего сейчас. До свидания.">  #NT!
+ flunat.0101.c: "Enough is enough, this is §RWAR§!!"  <"Хватит, это §RВОЙНА§!!">  #NT!
+ flunat.0101.d: "Nothing for now. Goodbye."  <"На этом всё. До свидания.">  #NT!
    #Solakia 
- NAME_Solakians: "Roqualian Republic"  <"Рокуальская Республика">  #NT!
+ NAME_Solakians: "Roqualian Republic"  <"Роквалианская Республика">  #NT!
  NAME_Solakian: "Roqualian"  <"Роквалиан">  #NT!
   
  flunat.0101.name: "$NAME_Solakians$ - §Y[solakia_flunat.GetRulerName]§!"  <"$NAME_Solakians$ - §Y[solakia_flunat.GetRulerName]§!">  #NT!
- flunat.0101a.desc: "If it isn't our rowdy northern neighbors. What do you desire, Kattail? Know that our mutual border is manned at all times."  <"Если бы не наши шумные северные соседи. Чего ты хочешь, Кэттейл? Знайте, что наша общая граница всегда охраняется людьми.">  #NT!
- flunat.0101b.desc: "What do you want, Kattail? Was your kind's savage bombing of Rapture not sufficient?"  <"Чего ты хочешь, Кэттейл? Неужели вашей дикой бомбардировки Восторга было недостаточно?">  #NT!
- flunat.0101c.desc: "We are not foolish enough to ignore your blatant ambitions on our land, Katzens. We might be pacifists, but we can, and will fight to the end should you attempt anything."  <"Мы не настолько глупы, чтобы игнорировать твои вопиющие амбиции на нашей земле, Катценс. Возможно, мы пацифисты, но мы можем и будем сражаться до конца, если вы что-нибудь предпримете.">  #NT!
+ flunat.0101a.desc: "If it isn't our rowdy northern neighbors. What do you desire, Kattail? Know that our mutual border is manned at all times."  <"Если бы не наши шумные северные соседи. Чего ты хочешь, Каттейл? Знайте, что наша общая граница всё время настороже.">  #NT!
+ flunat.0101b.desc: "What do you want, Kattail? Was your kind's savage bombing of Wacegi not sufficient?"  <"Чего ты хочешь, Каттейл? Неужели вашей дикой бомбардировки Васегии было недостаточно?">  #NT!
+ flunat.0101c.desc: "We are not foolish enough to ignore your blatant ambitions on our land, Katzens. We might be pacifists, but we can, and will fight to the end should you attempt anything."  <"Мы не настолько глупы, чтобы игнорировать ваши вопиющие амбиции на нашей земле, Катцены. Возможно, мы пацифисты, но мы Можем и Будем сражаться до конца, если вы что-нибудь предпримете.">  #NT!
  flunat.0101d.desc: "Oh great, I guess I should pull out the litterbox for the level of crap you're about to send my way."  <"О, отлично, думаю, мне стоит вытащить туалетный лоток из-за того дерьма, которое ты собираешься мне прислать.">  #NT!
  flunat.0101e.desc: "Out with it Kattail, what do you want?"  <"Да ладно, Кэттейл, чего ты хочешь?">  #NT!
- flunat.0101f.desc: "Do not bother us with your ridiculous claptrap. We see through your game, Kattail."  <"Не беспокойте нас своей нелепой болтовней. Мы видим твою игру насквозь, Кэттейл.">  #NT!
+ flunat.0101f.desc: "Do not bother us with your ridiculous claptrap. We see through your game, Kattail."  <"Не беспокойте нас своей нелепой болтовней. Мы видим твою игру насквозь, Каттейл.">  #NT!
   
- flunat.0101.a.response: "Why, so you can destroy every last bit of culture we have? Screw you."  <"Зачем, чтобы вы могли разрушить все, что у нас есть, до последней капли культуры? Пошел ты.">  #NT!
- flunat.0101.b.response: "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you."  <"Ха! Не смеши меня, Каттейл, зачем нам §Hever§! продадим наши земли, а тем более вам.">  #NT!
- flunat.0101.c.response: "We knew this day would come. We will fight you until the last $NAME_Solakian$ falls. See you on the battlefield, Kattail."  <"Мы знали, что этот день наступит. Мы будем сражаться с вами до тех пор, пока не падет последний $NAME_Solakian$. Увидимся на поле боя, Кэттейл.">  #NT!
+ flunat.0101.a.response: "Why, so you can destroy every last bit of culture we have? Screw you."  <"Зачем, чтобы вы могли разрушить все, что у нас есть, до последней капли культуры? Идите куда подальше.">  #NT!
+ flunat.0101.b.response: "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you."  <"Ха! Не смеши меня, Каттейл, зачем нам §Hвообще§! продавать наши земли, а тем более вам.">  #NT!
+ flunat.0101.c.response: "We knew this day would come. We will fight you until the last $NAME_Solakian$ falls. See you on the battlefield, Kattail."  <"Мы знали, что этот день наступит. Мы будем сражаться с вами до тех пор, пока не падет последний $NAME_Solakian$. Увидимся на поле боя, Каттейл.">  #NT!
    #Cookian Steppes 
- NAME_Cookies: "Galletian Technocracy"  <"Галлетианская технократия">  #NT!
- NAME_Cookie: "Galletian"  <"галлетианский">  #NT!
+ NAME_Cookies: "Galletian Technocracy"  <"Галлетианская Технократия">  #NT!
+ NAME_Cookie: "Galletian"  <"Галлетиан">  #NT!
   
  flunat.0201.name: "$NAME_Cookies$ - §Y[cookie_flunat.GetRulerName]§!"  <"$NAME_Cookies$ - §Y[cookie_flunat.GetRulerName]§!">  #NT!
- flunat.0201a.desc: "There is science to be done and experiments to be processed. We have little time to waste with you nukeslingers."  <"Нужно заниматься наукой и проводить эксперименты. У нас мало времени, чтобы тратить его на вас, ядерщиков.">  #NT!
- flunat.0201b.desc: "Greetings, Kattail. Our border defenses are ready, if you were wondering."  <"Приветствую, Каттейл. Если вам интересно, наша пограничная оборона готова.">  #NT!
- flunat.0201c.desc: "Your ambitions will be your downfall, Katzens. Heed this warning before it is too late!"  <"Твои амбиции погубят тебя, Катценс. Прислушайтесь к этому предупреждению, пока не стало слишком поздно!">  #NT!
+ flunat.0201a.desc: "There is science to be done and experiments to be processed. We have little time to waste with you nukeslingers."  <"Нужно заниматься наукой и проводить эксперименты. У нас мало времени, чтобы тратить его на вас, ядерщики.">  #NT!
+ flunat.0201b.desc: "Greetings, Kattail. Our border defenses are ready, if you were wondering."  <"Приветствую, Каттейл. Если вам интересно, наша пограничная оборона всегда наготове.">  #NT!
+ flunat.0201c.desc: "Your ambitions will be your downfall, Katzens. Heed this warning before it is too late!"  <"Ваши амбиции погубят вас, Катцены. Прислушайтесь к этому предупреждению, пока не стало слишком поздно!">  #NT!
  flunat.0201d.desc: "We would have never left Doughland if we knew we'd end up with you folks as neighbors!"  <"Мы бы никогда не покинули Дафленд, если бы знали, что в конечном итоге вы останетесь нашими соседями!">  #NT!
- flunat.0201e.desc: "Out with it Kattail, what is it that your kind seeks this time around?"  <"Да ладно, Кэттейл, чего же твой вид ищет на этот раз?">  #NT!
- flunat.0201f.desc: "We are not open to trading with your kind, unfortunately."  <"К сожалению, мы не открыты для торговли с вам подобными.">  #NT!
+ flunat.0201e.desc: "Out with it Kattail, what is it that your kind seeks this time around?"  <"Да ладно, Каттейл, чего же ваш вид ищет на этот раз?">  #NT!
+ flunat.0201f.desc: "We are not open to trading with your kind, unfortunately."  <"К сожалению, мы не открыты для торговли с такими как вы.">  #NT!
   
- flunat.0201.a.response: "Our kind is a science-oriented one. Unlike you... militaristic despoilers, we value progress above all, both scientific and cultural."  <"Наш вид ориентирован на науку. В отличие от вас... милитаристских грабителей, мы превыше всего ценим прогресс, как научный, так и культурный.">  #NT!
- flunat.0201.b.response: "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you."  <"Ха! Не смеши меня, Каттейл, зачем нам §Hever§! продадим наши земли, а тем более вам.">  #NT!
- flunat.0201.c.response: "So be it. Let it be known that we can, and will do everything in our power to stop your asinine crusade, Kattail."  <"Быть по сему. Да будет известно, что мы можем и сделаем все, что в наших силах, чтобы остановить твой глупый крестовый поход, Кэттейл.">  #NT!
+ flunat.0201.a.response: "Our kind is a science-oriented one. Unlike you... militaristic despoilers, we value progress above all, both scientific and cultural."  <"Наш вид ориентирован на науку. В отличие от вас... милитарских грабителей, мы превыше всего ценим прогресс, как научный, так и культурный.">  #NT!
+ flunat.0201.b.response: "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you."  <"Ха! Не смеши меня, Каттейл, зачем нам §Hвообще§! продавать наши земли, а тем более вам.">  #NT!
+ flunat.0201.c.response: "So be it. Let it be known that we can, and will do everything in our power to stop your asinine crusade, Kattail."  <"Так тому и быть. Да будет известно, что мы можем и сделаем все, что в наших силах, чтобы остановить твой глупый крестовый поход, Каттейл.">  #NT!
    #Kronk 
- NAME_Kronks: "Kronk"  <"Кронк">  #NT!
+ NAME_Kronks: "Kronk"  <"Кронки">  #NT!
  NAME_Kronk: "Kronk"  <"Кронк">  #NT!
   
  flunat.0301.name: "$NAME_Kronks$ - §Y[kronk_flunat.GetRulerName]§!"  <"$NAME_Kronks$ - §Y[kronk_flunat.GetRulerName]§!">  #NT!
  flunat.0301a.desc: "Kronk, kronk, kronk?"  <"Кронк, кронк, кронк?">  #NT!
  flunat.0301b.desc: "Kronk."  <"Кронк.">  #NT!
- flunat.0301c.desc: "Krooooooonk!!"  <"Крооооооооо!!">  #NT!
+ flunat.0301c.desc: "Krooooooonk!!"  <"Крооооооооонк!!">  #NT!
  flunat.0301d.desc: "Kronk, kronk... kronk... kronk?!"  <"Кронк, кронк... кронк... кронк?!">  #NT!
  flunat.0301e.desc: "Kronk!"  <"Кронк!">  #NT!
  flunat.0301f.desc: "Kronk? Kronk? Kronk!"  <"Кронк? Кронк? Кронк!">  #NT!
   
  flunat.0301.a.response: "Kronk."  <"Кронк.">  #NT!
- flunat.0301.b.response: "Kronken't."  <"Кронкент.">  #NT!
+ flunat.0301.b.response: "Kronken't."  <"Кронкнет.">  #NT!
  flunat.0301.c.response: "KRONK!!!!!!"  <"КРОНК!!!!!!">  #NT!
    #Ravka 
  NAME_Ravkans: "Ravka"  <"Равка">  #NT!
  NAME_Ravkan: "Ravkan"  <"Равкан">  #NT!
   
  flunat.0401.name: "$NAME_Ravkans$ Commonwealth - §Y[ravkan_flunat.GetRulerName]§!"  <"$NAME_Ravkans$ Содружество - §Y[ravkan_flunat.GetRulerName]§!">  #NT!
- flunat.0401a.desc: "We salute you, Katzens. What is it that you seek?"  <"Мы приветствуем тебя, Катценс. Что вы ищете?">  #NT!
- flunat.0401b.desc: "The Council of Grand Wielders wishes for peace between our kinds."  <"Совет Великих Владетелей желает мира между нашими видами.">  #NT!
- flunat.0401c.desc: "Let it be known, Katzens, that our kind is not defenceless."  <"Да будет известно, Катценс, что наш вид не беззащитен.">  #NT!
- flunat.0401d.desc: "Greetings. What brings you to our lands?"  <"Привет. Что привело вас на наши земли?">  #NT!
- flunat.0401e.desc: "Our nations are so different from one another. Is there truly anything to discuss?"  <"Наши народы настолько отличаются друг от друга. Действительно есть что обсудить?">  #NT!
- flunat.0401f.desc: "We wish for nothing more than to be left alone."  <"Мы не хотим ничего, кроме как остаться в покое.">  #NT!
+ flunat.0401a.desc: "We salute you, Katzens. What is it that you seek?"  <"Мы приветствуем вас, Катцены. Что вы ищете?">  #NT!
+ flunat.0401b.desc: "The Council of Grand Wielders wishes for peace between our kinds."  <"Совет Великих Старейшин желает мира между нашими видами.">  #NT!
+ flunat.0401c.desc: "Let it be known, Katzens, that our kind is not defenceless."  <"Да будет вам известно, Катцены, что наш вид не беззащитен.">  #NT!
+ flunat.0401d.desc: "Greetings. What brings you to our lands?"  <"Приветствую. Что привело вас на наши земли?">  #NT!
+ flunat.0401e.desc: "Our nations are so different from one another. Is there truly anything to discuss?"  <"Наши народы настолько отличаются друг от друга.Нам действительно есть что обсудить?">  #NT!
+ flunat.0401f.desc: "We wish for nothing more than to be left alone."  <"Мы не хотим ничего, кроме того, чтобы нас оставили в покое.">  #NT!
   
- flunat.0401.a.response: "Why, so you can destroy every last bit of culture we have? Screw you."  <"Зачем, чтобы вы могли разрушить все, что у нас есть, до последней капли культуры? Пошел ты.">  #NT!
- flunat.0401.b.response: "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you."  <"Ха! Не смеши меня, Каттейл, зачем нам §Hever§! продадим наши земли, а тем более вам.">  #NT!
- flunat.0401.c.response: "This is... a most uncouth act. Why is it that you insist on spreading such suffering? This can only end badly."  <"Это... самый грубый поступок. Почему вы настаиваете на распространении таких страданий? Это может закончиться только плохо.">  #NT!
+ flunat.0401.a.response: "Why, so you can destroy every last bit of culture we have? Screw you."  <"Зачем, чтобы вы могли уничтожить всю нашу культуру до последней капли? Уходи отсюда.">  #NT!
+ flunat.0401.b.response: "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you."  <"Ха! Не смеши меня, Каттейл, зачем нам §Hвообще§! продавать наши земли, а тем более вам.">  #NT!
+ flunat.0401.c.response: "This is... a most uncouth act. Why is it that you insist on spreading such suffering? This can only end badly."  <"Это... самый грубый поступок. Почему вы настаиваете на распространении таких ужасных страданий? Это не может закончиться хорошо.">  #NT!
    #Zousa 
   
  NAME_Zousans: "Linteria"  <"Линтерия">  #NT!
@@ -79,127 +79,127 @@
  flunat.0501a.desc: "Go away."  <"Уходите.">  #NT!
  flunat.0501b.desc: "We do not care for your kind."  <"Нам плевать на ваш вид.">  #NT!
  flunat.0501c.desc: "Foolish felines. We want nothing to do with your kind."  <"Глупые кошачьи. Мы не хотим иметь ничего общего с вашим видом.">  #NT!
- flunat.0501d.desc: "Away with you!"  <"Прочь!">  #NT!
- flunat.0501e.desc: "Shoo."  <"Шу.">  #NT!
+ flunat.0501d.desc: "Away with you!"  <"Кышь!">  #NT!
+ flunat.0501e.desc: "Shoo."  <"Брысь.">  #NT!
  flunat.0501f.desc: "Why are you bothering us?"  <"Почему вы беспокоите нас?">  #NT!
   
- flunat.0501.a.response: "Why, so you can destroy every last bit of culture we have? Screw you."  <"Зачем, чтобы вы могли разрушить все, что у нас есть, до последней капли культуры? Пошел ты.">  #NT!
+ flunat.0501.a.response: "Why, so you can destroy every last bit of culture we have? Screw you."  <"Зачем, чтобы вы могли разрушить всю нашу многовековую культуру до последней капли? Пошел ты.">  #NT!
  flunat.0501.b.response: "No."  <"Нет.">  #NT!
- flunat.0501.c.response: "You will soon realize your own folly."  <"Вскоре вы осознаете свою глупость.">  #NT!
+ flunat.0501.c.response: "You will soon realize your own folly."  <"Вскоре вы осознаете всю свою глупость.">  #NT!
    #Droog 
   
- NAME_Droog: "Droogian Tribes"  <"Дрогианские племена">  #NT!
- NAME_Droogs: "Droog"  <"Друг">  #NT!
+ NAME_Droog: "Droogian Tribes"  <"Другианские племена">  #NT!
+ NAME_Droogs: "Droog"  <"Другиан">  #NT!
  flunat.0601.name: "$NAME_Droog$ - §RNo Centralized Government§!"  <"$NAME_Droog$ - §RОтсутствие централизованного правительства§!">  #NT!
- flunat.0601a.desc: "The Droogian Tribes lack a centralized government to communicate with."  <"Племенам другиан не хватает централизованного правительства, с которым можно было бы общаться.">  #NT!
+ flunat.0601a.desc: "The Droogian Tribes lack a centralized government to communicate with."  <"Племенам другиан не хватает централизованного правительства, с которым можно было бы коммуницировать.">  #NT!
   
- flunat.0601.a.response: "Although the Droogian themselves are not able to respond, it is known that the Droogian Tribes consist of a myriad of tribal communities populated by vampiric beings. These tribes are constantly in feud with one another and there is no real centralized government beyond a loose council."  <"Хотя сами другианцы не способны ответить, известно, что племена другиан состоят из множества племенных сообществ, населенных вампирическими существами. Эти племена постоянно враждуют друг с другом, и не существует настоящего централизованного правительства, кроме свободного совета.">  #NT!
+ flunat.0601.a.response: "Although the Droogian themselves are not able to respond, it is known that the Droogian Tribes consist of a myriad of tribal communities populated by vampiric beings. These tribes are constantly in feud with one another and there is no real centralized government beyond a loose council."  <"Хотя сами другианцы не способны ответить, известно, что племена другиан состоят из множества племенных сообществ, населенных вампирическими существами. Эти племена постоянно враждуют друг с другом, и не существует настоящего централизованного правительства, кроме Совета Свободы.">  #NT!
  flunat.0601.c.response: "..."  <"None">  #NT!
    #Ezics 
   
- NAME_Ezics: "Zuspri Intermarium"  <"Зуспри Междуморье">  #NT!
+ NAME_Ezics: "Zuspri Intermarium"  <"Зусприйское Междуморье">  #NT!
  NAME_Ezic: "Zuspris"  <"Зусприс">  #NT!
  flunat.0701.name: "$NAME_Ezics$ - §Y[ezic_flunat.GetRulerName]§!"  <"$NAME_Ezics$ - §Y[ezic_flunat.GetRulerName]§!">  #NT!
  flunat.0701a.desc: "Your very existence is a stain upon this universe."  <"Само ваше существование — пятно на этой вселенной.">  #NT!
- flunat.0701b.desc: "It was the Rapturians yesterday, it will be us tomorrow, am I correct?"  <"Вчера это были раптурианцы, завтра будем мы, я прав?">  #NT!
- flunat.0701c.desc: "Know that if you set one foot into our lands, we will tear your soldiers and panzers apart until they are nothing but piles of junk."  <"Знайте: если вы ступите хоть ногой на наши земли, мы разорвем ваших солдат и танки на части, пока они не превратятся в груды мусора.">  #NT!
- flunat.0701d.desc: "How could your proud species fall so low, Katzens?"  <"Как мог ваш гордый вид пасть так низко, Катценс?">  #NT!
- flunat.0701e.desc: "Even if the odds are against us, we shall stand our ground."  <"Даже если шансы против нас, мы будем стоять на своем.">  #NT!
- flunat.0701f.desc: "Our kind will not be threatened by your folly."  <"Нашему виду ваша глупость не будет угрожать.">  #NT!
+ flunat.0701b.desc: "It was the Rapturians yesterday, it will be us tomorrow, am I correct?"  <"Вчера это были раптурианцы, завтра будем мы, так ведь?">  #NT!
+ flunat.0701c.desc: "Know that if you set one foot into our lands, we will tear your soldiers and panzers apart until they are nothing but piles of junk."  <"Знайте: если вы ступите хоть ногой на наши земли, мы будем уничтожать ваших солдат и танки, пока они не превратятся в груды мусора.">  #NT!
+ flunat.0701d.desc: "How could your proud species fall so low, Katzens?"  <"Как мог ваш гордый вид пасть так низко, Катцены?">  #NT!
+ flunat.0701e.desc: "Even if the odds are against us, we shall stand our ground."  <"Даже если у нас нет шансов, мы будем стоять на своем.">  #NT!
+ flunat.0701f.desc: "Our kind will not be threatened by your folly."  <"Нашему виду ваша глупость не угрожает.">  #NT!
   
- flunat.0701.a.response: "Why, so you can destroy every last bit of culture we have? Screw you."  <"Зачем, чтобы вы могли разрушить все, что у нас есть, до последней капли культуры? Пошел ты.">  #NT!
+ flunat.0701.a.response: "Why, so you can destroy every last bit of culture we have? Screw you."  <"Зачем, чтобы вы могли разрушить все, что у нас есть, до самой последней капли? Да пошёл ты.">  #NT!
  flunat.0701.b.response: "Our land is ours, not yours."  <"Наша земля – наша, а не ваша.">  #NT!
- flunat.0701.c.response: "The blood which you are about to spill will be sufficient to make every river in your forsaken empire run red."  <"Крови, которую вы собираетесь пролить, будет достаточно, чтобы каждая река в вашей заброшенной империи покраснела.">  #NT!
+ flunat.0701.c.response: "The blood which you are about to spill will be sufficient to make every river in your forsaken empire run red."  <"Крови, которую вы собираетесь пролить, будет достаточно, чтобы каждая река в вашей проклятой империи покраснела.">  #NT!
    #Mercuria 
   
  NAME_Mercurians: "Mercuria"  <"Меркурия">  #NT!
  NAME_Mercurian: "Mercurian"  <"Меркурианец">  #NT!
  flunat.0801.name: "$NAME_Mercurians$ - §Y[mercuria_flunat.GetRulerName]§!"  <"$NAME_Mercurians$ - §Y[mercuria_flunat.GetRulerName]§!">  #NT!
- flunat.0801a.desc: "We follow a very strict policy of armed neutrality. And we are not afraid to enforce it."  <"Мы придерживаемся очень строгой политики вооруженного нейтралитета. И мы не боимся его обеспечивать.">  #NT!
+ flunat.0801a.desc: "We follow a very strict policy of armed neutrality. And we are not afraid to enforce it."  <"Мы придерживаемся очень строгой политики вооруженного нейтралитета. И мы не боимся её поддерживать.">  #NT!
  flunat.0801b.desc: "Please, do not disturb us."  <"Пожалуйста, не беспокойте нас.">  #NT!
  flunat.0801c.desc: "The Mercurians do not wish to be involved in your business."  <"Меркурианцы не желают вмешиваться в ваши дела.">  #NT!
- flunat.0801d.desc: "Any incursion will be paid for in blood."  <"Любое вторжение будет оплачено кровью.">  #NT!
- flunat.0801e.desc: "We have no desire to interact with your kind."  <"У нас нет желания взаимодействовать с вам подобными.">  #NT!
- flunat.0801f.desc: "We only demand that you leave us to our own affairs."  <"Мы лишь требуем, чтобы вы предоставили нам заниматься своими делами.">  #NT!
+ flunat.0801d.desc: "Any incursion will be paid for in blood."  <"За любое вторжение вы заплатите кровью.">  #NT!
+ flunat.0801e.desc: "We have no desire to interact with your kind."  <"У нас нет желания взаимодействовать с такими как вы.">  #NT!
+ flunat.0801f.desc: "We only demand that you leave us to our own affairs."  <"Мы лишь требуем, чтобы вы позволили нам заниматься своими делами.">  #NT!
   
- flunat.0801.a.response: "Why, so you can destroy every last bit of culture we have? Screw you."  <"Зачем, чтобы вы могли разрушить все, что у нас есть, до последней капли культуры? Пошел ты.">  #NT!
- flunat.0801.b.response: "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you."  <"Ха! Не смеши меня, Каттейл, зачем нам §Hever§! продадим наши земли, а тем более вам.">  #NT!
- flunat.0801.c.response: "We shall defend our neutrality and right to exist, even if millions have to die."  <"Мы будем защищать свой нейтралитет и право на существование, даже если миллионы людей погибнут.">  #NT!
+ flunat.0801.a.response: "Why, so you can destroy every last bit of culture we have? Screw you."  <"Зачем, чтобы вы могли разрушить все, что у нас есть? Пошел ты.">  #NT!
+ flunat.0801.b.response: "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you."  <"Ха! Не смеши меня, Каттейл, зачем нам §Hвообще§! продавать наши земли, а тем более вам.">  #NT!
+ flunat.0801.c.response: "We shall defend our neutrality and right to exist, even if millions have to die."  <"Мы будем защищать свой нейтралитет и право на существование, даже если миллионы меркурианцев погибнут.">  #NT!
    #Cyatianala 
   
- NAME_Cyatianalas: "Cyatianala"  <"Чиятианала">  #NT!
- NAME_Cyatianala: "Cyatianala"  <"Чиятианала">  #NT!
+ NAME_Cyatianalas: "Cyatianala"  <"Циятианалы">  #NT!
+ NAME_Cyatianala: "Cyatianala"  <"Циятианала">  #NT!
  flunat.0901.name: "$NAME_Cyatianalas$ - §Y[cyatianala_flunat.GetRulerName]§!"  <"$NAME_Cyatianalas$ - §Y[cyatianala_flunat.GetRulerName]§!">  #NT!
- flunat.0901a.desc: "Ah and who do I have nex- oh, it's you. What do you want this time, Kattail?"  <"Ах, а кто у меня есть? Ах, это ты. Чего ты хочешь на этот раз, Кэттейл?">  #NT!
- flunat.0901b.desc: "Oh, lovely. What do you want now?"  <"О, мило. Что вы хотите сейчас?">  #NT!
- flunat.0901c.desc: "You know, if it was anybody else I'd be happy someone was trying to unite the world! Instead we got you."  <"Знаешь, если бы это был кто-то другой, я был бы рад, что кто-то пытается объединить мир! Вместо этого у нас есть ты.">  #NT!
+ flunat.0901a.desc: "Ah and who do I have nex- oh, it's you. What do you want this time, Kattail?"  <"Ах, а кто у меня след- ах, это ты. Чего ты хочешь на этот раз, Каттейл?">  #NT!
+ flunat.0901b.desc: "Oh, lovely. What do you want now?"  <"О, мило. Что вы  теперь хотите?">  #NT!
+ flunat.0901c.desc: "You know, if it was anybody else I'd be happy someone was trying to unite the world! Instead we got you."  <"Знаешь, если бы это был кто-то другой, я был бы рад, что кто-то пытается объединить мир! Но вместо этого у нас есть только ты.">  #NT!
  flunat.0901d.desc: "Oh great, I guess I should pull out the litterbox for the level of crap you're about to send my way."  <"О, отлично, думаю, мне стоит вытащить туалетный лоток из-за того дерьма, которое ты собираешься мне прислать.">  #NT!
- flunat.0901e.desc: "Out with it Kattail, what do you want?"  <"Да ладно, Кэттейл, чего ты хочешь?">  #NT!
- flunat.0901f.desc: "Why are you bothering me?"  <"Почему ты меня беспокоишь?">  #NT!
+ flunat.0901e.desc: "Out with it Kattail, what do you want?"  <"Хватит, Каттейл, чего ты хочешь?">  #NT!
+ flunat.0901f.desc: "Why are you bothering me?"  <"Зачем ты меня беспокоишь?">  #NT!
   
  flunat.0901.a.response: "Why, so you can destroy every last bit of culture we have? Screw you."  <"Зачем, чтобы вы могли разрушить все, что у нас есть, до последней капли культуры? Пошел ты.">  #NT!
- flunat.0901.b.response: "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you."  <"Ха! Не смеши меня, Каттейл, зачем нам §Hever§! продадим наши земли, а тем более вам.">  #NT!
- flunat.0901.c.response: "So be it. We will fight you until the last $NAME_Cyatianala$ falls. See you on the battlefield, Kattail."  <"Быть по сему. Мы будем сражаться с вами до тех пор, пока не падет последний $NAME_Cyatianala$. Увидимся на поле боя, Кэттейл.">  #NT!
+ flunat.0901.b.response: "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you."  <"Ха! Не смеши меня, Каттейл, зачем нам §Hвообще§! продавать наши земли, а тем более вам.">  #NT!
+ flunat.0901.c.response: "So be it. We will fight you until the last $NAME_Cyatianala$ falls. See you on the battlefield, Kattail."  <"Так тому т быть. Мы будем сражаться с вами до тех пор, пока не падет последний $NAME_Cyatianala$. Увидимся на поле боя, Кэттейл.">  #NT!
  #Yinja 
   
- NAME_Yinjites: "Yinjite Thalassocracy"  <"Иньджитская талассократия">  #NT!
- NAME_Yinjite: "Yinjite"  <"Yinjite">  #NT!
+ NAME_Yinjites: "Yinjite Thalassocracy"  <"Юнджитская талассократия">  #NT!
+ NAME_Yinjite: "Yinjite"  <"Юнджит">  #NT!
  flunat.01101.name: "$NAME_Yinjites$ -  §Y[yinjite_flunat.GetRulerName]§!"  <"$NAME_Yinjites$ - §Y[yinjite_flunat.GetRulerName]§!">  #NT!
- flunat.01101a.desc: "Greetings, Katzens. Have you come to bargain?"  <"Привет, Катценс. Вы пришли торговаться?">  #NT!
- flunat.01101b.desc: "Good evening to you, Kattail. How goes things?"  <"Добрый вечер тебе, Каттейл. Как дела?">  #NT!
- flunat.01101c.desc: "Our warriors salute you, Katzens."  <"Наши воины приветствуют тебя, Катценс.">  #NT!
+ flunat.01101a.desc: "Greetings, Katzens. Have you come to bargain?"  <"Привет, Катцены. Вы пришли торговать?">  #NT!
+ flunat.01101b.desc: "Good evening to you, Kattail. How goes things?"  <"Добрый вечер тебе, Каттейл. Как у вас дела?">  #NT!
+ flunat.01101c.desc: "Our warriors salute you, Katzens."  <"Наши воины приветствуют вас, Катцены.">  #NT!
  flunat.01101d.desc: "Greetings. Let it be known that our Grand Flotilla is ready for action, should your warriors feel like trying anything."  <"Привет. Да будет известно, что наша Великая флотилия готова к действию, если вашим воинам захочется что-нибудь предпринять.">  #NT!
  flunat.01101e.desc: "Salutations, Kattail. Do you wish to engage in joint naval exercises?"  <"Приветствую, Каттейл. Вы хотите принять участие в совместных военно-морских учениях?">  #NT!
- flunat.01101f.desc: "It is more curious how you felines tend to neglect the sea in favor of the land."  <"Еще более любопытно, почему вы, кошачьи, склонны пренебрегать морем в пользу суши.">  #NT!
+ flunat.01101f.desc: "It is more curious how you felines tend to neglect the sea in favor of the land."  <"Намного любопытнее, почему вы, кошачьи, склонны пренебрегать морем в пользу суши.">  #NT!
   
- flunat.01101.a.response: "We Yinjites are a proud, seafaring people. Our magnificient cities are constructed within vast marshes and wetland, while our pride and joy, the Grand Flotilla, protects us from invaders and secures our shipping lanes. Despite Godred's efforts, Rapture failed to breach it, and, should you wish to challenge it, I trust it would do an equally good job against your Katzenseetruppen."  <"Мы, иньцзитцы, — гордый народ мореплавателей. Наши великолепные города построены среди обширных болот и водно-болотных угодий, а наша гордость и радость, Великая флотилия, защищает нас от захватчиков и обеспечивает безопасность наших морских путей. Несмотря на усилия Годреда, Восторгу не удалось взломать его, и, если вы захотите бросить ему вызов, я уверен, что он справится с такой же хорошей задачей против вашего Katzenseetruppen.">  #NT!
+ flunat.01101.a.response: "We Yinjites are a proud, seafaring people. Our magnificient cities are constructed within vast marshes and wetland, while our pride and joy, the Grand Flotilla, protects us from invaders and secures our shipping lanes. Despite Godred's efforts, Rapture failed to breach it, and, should you wish to challenge it, I trust it would do an equally good job against your Katzenseetruppen."  <"Мы, Юнджиты, — гордый народ мореплавателей. Наши великолепные города построены среди обширных болот и прибрежных угодий, а наша гордость и радость, Великая флотилия, защищает нас от захватчиков и обеспечивает безопасность наших морских путей. Несмотря на усилия Годреда, Васегии не удалось потопить его, и, если вы захотите бросить ему вызов, я уверен, что он справится с такой же хорошей задачей против вашего Katzenseetruppen.">  #NT!
  flunat.01101.b.response: "Our lands and seas are not for sale."  <"Наши земли и моря не продаются.">  #NT!
- flunat.01101.c.response: "So be it! Let this glorious combat determine who Flusion's greatest warrior actually is!"  <"Быть по сему! Пусть этот славный бой определит, кто на самом деле является величайшим воином Флюжна!">  #NT!
+ flunat.01101.c.response: "So be it! Let this glorious combat determine who Flusion's greatest warrior actually is!"  <"Так тому и быть! Пусть этот славный бой определит, кто на самом деле является величайшим воином Флюзиона!">  #NT!
  #Symbyland 
   
  NAME_Symbies: "Puffiland Republic"  <"Республика Паффиленд">  #NT!
- NAME_Symbiess: "Wacegi"  <"Вачеги">  #NT!
+ NAME_Symbiess: "Wacegi"  <"Васеги">  #NT!
  flunat.01201.name: "Puffiland Republic -  §Y[symbie_flunat.GetRulerName]§!"  <"Республика Паффиленд - §Y[symbie_flunat.GetRulerName]§!">  #NT!
- flunat.01201a.desc: "What do you want? Have you not bombed us enough?"  <"Что ты хочешь? Разве вы недостаточно нас бомбили?">  #NT!
+ flunat.01201a.desc: "What do you want? Have you not bombed us enough?"  <"Что ты ещё хочешь? Разве вы недостаточно нас бомбили?">  #NT!
  flunat.01201b.desc: "Granted, you liberated us from Godred's grasp... but at what cost?"  <"Да, ты освободил нас из рук Годреда... но какой ценой?">  #NT!
  flunat.01201c.desc: "Half of our country is nothing but radioactive wasteland thanks to your kind!"  <"Половина нашей страны — не что иное, как радиоактивная пустошь благодаря вашему виду!">  #NT!
  flunat.01201d.desc: "If you seek to bomb us again, know that can and will fight until our dying breath."  <"Если вы захотите снова нас бомбить, знайте, что можете и будете сражаться до последнего вздоха.">  #NT!
  flunat.01201e.desc: "Thinking about it, Godred was probably right."  <"Если подумать, Годред, вероятно, был прав.">  #NT!
  flunat.01201f.desc: "How many more nations will you obliterate in nuclear fire before someone stops you?"  <"Сколько еще стран вы уничтожите в ядерном огне, прежде чем кто-нибудь вас остановит?">  #NT!
   
- flunat.01201.a.response: "Why, so you can destroy every last bit of culture we have? Screw you."  <"Зачем, чтобы вы могли разрушить все, что у нас есть, до последней капли культуры? Пошел ты.">  #NT!
- flunat.01201.b.response: "Why would you want some worthless rubble?"  <"Зачем вам нужны эти бесполезные обломки?">  #NT!
+ flunat.01201.a.response: "Why, so you can destroy every last bit of culture we have? Screw you."  <"Зачем, чтобы вы могли разрушить все, что у нас есть, до самой последней капли? Пошел ты, дьявол.">  #NT!
+ flunat.01201.b.response: "Why would you want some worthless rubble?"  <"Зачем вам нужны этот бесполезный хлам?">  #NT!
  flunat.01201.c.response: "So you've finally decided to finish the job, huh? Well then, have at it, nuclear barbarians."  <"Итак, вы наконец решили закончить работу, да? Ну что ж, действуйте, ядерные варвары.">  #NT!
  #Laurandar 
   
  NAME_Lauranaise: "Laurandar"  <"Лаурандар">  #NT!
- NAME_Lauranaises: "Laurnaise"  <"Лорнез">  #NT!
+ NAME_Lauranaises: "Laurnaise"  <"Лаунайз">  #NT!
  flunat.01301.name: "Laurandar - §Y[lauranaise_flunat.GetRulerName]§!"  <"Лаурандар - §Y[lauranaise_flunat.GetRulerName]§!">  #NT!
- flunat.01301a.desc: "Hello, Kattail. What do you want?"  <"Привет, Каттейл. Что ты хочешь?">  #NT!
- flunat.01301b.desc: "I've got meetings to attend and warplans to draft. Be quick."  <"Мне нужно посещать собрания и составлять военные планы. Быстрее.">  #NT!
+ flunat.01301a.desc: "Hello, Kattail. What do you want?"  <"Приветствую, Каттейл. Что ты хочешь?">  #NT!
+ flunat.01301b.desc: "I've got meetings to attend and warplans to draft. Be quick."  <"Мне нужно посещать собрания и составлять военные планы. Говорите быстрее.">  #NT!
  flunat.01301c.desc: "Your culture is most intriguing, Katzen. We do wonder which one of our nations would win in a war."  <"Твоя культура очень интригует, Катцен. Нам интересно, какая из наших стран победит в войне.">  #NT!
- flunat.01301d.desc: "Is there anything you need, Kattail?"  <"Тебе что-нибудь нужно, Кэттейл?">  #NT!
- flunat.01301e.desc: "If you're thinking about invading, know that we are ready, Kattail."  <"Если ты подумываешь о вторжении, знай, что мы готовы, Кэттейл.">  #NT!
- flunat.01301f.desc: "Good day to you, Katzens. Enjoy it while it lasts."  <"Добрый день тебе, Катценс. Наслаждайтесь этим, пока оно длится.">  #NT!
+ flunat.01301d.desc: "Is there anything you need, Kattail?"  <"Тебе что-нибудь нужно, Каттейл?">  #NT!
+ flunat.01301e.desc: "If you're thinking about invading, know that we are ready, Kattail."  <"Если ты подумываешь о вторжении, знай, что мы всегда готовы, Каттейл.">  #NT!
+ flunat.01301f.desc: "Good day to you, Katzens. Enjoy it while it lasts."  <"Добрый день тебе, Катцены. Наслаждайтесь этим, пока ещё можете.">  #NT!
   
- flunat.01301.a.response: "Why, so you can destroy every last bit of culture we have? Screw you."  <"Зачем, чтобы вы могли разрушить все, что у нас есть, до последней капли культуры? Пошел ты.">  #NT!
- flunat.01301.b.response: "We do not wish to sell our land."  <"Мы не хотим продавать нашу землю.">  #NT!
- flunat.01301.c.response: "And so it is war? You finally show your true face, Kattail. Know that we shall fight on the beaches, we shall fight in the streets, and we shall defend our island to the very end."  <"И так это война? Наконец-то ты покажешь свое истинное лицо, Кэттейл. Знайте, что мы будем сражаться на пляжах, мы будем сражаться на улицах и будем защищать наш остров до самого конца.">  #NT!
+ flunat.01301.a.response: "Why, so you can destroy every last bit of culture we have? Screw you."  <"Зачем нам это, чтобы вы могли разрушить все, что у нас есть, до последней капли культуры? Пошел ты.">  #NT!
+ flunat.01301.b.response: "We do not wish to sell our land."  <"У нас нет желания продавать нашу землю.">  #NT!
+ flunat.01301.c.response: "And so it is war? You finally show your true face, Kattail. Know that we shall fight on the beaches, we shall fight in the streets, and we shall defend our island to the very end."  <"И так, это война? Наконец-то ты покажешь свое истинное лицо, Каттейл. Знайте, что мы будем сражаться на пляжах, на улицах и мы будем защищать наш остров до самого конца.">  #NT!
  #Harania 
   
  NAME_Haranian: "Harania"  <"Харания">  #NT!
- NAME_Haranians: "Haranian"  <"Харанян">  #NT!
+ NAME_Haranians: "Haranian"  <"Хараниан">  #NT!
  flunat.01401.name: "Kingdom of Harania - §Y[haranian_flunat.GetRulerName]§!"  <"Королевство Харания - §Y[haranian_flunat.GetRulerName]§!">  #NT!
  flunat.01401a.desc: "We are not interested in diplomacy."  <"Нас не интересует дипломатия.">  #NT!
- flunat.01401b.desc: "I am very busy. Please, be brief."  <"Я очень занят. Пожалуйста, будьте кратки.">  #NT!
- flunat.01401c.desc: "It is you. What do you want?"  <"Это ты. Что ты хочешь?">  #NT!
- flunat.01401d.desc: "Eventually, your empire will crumble, like all others."  <"В конце концов, ваша империя рухнет, как и все остальные.">  #NT!
+ flunat.01401b.desc: "I am very busy. Please, be brief."  <"Я очень занят. Пожалуйста, будь краток.">  #NT!
+ flunat.01401c.desc: "It is you. What do you want?"  <"Это ты? Чего ты хочешь?">  #NT!
+ flunat.01401d.desc: "Eventually, your empire will crumble, like all others."  <"В конце концов, ваша империя рухнет, как и все остальные до вас.">  #NT!
  flunat.01401e.desc: "What do you want?"  <"Что ты хочешь?">  #NT!
- flunat.01401f.desc: "Do not bother the Kingdom of Harania with your futile balderdash."  <"Не беспокойте Королевство Харания своей бесполезной болтовней.">  #NT!
+ flunat.01401f.desc: "Do not bother the Kingdom of Harania with your futile balderdash."  <"Не беспокойте наше Королевство, Харанию, своей бесполезной болтовней.">  #NT!
   
  flunat.01401.a.response: "Why, so you can destroy every last bit of culture we have? Screw you."  <"Зачем, чтобы вы могли разрушить все, что у нас есть, до последней капли культуры? Пошел ты.">  #NT!
- flunat.01401.b.response: "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you."  <"Ха! Не смеши меня, Каттейл, зачем нам §Hever§! продадим наши земли, а тем более вам.">  #NT!
- flunat.01401.c.response: "The tundras shall run red with Katzen blood."  <"Тундры покраснеют от крови Катцена.">  #NT!
+ flunat.01401.b.response: "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you."  <"Ха! Не смеши меня, Каттейл, зачем нам §Hвообще§! продавать наши земли, а тем более вам.">  #NT!
+ flunat.01401.c.response: "The tundras shall run red with Katzen blood."  <"Леса тундры покраснеют от крови Катценов.">  #NT!
  ###WAR EVENTS### 
  decision_flusion_strike_cheap: "Initiate Strike"  <"Начать удар">  #NT!
  decision_flusion_strike_cheap_desc: "Initiates a strike on hostile forces, advancing the war in our favor."  <"Инициирует удар по враждебным силам, продвигая войну в нашу пользу.">  #NT!
@@ -210,18 +210,18 @@
  situation_world_tension_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$"  <"$situation_monthly_change_tooltip_approaches_dependent$">  #NT!
  situation_solakian_conquest: "War For Roqualia"  <"Война за Роквалию">  #NT!
  situation_solakian_conquest_type: "Flusionian Conquest"  <"Флюзионское завоевание">  #NT!
- situation_solakian_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HRoqualian Republic§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."  <"Прибавьте скорость танкам, пришло время войны! Мы объявили войну за аннексию §HРоквалийской республике§!, и у нас есть несколько способов победить в этом конфликте. Мы можем выполнить §YStrikes§_1, чтобы улучшить ситуацию в свою пользу, или мы можем выиграть войну за счет истощения.\n\n§YStrikes§_1 можно выполнить из меню решений §HFlusion§!.">  #NT!
+ situation_solakian_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HRoqualian Republic§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."  <"Прибавьте скорость танкам, пришло время войны! Мы объявили войну за аннексию §HРоквалийской республике§!, и у нас есть несколько способов победить в этом конфликте. Мы можем выполнить §YАтаку§_1, чтобы улучшить ситуацию в свою пользу, или мы можем выиграть войну за счет истощения.\n\n§YАтаку§_1 можно выполнить из меню решений §HФлюзион§!.">  #NT!
  situation_solakian_conquest_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$"  <"$situation_monthly_change_tooltip_approaches_dependent$">  #NT!
- conquest_situation_conquer_solakia: "We annex Roqualia, and control their lands and people."  <"Мы аннексируем Роквалию и контролируем их земли и людей.">  #NT!
- conquest_situation_get_rekt: "We lose a region and gain less space!"  <"Теряем регион и получаем меньше места!">  #NT!
+ conquest_situation_conquer_solakia: "We annex Roqualia, and control their lands and people."  <"Мы аннексируем Роквалию и получаем контроль над их землями и населением.">  #NT!
+ conquest_situation_get_rekt: "We lose a region and gain less space!"  <"Мы теряем регион и у нас становиться меньше места!">  #NT!
  approach_mobile: "Mobile Doctrine"  <"Мобильная доктрина">  #NT!
  approach_mixed: "Mixed Doctrine"  <"Смешанная доктрина">  #NT!
  approach_attrition: "Attrition Doctrine"  <"Доктрина истощения">  #NT!
- approach_mobile_desc: "We will stay light, moving quickly under shadow of night.\n§HWe will make less progress in the situation, but §YStrikes§H will be easier. §YStrikes§H may be performed from Flusion's §YDecisions§!."  <"Мы будем оставаться легкими и быстро двигаться под тенью ночи.\n§HМы добьемся меньшего прогресса в ситуации, но §YStrikes§_0 будет легче. §YStrikes§_0 можно исполнить из §YDecisions§! Флюжна.">  #NT!
- approach_mixed_desc: "To commit ourselves to a path is to narrow our focus. Our strategy is victory.\n§HThis is a balanced approach. §YStrikes§H may be performed from Flusion's §YDecisions§!"  <"Посвятить себя пути — значит сузить свое внимание. Наша стратегия – победа.\n§HЭто сбалансированный подход. §YStrikes§_0 может быть исполнено из §YDecisions§ Flusion!">  #NT!
- approach_attrition_desc: "We will fight in the trenches, we will fight at the mountains. Our industrial might will be the key to victory.\n§HWe will make more progress in the situation, but §YStrikes§H will be harder. §YStrikes§H may be performed from Flusion's §YDecisions§!"  <"Мы будем сражаться в окопах, мы будем сражаться в горах. Наша промышленная мощь станет ключом к победе.\n§HМы добьемся большего прогресса в ситуации, но §YStrikes§_0 будет сложнее. §YStrikes§_0 может быть исполнено из §YDecisions§ Flusion!">  #NT!
+ approach_mobile_desc: "We will stay light, moving quickly under shadow of night.\n§HWe will make less progress in the situation, but §YStrikes§H will be easier. §YStrikes§H may be performed from Flusion's §YDecisions§!."  <"Мы будем оставаться легкими и быстро двигаться под тенью ночи.\n§HМы добьемся меньшего прогресса в ситуации, но §YАтака§_0 будет легче. §YАтаку§_0 можно исполнить из §YРешений§! Флюзиона.">  #NT!
+ approach_mixed_desc: "To commit ourselves to a path is to narrow our focus. Our strategy is victory.\n§HThis is a balanced approach. §YStrikes§H may be performed from Flusion's §YDecisions§!"  <"Посвятить себя пути — значит ограничить своё восприятие. Наша стратегия – победа.\n§HЭто сбалансированный подход. §YАтака§_0 может быть исполнена из §YРешений§ Флюзиона!">  #NT!
+ approach_attrition_desc: "We will fight in the trenches, we will fight at the mountains. Our industrial might will be the key to victory.\n§HWe will make more progress in the situation, but §YStrikes§H will be harder. §YStrikes§H may be performed from Flusion's §YDecisions§!"  <"Мы будем сражаться в окопах, мы будем сражаться в горах. Наша промышленная мощь станет ключом к победе.\n§HМы добьемся большего прогресса в ситуации, но §YАтака§_0 будет сложнее. §YАтака§_0 может быть исполнено из §YРешения§ Флюзион!">  #NT!
  flunat.0111.title: "Flusionian Conquest"  <"Флюзионское завоевание">  #NT!
- flunat.0111.desc: "Alert! We have reached a hostile bastion, ground forces are imminent! Expect heavy resistance, they won't go without a fight."  <"Тревога! Мы достигли вражеского бастиона, наземные войска неминуемы! Ожидайте сильного сопротивления, без боя они не уйдут.">  #NT!
+ flunat.0111.desc: "Alert! We have reached a hostile bastion, ground forces are imminent! Expect heavy resistance, they won't go without a fight."  <"Внимание! Мы достигли вражеского бастиона, наземные войска неминуемы! Ожидайте сильного сопротивления, без боя они не уйдут.">  #NT!
  flunat_defense.a: "Incoming!"  <"Прибытие!">  #NT!
  conquest.4.title: "Surprise Strike"  <"Неожиданный удар">  #NT!
  conquest.4.desc: "Enemy forces have launched several surprise strikes at key chokepoints and locations, and have provided a serious setback in our efforts."  <"Вражеские силы нанесли несколько внезапных ударов по ключевым точкам и точкам, что серьезно подорвало наши усилия.">  #NT!
@@ -236,7 +236,7 @@
  region_5: "Fifth Region"  <"Пятый регион">  #NT!
  flunat.0102.desc: "You may have crushed our armies, but you will never crush our spirits. We shall do everything in our power to oppose you."  <"Возможно, вы сокрушили наши армии, но вам никогда не сокрушить наш дух. Мы сделаем все, что в наших силах, чтобы противостоять вам.">  #NT!
  flunat.0102.a: "We have won this."  <"Мы выиграли это.">  #NT!
- conquest.102.desc: "Face it Kattail; you will never win. The free Roqualian spirit cannot be crushed by your farcical war machines."  <"Посмотри правде в глаза, Каттейл; ты никогда не выиграешь. Свободный рокальский дух не может быть сокрушён вашими фарсовыми военными машинами.">  #NT!
+ conquest.102.desc: "Face it Kattail; you will never win. The free Roqualian spirit cannot be crushed by your farcical war machines."  <"Посмотри правде в глаза, Каттейл; ты никогда не выиграешь. Свободный рокальский дух не может быть сокрушён вашими напыщенными военными машинами.">  #NT!
  conquest.102.a: "You will regret this!"  <"Вы пожалеете об этом!">  #NT!
  NAME_solakia_defense: "Roqualian Army"  <"Рокуальская армия">  #NT!
   
@@ -256,7 +256,7 @@
  #Kronk 
  situation_kronk_conquest: "War for the Kronk"  <"Война за Кронк">  #NT!
  situation_kronk_conquest_type: "Flusionian Conquest"  <"Флюзионское завоевание">  #NT!
- situation_kronk_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HKronk§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."  <"Прибавьте скорость танкам, пришло время войны! Мы объявили войну за аннексию §HKronk§!, и у нас есть несколько способов победить в этом конфликте. Мы можем выполнить §YStrikes§! чтобы улучшить ситуацию в нашу пользу, иначе мы можем выиграть войну за счет истощения.\n\n§YStrikes§! можно выполнять с §HFlusion's§! меню решений.">  #NT!
+ situation_kronk_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HKronk§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."  <"Прибавьте скорость танкам, пришло время войны! Мы объявили войну за аннексию §HКронк§!, и у нас есть несколько способов победить в этом конфликте. Мы можем выполнить §YАтаку§! чтобы улучшить ситуацию в нашу пользу, иначе мы можем выиграть войну за счет истощения.\n\n§YАтаку§! можно выполнять с §HФлюжн's§! меню решений.">  #NT!
  situation_kronk_conquest_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$"  <"$situation_monthly_change_tooltip_approaches_dependent$">  #NT!
  conquest_situation_conquer_kronk_steppes: "We annex the Kronk, and control their lands and people."  <"Мы аннексируем Кронк и контролируем их земли и людей.">  #NT!
  conquest_situation_conquer_kronk: "We annex the Kronk, and control their lands and people."  <"Мы аннексируем Кронк и контролируем их земли и людей.">  #NT!
@@ -267,19 +267,19 @@
  #Ravka 
  situation_ravka_conquest: "War for the Ravkans"  <"Война за Равканов">  #NT!
  situation_ravka_conquest_type: "Flusionian Conquest"  <"Флюзионское завоевание">  #NT!
- situation_ravka_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HRavka§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."  <"Прибавьте скорость танкам, пришло время войны! Мы объявили войну за аннексию §HRavka§!, и у нас есть несколько способов победить в этом конфликте. Мы можем выполнить §YStrikes§! чтобы улучшить ситуацию в нашу пользу, иначе мы можем выиграть войну за счет истощения.\n\n§YStrikes§! можно выполнять с §HFlusion's§! меню решений.">  #NT!
+ situation_ravka_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HRavka§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."  <"Прибавьте скорость танкам, пришло время войны! Мы объявили войну за аннексию §HРавка§!, и у нас есть несколько способов победить в этом конфликте. Мы можем выполнить §YАтака§! чтобы улучшить ситуацию в нашу пользу, иначе мы можем выиграть войну за счет истощения.\n\n§YАтаку§! можно выполнять с §HФлюжн's§! меню решений.">  #NT!
  situation_ravka_conquest_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$"  <"$situation_monthly_change_tooltip_approaches_dependent$">  #NT!
- conquest_situation_conquer_ravka: "We annex the Ravka, and control their lands and people."  <"Мы аннексируем Равку и контролируем их земли и людей.">  #NT!
+ conquest_situation_conquer_ravka: "We annex the Ravka, and control their lands and people."  <"Мы аннексируем Равку и получаем власть над их землёй и населением.">  #NT!
  flunat.0402.desc: "You will one day pay for your monstrous actions."  <"Однажды ты заплатишь за свои чудовищные действия.">  #NT!
  NAME_ravka_defense: "Ravkan Army"  <"Равканская армия">  #NT!
  conquest.402.desc: "Face it Kattail; you will never win. The Ravkanian spirit cannot be crushed by your farcical war machines."  <"Посмотри правде в глаза, Каттейл; ты никогда не выиграешь. Равканский дух не может быть сокрушён вашими фарсовыми военными машинами.">  #NT!
   
  #Zousa 
- situation_zousa_conquest: "War for the Linterians"  <"Война за Линтерийцев">  #NT!
+ situation_zousa_conquest: "War for the Linterians"  <"Война за Линтерианцев">  #NT!
  situation_zousa_conquest_type: "Flusionian Conquest"  <"Флюзионское завоевание">  #NT!
- situation_zousa_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on §HLinteria§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."  <"Прибавьте скорость танкам, пришло время войны! Мы объявили войну за аннексию §HLinteria§!, и у нас есть несколько способов победить в этом конфликте. Мы можем выполнить §YStrikes§! чтобы улучшить ситуацию в нашу пользу, иначе мы можем выиграть войну за счет истощения.\n\n§YStrikes§! можно выполнять с §HFlusion's§! меню решений.">  #NT!
+ situation_zousa_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on §HLinteria§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."  <"Прибавьте скорость танкам, пришло время войны! Мы объявили войну за аннексию §HЛинтерии§!, и у нас есть несколько способов победить в этом конфликте. Мы можем выполнить §YАтака§! чтобы улучшить ситуацию в нашу пользу, иначе мы можем выиграть войну за счет истощения.\n\n§YАтаку§! можно выполнять с §HФлюжн's§! меню решений.">  #NT!
  situation_zousa_conquest_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$"  <"$situation_monthly_change_tooltip_approaches_dependent$">  #NT!
- conquest_situation_conquer_zousa: "We annex Linteria, and control their lands and people."  <"Мы аннексируем Линтерию и контролируем их земли и людей.">  #NT!
+ conquest_situation_conquer_zousa: "We annex Linteria, and control their lands and people."  <"Мы аннексируем Линтерию и получаем власть над их землёй и населением.">  #NT!
  flunat.0502.desc: "...this...this cannot be..."  <"...этого... этого не может быть...">  #NT!
  NAME_zousa_defense: "Linterian Army"  <"Линтерийская армия">  #NT!
  conquest.502.desc: "Let this be a rightful lesson to you, foolish felines."  <"Пусть это будет для вас достойным уроком, глупые кошачьи.">  #NT!
