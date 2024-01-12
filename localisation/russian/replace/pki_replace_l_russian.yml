@@ -1,17 +1,17 @@
 ﻿l_english:
   
- quantum_catapult_BYPASS: "Fleet Transport Structure"  <"Транспортная структура флота">  #NT!
+ quantum_catapult_BYPASS: "Fleet Transport Structure"  <"Состав перемещаемого флота">  #NT!
  quantum_catapult_BYPASS_DESC: "This system contains a §Y$quantum_catapult_1$§! or §YEHVE§!"  <"Эта система содержит §Y$quantum_catapult_1$§! или §YEHVE§!">  #NT!
   
  QUANTUM_CATAPULT_COUNTRY_CANNOT_USE: "$TRIGGER_FAIL$ The §Y[From.GetName]§! has denied us access to their Quantum Catapult or EHVE."  <"$TRIGGER_FAIL$ §Y[From.GetName]§! отказал нам в доступе к своей квантовой катапульте или EHVE.">  #NT!
   
- MESSAGE_FLEET_ORDER_CATAPULT_WINDUP_COMPLETE_TITLE: "Fleet Transit Complete"  <"Транзит флота завершен">  #NT!
- MESSAGE_FLEET_ORDER_CATAPULT_WINDUP_COMPLETE_DESC: "$FLEET|Y$ has completed its transit, arriving in $SYSTEM|Y$."  <"$FLEET|Y$ завершил транзит и прибыл в $SYSTEM|Y$.">  #NT!
+ MESSAGE_FLEET_ORDER_CATAPULT_WINDUP_COMPLETE_TITLE: "Fleet Transit Complete"  <"Перемещение флота завершено">  #NT!
+ MESSAGE_FLEET_ORDER_CATAPULT_WINDUP_COMPLETE_DESC: "$FLEET|Y$ has completed its transit, arriving in $SYSTEM|Y$."  <"$FLEET|Y$ завершил перемещение и прибыл в $SYSTEM|Y$.">  #NT!
   
- FLEETORDER_QUANTUM_CATAPULT_HEADER: "Transport Fleet"  <"Транспортный флот">  #NT!
+ FLEETORDER_QUANTUM_CATAPULT_HEADER: "Transport Fleet"  <"Перемещаемый флот">  #NT!
  FLEETORDER_QUANTUM_CATAPULT_DESC: "Transport a fleet from a system with a §YQuantum Catapult§! or §YEHVE§!."  <"Перенесите флот из системы с помощью §YКвантовой катапульты§! или §YEHVE§!.">  #NT!
  QUANTUM_CATAPULT_PENALTY: "§YQuantum Catapults§! lose accuracy with range, so fleets will appear in a random system within the indicated scatter radius.\n\n§YEHVE's§! §Hdo not§! lose accuracy with range, but instead create a wormhole where targeted. This wormhole will remain open for transfer of ships until closed.\n\nFleets launched this way receive a [GetQuanticAmbushBonus] §YFire Rate§! increase for £time£ §Y120 days§!."  <"§YКвантовые катапульты§! теряют точность с увеличением дальности, поэтому флоты будут появляться в случайной системе в пределах указанного радиуса разброса.\n\n§YEHVE§! §H не теряют §! точности с увеличением дальности, а вместо этого создают червоточину в выбранном месте. Эта червоточина останется открытой для переброски кораблей, пока не будет закрыта.\n\nФлоты, запущенные таким образом, получают [GetQuanticAmbushBonus] §YУвеличение скорострельности§! на £time£ §Y120 дней§!.">  #NT!
  FLEET_ORDER_NO_QUANTUM_CATAPULT: "§RFleets can only be catapulted from a system with a Quantum Catapult or EHVE§!"  <"§RФлоты можно катапультировать только из системы с квантовой катапультой или EHVE§!.">  #NT!
  FLEET_ORDER_NO_QUANTUM_CATAPULT_IN: "§RNo functioning Quantum Catapult or EHVE in $SYSTEM|H$§!"  <"§RНет функционирующей Квантовой катапульты или EHVE в $SYSTEM|H$§!">  #NT!
   
- FLEETORDER_CATAPULT_WINDUP: "Transit Windup: $DAYS|Y0$ Days"  <"Завершение транзита: $DAYS|Y0$ дней">  #NT!
+ FLEETORDER_CATAPULT_WINDUP: "Transit Windup: $DAYS|Y0$ Days"  <"Завершение перемещения: $DAYS|Y0$ дней">  #NT!
