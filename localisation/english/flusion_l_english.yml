@@ -547,7 +547,7 @@
     temp_job_help:0 "Katzen Economical Reinforcement"
     temp_job_help_desc:0 "The Kaiser has ordered specific, somewhat harsh measures to ensure a smooth transition into the Flusio-Arcology."
    
-    civic_tooltip_flusion_effects:0 "$TABBED_NEW_LINE$- $PLANETARY_MODIFIERS$ ['concept_prosp_uni']$NEW_LINE$"
+    civic_tooltip_flusion_effects:0 "$TABBED_NEW_LINE$- $PLANETARY_MODIFIERS$ ['concept_pki_destabilized_government']$NEW_LINE$"
    
     edict_katzen_leader_upgrade:0 "Leader Katzenification"
     edict_katzen_leader_upgrade_desc:0 "Our leaders are national treasures, and should be treated as such. The very latest in anti-aging technology and special training will be made available to choice leaders."

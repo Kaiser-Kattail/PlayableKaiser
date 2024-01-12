@@ -3,7 +3,7 @@ guiTypes = {
 	@view_w = 1620
 	@view_h = 900
 	@tabs_y = 898
-	@map_scale = 0.80
+	@map_scale = 0.9
 
 	@tile_x_100 = 0
 	@tile_x_150 = 90
@@ -265,6 +265,18 @@ guiTypes = {
 			effect = pki_focus_line_no_effect
 		}
 
+		effectButtonType = {
+			name = decisions_frame
+			position = { x = +1300 y = +52 }
+			size = { width = 317 height = 845 }
+			orientation = upper_left
+			alwaysTransparent = yes
+
+			quadTextureSprite = "GFX_tiles_frame_light"
+
+			effect = pki_map_no_effect
+		}
+
 		containerWindowType = {
 			name = scrolling_section
 			origo = UPPER_LEFT
@@ -280,6 +292,21 @@ guiTypes = {
 				size = { width = 1270 height = 1652 }
 				slotSize = { width = 1270 height = 652 } #required for the scrollbar to function
 				format = UPPER_LEFT
+			}
+
+			containerWindowType = {
+				name = info
+				origo = UPPER_LEFT
+				position = { x = +1300 y = 0 }
+
+				effectButtonType = {
+					name = info_kat
+					size = { width = 284 height = 40 }
+					text = "Cat Kingdom"
+					font = malgun_goth_24
+					quadTextureSprite = "GFX_tiles_light_area_cut_8"
+					effect = pki_map_no_effect
+				}
 			}
 
 			containerWindowType = {
@@ -336,6 +363,20 @@ guiTypes = {
 		containerWindowType = {
 			name = map
 
+			position = { x = +2 y = +7 }
+
+			effectButtonType = {
+				name = map_frame
+				position = { x = +4 y = +50 }
+				size = { width = 1286 height = 649 }
+				orientation = upper_left
+				alwaysTransparent = yes
+
+				quadTextureSprite = "GFX_tiles_frame"
+
+				effect = pki_map_no_effect
+			}
+
 			effectButtonType = {
 				name = map_bg
 				position = { x = +10 y = +56 }
@@ -349,40 +390,67 @@ guiTypes = {
 				effect = pki_map_no_effect
 			}
 
-			effectButtonType = {
+			containerWindowType = {
 				name = ATA
-				position = { x = +10 y = +56 }
-				size = { width = 1416 height = 708 }
-				scale = @map_scale
-				orientation = upper_left
 
-				quadTextureSprite = "GFX_pki_map_ATA"
+				effectButtonType = {
+					name = ATA_flag
+					position = { x = +10 y = +740 }
+					scale = @map_scale
+					orientation = upper_left
 
-				effect = pki_flusion_focus_inactive_effect
-			}
+					quadTextureSprite = "GFX_empire_flag_128"
 
-			effectButtonType = {
-				name = ATA_occupied
-				position = { x = +10 y = +56 }
-				size = { width = 1416 height = 708 }
-				scale = @map_scale
-				orientation = upper_left
+					effect = pki_map_no_effect
+				}
 
-				quadTextureSprite = "GFX_pki_map_ATA_occupation"
+				effectButtonType = {
+					name = ATA
+					position = { x = +10 y = +56 }
+					size = { width = 1416 height = 708 }
+					scale = @map_scale
+					orientation = upper_left
 
-				effect = pki_map_no_effect
-			}
+					quadTextureSprite = "GFX_pki_map_ATA"
 
-			effectButtonType = {
-				name = ATA_captured
-				position = { x = +10 y = +56 }
-				size = { width = 1416 height = 708 }
-				scale = @map_scale
-				orientation = upper_left
+					effect = pki_map_no_effect
+				}
 
-				quadTextureSprite = "GFX_pki_map_ATA_captured"
+				effectButtonType = {
+					name = color
+					position = { x = +10 y = +56 }
+					size = { width = 1416 height = 708 }
+					scale = @map_scale
+					orientation = upper_left
 
-				effect = pki_map_no_effect
+					quadTextureSprite = "GFX_pki_map_ATA_color"
+
+					effect = pki_map_no_effect
+				}
+
+				effectButtonType = {
+					name = occupied
+					position = { x = +10 y = +56 }
+					size = { width = 1416 height = 708 }
+					scale = @map_scale
+					orientation = upper_left
+
+					quadTextureSprite = "GFX_pki_map_ATA_occupation"
+
+					effect = pki_map_no_effect
+				}
+
+				effectButtonType = {
+					name = captured
+					position = { x = +10 y = +56 }
+					size = { width = 1416 height = 708 }
+					scale = @map_scale
+					orientation = upper_left
+
+					quadTextureSprite = "GFX_pki_map_ATA_captured"
+
+					effect = pki_map_no_effect
+				}
 			}
 
 		}
