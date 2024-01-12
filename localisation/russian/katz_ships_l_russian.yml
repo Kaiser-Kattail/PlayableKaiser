@@ -155,7 +155,7 @@
  SUBMARINE_COMPUTER_ADVANCED: "Advanced Unterraumboot Tactics"  <"Продвинутая тактика Unterraumboot">  #NT!
   
  SUBMARINE_MISSILE: "Unterraumtorpedo"  <"Unterraumtorpedo">  #NT!
- SUBMARINE_MISSILE_DESC: "These missiles have extremely long range and are designed to be carried by Katzen subspace submarines, enabling them to hit distant targets with great."  <"Эти ракеты имеют чрезвычайно большую дальность действия и предназначены для использования на подводных подводных лодках Katzen, что позволяет им эффективно поражать удаленные цели.">  #NT!
+ SUBMARINE_MISSILE_DESC: "These missiles have extremely long range and are designed to be carried by Katzen subspace submarines, enabling them to hit distant targets with great."  <"Эти ракеты имеют экстремально большую дальность полета, разработаны для использования на подпространственных субмаринах Катцен, чтобы поражать цели на огромной дистанции.">  #NT!
   
  KATDESTROYER_SHIP_THRUSTER_1: "Chemical Thrusters"  <"Химические двигатели">  #NT!
  KATDESTROYER_SHIP_THRUSTER_2: "Ion Thrusters"  <"Ионные двигатели">  #NT!
