@@ -1,191 +1,168 @@
-﻿l_english:
-  
- katzen_panzer: "Katzenweltraumpanzer"  <"Katzenweltraumpanzer">  #NT!
- katzen_panzer_plural: "Katzenweltraumpanzers"  <"Katzenweltraumpanzers">  #NT!
- KATZEN_SPACE_PANZER: "Space Panzer Hull"  <"Космический танковый корпус">  #NT!
-  
- katzen_bomber: "Leerekatzenbomber"  <"Лирекаценбомбер">  #NT!
- katzen_bomber_plural: "Leerekatzenbombers"  <"Лирекаценбомберы">  #NT!
- KATZEN_SPACE_BOMBER_1: "Dive Bomber Airframe"  <"Планер пикирующего бомбардировщика">  #NT!
- KATZEN_SPACE_BOMBER_2: "Long Range Bomber Airframe"  <"Планер дальнего бомбардировщика">  #NT!
- KATZEN_SPACE_BOMBER_3: "Long Range Bomber Airframe MK II"  <"Планер дальнего бомбардировщика MK II">  #NT!
-  
- katzen_troop_ship: "Katzkonstrukteur"  <"Кацконструктор">  #NT!
- katzen_troop_ship_plural: "Katzkonstrukteurs"  <"Кацконструкторы">  #NT!
- KATZEN_APC: "Constructor Hull"  <"Конструктор Корпуса">  #NT!
-  
- katzen_assault_army: "Katzenbodentruppen"  <"Катценбодентруппен">  #NT!
- katzen_assault_army_desc: "A Katzen army designed to land on worlds in order to conduct planetary invasions."  <"Армия Катцена, предназначенная для высадки на миры с целью проведения планетарных вторжений.">  #NT!
-  
- katzen_submarine: "Unterraumboot"  <"Унтерраумбот">  #NT!
- katzen_submarine_plural: "Unterraumboots"  <"Унтерраумботы">  #NT!
- KATZEN_SPACE_SUBMARINE: "Hull"  <"Халл">  #NT!
-  
- katzen_player_warforge_platform: "Katzen Defense Array"  <"Защитный массив Катцена">  #NT!
- katzen_player_warforge_platform_plural: "Katzen Defense Arrays"  <"Защитные массивы Катцена">  #NT!
-  
- KATZEN_PLAYER_PLANET_PLATFORM: "Defense Array Core"  <"Ядро защитного массива">  #NT!
-  
- katzen_cruiser: "Katzenkreuzer"  <"Катценкройцер">  #NT!
- katzen_cruiser_plural: "Katzenkreuzers"  <"Каценкройцеры">  #NT!
- KATZEN_CRUISER_BOW: "Bow"  <"Поклон">  #NT!
- KATZEN_CRUISER_MID: "Mid"  <"Средний">  #NT!
- KATZEN_CRUISER_STERN: "Stern"  <"Стерн">  #NT!
- kaiser_planet_bowgun_01_key: "Riesigekatzenwaffe"  <"Ризигекаценваффе">  #NT!
- kaiser_planet_bow_01_key: "Auxiliary Weapon Battery"  <"Вспомогательная оружейная батарея">  #NT!
- kaiser_planet_mid_01_key: "Weaponized Crust"  <"Вооруженная кора">  #NT!
- kaiser_planet_stern_01_key: "Planetary Hangars"  <"Планетарные Ангары">  #NT!
- kaiser_planet_sternthrusters_01_key: "Secondary Armament"  <"Вторичное вооружение">  #NT!
-  
- tech_katzen_shipbuilding: "Katzen Warship Templates"  <"Шаблоны военных кораблей Katzen">  #NT!
- tech_katzen_shipbuilding_desc: "A collection of blueprints designed for Katzenkrieg ready vessels."  <"Коллекция чертежей, предназначенных для кораблей, готовых к катценкригу.">  #NT!
-  
- katzen_power_core: "Katzen Reactor"  <"Реактор Катцен">  #NT!
- katzen_thruster_components: "Katzen Engines"  <"Катцен Двигатели">  #NT!
- katzen_ftl_components: "Katzen FTL Drive"  <"Катцен FTL Drive">  #NT!
- katzen_sensor_components: "Katzen Sensor Suites"  <"Катцен Сенсор Сьютс">  #NT!
- katzen_combat_computers: "Katzen Combat Computers"  <"Боевые компьютеры Katzen">  #NT!
- katzen_station_power_core: "Katzen Reactor"  <"Реактор Катцен">  #NT!
- katzen_corvette_combat_computers: "Katzen Combat Computers"  <"Боевые компьютеры Katzen">  #NT!
- katzen_destroyer_combat_computers: "Katzen Combat Computers"  <"Боевые компьютеры Katzen">  #NT!
- katzen_cruiser_combat_computers: "Katzen Combat Computers"  <"Боевые компьютеры Katzen">  #NT!
- katzen_battleship_combat_computers: "Katzen Combat Computers"  <"Боевые компьютеры Katzen">  #NT!
- katzen_aura_components: "Katzen Auras"  <"Катцен Аурас">  #NT!
- katzen_ship_aura_components: "Katzen Auras"  <"Катцен Аурас">  #NT!
- katzen_ftl_inhibitor: "Katzen FTL Inhibitor"  <"Катцен FTL-ингибитор">  #NT!
- katzen_station_small_aura_components: "Katzen Auras"  <"Катцен Аурас">  #NT!
- katzen_station_medium_aura_components: "Katzen Auras"  <"Катцен Аурас">  #NT!
- katzen_station_large_aura_components: "Katzen Auras"  <"Катцен Аурас">  #NT!
-  
- KATDESTROYER_FISSION_REACTOR: "Katzen Fission Reactor"  <"Реактор деления Катцен">  #NT!
- KATDESTROYER_FISSION_REACTOR_desc: "A Katzen designed fission reactor, built for the Katzenpanzerkorps."  <"Реактор деления, разработанный Катценом и построенный для Каценпанцеркорпа.">  #NT!
- KATCRUISER_FISSION_REACTOR: "Katzen Fission Reactor"  <"Реактор деления Катцен">  #NT!
- KATCRUISER_FISSION_REACTOR_desc: "A Katzen designed fission reactor, built for the Leerekatzenbombers."  <"Реактор деления, спроектированный Катценом, построенный для бомбардировщиков Лирекацен.">  #NT!
- KATTITAN_FISSION_REACTOR: "Katzen Fission Reactor"  <"Реактор деления Катцен">  #NT!
- KATTITAN_FISSION_REACTOR_desc: "A Katzen designed fission reactor, built for the Weltraumkatzenmarine."  <"Реактор деления, спроектированный Катценом и построенный для Weltraumkatzenmarine.">  #NT!
- KATSUB_FISSION_REACTOR: "Katzen Fission Reactor"  <"Реактор деления Катцен">  #NT!
- KATSUB_FISSION_REACTOR_desc: "A Katzen designed fission reactor, built for the Unterraumboots."  <"Реактор деления, спроектированный Катценом и построенный для Унтерраумсапог.">  #NT!
- KATSUB_FUSION_REACTOR: "Katzenfusionsreaktor"  <"Реактор Katzenfusions">  #NT!
- KATSUB_FUSION_REACTOR_desc: "A drastic improvement on ancient fission reactors, these new Fusionsreaktoren are a staple power provider on Flusion, and are now adapted for the Unterraumboots."  <"Эти новые термоядерные реакторы, радикально усовершенствованные по сравнению с древними ядерными реакторами, являются основным источником энергии на Флюжене и теперь адаптированы для Унтерраумботов.">  #NT!
- KATSUB_COLD_FUSION_REACTOR: "Cold Katzenfusionsreaktor"  <"Холодный реактор Katzenfusion">  #NT!
- KATSUB_COLD_FUSION_REACTOR_desc: "With additional technological advancements, these new reactors no longer require massive, overly heavy heat sinks, therefore freeing up space for more power generation components."  <"Благодаря дополнительным технологическим достижениям, эти новые реакторы больше не требуют массивных и чрезмерно тяжелых радиаторов, что освобождает место для большего количества компонентов для выработки электроэнергии.">  #NT!
- KATSUB_ANTIMATTER_REACTOR: "Katzen Antimatter Reactor"  <"Реактор антивещества Катцен">  #NT!
- KATSUB_ANTIMATTER_REACTOR_desc: "Antimatter, despite being a dangerous and new field, promises to be our most efficient power generators yet."  <"Антивещество, несмотря на то, что это опасное и новое поле, обещает стать нашими самыми эффективными генераторами энергии.">  #NT!
- KATSUB_ZERO_POINT_REACTOR: "Katzen Zero Point Generator"  <"Генератор нулевой точки Катцена">  #NT!
- KATSUB_ZERO_POINT_REACTOR_desc: "Blowing all previous reactor designs out of the water, Zero Point Energy provides massive amounts of energy for our vessels."  <"Уничтожив все предыдущие конструкции реакторов, Zero Point Energy обеспечивает огромные объемы энергии для наших кораблей.">  #NT!
- KATSUB_DARK_MATTER_REACTOR: "Katzen Dark Matter Reactor"  <"Реактор темной материи Катцен">  #NT!
- KATSUB_DARK_MATTER_REACTOR_desc: "These generators appear to somehow draw energy directly from dark matter, providing more ship power than should be possible according to the laws of physics."  <"Эти генераторы, похоже, каким-то образом черпают энергию непосредственно из темной материи, обеспечивая большую мощность корабля, чем это возможно по законам физики.">  #NT!
-  
- SUBMARINE_CLOAKING_1: "Basic Cloaking Field Generator"  <"Базовый генератор маскирующего поля">  #NT!
- SUBMARINE_CLOAKING_1_desc: "A modified particle field allows our vessels to effectively 'hide' in open space. However, this comes at the cost of destabilizing other forms of energy shielding which would otherwise protect the ship."  <"Модифицированное поле частиц позволяет нашим кораблям эффективно «прятаться» в открытом космосе. Однако это происходит за счет дестабилизации других форм энергетической защиты, которые в противном случае защитили бы корабль.">  #NT!
- SUBMARINE_CLOAKING_2: "Advanced Cloaking Field Generator"  <"Расширенный генератор полей маскировки">  #NT!
- SUBMARINE_CLOAKING_2_desc: "Advancements in rare crystal lensing technology have greatly improved cloaking efficiency."  <"Достижения в технологии линз из редких кристаллов значительно повысили эффективность маскировки.">  #NT!
- SUBMARINE_CLOAKING_3: "Elite Cloaking Field Generator"  <"Элитный генератор маскировочного поля">  #NT!
- SUBMARINE_CLOAKING_3_desc: "Typical cloaking technology can play havoc with a ship's more delicate instruments. However, these elite fields render such concerns obsolete."  <"Типичная технология маскировки может нанести ущерб более тонким приборам корабля. Однако эти элитные области делают подобные опасения устаревшими.">  #NT!
- SUBMARINE_CLOAKING_DARK_MATTER: "Dark Matter Cloaking Field Generator"  <"Генератор маскирующего поля темной материи">  #NT!
- SUBMARINE_CLOAKING_DARK_MATTER_desc: "This device uses dark matter to warp space-time around the vessel, making it incredibly difficult to detect."  <"Это устройство использует темную материю для деформации пространства-времени вокруг корабля, что делает его невероятно трудным для обнаружения.">  #NT!
- SUBMARINE_CLOAKING_PSI: "Psi-Phase Field Generator"  <"Генератор пси-фазного поля">  #NT!
- SUBMARINE_CLOAKING_PSI_desc: "Psi-Phase Field Generators focus the psionic potential of the ship's crew to partially phase the vessel into the Shroud. This allows the ship to remain undetected by all but the best sensor arrays, though what the crew may be forced to witness is better left unsaid."  <"Генераторы пси-фазового поля фокусируют псионический потенциал экипажа корабля, чтобы частично перевести судно в Покров. Это позволяет кораблю оставаться незамеченным для всех, кроме лучших сенсорных массивов, хотя то, что экипаж может стать свидетелем, лучше оставить невысказанным.">  #NT!
-  
- KATPLATFORM_FISSION_REACTOR: "Katzen Fission Reactor"  <"Реактор деления Катцен">  #NT!
- KATPLATFORM_FUSION_REACTOR: "Katzenfusionsreaktor"  <"Реактор Katzenfusions">  #NT!
- KATPLATFORM_COLD_FUSION_REACTOR: "Cold Katzenfusionsreaktor"  <"Холодный реактор Katzenfusion">  #NT!
- KATPLATFORM_ANTIMATTER_REACTOR: "Katzen Antimatter Reactor"  <"Реактор антивещества Катцен">  #NT!
- KATPLATFORM_ZERO_POINT_REACTOR: "Katzen Zero Point Generator"  <"Генератор нулевой точки Катцена">  #NT!
- KATPLATFORM_DARK_MATTER_REACTOR: "Katzen Dark Matter Reactor"  <"Реактор темной материи Катцен">  #NT!
-  
- KATDESTROYER_FUSION_REACTOR: "Katzenfusionsreaktor"  <"Реактор Katzenfusions">  #NT!
- KATDESTROYER_FUSION_REACTOR_desc: "A drastic improvement on ancient fission reactors, these new Fusionsreaktoren are a staple power provider on Flusion, and are now adapted for the Katzenpanzerkorps."  <"Эти новые термоядерные реакторы, радикально усовершенствованные по сравнению с древними ядерными реакторами, являются основным источником энергии на Флюжене и теперь адаптированы для Каценпанцеркорпса.">  #NT!
- KATCRUISER_FUSION_REACTOR: "Katzenfusionsreaktor"  <"Реактор Katzenfusions">  #NT!
- KATCRUISER_FUSION_REACTOR_desc: "A drastic improvement on ancient fission reactors, these new Fusionsreaktoren are a staple power provider on Flusion, and are now adapted for the Leerekatzenbombers."  <"Эти новые термоядерные реакторы, радикально усовершенствованные по сравнению с древними реакторами деления, являются основным источником энергии на Флюжене и теперь адаптированы для бомбардировщиков Лирекацен.">  #NT!
- KATTITAN_FUSION_REACTOR: "Katzenfusionreaktor"  <"Katzenfusionреактор">  #NT!
- KATTITAN_FUSION_REACTOR_desc: "A drastic improvement on ancient fission reactors, these new Fusionsreaktoren are a staple power provider on Flusion, and are now adapted for the massive power needs of the Weltraumkatzenmarine."  <"Эти новые реакторы Fusionsreaktoren, радикально усовершенствованные по сравнению с древними реакторами деления, являются основным источником энергии на Флюжене и теперь адаптированы для огромных энергетических потребностей Weltraumkatzenmarine.">  #NT!
-  
- KATDESTROYER_COLD_FUSION_REACTOR: "Cold Katzenfusionsreaktor"  <"Холодный реактор Katzenfusion">  #NT!
- KATDESTROYER_COLD_FUSION_REACTOR_desc: "With additional technological advancements, these new reactors no longer require massive, overly heavy heat sinks, therefore freeing up space for more power generation components."  <"Благодаря дополнительным технологическим достижениям, эти новые реакторы больше не требуют массивных и чрезмерно тяжелых радиаторов, что освобождает место для большего количества компонентов для выработки электроэнергии.">  #NT!
- KATCRUISER_COLD_FUSION_REACTOR: "Cold Katzenfusionsreaktor"  <"Холодный реактор Katzenfusion">  #NT!
- KATCRUISER_COLD_FUSION_REACTOR_desc: "With additional technological advancements, these new reactors no longer require massive, overly heavy heat sinks, therefore freeing up space for more power generation components."  <"Благодаря дополнительным технологическим достижениям, эти новые реакторы больше не требуют массивных и чрезмерно тяжелых радиаторов, что освобождает место для большего количества компонентов для выработки электроэнергии.">  #NT!
- KATTITAN_COLD_FUSION_REACTOR: "Cold Katzenfusionsreaktor"  <"Холодный реактор Katzenfusion">  #NT!
- KATTITAN_COLD_FUSION_REACTOR_desc: "With additional technological advancements, these new reactors no longer require massive, overly heavy heat sinks, therefore freeing up space for more power generation components."  <"Благодаря дополнительным технологическим достижениям, эти новые реакторы больше не требуют массивных и чрезмерно тяжелых радиаторов, что освобождает место для большего количества компонентов для выработки электроэнергии.">  #NT!
-  
- KATDESTROYER_ANTIMATTER_REACTOR: "Katzen Antimatter Reactor"  <"Реактор антивещества Катцен">  #NT!
- KATDESTROYER_ANTIMATTER_REACTOR_desc: "Antimatter, despite being a dangerous and new field, promises to be our most efficient power generators yet."  <"Антивещество, несмотря на то, что это опасное и новое поле, обещает стать нашими самыми эффективными генераторами энергии.">  #NT!
- KATCRUISER_ANTIMATTER_REACTOR: "Katzen Antimatter Reactor"  <"Реактор антивещества Катцен">  #NT!
- KATCRUISER_ANTIMATTER_REACTOR_desc: "Antimatter, despite being a dangerous and new field, promises to be our most efficient power generators yet."  <"Антивещество, несмотря на то, что это опасное и новое поле, обещает стать нашими самыми эффективными генераторами энергии.">  #NT!
- KATTITAN_ANTIMATTER_REACTOR: "Katzen Antimatter Reactor"  <"Реактор антивещества Катцен">  #NT!
- KATTITAN_ANTIMATTER_REACTOR_desc: "Antimatter, despite being a dangerous and new field, promises to be our most efficient power generators yet."  <"Антивещество, несмотря на то, что это опасное и новое поле, обещает стать нашими самыми эффективными генераторами энергии.">  #NT!
-  
- KATDESTROYER_ZERO_POINT_REACTOR: "Katzen Zero Point Generator"  <"Генератор нулевой точки Катцена">  #NT!
- KATDESTROYER_ZERO_POINT_REACTOR_desc: "Blowing all previous reactor designs out of the water, Zero Point Energy provides massive amounts of energy for our vessels."  <"Уничтожив все предыдущие конструкции реакторов, Zero Point Energy обеспечивает огромные объемы энергии для наших кораблей.">  #NT!
- KATCRUISER_ZERO_POINT_REACTOR: "Katzen Zero Point Generator"  <"Генератор нулевой точки Катцена">  #NT!
- KATCRUISER_ZERO_POINT_REACTOR_desc: "Blowing all previous reactor designs out of the water, Zero Point Energy provides massive amounts of energy for our vessels."  <"Уничтожив все предыдущие конструкции реакторов, Zero Point Energy обеспечивает огромные объемы энергии для наших кораблей.">  #NT!
- KATTITAN_ZERO_POINT_REACTOR: "Katzen Zero Point Generator"  <"Генератор нулевой точки Катцена">  #NT!
- KATTITAN_ZERO_POINT_REACTOR_desc: "Blowing all previous reactor designs out of the water, Zero Point Energy provides massive amounts of energy for our vessels."  <"Уничтожив все предыдущие конструкции реакторов, Zero Point Energy обеспечивает огромные объемы энергии для наших кораблей.">  #NT!
-  
- KATDESTROYER_DARK_MATTER_REACTOR: "Katzen Dark Matter Reactor"  <"Реактор темной материи Катцен">  #NT!
- KATDESTROYER_DARK_MATTER_REACTOR_desc: "These generators appear to somehow draw energy directly from dark matter, providing more ship power than should be possible according to the laws of physics."  <"Эти генераторы, похоже, каким-то образом черпают энергию непосредственно из темной материи, обеспечивая большую мощность корабля, чем это возможно по законам физики.">  #NT!
- KATCRUISER_DARK_MATTER_REACTOR: "Katzen Dark Matter Reactor"  <"Реактор темной материи Катцен">  #NT!
- KATCRUISER_DARK_MATTER_REACTOR_desc: "These generators appear to somehow draw energy directly from dark matter, providing more ship power than should be possible according to the laws of physics."  <"Эти генераторы, похоже, каким-то образом черпают энергию непосредственно из темной материи, обеспечивая большую мощность корабля, чем это возможно по законам физики.">  #NT!
- KATTITAN_DARK_MATTER_REACTOR: "Katzen Dark Matter Reactor"  <"Реактор темной материи Катцен">  #NT!
- KATTITAN_DARK_MATTER_REACTOR_desc: "These generators appear to somehow draw energy directly from dark matter, providing more ship power than should be possible according to the laws of physics."  <"Эти генераторы, похоже, каким-то образом черпают энергию непосредственно из темной материи, обеспечивая большую мощность корабля, чем это возможно по законам физики.">  #NT!
-  
- KATZEN_SHIP_AURA_SHIELD_DAMPENER: "Katzen Shield Dampener"  <"Демпфер щита Катцена">  #NT!
- KATZEN_SHIP_AURA_QUANTUM_DESTABILIZER: "Katzen Quantum Destabilizer"  <"Квантовый дестабилизатор Катцена">  #NT!
- KATZEN_COMBAT_COMPUTER_DEFAULT: "Rudimentary Combat Computers"  <"Простейшие боевые компьютеры">  #NT!
- KATZEN_COMBAT_COMPUTER_SWARM_DEFAULT: "Katzen Combat Computer"  <"Боевой компьютер Катцен">  #NT!
- KATZEN_COMBAT_COMPUTER_SWARM_BASIC: "Basic Swarm Tactics"  <"Основная тактика роя">  #NT!
- KATZEN_COMBAT_COMPUTER_PICKET_DEFAULT: "Katzen Combat Computer"  <"Боевой компьютер Катцен">  #NT!
- KATZEN_COMBAT_COMPUTER_PICKET_BASIC: "Basic Picket Tactics"  <"Основная тактика пикета">  #NT!
- KATZEN_COMBAT_COMPUTER_LINE_DEFAULT: "Katzen Combat Computer"  <"Боевой компьютер Катцен">  #NT!
- KATZEN_COMBAT_COMPUTER_LINE_BASIC: "Basic Line Tactics"  <"Базовая тактика линии">  #NT!
- KATZEN_COMBAT_COMPUTER_ARTILLERY_DEFAULT: "Katzen Combat Computer"  <"Боевой компьютер Катцен">  #NT!
- KATZEN_COMBAT_COMPUTER_ARTILLERY_BASIC: "Basic Artillery Tactics"  <"Основная артиллерийская тактика">  #NT!
- KATZEN_COMBAT_COMPUTER_SWARM_ADVANCED: "Advanced Swarm Tactics"  <"Продвинутая тактика роя">  #NT!
- KATZEN_COMBAT_COMPUTER_PICKET_ADVANCED: "Advanced Picket Tactics"  <"Продвинутая тактика пикетирования">  #NT!
- KATZEN_COMBAT_COMPUTER_LINE_ADVANCED: "Advanced Line Tactics"  <"Продвинутая линейная тактика">  #NT!
- KATZEN_COMBAT_COMPUTER_ARTILLERY_ADVANCED: "Advanced Artillery Tactics"  <"Передовая артиллерийская тактика">  #NT!
- KATZEN_COMBAT_COMPUTER_CARRIER_BASIC: "Basic Carrier Tactics"  <"Основная тактика авианосца">  #NT!
- KATZEN_COMBAT_COMPUTER_CARRIER_ADVANCED: "Advanced Carrier Tactics"  <"Продвинутая тактика авианосца">  #NT!
- KATZEN_BOMBER_COMPUTER_DEFAULT: "Katzen Combat Computer"  <"Боевой компьютер Катцен">  #NT!
- KATZEN_BOMBER_COMPUTER_BASIC: "Basic Torpedo Tactics"  <"Основная тактика торпед">  #NT!
- KATZEN_BOMBER_COMPUTER_ADVANCED: "Advanced Torpedo Tactics"  <"Продвинутая тактика торпед">  #NT!
- SUBMARINE_COMPUTER_DEFAULT: "Katzen Combat Computer"  <"Боевой компьютер Катцен">  #NT!
- SUBMARINE_COMPUTER_BASIC: "Basic Unterraumboot Tactics"  <"Базовая тактика Unterraumboot">  #NT!
- SUBMARINE_COMPUTER_DESC: "The Unterraumboot will stay at extreme range (§Y500§!) range and fire its torpedoes at distant targets."  <"Unterraumboot будет оставаться на предельной дальности (§Y500§!) и запускать торпеды по удаленным целям.">  #NT!
- SUBMARINE_COMPUTER_ADVANCED: "Advanced Unterraumboot Tactics"  <"Продвинутая тактика Unterraumboot">  #NT!
-  
- SUBMARINE_MISSILE: "Unterraumtorpedo"  <"Унтерраумторпеда">  #NT!
- SUBMARINE_MISSILE_DESC: "These missiles have extremely long range and are designed to be carried by Katzen subspace submarines, enabling them to hit distant targets with great."  <"Эти ракеты имеют чрезвычайно большую дальность действия и предназначены для использования на подводных подводных лодках Katzen, что позволяет им эффективно поражать удаленные цели.">  #NT!
-  
- KATDESTROYER_SHIP_THRUSTER_1: "Chemical Thrusters"  <"Химические двигатели">  #NT!
- KATDESTROYER_SHIP_THRUSTER_2: "Ion Thrusters"  <"Ионные двигатели">  #NT!
- KATCRUISER_SHIP_THRUSTER_1: "Chemical Thrusters"  <"Химические двигатели">  #NT!
- KATCRUISER_SHIP_THRUSTER_2: "Ion Thrusters"  <"Ионные двигатели">  #NT!
- KATTITAN_SHIP_THRUSTER_1: "Chemical Thrusters"  <"Химические двигатели">  #NT!
- KATTITAN_SHIP_THRUSTER_2: "Ion Thrusters"  <"Ионные двигатели">  #NT!
- KATDESTROYER_SHIP_THRUSTER_3: "Plasma Thrusters"  <"Плазменные двигатели">  #NT!
- KATCRUISER_SHIP_THRUSTER_3: "Plasma Thrusters"  <"Плазменные двигатели">  #NT!
- KATTITAN_SHIP_THRUSTER_3: "Plasma Thrusters"  <"Плазменные двигатели">  #NT!
- KATDESTROYER_SHIP_THRUSTER_4: "Impulse Thrusters"  <"Импульсные двигатели">  #NT!
- KATCRUISER_SHIP_THRUSTER_4: "Impulse ThrustersE"  <"Импульсные двигателиE">  #NT!
- KATTITAN_SHIP_THRUSTER_4: "Impulse Thrusters"  <"Импульсные двигатели">  #NT!
- KATDESTROYER_SHIP_THRUSTER_5: "Dark Matter Thrusters"  <"Двигатели темной материи">  #NT!
- KATCRUISER_SHIP_THRUSTER_5: "Dark Matter Thrusters"  <"Двигатели темной материи">  #NT!
- KATTITAN_SHIP_THRUSTER_5: "Dark Matter Thrusters"  <"Двигатели темной материи">  #NT!
-  
- kaiser_planet: "Kaiser-Behemoth Planetcraft"  <"Кайзер-Бегемот Планеткрафт">  #NT!
- kaiser_planet_plural: "Kaiser-Behemoth Planetcrafts"  <"Кайзер-Бегемот Planetcrafts">  #NT!
- KAISER_MISSILES: "Riesigerkatzenweltraumraketes"  <"Ризигеркатценвелтраумракетес">  #NT!
- KAISER_MISSILES_DESC: "Several batteries of positively gargantuan fusion missiles."  <"Несколько батарей гигантских термоядерных ракет.">  #NT!
- KAISER_CANNON: "Riesigekatzenwaffe"  <"Ризигекаценваффе">  #NT!
- KAISER_CANNON_DESC: "A ludicrously scaled up nuclear railgun."  <"Нелепо увеличенный ядерный рельсотрон.">  #NT!
- KAISER_REACTOR: "Kaiserreaktor"  <"Кайзерреактор">  #NT!
- KAISER_REACTOR_DESC: "A large planetary fusion reactor embedded in the core of the planet, providing an insane amount of power."  <"Большой планетарный термоядерный реактор, встроенный в ядро ​​планеты, обеспечивающий безумное количество энергии.">  #NT!
- KAISER_PLANET_COMPUTER: "Kaiser-Behemoth Planetcraft AI"  <"Кайзер-Бегемот Planetcraft AI">  #NT!
- KAISER_AURA: "Planetary Presence"  <"Планетарное присутствие">  #NT!
- KAISER_AURA_DESC: "The sight of an entire planet fighting on the battlefield is certainly something to behold. Its gravitational pull affects enemy ships."  <"Вид целой планеты, сражающейся на поле боя, безусловно, заслуживает внимания. Его гравитационное притяжение воздействует на корабли противника.">  #NT!
-  
- KAISER_CANNON_1: "Riesigekatzenwaffe"  <"Ризигекаценваффе">  #NT!
- KAISER_CANNON_1_DESC: "A ludicrously scaled up nuclear railgun."  <"Нелепо увеличенный ядерный рельсотрон.">  #NT!
- KAISER_MISSILE_1: "Riesigerkatzenweltraumraketes"  <"Ризигеркатценвелтраумракетес">  #NT!
- KAISER_MISSILE_1_DESC: "Several batteries of positively gargantuan fusion missiles."  <"Несколько батарей гигантских термоядерных ракет.">  #NT!
+﻿l_russian:
+    katzen_panzer: "Katzenweltraumpanzer"
+    katzen_panzer_plural: "Katzenweltraumpanzers"
+    KATZEN_SPACE_PANZER: "Космический танковый корпус"
+    katzen_bomber: "Leerekatzenbomber"
+    katzen_bomber_plural: "Leerekatzenbombers"
+    KATZEN_SPACE_BOMBER_1: "Планер пикирующего бомбардировщика"
+    KATZEN_SPACE_BOMBER_2: "Планер бомбардировщика дальней дистанции"
+    KATZEN_SPACE_BOMBER_3: "Планер бомбардировщика дальней дистанции MK II"
+    katzen_troop_ship: "Katzkonstrukteur"
+    katzen_troop_ship_plural: "Katzkonstrukteurs"
+    KATZEN_APC: "Конструктор Корпуса"
+    katzen_assault_army: "Katzenbodentruppen"
+    katzen_assault_army_desc: "Армия Катцена, предназначенная для высадки на миры с целью проведения планетарных вторжений."
+    katzen_submarine: "Unterraumboot"
+    katzen_submarine_plural: "Unterraumboots"
+    KATZEN_SPACE_SUBMARINE: "Халл"
+    katzen_player_warforge_platform: "Защитный массив Катценов"
+    katzen_player_warforge_platform_plural: "Защитные массивы Катценов"
+    KATZEN_PLAYER_PLANET_PLATFORM: "Ядро защитного массива"
+    katzen_cruiser: "Katzenkreuzer"
+    katzen_cruiser_plural: "Katzenkreuzers"
+    KATZEN_CRUISER_BOW: "Поклон"
+    KATZEN_CRUISER_MID: "Средний"
+    KATZEN_CRUISER_STERN: "Стерн"
+    kaiser_planet_bowgun_01_key: "Riesigekatzenwaffe"
+    kaiser_planet_bow_01_key: "Вспомогательная оружейная батарея"
+    kaiser_planet_mid_01_key: "Вооруженная кора"
+    kaiser_planet_stern_01_key: "Планетарные Ангары"
+    kaiser_planet_sternthrusters_01_key: "Вторичное вооружение"
+    tech_katzen_shipbuilding: "Шаблоны военных кораблей Katzen"
+    tech_katzen_shipbuilding_desc: "Коллекция чертежей, предназначенных для кораблей, готовых к катценкригу."
+    katzen_power_core: "Реактор Катцен"
+    katzen_thruster_components: "Двигатели Катцен"
+    katzen_ftl_components: "Катцен FTL Drive"
+    katzen_sensor_components: "Сенсоные Линзы Катцен"
+    katzen_combat_computers: "Боевые компьютеры Катцен"
+    katzen_station_power_core: "Реактор Катцен"
+    katzen_corvette_combat_computers: "Боевые компьютеры Катцен"
+    katzen_destroyer_combat_computers: "Боевые компьютеры Катцен"
+    katzen_cruiser_combat_computers: "Боевые компьютеры Катцен"
+    katzen_battleship_combat_computers: "Боевые компьютеры Катцен"
+    katzen_aura_components: "Катцен Аурас"
+    katzen_ship_aura_components: "Катцен Аурас"
+    katzen_ftl_inhibitor: "Катцен FTL-ингибитор"
+    katzen_station_small_aura_components: "Катцен Аурас"
+    katzen_station_medium_aura_components: "Катцен Аурас"
+    katzen_station_large_aura_components: "Катцен Аурас"
+    KATDESTROYER_FISSION_REACTOR: "Реактор деления Катцен"
+    KATDESTROYER_FISSION_REACTOR_desc: "Реактор деления, разработанный Катценом и построенный для Katzenpanzerkorps."
+    KATCRUISER_FISSION_REACTOR: "Реактор деления Катцен"
+    KATCRUISER_FISSION_REACTOR_desc: "Реактор деления, спроектированный Катценом, построенный для Leerekatzenbombers."
+    KATTITAN_FISSION_REACTOR: "Реактор деления Катцен"
+    KATTITAN_FISSION_REACTOR_desc: "Реактор деления, спроектированный Катценом и построенный для Weltraumkatzenmarine."
+    KATSUB_FISSION_REACTOR: "Реактор деления Катцен"
+    KATSUB_FISSION_REACTOR_desc: "Реактор деления, спроектированный Катценом и построенный для Unterraumboots."
+    KATSUB_FUSION_REACTOR: "Реактор Katzenfusions"
+    KATSUB_FUSION_REACTOR_desc: "Эти новые термоядерные реакторы, радикально усовершенствованные по сравнению с древними ядерными реакторами, являются основным источником энергии на Флюжене и теперь адаптированы для Unterraumboots."
+    KATSUB_COLD_FUSION_REACTOR: "Реактор холодного синтеза Katzenfusion"
+    KATSUB_COLD_FUSION_REACTOR_desc: "Благодаря дополнительным технологическим достижениям, эти новые реакторы больше не требуют массивных и чрезмерно тяжелых радиаторов, что освобождает место для большего количества компонентов для выработки электроэнергии."
+    KATSUB_ANTIMATTER_REACTOR: "Реактор антивещества Катцен"
+    KATSUB_ANTIMATTER_REACTOR_desc: "Антивещество, несмотря на то, что это опасное и новое поле, обещает стать нашим самым эффективным генератором энергии."
+    KATSUB_ZERO_POINT_REACTOR: "Генератор нулевой точки Катцена"
+    KATSUB_ZERO_POINT_REACTOR_desc: "Уничтожив все предыдущие конструкции реакторов, Реактор Нулевой точки обеспечивает огромные объемы энергии для наших кораблей."
+    KATSUB_DARK_MATTER_REACTOR: "Реактор темной материи Катцен"
+    KATSUB_DARK_MATTER_REACTOR_desc: "Эти генераторы, похоже, каким-то образом черпают энергию непосредственно из темной материи, обеспечивая большую мощность корабля, чем это возможно по законам физики."
+    SUBMARINE_CLOAKING_1: "Базовый генератор маскирующего поля"
+    SUBMARINE_CLOAKING_1_desc: "Модифицированное поле частиц позволяет нашим кораблям эффективно «прятаться» в открытом космосе. Однако это происходит за счет дестабилизации других форм энергетической защиты, которые в противном случае защитили бы корабль."
+    SUBMARINE_CLOAKING_2: "Расширенный генератор полей маскировки"
+    SUBMARINE_CLOAKING_2_desc: "Достижения в технологии линз из редких кристаллов значительно повысили эффективность маскировки."
+    SUBMARINE_CLOAKING_3: "Элитный генератор маскировочного поля"
+    SUBMARINE_CLOAKING_3_desc: "Типичная технология маскировки может нанести ущерб более тонким приборам корабля. Однако эти элитные области делают подобные опасения устаревшими."
+    SUBMARINE_CLOAKING_DARK_MATTER: "Генератор маскирующего поля темной материи"
+    SUBMARINE_CLOAKING_DARK_MATTER_desc: "Это устройство использует темную материю для деформации пространства-времени вокруг корабля, что делает его невероятно трудным для обнаружения."
+    SUBMARINE_CLOAKING_PSI: "Генератор пси-фазного поля"
+    SUBMARINE_CLOAKING_PSI_desc: "Генераторы пси-фазового поля фокусируют псионический потенциал экипажа корабля, чтобы частично перевести судно в Покров. Это позволяет кораблю оставаться незамеченным для всех, кроме лучших сенсорных массивов, хотя то, что экипаж может стать свидетелем, лучше оставить невысказанным."
+    KATPLATFORM_FISSION_REACTOR: "Реактор деления Катцен"
+    KATPLATFORM_FUSION_REACTOR: "Katzenfusionsreaktor"
+    KATPLATFORM_COLD_FUSION_REACTOR: "Реактор холодного синтеза Katzenfusion"
+    KATPLATFORM_ANTIMATTER_REACTOR: "Реактор антивещества Катцен"
+    KATPLATFORM_ZERO_POINT_REACTOR: "Генератор нулевой точки Катцена"
+    KATPLATFORM_DARK_MATTER_REACTOR: "Реактор темной материи Катцен"
+    KATDESTROYER_FUSION_REACTOR: "Katzenfusionsreaktor"
+    KATDESTROYER_FUSION_REACTOR_desc: "Эти новые термоядерные реакторы, радикально усовершенствованные по сравнению с древними ядерными реакторами, являются основным источником энергии на Флюжене и теперь адаптированы для Каценпанцеркорпса."
+    KATCRUISER_FUSION_REACTOR: "Реактор Katzenfusions"
+    KATCRUISER_FUSION_REACTOR_desc: "Эти новые термоядерные реакторы, радикально усовершенствованные по сравнению с древними реакторами деления, являются основным источником энергии на Флюжене и теперь адаптированы для Leerekatzenbombers."
+    KATTITAN_FUSION_REACTOR: "Katzenfusionreaktor"
+    KATTITAN_FUSION_REACTOR_desc: "Эти новые реакторы Fusionsreaktoren, радикально усовершенствованные по сравнению с древними реакторами деления, являются основным источником энергии на Флюжене и теперь адаптированы для огромных энергетических потребностей Weltraumkatzenmarine."
+    KATDESTROYER_COLD_FUSION_REACTOR: "Холодный Katzenfusionsreaktor"
+    KATDESTROYER_COLD_FUSION_REACTOR_desc: "Благодаря дополнительным технологическим достижениям, эти новые реакторы больше не требуют массивных и чрезмерно тяжелых радиаторов, что освобождает место для большего количества компонентов для выработки электроэнергии."
+    KATCRUISER_COLD_FUSION_REACTOR: "Холодный Katzenfusionsreaktor"
+    KATCRUISER_COLD_FUSION_REACTOR_desc: "Благодаря дополнительным технологическим достижениям, эти новые реакторы больше не требуют массивных и чрезмерно тяжелых радиаторов, что освобождает место для большего количества компонентов для выработки электроэнергии."
+    KATTITAN_COLD_FUSION_REACTOR: "Холодный Katzenfusionsreaktor"
+    KATTITAN_COLD_FUSION_REACTOR_desc: "Благодаря дополнительным технологическим достижениям, эти новые реакторы больше не требуют массивных и чрезмерно тяжелых радиаторов, что освобождает место для большего количества компонентов для выработки электроэнергии."
+    KATDESTROYER_ANTIMATTER_REACTOR: "Реактор антивещества Катцен"
+    KATDESTROYER_ANTIMATTER_REACTOR_desc: "Антивещество, несмотря на то, что это опасное и новое поле, обещает стать нашими самыми эффективными генераторами энергии."
+    KATCRUISER_ANTIMATTER_REACTOR: "Реактор антивещества Катцен"
+    KATCRUISER_ANTIMATTER_REACTOR_desc: "Антивещество, несмотря на то, что это опасное и новое поле, обещает стать нашими самыми эффективными генераторами энергии."
+    KATTITAN_ANTIMATTER_REACTOR: "Реактор антивещества Катцен"
+    KATTITAN_ANTIMATTER_REACTOR_desc: "Антивещество, несмотря на то, что это опасное и новое поле, обещает стать нашими самыми эффективными генераторами энергии."
+    KATDESTROYER_ZERO_POINT_REACTOR: "Генератор нулевой точки Катцена"
+    KATDESTROYER_ZERO_POINT_REACTOR_desc: "Уничтожив все предыдущие конструкции реакторов, Энергия Нулевой Точки обеспечивает огромные объемы энергии для наших кораблей."
+    KATCRUISER_ZERO_POINT_REACTOR: "Генератор нулевой точки Катцена"
+    KATCRUISER_ZERO_POINT_REACTOR_desc: "Уничтожив все предыдущие конструкции реакторов, Энергия Нулевой Точки обеспечивает огромные объемы энергии для наших кораблей."
+    KATTITAN_ZERO_POINT_REACTOR: "Генератор нулевой точки Катцена"
+    KATTITAN_ZERO_POINT_REACTOR_desc: "Уничтожив все предыдущие конструкции реакторов, Энергия Нулевой Точки обеспечивает огромные объемы энергии для наших кораблей."
+    KATDESTROYER_DARK_MATTER_REACTOR: "Реактор темной материи Катцен"
+    KATDESTROYER_DARK_MATTER_REACTOR_desc: "Эти генераторы, похоже, каким-то образом черпают энергию непосредственно из темной материи, обеспечивая большую мощность корабля, чем это возможно по законам физики."
+    KATCRUISER_DARK_MATTER_REACTOR: "Реактор темной материи Катцен"
+    KATCRUISER_DARK_MATTER_REACTOR_desc: "Эти генераторы, похоже, каким-то образом черпают энергию непосредственно из темной материи, обеспечивая большую мощность корабля, чем это возможно по законам физики."
+    KATTITAN_DARK_MATTER_REACTOR: "Реактор темной материи Катцен"
+    KATTITAN_DARK_MATTER_REACTOR_desc: "Эти генераторы, похоже, каким-то образом черпают энергию непосредственно из темной материи, обеспечивая большую мощность корабля, чем это возможно по законам физики."
+    KATZEN_SHIP_AURA_SHIELD_DAMPENER: "Демпфер щита Катцена"
+    KATZEN_SHIP_AURA_QUANTUM_DESTABILIZER: "Квантовый дестабилизатор Катцена"
+    KATZEN_COMBAT_COMPUTER_DEFAULT: "Простейшие боевые компьютеры"
+    KATZEN_COMBAT_COMPUTER_SWARM_DEFAULT: "Боевой компьютер Катцен"
+    KATZEN_COMBAT_COMPUTER_SWARM_BASIC: "Основная тактика роя"
+    KATZEN_COMBAT_COMPUTER_PICKET_DEFAULT: "Боевой компьютер Катцен"
+    KATZEN_COMBAT_COMPUTER_PICKET_BASIC: "Основная тактика пикета"
+    KATZEN_COMBAT_COMPUTER_LINE_DEFAULT: "Боевой компьютер Катцен"
+    KATZEN_COMBAT_COMPUTER_LINE_BASIC: "Базовая тактика линии"
+    KATZEN_COMBAT_COMPUTER_ARTILLERY_DEFAULT: "Боевой компьютер Катцен"
+    KATZEN_COMBAT_COMPUTER_ARTILLERY_BASIC: "Основная артиллерийская тактика"
+    KATZEN_COMBAT_COMPUTER_SWARM_ADVANCED: "Продвинутая тактика роя"
+    KATZEN_COMBAT_COMPUTER_PICKET_ADVANCED: "Продвинутая тактика пикетирования"
+    KATZEN_COMBAT_COMPUTER_LINE_ADVANCED: "Продвинутая линейная тактика"
+    KATZEN_COMBAT_COMPUTER_ARTILLERY_ADVANCED: "Передовая артиллерийская тактика"
+    KATZEN_COMBAT_COMPUTER_CARRIER_BASIC: "Основная тактика авианосца"
+    KATZEN_COMBAT_COMPUTER_CARRIER_ADVANCED: "Продвинутая тактика авианосца"
+    KATZEN_BOMBER_COMPUTER_DEFAULT: "Боевой компьютер Катцен"
+    KATZEN_BOMBER_COMPUTER_BASIC: "Основная тактика торпед"
+    KATZEN_BOMBER_COMPUTER_ADVANCED: "Продвинутая тактика торпед"
+    SUBMARINE_COMPUTER_DEFAULT: "Боевой компьютер Катцен"
+    SUBMARINE_COMPUTER_BASIC: "Базовая тактика Unterraumboot"
+    SUBMARINE_COMPUTER_DESC: "Unterraumboot будет оставаться на предельной дальности (§Y500§!) и запускать торпеды по удаленным целям."
+    SUBMARINE_COMPUTER_ADVANCED: "Продвинутая тактика Unterraumboot"
+    SUBMARINE_MISSILE: "Unterraumtorpedo"
+    SUBMARINE_MISSILE_DESC: "Эти ракеты имеют экстремально большую дальность полета, разработаны для использования на подпространственных субмаринах Катцен, чтобы поражать цели на огромной дистанции."
+    KATDESTROYER_SHIP_THRUSTER_1: "Химические двигатели"
+    KATDESTROYER_SHIP_THRUSTER_2: "Ионные двигатели"
+    KATCRUISER_SHIP_THRUSTER_1: "Химические двигатели"
+    KATCRUISER_SHIP_THRUSTER_2: "Ионные двигатели"
+    KATTITAN_SHIP_THRUSTER_1: "Химические двигатели"
+    KATTITAN_SHIP_THRUSTER_2: "Ионные двигатели"
+    KATDESTROYER_SHIP_THRUSTER_3: "Плазменные двигатели"
+    KATCRUISER_SHIP_THRUSTER_3: "Плазменные двигатели"
+    KATTITAN_SHIP_THRUSTER_3: "Плазменные двигатели"
+    KATDESTROYER_SHIP_THRUSTER_4: "Импульсные двигатели"
+    KATCRUISER_SHIP_THRUSTER_4: "Импульсные двигатели"
+    KATTITAN_SHIP_THRUSTER_4: "Импульсные двигатели"
+    KATDESTROYER_SHIP_THRUSTER_5: "Двигатели темной материи"
+    KATCRUISER_SHIP_THRUSTER_5: "Двигатели темной материи"
+    KATTITAN_SHIP_THRUSTER_5: "Двигатели темной материи"
+    kaiser_planet: "Кайзер-Бегемот Планеткрафт"
+    kaiser_planet_plural: "Кайзер-Бегемот Planetcrafts"
+    KAISER_MISSILES: "Riesigerkatzenweltraumraketes"
+    KAISER_MISSILES_DESC: "Несколько батарей гигантских термоядерных ракет."
+    KAISER_CANNON: "Riesigekatzenwaffe"
+    KAISER_CANNON_DESC: "Нелепо увеличенный ядерный рельсотрон."
+    KAISER_REACTOR: "Кайзерреактор"
+    KAISER_REACTOR_DESC: "Большой планетарный термоядерный реактор, встроенный в ядро ​​планеты, обеспечивающий безумное количество энергии."
+    KAISER_PLANET_COMPUTER: "Кайзер-Бегемот Planetcraft AI"
+    KAISER_AURA: "Планетарное присутствие"
+    KAISER_AURA_DESC: "Вид целой планеты, сражающейся на поле боя, безусловно, заслуживает внимания. Его гравитационное притяжение воздействует на корабли противника."
+    KAISER_CANNON_1: "Riesigekatzenwaffe"
+    KAISER_CANNON_1_DESC: "Нелепо увеличенный ядерный рельсотрон."
+    KAISER_MISSILE_1: "Riesigerkatzenweltraumraketes"
+    KAISER_MISSILE_1_DESC: "Несколько батарей гигантских термоядерных ракет."
