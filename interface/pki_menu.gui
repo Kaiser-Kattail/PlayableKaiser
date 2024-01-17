@@ -300,12 +300,26 @@ guiTypes = {
 				position = { x = +1300 y = 0 }
 
 				effectButtonType = {
-					name = info_kat
+					name = title
 					size = { width = 284 height = 40 }
-					text = "Cat Kingdom"
+					text = "[pki_map_selected_country]"
 					font = malgun_goth_24
 					quadTextureSprite = "GFX_tiles_light_area_cut_8"
 					effect = pki_map_no_effect
+					alwaysTransparent = yes
+				}
+
+				effectButtonType = {
+					name = info
+					position = { x = +6 y = +46 }
+					size = { width = 274 height = 1620 }
+					text = "[pki_map_selected_country_info]"
+					font = cg_16b
+					quadTextureSprite = "GFX_invisible"
+					format = left
+					vertical_alignment = top
+					effect = pki_map_no_effect
+					alwaysTransparent = yes
 				}
 			}
 
@@ -390,69 +404,1603 @@ guiTypes = {
 				effect = pki_map_no_effect
 			}
 
+
+
 			containerWindowType = {
-				name = ATA
+				name = countries
 
-				effectButtonType = {
-					name = ATA_flag
-					position = { x = +10 y = +740 }
-					scale = @map_scale
-					orientation = upper_left
+				containerWindowType = {
+					name = ZUS
 
-					quadTextureSprite = "GFX_empire_flag_128"
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
 
-					effect = pki_map_no_effect
+						quadTextureSprite = "GFX_pki_map_ZUS"
+
+						effect = pki_map_ZUS_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_ZUS_occupation"
+
+						effect = pki_map_ZUS_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_ZUS_captured"
+
+						effect = pki_map_ZUS_captured_effect
+					}
 				}
+				containerWindowType = {
+					name = LAU
 
-				effectButtonType = {
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_LAU"
+
+						effect = pki_map_LAU_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_LAU_occupation"
+
+						effect = pki_map_LAU_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_LAU_captured"
+
+						effect = pki_map_LAU_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = KRK
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_KRK"
+
+						effect = pki_map_KRK_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_KRK_occupation"
+
+						effect = pki_map_KRK_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_KRK_captured"
+
+						effect = pki_map_KRK_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = KRO
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_KRO"
+
+						effect = pki_map_KRO_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_KRO_occupation"
+
+						effect = pki_map_KRO_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_KRO_captured"
+
+						effect = pki_map_KRO_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = TER
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_TER"
+
+						effect = pki_map_TER_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_TER_occupation"
+
+						effect = pki_map_TER_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_TER_captured"
+
+						effect = pki_map_TER_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = KAT
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_KAT"
+
+						effect = pki_map_KAT_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_KAT_occupation"
+
+						effect = pki_map_KAT_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_KAT_captured"
+
+						effect = pki_map_KAT_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = GNA
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_GNA"
+
+						effect = pki_map_GNA_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_GNA_occupation"
+
+						effect = pki_map_GNA_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_GNA_captured"
+
+						effect = pki_map_GNA_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = NEK
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_NEK"
+
+						effect = pki_map_NEK_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_NEK_occupation"
+
+						effect = pki_map_NEK_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_NEK_captured"
+
+						effect = pki_map_NEK_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = ROQ
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_ROQ"
+
+						effect = pki_map_ROQ_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_ROQ_occupation"
+
+						effect = pki_map_ROQ_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_ROQ_captured"
+
+						effect = pki_map_ROQ_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = VIX
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_VIX"
+
+						effect = pki_map_VIX_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_VIX_occupation"
+
+						effect = pki_map_VIX_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_VIX_captured"
+
+						effect = pki_map_VIX_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = MER
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_MER"
+
+						effect = pki_map_MER_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_MER_occupation"
+
+						effect = pki_map_MER_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_MER_captured"
+
+						effect = pki_map_MER_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = RUS
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_RUS"
+
+						effect = pki_map_RUS_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_RUS_occupation"
+
+						effect = pki_map_RUS_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_RUS_captured"
+
+						effect = pki_map_RUS_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = SOB
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_SOB"
+
+						effect = pki_map_SOB_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_SOB_occupation"
+
+						effect = pki_map_SOB_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_SOB_captured"
+
+						effect = pki_map_SOB_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = HOS
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_HOS"
+
+						effect = pki_map_HOS_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_HOS_occupation"
+
+						effect = pki_map_HOS_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_HOS_captured"
+
+						effect = pki_map_HOS_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = NOR
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_NOR"
+
+						effect = pki_map_NOR_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_NOR_occupation"
+
+						effect = pki_map_NOR_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_NOR_captured"
+
+						effect = pki_map_NOR_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = PRO
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_PRO"
+
+						effect = pki_map_PRO_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_PRO_occupation"
+
+						effect = pki_map_PRO_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_PRO_captured"
+
+						effect = pki_map_PRO_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = NDR
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_NDR"
+
+						effect = pki_map_NDR_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_NDR_occupation"
+
+						effect = pki_map_NDR_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_NDR_captured"
+
+						effect = pki_map_NDR_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = DTC
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_DTC"
+
+						effect = pki_map_DTC_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_DTC_occupation"
+
+						effect = pki_map_DTC_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_DTC_captured"
+
+						effect = pki_map_DTC_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = SAR
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_SAR"
+
+						effect = pki_map_SAR_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_SAR_occupation"
+
+						effect = pki_map_SAR_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_SAR_captured"
+
+						effect = pki_map_SAR_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = LIN
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_LIN"
+
+						effect = pki_map_LIN_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_LIN_occupation"
+
+						effect = pki_map_LIN_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_LIN_captured"
+
+						effect = pki_map_LIN_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = RAV
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_RAV"
+
+						effect = pki_map_RAV_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_RAV_occupation"
+
+						effect = pki_map_RAV_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_RAV_captured"
+
+						effect = pki_map_RAV_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = WIN
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_WIN"
+
+						effect = pki_map_WIN_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_WIN_occupation"
+
+						effect = pki_map_WIN_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_WIN_captured"
+
+						effect = pki_map_WIN_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = PHH
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_PHH"
+
+						effect = pki_map_PHH_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_PHH_occupation"
+
+						effect = pki_map_PHH_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_PHH_captured"
+
+						effect = pki_map_PHH_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = GTA
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_GTA"
+
+						effect = pki_map_GTA_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_GTA_occupation"
+
+						effect = pki_map_GTA_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_GTA_captured"
+
+						effect = pki_map_GTA_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = PGM
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_PGM"
+
+						effect = pki_map_PGM_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_PGM_occupation"
+
+						effect = pki_map_PGM_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_PGM_captured"
+
+						effect = pki_map_PGM_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = CYA
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_CYA"
+
+						effect = pki_map_CYA_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_CYA_occupation"
+
+						effect = pki_map_CYA_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_CYA_captured"
+
+						effect = pki_map_CYA_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = BYU
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_BYU"
+
+						effect = pki_map_BYU_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_BYU_occupation"
+
+						effect = pki_map_BYU_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_BYU_captured"
+
+						effect = pki_map_BYU_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = HAR
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_HAR"
+
+						effect = pki_map_HAR_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_HAR_occupation"
+
+						effect = pki_map_HAR_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_HAR_captured"
+
+						effect = pki_map_HAR_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = NDK
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_NDK"
+
+						effect = pki_map_NDK_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_NDK_occupation"
+
+						effect = pki_map_NDK_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_NDK_captured"
+
+						effect = pki_map_NDK_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = YIN
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_YIN"
+
+						effect = pki_map_YIN_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_YIN_occupation"
+
+						effect = pki_map_YIN_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_YIN_captured"
+
+						effect = pki_map_YIN_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = ILY
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_ILY"
+
+						effect = pki_map_ILY_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_ILY_occupation"
+
+						effect = pki_map_ILY_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_ILY_captured"
+
+						effect = pki_map_ILY_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = WAC
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_WAC"
+
+						effect = pki_map_WAC_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_WAC_occupation"
+
+						effect = pki_map_WAC_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_WAC_captured"
+
+						effect = pki_map_WAC_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = POZ
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_POZ"
+
+						effect = pki_map_POZ_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_POZ_occupation"
+
+						effect = pki_map_POZ_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_POZ_captured"
+
+						effect = pki_map_POZ_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = PFL
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_PFL"
+
+						effect = pki_map_PFL_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_PFL_occupation"
+
+						effect = pki_map_PFL_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_PFL_captured"
+
+						effect = pki_map_PFL_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = KIT
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_KIT"
+
+						effect = pki_map_KIT_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_KIT_occupation"
+
+						effect = pki_map_KIT_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_KIT_captured"
+
+						effect = pki_map_KIT_captured_effect
+					}
+				}
+				containerWindowType = {
+					name = AXO
+
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						quadTextureSprite = "GFX_pki_map_AXO"
+
+						effect = pki_map_AXO_effect
+					}
+
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_AXO_occupation"
+
+						effect = pki_map_AXO_occupied_effect
+					}
+
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
+
+						alwaysTransparent = yes
+
+						quadTextureSprite = "GFX_pki_map_AXO_captured"
+
+						effect = pki_map_AXO_captured_effect
+					}
+				}
+				containerWindowType = {
 					name = ATA
-					position = { x = +10 y = +56 }
-					size = { width = 1416 height = 708 }
-					scale = @map_scale
-					orientation = upper_left
 
-					quadTextureSprite = "GFX_pki_map_ATA"
+					effectButtonType = {
+						name = country
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
 
-					effect = pki_map_no_effect
-				}
+						quadTextureSprite = "GFX_pki_map_ATA"
 
-				effectButtonType = {
-					name = color
-					position = { x = +10 y = +56 }
-					size = { width = 1416 height = 708 }
-					scale = @map_scale
-					orientation = upper_left
+						effect = pki_map_ATA_effect
+					}
 
-					quadTextureSprite = "GFX_pki_map_ATA_color"
+					effectButtonType = {
+						name = occupied
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
 
-					effect = pki_map_no_effect
-				}
+						alwaysTransparent = yes
 
-				effectButtonType = {
-					name = occupied
-					position = { x = +10 y = +56 }
-					size = { width = 1416 height = 708 }
-					scale = @map_scale
-					orientation = upper_left
+						quadTextureSprite = "GFX_pki_map_ATA_occupation"
 
-					quadTextureSprite = "GFX_pki_map_ATA_occupation"
+						effect = pki_map_ATA_occupied_effect
+					}
 
-					effect = pki_map_no_effect
-				}
+					effectButtonType = {
+						name = captured
+						position = { x = +10 y = +56 }
+						size = { width = 1416 height = 708 }
+						scale = @map_scale
+						orientation = upper_left
 
-				effectButtonType = {
-					name = captured
-					position = { x = +10 y = +56 }
-					size = { width = 1416 height = 708 }
-					scale = @map_scale
-					orientation = upper_left
+						alwaysTransparent = yes
 
-					quadTextureSprite = "GFX_pki_map_ATA_captured"
+						quadTextureSprite = "GFX_pki_map_ATA_captured"
 
-					effect = pki_map_no_effect
+						effect = pki_map_ATA_captured_effect
+					}
 				}
 			}
-
 		}
 	}
 

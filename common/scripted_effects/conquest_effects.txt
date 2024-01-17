@@ -1,62 +1,42 @@
-update_total_flusion_con_value = {
-	event_target:playerflusion = {
-		set_variable = {
-			which = "flusion_total_con_value"
-			value = 0
-		}
-		change_variable = {
-			which = "flusion_total_con_value"
-			value = haranian_con
-		}
-		change_variable = {
-			which = "flusion_total_con_value"
-			value = lauranaise_con
-		}
-		change_variable = {
-			which = "flusion_total_con_value"
-			value = symbies_con
-		}
-		change_variable = {
-			which = "flusion_total_con_value"
-			value = yinjites_con
-		}
-		change_variable = {
-			which = "flusion_total_con_value"
-			value = cyatianalas_con
-		}
-		change_variable = {
-			which = "flusion_total_con_value"
-			value = mercurians_con
-		}
-		change_variable = {
-			which = "flusion_total_con_value"
-			value = ezics_con
-		}
-		change_variable = {
-			which = "flusion_total_con_value"
-			value = droog_con
-		}
-		change_variable = {
-			which = "flusion_total_con_value"
-			value = zousans_con
-		}
-		change_variable = {
-			which = "flusion_total_con_value"
-			value = ravkan_con
-		}
-		change_variable = {
-			which = "flusion_total_con_value"
-			value = solakians_con
-		}
-		change_variable = {
-			which = "flusion_total_con_value"
-			value = cookie_con
-		}
-		change_variable = {
-			which = "flusion_total_con_value"
-			value = kronk_con
-		}
-	}
+pki_clear_selected_country = {
+	remove_country_flag = pki_map_ATA_selected
+	remove_country_flag = pki_map_AXO_selected
+	remove_country_flag = pki_map_BYU_selected
+	remove_country_flag = pki_map_CYA_selected
+	remove_country_flag = pki_map_DTC_selected
+	remove_country_flag = pki_map_GNA_selected
+	remove_country_flag = pki_map_GTA_selected
+	remove_country_flag = pki_map_HAR_selected
+	remove_country_flag = pki_map_HOS_selected
+	remove_country_flag = pki_map_ILY_selected
+	remove_country_flag = pki_map_KAT_selected
+	remove_country_flag = pki_map_KIT_selected
+	remove_country_flag = pki_map_KRK_selected
+	remove_country_flag = pki_map_KRO_selected
+	remove_country_flag = pki_map_LAU_selected
+	remove_country_flag = pki_map_LIN_selected
+	remove_country_flag = pki_map_MER_selected
+	remove_country_flag = pki_map_NDK_selected
+	remove_country_flag = pki_map_NDR_selected
+	remove_country_flag = pki_map_NEK_selected
+	remove_country_flag = pki_map_NOR_selected
+	remove_country_flag = pki_map_PFL_selected
+	remove_country_flag = pki_map_PGM_selected
+	remove_country_flag = pki_map_PHH_selected
+	remove_country_flag = pki_map_POZ_selected
+	remove_country_flag = pki_map_PRO_selected
+	remove_country_flag = pki_map_RAV_selected
+	remove_country_flag = pki_map_ROQ_selected
+	remove_country_flag = pki_map_RUS_selected
+	remove_country_flag = pki_map_SAR_selected
+	remove_country_flag = pki_map_SOB_selected
+	remove_country_flag = pki_map_TER_selected
+	remove_country_flag = pki_map_VIX_selected
+	remove_country_flag = pki_map_WAC_selected
+	remove_country_flag = pki_map_WIN_selected
+	remove_country_flag = pki_map_YIN_selected
+	remove_country_flag = pki_map_ZUS_selected
+
 }
 
 check_flusionian_war = {

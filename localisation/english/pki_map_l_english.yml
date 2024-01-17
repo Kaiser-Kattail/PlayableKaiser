@@ -1,0 +1,20 @@
+﻿l_english:
+
+    kaiser_bureau.0.name:0 "The Katzenvereinigungsbüro"
+    kaiser_bureau.0.desc:0 "Our advisors have alerted us of a newly formed bureau to facilitate the §YUnification of Flusion§!. It is headed by the venerable §YDouclaw MacCathur§!. He expects great things from the inevitable unification."
+    kaiser_bureau.0.a:0 "On screen"
+
+    kaiser_bureau.1.name:0 "Douclaw MacCathur"
+    kaiser_bureau.1.desc:0 "Oh, most esteemed Kaiser Kattail. Your faithful High Command and I have finished drawing up a myriad of war plans and operations to spearhead our upcoming planetary unification campaigns. We are all most eager to see them put into action, under your guidance."
+    kaiser_bureau.1.a:0 "On with it."
+    kaiser_bureau.1.a.tooltip:0 "The Flusionian Unification screen will be shown."
+
+    kaiser_bureau.2.name: ""
+    kaiser_bureau.3.name: ""
+
+    kaiser_bureau_tooltip:0 "Katzenvereinigungsbüro"
+
+    invade_nearby_nations:0 "We cannot invade a nation which we do not directly neighbor."
+    multiple_conquests_active:0 "We cannot launch a strike when engaging in more than one conquest!"
+
+    PKI_ATA_title: "Atallrian Sanctuary"

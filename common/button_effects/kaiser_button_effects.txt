@@ -49,6 +49,158 @@ pki_map_no_effect = {
 	effect = {}
 }
 
+### COUNTRIES
+
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = ATA
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = AXO
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = BYU
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = CYA
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = DTC
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = GNA
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = GTA
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = HAR
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = HOS
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = ILY
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = KAT
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = KIT
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = KRK
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = KRO
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = LAU
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = LIN
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = MER
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = NDK
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = NDR
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = NEK
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = NOR
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = PFL
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = PGM
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = PHH
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = POZ
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = PRO
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = RAV
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = ROQ
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = RUS
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = SAR
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = SOB
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = TER
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = VIX
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = WAC
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = WIN
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = YIN
+}
+inline_script = {
+	script = pki/pki_map
+	COUNTRY = ZUS
+}
+
+
 ### ADD FOCUSES HERE
 
 inline_script = {

@@ -1,9 +1,152 @@
 spriteTypes = {
     spriteType = { name = "GFX_pki_map_bg" texturefile = "gfx/interface/conquest_ui/pki_map_bg.dds" }
 
-	spriteType = { name = "GFX_pki_map_ATA" textureFile = "gfx/interface/conquest_ui/regions/pki_map_ATA_mask.dds" transParencecheck = yes }
-	spriteType = { name = "GFX_pki_map_ATA_color" textureFile = "gfx/interface/conquest_ui/pki_map_countries.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_ATA_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_ATA" textureFile = "gfx/interface/conquest_ui/regions/pki_map_ATA.dds" transParencecheck = yes }
 	spriteType = { name = "GFX_pki_map_ATA_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_ATA_mask.dds" transParencecheck = yes }
 	spriteType = { name = "GFX_pki_map_ATA_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_ATA_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_AXO" textureFile = "gfx/interface/conquest_ui/regions/pki_map_AXO.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_AXO_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_AXO_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_AXO_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_AXO_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_BYU" textureFile = "gfx/interface/conquest_ui/regions/pki_map_BYU.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_BYU_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_BYU_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_BYU_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_BYU_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_CYA" textureFile = "gfx/interface/conquest_ui/regions/pki_map_CYA.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_CYA_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_CYA_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_CYA_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_CYA_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_DTC" textureFile = "gfx/interface/conquest_ui/regions/pki_map_DTC.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_DTC_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_DTC_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_DTC_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_DTC_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_GNA" textureFile = "gfx/interface/conquest_ui/regions/pki_map_GNA.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_GNA_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_GNA_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_GNA_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_GNA_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_GTA" textureFile = "gfx/interface/conquest_ui/regions/pki_map_GTA.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_GTA_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_GTA_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_GTA_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_GTA_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_HAR" textureFile = "gfx/interface/conquest_ui/regions/pki_map_HAR.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_HAR_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_HAR_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_HAR_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_HAR_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_HOS" textureFile = "gfx/interface/conquest_ui/regions/pki_map_HOS.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_HOS_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_HOS_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_HOS_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_HOS_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_ILY" textureFile = "gfx/interface/conquest_ui/regions/pki_map_ILY.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_ILY_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_ILY_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_ILY_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_ILY_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_KAT" textureFile = "gfx/interface/conquest_ui/regions/pki_map_KAT.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_KAT_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_KAT_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_KAT_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_KAT_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_KIT" textureFile = "gfx/interface/conquest_ui/regions/pki_map_KIT.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_KIT_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_KIT_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_KIT_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_KIT_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_KRK" textureFile = "gfx/interface/conquest_ui/regions/pki_map_KRK.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_KRK_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_KRK_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_KRK_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_KRK_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_KRO" textureFile = "gfx/interface/conquest_ui/regions/pki_map_KRO.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_KRO_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_KRO_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_KRO_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_KRO_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_LAU" textureFile = "gfx/interface/conquest_ui/regions/pki_map_LAU.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_LAU_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_LAU_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_LAU_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_LAU_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_LIN" textureFile = "gfx/interface/conquest_ui/regions/pki_map_LIN.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_LIN_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_LIN_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_LIN_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_LIN_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_MER" textureFile = "gfx/interface/conquest_ui/regions/pki_map_MER.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_MER_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_MER_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_MER_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_MER_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_NDK" textureFile = "gfx/interface/conquest_ui/regions/pki_map_NDK.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_NDK_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_NDK_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_NDK_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_NDK_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_NDR" textureFile = "gfx/interface/conquest_ui/regions/pki_map_NDR.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_NDR_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_NDR_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_NDR_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_NDR_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_NEK" textureFile = "gfx/interface/conquest_ui/regions/pki_map_NEK.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_NEK_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_NEK_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_NEK_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_NEK_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_NOR" textureFile = "gfx/interface/conquest_ui/regions/pki_map_NOR.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_NOR_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_NOR_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_NOR_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_NOR_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_PFL" textureFile = "gfx/interface/conquest_ui/regions/pki_map_PFL.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_PFL_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_PFL_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_PFL_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_PFL_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_PGM" textureFile = "gfx/interface/conquest_ui/regions/pki_map_PGM.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_PGM_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_PGM_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_PGM_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_PGM_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_PHH" textureFile = "gfx/interface/conquest_ui/regions/pki_map_PHH.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_PHH_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_PHH_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_PHH_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_PHH_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_POZ" textureFile = "gfx/interface/conquest_ui/regions/pki_map_POZ.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_POZ_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_POZ_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_POZ_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_POZ_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_PRO" textureFile = "gfx/interface/conquest_ui/regions/pki_map_PRO.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_PRO_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_PRO_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_PRO_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_PRO_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_RAV" textureFile = "gfx/interface/conquest_ui/regions/pki_map_RAV.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_RAV_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_RAV_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_RAV_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_RAV_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_ROQ" textureFile = "gfx/interface/conquest_ui/regions/pki_map_ROQ.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_ROQ_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_ROQ_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_ROQ_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_ROQ_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_RUS" textureFile = "gfx/interface/conquest_ui/regions/pki_map_RUS.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_RUS_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_RUS_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_RUS_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_RUS_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_SAR" textureFile = "gfx/interface/conquest_ui/regions/pki_map_SAR.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_SAR_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_SAR_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_SAR_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_SAR_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_SOB" textureFile = "gfx/interface/conquest_ui/regions/pki_map_SOB.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_SOB_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_SOB_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_SOB_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_SOB_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_TER" textureFile = "gfx/interface/conquest_ui/regions/pki_map_TER.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_TER_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_TER_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_TER_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_TER_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_VIX" textureFile = "gfx/interface/conquest_ui/regions/pki_map_VIX.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_VIX_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_VIX_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_VIX_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_VIX_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_WAC" textureFile = "gfx/interface/conquest_ui/regions/pki_map_WAC.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_WAC_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_WAC_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_WAC_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_WAC_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_WIN" textureFile = "gfx/interface/conquest_ui/regions/pki_map_WIN.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_WIN_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_WIN_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_WIN_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_WIN_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_YIN" textureFile = "gfx/interface/conquest_ui/regions/pki_map_YIN.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_YIN_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_YIN_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_YIN_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_YIN_mask.dds" transParencecheck = yes }
+
+	spriteType = { name = "GFX_pki_map_ZUS" textureFile = "gfx/interface/conquest_ui/regions/pki_map_ZUS.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_ZUS_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_ZUS_mask.dds" transParencecheck = yes }
+	spriteType = { name = "GFX_pki_map_ZUS_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_ZUS_mask.dds" transParencecheck = yes }
 
 }
