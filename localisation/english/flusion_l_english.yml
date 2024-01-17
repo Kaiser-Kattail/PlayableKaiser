@@ -387,7 +387,7 @@
     decision_katzen_housing_dam:0 "Construct Housing Dams"
     decision_katzen_housing_dam_desc:0 "By constructing dams to drain various seas, new housing and residential developments may be opened up on this world."
 
-    decision_katzen_industrial_dam: "Construct Industiral Dams"
+    decision_katzen_industrial_dam: "Construct Industrial Dams"
     decision_katzen_industrial_dam_desc: "By constructing dams to provide increased cooling capabilities to our foundries and factories, industrial output can be increased."
    
     decision_katzen_defense_array_1:0 "Construct Katzen Defense Array"
@@ -402,7 +402,7 @@
     decision_pki_societal_restructuring_desc:0 "By changing how Flusion functions from the ground up, we will be able to achieve an extreme boost in efficiency.\n\n§RWARNING:§!\n§HThis will effectively kill half of the planet's population and destroy half of the districts.§!"
 
     decision_pki_further_restructuring:0 "Further Restructuring"
-    decision_pki_further_restructuring_desc:0 "By building more and more off of our existing work, we will be able to achieve an further boot in efficiency.\n\n§HThere are deminishing returns with futher restructuring!§!\n\n§RWARNING:§!\n§HThis will effectively kill half of the planet's population and destroy half of the districts.§!"
+    decision_pki_further_restructuring_desc:0 "By building more and more off of our existing work, we will be able to achieve an further boost in efficiency.\n\n§HThere are deminishing returns with futher restructuring!§!\n\n§RWARNING:§!\n§HThis will effectively kill half of the planet's population and destroy half of the districts.§!"
 
     pki_expand_flusion:0 "Increses §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow.§!"
     pki_expand_flusion_more:0 "Increses §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow.§!"
@@ -543,6 +543,9 @@
    
     PLAYABLE_PANZER_ARTILLERY_1:0 "Weltraumpanzergewehr"
     PLAYABLE_PANZER_ARTILLERY_1_DESC:0 "A heavy forward cannon designed for use in the Katzenweltraumpanzers."
+       
+    KREUZER_KANNONE:0 "Kreuzerkannone"
+    KREUZER_KANNONE_DESC:0 "A huge forward cannon designed for use on Katzenkreuzers. Rushed development means it's not as effective as some other models, but it will do for now..."
    
     temp_job_help:0 "Katzen Economical Reinforcement"
     temp_job_help_desc:0 "The Kaiser has ordered specific, somewhat harsh measures to ensure a smooth transition into the Flusio-Arcology."
@@ -1031,3 +1034,5 @@
     pki_leader_trait_command_limit_desc: "Excelling at logistic and strategic planning, this commander is able to command fleets that would overburden their lesser peers."
 
     pki_join_blokkats: "§RThe [owner.GetName] cannot join the Blokkats.§!"
+
+    pki_warforge_naval_cap: "Katzen War Forges"

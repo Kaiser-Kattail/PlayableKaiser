@@ -1,0 +1,17 @@
+﻿l_russian:
+  
+ quantum_catapult_BYPASS: "Состав перемещаемого флота" #NT!
+ quantum_catapult_BYPASS_DESC: "Эта система содержит §Y$quantum_catapult_1$§! или §YEHVE§!" #NT!
+  
+ QUANTUM_CATAPULT_COUNTRY_CANNOT_USE: "$TRIGGER_FAIL$ §Y[From.GetName]§! отказал нам в доступе к своей квантовой катапульте или EHVE." #NT!
+  
+ MESSAGE_FLEET_ORDER_CATAPULT_WINDUP_COMPLETE_TITLE: "Перемещение флота завершено" #NT!
+ MESSAGE_FLEET_ORDER_CATAPULT_WINDUP_COMPLETE_DESC: "$FLEET|Y$ завершил транзит и прибыл в $SYSTEM|Y$." #NT!
+  
+ FLEETORDER_QUANTUM_CATAPULT_HEADER: "Перемещаемый флот" #NT!
+ FLEETORDER_QUANTUM_CATAPULT_DESC: "Перенесите флот из системы с помощью §YКвантовой катапульты§! или §YEHVE§!." #NT!
+ QUANTUM_CATAPULT_PENALTY: "§YКвантовые катапульты§! теряют точность с увеличением дальности, поэтому флоты будут появляться в случайной системе в пределах указанного радиуса разброса.\n\n§YEHVE§! §H не теряют точность§! с увеличением дальности, а вместо этого создают червоточину в месте назначения. Эта червоточина останется открытой для переброски кораблей, пока не будет закрыта.\n\nФлоты, запущенные таким образом, получают [GetQuanticAmbushBonus] §YУвеличение скорострельности§! на £time£ §Y120 дней§!." #NT!
+ FLEET_ORDER_NO_QUANTUM_CATAPULT: "§RФлоты можно катапультировать только из системы с квантовой катапультой или EHVE§!." #NT!
+ FLEET_ORDER_NO_QUANTUM_CATAPULT_IN: "§RНет функционирующей Квантовой катапульты или EHVE в $SYSTEM|H$§!" #NT!
+  
+ FLEETORDER_CATAPULT_WINDUP: "Завершение перемещения: $DAYS|Y0$ дней" #NT!

@@ -1268,3 +1268,33 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = pki_misc.24
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		pki_is_katzenartig_imperium = yes
+		has_country_flag = unified_flusion
+		NOT = {
+			check_variable = {
+				which = pki_num_total_warforges
+				value = value:pki_num_total_warforges
+			}
+		}
+	}
+
+	immediate = {
+		set_variable = {
+			which = pki_num_total_warforges
+			value = value:pki_num_total_warforges
+		}
+		remove_modifier = pki_warforge_naval_cap
+		add_modifier = {
+			modifier = pki_warforge_naval_cap
+			days = -1
+			mult = value:pki_num_total_warforges
+		}
+	}
+}
