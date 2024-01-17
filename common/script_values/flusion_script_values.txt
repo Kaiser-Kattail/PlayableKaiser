@@ -23,3 +23,14 @@ pki_num_warforges = {
         mode = add
     }
 }
+
+pki_num_total_warforges = {
+    complex_trigger_modifier = {
+        trigger = count_galaxy_planet
+        trigger_scope = solar_system
+        parameters = {
+            limit = { has_planet_flag = war_forge }
+        }
+        mode = add
+    }
+}

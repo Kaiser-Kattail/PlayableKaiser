@@ -101,3 +101,8 @@ pki_scaling_colony = {
 	planet_max_districts_mult = -0.25
 	planet_jobs_produces_mult = -0.20
 }
+
+pki_warforge_naval_cap = {
+	country_naval_cap_mult = 0.01
+	starbase_shipyard_build_speed_mult = 0.025
+}

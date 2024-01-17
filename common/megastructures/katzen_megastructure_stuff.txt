@@ -31,10 +31,6 @@ katzen_war_forge_1 = {
 	upgrade_from = {
 		katzen_war_forge_0
 	}
-	country_modifier = {
-		country_naval_cap_mult = 0.01
-		starbase_shipyard_build_speed_mult = 0.025
-	}
 	potential = { always = yes }
 	ai_weight = { factor = 0 }
 
