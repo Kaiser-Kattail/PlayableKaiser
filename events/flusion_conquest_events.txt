@@ -1091,6 +1091,15 @@ country_event = {
 	immediate = {
 		player_flusion_unify_flusion = yes
 		add_tech_progress = { tech = tech_pki_warforge progress = 0.25 }
+		add_modifier = {
+			modifier = pki_warforge_naval_cap
+			days = -1
+			mult = value:pki_num_total_warforges
+		}
+		set_variable = {
+			which = pki_num_total_warforges
+			value = value:pki_num_total_warforges
+		}
 		event_target:playerflusion = {
 			remove_deposit = d_katown_palace_primitive
 			add_deposit = d_katown_palace
