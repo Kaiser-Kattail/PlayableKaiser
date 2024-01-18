@@ -19,10 +19,6 @@ pki_streamline_nation = {
     council_agenda_progress_speed = 0.3
 }
 
-pki_guh = {
-    defense_armies_add = -999
-}
-
 pki_guh2 = {
     pop_defense_armies_add = -999
 }

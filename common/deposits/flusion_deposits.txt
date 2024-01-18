@@ -872,5 +872,6 @@ d_pki_flusion_societal_restructuring = {
 	planet_modifier = {
 		giga_planet_job_size = 1
 		planet_building_build_speed_mult = 0.1
+		planet_decision_enact_speed_mult = 0.1
 	}
 }

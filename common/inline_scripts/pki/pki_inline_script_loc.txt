@@ -1,0 +1,185 @@
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = ATA
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = AXO
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = BYU
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = CYA
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = DTC
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = GNA
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = GTA
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = HAR
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = HOS
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = ILY
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = KAT
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = KIT
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = KRK
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = KRO
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = LAU
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = LIN
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = MER
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = NDK
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = NDR
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = NEK
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = NOR
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = PFL
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = PGM
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = PHH
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = POZ
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = PRO
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = RAV
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = ROQ
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = RUS
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = SAR
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = SOB
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = TER
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = VIX
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = WAC
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = WIN
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = YIN
+    TEXT = $TEXT$
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = ZUS
+    TEXT = $TEXT$
+}

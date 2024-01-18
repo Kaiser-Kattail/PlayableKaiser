@@ -1,0 +1,148 @@
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = ATA
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = AXO
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = BYU
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = CYA
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = DTC
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = GNA
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = GTA
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = HAR
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = HOS
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = ILY
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = KAT
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = KIT
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = KRK
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = KRO
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = LAU
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = LIN
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = MER
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = NDK
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = NDR
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = NEK
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = NOR
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = PFL
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = PGM
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = PHH
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = POZ
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = PRO
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = RAV
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = ROQ
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = RUS
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = SAR
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = SOB
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = TER
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = VIX
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = WAC
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = WIN
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = YIN
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = ZUS
+}
