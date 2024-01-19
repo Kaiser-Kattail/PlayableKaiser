@@ -95,7 +95,7 @@
 
     # Modifiers
     pki_flusion_ecu_modifier:0 "Flusio-Arcology"
-    pki_flusion_ecu_modifier_desc:0 "The Flusio-Arcology takes full advantage of Flusion's vast natural resources, in order to squeeze out every last bit of efficiency from the planet. The Katzen cities of Katown, Bundengrad and Teho have been expanded to gargantuan proportions, housing tens of billions of inhabitants each while a network of hyperefficient transportation highways surrounds the entire planet."
+    pki_flusion_ecu_modifier_desc:0 "The Flusio-Arcology takes full advantage of Flusion's vast natural resources, in order to squeeze out every last bit of efficiency from the planet. The Katzen cities of Katown, Bundengrad and Teho have been expanded to gargantuan proportions, housing tens of billions of inhabitants each while a network of hyper-efficient transportation highways surrounds the entire planet."
     pki_flusion_rich_modifier:0 "Exceptionally Rich World"
     pki_flusion_rich_modifier_desc:0 "This planet is incredibly rich in resources, and offers a spectacular amount of both arable and usable land. Both valuable heavy and light elements used for nuclear processes are exceptionally abundant within its crust. Furthermore, it also features vast veins of valuable resources scarcely found elsewhere in the galaxy. Any lucky civilization developing here would undoubtedly have an incredible advantage, both on the planetary and galactic scene.\n\n§YThis modifier will be removed if the planet turns into an Irradiated Desert, Tomb or Shattered World.§!"
     mod_katzen_ships_upkeep_mult:0 "Katzen Ship Upkeep Cost"
@@ -248,10 +248,10 @@
     tech_katzen_reactor:0 "Katzen Reactor Blueprints"
     tech_katzen_reactor_desc:0 "A number of potential innovations in the field of fusion power exist. The Katzens are eager to get started."
     tech_katzen_lab:0 "Katzen Science"
-    tech_katzen_lab_desc:0 "Katzen science is the finest in the galaxy! In order to prove this fact, new facilities must be constructed and numerous bureacratic inhibitors must be cleared to further push our knowledge."
+    tech_katzen_lab_desc:0 "Katzen science is the finest in the galaxy! In order to prove this fact, new facilities must be constructed and numerous bureaucratic inhibitors must be cleared to further push our knowledge."
     tech_katzen_housing:0 "Katzen Employment Centers"
     tech_katzen_housing_desc:0 "The Katzen Employment Center is an enormous building designed for the management of the fringe worlds of the Imperium. Made with efficiency in mind, it is designed so that the Kaiser never even has to look at the world for it to be incredibly productive."
-    tech_katzen_habitability:0 "Katzen Micro-Terraformation"
+    tech_katzen_habitability:0 "Katzen Micro-terraformation"
     tech_katzen_habitability_desc:0 "Certain planets do not require a drastic shift in climate to be made suitable for life, just a few small touches. Micro-terraformation will provide those small touches."
     tech_katzen_theater:0 "Katzen Media"
     tech_katzen_theater_desc:0 "Control of entertainment and the media are paramount to the success of our Imperium and the Kaiser's vision. Small-scale self-sustaining enterprises will provide all of the information our citizens need to know."
@@ -397,18 +397,19 @@
     pki_warforge_decision: "Begins §YKatzen War Forge§! construction in §Y[planet.GetName]§! Orbit, at a base build time of §Y480 days§!."
 
     decision_pki_societal_restructuring:0 "Societal Restructuring"
-    decision_pki_societal_restructuring_desc:0 "By changing how Flusion functions from the ground up, we will be able to achieve an extreme boost in efficiency.\n\n§RWARNING:§!\n§HThis will effectively kill half of the planet's population and destroy half of the districts.§!"
+    decision_pki_societal_restructuring_desc:0 "By changing how Flusion functions from the ground up, we will be able to achieve an extreme boost in efficiency.\n\n§RWARNING: This will effectively kill half of the planet's population and destroy half of the districts.§!"
 
     decision_pki_further_restructuring:0 "Further Restructuring"
-    decision_pki_further_restructuring_desc:0 "By building more and more off of our existing work, we will be able to achieve an further boost in efficiency.\n\n§HThere are deminishing returns with futher restructuring!§!\n\n§RWARNING:§!\n§HThis will effectively kill half of the planet's population and destroy half of the districts.§!"
+    decision_pki_further_restructuring_desc:0 "By building more and more off of our existing work, we will be able to achieve an further boost in efficiency.\n\n§HThere are diminishing returns with further restructuring.§!\n\n§RWARNING: This will effectively kill half of the planet's population and destroy half of the districts.§!"
 
-    pki_expand_flusion:0 "Increses §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow.§!"
-    pki_expand_flusion_more:0 "Increses §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow.§!"
+    pki_expand_flusion:0 "Increases §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow.§!"
+    pki_expand_flusion_more:0 "Increases §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow.§!"
 
     decision_pki_scaling_colony: "Create Semiautonomous Colony"
     decision_pki_scaling_colony_desc: "By handing over some control to the local government, the jobs can be managed with reduced effort."
 
     PKI_SCALING_COLONY: "Constructs a §Y$building_pki_katzen_housing$§!, providing jobs scaling with planet population while blocking additional buildings."
+    PKI_SCALING_COLONY_SECTOR: "Constructs a §Y$building_pki_katzen_housing$§! on all planets in the sector, providing jobs scaling with planet population while blocking additional buildings.\n\n§HOnly affects normal planets§!\n\n§RWARNING: Will forcibly remove buildings from all planets. Use at own risk!§!"
 
     PKI_NO_RELOCATION: "Prevents migration to §Y[capital_scope.GetName]§!."
     PKI_DEPOPULATE: "Migrates all pops from §Y[planet.GetName]§! to §Y[capital_scope.GetName]§!"
@@ -431,7 +432,7 @@
     approach_big_invest:0 "Large investment"
     approach_big_invest_tooltip:0 "We will invest a large amount of alloys into this project."
     katsit.10.name:0 "Project Mondkanone"
-    katsit.10.desc:0 "Kaiser Kattail has today officially given the greenlight for what is perhaps going to be the greatest engineering project of Flusion's history. Conceptualized by the Kaiser himself and designed by the Katzenartig Imperium's finest minds, §YProject Mondkanone§! aims to construct a gargantuan railgun emplacement known as the Mondkanone embedded into the surface of Muno itself.\n\nThis marvelous device, measuring several kilometers in size, shall be capable of accelerating a kinetic projectile to a significant fraction of the speed of light across interplanetary distances, which should ensure the safety of Flusion's people in the event of a hostile incursion from potential extraflusional invaders.\n\nAlready, numerous bases have popped up on Muno's surface, laying the groundwork for Project Mondkanone's construction site which shall be overseen by an ambitious Katzen astronaut known as Fuzz Pawldrin. Alongside these bases are numerous shipments of both skilled personnel and excavation equipment being brought to Muno, which shall work tirelessly during the coming decades in order to bring the Kaiser's vision to reality. \n\nWhile Flusion's other nations have expressed concerns at this endeavor, Kaiser Kattail has personally reassured them that this project is, and will remain a defensive weapon meant to protect all of Flusion, and that worries of it being turned against Flusion itself are unfounded, even offering Flusion's leading powers to participate in the project as a show of goodwill."
+    katsit.10.desc:0 "Kaiser Kattail has today officially given the green light for what is perhaps going to be the greatest engineering project of Flusion's history. Conceptualized by the Kaiser himself and designed by the Katzenartig Imperium's finest minds, §YProject Mondkanone§! aims to construct a gargantuan railgun emplacement known as the Mondkanone embedded into the surface of Muno itself.\n\nThis marvelous device, measuring several kilometers in size, shall be capable of accelerating a kinetic projectile to a significant fraction of the speed of light across interplanetary distances, which should ensure the safety of Flusion's people in the event of a hostile incursion from potential extraflusional invaders.\n\nAlready, numerous bases have popped up on Muno's surface, laying the groundwork for Project Mondkanone's construction site which shall be overseen by an ambitious Katzen astronaut known as Fuzz Pawldrin. Alongside these bases are numerous shipments of both skilled personnel and excavation equipment being brought to Muno, which shall work tirelessly during the coming decades in order to bring the Kaiser's vision to reality. \n\nWhile Flusion's other nations have expressed concerns at this endeavor, Kaiser Kattail has personally reassured them that this project is, and will remain a defensive weapon meant to protect all of Flusion, and that worries of it being turned against Flusion itself are unfounded, even offering Flusion's leading powers to participate in the project as a show of goodwill."
     katsit.10.A:0 "No investment"
     katsit.10.B:0 "Low investment"
     katsit.10.C:0 "Medium investment"
@@ -447,7 +448,7 @@
 
     situation_kaiser_moon_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
     situation_kaiser_moon_type:0 "$situation_kaiser_moon$"
-    situation_new_moon_desc: "The Kaiser has ordered construction of another moon. Allocate alloys to complete this proeject."
+    situation_new_moon_desc: "The Kaiser has ordered construction of another moon. Allocate alloys to complete this project."
 
     situation_project_celestia:0 "Project Höchstedominanz"
     situation_project_celestia_type:0 "Project Höchstedominanz"
@@ -623,7 +624,7 @@
     tr_flusion_finish_effect: "Unlocks every Katzen tech as a research option.\nUnlocks the §YFlusio-Arcology§!.\nOur colonies suffer §Rstability penalties§! if they have more than 50% of §YFlusion's§! population!"
     tr_work_arrangements:0 "Work Arrangements"
     tr_work_arrangements_delayed:0 "By carefully managing our empire, we can select individuals or entire populations to travel to Flusion under the guise of wanting work rather than state-mandated movement."
-    tr_work_arrangements_effect:0 "All colonies but §YFlusion§! receive §Y+20%§! Emmigration Push.\nUnlocks the §YFlusionian Migration§! policy."
+    tr_work_arrangements_effect:0 "All colonies but §YFlusion§! receive §Y+20%§! Emigration Push.\nUnlocks the §YFlusionian Migration§! policy."
     tr_border_colonies:0 "Border Colonies"
     tr_border_colonies_delayed:0 "The escape to the rimworlds for a rural setting makes populous if unproductive planets."
     tr_border_colonies_effect: "All colonies but §YFlusion§! receive §R-10%§! resources from £job£ §YJobs§! but §G+20%§! £pops£ §YPop§! growth speed."
@@ -650,7 +651,7 @@
     peacekeeper_army_desc:0 "A foreign taskforce sent to oversee and defend a Katzen colony, and to ensure loyalty to Flusion."
 
     meowrine_company:0 "Meowrine Company"
-    meowrine_company_desc: "A company of meowrines, genetically and surgically augmented and trained to use power armor, they are the scalpel of the Imperium."
+    meowrine_company_desc: "A company of Meowrines, genetically and surgically augmented and trained to use power armor, they are the scalpel of the Imperium."
 
     katzen_colony:0 "Katzenkolonie"
     katzen_colony_desc:0 "This world is one of the colonies of our imperium, and as such is less productive. People tend to start families on the frontier more often, however."
@@ -664,7 +665,7 @@
     pki_misc.4.b:0 "We are inevitable."
 
     pki_misc.5.name:0 "Kaiser Proclaims Galaktisches Katzimperium!"
-    pki_misc.5.desc:0 "The §YGroßkatzenartig Imperium§! has now expanded to cover the vast majority of the galaxy, and §YKaiser Kattail§! has once again decided to honor this milestone by renaming the nation to the \"Galactic Katzen Empire\", in order to better reflect the Katzens' now near full control of our galaxy.\n\nThe Katzen military machine has now grown to monstruous proportions, and the galaxy's hopes to vanquish the Imperium grow slimmer by the day, with the Kaiser stating that his empire would last \"until the stars burn out\"."
+    pki_misc.5.desc:0 "The §YGroßkatzenartig Imperium§! has now expanded to cover the vast majority of the galaxy, and §YKaiser Kattail§! has once again decided to honor this milestone by renaming the nation to the \"Galactic Katzen Empire\", in order to better reflect the Katzens' now near full control of our galaxy.\n\nThe Katzen military machine has now grown to monstrous proportions, and the galaxy's hopes to vanquish the Imperium grow slimmer by the day, with the Kaiser stating that his empire would last \"until the stars burn out\"."
     pki_misc.5.a:0 "This does not bode well."
     pki_misc.5.b:0 "Wunderbar!"
 
@@ -689,7 +690,7 @@
     pki_misc.6.hire_custom_tooltip: "§Y$NAME_gunfur$§! joins our empire as a §HLeader§!."
 
     leader_trait_neumeyer:0 "Neumayer's Order"
-    leader_trait_neumeyer_desc:0 "This leader promotes a philosophy of his own design - Neumayerism. Along with bolstering planetary control through military rule, he alots additional influence to law enforcement, being made to serve as his personal lackeys."
+    leader_trait_neumeyer_desc:0 "This leader promotes a philosophy of his own design - Neumayerism. Along with bolstering planetary control through military rule, he allots additional influence to law enforcement, being made to serve as his personal lackeys."
     NAME_neumeyer: "Emmeownuel Neumayer"
     pki_misc.18.title: "$NAME_neumeyer$"
     pki_misc.18.desc: "§HA well dressed, authoritative Katzen enters view. Sunglasses adorn his face, and after a brief moment they are taken off. He looks rather haughty, and finally looks at the screen to face the Kaiser.§!\n\n"Greetings."\n\n§HHis voice suggests a tyrant, a rather cold and disinterested tone.§!\n\n"I am a recent promotion to the rank of Katzgouverneur. What is my assignment?""
@@ -733,7 +734,7 @@
     centrism.5.a:0 "Wunderbar!"
 
     centrism.3.title:0 "Industrial Revolution on Flusion"
-    centrism.3.desc:0 "As the Kaiser's rule solidifies on Flusion, a grand transformation takes place. The planet's industries undergo a profound centralization, setting the stage for an unprecedented era of productivity and progress. The Kaiser's vision for a mighty industrial powerhouse is now within reach, empowering the planet with enhanced decision-making and accelerated construction capabilities.\n\nThe citizens of Flusion stand ready to shape their destiny amidst the whirring machinery and billowing smokestacks, paving the way for the Kaiser's millitary vision."
+    centrism.3.desc:0 "As the Kaiser's rule solidifies on Flusion, a grand transformation takes place. The planet's industries undergo a profound centralization, setting the stage for an unprecedented era of productivity and progress. The Kaiser's vision for a mighty industrial powerhouse is now within reach, empowering the planet with enhanced decision-making and accelerated construction capabilities.\n\nThe citizens of Flusion stand ready to shape their destiny amidst the whirring machinery and billowing smokestacks, paving the way for the Kaiser's military vision."
     centrism.3.a: "The universe awaits."
 
     kaiser_war_planet.7.name:0 "Project Höchstedominanz Complete"
@@ -780,7 +781,7 @@
     kaiser_docs_1_desc:0 "Flusion must first be unified in order for our Kaiser's plans for the rest of the galaxy to be achieved.\n\nThe §YKatzenvereinigungsbüro§! will be the first step in our Unification. There you will be able to engage in diplomacy with the rest of the Flusionian nations. As you conquest, a World Tension situation will progress. If it completes, the remaining Flusionian states will all declare war on you, so be careful. After unification has been achieved, we may then set our eyes on the stars and the other empires that await our unity."
 
     kaiser_docs_2:0 "2. Unique Ships"
-    kaiser_docs_2_desc:0 "Thanks to Katzen ingenuity, we have unique ships at our disposal.\n\nThey all have unique niches to fill, so our navy will be quite capable combined with regular ships. There are four unique ships available to us:\n\n§YKatzenweltraumpanzers§!: Small, fast space tanks with a large railgun at the front.\n§HUnlocked by§! £engineering_research£ §Y$tech_destroyers$§!\n\n§YLeerekatzenbombers§!: Bombers with plenty of torpedo slots.\n§HUnlocked by§! £engineering_research£ §Y$tech_cruisers$§!\n\n§YKatzenkreuzers§!: A jack of all trades cruiser, with a hanger and even a couple torpedos.\n§HUnlocked by§! £engineering_research£ §Y$tech_battleships$§!\n\n§YUnterraumboots§!: Torpedo boats with powerful cloaking capabilities.\n§HUnlocked by§! £physics_research£ §Y$tech_cloaking_1$§!"
+    kaiser_docs_2_desc:0 "Thanks to Katzen ingenuity, we have unique ships at our disposal.\n\nThey all have unique niches to fill, so our navy will be quite capable combined with regular ships. There are four unique ships available to us:\n\n§YKatzenweltraumpanzers§!: Small, fast space tanks with a large railgun at the front.\n§HUnlocked by§! £engineering_research£ §Y$tech_destroyers$§!\n\n§YLeerekatzenbombers§!: Bombers with plenty of torpedo slots.\n§HUnlocked by§! £engineering_research£ §Y$tech_cruisers$§!\n\n§YKatzenkreuzers§!: A jack of all trades cruiser, with a hanger and even a couple torpedoes.\n§HUnlocked by§! £engineering_research£ §Y$tech_battleships$§!\n\n§YUnterraumboots§!: Torpedo boats with powerful cloaking capabilities.\n§HUnlocked by§! £physics_research£ §Y$tech_cloaking_1$§!"
 
     kaiser_docs_3:0 "3. Celestial Projects"
     kaiser_docs_3_desc:0 "Projects like §YMondkanone§!, §YDominance§!, and §YHöchstedominanz§! are all started through §YAgendas§!. When finished, a situation will start to allow the construction of our celestial weapons.\n\nProject §YMondkanone§!: £alloys£ 10,000 Alloys required to complete\n\nProject §YDominance§!: £alloys£ 10,000 Alloys required to complete\n\nProject §YHöchstedominanz§!: £alloys£ 240,000 Alloys required to complete\n\nIn the case of a celestial weapon's destruction, a new situation may be started with a decision at any planet."
@@ -841,7 +842,7 @@
     #EHVE
     playable_kaiser_ehve:0 "Ereignis Horizont Versatz Einrichtung"
     playable_kaiser_ehve_DESC:0 "A complete and operational Katzen E.H.V.E., capable of generating wormholes to allow Katzen fleets to access otherwise unreachable systems."
-    playable_kaiser_ehve_MEGASTRUCTURE_DETAILS:0 "£galwonders£ $giga_list_category_megastructure$ - $giga_list_category_transportation$\nTransports §YFleets§! across the galaxy by creating a §YWormhole§! allowing any number of ships to go through.\n§LA device that stabilizes micro black holes that form in quantum foam to create tunnles through space.§!"
+    playable_kaiser_ehve_MEGASTRUCTURE_DETAILS:0 "£galwonders£ $giga_list_category_megastructure$ - $giga_list_category_transportation$\nTransports §YFleets§! across the galaxy by creating a §YWormhole§! allowing any number of ships to go through.\n§LA device that stabilizes micro black holes that form in quantum foam to create tunnels through space.§!"
 
     playable_kaiser_ehve_active:0 "Ereignis Horizont Versatz Einrichtung (§BActive§!)"
     playable_kaiser_ehve_active_DESC:0 "A complete and operational Katzen E.H.V.E., capable of generating wormholes to allow Katzen fleets to access otherwise unreachable systems."
@@ -869,10 +870,10 @@
     playable_kaiser_ehve_dummy_DESC:0 "Close Wormhole"
 
     playable_kaiser_ehve_cooldown:0 "Ereignis Horizont Versatz Einrichtung (§RCooldown§!)"
-    playable_kaiser_ehve_cooldown_DESC:0 "After sustaining a wormhole, a cooldown period is requred until this E.H.V.E. can be used again."
+    playable_kaiser_ehve_cooldown_DESC:0 "After sustaining a wormhole, a cooldown period is required until this E.H.V.E. can be used again."
 
     playable_kaiser_ehve_cooldown_dummy:0 "Ereignis Horizont Versatz Einrichtung"
-    playable_kaiser_ehve_cooldown_dummy_DESC:0 "After sustaining a wormhole, a cooldown period is requred until this E.H.V.E. can be used again."
+    playable_kaiser_ehve_cooldown_dummy_DESC:0 "After sustaining a wormhole, a cooldown period is required until this E.H.V.E. can be used again."
 
     pki_ehve.1.name:0 "E.H.V.E Active"
     pki_ehve.1.desc:0 "We have successfully established a wormhole connection between our §YE.H.V.E.§! and the §Y[event_target:playable_kaiser_ehve_target.GetName]§! System. We can now transfer our ships between the two systems as we please."
