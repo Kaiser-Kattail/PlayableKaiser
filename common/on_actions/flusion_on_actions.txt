@@ -86,8 +86,8 @@ on_modification_complete = {
 
 # Flusion Empires
 on_custom_diplomacy = {	
-	events = { 
-		flunat.0000
+	events = {
+		pki_flusion_nations.0000
 	}
 }
 

@@ -1,10 +1,39 @@
 pki_create_flusion_nations = {
 	event_target:flusionhome = {
-		#Flusion Species
-		#Haranians
+
 		create_species = {
-			name = "Haranian"
-			plural = "Haranians"
+			name = "NAME_CYA_SPECIES"
+			plural = "NAME_CYA_SPECIES_PLURAL"
+			class = MAM
+			portrait = mam14
+			homeworld = this
+			traits = {
+				trait = trait_pc_continental_preference
+				trait = trait_strong
+			}
+			effect = {
+				save_global_event_target_as = pki_CYA_species
+			}
+		}
+
+		create_species = {
+			name = "NAME_DTC_SPECIES"
+			plural = "NAME_DTC_SPECIES_PLURAL"
+			class = HUM
+			portrait = humanoid_03
+			homeworld = this
+			traits = {
+				trait = trait_pc_continental_preference
+				trait = trait_strong
+			}
+			effect = {
+				save_global_event_target_as = DTC_species
+			}
+		}
+
+		create_species = {
+			name = "NAME_HAR_SPECIES"
+			plural = "NAME_HAR_SPECIES_PLURAL"
 			class = HUM
 			portrait = humanoid_05
 			homeworld = this
@@ -14,13 +43,65 @@ pki_create_flusion_nations = {
 				trait = trait_decadent
 			}
 			effect = {
-				save_global_event_target_as = haranians
+				save_global_event_target_as = pki_HAR_species
 			}
 		}
-		#Lauranaise
+
 		create_species = {
-			name = "Lauranaise"
-			plural = "Lauranaise"
+			name = "NAME_GTA_SPECIES"
+			plural = "NAME_GTA_SPECIES_PLURAL"
+			class = FUN
+			portrait = fun1
+			homeworld = this
+			traits = {
+				trait = trait_pc_continental_preference
+				trait = trait_delicious
+				trait = trait_erudite
+				trait = trait_wasteful
+			}
+			effect = {
+				save_global_event_target_as = pki_GTA_species
+			}
+		}
+
+		create_species = {
+			name = "NAME_KRO_SPECIES"
+			plural = "NAME_KRO_SPECIES_PLURAL"
+			class = ART
+			portrait = art15
+			homeworld = this
+			traits = {
+				trait = trait_pc_continental_preference
+				trait = trait_industrious
+				trait = trait_rapid_breeders
+				trait = trait_sedentary
+				trait = trait_repugnant
+			}
+			effect = {
+				save_global_event_target_as = pki_KRO_species
+			}
+		}
+
+		create_species = {
+			name = "NAME_MER_SPECIES"
+			plural = "NAME_MER_SPECIES_PLURAL"
+			class = PLANT
+			portrait = pla14
+			homeworld = this
+			traits = {
+				trait = trait_pc_continental_preference
+				trait = trait_intelligent
+				trait = trait_sedentary
+				trait = trait_wasteful
+			}
+			effect = {
+				save_global_event_target_as = pki_MER_species
+			}
+		}
+
+		create_species = {
+			name = "NAME_LAU_SPECIES"
+			plural = "NAME_LAU_SPECIES_PLURAL"
 			class = REP
 			portrait = rep8
 			homeworld = this
@@ -29,13 +110,30 @@ pki_create_flusion_nations = {
 				trait = trait_rapid_breeders
 			}
 			effect = {
-				save_global_event_target_as = lauranaise
+				save_global_event_target_as = pki_LAU_species
 			}
 		}
-		#SYmbies
+
 		create_species = {
-			name = "Wacegi"
-			plural = "Wacegis"
+			name = "NAME_LIN_SPECIES"
+			plural = "NAME_LIN_SPECIES_PLURAL"
+			class = AVI
+			portrait = avi11
+			homeworld = this
+			traits = {
+				trait = trait_pc_continental_preference
+				trait = trait_talented
+				trait = trait_traditional
+				trait = trait_decadent
+			}
+			effect = {
+				save_global_event_target_as = pki_LIN_species
+			}
+		}
+
+		create_species = {
+			name = "NAME_PFL_SPECIES"
+			plural = "NAME_PFL_SPECIES_PLURAL"
 			class = FUN
 			portrait = fun11
 			homeworld = this
@@ -45,13 +143,49 @@ pki_create_flusion_nations = {
 				trait = trait_nomadic
 			}
 			effect = {
-				save_global_event_target_as = symbies
+				save_global_event_target_as = pki_PFL_species
 			}
 		}
+
+		create_species = {
+			name = "NAME_RAV_SPECIES"
+			plural = "NAME_RAV_SPECIES_PLURAL"
+			class = HUM
+			portrait = humanoid_hp_01
+			homeworld = this
+			traits = {
+				trait = trait_pc_continental_preference
+				trait = trait_intelligent
+				trait = trait_sedentary
+				trait = trait_wasteful
+			}
+			effect = {
+				save_global_event_target_as = pki_RAV_species
+			}
+		}
+
+		create_species = {
+			name = "NAME_ROQ_SPECIES"
+			plural = "NAME_ROQ_SPECIES_PLURAL"
+			class = HUM
+			portrait = human
+			homeworld = this
+			traits = {
+				trait = trait_pc_continental_preference
+				trait = trait_intelligent
+				trait = trait_charismatic
+				trait = trait_resilient
+				trait = trait_wasteful
+			}
+			effect = {
+				save_global_event_target_as = pki_ROQ_species
+			}
+		}
+
 		#Yinjites
 		create_species = {
-			name = "Yinjite"
-			plural = "Yinjites"
+			name = "NAME_YIN_SPECIES"
+			plural = "NAME_YIN_SPECIES_PLURAL"
 			class = HUM
 			portrait = humanoid_hp_09
 			homeworld = this
@@ -61,13 +195,13 @@ pki_create_flusion_nations = {
 				trait = trait_sedentary
 			}
 			effect = {
-				save_global_event_target_as = yinjites
+				save_global_event_target_as = pki_YIN_species
 			}
 		}
 		#Ezics
 		create_species = {
-			name = "Zuspri"
-			plural = "Zuspri"
+			name = "NAME_ZUS_SPECIES"
+			plural = "NAME_ZUS_SPECIES_PLURAL"
 			class = REP
 			portrait = rep10
 			homeworld = this
@@ -81,709 +215,15 @@ pki_create_flusion_nations = {
 				trait = trait_slow_breeders
 			}
 			effect = {
-				save_global_event_target_as = ezics
-			}
-		}
-
-		#Kronks
-		create_species = {
-			name = "Kronk"
-			plural = "Kronks"
-			class = ART
-			portrait = art15
-			homeworld = this
-			traits = {
-				trait = trait_pc_continental_preference
-				trait = trait_industrious
-				trait = trait_rapid_breeders
-				trait = trait_sedentary
-				trait = trait_repugnant
-			}
-			effect = {
-				save_global_event_target_as = kronks
-			}
-		}
-
-		#Roqualians
-		create_species = {
-			name = "Roqualian"
-			plural = "Roqualians"
-			class = HUM
-			portrait = human
-			homeworld = this
-			traits = {
-				trait = trait_pc_continental_preference
-				trait = trait_intelligent
-				trait = trait_charismatic
-				trait = trait_resilient
-				trait = trait_wasteful
-			}
-			effect = {
-				save_global_event_target_as = solakians
-			}
-		}
-
-		#Mercurians
-		create_species = {
-			name = "Mercurian"
-			plural = "Mercurians"
-			class = PLANT
-			portrait = pla14
-			homeworld = this
-			traits = {
-				trait = trait_pc_continental_preference
-				trait = trait_intelligent
-				trait = trait_sedentary
-				trait = trait_wasteful
-			}
-			effect = {
-				save_global_event_target_as = mercurians
-			}
-		}
-		#Ravkanians
-		create_species = {
-			name = "Ravkan"
-			plural = "Ravkans"
-			class = HUM
-			portrait = humanoid_hp_01
-			homeworld = this
-			traits = {
-				trait = trait_pc_continental_preference
-				trait = trait_intelligent
-				trait = trait_sedentary
-				trait = trait_wasteful
-			}
-			effect = {
-				save_global_event_target_as = ravkans
-			}
-		}
-
-		#Zousanians
-		create_species = {
-			name = "Linterian"
-			plural = "Linterians"
-			class = AVI
-			portrait = avi11
-			homeworld = this
-			traits = {
-				trait = trait_pc_continental_preference
-				trait = trait_talented
-				trait = trait_traditional
-				trait = trait_decadent
-			}
-			effect = {
-				save_global_event_target_as = zousans
-			}
-		}
-
-		#Cookians
-		create_species = {
-			name = "Galletian"
-			plural = "Galletians"
-			class = FUN
-			portrait = fun1
-			homeworld = this
-			traits = {
-				trait = trait_pc_continental_preference
-				trait = trait_delicious
-				trait = trait_erudite
-				trait = trait_wasteful
-			}
-			effect = {
-				save_global_event_target_as = cookians
-			}
-		}
-
-		#Droog
-		create_species = {
-			name = "Droog"
-			plural = "Droog"
-			class = HUM
-			portrait = humanoid_03
-			homeworld = this
-			traits = {
-				trait = trait_pc_continental_preference
-				trait = trait_strong
-			}
-			effect = {
-				save_global_event_target_as = droog
-			}
-		}
-
-		#Cyat
-		create_species = {
-			name = "Cyat"
-			plural = "Cyats"
-			class = MAM
-			portrait = mam14
-			homeworld = this
-			traits = {
-				trait = trait_pc_continental_preference
-				trait = trait_strong
-			}
-			effect = {
-				save_global_event_target_as = cyatianalas
+				save_global_event_target_as = pki_ZUS_species
 			}
 		}
 	}
 	#Create Flusion Nations
-	#Haranians
 
-	create_country = {
-		name = "NAME_Haranian"
-		adjective = "NAME_Haranians"
-		ethos = {
-			ethic = ethic_authoritarian
-			ethic = ethic_xenophobe
-			ethic = ethic_pacifist
-		}
-		authority = auth_imperial
-		civics = random
-		origin = origin_default_pre_ftl
-		flag = random
-		species = event_target:haranians
-		type = flusion_nation
-		effect = {
-			save_global_event_target_as = haranian_flunat
-			set_country_flag = flusion_nation_haranian
-		}
-	}
-	event_target:haranian_flunat = {
-		create_leader = {
-			class = official
-			species = event_target:haranians
-			name = "Fantasia"
-			skill = 5
-			set_age = 52
-			gender = female
-			traits = {
-				trait = pki_katzen_trait_elite
-			}
-			effect = {
-				set_leader_flag = fantasia
-				save_global_event_target_as = fantasia_flunat
-			}
-		}
-		assign_leader = event_target:fantasia_flunat
-		establish_communications_no_message = root
-	}
-
-	#Lauranaise
-	create_country = {
-		name = "NAME_Lauranaise"
-		adjective = "NAME_Lauranaises"
-		ethos = {
-			ethic = ethic_authoritarian
-			ethic = ethic_xenophobe
-			ethic = ethic_militarist
-		}
-		authority = auth_oligarchic
-		civics = random
-		origin = origin_default_pre_ftl
-		flag = random
-		species = event_target:lauranaise
-		type = flusion_nation
-		effect = {
-			save_global_event_target_as = lauranaise_flunat
-			set_country_flag = flusion_nation_lauranaise
-		}
-	}
-	event_target:lauranaise_flunat = {
-		create_leader = {
-			class = official
-			species = event_target:lauranaise
-			name = "Aaron N. Bleu"
-			skill = 4
-			set_age = 36
-			gender = male
-			traits = {
-				trait = pki_katzen_trait_elite
-			}
-			effect = {
-				set_leader_flag = aaron
-				save_global_event_target_as = aaron_flunat
-			}
-		}
-		assign_leader = event_target:aaron_flunat
-		establish_communications_no_message = root
-	}
-
-	#Symbies
-	create_country = {
-		name = "NAME_Symbies"
-		adjective = "NAME_Symbiess"
-		ethos = {
-			ethic = ethic_fanatic_egalitarian
-			ethic = ethic_xenophile
-		}
-		authority = auth_democratic
-		civics = random
-		origin = origin_default_pre_ftl
-		flag = random
-		species = event_target:symbies
-		type = flusion_nation
-		effect = {
-			save_global_event_target_as = symbie_flunat
-			set_country_flag = flusion_nation_symbies
-		}
-	}
-	event_target:symbie_flunat = {
-		create_leader = {
-			class = official
-			species = event_target:symbies
-			name = "James Madjacks"
-			skill = 2
-			set_age = 43
-			gender = female
-			traits = {
-				trait = pki_katzen_trait_elite
-			}
-			effect = {
-				set_leader_flag = james
-				save_global_event_target_as = james_flunat
-			}
-		}
-		assign_leader = event_target:james_flunat
-		establish_communications_no_message = root
-	}
-
-	#Yinjites
-	create_country = {
-		name = "NAME_Yinjites"
-		adjective = "NAME_Yinjite"
-		ethos = {
-			ethic = ethic_materialist
-			ethic = ethic_egalitarian
-			ethic = ethic_militarist
-		}
-		authority = auth_democratic
-		civics = random
-		origin = origin_default_pre_ftl
-		flag = random
-		species = event_target:yinjites
-		type = flusion_nation
-		effect = {
-			save_global_event_target_as = yinjite_flunat
-			set_country_flag = flusion_nation_yinjites
-		}
-	}
-	event_target:yinjite_flunat = {
-		create_leader = {
-			class = scientist
-			species = event_target:yinjites
-			name = "Tezu Doe"
-			skill = 5
-			set_age = 46
-			gender = female
-			traits = {
-				trait = pki_katzen_trait_elite
-			}
-			effect = {
-				set_leader_flag = tezu
-				save_global_event_target_as = tezu_flunat
-			}
-		}
-		assign_leader = event_target:tezu_flunat
-		establish_communications_no_message = root
-	}
-
-	#Cyatianala
-	create_country = {
-		name = "NAME_Cyatianalas"
-		adjective = "NAME_Cyatianala"
-		ethos = {
-			ethic = ethic_spiritualist
-			ethic = ethic_militarist
-			ethic = ethic_xenophile
-		}
-		authority = auth_imperial
-		civics = random
-		origin = origin_default_pre_ftl
-		flag = random
-		species = event_target:cyatianalas
-		type = flusion_nation
-		effect = {
-			save_global_event_target_as = cyatianala_flunat
-			set_country_flag = flusion_nation_cyatianala
-		}
-	}
-	event_target:cyatianala_flunat = {
-		create_leader = {
-			class = scientist
-			species = event_target:cyatianalas
-			name = "Kittita"
-			skill = 5
-			set_age = 46
-			gender = female
-			traits = {
-				trait = pki_katzen_trait_elite
-			}
-			effect = {
-				set_leader_flag = kittita
-				save_global_event_target_as = kittita_flunat
-			}
-		}
-		assign_leader = event_target:kittita_flunat
-		establish_communications_no_message = root
-	}
-
-	#Mercuria
-	create_country = {
-		name = "NAME_Mercurians"
-		adjective = "NAME_Mercurian"
-		ethos = {
-			ethic = ethic_fanatic_spiritualist
-			ethic = ethic_militarist
-		}
-		authority = auth_imperial
-		civics = random
-		origin = origin_default_pre_ftl
-		flag = random
-		species = event_target:mercurians
-		type = flusion_nation
-		effect = {
-			save_global_event_target_as = mercuria_flunat
-			set_country_flag = flusion_nation_mercuria
-		}
-	}
-	event_target:mercuria_flunat = {
-		create_leader = {
-			class = commander
-			species = event_target:mercurians
-			name = "King Aven Moll"
-			skill = 5
-			set_age = 46
-			gender = male
-			traits = {
-				trait = pki_katzen_trait_elite
-			}
-			effect = {
-				set_leader_flag = cattail
-				save_global_event_target_as = cattail_flunat
-			}
-		}
-		assign_leader = event_target:cattail_flunat
-		establish_communications_no_message = root
-	}
-
-	#Ezicanian Empire
-	create_country = {
-		name = "NAME_Ezics"
-		adjective = "NAME_Ezic"
-		ethos = {
-			ethic = ethic_fanatic_pacifist
-			ethic = ethic_xenophobe
-		}
-		authority = auth_oligarchic
-		civics = random
-		origin = origin_default_pre_ftl
-		flag = random
-		species = event_target:ezics
-		type = flusion_nation
-		effect = {
-			save_global_event_target_as = ezic_flunat
-			set_country_flag = flusion_nation_ezic
-		}
-	}
-	event_target:ezic_flunat = {
-		create_leader = {
-			class = commander
-			species = event_target:ezics
-			name = "Tyukl Kaau"
-			skill = 5
-			set_age = 46
-			gender = male
-			traits = {
-				trait = pki_katzen_trait_elite
-			}
-			effect = {
-				set_leader_flag = hornsfelt
-				save_global_event_target_as = hornsfelt_flunat
-			}
-		}
-		assign_leader = event_target:hornsfelt_flunat
-		establish_communications_no_message = root
-	}
-
-	#Droog
-	create_country = {
-		name = "NAME_Droog"
-		adjective = "NAME_Droogs"
-		ethos = {
-			ethic = ethic_fanatic_xenophile
-			ethic = ethic_egalitarian
-		}
-		authority = auth_democratic
-		civics = random
-		origin = origin_default_pre_ftl
-		flag = random
-		species = event_target:droog
-		type = flusion_nation
-		effect = {
-			save_global_event_target_as = droog_flunat
-			set_country_flag = flusion_nation_droog
-		}
-	}
-	event_target:droog_flunat = {
-		create_leader = {
-			class = scientist
-			species = event_target:droog
-			name = "Xavier Damascus"
-			skill = 4
-			set_age = 28
-			gender = male
-			traits = {
-				trait = pki_katzen_trait_elite
-			}
-			effect = {
-				set_leader_flag = xavier
-				save_global_event_target_as = xavier_flunat
-			}
-		}
-		assign_leader = event_target:xavier_flunat
-		establish_communications_no_message = root
-	}
-
-	#Zousa
-	create_country = {
-		name = "NAME_Zousans"
-		adjective = "NAME_Zousan"
-		ethos = {
-			ethic = ethic_fanatic_spiritualist
-			ethic = ethic_authoritarian
-		}
-		authority = auth_imperial
-		civics = random
-		origin = origin_default_pre_ftl
-		flag = random
-		species = event_target:zousans
-		type = flusion_nation
-		effect = {
-			save_global_event_target_as = zousan_flunat
-			set_country_flag = flusion_nation_zousa
-		}
-	}
-	event_target:zousan_flunat = {
-		create_leader = {
-			class = official
-			species = event_target:zousans
-			name = "Dimora"
-			skill = 2
-			set_age = 34
-			gender = female
-			traits = {
-				trait = pki_katzen_trait_elite
-			}
-			effect = {
-				set_leader_flag = dimora
-				save_global_event_target_as = dimora_flunat
-			}
-		}
-		assign_leader = event_target:dimora_flunat
-		establish_communications_no_message = root
-	}
-
-	#Ravkans
-	create_country = {
-		name = "NAME_Ravkans"
-		adjective = "NAME_Ravkan"
-		ethos = {
-			ethic = ethic_xenophobe
-			ethic = ethic_spiritualist
-			ethic = ethic_authoritarian
-		}
-		authority = auth_dictatorial
-		civics = random
-		origin = origin_default_pre_ftl
-		flag = random
-		species = event_target:ravkans
-		type = flusion_nation
-		effect = {
-			save_global_event_target_as = ravkan_flunat
-			set_country_flag = flusion_nation_ravka
-		}
-	}
-	event_target:ravkan_flunat = {
-		create_leader = {
-			class = commander
-			species = event_target:ravkans
-			name = "Sunchen Muhame"
-			skill = 3
-			set_age = 87
-			gender = male
-			traits = {
-				trait = pki_katzen_trait_elite
-			}
-			effect = {
-				set_leader_flag = sunchen
-				save_global_event_target_as = sunchen_flunat
-			}
-		}
-		assign_leader = event_target:sunchen_flunat
-		establish_communications_no_message = root
-	}
-
-	#Solakians
-	create_country = {
-		name = "NAME_Solakians"
-		adjective = "NAME_Solakian"
-		ethos = {
-			ethic = ethic_xenophile
-			ethic = ethic_materialist
-			ethic = ethic_egalitarian
-		}
-		authority = auth_democratic
-		civics = random
-		origin = origin_default_pre_ftl
-		flag = {
-			icon={
-				category="flusionian"
-				file="solakia_flag.dds"
-			}
-			background={
-				category="backgrounds"
-				file="circle.dds"
-			}
-			colors={
-				"dark_purple"
-				"purple"
-				"null"
-				"null"
-			}
-		}
-		species = event_target:solakians
-		type = flusion_nation
-		effect = {
-			save_global_event_target_as = solakia_flunat
-			set_country_flag = flusion_nation_solakia
-		}
-	}
-	event_target:solakia_flunat = {
-		create_leader = {
-			class = scientist
-			species = event_target:solakians
-			name = "Dofus Tequenik Machina"
-			skill = 4
-			set_age = 41
-			gender = male
-			traits = {
-				trait = pki_katzen_trait_elite
-			}
-			effect = {
-				set_leader_flag = dofus
-				save_global_event_target_as = dofus_flunat
-			}
-		}
-		assign_leader = event_target:dofus_flunat
-		establish_communications_no_message = root
-	}
-
-	#Cookian Steppes
-	create_country = {
-		name = "NAME_Cookies"
-		adjective = "NAME_Cookie"
-		ethos = {
-			ethic = ethic_authoritarian
-			ethic = ethic_fanatic_materialist
-		}
-		authority = auth_dictatorial
-		civics = random
-		origin = origin_default_pre_ftl
-		flag = {
-			icon={
-				category="ornate"
-				file="flag_ornate_14.dds"
-			}
-			background={
-				category="backgrounds"
-				file="pattern_01.dds"
-			}
-			colors={
-				"ochre_brown"
-				"white"
-				"null"
-				"null"
-			}
-		}
-		species = event_target:cookians
-		type = flusion_nation
-		effect = {
-			save_global_event_target_as = cookie_flunat
-			set_country_flag = flusion_nation_cookie
-		}
-	}
-	event_target:cookie_flunat = {
-		create_leader = {
-			class = official
-			species = event_target:cookians
-			name = "Troy Baker"
-			skill = 4
-			set_age = 41
-			gender = male
-			traits = {
-				trait = pki_katzen_trait_elite
-			}
-			effect = {
-				set_leader_flag = cookie
-				save_global_event_target_as = cookie_lead_flunat
-			}
-		}
-		assign_leader = event_target:cookie_lead_flunat
-		establish_communications_no_message = root
-	}
-	#Kronk
-	create_country = {
-		name = "NAME_Kronks"
-		adjective = "NAME_Kronk"
-		ethos = {
-			ethic = ethic_authoritarian
-			ethic = ethic_xenophobe
-			ethic = ethic_spiritualist
-		}
-		authority = auth_oligarchic
-		civics = random
-		origin = origin_default_pre_ftl
-		flag = {
-			icon={
-				category="domination"
-				file="domination_6.dds"
-			}
-			background={
-				category="backgrounds"
-				file="stripe.dds"
-			}
-			colors={
-				"dark_red"
-				"blue"
-				"null"
-				"null"
-			}
-		}
-		species = event_target:kronks
-		type = flusion_nation
-		effect = {
-			save_global_event_target_as = kronk_flunat
-			set_country_flag = flusion_nation_kronk
-		}
-	}
-	event_target:kronk_flunat = {
-		create_leader = {
-			class = commander
-			species = event_target:kronks
-			name = "Kronk"
-			skill = 4
-			set_age = 41
-			gender = male
-			traits = {
-				trait = pki_katzen_trait_elite
-			}
-			effect = {
-				set_leader_flag = kronk
-				save_global_event_target_as = kronk_lead_flunat
-			}
-		}
-		set_leader = last_created_leader
-		establish_communications_no_message = root
+	inline_script = {
+		script = pki/pki_inline_script
+		SCRIPT_NAME = country_creation
 	}
 }
 

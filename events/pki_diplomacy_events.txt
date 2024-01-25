@@ -1,0 +1,394 @@
+namespace = pki_flusion_nations
+
+#Find the correct nation to diplomacy with
+# Via on_custom_diplomacy | this = target country (player); from = country being contacted
+country_event = {
+	id = pki_flusion_nations.0000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			from = { is_country_type = flusion_nation }
+			pki_is_katzenartig_imperium = yes
+		}
+	}
+
+	immediate = {
+		set_country_flag = pki_contacted_country
+		from = {
+			switch = {
+				trigger = has_country_flag
+				inline_script = {
+					script = pki/pki_inline_script
+					SCRIPT_NAME = country_contact
+				}
+			}
+		}
+	}
+}
+
+namespace = pki_ATA
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = ATA
+	}
+}
+
+
+namespace = pki_AXO
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = AXO
+	}
+}
+
+
+namespace = pki_BYU
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = BYU
+	}
+}
+
+
+namespace = pki_CYA
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = CYA
+	}
+}
+
+
+namespace = pki_DTC
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = DTC
+	}
+}
+
+
+namespace = pki_GNA
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = GNA
+	}
+}
+namespace = pki_GTA
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = GTA
+	}
+}
+
+
+namespace = pki_HAR
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = HAR
+	}
+}
+
+
+namespace = pki_HOS
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = HOS
+	}
+}
+
+
+namespace = pki_ILY
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = ILY
+	}
+}
+
+
+namespace = pki_KAT
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = KAT
+	}
+}
+
+
+namespace = pki_KIT
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = KIT
+	}
+}
+
+
+namespace = pki_KRK
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = KRK
+	}
+}
+
+
+namespace = pki_KRO
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = KRO
+	}
+}
+
+
+namespace = pki_LAU
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = LAU
+	}
+}
+
+
+namespace = pki_LIN
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = LIN
+	}
+}
+
+
+namespace = pki_MER
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = MER
+	}
+}
+
+
+namespace = pki_NDK
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = NDK
+	}
+}
+
+
+namespace = pki_NDR
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = NDR
+	}
+}
+
+
+namespace = pki_NEK
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = NEK
+	}
+}
+
+
+namespace = pki_NOR
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = NOR
+	}
+}
+
+
+namespace = pki_PFL
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = PFL
+	}
+}
+
+
+namespace = pki_PGM
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = PGM
+	}
+}
+
+
+namespace = pki_PHH
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = PHH
+	}
+}
+
+
+namespace = pki_POZ
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = POZ
+	}
+}
+
+
+namespace = pki_PRO
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = PRO
+	}
+}
+
+
+namespace = pki_RAV
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = RAV
+	}
+}
+
+
+namespace = pki_ROQ
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = ROQ
+	}
+}
+
+
+namespace = pki_RUS
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = RUS
+	}
+}
+
+
+namespace = pki_SAR
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = SAR
+	}
+}
+
+
+namespace = pki_SOB
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = SOB
+	}
+}
+
+
+namespace = pki_TER
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = TER
+	}
+}
+
+
+namespace = pki_VIX
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = VIX
+	}
+}
+
+
+namespace = pki_WAC
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = WAC
+	}
+}
+
+
+namespace = pki_WIN
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = WIN
+	}
+}
+
+
+namespace = pki_YIN
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = YIN
+	}
+}
+namespace = pki_ZUS
+
+country_event = {
+	inline_script = {
+		script = pki/pki_country_event_01
+		COUNTRY = ZUS
+	}
+}

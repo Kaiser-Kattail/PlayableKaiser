@@ -97,7 +97,7 @@ KAT = {
 			sequential_name = KAT3_xx_ORD
 		}
 
-		atmospharischekatzenbomber_army = {
+		pki_air_fighter = {
 			sequential_name = KAT4_xx_ORD
 		}
 	}

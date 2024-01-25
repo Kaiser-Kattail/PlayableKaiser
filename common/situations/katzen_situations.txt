@@ -625,6 +625,11 @@ situation_naitonal_focus = {
 		on_select = {
 			custom_tooltip = approach_focus_tooltip_fast
 		}
+		modifier = {
+			country_engineering_research_produces_mult = -0.15
+			country_society_research_produces_mult = -0.15
+			country_physics_research_produces_mult = -0.15
+		}
 		resources = {
 			category = situations
 			upkeep = {

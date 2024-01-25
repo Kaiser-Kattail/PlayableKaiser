@@ -52,8 +52,14 @@ pki_map_no_effect = {
 ### COUNTRIES
 
 inline_script = {
-	script = pki/pki_inline_script
+	script = pki/pki_inline_script_katzen
 	SCRIPT_NAME = map
+}
+
+pki_map_country_contact = {
+	potential = { event_target:katzenartig = { has_country_flag = pki_conquest_map_tab } }
+	allow = { event_target:katzenartig = { NOT = { has_country_flag = pki_contacted_country } custom_tooltip_fail = { text = PKI_CANT_CONTACT_SELF } hidden_trigger = { NOT = { has_country_flag = pki_map_KAT_selected } } } }
+	effect = { hidden_effect = { event_target:katzenartig = { country_event = { id = pki_flusion_nations.0000 } } } }
 }
 
 ### ADD FOCUSES HERE

@@ -1,0 +1,33 @@
+create_country = {
+    name = "pki_$COUNTRY$_title"
+    adjective = "pki_$COUNTRY$_adj"
+    ethos = {
+        ethic = ethic_fanatic_xenophile
+        ethic = ethic_materialist
+    }
+    authority = auth_oligarchic
+    civics = random
+    origin = origin_default
+    flag = random
+    species = event_target:pki_$COUNTRY$_species
+    type = flusion_nation
+    effect = {
+        save_global_event_target_as = pki_$COUNTRY$_country
+        set_country_flag = pki_$COUNTRY$
+        create_leader = {
+            class = official
+            species = event_target:pki_$COUNTRY$_species
+            name = "pki_$COUNTRY$_leader"
+            skill = random
+            set_age = 30
+            gender = indeterminable
+            immortal = yes
+            effect = {
+                save_global_event_target_as = pki_$COUNTRY$_leader
+            	#change_leader_portrait = pki_$COUNTRY$_leader
+            }
+        }
+        assign_leader = event_target:pki_$COUNTRY$_leader
+        establish_communications_no_message = root
+    }
+}

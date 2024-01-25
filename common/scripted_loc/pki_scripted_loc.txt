@@ -5,7 +5,7 @@ defined_text = {
         SCRIPT_NAME = map_info
         TEXT = title
     }
-    default = "PKI_PRESCRIPTED_EMPIRE_NAME"
+    default = "PKI_PLACEHOLDER"
 }
 
 defined_text = {
@@ -15,5 +15,5 @@ defined_text = {
         SCRIPT_NAME = map_info
         TEXT = info
     }
-    default = "PKI_PRESCRIPTED_EMPIRE_NAME"
+    default = "PKI_PLACEHOLDER"
 }

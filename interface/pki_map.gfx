@@ -1,6 +1,18 @@
 spriteTypes = {
     spriteType = { name = "GFX_pki_map_bg" texturefile = "gfx/interface/conquest_ui/pki_map_bg.dds" }
 
+	flagSpriteType = {
+		name = "GFX_pki_empire_flag_frame"
+		textureFile = "gfx/interface/flags/empire_flag_128_frame.dds"		#this one will determine the size of the sprite
+		effectFile = "gfx/FX/flag_sprite.shader"
+		noOfFrames = 1
+
+		bg_position = { x = 10 y = 10 }
+		bg_size = { width = 111 height = 111 }
+		symbol_position = { x = 24 y = 24 }
+		symbol_size = { width = 83 height = 83 }
+	}
+
 	spriteType = { name = "GFX_pki_map_ATA" textureFile = "gfx/interface/conquest_ui/regions/pki_map_ATA.dds" transParencecheck = yes }
 	spriteType = { name = "GFX_pki_map_ATA_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_ATA_mask.dds" transParencecheck = yes }
 	spriteType = { name = "GFX_pki_map_ATA_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_ATA_mask.dds" transParencecheck = yes }

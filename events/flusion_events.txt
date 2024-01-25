@@ -9,7 +9,14 @@ namespace = flusion
 event = {
 	id = flusion.1
 	hide_window = yes
-	is_triggered_only = yes	
+	is_triggered_only = yes
+
+	trigger = {
+		any_country = {
+			pki_is_katzenartig_imperium = yes
+		}
+	}
+
 	immediate = {
 		set_global_flag = pki_enabled
 		every_playable_country = {
@@ -299,6 +306,8 @@ country_event = {
 			}
 		}
 		set_country_flag = flusion_setup_complete
+
+		set_country_flag = pki_map_KAT_selected
 
 		pki_set_army_limits = yes
 		pki_refresh_all_army_limits = yes

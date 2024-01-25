@@ -17,4 +17,10 @@
     invade_nearby_nations:0 "We cannot invade a nation which we do not directly neighbor."
     multiple_conquests_active:0 "We cannot launch a strike when engaging in more than one conquest!"
 
+    PKI_INFO: "Country Info"
+
+    PKI_PLACEHOLDER: "£GFX_pki_emoji_kaiserauditor£Uhhh, you arent supposed to see this text... ping PIECAT on discord very angrily"
+
+    PKI_CANT_CONTACT_SELF: "We cannot contact our self."
+
     PKI_ATA_title: "Atallrian Sanctuary"

@@ -515,8 +515,8 @@
  gepanzertertank_army: "Gepanzerter Division" #NT!
  gepanzertertank_army_desc: "The Gepanzerters are a lighter and arguably more realistic version of the Imperium's heavy hitting Riesigerkatzenpanzers. Ranging from standard sizes to 50 meters long, these units are the standard when it comes to armored warfare in the name of the Kaiser." #NT!
   
- atmospharischekatzenbomber_army: "Katzenbomber Fleet" #NT!
- atmospharischekatzenbomber_army_desc: "These bombers follow a radical new design philosophy that allows the bomb bays to pack significantly more firepower without losing speed. The bombers themselves provide heavy ordnance support wherever and whenever it's needed." #NT!
+ pki_air_fighter: "Katzenbomber Fleet" #NT!
+ pki_air_fighter_desc: "These bombers follow a radical new design philosophy that allows the bomb bays to pack significantly more firepower without losing speed. The bombers themselves provide heavy ordnance support wherever and whenever it's needed." #NT!
   
  luftkatzenvernichter_army: "Luftkatzenvernichter Fleet" #NT!
  luftkatzenvernichter_army_desc: "A fleet consisting of nuclear bombers, these squadrons annihilate defenses with ease. Not much will survive the devastation, however." #NT!

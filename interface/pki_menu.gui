@@ -255,22 +255,23 @@ guiTypes = {
 
 		effectButtonType = {
 			name = focus_tree_background
-			position = { x = +10 y = +56 }
-			size = { width = 1602 height = 836 }
+			position = { x = +1 y = +52 }
+			size = { width = 1616 height = 845 }
 			orientation = upper_left
 			alwaysTransparent = yes
 
-			quadTextureSprite = "GFX_tiles_frame"
+			quadTextureSprite = "GFX_tiles_frame_light"
 
 			effect = pki_focus_line_no_effect
 		}
 
 		effectButtonType = {
-			name = decisions_frame
+			name = info_frame
 			position = { x = +1300 y = +52 }
 			size = { width = 317 height = 845 }
 			orientation = upper_left
 			alwaysTransparent = yes
+
 
 			quadTextureSprite = "GFX_tiles_frame_light"
 
@@ -302,7 +303,7 @@ guiTypes = {
 				effectButtonType = {
 					name = title
 					size = { width = 284 height = 40 }
-					text = "[pki_map_selected_country]"
+					text = "PKI_INFO"
 					font = malgun_goth_24
 					quadTextureSprite = "GFX_tiles_light_area_cut_8"
 					effect = pki_map_no_effect
@@ -380,13 +381,76 @@ guiTypes = {
 			position = { x = +2 y = +7 }
 
 			effectButtonType = {
+				name = country_flag
+				position = { x = +20 y = +728 }
+				orientation = upper_left
+				alwaysTransparent = no
+				quadTextureSprite = "GFX_pki_empire_flag_frame"
+
+				effect = pki_map_country_contact
+			}
+
+			containerWindowType = {
+				name = actions
+
+				position = { x = +0 y = +8 }
+
+				effectButtonType = {
+					name = country_title
+					position = { x = +170 y = +730 }
+					size = { width = 328 height = 40 }
+					orientation = upper_left
+					alwaysTransparent = yes
+					format = center
+					text = "[pki_map_selected_country]"
+					font = malgun_goth_24
+					quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+
+					effect = pki_map_no_effect
+				}
+
+				effectButtonType = {
+					name = country_action_bg
+					position = { x = +170 y = +780 }
+					size = { width = 328 height = 64 }
+					orientation = upper_left
+					alwaysTransparent = yes
+					quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+
+					effect = pki_map_no_effect
+				}
+
+				effectButtonType = {
+					name = country_action_contact
+					position = { x = +170 y = +780 }
+					orientation = upper_left
+					text = "MESSAGE_DIPLOMACY_TITLE"
+					font = malgun_goth_24
+					quadTextureSprite = "GFX_button_animated_142"
+
+					effect = pki_map_country_contact
+				}
+
+				effectButtonType = {
+					name = country_action_uhh
+					position = { x = +326 y = +780 }
+					orientation = upper_left
+					text = "MESSAGE_DIPLOMACY_TITLE"
+					font = malgun_goth_24
+					quadTextureSprite = "GFX_button_animated_142"
+
+					effect = pki_map_country_contact
+				}
+			}
+
+			effectButtonType = {
 				name = map_frame
-				position = { x = +4 y = +50 }
-				size = { width = 1286 height = 649 }
+				position = { x = -1 y = +45 }
+				size = { width = 1296 height = 659 }
 				orientation = upper_left
 				alwaysTransparent = yes
 
-				quadTextureSprite = "GFX_tiles_frame"
+				quadTextureSprite = "GFX_tiles_frame_light"
 
 				effect = pki_map_no_effect
 			}
@@ -403,8 +467,6 @@ guiTypes = {
 
 				effect = pki_map_no_effect
 			}
-
-
 
 			containerWindowType = {
 				name = countries

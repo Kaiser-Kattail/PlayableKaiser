@@ -1,0 +1,5 @@
+allow = {
+    custom_tooltip = {
+        text = pki_air_$UNIT$_tt
+    }
+}

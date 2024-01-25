@@ -40,6 +40,10 @@ inline_script = {
 }
 inline_script = {
     script = pki/pki_$SCRIPT_NAME$
+    COUNTRY = KAT
+}
+inline_script = {
+    script = pki/pki_$SCRIPT_NAME$
     COUNTRY = KIT
 }
 inline_script = {

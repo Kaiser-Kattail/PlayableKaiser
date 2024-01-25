@@ -1,0 +1,52 @@
+id = pki_$COUNTRY$.01
+title = pki_$COUNTRY$.01.name
+desc = pki_$COUNTRY$.01.desc
+desc = pki_$COUNTRY$.01.desc
+desc = pki_$COUNTRY$.01.desc
+desc = pki_$COUNTRY$.01.desc
+desc = pki_$COUNTRY$.01.desc
+desc = pki_$COUNTRY$.01.desc
+
+is_triggered_only = yes
+diplomatic = yes
+
+picture_event_data = {
+    portrait = event_target:pki_$COUNTRY$_leader
+    planet_background = root.owner
+    graphical_culture = event_target:pki_$COUNTRY$_country
+    city_level = root.owner
+    room = event_target:pki_$COUNTRY$_country
+}
+location = event_target:flusionhome
+
+option = { # Lore
+    name = pki_$COUNTRY$.01.a
+    custom_tooltip = flunat_get_lore
+    is_dialog_only = yes
+    response_text = pki_$COUNTRY$.01.a.response
+}
+
+option = { # Gib land pls
+    name = pki_$COUNTRY$.01.b
+    custom_tooltip = flunat_demand_land
+    is_dialog_only = yes
+    response_text = pki_$COUNTRY$.01.b.response
+}
+
+option = { # WAR
+    name = pki_$COUNTRY$.01.c
+    custom_tooltip = flunat_war_dec
+    is_dialog_only = yes
+    response_text = pki_$COUNTRY$.01.c.response
+    hidden_effect = {
+        pki_wardec_sound = yes
+    }
+}
+
+option = { # Bye
+    name = pki_$COUNTRY$.01.d
+    default_hide_option = yes
+    hidden_effect = {
+        remove_country_flag = pki_contacted_country
+    }
+}

@@ -252,5 +252,10 @@ spriteTypes = {
 		name = "GFX_wg_pki_subjugation"
 		textureFile = "gfx/interface/icons/diplomacy/diplomacy_isvassal.dds"
 	}
+
+	spriteType = {
+		name = "GFX_text_pki_emoji_kaiserauditor"
+		textureFile = "gfx/interface/icons/modifiers/no_preset.dds"
+	}
 }
 
