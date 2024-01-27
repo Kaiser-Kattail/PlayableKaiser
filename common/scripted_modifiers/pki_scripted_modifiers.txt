@@ -1,0 +1,6 @@
+shipsize_giga_massive_planet_upkeep  = {
+    icon = mod_ship_upkeep_mult
+    category = ship
+    percentage = yes
+    good = no
+}
