@@ -112,3 +112,69 @@ katzen_administrator = {
 		weight = @overlord_job_weight
 	}
 }
+
+pki_war_worker = {
+    category = worker
+    can_set_priority = no
+    is_capped_by_modifier = yes
+    building_icon = building_foundry_1
+    clothes_texture_index = 1
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_worker_job
+
+    resources = {
+        category = planet_metallurgists
+        produces = {
+            alloys = 1
+        }
+    }
+
+    planet_modifier = {
+        pki_katzen_army_strength = 0.01
+    }
+
+    weight = {
+        weight = @worker_job_weight
+    }
+}
+
+pki_war_worker_drone = {
+    category = simple_drone
+    can_set_priority = no
+    is_capped_by_modifier = yes
+    building_icon = building_foundry_1
+    clothes_texture_index = 1
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_drone_job
+
+    resources = {
+        category = planet_metallurgists
+        produces = {
+            alloys = 1
+        }
+    }
+
+    planet_modifier = {
+        pki_katzen_army_strength = 0.01
+    }
+
+    weight = {
+        weight = @worker_job_weight
+    }
+}

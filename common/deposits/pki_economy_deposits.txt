@@ -1,0 +1,90 @@
+d_pki_economic_mechanics = {
+    is_for_colonizable = yes
+    icon = unused/d_strategic_resources
+    category = deposit_cat_energy
+
+    drop_weight = { weight = 0 }
+    potential = { always = no }
+
+    # multiplier modifier is pki_flusion_economy
+
+   #planet_modifier = {
+   #    giga_planet_job_size_tooltip_pre = 1
+   #}
+   #triggered_planet_modifier = {
+   #    potential = { always = yes }
+   #    multiplier = modifier:giga_planet_job_size
+   #    giga_planet_job_size_tooltip = 1
+   #    giga_planet_job_size_tooltip_post = 1
+   #}
+
+   #triggered_planet_modifier = {
+   #    potential = {
+   #        check_modifier_value = {
+   #            modifier = giga_planet_job_size
+   #            value = 0
+   #        }
+   #    }
+   #    giga_planet_job_size_empty = 1
+   #}
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+        }
+        multiplier = pki_industry_level
+        pki_flusion_economy = 1
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+        }
+        multiplier = pki_flusion_mining_industry
+        pki_flusion_economy = -1
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        multiplier = modifier:pki_flusion_economy
+        job_pki_war_worker_add = 0.2
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        multiplier = modifier:pki_flusion_economy
+        job_pki_war_worker_drone_add = 0.1
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        multiplier = pki_flusion_mining_industry
+        job_miner_add = 0.2
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        multiplier = pki_flusion_mining_industry
+        job_mining_drone_add = 0.2
+    }
+}

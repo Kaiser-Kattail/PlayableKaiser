@@ -28,6 +28,48 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = pki_flusion_nations.01
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = {
+			which = pki_building_slots
+			value = event_target:pki_HAR_country.pki_building_slots
+		}
+
+		event_target:pki_HAR_country = {
+			multiply_variable = {
+				which = pki_industry_level
+				value = 0.5
+			}
+		}
+
+
+		change_variable = {
+			which = pki_industry_level
+			value = event_target:pki_HAR_country.pki_industry_level
+		}
+
+		while = {
+			count = event_target:pki_HAR_country.pki_pops
+			event_target:flusionhome = {
+				create_pop = {
+					species = event_target:pki_HAR_species
+					ethos = random
+					effect = {
+						add_modifier = {
+							modifier = pop_recently_conquered
+							days = 3600
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 namespace = pki_ATA
 
 country_event = {

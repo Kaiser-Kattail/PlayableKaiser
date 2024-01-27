@@ -191,6 +191,8 @@ country_event = {
 
 		pki_create_flusion_nations = yes
 
+		pki_setup_flusion_economy = yes
+
 		create_country = {
 			name = "NAME_katzen_warforge"
 			type = pki_katzen_ship

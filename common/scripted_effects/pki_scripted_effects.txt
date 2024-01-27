@@ -40,3 +40,23 @@ pki_refresh_all_army_limits = {
     pki_refrest_army_limit =  {ARMY = gepanzertertank}
     pki_refrest_army_limit =  {ARMY = atmospharischekatzenbomber}
 }
+
+pki_setup_flusion_economy = {
+    add_deposit = d_pki_economic_mechanics
+    set_variable = {
+        which = pki_building_slots
+        value = @pki_KAT_building_slots
+    }
+
+    set_variable = {
+        which = pki_industry_level
+        value = @pki_KAT_industry_level
+    }
+}
+
+pki_test = {
+    set_variable = {
+        which = pki_flusion_mining_industry
+        value = 10
+    }
+}

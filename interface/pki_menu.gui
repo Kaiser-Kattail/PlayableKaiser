@@ -393,11 +393,11 @@ guiTypes = {
 			containerWindowType = {
 				name = actions
 
-				position = { x = +0 y = +8 }
+				position = { x = +170 y = +738 }
 
 				effectButtonType = {
 					name = country_title
-					position = { x = +170 y = +730 }
+					position = { x = +0 y = +0 }
 					size = { width = 328 height = 40 }
 					orientation = upper_left
 					alwaysTransparent = yes
@@ -411,7 +411,7 @@ guiTypes = {
 
 				effectButtonType = {
 					name = country_action_bg
-					position = { x = +170 y = +780 }
+					position = { x = +0 y = +50 }
 					size = { width = 328 height = 64 }
 					orientation = upper_left
 					alwaysTransparent = yes
@@ -422,7 +422,7 @@ guiTypes = {
 
 				effectButtonType = {
 					name = country_action_contact
-					position = { x = +170 y = +780 }
+					position = { x = +0 y = +50 }
 					orientation = upper_left
 					text = "MESSAGE_DIPLOMACY_TITLE"
 					font = malgun_goth_24
@@ -433,13 +433,30 @@ guiTypes = {
 
 				effectButtonType = {
 					name = country_action_uhh
-					position = { x = +326 y = +780 }
+					position = { x = +156 y = +50 }
 					orientation = upper_left
 					text = "MESSAGE_DIPLOMACY_TITLE"
 					font = malgun_goth_24
 					quadTextureSprite = "GFX_button_animated_142"
 
 					effect = pki_map_country_contact
+				}
+			}
+
+			containerWindowType = {
+				name = pki_economy
+
+				position = { x = +0 y = +0 }
+
+				effectButtonType = {
+					name = economy_bg
+					position = { x = +880 y = +723 }
+					size = { width = 400 height = 150 }
+					orientation = upper_left
+					alwaysTransparent = yes
+					quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+
+					effect = pki_map_no_effect
 				}
 			}
 

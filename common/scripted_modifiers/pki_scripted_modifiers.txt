@@ -1,0 +1,13 @@
+pki_flusion_economy = {
+    icon = mod_economy_capacity_add
+    neutral = yes
+    category = planet
+    percentage = no
+}
+
+pki_katzen_army_strength = {
+    icon = mod_army_attack_damage_mult
+    good = yes
+    category = planet
+    percentage = yes
+}
