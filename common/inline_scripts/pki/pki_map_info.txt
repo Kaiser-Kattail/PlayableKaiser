@@ -1,4 +1,4 @@
 text = {
-    trigger = { event_target:katzenartig = { has_country_flag = pki_map_$COUNTRY$_selected } }
+    trigger = { event_target:pki_player = { has_country_flag = pki_map_$COUNTRY$_selected } }
     localization_key = PKI_$COUNTRY$_$TEXT$
 }

@@ -42,7 +42,9 @@ pki_refresh_all_army_limits = {
 }
 
 pki_setup_flusion_economy = {
-    add_deposit = d_pki_economic_mechanics
+    event_target:pki_flusion_planet = {
+        add_deposit = d_pki_economic_mechanics
+    }
     set_variable = {
         which = pki_building_slots
         value = @pki_KAT_building_slots
@@ -52,11 +54,15 @@ pki_setup_flusion_economy = {
         which = pki_industry_level
         value = @pki_KAT_industry_level
     }
+
+    set_variable = {
+        which = pki_used_industry
+        value = 0
+    }
 }
 
-pki_test = {
-    set_variable = {
-        which = pki_flusion_mining_industry
-        value = 10
-    }
+pki_clear_map_selector_mults = {
+    remove_country_flag = pki_map_industry_mult_1
+    remove_country_flag = pki_map_industry_mult_10
+    remove_country_flag = pki_map_industry_mult_100
 }

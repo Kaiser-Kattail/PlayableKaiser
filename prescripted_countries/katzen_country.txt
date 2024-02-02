@@ -28,7 +28,7 @@ katzenartig_imperium= {
 	planet_class="pc_continental"
 	system_name = "PKI_PRESCRIPTED_CAPITAL_SYSTEM_NAME"
 
-	initializer="flusion_new_initializer"
+	initializer= pki_flusion_initializer
 	graphical_culture="reptilian_01"
 	city_graphical_culture="mammalian_01"
 	empire_flag = {

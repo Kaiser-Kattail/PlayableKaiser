@@ -19,8 +19,40 @@
 
     PKI_INFO: "Country Info"
 
-    PKI_PLACEHOLDER: "£GFX_pki_emoji_kaiserauditor£Uhhh, you arent supposed to see this text... ping PIECAT on discord very angrily"
+    PKI_BLANK: ""
+
+    PKI_PLACEHOLDER: "You should ping PIECAT NOW!"
+
+    pki_industry_total: "Industry: §Y[event_target:pki_player.pki_used_industry]§!/§Y[pki_total_industry]§!"
+    pki_industry_total_tt: "Industry used for Factory construction: §Y[event_target:pki_player.pki_used_industry]§!\nFactories left for £job_pki_war_worker£ [pki_industry_job] Jobs: §Y[pki_job_industry_factories]§!\n\n[pki_industry_job_effect_desc]\n\nTotal Industry: §Y[pki_total_industry]§!\n$t$From Factories: §Y[event_target:pki_player.pki_industry_level]§!\n[pki_industry_factory_modifier]"
+
+    pki_industrial_efficiency: "$t$Industrial Efficiency Multiplier: [pki_industry_factory_color][pki_industry_factory_efficiency]§!"
+    pki_industry_factory_efficiency_none: ""
+    pki_industry_factory_color_green: "§G"
+    pki_industry_factory_color_red: "§R"
+
+    pki_building_slots_total: "Building Slots: §Y[event_target:pki_player.pki_building_slots]§!"
+
+    job_pki_war_worker: "Factory Laborer"
+    job_pki_war_worker_plural:0 "Factory Laborers"
+    job_pki_war_worker_desc:0 "Unskilled labor. Long shifts. Low pay. All to keep the [owner_main_species.GetName] war machine moving."
+    job_pki_war_worker_effect_desc:0 "£job_pki_war_worker£ $job_pki_war_worker_plural$ turn £minerals£ §Y$minerals$§! into £alloys£ §Y$alloys$§!"
+    mod_job_pki_war_worker_add:0 "$job_pki_war_worker$ Jobs"
+    mod_job_pki_war_worker_per_pop:0 "§G+1§! $job_pki_war_worker$ Job per $VALUE$ Pops"
+    mod_job_pki_war_worker_per_pop_short:0 "\n§G+1§! £mod_job_pki_war_worker_add£ per $VALUE$ £pop£"
+
+
+    job_pki_war_worker_drone: "Menial Factory Drone"
+    job_pki_war_worker_drone_plural:0 "Menial Factory Drones"
+    job_pki_war_worker_drone_desc:0 "Menial work, done by the lowest factory drones. All to keep the [owner_main_species.GetName] war machine moving."
+    job_pki_war_worker_drone_effect_desc:0 "£job_pki_war_worker_drone£ $job_pki_war_worker_drone_plural$ turn £minerals£ §Y$minerals$§! into £alloys£ §Y$alloys$§!"
+    mod_job_pki_war_worker_drone_add:0 "$job_pki_war_worker_drone$ Jobs"
+    mod_job_pki_war_worker_drone_per_pop:0 "§G+1§! $job_pki_war_worker_drone$ Job per $VALUE$ Pops"
+    mod_job_pki_war_worker_drone_per_pop_short:0 "\n§G+1§! £mod_job_pki_war_worker_drone_add£ per $VALUE$ £pop£"
 
     PKI_CANT_CONTACT_SELF: "We cannot contact our self."
 
     PKI_ATA_title: "Atallrian Sanctuary"
+
+    PKI_KAT_title: "Katzenartig Imperium"
+    PKI_KAT_info: "blah blah blah,\nkaiser stuff more kaiser stuff"

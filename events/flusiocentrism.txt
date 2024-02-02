@@ -276,7 +276,7 @@ country_event = {
 						has_planet_flag = playerflusion
 					}
 				}
-				event_target:katzenartig = {
+				event_target:pki_player = {
 					change_variable = {
 						which = centralization_unity_modifier
 						value = 1
@@ -284,7 +284,7 @@ country_event = {
 				}
 			}
 		}
-		event_target:katzenartig = {
+		event_target:pki_player = {
 			add_modifier = {
 				modifier = central_stability
 				multiplier = centralization_unity_modifier

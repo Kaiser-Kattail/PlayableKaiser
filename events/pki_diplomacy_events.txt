@@ -54,7 +54,7 @@ country_event = {
 
 		while = {
 			count = event_target:pki_HAR_country.pki_pops
-			event_target:flusionhome = {
+			event_target:pki_flusion_planet = {
 				create_pop = {
 					species = event_target:pki_HAR_species
 					ethos = random

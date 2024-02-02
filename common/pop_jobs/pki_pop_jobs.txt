@@ -135,10 +135,9 @@ pki_war_worker = {
         produces = {
             alloys = 1
         }
-    }
-
-    planet_modifier = {
-        pki_katzen_army_strength = 0.01
+        upkeep = {
+            minerals = 0.5
+        }
     }
 
     weight = {
@@ -148,6 +147,7 @@ pki_war_worker = {
 
 pki_war_worker_drone = {
     category = simple_drone
+    icon = pki_war_worker
     can_set_priority = no
     is_capped_by_modifier = yes
     building_icon = building_foundry_1
@@ -168,10 +168,6 @@ pki_war_worker_drone = {
         produces = {
             alloys = 1
         }
-    }
-
-    planet_modifier = {
-        pki_katzen_army_strength = 0.01
     }
 
     weight = {

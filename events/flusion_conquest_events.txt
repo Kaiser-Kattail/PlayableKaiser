@@ -267,7 +267,7 @@ country_event = {
 		city_level = root.owner
 		room = personality_federation_builders_room
 	}
-	location = event_target:flusionhome
+	location = event_target:pki_flusion_planet
 	immediate = {
 		event_target:playerflusion = {
 			change_variable = {
@@ -277,7 +277,7 @@ country_event = {
 		}
 		event_target:playerflusion = {
 			player_flusion_annexed_solak = yes
-			set_owner = event_target:katzenartig
+			set_owner = event_target:pki_player
 		}
 		event_target:solakia_flunat = {
 			every_owned_army = {
@@ -289,7 +289,7 @@ country_event = {
 				set_hostile = no
 			}
 		}
-		event_target:katzenartig = {
+		event_target:pki_player = {
 			remove_country_flag = flusionian_war
 			remove_country_flag = war_with_solakia
 			every_situation = {
@@ -317,7 +317,7 @@ country_event = {
 		city_level = root.owner
 		room = personality_erudite_explorers_room
 	}
-	location = event_target:flusionhome
+	location = event_target:pki_flusion_planet
 	immediate = {
 		event_target:playerflusion = {
 			change_variable = {
@@ -327,7 +327,7 @@ country_event = {
 		}
 		event_target:playerflusion = {
 			player_flusion_annexed_cookie = yes
-			set_owner = event_target:katzenartig
+			set_owner = event_target:pki_player
 		}
 		event_target:cookie_flunat = {
 			every_owned_army = {
@@ -339,7 +339,7 @@ country_event = {
 				set_hostile = no
 			}
 		}
-		event_target:katzenartig = {
+		event_target:pki_player = {
 			remove_country_flag = flusionian_war
 			remove_country_flag = war_with_cookie
 			every_situation = {
@@ -367,7 +367,7 @@ country_event = {
 		city_level = root.owner
 		room = personality_evangelizing_zealots_room
 	}
-	location = event_target:flusionhome
+	location = event_target:pki_flusion_planet
 	immediate = {
 		event_target:playerflusion = {
 			change_variable = {
@@ -377,7 +377,7 @@ country_event = {
 		}
 		event_target:playerflusion = {
 			player_flusion_annexed_kronk = yes
-			set_owner = event_target:katzenartig
+			set_owner = event_target:pki_player
 		}
 		event_target:kronk_flunat = {
 			every_owned_army = {
@@ -389,7 +389,7 @@ country_event = {
 				set_hostile = no
 			}
 		}
-		event_target:katzenartig = {
+		event_target:pki_player = {
 			remove_country_flag = flusionian_war
 			remove_country_flag = war_with_kronk
 			every_situation = {
@@ -417,7 +417,7 @@ country_event = {
 		city_level = root.owner
 		room = personality_hegemonic_imperialists_room
 	}
-	location = event_target:flusionhome
+	location = event_target:pki_flusion_planet
 	immediate = {
 		event_target:playerflusion = {
 			change_variable = {
@@ -427,7 +427,7 @@ country_event = {
 		}
 		event_target:playerflusion = {
 			player_flusion_annexed_ravka = yes
-			set_owner = event_target:katzenartig
+			set_owner = event_target:pki_player
 		}
 		event_target:ravkan_flunat = {
 			every_owned_army = {
@@ -439,7 +439,7 @@ country_event = {
 				set_hostile = no
 			}
 		}
-		event_target:katzenartig = {
+		event_target:pki_player = {
 			remove_country_flag = flusionian_war
 			remove_country_flag = war_with_ravka
 			every_situation = {
@@ -467,7 +467,7 @@ country_event = {
 		city_level = root.owner
 		room = personality_evangelizing_zealots_room
 	}
-	location = event_target:flusionhome
+	location = event_target:pki_flusion_planet
 	immediate = {
 		event_target:playerflusion = {
 			change_variable = {
@@ -477,7 +477,7 @@ country_event = {
 		}
 		event_target:playerflusion = {
 			player_flusion_annexed_zousa = yes
-			set_owner = event_target:katzenartig
+			set_owner = event_target:pki_player
 		}
 		event_target:zousan_flunat = {
 			every_owned_army = {
@@ -489,7 +489,7 @@ country_event = {
 				set_hostile = no
 			}
 		}
-		event_target:katzenartig = {
+		event_target:pki_player = {
 			remove_country_flag = flusionian_war
 			remove_country_flag = war_with_zousa
 			every_situation = {
@@ -513,7 +513,7 @@ country_event = {
 	picture_event_data = {
 		room = no_video_feed_room
 	}
-	location = event_target:flusionhome
+	location = event_target:pki_flusion_planet
 	immediate = {
 		event_target:playerflusion = {
 			change_variable = {
@@ -523,7 +523,7 @@ country_event = {
 		}
 		event_target:playerflusion = {
 			player_flusion_annexed_droog = yes
-			set_owner = event_target:katzenartig
+			set_owner = event_target:pki_player
 		}
 		event_target:droog_flunat = {
 			every_owned_army = {
@@ -535,7 +535,7 @@ country_event = {
 				set_hostile = no
 			}
 		}
-		event_target:katzenartig = {
+		event_target:pki_player = {
 			remove_country_flag = flusionian_war
 			remove_country_flag = war_with_droog
 			every_situation = {
@@ -563,7 +563,7 @@ country_event = {
 		city_level = root.owner
 		room = personality_xenophobic_isolationists_room
 	}
-	location = event_target:flusionhome
+	location = event_target:pki_flusion_planet
 	immediate = {
 		event_target:playerflusion = {
 			change_variable = {
@@ -573,7 +573,7 @@ country_event = {
 		}
 		event_target:playerflusion = {
 			player_flusion_annexed_ezic = yes
-			set_owner = event_target:katzenartig
+			set_owner = event_target:pki_player
 		}
 		event_target:ezic_flunat = {
 			every_owned_army = {
@@ -585,7 +585,7 @@ country_event = {
 				set_hostile = no
 			}
 		}
-		event_target:katzenartig = {
+		event_target:pki_player = {
 			remove_country_flag = flusionian_war
 			remove_country_flag = war_with_ezic
 			every_situation = {
@@ -613,7 +613,7 @@ country_event = {
 		city_level = root.owner
 		room = personality_hegemonic_imperialists_room
 	}
-	location = event_target:flusionhome
+	location = event_target:pki_flusion_planet
 	immediate = {
 		event_target:playerflusion = {
 			change_variable = {
@@ -623,7 +623,7 @@ country_event = {
 		}
 		event_target:playerflusion = {
 			player_flusion_annexed_mercuria = yes
-			set_owner = event_target:katzenartig
+			set_owner = event_target:pki_player
 		}
 		event_target:mercuria_flunat = {
 			every_owned_army = {
@@ -635,7 +635,7 @@ country_event = {
 				set_hostile = no
 			}
 		}
-		event_target:katzenartig = {
+		event_target:pki_player = {
 			remove_country_flag = flusionian_war
 			remove_country_flag = war_with_mercuria
 			every_situation = {
@@ -663,7 +663,7 @@ country_event = {
 		city_level = root.owner
 		room = personality_federation_builders_room
 	}
-	location = event_target:flusionhome
+	location = event_target:pki_flusion_planet
 	immediate = {
 		event_target:playerflusion = {
 			change_variable = {
@@ -673,7 +673,7 @@ country_event = {
 		}
 		event_target:playerflusion = {
 			player_flusion_annexed_cyatianala = yes
-			set_owner = event_target:katzenartig
+			set_owner = event_target:pki_player
 		}
 		event_target:cyatianala_flunat = {
 			every_owned_army = {
@@ -685,7 +685,7 @@ country_event = {
 				set_hostile = no
 			}
 		}
-		event_target:katzenartig = {
+		event_target:pki_player = {
 			remove_country_flag = flusionian_war
 			remove_country_flag = war_with_cyatianala
 			every_situation = {
@@ -713,7 +713,7 @@ country_event = {
 		city_level = root.owner
 		room = personality_democratic_crusaders_room
 	}
-	location = event_target:flusionhome
+	location = event_target:pki_flusion_planet
 	immediate = {
 		event_target:playerflusion = {
 			change_variable = {
@@ -723,7 +723,7 @@ country_event = {
 		}
 		event_target:playerflusion = {
 			player_flusion_annexed_yinja = yes
-			set_owner = event_target:katzenartig
+			set_owner = event_target:pki_player
 		}
 		event_target:yinjite_flunat = {
 			every_owned_army = {
@@ -735,7 +735,7 @@ country_event = {
 				set_hostile = no
 			}
 		}
-		event_target:katzenartig = {
+		event_target:pki_player = {
 			remove_country_flag = flusionian_war
 			remove_country_flag = war_with_yinja
 			every_situation = {
@@ -764,7 +764,7 @@ country_event = {
 		city_level = root.owner
 		room = personality_xenophobic_isolationists_room
 	}
-	location = event_target:flusionhome
+	location = event_target:pki_flusion_planet
 	immediate = {
 		event_target:playerflusion = {
 			change_variable = {
@@ -774,7 +774,7 @@ country_event = {
 		}
 		event_target:playerflusion = {
 			player_flusion_annexed_symbie = yes
-			set_owner = event_target:katzenartig
+			set_owner = event_target:pki_player
 		}
 		event_target:symbie_flunat = {
 			every_owned_army = {
@@ -786,7 +786,7 @@ country_event = {
 				set_hostile = no
 			}
 		}
-		event_target:katzenartig = {
+		event_target:pki_player = {
 			remove_country_flag = flusionian_war
 			remove_country_flag = war_with_symbie
 			every_situation = {
@@ -815,7 +815,7 @@ country_event = {
 		city_level = root.owner
 		room = personality_slaving_despots_room
 	}
-	location = event_target:flusionhome
+	location = event_target:pki_flusion_planet
 	immediate = {
 		event_target:playerflusion = {
 			change_variable = {
@@ -825,7 +825,7 @@ country_event = {
 		}
 		event_target:playerflusion = {
 			player_flusion_annexed_lauranaise = yes
-			set_owner = event_target:katzenartig
+			set_owner = event_target:pki_player
 		}
 		event_target:lauranaise_flunat = {
 			every_owned_army = {
@@ -837,7 +837,7 @@ country_event = {
 				set_hostile = no
 			}
 		}
-		event_target:katzenartig = {
+		event_target:pki_player = {
 			remove_country_flag = flusionian_war
 			remove_country_flag = war_with_laurandaar
 			every_situation = {
@@ -866,7 +866,7 @@ country_event = {
 		city_level = root.owner
 		room = personality_decadent_hierarchy_room
 	}
-	location = event_target:flusionhome
+	location = event_target:pki_flusion_planet
 	immediate = {
 		event_target:playerflusion = {
 			change_variable = {
@@ -876,7 +876,7 @@ country_event = {
 		}
 		event_target:playerflusion = {
 			player_flusion_annexed_haranian = yes
-			set_owner = event_target:katzenartig
+			set_owner = event_target:pki_player
 		}
 		event_target:haranian_flunat = {
 			every_owned_army = {
@@ -888,7 +888,7 @@ country_event = {
 				set_hostile = no
 			}
 		}
-		event_target:katzenartig = {
+		event_target:pki_player = {
 			remove_country_flag = flusionian_war
 			remove_country_flag = war_with_harania
 			every_situation = {
@@ -993,7 +993,7 @@ country_event = { #Flusion is INVADED
 	}
 
 	immediate = {
-		event_target:katzenartig = {
+		event_target:pki_player = {
 			set_country_flag = defeated_coalition
 			every_situation = {
 				limit = {
@@ -1020,7 +1020,7 @@ country_event = { #Flusion is BUGGED
 	hide_window = yes
 
 	immediate = {
-		event_target:katzenartig = {
+		event_target:pki_player = {
 			set_country_flag = defeated_coalition
 			every_situation = {
 				limit = {
@@ -1127,7 +1127,7 @@ country_event = { #work mfer
 		}
 	}
 	immediate = {
-		event_target:katzenartig = {
+		event_target:pki_player = {
 			set_country_flag = defeated_coalition
 			every_situation = {
 				limit = {
@@ -1306,7 +1306,7 @@ country_event = {
 			}
 		}
 		event_target:playerflusion = {
-			set_owner = event_target:katzenartig
+			set_owner = event_target:pki_player
 		}
 	}
 }

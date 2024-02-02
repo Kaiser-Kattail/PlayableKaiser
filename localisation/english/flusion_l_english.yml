@@ -509,13 +509,13 @@
 
     pki_army_reached_limit: "§RWe have recruited the maximum number of §!"
 
-    pki_katzensoldaten_army_limit: "We have recruited §Y[event_target:katzenartig.pki_katzensoldaten_current]§! out of §Y[event_target:katzenartig.pki_katzensoldaten_limit]§! Armies"
+    pki_katzensoldaten_army_limit: "We have recruited §Y[event_target:pki_player.pki_katzensoldaten_current]§! out of §Y[event_target:pki_player.pki_katzensoldaten_limit]§! Armies"
     pki_katzensoldaten_reached_limit: "$pki_army_reached_limit$§Y$katzensoldaten_army_plural$§!"
 
-    pki_gepanzertertank_army_limit: "We have recruited §Y[event_target:katzenartig.pki_gepanzertertank_current]§! out of §Y[event_target:katzenartig.pki_gepanzertertank_limit]§! Armies"
+    pki_gepanzertertank_army_limit: "We have recruited §Y[event_target:pki_player.pki_gepanzertertank_current]§! out of §Y[event_target:pki_player.pki_gepanzertertank_limit]§! Armies"
     pki_gepanzertertank_reached_limit: "$pki_army_reached_limit$§Y$gepanzertertank_army_plural$§!"
 
-    pki_atmospharischekatzenbomber_army_limit: "We have recruited §Y[event_target:katzenartig.pki_atmospharischekatzenbomber_current]§! out of §Y[event_target:katzenartig.pki_atmospharischekatzenbomber_limit]§! Armies"
+    pki_atmospharischekatzenbomber_army_limit: "We have recruited §Y[event_target:pki_player.pki_atmospharischekatzenbomber_current]§! out of §Y[event_target:pki_player.pki_atmospharischekatzenbomber_limit]§! Armies"
     pki_atmospharischekatzenbomber_reached_limit: "$pki_army_reached_limit$§Y$pki_air_fighter_plural$§!"
 
     katzensoldaten_army: "Katzensoldaten Division"

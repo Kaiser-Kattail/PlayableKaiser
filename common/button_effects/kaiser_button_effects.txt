@@ -14,40 +14,95 @@ kaiser_bureau = {
 }
 
 pki_flusion_map_active_effect = {
-	potential = { event_target:katzenartig = { has_country_flag = pki_conquest_map_tab } }
+	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab } }
 	allow = { always = yes }
 	effect = {}
 }
 
 pki_flusion_map_inactive_effect = {
-	potential = { event_target:katzenartig = { NOT = { has_country_flag = pki_conquest_map_tab } } }
+	potential = { event_target:pki_player = { NOT = { has_country_flag = pki_conquest_map_tab } } }
 	allow = { always = yes }
-	effect = { event_target:katzenartig = { pki_clear_gui_flags = yes set_country_flag = pki_conquest_map_tab } }
+	effect = { event_target:pki_player = { pki_clear_gui_flags = yes set_country_flag = pki_conquest_map_tab } }
 }
 
 pki_flusion_focus_active_effect = {
-	potential = { event_target:katzenartig = { has_country_flag = pki_focus_tree_tab } }
+	potential = { event_target:pki_player = { has_country_flag = pki_focus_tree_tab } }
 	allow = { always = yes }
 	effect = {}
 }
 
 pki_flusion_focus_inactive_effect = {
-	potential = { event_target:katzenartig = { NOT = { has_country_flag = pki_focus_tree_tab } } }
+	potential = { event_target:pki_player = { NOT = { has_country_flag = pki_focus_tree_tab } } }
 	allow = { always = yes }
-	effect = { event_target:katzenartig = { pki_clear_gui_flags = yes set_country_flag = pki_focus_tree_tab } }
+	effect = { event_target:pki_player = { pki_clear_gui_flags = yes set_country_flag = pki_focus_tree_tab } }
 }
 
-pki_focus_line_no_effect = {
-	potential = { event_target:katzenartig = { has_country_flag = pki_focus_tree_tab } }
+pki_focus_tree_no_effect = {
+	potential = { event_target:pki_player = { has_country_flag = pki_focus_tree_tab } }
 	allow = { always = yes }
 	effect = {}
 }
 
 pki_map_no_effect = {
-	potential = { event_target:katzenartig = { has_country_flag = pki_conquest_map_tab } }
+	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab } }
 	allow = { always = yes }
 	effect = {}
 }
+
+pki_map_industry_total = {
+	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab } }
+	allow = { always = yes }
+	effect = { custom_tooltip = pki_industry_total_tt }
+}
+
+pki_map_mult_1 = {
+	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab NOT = { has_country_flag = pki_map_industry_mult_1 } } }
+	allow = { always = yes }
+	effect = { event_target:pki_player = { pki_clear_map_selector_mults = yes set_country_flag = pki_map_industry_mult_1 set_variable = { which = pki_map_industry_select_mult value = 1 } } }
+}
+
+pki_map_mult_1_active = {
+	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab  has_country_flag = pki_map_industry_mult_1 } }
+	allow = { always = yes }
+	effect = {}
+}
+
+pki_map_mult_10 = {
+	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab NOT = { has_country_flag = pki_map_industry_mult_10 } } }
+	allow = { always = yes }
+	effect = { event_target:pki_player = { pki_clear_map_selector_mults = yes set_country_flag = pki_map_industry_mult_10 set_variable = { which = pki_map_industry_select_mult value = 10 } } }
+}
+
+pki_map_mult_10_active = {
+	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab  has_country_flag = pki_map_industry_mult_10 } }
+	allow = { always = yes }
+	effect = {}
+}
+
+pki_map_mult_100 = {
+	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab NOT = { has_country_flag = pki_map_industry_mult_100 } } }
+	allow = { always = yes }
+	effect = { event_target:pki_player = { pki_clear_map_selector_mults = yes set_country_flag = pki_map_industry_mult_100 set_variable = { which = pki_map_industry_select_mult value = 100 } } }
+}
+
+pki_map_mult_100_active = {
+	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab  has_country_flag = pki_map_industry_mult_100 } }
+	allow = { always = yes }
+	effect = {}
+}
+
+pki_map_increase = {
+	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab } }
+	allow = { always = yes }
+	effect = { event_target:pki_player = { pki_increase_used_factories = yes } }
+}
+
+pki_map_decrease = {
+	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab } }
+	allow = { always = yes }
+	effect = { event_target:pki_player = { pki_decrease_used_factories = yes } }
+}
+
 
 ### COUNTRIES
 
@@ -57,9 +112,9 @@ inline_script = {
 }
 
 pki_map_country_contact = {
-	potential = { event_target:katzenartig = { has_country_flag = pki_conquest_map_tab } }
-	allow = { hidden_trigger = { event_target:katzenartig = { NOT = { has_country_flag = pki_contacted_country } } custom_tooltip_fail = { text = PKI_CANT_CONTACT_SELF } hidden_trigger = { NOT = { has_country_flag = pki_map_KAT_selected } } } }
-	effect = { hidden_effect = { event_target:katzenartig = { country_event = { id = pki_flusion_nations.0000 } } } }
+	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab } }
+	allow = { hidden_trigger = { event_target:pki_player = { NOT = { has_country_flag = pki_contacted_country } } custom_tooltip_fail = { text = PKI_CANT_CONTACT_SELF } hidden_trigger = { event_target:pki_player = { NOT = { has_country_flag = pki_map_KAT_selected } } } } }
+	effect = { hidden_effect = { event_target:pki_player = { country_event = { id = pki_flusion_nations.0000 } } } }
 }
 
 ### ADD FOCUSES HERE

@@ -54,7 +54,7 @@ country_event = {
 	}
 	immediate = {
 		set_country_flag = starting_event
-		save_global_event_target_as = katzenartig
+		save_global_event_target_as = pki_player
 		owner_main_species = {
 			save_global_event_target_as = pki_katzen_species
 		}
@@ -128,7 +128,7 @@ country_event = {
 				limit = {
 					planet = { has_planet_flag = gigaflusion }
 				}
-				save_global_event_target_as = flusionhome
+				save_global_event_target_as = pki_flusion_planet
 			}
 		}
 
@@ -190,8 +190,6 @@ country_event = {
 		}
 
 		pki_create_flusion_nations = yes
-
-		pki_setup_flusion_economy = yes
 
 		create_country = {
 			name = "NAME_katzen_warforge"
@@ -256,7 +254,7 @@ country_event = {
 			add_deposit = d_katown_reactor
 
 			add_deposit = d_flunat
-			planet_event = { id = flusion.3 days = 1 }
+			planet_event = { id = flusion.3 }
 
 			while = {
 				count = 9
@@ -292,27 +290,30 @@ country_event = {
 				}
 			}
 		}
-		#Remove mining station
-		this = {
-			every_owned_ship = {
+		every_owned_ship = {
+			unassign_leader = leader
+			if = {
 				limit = {
-					is_ship_size = mining_station
-				}
-				delete_ship = this
-			}
-			every_owned_ship = {
-				limit = {
-					is_ship_size = research_station
+					OR = {
+						is_ship_size = corvette
+						is_ship_size = mining_station
+						is_ship_size = research_station
+					}
 				}
 				delete_ship = this
 			}
 		}
+
+
 		set_country_flag = flusion_setup_complete
 
 		set_country_flag = pki_map_KAT_selected
+		set_country_flag = pki_conquest_map_tab
 
 		pki_set_army_limits = yes
 		pki_refresh_all_army_limits = yes
+
+		pki_setup_flusion_economy = yes
 
 		#Create Jublio
 

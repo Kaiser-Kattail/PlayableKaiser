@@ -123,7 +123,7 @@ country_event = {
 				spawn_debris = no
 			}
 			effect = {
-				set_owner = event_target:katzenartig
+				set_owner = event_target:pki_player
 				create_ship = {
 					name = "Kaiservorherrschaft"
 					design = "NAME_PKI_ATTACK_MOON"
@@ -232,7 +232,7 @@ country_event = {
 					spawn_debris = no
 				}
 				effect = {
-					set_owner = event_target:katzenartig
+					set_owner = event_target:pki_player
 					create_ship = {
 						name = "Kaiservorherrschaft"
 						design = "NAME_PKI_ATTACK_MOON"

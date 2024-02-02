@@ -1,0 +1,40 @@
+objectTypes = {
+			
+	pdxmesh = {
+		name = "katzen_supercarrier_mesh"
+		file = "gfx/models/ships/katzen/supercarrier/pki_katzen_supercarrier.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+			
+		#Mipmap tweaking
+		#texture_diffuse = "512x512.dds"
+		}
+	}
+
+	pdxmesh = {
+		name = "katzen_supercarrier_full_mesh"
+		file = "gfx/models/ships/katzen/supercarrier/pki_katzen_supercarrier_full.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+
+			#Mipmap tweaking
+			#texture_diffuse = "512x512.dds"
+		}
+	}
+
+	pdxmesh = {
+		name = "katzen_supercarrier_locators_mesh"
+		file = "gfx/models/ships/katzen/supercarrier/pki_katzen_supercarrier_locators.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+
+			#Mipmap tweaking
+			#texture_diffuse = "512x512.dds"
+		}
+	}
+}
+
+

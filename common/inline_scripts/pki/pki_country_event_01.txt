@@ -17,7 +17,7 @@ picture_event_data = {
     city_level = root.owner
     room = event_target:pki_$COUNTRY$_country
 }
-location = event_target:flusionhome
+location = event_target:pki_flusion_planet
 
 option = { # Lore
     name = pki_$COUNTRY$.01.a

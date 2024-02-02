@@ -70,7 +70,7 @@ pki_katzprotektorat_1_modifier = {
 						assign_leader = prev
 					}
 				}
-				background_planet = event_target:flusionhome
+				background_planet = event_target:pki_flusion_planet
 				background_job = bureaucrat
 				background_ethic = ethic_militarist
 			}

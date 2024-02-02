@@ -1,5 +1,5 @@
 pki_create_flusion_nations = {
-	event_target:flusionhome = {
+	event_target:pki_flusion_planet = {
 
 		create_species = {
 			name = "NAME_CYA_SPECIES"
@@ -382,7 +382,7 @@ player_flusion_unify_flusion = {
 			remove_deposit = d_annexed_region_zousa
 		}
 		if = {
-			limit = { event_target:katzenartig = { NOT = { has_country_flag = solak_pop_acquired } } }
+			limit = { event_target:pki_player = { NOT = { has_country_flag = solak_pop_acquired } } }
 			while = {
 				count = 5
 				create_pop = {
@@ -400,7 +400,7 @@ player_flusion_unify_flusion = {
 			}
 		}
 		if = {
-			limit = { event_target:katzenartig = { NOT = { has_country_flag = cookie_pop_acquired } } }
+			limit = { event_target:pki_player = { NOT = { has_country_flag = cookie_pop_acquired } } }
 			while = {
 				count = 4
 				create_pop = {
@@ -418,7 +418,7 @@ player_flusion_unify_flusion = {
 			}
 		}
 		if = {
-			limit = { event_target:katzenartig = { NOT = { has_country_flag = kronk_pop_acquired } } }
+			limit = { event_target:pki_player = { NOT = { has_country_flag = kronk_pop_acquired } } }
 			while = {
 				count = 3
 				create_pop = {
@@ -436,7 +436,7 @@ player_flusion_unify_flusion = {
 			}
 		}
 		if = {
-			limit = { event_target:katzenartig = { NOT = { has_country_flag = ravka_pop_acquired } } }
+			limit = { event_target:pki_player = { NOT = { has_country_flag = ravka_pop_acquired } } }
 			while = {
 				count = 2
 				create_pop = {
@@ -454,7 +454,7 @@ player_flusion_unify_flusion = {
 			}
 		}
 		if = {
-			limit = { event_target:katzenartig = { NOT = { has_country_flag = zousa_pop_acquired } } }
+			limit = { event_target:pki_player = { NOT = { has_country_flag = zousa_pop_acquired } } }
 			while = {
 				count = 1
 				create_pop = {
@@ -472,7 +472,7 @@ player_flusion_unify_flusion = {
 			}
 		}
 		if = {
-			limit = { event_target:katzenartig = { NOT = { has_country_flag = droog_pop_acquired } } }
+			limit = { event_target:pki_player = { NOT = { has_country_flag = droog_pop_acquired } } }
 			while = {
 				count = 1
 				create_pop = {
@@ -490,7 +490,7 @@ player_flusion_unify_flusion = {
 			}
 		}
 		if = {
-			limit = { event_target:katzenartig = { NOT = { has_country_flag = ezic_pop_acquired } } }
+			limit = { event_target:pki_player = { NOT = { has_country_flag = ezic_pop_acquired } } }
 			while = {
 				count = 2
 				create_pop = {
@@ -508,7 +508,7 @@ player_flusion_unify_flusion = {
 			}
 		}
 		if = {
-			limit = { event_target:katzenartig = { NOT = { has_country_flag = mercuria_pop_acquired } } }
+			limit = { event_target:pki_player = { NOT = { has_country_flag = mercuria_pop_acquired } } }
 			while = {
 				count = 1
 				create_pop = {
@@ -526,7 +526,7 @@ player_flusion_unify_flusion = {
 			}
 		}
 		if = {
-			limit = { event_target:katzenartig = { NOT = { has_country_flag = cyatianala_pop_acquired } } }
+			limit = { event_target:pki_player = { NOT = { has_country_flag = cyatianala_pop_acquired } } }
 			while = {
 				count = 1
 				create_pop = {
@@ -544,7 +544,7 @@ player_flusion_unify_flusion = {
 			}
 		}
 		if = {
-			limit = { event_target:katzenartig = { NOT = { has_country_flag = yinja_pop_acquired } } }
+			limit = { event_target:pki_player = { NOT = { has_country_flag = yinja_pop_acquired } } }
 			while = {
 				count = 3
 				create_pop = {
@@ -562,7 +562,7 @@ player_flusion_unify_flusion = {
 			}
 		}
 		if = {
-			limit = { event_target:katzenartig = { NOT = { has_country_flag = symbie_pop_acquired } } }
+			limit = { event_target:pki_player = { NOT = { has_country_flag = symbie_pop_acquired } } }
 			while = {
 				count = 2
 				create_pop = {
@@ -580,7 +580,7 @@ player_flusion_unify_flusion = {
 			}
 		}
 		if = {
-			limit = { event_target:katzenartig = { NOT = { has_country_flag = lauranaise_pop_acquired } } }
+			limit = { event_target:pki_player = { NOT = { has_country_flag = lauranaise_pop_acquired } } }
 			while = {
 				count = 4
 				create_pop = {
@@ -1293,6 +1293,51 @@ create_meowrines = {
 					target = root
 				}
 			}
+		}
+	}
+}
+
+pki_increase_used_factories = {
+	if = {
+		limit = {
+			check_variable = {
+				which = pki_map_industry_select_mult
+				value >= value:pki_job_industry_factories
+			}
+		}
+		set_variable = {
+			which = pki_used_industry
+			value = value:pki_total_industry
+		}
+	}
+	else = {
+		change_variable = {
+			which = pki_used_industry
+			value = pki_map_industry_select_mult
+		}
+	}
+}
+
+pki_decrease_used_factories = {
+	set_variable = {
+		which = pki_negative_factories_check
+		value = value:pki_used_factories_check }
+	if = {
+		limit = {
+			check_variable = {
+				which = pki_negative_factories_check
+				value <= 0
+			}
+		}
+		set_variable = {
+			which = pki_used_industry
+			value = 0
+		}
+	}
+	else = {
+		subtract_variable = {
+			which = pki_used_industry
+			value = pki_map_industry_select_mult
 		}
 	}
 }

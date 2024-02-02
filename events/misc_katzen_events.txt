@@ -24,7 +24,7 @@ country_event = {
 				count = 1
 				create_army = {
 					name = "Katzenarmee Colonial Garrison"
-					owner = event_target:katzenartig
+					owner = event_target:pki_player
 					species = owner_main_species
 					type = "peacekeeper_army"
 
@@ -47,7 +47,7 @@ country_event = {
 			value = 0
 		}
 		every_system = { #every system in galaxy adds 1
-			event_target:katzenartig = {
+			event_target:pki_player = {
 				change_variable = {
 					which = "player_katzen_galaxy_total_system_count"
 					value = 1
@@ -59,7 +59,7 @@ country_event = {
 			value = 0
 		}
 		every_system_within_border = { #count katzen systems
-			event_target:katzenartig = {
+			event_target:pki_player = {
 				change_variable = {
 					which = player_katzen_total_system_count
 					value = 1
@@ -68,7 +68,7 @@ country_event = {
 		}
 		every_subject = {
 			every_system_within_border = { #count katzen systems
-				event_target:katzenartig = {
+				event_target:pki_player = {
 					change_variable = {
 						which = player_katzen_total_system_count
 						value = 1
@@ -633,8 +633,8 @@ country_event = {
 					any_fleet_in_system = { #no hostiles
 						controller = {
 							OR = {
-								is_at_war_with = event_target:katzenartig
-								is_hostile = event_target:katzenartig
+								is_at_war_with = event_target:pki_player
+								is_hostile = event_target:pki_player
 							}
 						}
 					}
@@ -692,7 +692,7 @@ fleet_event = {
 			exists = planet
 			exists = planet_owner
 			planet_owner = {
-				is_at_war_with = event_target:katzenartig
+				is_at_war_with = event_target:pki_player
 				NOT = {
 					has_origin = origin_katzen
 				}
@@ -878,15 +878,15 @@ event = {
 						any_fleet_in_system = { #no hostiles
 							controller = {
 								OR = {
-									is_at_war_with = event_target:katzenartig
-									is_hostile = event_target:katzenartig
+									is_at_war_with = event_target:pki_player
+									is_hostile = event_target:pki_player
 								}
 							}
 						}
 					}
 				}
 			}
-			set_owner = event_target:katzenartig
+			set_owner = event_target:pki_player
 		}
 	}
 }
@@ -898,7 +898,7 @@ country_event = {
 	hide_window = yes
 	trigger = {
 		pki_is_katzprotektorat = yes
-		NOT = { is_at_war_with = event_target:katzenartig }
+		NOT = { is_at_war_with = event_target:pki_player }
 	}
 	immediate = {
 		every_controlled_planet = {
@@ -915,7 +915,7 @@ country_event = {
 				count = @pki_vassal_peacekeeper_amt
 				create_army = {
 					name = "Katzenarmee Peacekeeper Garrison"
-					owner = event_target:katzenartig
+					owner = event_target:pki_player
 					species = event_target:pki_katzen_species
 					type = "peacekeeper_army"
 
@@ -932,7 +932,7 @@ country_event = {
 	hide_window = yes
 	trigger = {
 		pki_is_katzenartig_imperium = no
-		root = { is_at_war_with = event_target:katzenartig }
+		root = { is_at_war_with = event_target:pki_player }
 		from = { NOT = { has_war_flag = pki_war_peacekeepers_attack } }
 		any_controlled_planet = {
 			any_planet_army = {
@@ -960,7 +960,7 @@ country_event = {
 				count = @pki_vassal_peacekeeper_amt
 				create_army = {
 					name = "Katzenarmee Peacekeeper Garrison"
-					owner = event_target:katzenartig
+					owner = event_target:pki_player
 					species = event_target:pki_katzen_species
 					type = "peacekeeper_army"
 
@@ -976,7 +976,7 @@ country_event = {
 	hide_window = yes
 	trigger = {
 		pki_is_katzenartig_imperium = no
-		root = { is_at_war_with = event_target:katzenartig }
+		root = { is_at_war_with = event_target:pki_player }
 		from = { NOT = { has_war_flag = pki_war_katzen_ships_attack } }
 		any_controlled_fleet = {
 			any_controlled_ship = {
@@ -1007,7 +1007,7 @@ country_event = {
 			create_fleet = {
 				name = "pki_katzen_captured_ships"
 				effect = {
-					set_owner = event_target:katzenartig
+					set_owner = event_target:pki_player
 					set_location = prev
 					while = {
 						count = prev.pki_katzen_panzer_count
@@ -1205,7 +1205,7 @@ country_event = {
 			create_fleet = {
 				name = "pki_katzen_captured_ships"
 				effect = {
-					set_owner = event_target:katzenartig
+					set_owner = event_target:pki_player
 					set_location = prev
 					while = {
 						count = prev.pki_katzen_panzer_count

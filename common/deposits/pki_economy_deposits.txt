@@ -32,16 +32,8 @@ d_pki_economic_mechanics = {
         potential = {
             exists = owner
         }
-        multiplier = pki_industry_level
-        pki_flusion_economy = 1
-    }
-
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-        }
-        multiplier = pki_flusion_mining_industry
-        pki_flusion_economy = -1
+        multiplier = owner.value:pki_total_industry
+        pki_industry_factories = 1
     }
 
     triggered_planet_modifier = {
@@ -51,8 +43,8 @@ d_pki_economic_mechanics = {
                 is_regular_empire = yes
             }
         }
-        multiplier = modifier:pki_flusion_economy
-        job_pki_war_worker_add = 0.2
+        multiplier = owner.value:pki_job_industry
+        job_pki_war_worker_add = 1
     }
 
     triggered_planet_modifier = {
@@ -62,29 +54,7 @@ d_pki_economic_mechanics = {
                 is_gestalt = yes
             }
         }
-        multiplier = modifier:pki_flusion_economy
-        job_pki_war_worker_drone_add = 0.1
-    }
-
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_regular_empire = yes
-            }
-        }
-        multiplier = pki_flusion_mining_industry
-        job_miner_add = 0.2
-    }
-
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_gestalt = yes
-            }
-        }
-        multiplier = pki_flusion_mining_industry
-        job_mining_drone_add = 0.2
+        multiplier = owner.value:pki_job_industry
+        job_pki_war_worker_drone_add = 1
     }
 }

@@ -1,3 +1,7 @@
+# Dont fuck with things even if they give errors, your IDE is not as smart as me
+# Button effects arent predicted with inline scripts idgaf
+
+
 guiTypes = {
 
 	@view_w = 1620
@@ -219,10 +223,23 @@ guiTypes = {
 			listboxType = { name = "option_list" position = { x = -11500 y = -1130 } } # hidden option list
 		}
 
+		effectButtonType = {
+			name = info_frame
+			position = { x = +1300 y = +52 }
+			size = { x = 317 y = 845 }
+			orientation = upper_left
+			alwaysTransparent = yes
+
+
+			quadTextureSprite = "GFX_tiles_frame_light"
+
+			effect = pki_map_no_effect
+		}
+
 		instantTextBoxType = {
 			name = "alien_message"
 			font = "cg_16b"
-			position = { x = 20 y = 9999 }
+			position = { x = -9999 y = -9999}
 			maxWidth = 465
 			maxHeight = 220
 			format = left
@@ -235,7 +252,7 @@ guiTypes = {
 			text = "pki_focus_title"
 			position = { x = 16 y = 2 }
 			format = left
-			size = { width = 1000 height = 32 }
+			size = { x = 1000 y = 32 }
 			alwaysTransparent = no
 			quadTextureSprite = "GFX_invisible"
 			effect = pki_flusion_focus_active_effect
@@ -247,7 +264,7 @@ guiTypes = {
 			text = "pki_map_title"
 			position = { x = 16 y = 2 }
 			format = left
-			size = { width = 1000 height = 32 }
+			size = { x = 1000 y = 32 }
 			alwaysTransparent = no
 			quadTextureSprite = "GFX_invisible"
 			effect = pki_flusion_map_active_effect
@@ -256,26 +273,13 @@ guiTypes = {
 		effectButtonType = {
 			name = focus_tree_background
 			position = { x = +1 y = +52 }
-			size = { width = 1616 height = 845 }
+			size = { x = 1616 y = 845 }
 			orientation = upper_left
 			alwaysTransparent = yes
 
 			quadTextureSprite = "GFX_tiles_frame_light"
 
-			effect = pki_focus_line_no_effect
-		}
-
-		effectButtonType = {
-			name = info_frame
-			position = { x = +1300 y = +52 }
-			size = { width = 317 height = 845 }
-			orientation = upper_left
-			alwaysTransparent = yes
-
-
-			quadTextureSprite = "GFX_tiles_frame_light"
-
-			effect = pki_map_no_effect
+			effect = pki_focus_tree_no_effect
 		}
 
 		containerWindowType = {
@@ -302,7 +306,7 @@ guiTypes = {
 
 				effectButtonType = {
 					name = title
-					size = { width = 284 height = 40 }
+					size = { x = 284 y = 40 }
 					text = "PKI_INFO"
 					font = malgun_goth_24
 					quadTextureSprite = "GFX_tiles_light_area_cut_8"
@@ -313,63 +317,155 @@ guiTypes = {
 				effectButtonType = {
 					name = info
 					position = { x = +6 y = +46 }
-					size = { width = 274 height = 1620 }
+					size = { x = 274 y = 1620 }
 					text = "[pki_map_selected_country_info]"
 					font = cg_16b
-					quadTextureSprite = "GFX_invisible"
 					format = left
+					multiline = yes ## I dont care you cant resolve it stfu
 					vertical_alignment = top
-					effect = pki_map_no_effect
 					alwaysTransparent = yes
+					effect = pki_map_no_effect
 				}
 			}
 
 			containerWindowType = {
 				name = focus_tree
 
-				### ADD FOCUSES HERE
-
-				containerWindowType = { name = focus_kaiser_arrival position = { x = @tile_x_500 y = @tile_y_100 } containerWindowType = { name = focus orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_kaiser_arrival_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_kaiser_arrival" effect = pki_focus_kaiser_arrival_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_kaiser_arrival_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_kaiser_arrival" quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_kaiser_arrival_effect } } containerWindowType = { name = focus_in_progress orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_kaiser_arrival_in_progress_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_kaiser_arrival" effect = pki_focus_kaiser_arrival_in_progress_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_kaiser_arrival_in_progress_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_kaiser_arrival" quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_kaiser_arrival_in_progress_effect } } containerWindowType = { name = focus_completed orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_kaiser_arrival_completed_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_kaiser_arrival" effect = pki_focus_kaiser_arrival_completed_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_kaiser_arrival_completed_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_kaiser_arrival" quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_kaiser_arrival_completed_effect } } }
-				containerWindowType = { name = focus_neighbors position = { x = @tile_x_550 y = @tile_y_200 } containerWindowType = { name = focus orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_neighbors_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_neighbors" effect = pki_focus_neighbors_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_neighbors_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_neighbors" quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_neighbors_effect } } containerWindowType = { name = focus_in_progress orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_neighbors_in_progress_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_neighbors" effect = pki_focus_neighbors_in_progress_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_neighbors_in_progress_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_neighbors" quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_neighbors_in_progress_effect } } containerWindowType = { name = focus_completed orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_neighbors_completed_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_neighbors" effect = pki_focus_neighbors_completed_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_neighbors_completed_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_neighbors" quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_neighbors_completed_effect } } }
-				containerWindowType = { name = focus_harania position = { x = @tile_x_550 y = @tile_y_300 } containerWindowType = { name = focus orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_harania_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_harania" effect = pki_focus_harania_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_harania_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_harania" quadTextureSprite = "GFX_glow_tile_cyan" effect = pki_focus_harania_effect } } containerWindowType = { name = focus_in_progress orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_harania_in_progress_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_harania" effect = pki_focus_harania_in_progress_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_harania_in_progress_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_harania" quadTextureSprite = "GFX_glow_tile_striped" effect = pki_focus_harania_in_progress_effect } } containerWindowType = { name = focus_completed orientation = upper_left origo = upper_left effectButtonType = { name = focus_background size = { width = 160 height = 120 } position = { x = +3 y = +12 } orientation = center quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_harania_completed_effect } effectButtonType = { name = focus_icon position = { x = +57 y = +24 } orientation = center quadTextureSprite = "GFX_pki_focus_harania" effect = pki_focus_harania_completed_effect } effectButtonType = { name = focus_icon_background position = { x = +48 y = +19 } orientation = center quadTextureSprite = "GFX_flag_64_frame" effect = pki_focus_harania_completed_effect } effectButtonType = { name = focus_label position = { x = +8 y = +84 } size = { width = 150 height = 42 } font = cg_16b text = "pki_focus_harania" quadTextureSprite = "GFX_glow_tile_orange" effect = pki_focus_harania_completed_effect } } }
-
 				containerWindowType = {
 					name = focus_lines
-					position = { x = 3 y = 12 }
+					position = { x = 5 y = 22 }
 
 					effectButtonType = {
 						name = 1
 						position = { x = @tile_x_500 y = @tile_y_100 }
-						effect = pki_focus_line_no_effect
+						effect = pki_focus_tree_no_effect
 						quadTextureSprite = "GFX_pki_focus_line_h_s"
 					}
 
 					effectButtonType = {
 						name = 2
 						position = { x = @tile_x_500 y = @tile_y_100 }
-						effect = pki_focus_line_no_effect
+						effect = pki_focus_tree_no_effect
 						quadTextureSprite = "GFX_pki_focus_line_u_s"
 					}
 
 					effectButtonType = {
 						name = 3
 						position = { x = @tile_x_550 y = @tile_y_100 }
-						effect = pki_focus_line_no_effect
+						effect = pki_focus_tree_no_effect
 						quadTextureSprite = "GFX_pki_focus_line_d_s"
 					}
 
 					effectButtonType = {
 						name = 4
 						position = { x = @tile_x_550 y = @tile_y_200 }
-						effect = pki_focus_line_no_effect
+						effect = pki_focus_tree_no_effect
 						quadTextureSprite = "GFX_pki_focus_line_d_s"
 					}
 
 					effectButtonType = {
 						name = 5
 						position = { x = @tile_x_550 y = @tile_y_200 }
-						effect = pki_focus_line_no_effect
+						effect = pki_focus_tree_no_effect
 						quadTextureSprite = "GFX_pki_focus_line_u_s"
+					}
+				}
+
+				### ADD FOCUSES HERE
+
+				containerWindowType = {
+					name = focus_kaiser_arrival
+					position = { x = @tile_x_500 y = @tile_y_100 }
+
+					containerWindowType = {
+						name = focus
+						orientation = upper_left
+						origo = upper_left
+
+						effectButtonType = {
+							name = focus_background
+							size = { x = 170 y = 130 }
+							position = { x = +0 y = +12 }
+							orientation = center
+							quadTextureSprite = "GFX_glow_tile_cyan"
+							effect = pki_focus_kaiser_arrival_effect
+						}
+
+						effectButtonType = {
+							name = focus_label
+							position = { x = +5 y = +84 }
+							size = { x = 160 y = 50 }
+							alwaysTransparent = yes
+							quadTextureSprite = "GFX_glow_tile_cyan"
+							effect = pki_focus_kaiser_arrival_effect
+						}
+					}
+
+					containerWindowType = {
+						name = focus_in_progress
+						orientation = upper_left
+						origo = upper_left
+
+						effectButtonType = {
+							name = focus_background
+							size = { x = 170 y = 130 }
+							position = { x = +0 y = +12 }
+							orientation = center
+							quadTextureSprite = "GFX_glow_tile_striped"
+							effect = pki_focus_kaiser_arrival_in_progress_effect
+						}
+						effectButtonType = {
+							name = focus_label
+							position = { x = +5 y = +84 }
+							size = { x = 160 y = 50 }
+							alwaysTransparent = yes
+							quadTextureSprite = "GFX_glow_tile_striped"
+							effect = pki_focus_kaiser_arrival_in_progress_effect
+						}
+					}
+
+					containerWindowType = {
+						name = focus_completed
+						orientation = upper_left
+						origo = upper_left
+
+						effectButtonType = {
+							name = focus_background
+							size = { x = 170 y = 130 }
+							position = { x = +0 y = +12 }
+							orientation = center
+							quadTextureSprite = "GFX_glow_tile_orange"
+							effect = pki_focus_kaiser_arrival_completed_effect
+						}
+						effectButtonType = {
+							name = focus_label
+							position = { x = +5 y = +84 }
+							size = { x = 160 y = 50 }
+							alwaysTransparent = yes
+							quadTextureSprite = "GFX_glow_tile_orange"
+							effect = pki_focus_kaiser_arrival_completed_effect
+						}
+					}
+
+					effectButtonType = {
+						name = focus_icon
+						position = { x = +0 y = -6 }
+						orientation = center
+						alwaysTransparent = yes
+						quadTextureSprite = "GFX_pki_focus_kaiser_arrival"
+						effect = pki_focus_tree_no_effect
+					}
+
+					effectButtonType = {
+						name = focus_label
+						position = { x = +5 y = +84 }
+						size = { x = 160 y = 50 }
+						font = cg_16b
+						multiline = yes
+						alwaysTransparent = yes
+						text = "pki_focus_kaiser_arrival_label"
+						quadTextureSprite = "GFX_invisible"
+						effect = pki_focus_kaiser_arrival_effect
 					}
 				}
 			}
@@ -398,7 +494,7 @@ guiTypes = {
 				effectButtonType = {
 					name = country_title
 					position = { x = +0 y = +0 }
-					size = { width = 328 height = 40 }
+					size = { x = 328 y = 40 }
 					orientation = upper_left
 					alwaysTransparent = yes
 					format = center
@@ -412,7 +508,7 @@ guiTypes = {
 				effectButtonType = {
 					name = country_action_bg
 					position = { x = +0 y = +50 }
-					size = { width = 328 height = 64 }
+					size = { x = 328 y = 64 }
 					orientation = upper_left
 					alwaysTransparent = yes
 					quadTextureSprite = "GFX_tiles_dark_area_cut_8"
@@ -435,7 +531,7 @@ guiTypes = {
 					name = country_action_uhh
 					position = { x = +156 y = +50 }
 					orientation = upper_left
-					text = "MESSAGE_DIPLOMACY_TITLE"
+					text = "guh"
 					font = malgun_goth_24
 					quadTextureSprite = "GFX_button_animated_142"
 
@@ -444,26 +540,194 @@ guiTypes = {
 			}
 
 			containerWindowType = {
-				name = pki_economy
+				name = economy
 
 				position = { x = +0 y = +0 }
 
 				effectButtonType = {
 					name = economy_bg
 					position = { x = +880 y = +723 }
-					size = { width = 400 height = 150 }
+					size = { x = 400 y = 150 }
 					orientation = upper_left
 					alwaysTransparent = yes
 					quadTextureSprite = "GFX_tiles_dark_area_cut_8"
 
 					effect = pki_map_no_effect
 				}
+
+				effectButtonType = {
+					name = industry_total
+					position = { x = +896 y = +736 }
+					size = { x = 130 y = 16 }
+					orientation = upper_left
+					alwaysTransparent = no
+					format = left
+					vertical_alignment = top
+					text = "pki_industry_total"
+					font = cg_16b
+					quadTextureSprite = "GFX_invisible"
+					clicksound = no_sound
+
+					effect = pki_map_industry_total
+				}
+
+				effectButtonType = {
+					name = building_slots_total
+					position = { x = +896 y = +756 }
+					size = { x = 130 y = 16 }
+					orientation = upper_left
+					alwaysTransparent = yes
+					format = left
+					vertical_alignment = top
+					text = "pki_building_slots_total"
+					font = cg_16b
+					quadTextureSprite = "GFX_invisible"
+
+					effect = pki_map_no_effect
+				}
+
+				containerWindowType = {
+					name = counter
+
+					position = { x = 0 y = 10 }
+
+					effectButtonType = {
+						name = counter_bg
+						position = { x = +896 y = +800 }
+						size = { x = 130 y = 16 }
+						orientation = upper_left
+						alwaysTransparent = yes
+						quadTextureSprite = "GFX_value_bg"
+
+						effect = pki_map_no_effect
+					}
+
+					effectButtonType = {
+						name = increase
+						position = { x = +967 y = +801 }
+						size = { x = 130 y = 16 }
+						orientation = upper_left
+						alwaysTransparent = no
+						quadTextureSprite = "GFX_fleet_manager_plus"
+
+						effect = pki_map_increase
+					}
+
+					effectButtonType = {
+						name = decrease
+						position = { x = +900 y = +801 }
+						size = { x = 130 y = 16 }
+						orientation = upper_left
+						alwaysTransparent = no
+						quadTextureSprite = "GFX_fleet_manager_minus"
+
+						effect = pki_map_decrease
+					}
+
+					effectButtonType = {
+						name = industry_total
+						position = { x = +926 y = +803 }
+						orientation = upper_left
+						alwaysTransparent = yes
+						format = center
+						vertical_alignment = top
+						text = "[event_target:pki_player.pki_used_industry]"
+						font = cg_16b
+						quadTextureSprite = "GFX_invisible"
+
+						effect = pki_map_no_effect
+					}
+				}
+
+				containerWindowType = {
+					name = multipliers
+
+					position = { x = 5 y = 5 }
+
+					effectButtonType = {
+						name = x1
+						position = { x = +893 y = +773 }
+						size = { x = 25 y = 25 }
+						orientation = upper_left
+						alwaysTransparent = no
+						quadTextureSprite = "GFX_tiles_frame_button"
+						text = "1"
+						font = cg_16b
+
+						effect = pki_map_mult_1
+					}
+
+					effectButtonType = {
+						name = x10
+						position = { x = +927 y = +773 }
+						size = { x = 25 y = 25 }
+						orientation = upper_left
+						alwaysTransparent = no
+						quadTextureSprite = "GFX_tiles_frame_button"
+						text = "10"
+						font = cg_16b
+
+						effect = pki_map_mult_10
+					}
+
+					effectButtonType = {
+						name = x100
+						position = { x = +962 y = +773 }
+						size = { x = 25 y = 25 }
+						orientation = upper_left
+						alwaysTransparent = no
+						quadTextureSprite = "GFX_tiles_frame_button"
+						text = "100"
+						font = cg_16b
+
+						effect = pki_map_mult_100
+					}
+
+					effectButtonType = {
+						name = x1_active
+						position = { x = +893 y = +773 }
+						size = { x = 25 y = 25 }
+						orientation = upper_left
+						alwaysTransparent = no
+						quadTextureSprite = "GFX_tiles_frame_button"
+						text = "1"
+						font = cg_16b
+
+						effect = pki_map_mult_1_active
+					}
+
+					effectButtonType = {
+						name = x10_active
+						position = { x = +927 y = +773 }
+						size = { x = 25 y = 25 }
+						orientation = upper_left
+						alwaysTransparent = no
+						quadTextureSprite = "GFX_tiles_frame_button"
+						text = "10"
+						font = cg_16b
+
+						effect = pki_map_mult_10_active
+					}
+
+					effectButtonType = {
+						name = x100_active
+						position = { x = +962 y = +773 }
+						size = { x = 25 y = 25 }
+						orientation = upper_left
+						alwaysTransparent = no
+						quadTextureSprite = "GFX_tiles_frame_button"
+						text = "100"
+						font = cg_16b
+
+						effect = pki_map_mult_100_active
+					}
+				}
 			}
 
 			effectButtonType = {
 				name = map_frame
 				position = { x = -1 y = +45 }
-				size = { width = 1296 height = 659 }
+				size = { x = 1296 y = 659 }
 				orientation = upper_left
 				alwaysTransparent = yes
 
@@ -475,7 +739,7 @@ guiTypes = {
 			effectButtonType = {
 				name = map_bg
 				position = { x = +10 y = +56 }
-				size = { width = 1416 height = 708 }
+				size = { x = 1416 y = 708 }
 				scale = @map_scale
 				orientation = upper_left
 				alwaysTransparent = yes
@@ -494,7 +758,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -506,7 +770,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -520,7 +784,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -537,7 +801,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -549,7 +813,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -563,7 +827,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -580,7 +844,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -592,7 +856,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -606,7 +870,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -623,7 +887,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -635,7 +899,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -649,7 +913,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -666,7 +930,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -678,7 +942,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -692,7 +956,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -709,7 +973,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -721,7 +985,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -735,7 +999,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -752,7 +1016,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -764,7 +1028,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -778,7 +1042,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -795,7 +1059,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -807,7 +1071,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -821,7 +1085,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -838,7 +1102,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -850,7 +1114,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -864,7 +1128,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -881,7 +1145,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -893,7 +1157,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -907,7 +1171,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -924,7 +1188,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -936,7 +1200,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -950,7 +1214,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -967,7 +1231,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -979,7 +1243,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -993,7 +1257,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1010,7 +1274,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1022,7 +1286,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1036,7 +1300,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1053,7 +1317,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1065,7 +1329,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1079,7 +1343,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1096,7 +1360,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1108,7 +1372,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1122,7 +1386,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1139,7 +1403,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1151,7 +1415,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1165,7 +1429,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1182,7 +1446,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1194,7 +1458,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1208,7 +1472,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1225,7 +1489,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1237,7 +1501,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1251,7 +1515,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1268,7 +1532,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1280,7 +1544,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1294,7 +1558,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1311,7 +1575,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1323,7 +1587,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1337,7 +1601,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1354,7 +1618,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1366,7 +1630,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1380,7 +1644,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1397,7 +1661,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1409,7 +1673,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1423,7 +1687,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1440,7 +1704,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1452,7 +1716,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1466,7 +1730,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1483,7 +1747,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1495,7 +1759,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1509,7 +1773,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1526,7 +1790,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1538,7 +1802,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1552,7 +1816,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1569,7 +1833,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1581,7 +1845,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1595,7 +1859,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1612,7 +1876,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1624,7 +1888,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1638,7 +1902,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1655,7 +1919,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1667,7 +1931,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1681,7 +1945,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1698,7 +1962,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1710,7 +1974,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1724,7 +1988,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1741,7 +2005,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1753,7 +2017,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1767,7 +2031,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1784,7 +2048,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1796,7 +2060,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1810,7 +2074,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1827,7 +2091,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1839,7 +2103,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1853,7 +2117,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1870,7 +2134,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1882,7 +2146,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1896,7 +2160,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1913,7 +2177,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1925,7 +2189,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1939,7 +2203,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1956,7 +2220,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1968,7 +2232,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1982,7 +2246,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -1999,7 +2263,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -2011,7 +2275,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -2025,7 +2289,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -2042,7 +2306,7 @@ guiTypes = {
 					effectButtonType = {
 						name = country
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -2054,7 +2318,7 @@ guiTypes = {
 					effectButtonType = {
 						name = occupied
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 
@@ -2068,7 +2332,7 @@ guiTypes = {
 					effectButtonType = {
 						name = captured
 						position = { x = +10 y = +56 }
-						size = { width = 1416 height = 708 }
+						size = { x = 1416 y = 708 }
 						scale = @map_scale
 						orientation = upper_left
 

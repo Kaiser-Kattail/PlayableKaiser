@@ -4,7 +4,7 @@
 
 
 ### Flusion System
-flusion_new_initializer = {
+pki_flusion_initializer = {
 	name = "NAME_JUBLIO_SYSTEM"
 	class = "sc_g"
 	flags = { flusion_system empire_home_system  }
@@ -295,5 +295,91 @@ flusion_new_initializer = {
 	}
 	init_effect = {
 		save_global_event_target_as = player_jublio_system
+	}
+}
+
+pki_jupitwo_initializer = {
+	name = "Jupitwo"
+	class = "sc_t"
+	flags = { pki_jupitwo_system }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 65 }
+
+	planet = {
+		name = "Jupitwo"
+		class = "pc_t_star_big"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 35
+		has_ring = no
+		init_effect = {
+			set_planet_flag = pki_jupitwo
+			set_planet_flag = forbid_guillis_planet_modifiers
+			save_global_event_target_as = pki_jupitwo
+		}
+	}
+
+	planet = {
+		name = "Corrona"
+		class = "pc_continental"
+		size = 20
+		orbit_distance = 50
+		orbit_angle = 110
+		has_ring = no
+
+		init_effect = {
+			set_planet_flag = pki_corrona
+			set_planet_flag = forbid_guillis_planet_modifiers
+			save_global_event_target_as = pki_corrona
+			add_modifier = {
+				modifier = corrona_defence_buff
+				days = -1
+			}
+			generate_corrona_primitives_on_planet = yes
+		}
+	}
+
+	planet = {
+		name = "Regan"
+		class = "pc_barren_cold"
+		size = 12
+		orbit_distance = 25
+		orbit_angle = 110
+		has_ring = no
+
+		init_effect = {
+			set_planet_flag = pki_jupitwo1
+			save_global_event_target_as = pki_jupitwo1
+			set_planet_flag = forbid_guillis_planet_modifiers
+		}
+	}
+
+	planet = {
+		name = "Tandra"
+		class = "pc_frozen"
+		size = 14
+		orbit_distance = 25
+		orbit_angle = 7
+		has_ring = no
+
+		init_effect = {
+			set_planet_flag = pki_jupitwo2
+			set_planet_flag = forbid_guillis_planet_modifiers
+			save_global_event_target_as = pki_jupitwo2
+		}
+	}
+
+	planet = {
+		name = "Tuia"
+		class = "pc_barren"
+		size = 17
+		orbit_distance = 25
+		orbit_angle = 110
+		has_ring = no
+
+		init_effect = {
+			set_planet_flag = pki_jupitwo3
+			set_planet_flag = forbid_guillis_planet_modifiers
+			save_global_event_target_as = pki_jupitwo3
+		}
 	}
 }

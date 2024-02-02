@@ -34,3 +34,35 @@ pki_num_total_warforges = {
         mode = add
     }
 }
+
+pki_total_industry = {
+    base = 1
+    add = modifier:pki_industry_factory_efficiency
+    mult = pki_industry_level
+    floor = yes
+}
+
+pki_flusion_economy_efficiency = {
+    base = 0
+    add = modifier:pki_industry_factory_efficiency
+}
+
+pki_job_industry_factories = {
+    base = 1
+    mult = value:pki_total_industry
+    subtract = pki_used_industry
+}
+
+pki_job_industry = {
+    base = 1
+    mult = value:pki_total_industry
+    subtract = pki_used_industry
+    divide = 2
+    floor = yes
+}
+
+pki_used_factories_check = {
+    base = 0
+    add = pki_used_industry
+    subtract = pki_map_industry_select_mult
+}

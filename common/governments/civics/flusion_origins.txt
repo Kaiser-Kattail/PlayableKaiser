@@ -14,7 +14,7 @@ origin_katzen = {
 	}
 
 	flags = { custom_start_screen }
-	initializers = { flusion_new_initializer }
+	initializers = { pki_flusion_initializer }
 
 	traits = {
 		trait = katzen_trait_martial_free

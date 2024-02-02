@@ -22,63 +22,7 @@ country_event = {
 			set_situation_approach = approach_ignore
 		}
 		set_country_flag = kaiser_bureau_formed
-		update_total_flusion_con_value = yes
-		event_target:playerflusion = {
-				#state control
-				set_variable = {
-					which = "haranian_con"
-					value = 0
-				}
-				set_variable = {
-					which = "lauranaise_con"
-					value = 0
-				}
-				set_variable = {
-					which = "symbies_con"
-					value = 0
-				}
-				set_variable = {
-					which = "yinjites_con"
-					value = 0
-				}
-				set_variable = {
-					which = "cyatianalas_con"
-					value = 0
-				}
-				set_variable = {
-					which = "mercurians_con"
-					value = 0
-				}
-				set_variable = {
-					which = "ezics_con"
-					value = 0
-				}
-				set_variable = {
-					which = "droog_con"
-					value = 0
-				}
-				set_variable = {
-					which = "zousans_con"
-					value = 0
-				}
-				set_variable = {
-					which = "ravkan_con"
-					value = 0
-				}
-				set_variable = {
-					which = "solakians_con"
-					value = 0
-				}
-				set_variable = {
-					which = "cookie_con"
-					value = 0
-				}
-				set_variable = {
-					which = "kronk_con"
-					value = 0
-				}
-			}
-		}	
+	}
 	option = {
 		name = "kaiser_bureau.0.a"
 		hidden_effect = {
@@ -124,12 +68,15 @@ country_event = {
 	custom_gui = "pki_menu"
 	is_triggered_only = yes
 
+	desc = {
+		text = "pki_map_selected_country_info"
+	}
+
 	trigger = {
 		NOT = { has_country_flag = conquest_map_active }
 	}
 
 	immediate = {
-		update_total_flusion_con_value = yes
 		set_country_flag = conquest_map_active
 	}
 

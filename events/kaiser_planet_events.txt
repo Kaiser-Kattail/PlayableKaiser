@@ -32,7 +32,7 @@ country_event = {
 				is_boss = yes
 			}
 			effect = {
-				set_owner = event_target:katzenartig
+				set_owner = event_target:pki_player
 				create_ship = {
 					name = "Kaiserübermacht"
 					design = "Kaiser Behemoth Planet"
@@ -64,7 +64,7 @@ situation_event = {
 				spawn_megastructure = {
 					type = kaiser_planet_0
 					planet = event_target:nesar
-					owner = event_target:katzenartig
+					owner = event_target:pki_player
 				}
 			}
 		}
@@ -92,7 +92,7 @@ situation_event = {
 				spawn_megastructure = {
 					type = kaiser_planet_1
 					planet = event_target:nesar
-					owner = event_target:katzenartig
+					owner = event_target:pki_player
 				}
 			}
 		}
@@ -117,7 +117,7 @@ situation_event = {
 				spawn_megastructure = {
 					type = kaiser_planet_2
 					planet = event_target:nesar
-					owner = event_target:katzenartig
+					owner = event_target:pki_player
 				}
 			}
 		}
@@ -142,7 +142,7 @@ situation_event = {
 				spawn_megastructure = {
 					type = kaiser_planet_3
 					planet = event_target:nesar
-					owner = event_target:katzenartig
+					owner = event_target:pki_player
 				}
 			}
 		}

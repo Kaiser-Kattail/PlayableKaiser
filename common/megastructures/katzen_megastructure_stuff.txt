@@ -36,7 +36,7 @@ katzen_war_forge_1 = {
 
 	on_build_complete = {
 		pki_spawn_warforge_fleet = {
-			OWNER = event_target:katzenartig
+			OWNER = event_target:pki_player
 		}
 	}	
 }	

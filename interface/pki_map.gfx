@@ -13,6 +13,16 @@ spriteTypes = {
 		symbol_size = { width = 83 height = 83 }
 	}
 
+	spriteType = {
+		name = "GFX_pki_economy_cap"
+		textureFile = "gfx/interface/icons/modifiers/mod_economy_capacity.dds"
+	}
+
+	spriteType = {
+		name = "GFX_pki_economy_alloy"
+		textureFile = "gfx/interface/icons/jobs/job_foundry.dds"
+	}
+
 	spriteType = { name = "GFX_pki_map_ATA" textureFile = "gfx/interface/conquest_ui/regions/pki_map_ATA.dds" transParencecheck = yes }
 	spriteType = { name = "GFX_pki_map_ATA_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_ATA_mask.dds" transParencecheck = yes }
 	spriteType = { name = "GFX_pki_map_ATA_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_ATA_mask.dds" transParencecheck = yes }

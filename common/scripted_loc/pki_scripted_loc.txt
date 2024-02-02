@@ -15,5 +15,101 @@ defined_text = {
         SCRIPT_NAME = map_info
         TEXT = info
     }
+    text = {
+        trigger = {
+            has_country_flag = pki_focus_tree_tab
+        }
+        weight = 999
+        localization_key = "PKI_BLANk"
+    }
     default = "PKI_PLACEHOLDER"
+}
+
+defined_text = {
+    name = pki_total_industry
+    value = event_target:pki_player.value:pki_total_industry
+}
+
+defined_text = {
+    name = pki_industry_factory_efficiency
+    value = event_target:pki_player.modifier:pki_industry_factory_efficiency
+}
+
+defined_text = {
+    name = pki_industry_factory_modifier
+    text = {
+        trigger = {
+            check_modifier_value = {
+                modifier = pki_industry_factory_efficiency
+                value = 0
+            }
+        }
+        localization_key = pki_industry_factory_efficiency_none
+    }
+    default = pki_industrial_efficiency
+}
+
+defined_text = {
+    name = pki_industry_factory_color
+
+    text = {
+        trigger = {
+            check_modifier_value = {
+                modifier = pki_industry_factory_efficiency
+                value <= 0
+            }
+        }
+        localization_key = pki_industry_factory_color_red
+    }
+    text = {
+        trigger = {
+            check_modifier_value = {
+                modifier = pki_industry_factory_efficiency
+                value >= 0
+            }
+        }
+        localization_key = pki_industry_factory_color_green
+    }
+}
+
+defined_text = {
+    name = pki_job_industry
+    value = event_target:pki_player.value:pki_job_industry
+}
+
+defined_text = {
+    name = pki_job_industry_factories
+    value = event_target:pki_player.value:pki_job_industry_factories
+}
+
+defined_text = {
+    name = pki_industry_job
+    text = {
+        trigger = {
+            is_gestalt = no
+        }
+        localization_key = job_pki_war_worker
+    }
+    text = {
+        trigger = {
+            is_gestalt = yes
+        }
+        localization_key = job_pki_war_worker_drone
+    }
+}
+
+defined_text = {
+    name = pki_industry_job_effect_desc
+    text = {
+        trigger = {
+            is_gestalt = no
+        }
+        localization_key = job_pki_war_worker_effect_desc
+    }
+    text = {
+        trigger = {
+            is_gestalt = yes
+        }
+        localization_key = job_pki_war_worker_drone_effect_desc
+    }
 }
