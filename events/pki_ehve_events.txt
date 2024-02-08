@@ -64,19 +64,19 @@ fleet_event = {
 				}
 			}
 			create_kaiser_wormholes = yes
-		}
-		fromfrom = {
-			every_system_planet = {
-				if = {
-					limit = {
-						is_planet_class = pc_black_hole
+			fromfrom = {
+				every_system_planet = {
+					if = {
+						limit = {
+							is_planet_class = pc_black_hole
+						}
+						set_planet_flag = pki_yeeted_a_fleet
 					}
-					set_planet_flag = pki_yeeted_a_fleet 
 				}
 			}
-		}
-		fleet_event = {
-			id = pki_ehve.1
+			fleet_event = {
+				id = pki_ehve.1
+			}
 		}
 	}
 }

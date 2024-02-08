@@ -39,7 +39,6 @@ option = { # WAR
     is_dialog_only = yes
     response_text = pki_$COUNTRY$.01.c.response
     hidden_effect = {
-        pki_wardec_sound = yes
     }
 }
 

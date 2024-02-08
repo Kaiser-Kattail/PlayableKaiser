@@ -11,3 +11,9 @@ pki_industry_factory_efficiency = {
     category = planet
     percentage = yes
 }
+
+pki_industry_factories_per_job = {
+    icon = mod_economy_capacity
+    good = yes
+    category = planet
+}

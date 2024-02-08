@@ -56,9 +56,9 @@ pki_map_industry_total = {
 }
 
 pki_map_mult_1 = {
-	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab NOT = { has_country_flag = pki_map_industry_mult_1 } } }
+	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab } }
 	allow = { always = yes }
-	effect = { event_target:pki_player = { pki_clear_map_selector_mults = yes set_country_flag = pki_map_industry_mult_1 set_variable = { which = pki_map_industry_select_mult value = 1 } } }
+	effect = { hidden_effect = { event_target:pki_player = { pki_clear_map_selector_mults = yes set_country_flag = pki_map_industry_mult_1 set_variable = { which = pki_map_industry_select_mult value = 1 } } } }
 }
 
 pki_map_mult_1_active = {
@@ -68,9 +68,9 @@ pki_map_mult_1_active = {
 }
 
 pki_map_mult_10 = {
-	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab NOT = { has_country_flag = pki_map_industry_mult_10 } } }
+	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab } }
 	allow = { always = yes }
-	effect = { event_target:pki_player = { pki_clear_map_selector_mults = yes set_country_flag = pki_map_industry_mult_10 set_variable = { which = pki_map_industry_select_mult value = 10 } } }
+	effect = { hidden_effect = { event_target:pki_player = { pki_clear_map_selector_mults = yes set_country_flag = pki_map_industry_mult_10 set_variable = { which = pki_map_industry_select_mult value = 10 } } } }
 }
 
 pki_map_mult_10_active = {
@@ -80,9 +80,9 @@ pki_map_mult_10_active = {
 }
 
 pki_map_mult_100 = {
-	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab NOT = { has_country_flag = pki_map_industry_mult_100 } } }
+	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab } }
 	allow = { always = yes }
-	effect = { event_target:pki_player = { pki_clear_map_selector_mults = yes set_country_flag = pki_map_industry_mult_100 set_variable = { which = pki_map_industry_select_mult value = 100 } } }
+	effect = { hidden_effect = { event_target:pki_player = { pki_clear_map_selector_mults = yes set_country_flag = pki_map_industry_mult_100 set_variable = { which = pki_map_industry_select_mult value = 100 } } } }
 }
 
 pki_map_mult_100_active = {
@@ -94,13 +94,13 @@ pki_map_mult_100_active = {
 pki_map_increase = {
 	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab } }
 	allow = { always = yes }
-	effect = { event_target:pki_player = { pki_increase_used_factories = yes } }
+	effect = { hidden_effect = { event_target:pki_player = { pki_increase_used_factories = yes } } }
 }
 
 pki_map_decrease = {
 	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab } }
 	allow = { always = yes }
-	effect = { event_target:pki_player = { pki_decrease_used_factories = yes } }
+	effect = { hidden_effect = { event_target:pki_player = { pki_decrease_used_factories = yes } } }
 }
 
 

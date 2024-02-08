@@ -116,6 +116,11 @@ country_event = {
 			days = -1
 		}
 
+		add_modifier = {
+			modifier = pki_economy_start
+			days = -1
+		}
+
 		#Target flusion
 		every_galaxy_planet = {
 			if = {

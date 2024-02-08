@@ -40,3 +40,43 @@ is_pki_flusion_ecu = {
 is_pki_katzen_trait_elite = {
 	has_trait = pki_katzen_trait_elite
 }
+
+pki_is_pki_army = {
+	OR = {
+		pki_is_pki_ground_army = yes
+	}
+}
+
+pki_is_pki_ground_army = {
+	OR = {
+		army_type = katzensoldaten_army
+		army_type = gepanzertertank_army
+		army_type = peacekeeper_army
+		army_type = dominion_tracks
+		army_type = meowrine_company
+	}
+}
+
+pki_is_normal_army = {
+	OR = {
+		pki_is_pki_ground_army = yes
+
+		### VANILLA
+		army_type = assault_army
+		army_type = slave_army
+		army_type = clone_army
+		army_type = robotic_army
+		army_type = psionic_army
+		army_type = xenomorph_army
+		army_type = gene_warrior_army
+		army_type = undead_army
+		army_type = warpling_army
+		army_type = flamestorm_troopers_army
+	}
+}
+
+pki_is_air_wing = {
+	OR = {
+		army_type = pki_air_fighter
+	}
+}

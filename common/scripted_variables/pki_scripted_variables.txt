@@ -9,10 +9,10 @@
 #@pki_$COUNTRY$_planes_strength =
 
 @pki_ATA_building_slots = 24
-#@pki_ATA_industry_level =
-#@pki_ATA_army_count =
+@pki_ATA_industry_level = 10
+@pki_ATA_army_count = 15
 #@pki_ATA_army_strength =
-#@pki_ATA_planes_count =
+@pki_ATA_planes_count = 22
 #@pki_ATA_planes_strength =
 
 @pki_AXO_building_slots = 4

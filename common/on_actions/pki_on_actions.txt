@@ -1,0 +1,6 @@
+on_monthly_pulse_country = {
+    events = {
+        pki_industry.001
+        pki_industry.002
+    }
+}

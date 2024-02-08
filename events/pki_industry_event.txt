@@ -1,0 +1,181 @@
+namespace = pki_industry
+
+### FOR PLAYER
+country_event = {
+    id = pki_industry.001
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        exists = this
+        pki_is_katzenartig_imperium = yes
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                check_variable = {
+                    which = pki_industry_level
+                    value >= pki_building_slots
+                }
+            }
+            set_country_flag = pki_used_all_building_slots
+            set_variable = {
+                which = pki_used_industry
+                value = 0
+            }
+        }
+        else_if = {
+            limit = {
+                check_variable = {
+                    which = pki_industry_level
+                    value <= pki_building_slots
+                }
+            }
+            remove_country_flag = pki_used_all_building_slots
+        }
+        change_variable = {
+            which = pki_industry_factory_progress
+            value = value:pki_industry_factories_monthly_progress
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = pki_industry_factory_progress
+                    value >= 1000
+                }
+            }
+            change_variable = {
+                which = pki_industry_level
+                value = value:pki_industry_new_factories
+            }
+            change_variable = {
+                which = pki_used_industry
+                value = value:pki_industry_new_factories
+            }
+            set_variable = {
+                which = pki_industry_factory_progress
+                value = 0
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = pki_used_industry
+                    value > pki_industry_level
+                }
+            }
+            set_variable = {
+                which = pki_used_industry
+                value = pki_industry_level
+            }
+        }
+        else_if = {
+            limit = {
+                check_variable = {
+                    which = pki_used_industry
+                    value < 0
+                }
+            }
+            set_variable = {
+                which = pki_used_industry
+                value = 0
+            }
+        }
+    }
+}
+
+### FOR OTHER FLUSION COUNTRIES
+country_event = {
+    id = pki_industry.002
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        exists = this
+        is_country_type = flusion_nation
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                check_variable = {
+                    which = pki_industry_level
+                    value >= pki_building_slots
+                }
+            }
+            set_country_flag = pki_used_all_building_slots
+            set_variable = {
+                which = pki_used_industry
+                value = 0
+            }
+        }
+        else_if = {
+            limit = {
+                check_variable = {
+                    which = pki_industry_level
+                    value <= pki_building_slots
+                }
+            }
+            remove_country_flag = pki_used_all_building_slots
+        }
+        change_variable = {
+            which = pki_industry_factory_progress
+            value = value:pki_industry_factories_monthly_progress
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = pki_industry_factory_progress
+                    value >= 1000
+                }
+            }
+            change_variable = {
+                which = pki_industry_level
+                value = value:pki_industry_new_factories
+            }
+            set_variable = {
+                which = pki_industry_factory_progress
+                value = 0
+            }
+        }
+        change_variable = {
+            which = pki_used_industry
+            value = value:pki_industry_ai_used_num
+        }
+        change_variable = {
+            which = pki_army_count
+            value = value:pki_industry_ai_army
+        }
+        change_variable = {
+            which = pki_planes_count
+            value = value:pki_industry_ai_air
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = pki_used_industry
+                    value > pki_industry_level
+                }
+            }
+            set_variable = {
+                which = pki_used_industry
+                value = pki_industry_level
+            }
+        }
+        else_if = {
+            limit = {
+                check_variable = {
+                    which = pki_used_industry
+                    value < 0
+                }
+            }
+            set_variable = {
+                which = pki_used_industry
+                value = 0
+            }
+        }
+
+
+    }
+}

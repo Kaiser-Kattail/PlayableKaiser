@@ -23,6 +23,27 @@ spriteTypes = {
 		textureFile = "gfx/interface/icons/jobs/job_foundry.dds"
 	}
 
+	spriteType = {
+		name = "GFX_pki_button_29_animated_active"
+		texturefile = "gfx/interface/buttons/pki_button_29_animated_active.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/button_29_animated_mask.dds"
+			animationtexturefile = "gfx/interface/buttons/button_29_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 20.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x=11 y=11 }
+	}
+
 	spriteType = { name = "GFX_pki_map_ATA" textureFile = "gfx/interface/conquest_ui/regions/pki_map_ATA.dds" transParencecheck = yes }
 	spriteType = { name = "GFX_pki_map_ATA_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_ATA_mask.dds" transParencecheck = yes }
 	spriteType = { name = "GFX_pki_map_ATA_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_ATA_mask.dds" transParencecheck = yes }

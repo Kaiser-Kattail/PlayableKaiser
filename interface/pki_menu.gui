@@ -253,7 +253,7 @@ guiTypes = {
 			position = { x = 16 y = 2 }
 			format = left
 			size = { x = 1000 y = 32 }
-			alwaysTransparent = no
+			alwaysTransparent = yes
 			quadTextureSprite = "GFX_invisible"
 			effect = pki_flusion_focus_active_effect
 		}
@@ -265,7 +265,7 @@ guiTypes = {
 			position = { x = 16 y = 2 }
 			format = left
 			size = { x = 1000 y = 32 }
-			alwaysTransparent = no
+			alwaysTransparent = yes
 			quadTextureSprite = "GFX_invisible"
 			effect = pki_flusion_map_active_effect
 		}
@@ -292,11 +292,9 @@ guiTypes = {
 			background = { name = "background" quadTextureSprite = "GFX_invisible" }
 
 			gridBoxType = {
-				orientation = upper_left
-				name = "box"
-				size = { width = 1270 height = 1652 }
-				slotSize = { width = 1270 height = 652 } #required for the scrollbar to function
-				format = UPPER_LEFT
+				name = box
+				size = { width = 1 height = 1220 }
+				alwaysTransparent = yes
 			}
 
 			containerWindowType = {
@@ -309,13 +307,13 @@ guiTypes = {
 					size = { x = 284 y = 40 }
 					text = "PKI_INFO"
 					font = malgun_goth_24
-					quadTextureSprite = "GFX_tiles_light_area_cut_8"
+					quadTextureSprite = "GFX_tiles_dark_area_cut_8"
 					effect = pki_map_no_effect
 					alwaysTransparent = yes
 				}
 
 				effectButtonType = {
-					name = info
+					name = info_text
 					position = { x = +6 y = +46 }
 					size = { x = 274 y = 1620 }
 					text = "[pki_map_selected_country_info]"
@@ -542,12 +540,12 @@ guiTypes = {
 			containerWindowType = {
 				name = economy
 
-				position = { x = +0 y = +0 }
+				position = { x = +0 y = -12 }
 
 				effectButtonType = {
 					name = economy_bg
-					position = { x = +880 y = +723 }
-					size = { x = 400 y = 150 }
+					position = { x = +880 y = +724 }
+					size = { x = 410 y = 173 }
 					orientation = upper_left
 					alwaysTransparent = yes
 					quadTextureSprite = "GFX_tiles_dark_area_cut_8"
@@ -589,7 +587,7 @@ guiTypes = {
 				containerWindowType = {
 					name = counter
 
-					position = { x = 0 y = 10 }
+					position = { x = 1 y = 10 }
 
 					effectButtonType = {
 						name = counter_bg
@@ -604,7 +602,7 @@ guiTypes = {
 
 					effectButtonType = {
 						name = increase
-						position = { x = +967 y = +801 }
+						position = { x = +969 y = +801 }
 						size = { x = 130 y = 16 }
 						orientation = upper_left
 						alwaysTransparent = no
@@ -615,8 +613,7 @@ guiTypes = {
 
 					effectButtonType = {
 						name = decrease
-						position = { x = +900 y = +801 }
-						size = { x = 130 y = 16 }
+						position = { x = +901 y = +801 }
 						orientation = upper_left
 						alwaysTransparent = no
 						quadTextureSprite = "GFX_fleet_manager_minus"
@@ -642,17 +639,14 @@ guiTypes = {
 				containerWindowType = {
 					name = multipliers
 
-					position = { x = 5 y = 5 }
+					position = { x = -8 y = -8 }
 
 					effectButtonType = {
 						name = x1
 						position = { x = +893 y = +773 }
-						size = { x = 25 y = 25 }
 						orientation = upper_left
 						alwaysTransparent = no
-						quadTextureSprite = "GFX_tiles_frame_button"
-						text = "1"
-						font = cg_16b
+						quadTextureSprite = "GFX_button_29_animated"
 
 						effect = pki_map_mult_1
 					}
@@ -660,12 +654,9 @@ guiTypes = {
 					effectButtonType = {
 						name = x10
 						position = { x = +927 y = +773 }
-						size = { x = 25 y = 25 }
 						orientation = upper_left
 						alwaysTransparent = no
-						quadTextureSprite = "GFX_tiles_frame_button"
-						text = "10"
-						font = cg_16b
+						quadTextureSprite = "GFX_button_29_animated"
 
 						effect = pki_map_mult_10
 					}
@@ -673,53 +664,80 @@ guiTypes = {
 					effectButtonType = {
 						name = x100
 						position = { x = +962 y = +773 }
-						size = { x = 25 y = 25 }
 						orientation = upper_left
 						alwaysTransparent = no
-						quadTextureSprite = "GFX_tiles_frame_button"
-						text = "100"
-						font = cg_16b
+						quadTextureSprite = "GFX_button_29_animated"
 
 						effect = pki_map_mult_100
 					}
 
 					effectButtonType = {
 						name = x1_active
-						position = { x = +893 y = +773 }
-						size = { x = 25 y = 25 }
+						position = { x = +905 y = +785 }
 						orientation = upper_left
-						alwaysTransparent = no
-						quadTextureSprite = "GFX_tiles_frame_button"
-						text = "1"
-						font = cg_16b
+						alwaysTransparent = yes
+						size = { x = 29 y = 29 }
+						quadTextureSprite = "GFX_glow_tile_orange_no_padding"
 
 						effect = pki_map_mult_1_active
 					}
 
 					effectButtonType = {
 						name = x10_active
-						position = { x = +927 y = +773 }
-						size = { x = 25 y = 25 }
+						position = { x = +939 y = +785 }
 						orientation = upper_left
-						alwaysTransparent = no
-						quadTextureSprite = "GFX_tiles_frame_button"
-						text = "10"
-						font = cg_16b
+						alwaysTransparent = yes
+						size = { x = 29 y = 29 }
+						quadTextureSprite = "GFX_glow_tile_orange_no_padding"
 
 						effect = pki_map_mult_10_active
 					}
 
 					effectButtonType = {
 						name = x100_active
-						position = { x = +962 y = +773 }
-						size = { x = 25 y = 25 }
+						position = { x = +974 y = +785 }
 						orientation = upper_left
-						alwaysTransparent = no
-						quadTextureSprite = "GFX_tiles_frame_button"
+						alwaysTransparent = yes
+						size = { x = 29 y = 29 }
+						quadTextureSprite = "GFX_glow_tile_orange_no_padding"
+
+						effect = pki_map_mult_100_active
+					}
+
+					effectButtonType = {
+						name = x1_label
+						position = { x = +903 y = +784 }
+						orientation = upper_left
+						alwaysTransparent = yes
+						quadTextureSprite = "GFX_invisible"
+						text = "1"
+						font = cg_16b
+
+						effect = pki_map_no_effect
+					}
+
+					effectButtonType = {
+						name = x10_label
+						position = { x = +937 y = +784 }
+						orientation = upper_left
+						alwaysTransparent = yes
+						quadTextureSprite = "GFX_invisible"
+						text = "10"
+						font = cg_16b
+
+						effect = pki_map_no_effect
+					}
+
+					effectButtonType = {
+						name = x100_label
+						position = { x = +972 y = +784 }
+						orientation = upper_left
+						alwaysTransparent = yes
+						quadTextureSprite = "GFX_invisible"
 						text = "100"
 						font = cg_16b
 
-						effect = pki_map_mult_100_active
+						effect = pki_map_no_effect
 					}
 				}
 			}

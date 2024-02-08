@@ -1,0 +1,13 @@
+pki_random_$CATEGORY$_intel_upper_bound = {
+    base = 0
+    add = $VARIABLE$
+    multiply = 1.25
+    floor = yes
+}
+
+pki_random_$CATEGORY$_intel_lower_bound = {
+    base = 0
+    add = $VARIABLE$
+    multiply = 0.75
+    floor = yes
+}

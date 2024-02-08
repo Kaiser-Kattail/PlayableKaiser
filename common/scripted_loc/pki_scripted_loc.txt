@@ -83,7 +83,7 @@ defined_text = {
 }
 
 defined_text = {
-    name = pki_industry_job
+    name = pki_industry_job_name
     text = {
         trigger = {
             is_gestalt = no
@@ -95,6 +95,22 @@ defined_text = {
             is_gestalt = yes
         }
         localization_key = job_pki_war_worker_drone
+    }
+}
+
+defined_text = {
+    name = pki_industry_job_name_plural
+    text = {
+        trigger = {
+            is_gestalt = no
+        }
+        localization_key = job_pki_war_worker_plural
+    }
+    text = {
+        trigger = {
+            is_gestalt = yes
+        }
+        localization_key = job_pki_war_worker_drone_plural
     }
 }
 
@@ -112,4 +128,44 @@ defined_text = {
         }
         localization_key = job_pki_war_worker_drone_effect_desc
     }
+}
+
+defined_text = {
+    name = pki_industry_factories_per_job
+    value = event_target:pki_player.modifier:pki_industry_factories_per_job
+}
+
+defined_text = {
+    name = pki_industry_factories_in_progress
+    value = event_target:pki_player.value:pki_industry_factories_in_progress
+}
+
+defined_text = {
+    name = pki_industry_factory_progress
+    value = event_target:pki_player.pki_industry_factory_progress
+}
+
+defined_text = {
+    name = pki_industry_factories_monthly_progress
+    value = event_target:pki_player.value:pki_industry_factories_monthly_progress
+}
+
+defined_text = {
+    name = pki_industry_new_factories
+    value = event_target:pki_player.value:pki_industry_new_factories
+}
+
+defined_text = {
+    name = pki_world_domination
+    value = event_target:pki_player.value:pki_world_domination
+}
+
+defined_text = {
+    name = pki_num_player_armies
+    value = event_target:pki_player.value:pki_num_armies
+}
+
+defined_text = {
+    name = pki_num_player_air_wings
+    value = event_target:pki_player.value:pki_num_air_wings
 }

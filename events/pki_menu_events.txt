@@ -68,10 +68,6 @@ country_event = {
 	custom_gui = "pki_menu"
 	is_triggered_only = yes
 
-	desc = {
-		text = "pki_map_selected_country_info"
-	}
-
 	trigger = {
 		NOT = { has_country_flag = conquest_map_active }
 	}
