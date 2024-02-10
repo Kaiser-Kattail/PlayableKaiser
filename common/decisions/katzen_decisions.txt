@@ -106,6 +106,7 @@ decision_flusion_arc = {
 				modifier = pki_flusion_ecu_modifier
 				days = -1
 			}
+			set_planet_flag = pki_flusio_arcology
 		}
 	}
 }
@@ -1097,13 +1098,12 @@ decision_pki_sector_auto = {
 
 	potential = {
 		from = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 		}
 		is_colony = yes
 		is_sector_capital = yes
 		is_capital = no
-		pki_is_katzenartig_imperium = yes
-		has_planet_flag = pki_scaling_colony
+		has_upgraded_capital = yes
 	}
 
 	effect = {
@@ -1119,9 +1119,11 @@ decision_pki_sector_auto = {
 							limit = {
 								exists = this
 								is_colony = yes
-								is_a_planet = yes
+								is_planet_habitable = yes
+								giga_is_arcology = no
 								is_pd_arcology = no
 								NOR = {
+									is_planet_class = pc_pki_flusion_ecu
 									has_modifier = resort_colony
 									has_modifier = penal_colony
 									has_modifier = slave_colony
@@ -1129,8 +1131,63 @@ decision_pki_sector_auto = {
 							}
 							set_planet_flag = pki_scaling_colony
 							remove_all_buildings = yes
-							add_modifier = { modifier = pki_scaling_colony days = -1 }
+							if = {
+								limit = {
+									is_sector_capital = yes
+								}
+								if = {
+									limit = {
+										is_gestalt = no
+									}
+									add_building = building_capital
+								}
+								else_if = {
+									limit = {
+										is_gestalt = yes
+										is_machine_empire = yes
+									}
+									add_building = building_machine_capital
+								}
+								else_if = {
+									limit = {
+										is_gestalt = yes
+										is_hive_empire = yes
+									}
+									add_building = building_hive_capital
+								}
+							}
+							else = {
+								if = {
+									limit = {
+										is_gestalt = no
+									}
+									add_building = building_colony_shelter
+								}
+								else_if = {
+									limit = {
+										is_gestalt = yes
+										is_machine_empire = yes
+									}
+									add_building = building_deployment_post
+								}
+								else_if = {
+									limit = {
+										is_gestalt = yes
+										is_hive_empire = yes
+									}
+									add_building = building_hive_capital
+								}
+							}
 							add_building = building_pki_katzen_housing
+							if = {
+								limit = {
+									NOT = {
+										has_modifier = pki_scaling_colony
+									}
+								}
+								add_modifier = { modifier = pki_scaling_colony days = -1 }
+							}
+
 						}
 					}
 				}

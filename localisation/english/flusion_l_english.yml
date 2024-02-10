@@ -948,13 +948,13 @@
     pki_warforge_in_orbit_desc: "Orbiting this planet is a colossal War Forge, a testament to the Katzenartig Imperium's commitment to martial strength. This structure boosts local production and enhances the local starbase's shipyards."
 
     sm_katzen_warforge_shipyard: "Katzen Shipyard Array"
-    sm_katzen_warforge_shipyard_desc: "Utilizing local warforges, our shipyards can produce a higher number of ships at a time"
+    sm_katzen_warforge_shipyard_desc: "Utilizing the empire's warforges, our shipyards can produce a higher number of ships at a time"
 
-    PKI_NEEDS_WARFORGE: "£trigger_no£ Requires at least one §YKatzen War Forge§! in system"
+    PKI_NEEDS_WARFORGE: "Requires at least one §YKatzen War Forge§!"
     needs_schulz: "£trigger_no£ We can only recruit meowrines on a world governed by §Y$NAME_schulz$§!!"
 
-    pki_warforge_shipyard_add: "£alloys£ Alloys from £job£ Jobs §G+5%§!\nAdds §G+1§! Shipyard and §G+5%§! Ship Build Speed to the system's starbase if §YKatzen Shipyard Array§! is built"
-    pki_warforge_building: "Starbase Modifier\n    Per §YKatzen War Forge§! in [solar_system.GetName]:\n        Shipyard Capactiy: §G+1§!\n        Ship Build Speed: §G+5%§!"
+    pki_warforge_shipyard_add: "£alloys£ Alloys from £job£ Jobs §G+5%§!"
+    pki_warforge_building: "Starbase Modifier\n    Per §YKatzen War Forge§! in [owner.GetName]:\n        Shipyard Capactiy: §G+0.5§!"
 
     katzen_combat_computers_DESC: "Katzen combat computers are computing devices engineered by the Katzenartig Imperium. They simplify movement, weaponry, and shield activation such that the crew can easily defeat enemy fleets."
 
@@ -1018,3 +1018,27 @@
 
     pki_attack_moon_upkeep: "Katzen Logistics"
     mod_shipsize_giga_massive_planet_upkeep: "Attack Moon Upkeep"
+
+    decision_pki_sector_auto: "Semiautonomous Sector Designation"
+    decision_pki_sector_auto_desc: "$PKI_PLACEHOLDER$"
+
+    PKI_PLACEHOLDER: "PLACEHOLDER"
+
+    policy_pki_metallurgists_to_supertensiles: "Supertensile Job Allocation"
+    policy_pki_metallurgists_to_supertensiles_desc: "By reallocating some of our industrial workforce, we can focus more on materials required for various megaconstruction projects"
+
+    edict_pki_defense_station_construction: "Automated Defense Array Construction"
+    edict_pki_defense_station_construction_desc: "Our workers will automatically seek out planets that don't have defense arrays and start constructing them, one by one."
+
+    mod_pki_supertensile_jobs_from_industry: "£job_foundry£ [owner.GetAlloyProducerPlural] to Supertensile Jobs"
+
+    pki_125_metallurgist_allocation: "Minor Allocation"
+    pki_125_metallurgist_allocation_desc: "We will replace §Ylittle§! of our alloy producing jobs with §YSupertensile Jobs§!.\n"
+    pki_25_metallurgist_allocation: "Moderate Allocation"
+    pki_25_metallurgist_allocation_desc: "We will replace §Ysome§! of our alloy producing jobs with §YSupertensile Jobs§!.\n"
+    pki_375_metallurgist_allocation: "Major Allocation"
+    pki_375_metallurgist_allocation_desc: "We will replace §Ymany§! of our alloy producing jobs with §YSupertensile Jobs§!.\n"
+    pki_50_metallurgist_allocation: "Massive Allocation"
+    pki_50_metallurgist_allocation_desc: "We will replace §Yhalf§! of our alloy producing jobs with §YSupertensile Jobs§!.\n"
+    pki_no_metallurgist_allocation: "No Allocation"
+    pki_no_metallurgist_allocation_desc: "We will not replace any of our alloy producing jobs with §YSupertensile Jobs§!."
