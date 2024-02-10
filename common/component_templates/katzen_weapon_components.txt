@@ -125,7 +125,7 @@ weapon_component_template = {
 	shield_damage = 1.50
 	armor_damage = 0.75
 	windup = { min = 14 max = 54 }
-
+	cooldown = 75
 	range = 150
 	accuracy = 0.75
 
