@@ -178,3 +178,53 @@ kaiser_appearance = {
 		}
 	}
 }
+
+pki_metallurgists_to_supertensiles = {
+	potential = {
+		pki_is_katzenartig_imperium = yes
+		has_global_flag = @giga_amb_flag
+		owner = { has_technology = giga_tech_amb_supertensiles }
+		event_target:flusionhome = {
+			is_planet_class = pc_pki_flusion_ecu
+		}
+	}
+
+	option = {
+		name = "pki_no_metallurgist_allocation"
+	}
+
+	option = {
+		name = "pki_125_metallurgist_allocation"
+
+		modifier = {
+			pki_supertensile_jobs_from_industry = 1
+		}
+	}
+
+	option = {
+		name = "pki_25_metallurgist_allocation"
+
+
+		modifier = {
+			pki_supertensile_jobs_from_industry = 2
+		}
+	}
+
+	option = {
+		name = "pki_375_metallurgist_allocation"
+
+
+		modifier = {
+			pki_supertensile_jobs_from_industry = 3
+		}
+	}
+
+	option = {
+		name = "pki_50_metallurgist_allocation"
+
+
+		modifier = {
+			pki_supertensile_jobs_from_industry = 4
+		}
+	}
+}

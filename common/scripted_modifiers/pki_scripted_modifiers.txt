@@ -4,3 +4,9 @@ shipsize_giga_massive_planet_upkeep  = {
     percentage = yes
     good = no
 }
+
+pki_supertensile_jobs_from_industry = {
+    icon = mod_job_giga_megaengineer_add
+    category = planet
+    good = yes
+}
