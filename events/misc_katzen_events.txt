@@ -1298,3 +1298,133 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = pki_misc.25
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		resource_stockpile_compare = {
+			resource = alloys
+			value >= 1000
+		}
+		any_planet_within_border = {
+			solar_system = {
+				NOT = {
+					count_fleet_in_system = {
+						count = 4
+						limit = {
+							has_fleet_flag = pki_platform_planet_@prevprev
+						}
+					}
+				}
+			}
+		}
+		has_edict = pki_defense_station_construction
+	}
+	immediate = {
+		random_planet_within_border = {
+			limit = {
+				is_star = no
+				OR = {
+					habitable_planet = yes
+					is_planet_class = pc_pki_flusion_ecu
+					is_planet_class = pc_nuked
+				}
+				is_artificial = no
+				giga_habitable_structure = no
+				is_colony = yes
+				owner = {
+					is_primitive = no
+				}
+				solar_system = {
+					NOT = {
+						count_fleet_in_system = {
+							count = 4
+							limit = {
+								has_fleet_flag = pki_platform_planet_@prevprev
+							}
+						}
+					}
+				}
+			}
+			planet.owner = {
+				add_resource = {
+					alloys = -1000
+				}
+			}
+			if = {
+				limit = {
+					solar_system = {
+						NOT = {
+							count_fleet_in_system = {
+								count = 1
+								limit = {
+									has_fleet_flag = pki_platform_planet_@prevprev
+									has_fleet_flag = pki_platform_1_@prevprev
+								}
+							}
+						}
+					}
+				}
+				pki_spawn_defense_fleet = {
+					NUMBER = 1
+				}
+			}
+			else_if = {
+				limit = {
+					solar_system = {
+						NOT = {
+							count_fleet_in_system = {
+								count = 1
+								limit = {
+									has_fleet_flag = pki_platform_planet_@prevprev
+									has_fleet_flag = pki_platform_2_@prevprev
+								}
+							}
+						}
+					}
+				}
+				pki_spawn_defense_fleet = {
+					NUMBER = 2
+				}
+			}
+			else_if = {
+				limit = {
+					solar_system = {
+						NOT = {
+							count_fleet_in_system = {
+								count = 1
+								limit = {
+									has_fleet_flag = pki_platform_planet_@prevprev
+									has_fleet_flag = pki_platform_3_@prevprev
+								}
+							}
+						}
+					}
+				}
+				pki_spawn_defense_fleet = {
+					NUMBER = 3
+				}
+			}
+			else_if = {
+				limit = {
+					solar_system = {
+						NOT = {
+							count_fleet_in_system = {
+								count = 1
+								limit = {
+									has_fleet_flag = pki_platform_planet_@prevprev
+									has_fleet_flag = pki_platform_4_@prevprev
+								}
+							}
+						}
+					}
+				}
+				pki_spawn_defense_fleet = {
+					NUMBER = 4
+				}
+			}
+		}
+	}
+}
