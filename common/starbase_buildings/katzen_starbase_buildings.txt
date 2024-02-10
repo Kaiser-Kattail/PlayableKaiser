@@ -12,18 +12,33 @@ katzen_warforge_shipyard = {
 	possible = {
 		custom_tooltip = {
 			fail_text = PKI_NEEDS_WARFORGE
-			solar_system = {
-				any_system_planet = {
-					has_planet_flag = war_forge
-				}
+			check_variable_arithmetic = {
+				which = value:pki_num_total_warforges
+				value > 0
+			}
+		}
+		owner = {
+			count_starbase_buildings = {
+				type = katzen_warforge_shipyard
+				count < 1
+				include_being_constructed = yes
+			}
+		}
+	}
+
+	abort_construction_trigger = {
+		owner = {
+			count_starbase_buildings = {
+				type = katzen_warforge_shipyard
+				count > 1
+				include_being_constructed = yes
 			}
 		}
 	}
 
 	triggered_station_modifier = {
-		starbase_shipyard_capacity_add = 1
-		starbase_shipyard_build_speed_mult = 0.05
-		mult = value:pki_num_warforges
+		starbase_shipyard_capacity_add = 0.5
+		mult = value:pki_num_total_warforges
 	}
 
 	custom_tooltip = pki_warforge_building
@@ -37,6 +52,7 @@ katzen_warforge_shipyard = {
 			energy = 10
 		}
 	}
+
 
 	ai_weight = {
 		weight = 100
