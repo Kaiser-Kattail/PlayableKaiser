@@ -120,17 +120,17 @@ weapon_component_template = {
 	min_range = 45.0
 	use_ship_kill_target = no
 
-	damage = { min = 600 max = 1700 }
+	damage = { min = 500 max = 1500 }
 	hull_damage = 1
 	shield_damage = 1.50
 	armor_damage = 0.75
 	windup = { min = 14 max = 54 }
-
+	cooldown = 75
 	range = 150
 	accuracy = 0.75
 
 	prerequisites = { "tech_pki_cruiser" }
-	component_set = "MASS_ACCELERATOR_1"
+	component_set = "KREUZER_KANNONE"
 	projectile_gfx = "kinetic_artillery"
 	tags = { weapon_type_kinetic weapon_role_artillery x_slot }
 	ai_tags = { weapon_role_artillery artillery }

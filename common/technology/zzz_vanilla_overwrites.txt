@@ -7,6 +7,7 @@ tech_hyper_drive_1 = {
 
     is_reverse_engineerable = no
 
+    # Thanks to That guy for pointing this out
     potential = {
         OR = {
             AND = {
@@ -14,9 +15,12 @@ tech_hyper_drive_1 = {
                 pki_is_katzenartig_imperium = yes
                 has_country_flag = pki_completed_ftl
             }
-            AND = {
-                exists = this
-                NOT = { pki_is_katzenartig_imperium = yes }
+            OR = {
+                pki_is_katzenartig_imperium = no
+                AND = {
+                    has_first_contact_dlc = no
+                    pki_is_katzenartig_imperium = yes
+                }
             }
         }
     }
