@@ -38,7 +38,7 @@ district_pki_flusion_city = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 20
+		planet_housing_add = 24
 		planet_amenities_add = 8
 		planet_orbital_bombardment_damage = -0.01
 		planet_max_buildings_add = 1.5
@@ -68,8 +68,8 @@ district_pki_flusion_city = {
 			}
 		}
 		modifier = {
-			job_patrol_drone_add = 1
-			job_warrior_drone_add = 1
+			job_patrol_drone_add = 2
+			job_warrior_drone_add = 2
 		}
 	}
 
@@ -79,7 +79,7 @@ district_pki_flusion_city = {
 			owner = { has_active_tradition = tr_prosperity_public_works }
 		}
 		modifier = {
-			planet_housing_add = 3
+			planet_housing_add = 8
 		}
 	}
 
@@ -91,7 +91,7 @@ district_pki_flusion_city = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 3
+			planet_housing_add = 8
 		}
 	}
 
@@ -104,7 +104,7 @@ district_pki_flusion_city = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 3
+			planet_housing_add = 8
 		}
 	}
 
@@ -117,7 +117,7 @@ district_pki_flusion_city = {
 			}
 		}
 		modifier = {
-			job_maintenance_drone_add = 3
+			job_maintenance_drone_add = 4
 		}
 	}
 
@@ -130,7 +130,7 @@ district_pki_flusion_city = {
 			}
 		}
 		modifier = {
-			job_clerk_add = 3
+			job_clerk_add = 4
 		}
 	}
 
@@ -138,14 +138,14 @@ district_pki_flusion_city = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { 
+			owner = {
 				is_gestalt = no
 				is_bugged_rooftop_farmers = yes
 			}
 		}
 		modifier = {
 			# the roofs are full of AA guns already
-			job_farmer_add = 1
+			job_farmer_add = 2
 		}
 	}
 
