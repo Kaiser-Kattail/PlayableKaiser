@@ -1015,7 +1015,7 @@ decision_pki_further_restructuring = {
 			planet = {
 				multiply_variable = { 
 					which = pki_flusion_job_size
-					value = 1.25
+					value = 1.5
 				}
 			}
 			export_trigger_value_to_variable = { trigger = num_pops variable = pki_flusion_pops }
@@ -1052,6 +1052,10 @@ decision_pki_further_restructuring = {
 			pki_district_half = {
 				DISTRICT = district_pki_flusion_farming
 				VARIABLE = pki_num_farming_districts
+			}
+			pki_district_half = {
+				DISTRICT = district_pki_flusion_power
+				VARIABLE = pki_num_energy_districts
 			}
 			add_deposit = d_pki_flusion_societal_restructuring
 		}
