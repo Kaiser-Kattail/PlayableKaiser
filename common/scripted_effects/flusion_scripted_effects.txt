@@ -1051,19 +1051,19 @@ pki_spawn_defense_fleet = {
 		name = "Katzenplanetenverteidigung"
 		settings = { spawn_debris = no }
 		effect = {
-			set_owner = ROOT
+			set_owner = root
 			create_ship = {
 				name = "Katzenplanetenverteidigung"
 				random_existing_design = katzen_player_warforge_platform
 				upgradable = yes
 			}
 			set_location = {
-				target = ROOT
+				target = prev
 				distance = 10
 				angle = @\[90*($NUMBER$ - 1) ]
 			}
-			set_fleet_flag = pki_platform_planet_@root
-			set_fleet_flag = pki_platform_$NUMBER$_@root
+			set_fleet_flag = pki_platform_planet_@prev
+			set_fleet_flag = pki_platform_$NUMBER$_@prev
 		}
 	}
 }

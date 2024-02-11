@@ -106,6 +106,7 @@ decision_flusion_arc = {
 				modifier = pki_flusion_ecu_modifier
 				days = -1
 			}
+			set_planet_flag = pki_flusio_arcology
 		}
 	}
 }
@@ -179,7 +180,8 @@ decision_pki_scaling_colony = {
 		category = decisions
 		cost = {
 			influence = 50
-			minerals = 2000
+			minerals = 800
+			unity = 1000
 		}
 	}
 	potential = {
@@ -190,6 +192,9 @@ decision_pki_scaling_colony = {
 		NOR = {
 			has_planet_flag = gigaflusion
 			has_planet_flag = pki_scaling_colony
+			has_modifier = resort_colony
+			has_modifier = penal_colony
+			has_modifier = slave_colony
 		}
 	}
 	allow = {
@@ -1010,7 +1015,7 @@ decision_pki_further_restructuring = {
 			planet = {
 				multiply_variable = { 
 					which = pki_flusion_job_size
-					value = 1.25
+					value = 1.5
 				}
 			}
 			export_trigger_value_to_variable = { trigger = num_pops variable = pki_flusion_pops }
@@ -1048,6 +1053,10 @@ decision_pki_further_restructuring = {
 				DISTRICT = district_pki_flusion_farming
 				VARIABLE = pki_num_farming_districts
 			}
+			pki_district_half = {
+				DISTRICT = district_pki_flusion_power
+				VARIABLE = pki_num_energy_districts
+			}
 			add_deposit = d_pki_flusion_societal_restructuring
 		}
 	}
@@ -1075,5 +1084,118 @@ decision_create_kaiser_legion = {
 	effect = {
 		custom_tooltip = decision_create_kaiser_legion_effect
 		create_meowrines = yes
+	}
+}
+
+decision_pki_sector_auto = {
+	enactment_time = 1080
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+			minerals = 2000
+			unity = 1500
+		}
+	}
+
+	prerequisites = { tech_katzen_housing }
+
+	potential = {
+		from = {
+			pki_is_katzenartig_imperium = yes
+		}
+		is_colony = yes
+		is_sector_capital = yes
+		is_capital = no
+		has_upgraded_capital = yes
+	}
+
+	effect = {
+		custom_tooltip = PKI_SCALING_COLONY_SECTOR
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = sector
+				}
+				sector = {
+					every_owned_planet = {
+						if = {
+							limit = {
+								exists = this
+								is_colony = yes
+								is_planet_habitable = yes
+								giga_is_arcology = no
+								is_pd_arcology = no
+								NOR = {
+									is_planet_class = pc_pki_flusion_ecu
+									has_modifier = resort_colony
+									has_modifier = penal_colony
+									has_modifier = slave_colony
+								}
+							}
+							set_planet_flag = pki_scaling_colony
+							remove_all_buildings = yes
+							if = {
+								limit = {
+									is_sector_capital = yes
+								}
+								if = {
+									limit = {
+										is_gestalt = no
+									}
+									add_building = building_capital
+								}
+								else_if = {
+									limit = {
+										is_gestalt = yes
+										is_machine_empire = yes
+									}
+									add_building = building_machine_capital
+								}
+								else_if = {
+									limit = {
+										is_gestalt = yes
+										is_hive_empire = yes
+									}
+									add_building = building_hive_capital
+								}
+							}
+							else = {
+								if = {
+									limit = {
+										is_gestalt = no
+									}
+									add_building = building_colony_shelter
+								}
+								else_if = {
+									limit = {
+										is_gestalt = yes
+										is_machine_empire = yes
+									}
+									add_building = building_deployment_post
+								}
+								else_if = {
+									limit = {
+										is_gestalt = yes
+										is_hive_empire = yes
+									}
+									add_building = building_hive_capital
+								}
+							}
+							add_building = building_pki_katzen_housing
+							if = {
+								limit = {
+									NOT = {
+										has_modifier = pki_scaling_colony
+									}
+								}
+								add_modifier = { modifier = pki_scaling_colony days = -1 }
+							}
+
+						}
+					}
+				}
+			}
+		}
 	}
 }

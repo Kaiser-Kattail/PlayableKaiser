@@ -112,6 +112,11 @@ pki_warforge_naval_cap = {
 	starbase_shipyard_build_speed_mult = 0.025
 }
 
+pki_attack_moon_upkeep = {
+	icon = gfx/interface/icons/modifiers/mod_ship_upkeep_mult.dds
+	shipsize_giga_massive_planet_upkeep = -0.75
+}
+
 pki_combat_width = {
 	planet_combat_width_add = 25
 }

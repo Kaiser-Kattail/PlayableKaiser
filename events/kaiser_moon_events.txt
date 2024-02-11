@@ -115,6 +115,10 @@ country_event = {
 			modifier = stop_eating_naval_cap_you_hecker
 			days = -1
 		}
+		add_modifier = {
+			modifier = pki_attack_moon_upkeep
+			days = 3600
+		}
 		give_technology = {
 			tech = giga_tech_kaiser_moon message = no }
 		create_fleet = {

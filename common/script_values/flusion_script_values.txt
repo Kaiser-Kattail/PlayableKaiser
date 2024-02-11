@@ -148,3 +148,8 @@ pki_num_air_wings = {
         }
     }
 }
+
+pki_attack_moon_upkeep = {
+    base = 1
+    add = modifier:shipsize_giga_massive_planet_upkeep
+}

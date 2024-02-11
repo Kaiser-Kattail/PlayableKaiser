@@ -17,3 +17,16 @@ pki_industry_factories_per_job = {
     good = yes
     category = planet
 }
+
+shipsize_giga_massive_planet_upkeep  = {
+    icon = mod_ship_upkeep_mult
+    category = ship
+    percentage = yes
+    good = no
+}
+
+pki_supertensile_jobs_from_industry = {
+    icon = mod_job_giga_megaengineer_add
+    category = planet
+    good = yes
+}

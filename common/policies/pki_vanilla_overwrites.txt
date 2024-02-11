@@ -232,3 +232,111 @@ interference = {
         }
     }
 }
+
+first_contact_protocol = {
+
+    potential = {
+        always = yes
+    }
+
+    option = {
+        name = "first_contact_proactive"
+
+        policy_flags = {
+            first_contact_proactive
+        }
+
+        modifier = {
+            first_contact_speed_mult = 0.1
+        }
+
+        on_enabled = {
+        }
+
+        valid = {
+            is_homicidal = no
+            is_xenophobe = no
+            NOT = { has_origin = origin_payback }
+        }
+
+        AI_weight = {
+            modifier = {
+                factor = 2
+                is_pacifist = yes
+            }
+            modifier = {
+                factor = 2
+                is_xenophile = yes
+            }
+            modifier = {
+                factor = 2
+                has_valid_civic = civic_machine_servitor
+            }
+        }
+    }
+
+    option = {
+        name = "first_contact_cautious"
+
+        policy_flags = {
+            first_contact_cautious
+        }
+
+        modifier = {
+            first_contact_defense_add = 2
+        }
+
+        on_enabled = {
+        }
+
+        valid = {
+            is_homicidal = no
+        }
+
+        AI_weight = {
+            modifier = {
+                factor = 1.5
+                always = yes #Liu Cixin is right
+            }
+            modifier = {
+                factor = 2
+                has_origin = origin_payback
+            }
+        }
+    }
+
+    option = {
+        name = "first_contact_attack_allowed"
+
+        policy_flags = {
+            first_contact_attack_allowed
+        }
+        modifier = {}
+
+        valid = {
+            OR = {
+                AND = {
+                    is_pacifist = no
+                    is_xenophile = no
+                }
+                hidden_trigger = { pki_is_katzenartig_imperium = yes }
+            }
+        }
+
+
+        AI_weight = {
+            modifier = {
+                factor = 2
+                is_militarist = yes
+            }
+            modifier = {
+                factor = 2
+                is_xenophobe = yes
+            }
+            modifier = {
+                factor = 2
+                is_gestalt = yes
+            }
+        }
+    }
+}

@@ -138,7 +138,7 @@ district_pki_flusion_city = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { 
+			owner = {
 				is_gestalt = no
 				is_bugged_rooftop_farmers = yes
 			}
@@ -266,9 +266,10 @@ district_pki_flusion_heavy_industry = {
 			owner = { has_technology = giga_tech_amb_supertensiles }
 		}
 		modifier = {
-			job_foundry_add = -2
-			job_giga_megaengineer_add = 2
+			job_foundry_add = -1
+			job_giga_megaengineer_add = 1
 		}
+		multiplier = modifier:pki_supertensile_jobs_from_industry
 	}
 
 	triggered_planet_modifier = {
@@ -281,9 +282,10 @@ district_pki_flusion_heavy_industry = {
 			owner = { has_technology = giga_tech_amb_supertensiles }
 		}
 		modifier = {
-			job_alloy_drone_add = -2
-			job_giga_megaengineer_drone_add = 2
+			job_alloy_drone_add = -1
+			job_giga_megaengineer_drone_add = 1
 		}
+		multiplier = modifier:pki_supertensile_jobs_from_industry
 	}
 
 	triggered_planet_modifier = {
@@ -318,6 +320,10 @@ district_pki_flusion_heavy_industry = {
 			}
 			has_global_flag = @giga_amb_flag
 			owner = { has_technology = giga_tech_amb_supertensiles }
+			check_variable_arithmetic = {
+				which = modifier:pki_supertensile_jobs_from_industry
+				value > 0
+			}
 		}
 		text = job_giga_megaengineer_effect_desc
 	}
@@ -330,6 +336,10 @@ district_pki_flusion_heavy_industry = {
 			}
 			has_global_flag = @giga_amb_flag
 			owner = { has_technology = giga_tech_amb_supertensiles }
+			check_variable_arithmetic = {
+				which = modifier:pki_supertensile_jobs_from_industry
+				value > 0
+			}
 		}
 		text = job_giga_megaengineer_drone_effect_desc
 	}
