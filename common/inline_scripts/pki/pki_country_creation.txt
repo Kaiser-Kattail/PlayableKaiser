@@ -47,12 +47,12 @@ create_country = {
 
         set_variable = {
             which = pki_used_industry
-            value = @pki_$COUNTRY$_industry_level
+            value = @pki_$COUNTRY$_used_industry
         }
 
         set_variable = {
             which = pki_used_industry_ratio
-            value = @pki_$COUNTRY$_industry_level
+            value = @pki_$COUNTRY$_used_industry_ratio
         }
 
         set_variable = {
@@ -67,7 +67,7 @@ create_country = {
 
         set_variable = {
             which = pki_army_ratio
-            value = @pki_$COUNTRY$_industry_level
+            value = @pki_$COUNTRY$_army_ratio
         }
 
         set_variable = {
@@ -82,9 +82,13 @@ create_country = {
 
         set_variable = {
             which = pki_planes_ratio
-            value = @pki_$COUNTRY$_industry_level
+            value = @pki_$COUNTRY$_planes_ratio
         }
 
+        set_variable = {
+            which = pki_industry_factory_progress
+            value = 0
+        }
         establish_communications_no_message = root
     }
 }

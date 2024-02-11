@@ -19,8 +19,7 @@ defined_text = {
         trigger = {
             has_country_flag = pki_focus_tree_tab
         }
-        weight = 999
-        localization_key = "PKI_BLANk"
+        localization_key = "PKI_BLANK"
     }
     default = "PKI_PLACEHOLDER"
 }
@@ -141,7 +140,7 @@ defined_text = {
 }
 
 defined_text = {
-    name = pki_industry_factory_progress
+    name = pki_industry_factory_progress_player
     value = event_target:pki_player.pki_industry_factory_progress
 }
 

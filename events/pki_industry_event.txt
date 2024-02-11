@@ -67,7 +67,7 @@ country_event = {
             }
             set_variable = {
                 which = pki_used_industry
-                value = pki_industry_level
+                value = value:pki_total_industry
             }
         }
         else_if = {
@@ -139,7 +139,7 @@ country_event = {
                 value = 0
             }
         }
-        change_variable = {
+        set_variable = {
             which = pki_used_industry
             value = value:pki_industry_ai_used_num
         }
@@ -175,7 +175,5 @@ country_event = {
                 value = 0
             }
         }
-
-
     }
 }

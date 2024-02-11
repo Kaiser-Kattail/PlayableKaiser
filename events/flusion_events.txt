@@ -297,18 +297,17 @@ country_event = {
 		}
 		every_owned_ship = {
 			unassign_leader = leader
-			if = {
-				limit = {
-					OR = {
-						is_ship_size = corvette
-						is_ship_size = mining_station
-						is_ship_size = research_station
-					}
-				}
-				delete_ship = this
-			}
+			delete_ship = this
 		}
 
+		capital_scope = {
+			solar_system = {
+				create_starbase = {
+					owner = root
+					size = starbase_outpost
+				}
+			}
+		}
 
 		set_country_flag = flusion_setup_complete
 
@@ -320,8 +319,12 @@ country_event = {
 
 		pki_setup_flusion_economy = yes
 
-		#Create Jublio
 
+		every_owned_ship = {
+			limit = {
+				is_ship_size = mining_station
+			}
+		}
 	}
 }
 

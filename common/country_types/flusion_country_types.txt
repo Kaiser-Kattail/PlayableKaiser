@@ -4,6 +4,7 @@ flusion_nation = {
 	can_have_their_comms_shared = no
 	observable = no
 	has_deficits = no
+	has_pulse_events = yes
 
 	ai = {
 		enabled = no
@@ -22,21 +23,8 @@ flusion_nation = {
 
 	modules = {
 		standard_event_module = {}
-		standard_economy_module = {}
 		standard_leader_module = {}
-		exclusive_diplomacy_module = {
-			contact_rule = always
-			can_receive = {
-				action_offer_trade_deal
-				action_cancel_trade_deal
-				action_insult
-			}
-		}
-		standard_technology_module = {}
-		standard_trade_routes_module = {}
-		standard_pop_factions_module = {}
-		standard_expansion_module = {}
-		standard_species_rights_module = {}
+		standard_diplomacy_module = {  }
 	}
 }
 

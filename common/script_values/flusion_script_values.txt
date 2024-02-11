@@ -36,7 +36,6 @@ pki_num_total_warforges = {
 }
 
 pki_world_domination = {
-    base = 0
     add = pki_building_slots
     divide = 10
     floor = yes
@@ -50,7 +49,6 @@ pki_total_industry = {
 }
 
 pki_flusion_economy_efficiency = {
-    base = 0
     add = modifier:pki_industry_factory_efficiency
 }
 
@@ -69,30 +67,28 @@ pki_job_industry = {
 }
 
 pki_used_factories_check = {
-    base = 0
     add = pki_used_industry
     subtract = pki_map_industry_select_mult
 }
 
 pki_industry_factories_in_progress = {
-    base = 0
     add = pki_used_industry
     divide = 15
     floor = yes
 }
 
 pki_industry_factories_monthly_extra = {
-    base = 0
     add = pki_used_industry
-    modulo = 16
+    divide = 16
+    floor = yes
+    multiply = 45
 }
 
 pki_industry_factories_monthly_progress = {
-    base = 0
     add = pki_used_industry
-    modulo = 15
+    modulo = 16
     multiply = 5
-    add = pki_used_industry
+    add = value:pki_industry_factories_monthly_extra
 }
 
 pki_industry_new_factories = {
@@ -101,26 +97,22 @@ pki_industry_new_factories = {
 }
 
 pki_industry_ai_used_num = {
-    base = 0
-    add = pki_used_industry
+    add = pki_industry_level
     multiply = pki_used_industry_ratio
     floor = yes
 }
 
 pki_industry_ai_availible_factories = {
-    base = 0
-    add = pki_used_industry
+    add = pki_industry_level
     subtract = value:pki_industry_ai_used_num
 }
 
 pki_industry_ai_army = {
-    base = 0
     add = value:pki_industry_ai_availible_factories
     multiply = pki_army_ratio
 }
 
 pki_industry_ai_air = {
-    base = 0
     add = value:pki_industry_ai_availible_factories
     multiply = pki_planes_ratio
 }
