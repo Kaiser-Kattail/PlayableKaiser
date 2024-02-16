@@ -66,3 +66,30 @@ pki_clear_map_selector_mults = {
     remove_country_flag = pki_map_industry_mult_10
     remove_country_flag = pki_map_industry_mult_100
 }
+
+pki_map_annex = {
+    set_country_flag = pki_map_annexed_$COUNTRY$
+    change_variable = {
+        which = pki_building_slots
+        value = event_target:pki_$COUNTRY$_country.pki_building_slots
+    }
+    change_variable = {
+        which = pki_industry_level
+        value = event_target:pki_$COUNTRY$_country.pki_industry_level
+    }
+    event_target:pki_flusion_planet = {
+        while = {
+            count = event_target:pki_$COUNTRY$_country.pki_pops
+            create_pop = {
+                species = event_target:pki_$COUNTRY$_species
+                ethos = random
+                effect = {
+                    add_modifier = {
+                        modifier = pop_recently_conquered
+                        days = 1800
+                    }
+                }
+            }
+        }
+    }
+}
