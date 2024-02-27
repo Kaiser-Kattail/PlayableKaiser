@@ -16,8 +16,8 @@ tr_katzen_finish = {
 
 tr_katzen_war_machine = {
 	modifier = {
-		ships_upkeep_mult = -0.15
-		starbase_shipyard_build_cost_mult = -0.15
+		ships_upkeep_mult = -0.10
+		starbase_shipyard_build_cost_mult = -0.10
 	}
 
 	ai_weight = {
@@ -43,7 +43,7 @@ tr_katzen_planetside_garrisons = {
 
 tr_katzen_logistiks = {
 	modifier = {
-		armies_upkeep_mult = -0.35
+		armies_upkeep_mult = -0.30
 		planet_army_build_speed_mult = 0.2
 	}
 
@@ -105,102 +105,104 @@ tr_flusion_adopt = {
 tr_flusion_finish = {
 	# the refund effect is implemented elsewhere
 	on_enabled = {
-		set_country_flag = finished_flusiocentrism
-		if = {
-			limit = {
-				NOT = {
-					has_technology = tech_katzen_flusioarc
+		hidden_effect = {
+			set_country_flag = finished_flusiocentrism
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_katzen_flusioarc
+					}
+				}
+				give_technology = {
+					tech = tech_katzen_flusioarc
 				}
 			}
-			give_technology = {
-				tech = tech_katzen_flusioarc
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_technology = tech_capital_productivity_1
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_capital_productivity_1
+					}
+				}
+				give_technology = {
+					tech = tech_capital_productivity_1
 				}
 			}
-			give_technology = {
-				tech = tech_capital_productivity_1
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_technology = tech_katzen_reactor
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_katzen_reactor
+					}
+				}
+				add_tech_progress = {
+					tech = tech_katzen_reactor
+					progress = 0.25
 				}
 			}
-			add_tech_progress = {
-				tech = tech_katzen_reactor
-				progress = 0.25
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_technology = tech_katzen_forge
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_katzen_forge
+					}
+				}
+				add_tech_progress = {
+					tech = tech_katzen_forge
+					progress = 0.25
 				}
 			}
-			add_tech_progress = {
-				tech = tech_katzen_forge
-				progress = 0.25
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_technology = tech_katzen_habitability
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_katzen_habitability
+					}
+				}
+				add_tech_progress = {
+					tech = tech_katzen_habitability
+					progress = 0.25
 				}
 			}
-			add_tech_progress = {
-				tech = tech_katzen_habitability
-				progress = 0.25
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_technology = tech_katzen_lab
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_katzen_lab
+					}
+				}
+				add_tech_progress = {
+					tech = tech_katzen_lab
+					progress = 0.25
 				}
 			}
-			add_tech_progress = {
-				tech = tech_katzen_lab
-				progress = 0.25
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_technology = tech_katzen_luxuries
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_katzen_luxuries
+					}
+				}
+				add_tech_progress = {
+					tech = tech_katzen_luxuries
+					progress = 0.25
 				}
 			}
-			add_tech_progress = {
-				tech = tech_katzen_luxuries
-				progress = 0.25
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_technology = tech_katzen_rr
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_katzen_rr
+					}
+				}
+				add_tech_progress = {
+					tech = tech_katzen_rr
+					progress = 0.25
 				}
 			}
-			add_tech_progress = {
-				tech = tech_katzen_rr
-				progress = 0.25
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_technology = tech_katzen_theater
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_katzen_theater
+					}
 				}
-			}
-			add_tech_progress = {
-				tech = tech_katzen_theater
-				progress = 0.25
+				add_tech_progress = {
+					tech = tech_katzen_theater
+					progress = 0.25
+				}
 			}
 		}
 	}
