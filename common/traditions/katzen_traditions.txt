@@ -215,7 +215,7 @@ tr_work_arrangements = {
 		factor = 5000
 	}
 	on_enabled = {
-		event_target:playerflusion = {
+		event_target:pki_flusion_planet = {
 			add_deposit = d_bureau_of_benefits
 		}
 	}
@@ -235,7 +235,7 @@ tr_imperial_management = {
 	}
 
 	on_enabled = {
-		event_target:playerflusion = {
+		event_target:pki_flusion_planet = {
 			add_deposit = d_flusion_bureaucracy
 		}
 	}
@@ -251,7 +251,7 @@ tr_flusions_bounty = {
 	}
 
 	on_enabled = {
-		event_target:playerflusion = {
+		event_target:pki_flusion_planet = {
 			add_deposit = d_flusion_bounty
 		}
 	}

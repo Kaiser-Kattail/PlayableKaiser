@@ -333,40 +333,6 @@ guiTypes = {
 					name = focus_lines
 					position = { x = 5 y = 22 }
 
-					effectButtonType = {
-						name = 1
-						position = { x = @tile_x_500 y = @tile_y_100 }
-						effect = pki_focus_tree_no_effect
-						quadTextureSprite = "GFX_pki_focus_line_h_s"
-					}
-
-					effectButtonType = {
-						name = 2
-						position = { x = @tile_x_500 y = @tile_y_100 }
-						effect = pki_focus_tree_no_effect
-						quadTextureSprite = "GFX_pki_focus_line_u_s"
-					}
-
-					effectButtonType = {
-						name = 3
-						position = { x = @tile_x_550 y = @tile_y_100 }
-						effect = pki_focus_tree_no_effect
-						quadTextureSprite = "GFX_pki_focus_line_d_s"
-					}
-
-					effectButtonType = {
-						name = 4
-						position = { x = @tile_x_550 y = @tile_y_200 }
-						effect = pki_focus_tree_no_effect
-						quadTextureSprite = "GFX_pki_focus_line_d_s"
-					}
-
-					effectButtonType = {
-						name = 5
-						position = { x = @tile_x_550 y = @tile_y_200 }
-						effect = pki_focus_tree_no_effect
-						quadTextureSprite = "GFX_pki_focus_line_u_s"
-					}
 				}
 
 				### ADD FOCUSES HERE
@@ -463,8 +429,19 @@ guiTypes = {
 						alwaysTransparent = yes
 						text = "pki_focus_kaiser_arrival_label"
 						quadTextureSprite = "GFX_invisible"
-						effect = pki_focus_kaiser_arrival_effect
+						effect = pki_focus_tree_no_effect
 					}
+				}
+
+				effectButtonType = {
+					name = guh
+					position = { x = +0 y = +0 }
+					orientation = upper_left
+					alwaysTransparent = no
+					quadTextureSprite = "GFX_pki_guh"
+
+					scale = 1
+					effect = pki_focus_tree_no_effect
 				}
 			}
 		}
@@ -476,7 +453,8 @@ guiTypes = {
 
 			effectButtonType = {
 				name = country_flag
-				position = { x = +20 y = +728 }
+				position = { x = +17 y = +728 }
+				size = { x = 640 y = 616 }
 				orientation = upper_left
 				alwaysTransparent = no
 				quadTextureSprite = "GFX_pki_empire_flag_frame"
@@ -2441,15 +2419,13 @@ guiTypes = {
 			}
 		}
 
-		instantTextboxType = {
+		effectButtonType = {
 			name = "pki_focus_title"
 			font = "malgun_goth_24"
-			text = "pki_confirm_focus_message"
-			position = { x = 16 y = 5 }
-			maxWidth = 543
-			maxHeight = 22
-			fixedSize = yes
+			text = "pki_focus_title_text"
+			position = { x = -28 y = -84 }
 			alwaysTransparent = yes
+			effect = pki_always_no_effect
 		}
 
 		buttonType = {
@@ -2549,12 +2525,37 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "alien_message"
 			font = "cg_16b"
-			position = { x = 16 y = 60 }
+			position = { x = -999 y = -999 }
 			maxWidth = 370
 			maxHeight = 550
 			format = left
 			scrollbartype = "standardtext_slider"
 			alwaysTransparent = yes
+		}
+
+		effectButtonType = {
+			name = "focus_desc"
+			font = "cg_16b"
+			position = { x = 16 y = 110 }
+			size = { x = 368 y = 600 }
+			multiline = yes
+			format = left
+			vertical_alignment = top
+			text = pki_focus_desc_text
+			alwaysTransparent = yes
+			effect = pki_always_no_effect
+		}
+
+		effectButtonType = {
+			name = "focus_time"
+			font = "cg_16b"
+			position = { x = 216 y = 60 }
+			size = { x = 80 y = 16 }
+			vertical_alignment = top
+			format = center
+			text = pki_focus_time_text
+			alwaysTransparent = yes
+			effect = pki_always_no_effect
 		}
 	}
 

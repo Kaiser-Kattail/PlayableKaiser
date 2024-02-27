@@ -27,3 +27,8 @@ pki_economy_start = {
     pki_industry_factory_efficiency = -0.5
     pki_industry_factories_per_job = 3
 }
+
+pki_air_combat = {
+    icon = gfx/interface/icons/planet_modifiers/pm_pki_air_combat.dds
+    custom_tooltip = pki_air_combat_tt
+}

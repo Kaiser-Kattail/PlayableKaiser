@@ -11,18 +11,15 @@ event = {
 	hide_window = yes
 	is_triggered_only = yes
 
-	trigger = {
-		any_country = {
-			pki_is_katzenartig_imperium = yes
-		}
-	}
-
 	immediate = {
 		set_global_flag = pki_enabled
-		every_playable_country = {
-			limit = { has_origin = origin_katzen }
-			country_event = { id = flusion.4 }
-			country_event = { id = kaiser_bureau.0 days = 30 }
+		if = {
+			limit = {
+				any_country = {
+					pki_is_katzenartig_imperium = yes
+				}
+			}
+			set_global_flag = pki_player_katzen
 		}
 	}
 }
@@ -32,14 +29,190 @@ planet_event = {
 	hide_window = yes
 	is_triggered_only = yes
 
+	pre_triggers = { 
+		has_owner = yes
+	}
+	
+	trigger = {
+		has_planet_flag = pki_flusion_planet
+	}
+
 	immediate = {
 		if = {
 			limit = {
-				has_planet_flag = flusion
+				NOT = { is_planet_class = pc_pki_flusion_ecu }
+				has_modifier = pki_flusion_ecu_modifier
 			}
-			set_planet_entity = {
-				entity = "flusion_planet_entity"
+			remove_modifier = pki_flusion_ecu_modifier
+		}
+		if = {
+			limit = { #solaktropa removed if ocean (duh)
+				OR = {
+					is_planet_class = pc_ocean
+					habitable_planet = no
+				}
+				OR = {
+					has_deposit = d_solaktropa_project
+					has_deposit = d_solaktropa_project_wreck
+					has_deposit = d_katlantropa_project
+					has_deposit = d_katlantropa_project_wreck
+				}
 			}
+			if = {
+				limit = { has_deposit = d_solaktropa_project }
+				remove_deposit = d_solaktropa_project
+			}
+			if = {
+				limit = { has_deposit = d_solaktropa_project_wreck }
+				remove_deposit = d_solaktropa_project_wreck
+			}
+			if = {
+				limit = { has_deposit = d_katlantropa_project }
+				remove_deposit = d_katlantropa_project
+			}
+			if = {
+				limit = { has_deposit = d_katlantropa_project_wreck }
+				remove_deposit = d_katlantropa_project_wreck
+			}
+		}
+		if = {
+			limit = { is_planet_class = pc_gaia }
+			set_planet_entity = { entity = flusion_planet_gaia_entity }
+			if = { limit = { NOT = { has_modifier = pki_flusion_rich_modifier } } add_modifier = { modifier = pki_flusion_rich_modifier days = -1 } }
+		}
+		else_if = {
+			limit = { is_planet_class = pc_ocean }
+			set_planet_entity = { entity = flusion_planet_ocean_entity }
+			if = { limit = { NOT = { has_modifier = pki_flusion_rich_modifier } } add_modifier = { modifier = pki_flusion_rich_modifier days = -1 } }
+		}
+		else_if = {
+			limit = { is_planet_class = pc_nuked }
+			set_planet_entity = { entity = flusion_planet_nuked_entity }
+			if = { limit = { has_modifier = pki_flusion_rich_modifier } remove_modifier = pki_flusion_rich_modifier }
+		}
+		else_if = {
+			limit = { is_planet_class = pc_katzenland }
+			set_planet_entity = { entity = flusion_planet_deserted_entity }
+			if = { limit = { has_modifier = pki_flusion_rich_modifier } remove_modifier = pki_flusion_rich_modifier }
+		}
+		else_if = {
+			limit = { is_planet_class = pc_city }
+			set_planet_entity = { entity = flusion_planet_city_entity }
+			if = { limit = { NOT = { has_modifier = pki_flusion_rich_modifier } } add_modifier = { modifier = pki_flusion_rich_modifier days = -1 } }
+		}
+		else_if = {
+			limit = { is_planet_class = pc_giga_planetary_computer }
+			set_planet_entity = { entity = flusion_planet_computer_entity}
+			if = { limit = { NOT = { has_modifier = pki_flusion_rich_modifier } } add_modifier = { modifier = pki_flusion_rich_modifier days = -1 } }
+		}
+		else_if = {
+			limit = { is_planet_class = pc_hive }
+			set_planet_entity = { entity = flusion_planet_hive_entity }
+			if = { limit = { NOT = { has_modifier = pki_flusion_rich_modifier } } add_modifier = { modifier = pki_flusion_rich_modifier days = -1 } }
+		}
+		else_if = {
+			limit = { is_planet_class = pc_machine }
+			set_planet_entity = { entity = flusion_planet_machine_entity }
+			if = { limit = { NOT = { has_modifier = pki_flusion_rich_modifier } } add_modifier = { modifier = pki_flusion_rich_modifier days = -1 } }
+		}
+		else_if = {
+			limit = { is_planet_class = pc_ll_foggy }
+			set_planet_entity = { entity = flusion_planet_foggy_entity }
+			if = { limit = { NOT = { has_modifier = pki_flusion_rich_modifier } } add_modifier = { modifier = pki_flusion_rich_modifier days = -1 } }
+		}
+		else_if = {
+			limit = { is_planet_class = pc_ll_temperate }
+			set_planet_entity = { entity = flusion_planet_lifeless_entity }
+			if = { limit = { NOT = { has_modifier = pki_flusion_rich_modifier } } add_modifier = { modifier = pki_flusion_rich_modifier days = -1 } }
+		}
+		else_if = {
+			limit = { is_planet_class = pc_ll_torrid }
+			set_planet_entity = { entity = flusion_planet_torrid_entity }
+			if = { limit = { NOT = { has_modifier = pki_flusion_rich_modifier } } add_modifier = { modifier = pki_flusion_rich_modifier days = -1 } }
+		}
+		else_if = {
+			limit = { is_planet_class = pc_molten }
+			set_planet_entity = { entity = flusion_planet_molten_entity }
+			if = { limit = { has_modifier = pki_flusion_rich_modifier } remove_modifier = pki_flusion_rich_modifier }
+		}
+		else_if = {
+			limit = { is_planet_class = pc_shrouded }
+			set_planet_entity = { entity = flusion_planet_shrouded_entity }
+			if = { limit = { has_modifier = pki_flusion_rich_modifier } remove_modifier = pki_flusion_rich_modifier }
+		}
+		else_if = {
+			limit = { is_acot_awesome_planet_class = yes }
+			set_planet_entity = { entity = flusion_planet_acot_entity }
+			if = { limit = { NOT = { has_modifier = pki_flusion_rich_modifier } } add_modifier = { modifier = pki_flusion_rich_modifier days = -1 } }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_wet = yes
+					is_planet_class = pc_tropical
+					is_planet_class = pc_continental
+				}
+			}
+			set_planet_entity = { entity = flusion_planet_entity }
+			if = {
+				limit = {
+					NOT = { has_modifier = pki_flusion_rich_modifier }
+				}
+				add_modifier = { modifier = pki_flusion_rich_modifier days = -1 }
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_dry = yes
+					is_planet_class = pc_desert
+					is_planet_class = pc_arid
+					is_planet_class = pc_savannah
+				}
+			}
+			set_planet_entity = { entity = flusion_planet_desert_entity }
+			if = { limit = { NOT = { has_modifier = pki_flusion_rich_modifier } } add_modifier = { modifier = pki_flusion_rich_modifier days = -1 } }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_cold = yes
+					giga_is_frozen = yes
+					is_planet_class = pc_arctic
+					is_planet_class = pc_alpine
+				}
+			}
+			set_planet_entity = { entity = flusion_planet_arctic_entity }
+			if = { limit = { NOT = { has_modifier = pki_flusion_rich_modifier } } add_modifier = { modifier = pki_flusion_rich_modifier days = -1 } }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_planet_class = pc_shattered
+					is_planet_class = pc_shattered_2
+					is_planet_class = pc_broken
+					giga_is_barren_cn = yes
+					giga_is_frozen = yes
+					giga_is_toxic = yes
+				}
+			}
+			if = { limit = { has_modifier = pki_flusion_rich_modifier } remove_modifier = pki_flusion_rich_modifier }
+		}
+		if = {
+			limit = { is_planet_class = pc_pki_flusion_ecu }
+			set_planet_entity = { entity = flusion_planet_ecugaia_01_entity }
+			if = { limit = { NOT = { has_modifier = pki_flusion_rich_modifier } } add_modifier = { modifier = pki_flusion_rich_modifier days = -1 } }
+			if = {
+				limit = { has_deposit = d_solaktropa_project_wreck }
+				remove_deposit = d_solaktropa_project_wreck
+				add_deposit = d_solaktropa_project
+			}
+			if = {
+				limit = { has_deposit = d_katlantropa_project_wreck }
+				remove_deposit = d_katlantropa_project_wreck
+				add_deposit = d_katlantropa_project
+			}
+			if = { limit = { NOT = { has_modifier = pki_flusion_ecu_modifier } } add_modifier = { modifier = pki_flusion_ecu_modifier days = -1 } }
 		}
 	}
 }
@@ -49,12 +222,17 @@ country_event = {
 	hide_window = yes
 
 	is_triggered_only = yes
+
 	trigger = {
-		NOT = { has_country_flag = flusion_setup_complete }
+		exists = this
+		has_global_flag = pki_player_katzen
+		pki_is_katzenartig_imperium = yes
 	}
+
 	immediate = {
 		set_country_flag = starting_event
 		save_global_event_target_as = pki_player
+
 		owner_main_species = {
 			save_global_event_target_as = pki_katzen_species
 		}
@@ -96,11 +274,8 @@ country_event = {
 		#		event_chain = "kaiser_docs_chain"
 		#		location = capital_scope
 		#	}
-
-		#	
-		#END DOCS
-
-		set_country_flag = pki_hasnt_used_ehve
+		
+		# END DOCS
 
 		if = {
 			limit = {
@@ -121,29 +296,13 @@ country_event = {
 			days = -1
 		}
 
-		#Target flusion
-		every_galaxy_planet = {
-			if = {
-				limit = {
-					solar_system = { has_star_flag = flusion_system }
-				}
-				save_global_event_target_as = jublio_system
-			}
-			if = {
-				limit = {
-					planet = { has_planet_flag = gigaflusion }
-				}
-				save_global_event_target_as = pki_flusion_planet
-			}
-		}
-
 		#Leader Portraits
 		create_species = {
 			name = "Imperial Katzen"
 			plural = "Imperial Katzens"
 			class = Flusionian
 			portrait = Kattail_1
-			homeworld = event_target:gigaflusion
+			homeworld = event_target:pki_flusion_planet
 			traits = {
 				trait = trait_pc_continental_preference
 				trait = trait_quick_learners
@@ -163,7 +322,7 @@ country_event = {
 			plural = "Imperial Katzens"
 			class = Flusionian
 			portrait = kaiser
-			homeworld = event_target:gigaflusion
+			homeworld = event_target:pki_flusion_planet
 			traits = {
 				trait = trait_pc_continental_preference
 				trait = trait_quick_learners
@@ -190,7 +349,7 @@ country_event = {
 				trait = trait_robot_custom_made
 			}
 			effect = {
-				save_global_event_target_as = soulbot
+				save_global_event_target_as = pki_soulbot_species
 			}
 		}
 
@@ -230,7 +389,6 @@ country_event = {
 		}
 
 		#Setup Flusion
-		save_event_target_as = flusion_owner
 		capital_scope = {
 			set_planet_size = 16
 			clear_blockers = yes
@@ -259,7 +417,6 @@ country_event = {
 			add_deposit = d_katown_reactor
 
 			add_deposit = d_flunat
-			planet_event = { id = flusion.3 }
 
 			while = {
 				count = 9
@@ -295,8 +452,9 @@ country_event = {
 				}
 			}
 		}
+
 		every_owned_ship = {
-			unassign_leader = leader
+			unassign_leader = this
 			delete_ship = this
 		}
 
@@ -309,7 +467,15 @@ country_event = {
 			}
 		}
 
-		set_country_flag = flusion_setup_complete
+		every_owned_ship = {
+			limit = {
+				OR = {
+					is_ship_size = mining_station
+					is_ship_size = research_station
+				}
+			}
+			delete_ship = this
+		}
 
 		set_country_flag = pki_map_KAT_selected
 		set_country_flag = pki_conquest_map_tab
@@ -319,123 +485,20 @@ country_event = {
 
 		pki_setup_flusion_economy = yes
 
-
-		every_owned_ship = {
+		if = {
 			limit = {
-				is_ship_size = mining_station
+				has_origin = origin_katzen
+				NOT = {
+					has_country_flag = kaiser_preset
+				}
+			}
+			country_event = {
+				id = flusion.44
 			}
 		}
-	}
-}
 
-country_event = {
-	id = flusion.41
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		this = {
-			pki_is_katzenartig_imperium = yes
-		}
-	}
-
-	immediate = {
-		this = {
-			every_owned_leader = {
-				limit = {
-					leader_class = official
-				}
-				set_leader_flag = kill_yourself_now
-				kill_leader = { show_notification = no }
-			}
-
-			random_owned_leader = {
-				limit = {
-					leader_class = scientist
-					NOT = {
-						has_leader_flag = flusion_modified
-					}
-				}
-				set_gender = male
-				set_name = "NAME_Pawlbert"
-				set_leader_flag = flusion_modified
-				add_trait_no_notify = pki_katzen_trait_elite
-			}
-
-			#Create Pawtton
-			create_leader = {
-				class = commander
-				species = owner_main_species
-				name = "Meorge Pawtton"
-				gender = male
-				skill = 3
-				immortal = yes
-				traits = {
-					trait = pki_katzen_trait_elite
-					trait = pki_leader_trait_nukelad
-					trait = subclass_commander_general
-				}
-			}
-			
-			last_created_leader = {
-				set_leader_flag = pawtton
-				save_global_event_target_as = pawtton
-				clear_global_event_target = kaiser_portrait
-			}
-
-			#Create Loris
-			create_leader = {
-				class = official
-				species = owner_main_species
-				name = "Loris Von Kattensbach"
-				gender = male
-				skill = 3
-				randomize_traits = no
-				immortal = yes
-				traits = {
-					trait = pki_katzen_trait_elite
-					trait = leader_trait_architectural_interest
-					trait = leader_trait_army_veteran
-					trait = subclass_official_governor
-				}
-				effect = {
-					change_leader_portrait = lorisvanilla
-					set_leader_flag = loris
-					save_global_event_target_as = loris
-					set_council_position = councilor_state
-				}
-			}
-
-			event_target:playerflusion = {
-				assign_leader = event_target:loris
-			}
-
-			#Create Douclaw
-			create_leader = {
-				class = commander
-				species = owner_main_species
-				name = "Douclaw MacCathur"
-				gender = male
-				skill = 3
-				immortal = yes
-				set_age = 57
-				traits = {
-					trait = pki_katzen_trait_elite
-					trait = pki_leader_trait_armored_warfare
-					trait = pki_leader_trait_nukelad
-					trait = subclass_commander_admiral
-				}
-				custom_description = PKI_DOUCLAW_DESC
-				background_planet = event_target:playerflusion
-				background_job = soldier
-				background_ethic = ethic_materialist
-			}
-			last_created_leader = {
-				change_leader_portrait = douclaw
-				set_leader_flag = douclaw
-				save_global_event_target_as = douclaw
-			}
-		}
+		country_event = { id = flusion.41 }
+		country_event = { id = kaiser_bureau.0 days = 30 }
 	}
 }
 
@@ -453,20 +516,108 @@ event = {
 	}
 }
 
-event = {
-	id = flusion.43
-	hide_window = yes
+country_event = {
+	id = flusion.41
 	is_triggered_only = yes
+	hide_window = yes
 
 	immediate = {
-		every_playable_country = {
+		every_owned_leader = {
 			limit = {
-				has_origin = origin_katzen
-				NOT = {
-					has_country_flag = kaiser_preset
+				is_ruler = no
+			}
+			kill_leader = { show_notification = no }
+		}
+
+		create_leader = {
+			class = scientist
+			species = owner_main_species
+			name = "NAME_Pawlbert"
+			gender = male
+			skill = 3
+			immortal = yes
+			traits = {
+				trait = pki_katzen_trait_elite
+				trait = leader_trait_spark_of_genius
+				trait = subclass_scientist_councilor
+			}
+			effect = {
+				set_council_position = councilor_research
+			}
+		}
+
+		#Create Pawtton
+		create_leader = {
+			class = commander
+			species = owner_main_species
+			name = "Meorge Pawtton"
+			gender = male
+			skill = 3
+			immortal = yes
+			traits = {
+				trait = pki_katzen_trait_elite
+				trait = pki_leader_trait_nukelad
+				trait = subclass_commander_general
+			}
+			effect = {
+				set_leader_flag = pawtton
+				save_global_event_target_as = pawtton
+				clear_global_event_target = kaiser_portrait
+			}
+		}
+
+		create_leader = {
+			class = official
+			species = owner_main_species
+			name = "Loris Von Kattensbach"
+			gender = male
+			skill = 3
+			immortal = yes
+			traits = {
+				trait = pki_katzen_trait_elite
+				trait = leader_trait_architectural_interest
+				trait = leader_trait_army_veteran
+				trait = subclass_official_governor
+			}
+			background_planet = event_target:pki_flusion_planet
+			background_job = politician
+			background_ethic = ethic_materialist
+			effect = {
+				change_leader_portrait = lorisvanilla
+				set_leader_flag = loris
+				save_global_event_target_as = loris
+				set_council_position = councilor_state
+				event_target:pki_flusion_planet = {
+					assign_leader = prev
 				}
 			}
-			country_event = { id = flusion.44 }
+		}
+
+		#Create Douclaw
+		create_leader = {
+			class = commander
+			species = owner_main_species
+			name = "Douclaw MacCathur"
+			gender = male
+			skill = 3
+			immortal = yes
+			set_age = 57
+			traits = {
+				trait = pki_katzen_trait_elite
+				trait = pki_leader_trait_armored_warfare
+				trait = pki_leader_trait_nukelad
+				trait = subclass_commander_admiral
+			}
+			custom_description = PKI_DOUCLAW_DESC
+			background_planet = event_target:pki_flusion_planet
+			background_job = soldier
+			background_ethic = ethic_materialist
+			effect = {
+				change_leader_portrait = douclaw
+				set_leader_flag = douclaw
+				save_global_event_target_as = douclaw
+				set_council_position = councilor_defense
+			}
 		}
 	}
 }
@@ -491,33 +642,12 @@ country_event = {
 
 namespace = katzen
 
-#Solaktropa dam add
-planet_event = {
-	id = katzen.1
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		add_deposit = d_solaktropa_project
-	}
-}
-
-#Katlantropa dam add
-planet_event = {
-	id = katzen.2
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		add_deposit = d_katlantropa_project
-	}
-}
-
 #Katzen elite to soulbot
 country_event = {
 	id = katzen.3
 	hide_window = yes
 	is_triggered_only = yes
+
 	trigger = {
 		from = {
 			#Must be recruited
@@ -530,7 +660,7 @@ country_event = {
 			}
 			#Can't be a soulbot
 			NOT = {
-				has_leader_flag = soulbot
+				has_leader_flag = pki_is_soulbot
 			}
 			#Must be elite
 			has_trait = pki_katzen_trait_elite
@@ -538,12 +668,13 @@ country_event = {
 			has_global_flag = solakia_conquered 
 		}
 	}
+
 	immediate = {
 		clone_leader = { 
 			target = from
-			species = event_target:soulbot
+			species = event_target:pki_soulbot_species
 			effect = {
-			set_leader_flag = soulbot
+			set_leader_flag = pki_is_soulbot
 			change_leader_portrait = species
 			}
 		}
@@ -651,7 +782,7 @@ country_event = {
 		name = "katzen.7.a"
 		allow = {
 			custom_tooltip = {
-				fail_text = "must_have_valid_elite_governor"
+				fail_text = pki_must_have_valid_elite_governor
 				any_owned_leader = {
 					leader_class = official
 					NOT = {
@@ -671,7 +802,7 @@ country_event = {
 		name = "katzen.7.b"
 		allow = {
 			custom_tooltip = {
-				fail_text = "must_have_valid_elite_scientist"
+				fail_text = pki_must_have_valid_elite_scientist
 				any_owned_leader = {
 					leader_class = scientist
 					NOT = {
@@ -691,7 +822,7 @@ country_event = {
 		name = "katzen.7.c"
 		allow = {
 			custom_tooltip = {
-				fail_text = "must_have_valid_elite_admiral"
+				fail_text = pki_must_have_valid_elite_admiral
 				any_owned_leader = {
 					leader_class = commander
 					NOT = {

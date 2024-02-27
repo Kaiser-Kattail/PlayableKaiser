@@ -1,0 +1,144 @@
+situation_naitonal_focus = {
+    picture = GFX_evt_grand_speech
+    category = positive
+    complete_icon = GFX_situation_outcome_meh
+    complete_icon_frame = GFX_situation_outcome_frame_blue
+
+    inline_script = {
+        script = pki_focuses/pki_all_focuses
+        SCRIPT_NAME = pki_event_loc
+    }
+
+    on_start = {
+        pki_focus_in_progress_effects = yes
+    }
+    on_abort = {
+    }
+
+    start_value = 0
+
+    stages = {
+        stage_1 = {
+            icon = GFX_pki_situation_stage_focus
+            icon_background = GFX_situation_stage_frame_blue
+            end = 12
+        }
+    }
+
+    on_progress_complete = {
+        pki_complete_national_focus = yes
+        hidden_effect = {
+            create_message = {
+                type = PKI_NATIONAL_FOCUS_COMPLETE
+                localization = MESSAGE_PKI_NATIONAL_FOCUS_COMPLETE_DESC
+                days = 30
+            }
+            owner = {
+                remove_country_flag = pki_selected_focus
+                every_situation = {
+                    limit = {
+                        is_situation_type = situation_naitonal_focus
+                    }
+                    destroy_situation = this
+                }
+            }
+        }
+    }
+    on_fail = {
+        hidden_effect = { destroy_situation = this }
+    }
+    monthly_progress = {
+        base = 1
+        modifier = {
+            desc = pki_focus_speed
+            always = yes
+            mult = value:pki_focus_time
+        }
+        modifier = {
+            desc = string_current_approach
+            current_situation_approach = approach_focus_fast
+            mult = 2
+        }
+    }
+
+    approach = {
+        name = approach_focus
+        icon = GFX_situation_approach_unity
+        icon_background = GFX_situation_approach_bg_green
+        default = yes
+        on_select = {
+            custom_tooltip = approach_focus_tooltip
+            hidden_effect = {
+                owner = {
+                    remove_country_flag = pki_focus_situation_fast_speed
+                    set_country_flag = pki_focus_situation_default_speed
+                }
+            }
+        }
+        resources = {
+            category = situations
+            upkeep = {
+                influence = 1
+            }
+        }
+    }
+
+    approach = {
+        name = approach_focus_fast
+        icon = GFX_situation_approach_unity
+        icon_background = GFX_situation_approach_bg_yellow
+        default = yes
+        on_select = {
+            custom_tooltip = approach_focus_tooltip_fast
+            hidden_effect = {
+                owner = {
+                    remove_country_flag = pki_focus_situation_default_speed
+                    set_country_flag = pki_focus_situation_fast_speed
+                }
+            }
+        }
+        modifier = {
+            country_engineering_research_produces_mult = -0.15
+            country_society_research_produces_mult = -0.15
+            country_physics_research_produces_mult = -0.15
+        }
+        resources = {
+            category = situations
+            upkeep = {
+                influence = 3
+            }
+        }
+    }
+
+    approach = {
+        name = approach_open_focus_tree
+        icon = GFX_situation_approach_balance_sheet
+        icon_background = GFX_situation_approach_bg_yellow
+        on_select = {
+            custom_tooltip = approach_open_focus_tree_tooltip
+            hidden_effect = {
+                if = {
+                    limit = {
+                        owner = {
+                            has_country_flag = pki_focus_situation_default_speed
+                        }
+                    }
+                    set_situation_approach = approach_focus
+                }
+                else_if = {
+                    limit = {
+                        owner = {
+                            has_country_flag = pki_focus_situation_fast_speed
+                        }
+                    }
+                    set_situation_approach = approach_focus_fast
+                }
+                owner = {
+                    country_event = { id = kaiser_bureau.2 }
+                    pki_clear_gui_flags = yes
+                    set_country_flag = pki_focus_tree_tab
+                }
+            }
+        }
+    }
+}

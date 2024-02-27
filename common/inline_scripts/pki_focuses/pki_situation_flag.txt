@@ -5,10 +5,6 @@ pki_selected_$FOCUS$ = {
             limit = {
                 exists = this
             }
-            set_variable = {
-                which = pki_focus_speed
-                value = $SPEED$
-            }
             set_situation_flag = pki_$FOCUS$
         }
     }

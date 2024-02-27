@@ -1,0 +1,6 @@
+text = {
+    trigger = {
+        has_country_flag = pki_selected_$FOCUS$
+    }
+    localization_key = "pki_focus_$FOCUS$"
+}

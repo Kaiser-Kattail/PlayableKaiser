@@ -50,7 +50,7 @@ building_siegfried_stronghold = {
 		NOT = {
 			is_giga_maginot_world = yes
 			has_planet_flag = giga_maginot_world
-			has_planet_flag = gigaflusion
+			has_planet_flag = pki_flusion_planet
 		}
 		is_artificial = no
 		owner = {

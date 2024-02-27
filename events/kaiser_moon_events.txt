@@ -134,7 +134,7 @@ country_event = {
 					upgradable = yes
 				}
 				set_fleet_flag = current_katzen_flagship
-				set_location = event_target:gigaflusion
+				set_location = event_target:pki_flusion_planet
 			}
 		}
 	}

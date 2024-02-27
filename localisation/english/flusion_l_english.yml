@@ -324,9 +324,9 @@
     # Custom fail text
     not_allowed_for_katzen_protektorat:0 "£trigger_no£ Not allowed for §YKatzprotektorat§! preset."
     need_both_dams:0 "£trigger_no£ Requires both the Roqualtropa and Katlantropa dams to be built."
-    must_have_valid_elite_governor:0 "Must have a governor without the §YElite Figure§! trait."
-    must_have_valid_elite_scientist:0 "Must have a scientist without the §YElite Figure§! trait."
-    must_have_valid_elite_admiral:0 "Must have an commander without the §YElite Figure§! trait."
+    pki_must_have_valid_elite_governor:0 "Must have a governor without the §YElite Figure§! trait."
+    pki_must_have_valid_elite_scientist:0 "Must have a scientist without the §YElite Figure§! trait."
+    pki_must_have_valid_elite_admiral:0 "Must have an commander without the §YElite Figure§! trait."
     must_have_valid_elite_general:0 "Must have a general without the §YElite Figure§! trait."
     no_other_dam:0 "£trigger_no£ Must not have another Katzen Dam built."
     has_katlantropa_dam:0 "£trigger_no£ §RWe cannot simply remove a sea.§!"

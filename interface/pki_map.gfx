@@ -44,6 +44,15 @@ spriteTypes = {
 		hitbox_margin = { x=11 y=11 }
 	}
 
+	frameAnimatedSpriteType = {
+		name = "GFX_pki_guh"
+		texturefile = "gfx/interface/conquest_ui/guh-guh-cat.dds"
+		noOfFrames = 9
+		animation_rate_fps = 10
+		looping = yes
+		play_on_show = yes
+	}
+
 	spriteType = { name = "GFX_pki_map_ATA" textureFile = "gfx/interface/conquest_ui/regions/pki_map_ATA.dds" transParencecheck = yes }
 	spriteType = { name = "GFX_pki_map_ATA_occupation" texturefile = "gfx/interface/conquest_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_ATA_mask.dds" transParencecheck = yes }
 	spriteType = { name = "GFX_pki_map_ATA_captured" texturefile = "gfx/interface/conquest_ui/pki_map_captured.dds" masking_texture = "gfx/interface/conquest_ui/regions/pki_map_ATA_mask.dds" transParencecheck = yes }

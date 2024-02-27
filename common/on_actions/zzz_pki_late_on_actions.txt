@@ -1,0 +1,11 @@
+on_game_start = {
+    events = {
+        flusion.1
+    }
+}
+
+on_game_start_country = {
+    events = {
+        flusion.4
+    }
+}

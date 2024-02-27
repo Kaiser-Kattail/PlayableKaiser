@@ -21,15 +21,20 @@
 
     PKI_BLANK: ""
 
-    PKI_PLACEHOLDER: "You should ping PIECAT NOW!"
+    pki_air_combat: "Air Combat"
+    pki_air_combat_desc: "Who dares, wins."
+    pki_air_combat_tt: "Air Supremacy: [pki_air_supremacy_color][pki_air_supremacy]%§!\n\n§HYour Air Wings:§!\nFighters: §Y[owner.pki_num_fighters]§!\nClose Air Support: §Y[owner.pki_num_cas]§!\n\n§REnemy Air Wings:§!\nFighters: §Y[event_target:pki_conquest_target.pki_num_fighters]§!\nClose Air Support: §Y[event_target:pki_conquest_target.pki_num_cas]§!"
 
     pki_industry_total: "Industry: §Y[event_target:pki_player.pki_used_industry]§!/§Y[pki_total_industry]§!"
     pki_industry_total_tt: "Usable Industry: §Y[pki_total_industry]§!\nFrom Factories: §Y[event_target:pki_player.pki_industry_level]§!\n[pki_industry_factory_modifier]\n\nIndustry used for Factory construction: §Y[event_target:pki_player.pki_used_industry]§!\nFactory construction progress: §Y[pki_industry_factory_progress_player]§!/§H1000§! (x§H[pki_industry_new_factories]§!)\nMonthly construction progress: §Y+[pki_industry_factories_monthly_progress]§!\n\n§Y[pki_job_industry_factories]§! unused Factories are left for §Y[pki_job_industry]§! £job_pki_war_worker£ [pki_industry_job_name] Jobs\n\n[pki_industry_job_effect_desc]"
 
-    pki_industrial_efficiency: "$t$Industrial Efficiency Multiplier: [pki_industry_factory_color][pki_industry_factory_efficiency]§!"
+    pki_industrial_efficiency: "- Industrial Efficiency Multiplier: [pki_industry_factory_color][pki_industry_factory_efficiency]§!"
     pki_industry_factory_efficiency_none: ""
-    pki_industry_factory_color_green: "§G"
-    pki_industry_factory_color_red: "§R"
+    pki_text_color_green: "§G"
+    pki_text_color_red: "§R"
+    pki_text_color_yellow: "§Y"
+    pki_text_color_orange: "§H"
+    pki_text_color_pink: "§P"
 
     pki_building_slots_total: "Building Slots: §Y[event_target:pki_player.pki_building_slots]§!"
 
@@ -41,7 +46,6 @@
     mod_job_pki_war_worker_per_pop:0 "§G+1§! $job_pki_war_worker$ Job per $VALUE$ Pops"
     mod_job_pki_war_worker_per_pop_short:0 "\n§G+1§! £mod_job_pki_war_worker_add£ per $VALUE$ £pop£"
 
-
     job_pki_war_worker_drone: "Menial Factory Drone"
     job_pki_war_worker_drone_plural:0 "Menial Factory Drones"
     job_pki_war_worker_drone_desc:0 "Menial work, done by the lowest factory drones. All to keep the [owner_main_species.GetName] war machine moving."
@@ -50,8 +54,8 @@
     mod_job_pki_war_worker_drone_per_pop:0 "§G+1§! $job_pki_war_worker_drone$ Job per $VALUE$ Pops"
     mod_job_pki_war_worker_drone_per_pop_short:0 "\n§G+1§! £mod_job_pki_war_worker_drone_add£ per $VALUE$ £pop£"
 
-    PKI_CANT_CONTACT_SELF: "We cannot contact our self."
 
+    PKI_CANT_CONTACT_SELF: "We cannot contact our self."
 
     PKI_KAT_title: "[event_target:pki_player.GetName]"
     PKI_PLAYER_INFO_ECONOMY: "§YEconomy§!:\n$t$Factories: §Y[event_target:pki_player.pki_industry_level]§!\n$t$Building Slots: §Y[event_target:pki_player.pki_building_slots]§!"

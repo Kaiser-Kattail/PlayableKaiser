@@ -1,14 +1,6 @@
-on_game_start = {
-	events = {
-		flusion.1
-		flusion.43
-	}
-}
-
 on_press_begin = {
 	events = {
 		flusion.42
-		flusion.41
 	}
 }
 

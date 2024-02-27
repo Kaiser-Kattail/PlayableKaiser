@@ -93,21 +93,6 @@ country_event = {
 	id = kaiser_bureau.3
 	title = "kaiser_bureau.3.name"
 
-	inline_script = {
-		script = pki_focuses/pki_focus_desc
-		FOCUS = kaiser_arrival
-	}
-
-	inline_script = {
-		script = pki_focuses/pki_focus_desc
-		FOCUS = neighbors
-	}
-
-	inline_script = {
-		script = pki_focuses/pki_focus_desc
-		FOCUS = harania
-	}
-
 	diplomatic = yes
 	custom_gui = "focus_confirm_screen"
 	is_triggered_only = yes
@@ -133,19 +118,8 @@ country_event = {
 						switch = {
 							trigger = has_country_flag
 							inline_script = {
-								script = pki_focuses/pki_situation_flag
-								FOCUS = kaiser_arrival
-								SPEED = 1
-							}
-							inline_script = {
-								script = pki_focuses/pki_situation_flag
-								FOCUS = neighbors
-								SPEED = 1
-							}
-							inline_script = {
-								script = pki_focuses/pki_situation_flag
-								FOCUS = harania
-								SPEED = 2
+								script = pki_focuses/pki_all_focuses
+								SCRIPT_NAME = pki_situation_flag
 							}
 						}
 					}
@@ -162,19 +136,8 @@ country_event = {
 		switch = {
 			trigger = has_country_flag
 			inline_script = {
-				script = pki_focuses/pki_situation_flag
-				FOCUS = kaiser_arrival
-				SPEED = 1
-			}
-			inline_script = {
-				script = pki_focuses/pki_situation_flag
-				FOCUS = neighbors
-				SPEED = 1
-			}
-			inline_script = {
-				script = pki_focuses/pki_situation_flag
-				FOCUS = harania
-				SPEED = 2
+				script = pki_focuses/pki_all_focuses
+				SCRIPT_NAME = pki_situation_flag
 			}
 		}
 	}

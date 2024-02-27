@@ -25,6 +25,29 @@ defined_text = {
 }
 
 defined_text = {
+    name = pki_focus_desc
+    inline_script = {
+        script = pki_focuses/pki_all_focuses
+        SCRIPT_NAME = pki_focus_desc
+    }
+    default = "PKI_PLACEHOLDER"
+}
+
+defined_text = {
+    name = pki_focus_title
+    inline_script = {
+        script = pki_focuses/pki_all_focuses
+        SCRIPT_NAME = pki_focus_title
+    }
+    default = "PKI_PLACEHOLDER"
+}
+
+defined_text = {
+    name = pki_focus_speed
+    value = event_target:pki_player.value:pki_focus_length
+}
+
+defined_text = {
     name = pki_total_industry
     value = event_target:pki_player.value:pki_total_industry
 }
@@ -58,7 +81,7 @@ defined_text = {
                 value <= 0
             }
         }
-        localization_key = pki_industry_factory_color_red
+        localization_key = pki_text_color_red
     }
     text = {
         trigger = {
@@ -67,7 +90,7 @@ defined_text = {
                 value >= 0
             }
         }
-        localization_key = pki_industry_factory_color_green
+        localization_key = pki_text_color_green
     }
 }
 
@@ -167,4 +190,53 @@ defined_text = {
 defined_text = {
     name = pki_num_player_air_wings
     value = event_target:pki_player.value:pki_num_air_wings
+}
+
+defined_text = {
+    name = pki_air_supremacy_color
+    text = {
+        trigger = {
+            check_variable_arithmetic = {
+                which = event_target:pki_player.value:pki_air_supremacy
+                value <= 0.25
+            }
+        }
+        weight = 4
+        localization_key = pki_text_color_red
+    }
+    text = {
+        trigger = {
+            check_variable_arithmetic = {
+                which = event_target:pki_player.value:pki_air_supremacy
+                value <= 0.50
+            }
+        }
+        weight = 3
+        localization_key = pki_text_color_orange
+    }
+    text = {
+        trigger = {
+            check_variable_arithmetic = {
+                which = event_target:pki_player.value:pki_air_supremacy
+                value <= 0.75
+            }
+        }
+        weight = 2
+        localization_key = pki_text_color_yellow
+    }
+    text = {
+        trigger = {
+            check_variable_arithmetic = {
+                which = event_target:pki_player.value:pki_air_supremacy
+                value <= 1
+            }
+        }
+        weight = 1
+        localization_key = pki_text_color_green
+    }
+}
+
+defined_text = {
+    name = pki_air_supremacy
+    value = event_target:pki_player.value:pki_air_supremacy
 }

@@ -136,7 +136,7 @@ pki_war_worker = {
             alloys = 1
         }
         upkeep = {
-            minerals = 0.5
+            minerals = 1
         }
     }
 
@@ -167,6 +167,9 @@ pki_war_worker_drone = {
         category = planet_metallurgists
         produces = {
             alloys = 1
+        }
+        upkeep = {
+            minerals = 1
         }
     }
 

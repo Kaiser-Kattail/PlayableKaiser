@@ -1,4 +1,5 @@
 pki_is_katzenartig_imperium = {
+	is_country_type = default
 	OR = {
 		has_origin = origin_katzen
 	}

@@ -5,8 +5,8 @@
 pki_katzprotektorat_1_modifier = {
 	main_perk = yes
 	subject_modifier = {
-		planet_metallurgists_alloys_produces_add = 1.5
-		planet_soldiers_unity_produces_add = 1
+		planet_metallurgists_alloys_produces_add = 0.5
+		planet_soldiers_unity_produces_add = 0.5
 		job_soldier_per_pop = 0.0166
 	}
 
@@ -100,8 +100,8 @@ pki_katzprotektorat_1_modifier = {
 pki_katzprotektorat_gestalt_1_modifier = {
 	main_perk = yes
 	subject_modifier = {
-		planet_metallurgists_alloys_produces_add = 1.5
-		planet_soldiers_unity_produces_add = 1
+		planet_metallurgists_alloys_produces_add = 0.5
+		planet_soldiers_unity_produces_add = 0.5
 		job_warrior_drone_per_pop = 0.0166
 	}
 
@@ -234,7 +234,7 @@ pki_katzprotektorat_1_katzprotektorat_tech = {
 pki_katzprotektorat_2_modifier = {
 	main_perk = yes
 	subject_modifier = {
-		planet_metallurgists_alloys_produces_add = 1.5
+		planet_metallurgists_alloys_produces_add = 1
 		planet_soldiers_unity_produces_add = 1
 		job_soldier_per_pop = 0.025
 	}
@@ -243,7 +243,7 @@ pki_katzprotektorat_2_modifier = {
 pki_katzprotektorat_gestalt_2_modifier = {
 	main_perk = yes
 	subject_modifier = {
-		planet_metallurgists_alloys_produces_add = 1.5
+		planet_metallurgists_alloys_produces_add = 1
 		planet_soldiers_unity_produces_add = 1
 		job_warrior_drone_per_pop = 0.025
 	}
@@ -305,7 +305,7 @@ pki_katzprotektorat_2_traits = {
 pki_katzprotektorat_3_modifier = {
 	main_perk = yes
 	subject_modifier = {
-		planet_metallurgists_alloys_produces_add = 2
+		planet_metallurgists_alloys_produces_add = 1.5
 		planet_soldiers_unity_produces_add = 1.5
 		job_soldier_per_pop = 0.05
 	}
@@ -314,7 +314,7 @@ pki_katzprotektorat_3_modifier = {
 pki_katzprotektorat_gestalt_3_modifier = {
 	main_perk = yes
 	subject_modifier = {
-		planet_metallurgists_alloys_produces_add = 2
+		planet_metallurgists_alloys_produces_add = 1.5
 		planet_soldiers_unity_produces_add = 1.5
 		job_warrior_drone_per_pop = 0.05
 	}

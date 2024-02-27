@@ -13,10 +13,14 @@ kaiser_bureau = {
 	effect = { custom_tooltip = "kaiser_bureau_tooltip" hidden_effect = { from = { country_event = { id = kaiser_bureau.2 } } } }
 }
 
+pki_always_no_effect = {
+	potential = { always = yes }
+	allow = { always = yes }
+}
+
 pki_flusion_map_active_effect = {
 	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab } }
 	allow = { always = yes }
-	effect = {}
 }
 
 pki_flusion_map_inactive_effect = {
@@ -28,7 +32,6 @@ pki_flusion_map_inactive_effect = {
 pki_flusion_focus_active_effect = {
 	potential = { event_target:pki_player = { has_country_flag = pki_focus_tree_tab } }
 	allow = { always = yes }
-	effect = {}
 }
 
 pki_flusion_focus_inactive_effect = {
@@ -40,13 +43,11 @@ pki_flusion_focus_inactive_effect = {
 pki_focus_tree_no_effect = {
 	potential = { event_target:pki_player = { has_country_flag = pki_focus_tree_tab } }
 	allow = { always = yes }
-	effect = {}
 }
 
 pki_map_no_effect = {
 	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab } }
 	allow = { always = yes }
-	effect = {}
 }
 
 pki_map_industry_total = {
@@ -120,16 +121,6 @@ pki_map_country_contact = {
 ### ADD FOCUSES HERE
 
 inline_script = {
-	script = pki_focuses/pki_focus_button_effects
-	FOCUS = kaiser_arrival
-}
-
-inline_script = {
-	script = pki_focuses/pki_focus_button_effects
-	FOCUS = neighbors
-}
-
-inline_script = {
-	script = pki_focuses/pki_focus_button_effects
-	FOCUS = harania
+	script = pki_focuses/pki_all_focuses
+	SCRIPT_NAME = pki_focus_button_effects
 }

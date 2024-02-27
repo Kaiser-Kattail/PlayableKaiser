@@ -344,7 +344,7 @@ flusion_conversion_effect_step_2 = {
 }
 
 player_flusion_unify_flusion = {
-	event_target:playerflusion = {
+	event_target:pki_flusion_planet = {
 		remove_deposit = d_flunat
 		every_planet_army = {
 			limit = {
@@ -598,63 +598,63 @@ player_flusion_unify_flusion = {
 			}
 		}
 		if = {
-			limit = { event_target:playerflusion = { NOT = { has_deposit = d_grand_kronk_quarry } } }
+			limit = { event_target:pki_flusion_planet = { NOT = { has_deposit = d_grand_kronk_quarry } } }
 			add_deposit = d_grand_kronk_quarry
 		}
 		if = {
-			limit = { event_target:playerflusion = { NOT = { has_deposit = d_ezic_farmland } } }
+			limit = { event_target:pki_flusion_planet = { NOT = { has_deposit = d_ezic_farmland } } }
 			add_deposit = d_ezic_farmland
 		}
 		if = {
-			limit = { event_target:playerflusion = { NOT = { has_deposit = d_mercurian_plains } } }
+			limit = { event_target:pki_flusion_planet = { NOT = { has_deposit = d_mercurian_plains } } }
 			add_deposit = d_mercurian_plains
 		}
 		if = {
-			limit = { event_target:playerflusion = { NOT = { has_deposit = d_yinjite_sea_mines } } }
+			limit = { event_target:pki_flusion_planet = { NOT = { has_deposit = d_yinjite_sea_mines } } }
 			add_deposit = d_yinjite_sea_mines
 		}
 		if = {
-			limit = { event_target:playerflusion = { NOT = { has_deposit = d_laurandar_shores } } }
+			limit = { event_target:pki_flusion_planet = { NOT = { has_deposit = d_laurandar_shores } } }
 			add_deposit = d_laurandar_shores
 		}
 		if = {
-			limit = { event_target:playerflusion = { NOT = { has_deposit = d_propanian_mines } } }
+			limit = { event_target:pki_flusion_planet = { NOT = { has_deposit = d_propanian_mines } } }
 			add_deposit = d_propanian_mines
 		}
 		if = {
-			limit = { event_target:playerflusion = { NOT = { has_deposit = d_magnetic_puffy } } }
+			limit = { event_target:pki_flusion_planet = { NOT = { has_deposit = d_magnetic_puffy } } }
 			add_deposit = d_magnetic_puffy
 		}
 		if = {
-			limit = { event_target:playerflusion = { NOT = { has_deposit = d_cookian_steppes_mining } } }
+			limit = { event_target:pki_flusion_planet = { NOT = { has_deposit = d_cookian_steppes_mining } } }
 			add_deposit = d_cookian_steppes_mining
 		}
 		if = {
-			limit = { event_target:playerflusion = { NOR = { has_deposit = d_altarian_jungle has_deposit = d_altarian_island } } }
+			limit = { event_target:pki_flusion_planet = { NOR = { has_deposit = d_altarian_jungle has_deposit = d_altarian_island } } }
 			add_deposit = d_altarian_jungle
 		}
 		if = {
-			limit = { event_target:playerflusion = { NOR = { has_deposit = d_manglarian_junkyard has_deposit = d_restored_solak } } }
+			limit = { event_target:pki_flusion_planet = { NOR = { has_deposit = d_manglarian_junkyard has_deposit = d_restored_solak } } }
 			add_deposit = d_manglarian_junkyard
 		}
 		if = {
-			limit = { event_target:playerflusion = { NOR = { has_deposit = d_catspian_sea has_deposit = d_catspian_crystal_mines } } }
+			limit = { event_target:pki_flusion_planet = { NOR = { has_deposit = d_catspian_sea has_deposit = d_catspian_crystal_mines } } }
 			add_deposit = d_catspian_sea
 		}
 		if = {
-			limit = { event_target:playerflusion = { NOR = { has_deposit = d_northern_ice_cap has_deposit = d_polar_mineral_fields } } }
+			limit = { event_target:pki_flusion_planet = { NOR = { has_deposit = d_northern_ice_cap has_deposit = d_polar_mineral_fields } } }
 			add_deposit = d_northern_ice_cap
 		}
 		if = {
-			limit = { event_target:playerflusion = { NOR = { has_deposit = d_southern_ice_cap has_deposit = d_antarctic_uranium_fields } } }
+			limit = { event_target:pki_flusion_planet = { NOR = { has_deposit = d_southern_ice_cap has_deposit = d_antarctic_uranium_fields } } }
 			add_deposit = d_southern_ice_cap
 		}
 		if = {
-			limit = { event_target:playerflusion = { NOR = { has_deposit = d_meowriana_trench has_deposit = d_flusion_sea_temple } } }
+			limit = { event_target:pki_flusion_planet = { NOR = { has_deposit = d_meowriana_trench has_deposit = d_flusion_sea_temple } } }
 			add_deposit = d_meowriana_trench
 		}
 		if = {
-			limit = { event_target:playerflusion = { NOT = { has_deposit = d_solakian_factory } } }
+			limit = { event_target:pki_flusion_planet = { NOT = { has_deposit = d_solakian_factory } } }
 			add_deposit = d_solakian_factory
 		}
 		remove_deposit = d_flunat

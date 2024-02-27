@@ -2,6 +2,7 @@ pki_kaiser_arrival_focus_requirements = {
     hidden_trigger = {
         always = yes
     }
+    text = pki_focus_kaiser_arrival_tt
 }
 
 pki_neighbors_focus_requirements = {
