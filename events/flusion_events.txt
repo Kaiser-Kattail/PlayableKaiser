@@ -332,7 +332,7 @@ country_event = {
 
 			while = {
 				count = 9
-				random_pop = {
+				random_owned_pop = {
 					limit = {
 						is_pop_category = specialist
 					}
@@ -355,7 +355,7 @@ country_event = {
 				}
 				while = {
 					count = 10
-					random_pop = {
+					random_owned_pop = {
 						limit = {
 							is_pop_category = specialist
 						}

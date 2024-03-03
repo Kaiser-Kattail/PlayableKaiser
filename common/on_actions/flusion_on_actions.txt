@@ -20,16 +20,11 @@ on_monthly_pulse_country = {
 		pki_misc.3
 		pki_misc.1
 		centrism.1
-		centrism.61
-		centrism.7
-		centrism.8
+		centrism.65
+		centrism.6
 		centrism.9
-		centrism.97
-		centrism.98
-		centrism.99
 		conquest.8
 		pki_misc.10
-		centrism.65
 		pki_misc.15
 		pki_misc.14
 		pki_misc.211
@@ -62,7 +57,6 @@ on_megastructure_change_owner = {
 on_planet_transfer = {
 	events = { 
 		centrism.4
-		centrism.6
 	}
 }
 
@@ -70,6 +64,7 @@ on_yearly_pulse_country = {
 	events = {
 		pki_misc.19
 		pki_misc.23
+		centrism.97
 	}
 }
 
@@ -106,7 +101,7 @@ on_fleet_quantum_catapult = {
 
 on_tradition_picked = {
 	events = {
-		centrism.61
+		centrism.6
 	}
 }
 

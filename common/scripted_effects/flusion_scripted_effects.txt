@@ -1856,3 +1856,35 @@ create_meowrines = {
 		}
 	}
 }
+
+pki_yearly_migration = {
+	every_owned_planet = {
+		limit = {
+			NOR = {
+				has_planet_flag = playerflusion
+				has_modifier = no_relocation
+			}
+			count_owned_pop = {
+				count >= 15
+			}
+		}
+		every_owned_pop = {
+			random_list = {
+				$HIGH_BOUND$ = {
+				}
+				$LOW_BOUND$ = {
+					resettle_pop = {
+						pop = THIS
+						planet = event_target:playerflusion
+					}
+				}
+			}
+		}
+	}
+	event_target:playerflusion = {
+		add_modifier = {
+			modifier = temp_job_help
+			days = 1
+		}
+	}
+}
