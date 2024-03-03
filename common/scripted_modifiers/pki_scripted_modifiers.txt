@@ -10,3 +10,9 @@ pki_supertensile_jobs_from_industry = {
     category = planet
     good = yes
 }
+
+pki_foundry_jobs_from_industry = {
+    icon = mod_job_foundry_add
+    category = planet
+    good = yes
+}
