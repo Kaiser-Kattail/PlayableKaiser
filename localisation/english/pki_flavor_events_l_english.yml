@@ -1,0 +1,10 @@
+﻿l_english:
+
+    pki_flavor.1.name: "§HFlusio-Arcology§!: [Root.GetName] Encased"
+    pki_flavor.1.desc: "Layers upon layers of urban sprawl eclipse the globe's crust, and it is done.\n\nScant few years have passed since the start of this grand project, but it is already difficult to recall what the surface of [Root.GetName] was like. Verdant? Rugged? It is all steel now, miles in every direction.\n\nA place once molded by chance and the unthinking laws of nature, now a design wrought from indomitable purpose."
+
+    pki_flavor.20.name: "Ereignis Horizont Versatz Einrichtung"
+    pki_flavor.20.desc: "The construction site for our planned $pki_flavor.2.name$ is completed and ready for the next stage. Once we have the necessary resources, construction of the facility may commence."
+
+    pki_flavor.21.name: "Ereignis Horizont Versatz Einrichtung"
+    pki_flavor.21.desc: "The initial structure of the facility is complete. Once we have the necessary resources, we will soon be able to travel nearly anywhere."
