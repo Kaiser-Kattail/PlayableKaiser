@@ -87,10 +87,17 @@ playable_kaiser_ehve_phase0 = {
 	}
 
 	on_build_complete = {
+		save_event_target_as = ehve_megastructure
 		fromfrom = {
 			planet = {
 				giga_set_has_mega_flag = yes
 				if = { limit = { has_orbital_station = yes } orbital_station = { dismantle = yes } }
+			}
+		}
+		set_variable = { which = ehve_phase value = 0 }
+		from = {
+			country_event = {
+				id = pki_flavor.20
 			}
 		}
 
@@ -138,6 +145,13 @@ playable_kaiser_ehve_phase1 = {
 			star = {
 				change_pc = pc_ehof_black_hole
 				set_planet_size = @blackhole_size
+			}
+		}
+
+		set_variable = { which = ehve_phase value = 1 }
+		from = {
+			country_event = {
+				id = pki_flavor.21
 			}
 		}
 
@@ -279,6 +293,9 @@ playable_kaiser_ehve_cooldown_dummy = {
 			type = playable_kaiser_ehve
 			coords_from = fromfrom
 			owner = root
+			init_effect = {
+				set_megastructure_flag = pki_dont_do_completion_event
+			}
 		}
 		remove_megastructure = fromfrom
 	}
