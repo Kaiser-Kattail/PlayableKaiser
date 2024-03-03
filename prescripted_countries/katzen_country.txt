@@ -43,7 +43,7 @@ katzenartig_imperium= {
 		colors = {
 			"blue"
 			"indigo"
-			"black"
+			"null"
 			"null"
 		}
 	}
