@@ -183,16 +183,7 @@
     d_symbyland_power:0 "Repurposed Nuclear Power Plants"
     d_symbyland_power_desc:0 "Entire fields of nuclear power plants can be powered by re-using leftover fissile material from the Rapturian War."
 
-    d_katzen_mineral_dam:0 "Katzen Mining Dams"
-    d_katzen_mineral_dam_desc:0 "A series of dams that allow for the excavation of the seabed, which increases the mineral output of this world."
-    d_katzen_energy_dam:0 "Katzen Generator Dams"
-    d_katzen_energy_dam_desc:0 "A series of large hydroelectric dams that greatly increase the energy output of this world."
-    d_katzen_food_dam:0 "Katzen Farming Dams"
-    d_katzen_food_dam_desc:0 "A series of dams that redirect water for agricultural purposes."
-    d_katzen_housing_dam:0 "Katzen Housing Dams"
-    d_katzen_housing_dam_desc:0 "A series of dams that redirect and filter water into usable forms, so as to allow the construction of new homes."
-    d_katzen_industrial_dam:0 "Katzen Industrial Dams"
-    d_katzen_industrial_dam_desc:0 "A series of dams that relocates water for use as industrial coolant, allowing more factories to be opened." 
+
     d_annexed_region_solak:0 "Roqualian Held Territory"
     d_annexed_region_solak_desc:0 "As long as Roqualian forces hold our land, we cannot use it."
     d_annexed_region_cookie: "Galletian Held Territory"
@@ -321,7 +312,6 @@
 
     # Custom fail text
     not_allowed_for_katzen_protektorat:0 "£trigger_no£ Not allowed for §YKatzprotektorat§! preset."
-    need_both_dams:0 "£trigger_no£ Requires both the Roqualtropa and Katlantropa dams to be built."
     must_have_valid_elite_governor:0 "Must have a governor without the §YElite Figure§! trait."
     must_have_valid_elite_scientist:0 "Must have a scientist without the §YElite Figure§! trait."
     must_have_valid_elite_admiral:0 "Must have an commander without the §YElite Figure§! trait."
@@ -332,8 +322,6 @@
     cannot_be_dry:0 "£trigger_no£ The world must not be a dry world."
 
     PKI_MUST_NOT_HAVE_BUILDINGS: "£trigger_no£ The planet must be unspoiled by building development."
-
-    pki_need_orbital_arcology:0 "Requires Upgraded Orbital Arcology."
    
     # Events
     katzen.7.name:0 "Katzen Elite Menu"
@@ -375,19 +363,58 @@
     decision_katlantropa_desc:0 "By damming the Katsula and the Polga, and building a dam across the Catspian Sea's middle section, we can lower the level of the sea's southern lobe and reclaim vast tracts of wet land. The evaporated water alongside the redirected river will then be used to irrigate the vast desert to the south of the Katzen Herzlands, providing massive amounts of arable land and finally eliminating one of the largest hostile areas of Flusion."
     decision_flusion_arc:0 "Construct Flusio-Arcology"
     decision_flusion_arc_desc:0 "Flusion's vast resources are a treasure which we must cherish. By enlarging the cities of Katown, Bundengrad and Teho, constructing a network of hyperloop tracks across the world, and digging vast cities underground to both maximize living space and tap into the planet's deepest resource caches, we will be able to maximize the efficiency of our beloved world to its ultimate maximum!"
-   
-    decision_katzen_mineral_dam:0 "Construct Mining Dams"
-    decision_katzen_mineral_dam_desc:0 "By constructing dams to reveal valuable minerals on the seabed, we can greatly increase the mining output of this world."
-    decision_katzen_energy_dam:0 "Construct Generator Dams"
-    decision_katzen_energy_dam_desc:0 "By constructing a series of hydroelectric dams we can greatly increase the power output of this world."
-    decision_katzen_food_dam:0 "Construct Farming Dams"
-    decision_katzen_food_dam_desc:0 "By using the large amounts of excess water created by these dams to irrigate our crops, we can greatly increase the agricultural output of this world."
-    decision_katzen_housing_dam:0 "Construct Housing Dams"
-    decision_katzen_housing_dam_desc:0 "By constructing dams to drain various seas, new housing and residential developments may be opened up on this world."
 
-    decision_katzen_industrial_dam: "Construct Industrial Dams"
-    decision_katzen_industrial_dam_desc: "By constructing dams to provide increased cooling capabilities to our foundries and factories, industrial output can be increased."
-   
+    decision_flusion_arc_effects:1 "Turns the planet into an §Y$pc_pki_flusion_ecu$§!, increasing £housing£ §Y$PLANET_HOUSING_TITLE$§!, §YResource Production§! and §YPop Growth§! and unlocking special £district£ §YFlusio-Arcology Districts§!."
+    decision_flusion_arc_effects_short:2 "Increases £housing£ §Y$PLANET_HOUSING_TITLE$§!, §YResource Production§! and §YPop Growth§!\nEnables £district£ §YFlusio-Arcology Districts§!"
+    decision_flusion_arc_requirements:1 "£trigger_no£ Requires both the Roqualtropa and Katlantropa dams to be built."
+
+    decision_pki_dams: "Construct Dam"
+    decision_pki_dams_desc: "By constructing a series of hydroelectric dams we can greatly increase resource output of this world."
+
+    d_katzen_housing_dam:0 "Hydrocentric Housing Complex"
+    d_katzen_housing_dam_desc:0 "A series of dams that redirect and filter water into usable forms, so as to allow the construction of new homes."
+    concept_pki_housing_dam: "$d_katzen_housing_dam$"
+    concept_pki_housing_dam_desc: "§EEffects:§!\n$pki_housing_dam_effect$"
+    pki_housing_dam_effect: "- £housing£ Housing §G+30§!\n- £amenities£ Amenities §G+10§!\n- £district£ Max Districts §G+3§!\n- £mod_habitability£ Habitability §R-15%§!"
+
+    d_katzen_energy_dam:0 "Hydroelectric Energy Plants"
+    d_katzen_energy_dam_desc:0 "A series of large hydroelectric dams that greatly increase the energy output of this world."
+    concept_pki_energy_dam: "$d_katzen_energy_dam$"
+    concept_pki_energy_dam_desc: "§EEffects:§!\n$pki_energy_dam_effect$"
+    pki_energy_dam_effect: "- £mod_district_generator_max£ Max Generator Districts §G+3§!\n- £housing£ Housing §G+15§!\n- £mod_habitability£ Habitability §R-10%§!\n- §G+1§! Energy Job per §Y10§! pops\n- Produces £energy£ 30"
+
+    d_katzen_mineral_dam:0 "Superscale Ore Washing Sites"
+    d_katzen_mineral_dam_desc:0 "A series of dams that allow for the excavation of the seabed, which increases the mineral output of this world."
+    concept_pki_minerals_dam: "$d_katzen_mineral_dam$"
+    concept_pki_minerals_dam_desc: "§EEffects:§!\n$pki_mineral_dam_effect$"
+    pki_mineral_dam_effect: "- £mod_district_mining_max£ Max Mining Districts §G+3§!\n- £housing£ Housing §G+15§!\n- £mod_habitability£ Habitability §R-10%§!\n- §G+1§! Mining Job per §Y10§! pops"
+
+    d_katzen_food_dam:0 "Hyper-irrigated Farming Sectors"
+    d_katzen_food_dam_desc:0 "A series of dams that redirect water for agricultural purposes."
+    concept_pki_food_dam: "$d_katzen_food_dam$"
+    concept_pki_food_dam_desc: "§EEffects:§!\n$pki_food_dam_effect$"
+    pki_food_dam_effect: "- £mod_district_farming_max£ Max Agriculture Districts §G+3§!\n- £housing£ Housing §G+15§!\n- £mod_habitability£ Habitability §R-10%§!\n- §G+1§! Farming Job per §Y10§! pops"
+
+
+    d_katzen_industrial_dam:0 "Giga-coolant Plant "
+    d_katzen_industrial_dam_desc:0 "A series of dams that relocates water for use as industrial coolant, allowing more factories to be opened."
+    concept_pki_industrial_dam: "$d_katzen_industrial_dam$"
+    concept_pki_industrial_dam_desc: "§EEffects:§!\n$pki_industrial_dam_effect$\n\n§EAdditional Effects:§!\nBased on §YPlanetary Designation§!, industrial jobs gain increased output along with increased energy upkeep"
+    pki_industrial_dam_effect: "- £housing£ Housing §G+15§!\n- £mod_habitability£ Habitability §R-1%§!\n- £alloys£ Alloys from £job_foundry£ Alloy Jobs §G+0.50§!\n- £consumer_goods£ Alloys from £job_artisan£ Consumer Goods Jobs §G+0.50§!\n- £energy£ $energy$ Upkeep from £job_foundry£ Alloy Jobs §R+1.00§!\n- £energy£ $energy$ Upkeep from £job_artisan£ Consumer Goods Jobs §R+1.00§!"
+
+    decision_pki_dams_effect: "Constructs a dam on §Y[root.GetName]§!, giving £housing£ §YHousing§!, and £district£ §YDistricts§! with bonuses to resource production based on the type of dam built.\n\n['concept_pki_housing_dam']\n['concept_pki_energy_dam']\n['concept_pki_minerals_dam']\n['concept_pki_industrial_dam']\n\nIf £planet£ §GWet§! Climate:\n['concept_pki_food_dam']"
+
+    pki_industrial_dam_effects: "\nBonuses change based on §YPlanetary Designation§!"
+
+    pki_misc.26.name: "[root.GetName]: Dam Construction"
+    pki_misc.26.desc: "At long last the dam on §Y[root.GetName]§! is complete. [fromfrom.GetSpeciesName] officials have decided that the dam should be used for..."
+    pki_misc.26.a: "Housing."
+    pki_misc.26.b: "Energy."
+    pki_misc.26.c: "Minerals."
+    pki_misc.26.d: "Food."
+    pki_misc.26.e: "Industry."
+    pki_misc.26.f: "Never mind."
+
     decision_katzen_defense_array_1:0 "Construct Katzen Defense Array"
     decision_katzen_defense_array_1_desc:0 "A new defense station in orbit will provide us with increased system security."
     pki_defence_array_decision: "Begins §YKatzen Defense Array§! construction in §Y[planet.GetName]§! Orbit."
@@ -412,7 +439,7 @@
     PKI_SCALING_COLONY_SECTOR: "Constructs a §Y$building_pki_katzen_housing$§! on all planets in the sector, providing jobs scaling with planet population while blocking additional buildings.\n\n§HOnly affects normal planets§!\n\n§RWARNING: Will forcibly remove buildings from all planets. Use at own risk!§!"
 
     PKI_NO_RELOCATION: "Prevents migration to §Y[capital_scope.GetName]§!."
-    PKI_DEPOPULATE: "Migrates all pops from §Y[planet.GetName]§! to §Y[capital_scope.GetName]§!"
+    PKI_DEPOPULATE: "Migrates all pops from §Y[planet.GetName]§! to §Y[from.capital_scope.GetName]§!"
 
     PKI_AT_DEFENSE_ARRAY_MAX: "£trigger_no£ We cannot build any more §YDefense Arrays§!."
 
@@ -509,7 +536,11 @@
    
     katzensoldaten_army: "Katzensoldaten Army"
     katzensoldaten_army_desc: "A specialized infantry unit, equipped with a larger than normal amount of mechanized armor pieces."
-   
+
+    pki_riesigerkatzenpanzer_assault:0 "Riesigerkatzenpanzer Division"
+    pki_riesigerkatzenpanzer_assault_desc:0 "A division which consists of a dozen or so Riesigerkatzenpanzers, absolutely colossal armored vehicles that measure well over 500 meters in length. They are armed with hundreds of turrets, anti-air batteries, and field a humongous nuclear railgun capable of firing multi-gigaton nuclear warheads with practically unlimited range."
+
+
     angriffskatze_army: "Angriffskatze Siege Breaker Army"
     angriffskatze_army_desc: "When the ground defenses of a hostile world are too strong, the Angriffskatze are brought in. Equipped with multiple nuclear warheads ranging into the gigatons, these armies will smash the enemies defense... at the cost of infrastructure and civilians."
    
@@ -590,6 +621,8 @@
     more_migration_desc:0 "We have a fair amount of migrants relocated to Flusion. It is only just.\n§H10%§! §Lof every colony's population will migrate to §HFlusion§L every five years."
     much_migration:0 "Major Relocation"
     much_migration_desc:0 "Flusion is the center of the galaxy and the imperium; we must centralize as many as possible.\n§H15%§! §Lof every colony's population will migrate to §HFlusion§L every five years."
+    pki_dynamic_migration: "Dynamic Relocation"
+    pki_dynamic_migration_desc: "Relocates from planets with close to half of Flusion's pop amount. Good for allowing planets to grow while taking the excess to Flusion."
 
     pki_ftl.1.title:0 "FTL Inquiries"
     pki_ftl.1.desc:0 "The Kaiser has insisted that we do not stop at just Flusion; nay, we are to develop faster-than-light travel and reach the stars."
@@ -827,8 +860,9 @@
     edict_katzen_war_forge_construction:0 "Automate War forge Construction"
     edict_katzen_war_forge_construction_desc:0 "Our workers will automatically seek out planets that don't have war forges and start constructing them, one by one."
 
-    decision_demotion_modifier:0 "Activate Economic Assistance"
-    decision_demotion_modifier_desc:0 "Enforces rapid class demotion for one month, in order to promote efficiency."
+    decision_pki_demotion_modifier:0 "Economic Assistance"
+    decision_pki_demotion_modifier_desc:0 "Enforces rapid class demotion, in order to promote efficiency."
+    decision_pki_demotion_modifier_effect: "Demotes all §YUnemployed Pops§! to the £pop_cat_worker£ §YWorker§! Stratum"
 
     decision_toggle_relocation: "Toggle Relocation Blocker"
     decision_toggle_relocation_desc: "Toggles whether relocation is currently allowed or not."
@@ -888,7 +922,7 @@
     pki_ehve.2.c:0 "As it should."
 
     pki_ehve.3.name: "E.H.V.E. Construction Completed"
-    pki_ehve.3.desc: "We have completed our §YE.H.V.E.§! in §Y[from.GetName]§! We may now transport our ships nearly everywhere!\n\n§YTo use the E.H.V.E. use the Transport Fleet action.§!"
+    pki_ehve.3.desc: "We have completed our §YE.H.V.E.§! in §Y[from.GetName]§! We may now transport our ships nearly everywhere!\n\n§YTo use the E.H.V.E. use the Transport Fleet order while selecting a fleet in galaxy view.§!"
     pki_ehve.3.a: "Excellent."
 
     specialist_katzprotektorat: "Katzprotektorat"
@@ -1020,7 +1054,7 @@
     mod_shipsize_giga_massive_planet_upkeep: "Attack Moon Upkeep"
 
     decision_pki_sector_auto: "Semiautonomous Sector Designation"
-    decision_pki_sector_auto_desc: "$PKI_PLACEHOLDER$"
+    decision_pki_sector_auto_desc: "This sector has little use for us beyond providing pops for [owner.capital_scope.getname]."
 
     PKI_PLACEHOLDER: "PLACEHOLDER"
 
@@ -1030,7 +1064,8 @@
     edict_pki_defense_station_construction: "Automated Defense Array Construction"
     edict_pki_defense_station_construction_desc: "Our workers will automatically seek out planets that don't have defense arrays and start constructing them, one by one."
 
-    mod_pki_supertensile_jobs_from_industry: "£job_foundry£ [owner.GetAlloyProducerPlural] to Supertensile Jobs"
+    mod_pki_supertensile_jobs_from_industry: "£job_giga_megaengineer£ [owner.giga_amb_megaengineer_name_plural] from $district_pki_flusion_heavy_industry$"
+    mod_pki_foundry_jobs_from_industry: "£job_foundry£ [owner.GetAlloyProducerPlural] from $district_pki_flusion_heavy_industry$"
 
     pki_125_metallurgist_allocation: "Minor Allocation"
     pki_125_metallurgist_allocation_desc: "We will replace §Ylittle§! of our alloy producing jobs with §YSupertensile Jobs§!.\n"
@@ -1042,3 +1077,4 @@
     pki_50_metallurgist_allocation_desc: "We will replace §Yhalf§! of our alloy producing jobs with §YSupertensile Jobs§!.\n"
     pki_no_metallurgist_allocation: "No Allocation"
     pki_no_metallurgist_allocation_desc: "We will not replace any of our alloy producing jobs with §YSupertensile Jobs§!."
+

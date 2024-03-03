@@ -1,11 +1,11 @@
 ﻿l_german:
   
- katzen_panzer: "Katzenweltraumpanzer" #NT!
- katzen_panzer_plural: "Katzenweltraumpanzers" #NT!
+ pki_panzer: "Katzenweltraumpanzer" #NT!
+ pki_panzer_plural: "Katzenweltraumpanzers" #NT!
  KATZEN_SPACE_PANZER: "Space Panzer Hull" #NT!
   
- katzen_bomber: "Leerekatzenbomber" #NT!
- katzen_bomber_plural: "Leerekatzenbombers" #NT!
+ pki_bomber: "Leerekatzenbomber" #NT!
+ pki_bomber_plural: "Leerekatzenbombers" #NT!
  KATZEN_SPACE_BOMBER_1: "Dive Bomber Airframe" #NT!
  KATZEN_SPACE_BOMBER_2: "Long Range Bomber Airframe" #NT!
  KATZEN_SPACE_BOMBER_3: "Long Range Bomber Airframe MK II" #NT!
@@ -17,8 +17,8 @@
  katzen_assault_army: "Katzenbodentruppen" #NT!
  katzen_assault_army_desc: "A Katzen army designed to land on worlds in order to conduct planetary invasions." #NT!
   
- katzen_submarine: "Unterraumboot" #NT!
- katzen_submarine_plural: "Unterraumboots" #NT!
+ pki_submarine: "Unterraumboot" #NT!
+ pki_submarine_plural: "Unterraumboots" #NT!
  KATZEN_SPACE_SUBMARINE: "Hull" #NT!
   
  katzen_player_warforge_platform: "Katzen Defense Array" #NT!
@@ -26,8 +26,8 @@
   
  KATZEN_PLAYER_PLANET_PLATFORM: "Defense Array Core" #NT!
   
- katzen_cruiser: "Katzenkreuzer" #NT!
- katzen_cruiser_plural: "Katzenkreuzers" #NT!
+ pki_cruiser: "Katzenkreuzer" #NT!
+ pki_cruiser_plural: "Katzenkreuzers" #NT!
  KATZEN_CRUISER_BOW: "Bow" #NT!
  KATZEN_CRUISER_MID: "Mid" #NT!
  KATZEN_CRUISER_STERN: "Stern" #NT!

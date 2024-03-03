@@ -826,8 +826,8 @@
  edict_katzen_war_forge_construction: "Automate War forge Construction" #NT!
  edict_katzen_war_forge_construction_desc: "Our workers will automatically seek out planets that don't have war forges and start constructing them, one by one." #NT!
   
- decision_demotion_modifier: "Activate Economic Assistance" #NT!
- decision_demotion_modifier_desc: "Enforces rapid class demotion for one month, in order to promote efficiency." #NT!
+ decision_pki_demotion_modifier: "Activate Economic Assistance" #NT!
+ decision_pki_demotion_modifier_desc: "Enforces rapid class demotion for one month, in order to promote efficiency." #NT!
   
  decision_toggle_relocation: "Toggle Relocation Blocker" #NT!
  decision_toggle_relocation_desc: "Toggles whether relocation is currently allowed or not." #NT!
