@@ -129,7 +129,7 @@ luftkatzenvernichter_army = {
 	potential = { owner = { has_origin = origin_katzen } }
 }
 
-riesigerkatzenpanzer_assault = {
+pki_riesigerkatzenpanzer_assault = {
 	damage = 10.0
 	health = 5.0
 	has_morale = no
@@ -154,30 +154,8 @@ riesigerkatzenpanzer_assault = {
 		}
 	}
 	
-	potential = { owner = { 
-		OR = { 
-			has_origin = origin_katzen
-			has_technology = giga_tech_katzen_panzers
-		}
-		} 
-	}
-}
-
-corrona_army = {
-	defensive = yes
-	damage = 15
-	health = 40
-	morale = 10
-	icon = GFX_army_type_undead
-	
-
 	potential = {
-		owner = {
-			has_country_flag = corrona_primitives
-			NOT = {
-				has_origin = origin_katzen
-			}
-		}
+		pki_is_katzenartig_imperium = yes
 	}
 }
 
