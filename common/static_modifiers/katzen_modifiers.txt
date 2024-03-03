@@ -1,5 +1,5 @@
 temp_job_help = {
-	pop_demotion_time_mult = -0.6
+	pop_demotion_time_mult = -1
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_expel_population.dds"
 	icon_frame = 1

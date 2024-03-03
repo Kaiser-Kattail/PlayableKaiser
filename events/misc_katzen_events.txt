@@ -698,7 +698,7 @@ fleet_event = {
 				}
 			}
 			any_fleet_in_orbit = {
-				is_ship_size = katzen_submarine
+				is_ship_size = pki_submarine
 				owner = { has_origin = origin_katzen }
 				is_cloaked = yes
 			}
@@ -728,7 +728,7 @@ planet_event = {
 		if = {
 			limit = {
 				any_fleet_in_orbit = {
-					is_ship_size = katzen_submarine
+					is_ship_size = pki_submarine
 					owner = { has_origin = origin_katzen }
 					is_cloaked = yes
 				}
@@ -996,13 +996,13 @@ country_event = {
 			}
 			set_fleet_flag = pki_has_katzen_ships
 			pki_count_ships = {
-				SHIP = katzen_panzer
+				SHIP = pki_panzer
 			}
 			pki_count_ships = {
-				SHIP = katzen_bomber
+				SHIP = pki_bomber
 			}
 			pki_count_ships = {
-				SHIP = katzen_panzer
+				SHIP = pki_panzer
 			}
 			create_fleet = {
 				name = "pki_katzen_captured_ships"
@@ -1013,7 +1013,7 @@ country_event = {
 						count = prev.pki_katzen_panzer_count
 						create_ship = {
 							name = random
-							random_existing_design = katzen_panzer
+							random_existing_design = pki_panzer
 							prefix = no
 							graphical_culture = reptilian_01
 							upgradable = yes
@@ -1024,7 +1024,7 @@ country_event = {
 						count = prev.pki_katzen_bomber_count
 						create_ship = {
 							name = random
-							random_existing_design = katzen_bomber
+							random_existing_design = pki_bomber
 							prefix = no
 							graphical_culture = reptilian_01
 							upgradable = yes
@@ -1034,7 +1034,7 @@ country_event = {
 						count = prev.pki_katzen_cruiser_count
 						create_ship = {
 							name = random
-							random_existing_design = katzen_cruiser
+							random_existing_design = pki_cruiser
 							prefix = no
 							graphical_culture = reptilian_01
 							upgradable = yes
@@ -1194,13 +1194,13 @@ country_event = {
 			}
 			set_fleet_flag = pki_has_katzen_ships
 			pki_count_ships = {
-				SHIP = katzen_panzer
+				SHIP = pki_panzer
 			}
 			pki_count_ships = {
-				SHIP = katzen_bomber
+				SHIP = pki_bomber
 			}
 			pki_count_ships = {
-				SHIP = katzen_panzer
+				SHIP = pki_panzer
 			}
 			create_fleet = {
 				name = "pki_katzen_captured_ships"
@@ -1211,7 +1211,7 @@ country_event = {
 						count = prev.pki_katzen_panzer_count
 						create_ship = {
 							name = random
-							random_existing_design = katzen_panzer
+							random_existing_design = pki_panzer
 							prefix = no
 							graphical_culture = reptilian_01
 							upgradable = yes
@@ -1222,7 +1222,7 @@ country_event = {
 						count = prev.pki_katzen_bomber_count
 						create_ship = {
 							name = random
-							random_existing_design = katzen_bomber
+							random_existing_design = pki_bomber
 							prefix = no
 							graphical_culture = reptilian_01
 							upgradable = yes
@@ -1232,7 +1232,7 @@ country_event = {
 						count = prev.pki_katzen_cruiser_count
 						create_ship = {
 							name = random
-							random_existing_design = katzen_cruiser
+							random_existing_design = pki_cruiser
 							prefix = no
 							graphical_culture = reptilian_01
 							upgradable = yes
@@ -1425,6 +1425,58 @@ country_event = {
 					NUMBER = 4
 				}
 			}
+		}
+	}
+}
+
+planet_event = {
+	id = pki_misc.26
+	title = pki_misc.26.name
+	desc = pki_misc.26.desc
+
+	is_triggered_only = yes
+	location = planet
+	picture = GFX_evt_solaktropa_dam
+	show_sound = event_construction
+
+	option = {
+		name = pki_misc.26.a
+		add_deposit = d_katzen_housing_dam
+	}
+
+	option = {
+		name = pki_misc.26.b
+		add_deposit = d_katzen_energy_dam
+	}
+
+	option = {
+		name = pki_misc.26.c
+		add_deposit = d_katzen_mineral_dam
+	}
+
+	option = {
+		trigger = {
+			is_wet = yes
+		}
+		name = pki_misc.26.d
+		add_deposit = d_katzen_food_dam
+	}
+
+	option = {
+		name = pki_misc.26.e
+		add_deposit = d_katzen_industrial_dam
+		custom_tooltip = pki_industrial_dam_effects
+	}
+
+	option = {
+		name = pki_misc.26.f
+		fromfrom = {
+			add_resource = {
+				minerals = 7500
+			}
+		}
+		hidden_effect = {
+			remove_planet_flag = pki_has_dam
 		}
 	}
 }

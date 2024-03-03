@@ -27,9 +27,9 @@ pki_is_katzprotektorat_tier_3 = {
 
 pki_is_katzen_ship = {
 	OR = {
-		is_ship_size = katzen_panzer
-		is_ship_size = katzen_bomber
-		is_ship_size = katzen_cruiser
+		is_ship_size = pki_panzer
+		is_ship_size = pki_bomber
+		is_ship_size = pki_cruiser
 	}
 }
 
