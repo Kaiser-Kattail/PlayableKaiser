@@ -1,6 +1,8 @@
+@section_cost = 30
+
 ship_section_template = {
-	key = "KATZEN_CRUISER_BOW"
-	ship_size = katzen_cruiser
+	key = "PKI_CRUISER_BOW"
+	ship_size = pki_cruiser
 	fits_on_slot = bow
 	should_draw_components = yes
 	entity = "katzen_cruiser_bow_entity"
@@ -23,8 +25,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "KATZEN_CRUISER_MID"
-	ship_size = katzen_cruiser
+	key = "PKI_CRUISER_MID"
+	ship_size = pki_cruiser
 	fits_on_slot = mid
 	should_draw_components = yes
 	entity = "katzen_cruiser_mid_entity"
@@ -76,8 +78,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "KATZEN_CRUISER_STERN"
-	ship_size = katzen_cruiser
+	key = "PKI_CRUISER_STERN"
+	ship_size = pki_cruiser
 	fits_on_slot = stern
 	should_draw_components = yes
 	entity = "katzen_cruiser_stern_entity"
@@ -120,8 +122,8 @@ ship_section_template = {
 
 ###SPACE PANZER###
 ship_section_template = {
-	key = "KATZEN_SPACE_PANZER"
-	ship_size = katzen_panzer
+	key = "PKI_SPACE_PANZER"
+	ship_size = pki_panzer
 	fits_on_slot = "mid"
 	entity = "katzen_panzer_full_entity"
 	icon = "GFX_ship_part_core_mid"
@@ -146,8 +148,8 @@ ship_section_template = {
 ###SPACE BOMBER###
 @bomber_section_cost = 40
 ship_section_template = {
-	key = "KATZEN_SPACE_BOMBER_1"
-	ship_size = katzen_bomber
+	key = "PKI_SPACE_BOMBER_1"
+	ship_size = pki_bomber
 	fits_on_slot = "mid"
 	entity = "katzen_plane_entity"
 	icon = "GFX_ship_part_core_mid"
@@ -175,8 +177,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "KATZEN_SPACE_BOMBER_2"
-	ship_size = katzen_bomber
+	key = "PKI_SPACE_BOMBER_2"
+	ship_size = pki_bomber
 	fits_on_slot = "mid"
 	entity = "katzen_plane_entity"
 	icon = "GFX_ship_part_core_mid"
@@ -202,8 +204,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "KATZEN_SPACE_BOMBER_3"
-	ship_size = katzen_bomber
+	key = "PKI_SPACE_BOMBER_3"
+	ship_size = pki_bomber
 	fits_on_slot = "mid"
 	entity = "katzen_plane_entity"
 	icon = "GFX_ship_part_core_mid"
@@ -232,18 +234,27 @@ ship_section_template = {
 
 ###SPACE SUBMARINE###
 ship_section_template = {
-	key = "KATZEN_SPACE_SUBMARINE"
-	ship_size = katzen_submarine
+	key = "PKI_SPACE_SUBMARINE"
+	ship_size = pki_submarine
 	fits_on_slot = "mid"
 	entity = "katzen_submarine_full_entity"
 	icon = "GFX_ship_part_core_mid"
 
+	ai_tags = { explosive explosive_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	ai_weight = {
+		modifier = {
+			factor = 10.0
+			is_preferred_weapons = weapon_type_explosive
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { is_preferred_weapons = weapon_type_explosive }
+		}
+	}
+
 	component_slot = { name = "MISSILE_01"			template = "medium_missile_turret"			locatorname = "loc101" }
 	component_slot = { name = "MISSILE_02"			template = "medium_missile_turret"			locatorname = "loc101" }
-	# component_slot = { name = "MISSILE_03"			template = "medium_missile_turret"			locatorname = "loc101" }
-	# component_slot = { name = "MISSILE_04"			template = "medium_missile_turret"			locatorname = "loc101" }
-	# component_slot = { name = "MISSILE_05"			template = "medium_missile_turret"			locatorname = "loc101" }
-	# component_slot = { name = "MISSILE_06"			template = "medium_missile_turret"			locatorname = "loc101" }
 
 	medium_utility_slots = 4
 	aux_utility_slots = 1
@@ -251,13 +262,13 @@ ship_section_template = {
 	resources = {
 		category = ships
 		cost = {
-			alloys = 120
+			alloys = @section_cost
 		}
 	}
 }
 
 ship_section_template = {
-	key = "KATZEN_PLAYER_PLANET_PLATFORM"
+	key = "PKI_DEFENCE_ARRAY"
 	ship_size = katzen_player_warforge_platform
 	fits_on_slot = "mid"
 	icon = "GFX_ship_part_core_mid"

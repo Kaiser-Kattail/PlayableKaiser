@@ -129,7 +129,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fission_power" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_panzer }
+	size_restriction = { pki_panzer }
 	upgrades_to = "KATDESTROYER_FUSION_REACTOR"
 
 	ai_weight = {
@@ -156,7 +156,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fission_power" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_bomber }
+	size_restriction = { pki_bomber }
 	upgrades_to = "KATCRUISER_FUSION_REACTOR"
 
 	ai_weight = {
@@ -183,7 +183,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fission_power" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_cruiser }
+	size_restriction = { pki_cruiser }
 	upgrades_to = "KATTITAN_FUSION_REACTOR"
 
 	ai_weight = {
@@ -211,7 +211,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fission_power" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_submarine }
+	size_restriction = { pki_submarine }
 	upgrades_to = "KATSUB_FUSION_REACTOR"
 
 	ai_weight = {
@@ -296,7 +296,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fusion_power" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_panzer }
+	size_restriction = { pki_panzer }
 	upgrades_to = "KATDESTROYER_COLD_FUSION_REACTOR"
 
 	ai_weight = {
@@ -323,7 +323,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fusion_power" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_bomber }
+	size_restriction = { pki_bomber }
 	upgrades_to = "KATCRUISER_COLD_FUSION_REACTOR"
 
 	ai_weight = {
@@ -350,7 +350,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fusion_power" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_submarine }
+	size_restriction = { pki_submarine }
 	upgrades_to = "KATSUB_COLD_FUSION_REACTOR"
 
 	ai_weight = {
@@ -377,7 +377,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fusion_power" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_cruiser }
+	size_restriction = { pki_cruiser }
 	upgrades_to = "KATTITAN_COLD_FUSION_REACTOR"
 
 	ai_weight = {
@@ -438,7 +438,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_cold_fusion_power" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_panzer }
+	size_restriction = { pki_panzer }
 	upgrades_to = "KATDESTROYER_ANTIMATTER_REACTOR"
 
 	ai_weight = {
@@ -465,7 +465,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_cold_fusion_power" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_bomber }
+	size_restriction = { pki_bomber }
 	upgrades_to = "KATCRUISER_ANTIMATTER_REACTOR"
 
 	ai_weight = {
@@ -492,7 +492,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_cold_fusion_power" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_submarine }
+	size_restriction = { pki_submarine }
 	upgrades_to = "KATSUB_ANTIMATTER_REACTOR"
 
 	ai_weight = {
@@ -519,7 +519,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_cold_fusion_power" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_cruiser }
+	size_restriction = { pki_cruiser }
 	upgrades_to = "KATTITAN_ANTIMATTER_REACTOR"
 
 	ai_weight = {
@@ -577,7 +577,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_antimatter_power" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_panzer }
+	size_restriction = { pki_panzer }
 	upgrades_to = "KATDESTROYER_ZERO_POINT_REACTOR"
 
 	ai_weight = {
@@ -604,7 +604,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_antimatter_power" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_bomber }
+	size_restriction = { pki_bomber }
 	upgrades_to = "KATCRUISER_ZERO_POINT_REACTOR"
 
 	ai_weight = {
@@ -631,7 +631,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_antimatter_power" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_submarine }
+	size_restriction = { pki_submarine }
 	upgrades_to = "KATSUB_ZERO_POINT_REACTOR"
 
 	ai_weight = {
@@ -658,7 +658,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_antimatter_power" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_cruiser }
+	size_restriction = { pki_cruiser }
 	upgrades_to = "KATTITAN_ZERO_POINT_REACTOR"
 
 	ai_weight = {
@@ -717,7 +717,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_zero_point_power" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_panzer }
+	size_restriction = { pki_panzer }
 	upgrades_to = "KATDESTROYER_DARK_MATTER_REACTOR"
 
 	ai_weight = {
@@ -744,7 +744,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_zero_point_power" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_bomber }
+	size_restriction = { pki_bomber }
 	upgrades_to = "KATCRUISER_DARK_MATTER_REACTOR"
 
 	ai_weight = {
@@ -771,7 +771,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_zero_point_power" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_submarine }
+	size_restriction = { pki_submarine }
 	upgrades_to = "KATSUB_DARK_MATTER_REACTOR"
 
 	ai_weight = {
@@ -799,7 +799,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_zero_point_power" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_cruiser }
+	size_restriction = { pki_cruiser }
 	upgrades_to = "KATTITAN_DARK_MATTER_REACTOR"
 
 	ai_weight = {
@@ -861,7 +861,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_dark_matter_power_core" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_panzer }
+	size_restriction = { pki_panzer }
 
 	ai_weight = {
 		weight = 6
@@ -892,7 +892,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_dark_matter_power_core" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_bomber }
+	size_restriction = { pki_bomber }
 
 	ai_weight = {
 		weight = 6
@@ -923,7 +923,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_dark_matter_power_core" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_submarine }
+	size_restriction = { pki_submarine }
 
 	ai_weight = {
 		weight = 6
@@ -954,7 +954,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_dark_matter_power_core" }
 	component_set = "katzen_power_core"
-	size_restriction = { katzen_cruiser }
+	size_restriction = { pki_cruiser }
 
 	ai_weight = {
 		weight = 6

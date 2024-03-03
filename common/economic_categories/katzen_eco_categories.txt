@@ -12,10 +12,10 @@ katzen_ships = {
         trigger = {
             is_scope_valid = yes
             OR = {
-                is_ship_size = katzen_cruiser
-                is_ship_size = katzen_bomber
-                is_ship_size = katzen_panzer
-                is_ship_size = katzen_submarine
+                is_ship_size = pki_cruiser
+                is_ship_size = pki_bomber
+                is_ship_size = pki_panzer
+                is_ship_size = pki_submarine
             }
         }
     }
@@ -28,7 +28,7 @@ katzen_ships = {
         }
         trigger = {
             is_scope_valid = yes
-            is_ship_size = katzen_cruiser
+            is_ship_size = pki_cruiser
         }
     }
 
@@ -40,7 +40,7 @@ katzen_ships = {
         }
         trigger = {
             is_scope_valid = yes
-            is_ship_size = katzen_cruiser
+            is_ship_size = pki_cruiser
         }
     }
 
@@ -52,7 +52,7 @@ katzen_ships = {
         }
         trigger = {
             is_scope_valid = yes
-            is_ship_size = katzen_panzer
+            is_ship_size = pki_panzer
         }
     }
 
@@ -64,7 +64,7 @@ katzen_ships = {
         }
         trigger = {
             is_scope_valid = yes
-            is_ship_size = katzen_panzer
+            is_ship_size = pki_panzer
         }
     }
 
@@ -76,7 +76,7 @@ katzen_ships = {
         }
         trigger = {
             is_scope_valid = yes
-            is_ship_size = katzen_bomber
+            is_ship_size = pki_bomber
         }
     }
 
@@ -88,7 +88,7 @@ katzen_ships = {
         }
         trigger = {
             is_scope_valid = yes
-            is_ship_size = katzen_bomber
+            is_ship_size = pki_bomber
         }
     }
 
@@ -100,7 +100,7 @@ katzen_ships = {
         }
         trigger = {
             is_scope_valid = yes
-            is_ship_size = katzen_submarine
+            is_ship_size = pki_submarine
         }
     }
 
@@ -112,7 +112,7 @@ katzen_ships = {
         }
         trigger = {
             is_scope_valid = yes
-            is_ship_size = katzen_submarine
+            is_ship_size = pki_submarine
         }
     }
 }

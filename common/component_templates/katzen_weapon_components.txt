@@ -4,19 +4,17 @@ weapon_component_template = {
 	size = large
 	entity = "invisible_turret_entity"
 	type = instant
-	icon = "GFX_ship_part_kinetic_artillery_2"
+	icon = "GFX_ship_part_pki_panzer_artillery"
 	icon_frame = 1
 
-	damage = { min = 200 max = 600 }
-	windup = { min = 3 max = 20 }
+	damage = { min = 50 max = 250 }
+	windup = { min = 5 max = 20 }
 	total_fire_time = 50
-	range = 120
+	range = 60
 	accuracy = 0.75
 
-	shield_damage = 1.5
-	hull_damage = 1.25
-	armor_damage = 0.50
-	tracking = 0.10
+	shield_damage = 1.25
+	armor_damage = 0.5
 
 	resources = {
 		category = ship_components
@@ -34,7 +32,7 @@ weapon_component_template = {
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic }
 
-	size_restriction = { katzen_panzer }
+	size_restriction = { pki_panzer }
 
 	firing_arc = 30
 	min_range = 10.0
@@ -54,35 +52,40 @@ weapon_component_template = {
 	key = "SUBMARINE_MISSILE"
 	size = torpedo
 	entity = "invisible_turret_entity"
-	icon = "GFX_ship_part_torpedo_3"
+
+	icon = "GFX_ship_part_pki_torpedo"
 	icon_frame = 1
 	type = missile
-	component_set = "SUBMARINE_MISSILE"
-	projectile_gfx = "flusion_missile"
-	tags = { weapon_type_explosive g_slot }
-	size_restriction = { katzen_submarine }
-	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
-	ai_tag_weight = 999
 
 	firing_arc = 70
 
-	min_range = 10
-	
-	damage = { min = 100 max = 210 }
-	windup = { min = 20 max = 40 }
-	total_fire_time = 80
-	range = 500
-	accuracy = 1.00
-	tracking = 0.2
-	missile_speed = 40 # Reduced from 70 because they were previously too fast to actually properly trigger their hit / redirect / miss check.
-	missile_evasion = 0.10
-	missile_health = 250.0
-	shield_penetration = 1.00
+	prerequisites = { "tech_torpedoes_1" }
+	component_set = "SUBMARINE_MISSILE"
+	projectile_gfx = "flusion_missile"
+	tags = { weapon_type_explosive g_slot }
+	size_restriction = { pki_submarine }
+	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
+
+	power = -25
+	damage = { min = 100 max = 150 }
+	hull_damage = 1
 	shield_damage = 1.00
+	shield_penetration = 1.00
 	armor_damage = 1.50
-	missile_retarget_range = 100
+	armor_penetration = 0
+	total_fire_time = 175
+	windup = { min = 10 max = 50 }
+	range = 200
+	accuracy = 1.00
+	tracking = 0.1
 	size_damage_factor = 1
-	
+	missile_speed = 8
+	missile_evasion = 0.10
+	missile_shield = 0
+	missile_armor = 3
+	missile_health = 3
+	missile_retarget_range = 100
+	min_range = 10
 
 	resources = {
 		category = ship_components
@@ -113,7 +116,7 @@ weapon_component_template = {
 	key = "KREUZER_KANNONE"
 	size = extra_large
 
-	icon = "GFX_ship_part_mass_accelerator_1"
+	icon = "GFX_ship_part_pki_kreuzerkannone"
 	icon_frame = 1
 
 	firing_arc = 25.0
@@ -125,8 +128,8 @@ weapon_component_template = {
 	shield_damage = 1.50
 	armor_damage = 0.75
 	windup = { min = 14 max = 54 }
-	cooldown = 75
-	range = 150
+	total_fire_time = 75
+	range = 125
 	accuracy = 0.75
 
 	prerequisites = { "tech_pki_cruiser" }
@@ -135,7 +138,7 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic weapon_role_artillery x_slot }
 	ai_tags = { weapon_role_artillery artillery }
 	ai_tag_weight = 0
-	upgrades_to = "MASS_ACCELERATOR_1"
+
 	resources = {
 		category = ship_components
 		cost = {
@@ -148,10 +151,10 @@ weapon_component_template = {
 		}
 	}
 
-	size_restriction = { katzen_cruiser }
+	size_restriction = { pki_cruiser }
 
 	ai_weight = {
-		weight = 1
+		weight = 999
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = volatile_motes }

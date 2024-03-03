@@ -1,34 +1,34 @@
 component_set = {
 	key = "PLAYABLE_PANZER_ARTILLERY_1"
 
-	icon = "GFX_ship_part_kinetic_artillery_2"
+	icon = "GFX_ship_part_pki_panzer_artillery"
 	icon_frame = 1
 }
 
 component_set = {
 	key = "KAISER_CANNON_1"
 
-	icon = "GFX_ship_part_kinetic_artillery_2"
+	icon = "GFX_ship_part_pki_kreuzerkannone"
 	icon_frame = 1
 }
 
 component_set = {
 	key = "KAISER_MISSILE_1"
 
-	icon = "GFX_ship_part_swarmer_missile_2"
+	icon = "GFX_ship_part_pki_swarmer_missile"
 	icon_frame = 1
 }
 
 component_set = {
 	key = "SUBMARINE_MISSILE"
 
-	icon = "GFX_ship_part_torpedo_3"
+	icon = "GFX_ship_part_pki_torpedo"
 	icon_frame = 1
 }
 
 component_set = {
 	key = "KREUZER_KANNONE"
 
-	icon = "GFX_ship_part_mass_accelerator_1"
+	icon = "GFX_ship_part_pki_kreuzerkannone"
 	icon_frame = 1
 }

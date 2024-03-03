@@ -1,7 +1,7 @@
 #Empty U-Boat
 ship_design = { 
 	name = "Koko"
-	ship_size = katzen_submarine
+	ship_size = pki_submarine
 	section = {
 		template = "KATZEN_SPACE_SUBMARINE"
 		slot = "mid"

@@ -38,7 +38,7 @@ utility_component_template = {
 
 	ship_limit = 1
 
-	size_restriction = { katzen_submarine }
+	size_restriction = { pki_submarine }
 	blocked_by = {
 		CORVETTE_CLOAKING_2
 		CORVETTE_CLOAKING_3
@@ -99,7 +99,7 @@ utility_component_template = {
 
 	ship_limit = 1
 	
-	size_restriction = { katzen_submarine }
+	size_restriction = { pki_submarine }
 	blocked_by = {
 		SUBMARINE_CLOAKING_1
 		SUBMARINE_CLOAKING_3
@@ -164,7 +164,7 @@ utility_component_template = {
 		SUBMARINE_CLOAKING_DARK_MATTER
 		SUBMARINE_CLOAKING_PSI
 	}
-	size_restriction = { katzen_submarine }
+	size_restriction = { pki_submarine }
 	prerequisites = { "tech_cloaking_3" }
 	component_set = "CLOAKING_3"
 	ai_tags = {
@@ -222,7 +222,7 @@ utility_component_template = {
 		SUBMARINE_CLOAKING_3
 		SUBMARINE_CLOAKING_PSI
 	}
-	size_restriction = { katzen_submarine }
+	size_restriction = { pki_submarine }
 	prerequisites = { "tech_cloaking_dark_matter" }
 	component_set = "CLOAKING_DARK_MATTER"
 	ai_tags = {
@@ -281,7 +281,7 @@ utility_component_template = {
 		SUBMARINE_CLOAKING_3
 		SUBMARINE_CLOAKING_DARK_MATTER
 	}
-	size_restriction = { katzen_submarine }
+	size_restriction = { pki_submarine }
 	prerequisites = { "tech_cloaking_psi" }
 	component_set = "CLOAKING_PSI"
 	ai_tags = {
