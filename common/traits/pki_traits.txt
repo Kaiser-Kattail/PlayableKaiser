@@ -463,7 +463,7 @@ pki_leader_trait_command_limit = {
 	leader_class = { commander }
 
 	selectable_weight = {
-		weight = 300
+		weight = @subclass_trait_weight
 		inline_script = paragon/pilot_weight_mult
 		inline_script = {
 			script = paragon/subclass_weight_mult
