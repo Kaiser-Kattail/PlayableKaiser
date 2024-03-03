@@ -137,13 +137,12 @@ tech_pki_ehve = {
 	is_dangerous = yes
 	category = { voidcraft }
 
-	prerequisites = {
-		"tech_wormhole_stabilization"
-	}
-
 	potential = {
 		has_origin = origin_katzen
 		has_overlord_dlc = yes
+		any_system_within_border = {
+			is_star_class_sc_black_hole = yes
+		}
 	}
 
 	modifier = {
