@@ -116,7 +116,7 @@ flusion_new_initializer = {
 		}
 
 		moon = {
-			name = "Xenon"
+			name = "NAME_Xenon"
 			class = "pc_toxic"
 			size = 6
 			orbit_distance = 8
@@ -279,7 +279,7 @@ flusion_new_initializer = {
 	}
 
 	planet = {
-		name = "Mlekane"
+		name = "NAME_Mlekane"
 		class = "pc_toxic"
 		orbit_distance = 25
 		orbit_angle = -80

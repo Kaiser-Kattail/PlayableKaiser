@@ -1586,6 +1586,7 @@ pki_spawn_warforge_fleet = {
 			}
 			set_location = fromfrom
 			set_fleet_flag = warforge_platform
+			set_fleet_flag = warforge_platform@fromfrom
 		}
 	}
 	if = {

@@ -216,3 +216,15 @@ meowrine_company = {
 		always = no
 	}
 }
+
+flunat_defense_army = {
+	health = 3.75
+	damage = 4.5
+	morale = 3.75
+	collateral_damage = 0.1
+	war_exhaustion = 0.0
+	icon = GFX_army_type_defensive
+	potential = {
+		always = no
+	}
+}
