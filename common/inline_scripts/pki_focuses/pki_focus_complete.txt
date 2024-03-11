@@ -1,0 +1,11 @@
+pki_$FOCUS$ = {
+    owner = {
+        set_country_flag = pki_focus_$FOCUS$_completed
+        create_message = {
+            type = PKI_NATIONAL_FOCUS_COMPLETE
+            localization = pki_focus_$FOCUS$_completed
+            days = 5
+        }
+        pki_focus_$FOCUS$_effects = yes
+    }
+}

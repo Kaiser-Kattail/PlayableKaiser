@@ -1,0 +1,14 @@
+namespace = pki_focus
+
+country_event = {
+    id = pki_focus.001
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        inline_script = {
+            script = pki_focuses/pki_all_focuses
+            SCRIPT_NAME = pki_focus_bypass
+        }
+    }
+}

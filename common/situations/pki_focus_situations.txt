@@ -12,6 +12,7 @@ situation_naitonal_focus = {
     on_start = {
         pki_focus_in_progress_effects = yes
     }
+
     on_abort = {
     }
 
@@ -26,13 +27,14 @@ situation_naitonal_focus = {
     }
 
     on_progress_complete = {
-        pki_complete_national_focus = yes
-        hidden_effect = {
-            create_message = {
-                type = PKI_NATIONAL_FOCUS_COMPLETE
-                localization = MESSAGE_PKI_NATIONAL_FOCUS_COMPLETE_DESC
-                days = 30
+        switch = {
+            trigger = has_situation_flag
+            inline_script = {
+                script = pki_focuses/pki_all_focuses
+                SCRIPT_NAME = pki_focus_complete
             }
+        }
+        hidden_effect = {
             owner = {
                 remove_country_flag = pki_selected_focus
                 every_situation = {

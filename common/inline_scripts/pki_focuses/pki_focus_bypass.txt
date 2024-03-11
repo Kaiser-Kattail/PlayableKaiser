@@ -1,0 +1,11 @@
+if = {
+    limit = {
+        pki_$FOCUS$_bypass_requirements = yes
+    }
+    set_country_flag = pki_focus_$FOCUS$_completed
+    create_message = {
+        type = PKI_NATIONAL_FOCUS_BYPASSED
+        localization = pki_focus_$FOCUS$_bypassed
+        days = 5
+    }
+}

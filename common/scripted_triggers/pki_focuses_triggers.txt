@@ -1,3 +1,5 @@
+## FOCUS REQUIREMENTS
+
 pki_kaiser_arrival_focus_requirements = {
     hidden_trigger = {
         always = yes
@@ -19,4 +21,11 @@ pki_harania_focus_requirements = {
         FOCUS = neighbors
     }
     text = pki_focus_harania_tt
+}
+
+## BYPASS REQUIREMENTS (NOT REQUIRED)
+pki_harania_bypass_requirements = {
+    NOT = {
+        exists = event_target:pki_HAR_country
+    }
 }

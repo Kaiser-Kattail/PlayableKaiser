@@ -44,12 +44,26 @@ message_type = {
 
 message_type = {
     key = "PKI_NATIONAL_FOCUS_COMPLETE"
-    icon = "GFX_message_other_alert"
-    icon_frame = 1
+    icon = "GFX_pki_situation_stage_focus"
+
+    name = "MESSAGE_PKI_NATIONAL_FOCUS_COMPLETE_TITLE"
+    default_toast = yes
 
     sound = "tradition_available"
     ping = "mixed_notification_green"
 
     category = government
-    auto_opens = others
+}
+
+message_type = {
+    key = "PKI_NATIONAL_FOCUS_BYPASSED"
+    icon = "GFX_pki_situation_stage_focus"
+
+    name = "MESSAGE_PKI_NATIONAL_FOCUS_BYPASSED_TITLE"
+    default_toast = yes
+
+    sound = "tradition_available"
+    ping = "mixed_notification_green"
+
+    category = government
 }

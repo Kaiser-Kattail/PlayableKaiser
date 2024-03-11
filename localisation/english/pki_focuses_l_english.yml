@@ -30,7 +30,10 @@
     pki_cancel: "Cancel"
 
     MESSAGE_PKI_NATIONAL_FOCUS_COMPLETE_TITLE: "National Focus Complete"
-    MESSAGE_PKI_NATIONAL_FOCUS_COMPLETE_DESC: "We can select a new §YNational Focus§!"
+    MESSAGE_PKI_NATIONAL_FOCUS_COMPLETE_TEXT: "We have completed"
+
+    MESSAGE_PKI_NATIONAL_FOCUS_BYPASSED_TITLE: "National Focus Bypassed"
+    MESSAGE_PKI_NATIONAL_FOCUS_BYPASSED_TEXT: "We have bypassed"
 
     pki_focus_desc_text: "[pki_focus_desc]"
     pki_focus_time_text: "§C[pki_focus_speed] years§!"
@@ -40,15 +43,16 @@
 
     pki_completed_focus: "Has completed focus "
 
-
     pki_focus_kaiser_arrival: "A New Leader"
     pki_focus_kaiser_arrival_label: "A New Leader"
     pki_focus_kaiser_arrival_desc: "$pki_focus_kaiser_arrival_effects_desc$\n--------------\n§g$pki_focus_kaiser_arrival_flavor$§!"
     pki_focus_kaiser_arrival_effect: "Gets event '§H$pki_focus.1.title$§!'."
     pki_focus_kaiser_arrival_effects_desc: "§H$pki_focus_kaiser_arrival$§!\n\nEffect\n\n$pki_focus_kaiser_arrival_effect$"
     pki_focus_kaiser_arrival_flavor: "For the past decade, the Cat Kingdom has been in a period of severe political turmoil, with rising political violence, extreme polarization, and low opinions on the government. Kattail, a veteran of the Wacegi War, has an ambitious plan to stabilize the nation, and it starts by removing Mewtail III."
+    pki_focus_kaiser_arrival_tt: "§H$pki_focus_kaiser_arrival$§!\n\nCompletion Time: §H$@pki_kaiser_arrival_speed$§! years\n\n§HEffect§!:\n\n$pki_focus_kaiser_arrival_effect$"
     pki_completed_kaiser_arrival: "$pki_completed_focus$§H$pki_focus_kaiser_arrival$§!"
-    pki_focus_kaiser_arrival_tt: "§H$pki_focus_kaiser_arrival$§!\n\nCompletion Time: §H5§! years\n\n§HEffect§!:\n\n$pki_focus_kaiser_arrival_effect$"
+    pki_focus_kaiser_arrival_completed: "$MESSAGE_PKI_NATIONAL_FOCUS_COMPLETE_TEXT$ §H$pki_focus_kaiser_arrival$§!"
+    pki_focus_kaiser_arrival_bypassed: "$MESSAGE_PKI_NATIONAL_FOCUS_BYPASSED_TEXT$ §H$pki_focus_kaiser_arrival$§!"
 
     pki_focus_neighbors: "Reassure the Neighbors"
     pki_focus_neighbors_label: "Reassure\nthe Neighbors"
@@ -56,8 +60,10 @@
     pki_focus_neighbors_effect: "Gets ['concept_pki_neighbors'] for §H5§! years"
     pki_focus_neighbors_effects_desc: "§H$pki_focus_neighbors$§!\nEffect\n\n$pki_focus_neighbors_effect$"
     pki_focus_neighbors_flavor: "Reassurance go brrrr"
+    pki_focus_neighbors_tt: "§H$pki_focus_neighbors$§!\n\nCompletion Time: §H$@pki_neighbors_speed$§! years\n\n§HEffect§!:\n\n$pki_focus_neighbors_effect$"
     pki_completed_neighbors: "$pki_completed_focus$§H$pki_focus_neighbors$§!"
-    pki_focus_neighbors_tt: "§H$pki_focus_neighbors$§!\n\nCompletion Time: §H5§! years\n\n§HEffect§!:\n\n$pki_focus_neighbors_effect$"
+    pki_focus_neighbors_completed: "$MESSAGE_PKI_NATIONAL_FOCUS_COMPLETE_TEXT$ §H$pki_focus_neighbors$§!"
+    pki_focus_neighbors_bypassed: "$MESSAGE_PKI_NATIONAL_FOCUS_BYPASSED_TEXT$ §H$pki_focus_neighbors$§!"
 
     pki_focus_harania: "The Haranian Question"
     pki_focus_harania_label: "The Haranian\nQuestion"
@@ -65,8 +71,10 @@
     pki_focus_harania_effect: "§Y[owner.GetName]§! declares war on §YHarania§!."
     pki_focus_harania_effects_desc: "§H$pki_focus_harania$§!\nEffect\n\n$pki_focus_harania_effect$"
     pki_focus_harania_flavor: "Harania taking the L"
+    pki_focus_harania_tt: "§H$pki_focus_harania$§!\n\nCompletion Time: §H$@pki_harania_speed$§! years\n\n§HEffect§!:\n\n$pki_focus_harania_effect$"
     pki_completed_harania: "$pki_completed_focus$§H$pki_focus_harania$§!"
-    pki_focus_harania_tt: "§H$pki_focus_harania$§!\n\nCompletion Time: §H2.5§! years\n\n§HEffect§!:\n\n$pki_focus_harania_effect$"
+    pki_focus_harania_completed: "$MESSAGE_PKI_NATIONAL_FOCUS_COMPLETE_TEXT$ §H$pki_focus_harania$§!"
+    pki_focus_harania_bypassed: "$MESSAGE_PKI_NATIONAL_FOCUS_BYPASSED_TEXT$ §H$pki_focus_harania$§!"
 
     pki_focus_katzen_weaponry: "Katzen Weaponry"
 
