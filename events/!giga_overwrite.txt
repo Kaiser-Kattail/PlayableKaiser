@@ -227,6 +227,7 @@ country_event = {
 					has_ethic = ethic_fanatic_materialist
 				}
 				NOR = {
+					any_country = { pki_is_katzenartig_imperium = yes }
 					has_global_flag = giga_fe_pouchkinn_disabled
 					has_global_flag = giga_gatzo_disabled
 					has_global_flag = katzenartig_always
@@ -284,7 +285,7 @@ country_event = {
 					}
 				}
 				NOR = {
-					has_global_flag = kaiser_is_player
+					any_country = { pki_is_katzenartig_imperium = yes }
 					has_global_flag = katzenartig_always
 					has_global_flag = katzenartig_deathwish
 					has_global_flag = katzenartig_stellarite

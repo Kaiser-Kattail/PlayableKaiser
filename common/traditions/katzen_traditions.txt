@@ -16,7 +16,7 @@ tr_katzen_finish = {
 
 tr_katzen_war_machine = {
 	modifier = {
-		ships_upkeep_mult = -0.15
+		ships_upkeep_mult = -0.10
 		starbase_shipyard_build_cost_mult = -0.10
 	}
 
@@ -215,7 +215,7 @@ tr_work_arrangements = {
 		factor = 5000
 	}
 	on_enabled = {
-		event_target:pki_flusion_planet = {
+		event_target:playerflusion = {
 			add_deposit = d_bureau_of_benefits
 		}
 	}
@@ -235,7 +235,7 @@ tr_imperial_management = {
 	}
 
 	on_enabled = {
-		event_target:pki_flusion_planet = {
+		event_target:playerflusion = {
 			add_deposit = d_flusion_bureaucracy
 		}
 	}
@@ -251,7 +251,7 @@ tr_flusions_bounty = {
 	}
 
 	on_enabled = {
-		event_target:pki_flusion_planet = {
+		event_target:playerflusion = {
 			add_deposit = d_flusion_bounty
 		}
 	}

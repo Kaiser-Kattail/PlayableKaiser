@@ -404,8 +404,8 @@
     decision_pki_further_restructuring:0 "Further Restructuring"
     decision_pki_further_restructuring_desc:0 "By building more and more off of our existing work, we will be able to achieve an further boost in efficiency.\n\n§HThere are diminishing returns with further restructuring.§!\n\n§RWARNING: This will effectively kill half of the planet's population and destroy half of the districts.§!"
 
-    pki_expand_flusion:0 "Increases §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow.§!"
-    pki_expand_flusion_more:0 "Increases §YJob Size§! by §G+100%§!\n\nIncreases available space for districts and pops to grow.§!"
+    pki_expand_flusion:0 "Increases §YJob Size§! by §G+50%§!\n\nIncreases available space for districts and pops to grow.§!"
+    pki_expand_flusion_more:0 "Increases §YJob Size§! by §G+50%§!\n\nIncreases available space for districts and pops to grow.§!"
 
     decision_pki_scaling_colony: "Create Semiautonomous Colony"
     decision_pki_scaling_colony_desc: "By handing over some control to the local government, the jobs can be managed with reduced effort."
