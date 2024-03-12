@@ -446,6 +446,101 @@ guiTypes = {
 			}
 		}
 
+containerWindowType = {
+	name = focus_reassure_the_neighbors
+	position = { x = @tile_x_500 y = @tile_y_100 }
+
+	containerWindowType = {
+		name = focus
+		orientation = upper_left
+		origo = upper_left
+
+		effectButtonType = {
+			name = focus_background
+			size = { x = 170 y = 130 }
+			position = { x = +0 y = +12 }
+			orientation = center
+			quadTextureSprite = "GFX_glow_tile_cyan"
+			effect = pki_focus_reassure_the_neighbors_effect
+		}
+
+		effectButtonType = {
+			name = focus_label
+			position = { x = +5 y = +84 }
+			size = { x = 160 y = 50 }
+			alwaysTransparent = yes
+			quadTextureSprite = "GFX_glow_tile_cyan"
+			effect = pki_focus_reassure_the_neighbors_effect
+		}
+	}
+
+	containerWindowType = {
+		name = focus_in_progress
+		orientation = upper_left
+		origo = upper_left
+
+		effectButtonType = {
+			name = focus_background
+			size = { x = 170 y = 130 }
+			position = { x = +0 y = +12 }
+			orientation = center
+			quadTextureSprite = "GFX_glow_tile_striped"
+			effect = pki_focus_reassure_the_neighbors_in_progress_effect
+		}
+		effectButtonType = {
+			name = focus_label
+			position = { x = +5 y = +84 }
+			size = { x = 160 y = 50 }
+			alwaysTransparent = yes
+			quadTextureSprite = "GFX_glow_tile_striped"
+			effect = pki_focus_reassure_the_neighbors_in_progress_effect
+		}
+	}
+
+	containerWindowType = {
+		name = focus_completed
+		orientation = upper_left
+		origo = upper_left
+
+		effectButtonType = {
+			name = focus_background
+			size = { x = 170 y = 130 }
+			position = { x = +0 y = +12 }
+			orientation = center
+			quadTextureSprite = "GFX_glow_tile_orange"
+			effect = pki_focus_reassure_the_neighbors_completed_effect
+		}
+		effectButtonType = {
+			name = focus_label
+			position = { x = +5 y = +84 }
+			size = { x = 160 y = 50 }
+			alwaysTransparent = yes
+			quadTextureSprite = "GFX_glow_tile_orange"
+			effect = pki_focus_reassure_the_neighbors_completed_effect
+		}
+	}
+
+	effectButtonType = {
+		name = focus_icon
+		position = { x = +0 y = -6 }
+		orientation = center
+		alwaysTransparent = yes
+		quadTextureSprite = "GFX_pki_focus_reassure_the_neighbors"
+		effect = pki_focus_tree_no_effect
+	}
+
+	effectButtonType = {
+		name = focus_label
+		position = { x = +5 y = +84 }
+		size = { x = 160 y = 50 }
+		font = cg_16b
+		multiline = yes
+		alwaysTransparent = yes
+		text = "pki_focus_reassure_the_neighbors_label"
+		quadTextureSprite = "GFX_invisible"
+		effect = pki_focus_tree_no_effect
+	}
+}
 		containerWindowType = {
 			name = map
 
