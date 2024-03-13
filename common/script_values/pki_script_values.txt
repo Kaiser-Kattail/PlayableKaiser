@@ -45,9 +45,13 @@ pki_focus_length = {
 }
 
 pki_world_domination = {
-    add = pki_building_slots
+    add = modifier:pki_industry_building_slots
     divide = 10
-    floor = yes
+}
+
+pki_world_domination_percent = {
+    add = pki_world_domination
+    divide = 100
 }
 
 pki_total_industry = {

@@ -4,8 +4,62 @@ pki_clear_gui_flags = {
 }
 
 pki_focus_kaiser_arrival_effects = {
-    add_modifier = {
-        modifier = pki_katzen_weaponry
+    set_empire_name = "Katzenartig Imperium" #Situation effects wont display properly if it is a localised entry
+    remove_modifier = pki_destabilized_government
+    hidden_effect = {
+        change_country_flag = {
+            icon = {
+                category="domination"
+                file="domination_8.dds"
+            }
+            background = {
+                category="backgrounds"
+                file="v.dds"
+            }
+            colors = {
+                "blue"
+                "indigo"
+                "null"
+                "null"
+            }
+        }
+        create_leader = {
+            name = NAME_Kattail
+            species = event_target:pki_kaiser_portrait_hd
+            class = commander
+            skill = 4
+            set_age = 189
+            randomize_traits = no
+            traits = {
+                trait = leader_trait_ruler_kaiser_cattail
+                trait = trait_ruler_charismatic_2
+                trait = trait_ruler_military_pioneer
+                trait = leader_trait_intimidator
+                trait = subclass_commander_councilor
+            }
+            gender = male
+            immortal = yes
+            background_job = none
+            background_ethic = ethic_fanatic_militarist
+            background_planet = event_target:pki_flusion_planet
+
+            effect = {
+                set_leader_flag = kaiser_kattail
+                set_leader_flag = legendary_leader
+                set_leader_flag = immune_to_negative_traits
+                set_leader_flag = leader_death_events_blocked
+                set_leader_flag = flusion_modified
+                save_global_event_target_as = kaiser_kattail
+            }
+            custom_description = PKI_KAISER_DESC
+            custom_catch_phrase = PKI_KAISER_CATCH_PHRASE
+        }
+
+        ruler = {
+            save_global_event_target_as = pki_old_leader
+        }
+
+        assign_leader = last_created_leader
     }
 }
 

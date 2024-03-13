@@ -16,7 +16,7 @@ country_event = {
             limit = {
                 check_variable = {
                     which = pki_industry_level
-                    value >= pki_building_slots
+                    value >= modifier:pki_industry_building_slots
                 }
             }
             set_country_flag = pki_used_all_building_slots
@@ -29,7 +29,7 @@ country_event = {
             limit = {
                 check_variable = {
                     which = pki_industry_level
-                    value <= pki_building_slots
+                    value <= modifier:pki_industry_building_slots
                 }
             }
             remove_country_flag = pki_used_all_building_slots

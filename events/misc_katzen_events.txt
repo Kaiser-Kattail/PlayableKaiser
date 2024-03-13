@@ -388,8 +388,8 @@ country_event = {
 
 	immediate = {
 		ruler = {
-			change_species = event_target:kaiser_portrait_hd
-			change_leader_portrait = event_target:kaiser_portrait_hd
+			change_species = event_target:pki_kaiser_portrait_hd
+			change_leader_portrait = event_target:pki_kaiser_portrait_hd
 		}
 	}
 }
@@ -405,8 +405,8 @@ country_event = {
 
 	immediate = {
 		ruler = {
-			change_species = event_target:kaiser_portrait_pvz
-			change_leader_portrait = event_target:kaiser_portrait_pvz
+			change_species = event_target:pki_kaiser_portrait_pvz
+			change_leader_portrait = event_target:pki_kaiser_portrait_pvz
 		}
 	}
 }

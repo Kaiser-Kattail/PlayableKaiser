@@ -1,50 +1,49 @@
 pki_create_flusion_nations = {
 	event_target:pki_flusion_planet = {
-
-		create_species = {
-			name = "NAME_CYA_SPECIES"
-			plural = "NAME_CYA_SPECIES_PLURAL"
-			class = MAM
-			portrait = mam14
-			homeworld = this
-			traits = {
+		inline_script = {
+			script = pki/pki_country_species_creation
+			COUNTRY = ATA
+			CLASS = MAM
+			PORTRAIT = rep5
+			TRAITS = "
 				trait = trait_pc_continental_preference
-				trait = trait_strong
-			}
-			effect = {
-				save_global_event_target_as = pki_CYA_species
-			}
+				trait = trait_traditional
+				trait = trait_intelligent
+			"
 		}
 
-		create_species = {
-			name = "NAME_DTC_SPECIES"
-			plural = "NAME_DTC_SPECIES_PLURAL"
-			class = HUM
-			portrait = humanoid_03
-			homeworld = this
-			traits = {
+		inline_script = {
+			script = pki/pki_country_species_creation
+			COUNTRY = CYA
+			CLASS = MAM
+			PORTRAIT = mam14
+			TRAITS = "
 				trait = trait_pc_continental_preference
 				trait = trait_strong
-			}
-			effect = {
-				save_global_event_target_as = DTC_species
-			}
+			"
 		}
 
-		create_species = {
-			name = "NAME_HAR_SPECIES"
-			plural = "NAME_HAR_SPECIES_PLURAL"
-			class = HUM
-			portrait = humanoid_05
-			homeworld = this
-			traits = {
+		inline_script = {
+			script = pki/pki_country_species_creation
+			COUNTRY = DTC
+			CLASS = HUM
+			PORTRAIT = humanoid_03
+			TRAITS = "
+				trait = trait_pc_continental_preference
+				trait = trait_strong
+			"
+		}
+
+		inline_script = {
+			script = pki/pki_country_species_creation
+			COUNTRY = HAR
+			CLASS = HUM
+			PORTRAIT = humanoid_05
+			TRAITS = "
 				trait = trait_pc_continental_preference
 				trait = trait_intelligent
 				trait = trait_decadent
-			}
-			effect = {
-				save_global_event_target_as = pki_HAR_species
-			}
+			"
 		}
 
 		create_species = {
@@ -224,6 +223,30 @@ pki_create_flusion_nations = {
 	inline_script = {
 		script = pki/pki_inline_script
 		SCRIPT_NAME = country_creation
+	}
+
+	event_target:pki_ATA_country = {
+		change_government = {
+			authority = auth_democratic
+		}
+		country_add_ethic = ethic_xenophile
+		country_add_ethic = ethic_spiritualist
+		country_add_ethic = ethic_pacifist
+		change_country_flag = {
+			icon = {
+				category = "spherical"
+				file = "flag_spherical_9.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "diagonal.dds"
+			}
+			colors = {
+				intense_blue
+				mist_blue
+			}
+		}
+		room_name_override = ""
 	}
 }
 

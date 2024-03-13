@@ -328,6 +328,7 @@ guiTypes = {
 
 			containerWindowType = {
 				name = focus_tree
+				position = { x = 0 y = 20}
 
 				containerWindowType = {
 					name = focus_lines
@@ -433,16 +434,15 @@ guiTypes = {
 					}
 				}
 
-				effectButtonType = {
-					name = guh
-					position = { x = +0 y = +0 }
-					orientation = upper_left
-					alwaysTransparent = no
-					quadTextureSprite = "GFX_pki_guh"
-
-					scale = 1
-					effect = pki_focus_tree_no_effect
-				}
+				#effectButtonType = {
+				#	name = guh
+				#	position = { x = +0 y = +0 }
+				#	orientation = upper_left
+				#	alwaysTransparent = no
+				#	quadTextureSprite = "GFX_pki_guh"
+				#	scale = 1
+				#	effect = pki_focus_tree_no_effect
+				#}
 			}
 		}
 

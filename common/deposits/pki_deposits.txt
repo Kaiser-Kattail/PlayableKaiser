@@ -26,6 +26,8 @@ d_katown = {
 	
 	planet_modifier = { 
 		planet_max_districts_add = 1
+		planet_housing_add = 5
+		pki_industry_building_slots = 126
 	}
 	
 	drop_weight = {
@@ -68,8 +70,21 @@ d_katown_palace_primitive ={
 	resources = {
 		category = planet_deposits
 		produces = {
-			unity = 50
+			unity = 35
 		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_pki_ATA = {
+	is_for_colonizable = yes
+	icon = d_teeming_reef
+	planet_modifier = {
+		district_farming_max = 2
+		pki_industry_building_slots = 24
 	}
 
 	drop_weight = {

@@ -312,7 +312,7 @@ country_event = {
 
 			effect = {
 				set_global_flag = kaiser_portrait_defined
-				save_global_event_target_as = kaiser_portrait_hd
+				save_global_event_target_as = pki_kaiser_portrait_hd
 			}
 		}
 
@@ -331,7 +331,7 @@ country_event = {
 			}
 			effect = {
 				set_global_flag = kaiser_portrait_defined
-				save_global_event_target_as = kaiser_portrait_pvz
+				save_global_event_target_as = pki_kaiser_portrait_pvz
 			}
 		}
 
@@ -393,22 +393,17 @@ country_event = {
 			set_planet_size = 16
 			clear_blockers = yes
 			clear_deposits = yes
+			remove_all_districts = yes
+			remove_all_buildings = yes
 
-			remove_district = district_city
-			remove_district = district_city
+			add_district = district_city
+			add_district = district_farming
+			add_district = district_industrial
+			add_district = district_generator
+			add_district = district_mining
 
-			remove_district = district_industrial
-
-			remove_district = district_generator
-			remove_district = district_generator
-
-			remove_district = district_mining
-
-			remove_district = district_farming
-
-			remove_building = building_commercial_zone
-			remove_building = building_bureaucratic_1
-
+			add_building = building_capital
+			add_building = building_capital
 			add_building = building_stronghold
 
 			add_deposit = d_katown

@@ -14,6 +14,7 @@
 #@pki_COUNTRY_used_industry_ratio =
 #@pki_COUNTRY_army_ratio =
 #@pki_COUNTRY_planes_ratio =
+#@pki_COUNTRY_fighters_cas_ratio =
 
 @pki_KAT_building_slots = 126
 @pki_KAT_industry_level = 35
@@ -21,10 +22,11 @@
 @pki_ATA_pops = 6
 @pki_ATA_building_slots = 24
 @pki_ATA_industry_level = 10
+@pki_ATA_used_industry_ratio = 0.5
 @pki_ATA_army_count = 15
 @pki_ATA_army_strength = 0.7
+@pki_ATA_army_ratio = 0.5
 @pki_ATA_planes_count = 22
 @pki_ATA_planes_strength = 1.2
-@pki_ATA_used_industry_ratio = 0.5
-@pki_ATA_army_ratio = 0.5
 @pki_ATA_planes_ratio = 0.5
+@pki_ATA_fighters_cas_ratio = 0.5

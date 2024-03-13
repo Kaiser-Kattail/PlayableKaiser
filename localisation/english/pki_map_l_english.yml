@@ -17,6 +17,8 @@
     invade_nearby_nations:0 "We cannot invade a nation which we do not directly neighbor."
     multiple_conquests_active:0 "We cannot launch a strike when engaging in more than one conquest!"
 
+    pki_flusion_modifier_scaling_desc: "Effects scale with §YWorld Domination§!"
+
     PKI_INFO: "Country Info"
 
     PKI_BLANK: ""
@@ -36,7 +38,7 @@
     pki_text_color_orange: "§H"
     pki_text_color_pink: "§P"
 
-    pki_building_slots_total: "Building Slots: §Y[event_target:pki_player.pki_building_slots]§!"
+    pki_building_slots_total: "Building Slots: §Y[pki_industry_building_slots]§!"
 
     job_pki_war_worker: "Factory Laborer"
     job_pki_war_worker_plural:0 "Factory Laborers"
@@ -57,15 +59,24 @@
 
     PKI_CANT_CONTACT_SELF: "We cannot contact our self."
 
-    PKI_KAT_title: "[event_target:pki_player.GetName]"
-    PKI_PLAYER_INFO_ECONOMY: "§YEconomy§!:\n$t$Factories: §Y[event_target:pki_player.pki_industry_level]§!\n$t$Building Slots: §Y[event_target:pki_player.pki_building_slots]§!"
-    PKI_PLAYER_INFO_MILITARY: "§YMilitary§!:\n$t$Ground Divisions: §Y[pki_num_player_armies]§!\n$t$Air Wings: §Y[pki_num_player_air_wings]§!"
-    PKI_KAT_info: "§gThe dominant [event_target:pki_player.GetName], originating in the Central Katzen Plain, asserts control over [event_target:pki_player.capital_scope.GetName]. Fueled by militaristic might and advanced cybernetics, it imposes a strict hierarchy, setting the stage for conflicts and the emergence of charismatic leaders.§!\n\nWorld Domination: §Y[pki_world_domination]%§!\n\n$PKI_PLAYER_INFO_ECONOMY$\n\n$PKI_PLAYER_INFO_MILITARY$"
-    pki_map_KAT_tt: "§Y$PKI_KAT_title$§!\n\n$PKI_PLAYER_INFO_ECONOMY$\n\n$PKI_PLAYER_INFO_MILITARY$"
+    pki_map_selected_country_info: ""
 
-    PKI_ATA_title: "Atallrian Sanctuary"
-    PKI_ATA_INFO_ECONOMY: "§YEconomy§!:\n$t$Factories: §Y[event_target:pki_ATA_country.pki_industry_level]§!\n$t$Building Slots: §Y[event_target:pki_ATA_country.pki_building_slots]§!"
-    PKI_ATA_INFO_MILITARY: "§YMilitary§!:\n$t$Ground Divisions: §Y[event_target:pki_ATA_country.pki_army_count]§!\n$t$Air Wings: §Y[event_target:pki_ATA_country.pki_planes_count]§!"
-    PKI_ATA_info: "$PKI_ATA_INFO_ECONOMY$\n\n$PKI_ATA_INFO_MILITARY$"
-    pki_map_ATA_tt: "§Y$PKI_ATA_title$§!\n\n$PKI_ATA_INFO_ECONOMY$\n\n$PKI_ATA_INFO_MILITARY$"
+    PKI_COUNTRY_TITLE: "[event_target:pki_selected_country.GetName]"
+    PKI_COUNTRY_INFO_ECONOMY: "§YEconomy§!:\n$t$Factories: §Y[event_target:pki_selected_country.pki_industry_level]§!\n$t$Building Slots: §Y[event_target:pki_selected_country.pki_building_slots]§!"
+    PKI_COUNTRY_INFO_MILITARY: "§YMilitary§!:\n$t$Ground Divisions: §Y[event_target:pki_selected_country.pki_army_count]§!\n$t$Air Wings: §Y[event_target:pki_selected_country.pki_planes_count]§!"
+    PKI_COUNTRY_INFO: "$PKI_COUNTRY_INFO_ECONOMY$\n\n$PKI_COUNTRY_INFO_MILITARY$[pki_map_special_info]"
+
+    PKI_KAT_title: "[event_target:pki_player.GetName]"
+    PKI_PLAYER_INFO_ECONOMY: "§YEconomy§!:\n$t$Factories: §Y[event_target:pki_player.pki_industry_level]§!\n$t$Building Slots: §Y[pki_industry_building_slots]§!"
+    PKI_PLAYER_INFO_MILITARY: "§YMilitary§!:\n$t$Ground Divisions: §Y[pki_num_player_armies]§!\n$t$Air Wings: §Y[pki_num_player_air_wings]§!"
+    PKI_KAT_info: "$pki_KAT_flavor$\n\nWorld Domination: §Y[pki_world_domination]%§!\n\n$PKI_PLAYER_INFO_ECONOMY$\n\n$PKI_PLAYER_INFO_MILITARY$"
+    pki_KAT_flavor: "§gThe dominant [event_target:pki_player.GetName], originating in the Central Katzen Plain, asserts control over [event_target:pki_player.capital_scope.GetName]. Fueled by militaristic might, it imposes a strict hierarchy, setting the stage for conflicts and the emergence of charismatic leaders.§!"
+    pki_map_KAT_tt: "§H$PKI_KAT_title$§!\n$pki_KAT_flavor$"
+
+    pki_ATA_title: "Atallrian Sanctuary"
+    pki_ATA_adj: "Atallrian"
+    pki_ATA_leader: ""
+    NAME_ATA_SPECIES: "Atallrian"
+    NAME_ATA_SPECIES_PLURAL: "Atallrians"
+    pki_map_ATA_tt: "§H$pki_ATA_title$§!\n"
 

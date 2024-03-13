@@ -973,7 +973,6 @@
     PKI_NEEDS_WARFORGE: "Requires at least one §YKatzen War Forge§!"
     needs_schulz: "£trigger_no£ We can only recruit meowrines on a world governed by §Y$NAME_schulz$§!!"
 
-    pki_warforge_shipyard_add: "£alloys£ Alloys from £job£ Jobs §G+5%§!"
     pki_warforge_building: "Starbase Modifier\n    Per §YKatzen War Forge§! in [owner.GetName]:\n        Shipyard Capactiy: §G+0.5§!"
 
     katzen_combat_computers_DESC: "Katzen combat computers are computing devices engineered by the Katzenartig Imperium. They simplify movement, weaponry, and shield activation such that the crew can easily defeat enemy fleets."

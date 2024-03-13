@@ -1,12 +1,11 @@
 create_country = {
-    name = "pki_$COUNTRY$_title"
-    adjective = "pki_$COUNTRY$_adj"
+    name = pki_$COUNTRY$_title
+    adjective = pki_$COUNTRY$_adj
     ethos = {
         ethic = ethic_fanatic_xenophile
         ethic = ethic_materialist
     }
     authority = auth_oligarchic
-    civics = random
     origin = origin_default
     flag = random
     species = event_target:pki_$COUNTRY$_species
@@ -18,7 +17,7 @@ create_country = {
         create_leader = {
             class = official
             species = event_target:pki_$COUNTRY$_species
-            name = "pki_$COUNTRY$_leader"
+            name = pki_$COUNTRY$_leader
             skill = random
             set_age = 30
             gender = indeterminable
@@ -83,6 +82,11 @@ create_country = {
         set_variable = {
             which = pki_planes_ratio
             value = @pki_$COUNTRY$_planes_ratio
+        }
+
+        set_variable = {
+            which = pki_fighters_cas_ratio
+            value = @pki_$COUNTRY$_fighters_cas_ratio
         }
 
         set_variable = {

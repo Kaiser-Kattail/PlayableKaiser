@@ -1,0 +1,14 @@
+create_species = {
+    name = NAME_$COUNTRY$_SPECIES
+    plural = NAME_$COUNTRY$_SPECIES_PLURAL
+    adjective = pki_$COUNTRY$_adj
+    class = $CLASS$
+    portrait = $PORTRAIT$
+    homeworld = this
+    traits = {
+        $TRAITS$
+    }
+    effect = {
+        save_global_event_target_as = pki_$COUNTRY$_species
+    }
+}

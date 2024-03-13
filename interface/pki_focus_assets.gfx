@@ -6,7 +6,7 @@ spriteTypes = {
 
     spriteType = {
         name = "GFX_pki_focus_kaiser_arrival"
-        textureFile = "gfx/interface/focus_tree/focuses/pki_focus_kaiser_arrival.dds"
+        textureFile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_kaiser_arrival.dds"
     }
 
     spriteType = {
@@ -16,55 +16,49 @@ spriteTypes = {
 
     spriteType = {
         name = "GFX_pki_focus_line_h_d"
-        textureFile = "gfx/interface/focus_tree/lines/pki_focus_line_horizontal_dotted.dds"
+        textureFile = "gfx/interface/pki_ui/focus_tree/lines/pki_focus_line_horizontal_dotted.dds"
         alwaysTransparent = yes
     }
 
     spriteType = {
         name = "GFX_pki_focus_line_h_s"
-        textureFile = "gfx/interface/focus_tree/lines/pki_focus_line_horizontal_solid.dds"
+        textureFile = "gfx/interface/pki_ui/focus_tree/lines/pki_focus_line_horizontal_solid.dds"
         alwaysTransparent = yes
     }
 
     spriteType = {
         name = "GFX_pki_focus_line_v_d"
-        textureFile = "gfx/interface/focus_tree/lines/pki_focus_line_vertical_dotted.dds"
+        textureFile = "gfx/interface/pki_ui/focus_tree/lines/pki_focus_line_vertical_dotted.dds"
         alwaysTransparent = yes
     }
 
     spriteType = {
         name = "GFX_pki_focus_line_v_s"
-        textureFile = "gfx/interface/focus_tree/lines/pki_focus_line_vertical_solid.dds"
+        textureFile = "gfx/interface/pki_ui/focus_tree/lines/pki_focus_line_vertical_solid.dds"
         alwaysTransparent = yes
     }
 
     spriteType = {
         name = "GFX_pki_focus_line_d_d"
-        textureFile = "gfx/interface/focus_tree/lines/pki_focus_link_down_dotted.dds"
+        textureFile = "gfx/interface/pki_ui/focus_tree/lines/pki_focus_link_down_dotted.dds"
         alwaysTransparent = yes
     }
 
     spriteType = {
         name = "GFX_pki_focus_line_d_s"
-        textureFile = "gfx/interface/focus_tree/lines/pki_focus_link_down_solid.dds"
+        textureFile = "gfx/interface/pki_ui/focus_tree/lines/pki_focus_link_down_solid.dds"
         alwaysTransparent = yes
     }
 
     spriteType = {
         name = "GFX_pki_focus_line_u_d"
-        textureFile = "gfx/interface/focus_tree/lines/pki_focus_link_up_dotted.dds"
+        textureFile = "gfx/interface/pki_ui/focus_tree/lines/pki_focus_link_up_dotted.dds"
         alwaysTransparent = yes
     }
 
     spriteType = {
         name = "GFX_pki_focus_line_u_s"
-        textureFile = "gfx/interface/focus_tree/lines/pki_focus_link_up_solid.dds"
+        textureFile = "gfx/interface/pki_ui/focus_tree/lines/pki_focus_link_up_solid.dds"
         alwaysTransparent = yes
     }
-
-    spriteType = {
-        name = "GFX_pki_map"
-        textureFile = "gfx/interface/conquest_ui/map.dds"
-    }
-
 }

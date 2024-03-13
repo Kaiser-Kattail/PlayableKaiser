@@ -70,14 +70,11 @@ pki_clear_map_selector_mults = {
 pki_map_annex = {
     set_country_flag = pki_map_annexed_$COUNTRY$
     change_variable = {
-        which = pki_building_slots
-        value = event_target:pki_$COUNTRY$_country.pki_building_slots
-    }
-    change_variable = {
         which = pki_industry_level
         value = event_target:pki_$COUNTRY$_country.pki_industry_level
     }
     event_target:pki_flusion_planet = {
+        add_deposit = d_pki_$COUNTRY$
         while = {
             count = event_target:pki_$COUNTRY$_country.pki_pops
             create_pop = {

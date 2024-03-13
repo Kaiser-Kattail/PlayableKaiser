@@ -1,19 +1,17 @@
 defined_text = {
     name = pki_map_selected_country
-    inline_script = {
-        script = pki/pki_inline_script_loc
-        SCRIPT_NAME = map_info
-        TEXT = title
+    text = {
+        trigger = { event_target:pki_player = { has_country_flag = pki_map_KAT_selected } }
+        localization_key = PKI_KAT_title
     }
-    default = "PKI_PLACEHOLDER"
+    default = "PKI_COUNTRY_TITLE"
 }
 
 defined_text = {
     name = pki_map_selected_country_info
-    inline_script = {
-        script = pki/pki_inline_script_loc
-        SCRIPT_NAME = map_info
-        TEXT = info
+    text = {
+        trigger = { event_target:pki_player = { has_country_flag = pki_map_KAT_selected } }
+        localization_key = PKI_KAT_info
     }
     text = {
         trigger = {
@@ -21,7 +19,7 @@ defined_text = {
         }
         localization_key = "PKI_BLANK"
     }
-    default = "PKI_PLACEHOLDER"
+    default = "PKI_COUNTRY_INFO"
 }
 
 defined_text = {
@@ -50,6 +48,11 @@ defined_text = {
 defined_text = {
     name = pki_total_industry
     value = event_target:pki_player.value:pki_total_industry
+}
+
+defined_text = {
+    name = pki_industry_building_slots
+    value = event_target:pki_player.modifier:pki_industry_building_slots
 }
 
 defined_text = {
