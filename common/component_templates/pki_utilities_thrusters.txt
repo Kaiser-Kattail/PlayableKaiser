@@ -97,7 +97,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_thrusters_1" }
-	component_set = "katzen_thruster_components"
+	component_set = pki_katzen_thruster_components
 	size_restriction = { pki_panzer }
 	upgrades_to = "KATDESTROYER_SHIP_THRUSTER_2"
 
@@ -123,7 +123,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_thrusters_1" }
-	component_set = "katzen_thruster_components"
+	component_set = pki_katzen_thruster_components
 	size_restriction = { pki_bomber pki_submarine }
 	upgrades_to = "KATCRUISER_SHIP_THRUSTER_2"
 
@@ -150,7 +150,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_thrusters_1" }
-	component_set = "katzen_thruster_components"
+	component_set = pki_katzen_thruster_components
 	size_restriction = { pki_cruiser }
 	upgrades_to = "KATTITAN_SHIP_THRUSTER_2"
 
@@ -180,7 +180,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_thrusters_2" }
-	component_set = "katzen_thruster_components"
+	component_set = pki_katzen_thruster_components
 	size_restriction = { pki_panzer }
 	upgrades_to = "KATDESTROYER_SHIP_THRUSTER_3"
 
@@ -208,7 +208,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_thrusters_2" }
-	component_set = "katzen_thruster_components"
+	component_set = pki_katzen_thruster_components
 	size_restriction = { pki_bomber pki_submarine }
 	upgrades_to = "KATCRUISER_SHIP_THRUSTER_3"
 
@@ -236,7 +236,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_thrusters_2" }
-	component_set = "katzen_thruster_components"
+	component_set = pki_katzen_thruster_components
 	size_restriction = { pki_cruiser }
 	upgrades_to = "KATTITAN_SHIP_THRUSTER_3"
 
@@ -263,7 +263,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_thrusters_3" }
-	component_set = "katzen_thruster_components"
+	component_set = pki_katzen_thruster_components
 	size_restriction = { pki_panzer }
 	upgrades_to = "KATDESTROYER_SHIP_THRUSTER_4"
 
@@ -290,7 +290,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_thrusters_3" }
-	component_set = "katzen_thruster_components"
+	component_set = pki_katzen_thruster_components
 	size_restriction = { pki_bomber pki_submarine }
 	upgrades_to = "KATCRUISER_SHIP_THRUSTER_4"
 
@@ -317,7 +317,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_thrusters_3" }
-	component_set = "katzen_thruster_components"
+	component_set = pki_katzen_thruster_components
 	size_restriction = { pki_cruiser }
 	upgrades_to = "KATTITAN_SHIP_THRUSTER_4"
 
@@ -344,7 +344,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_thrusters_4" }
-	component_set = "katzen_thruster_components"
+	component_set = pki_katzen_thruster_components
 	size_restriction = { pki_panzer }
 	upgrades_to = "KATDESTROYER_SHIP_THRUSTER_5"
 
@@ -371,7 +371,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_thrusters_4" }
-	component_set = "katzen_thruster_components"
+	component_set = pki_katzen_thruster_components
 	size_restriction = { pki_bomber pki_submarine }
 	upgrades_to = "KATCRUISER_SHIP_THRUSTER_5"
 
@@ -398,7 +398,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_thrusters_4" }
-	component_set = "katzen_thruster_components"
+	component_set = pki_katzen_thruster_components
 	size_restriction = { pki_cruiser }
 	upgrades_to = "KATTITAN_SHIP_THRUSTER_5"
 
@@ -426,7 +426,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_dark_matter_propulsion" }
-	component_set = "katzen_thruster_components"
+	component_set = pki_katzen_thruster_components
 	size_restriction = { pki_panzer }
 
 	ai_weight = {
@@ -453,7 +453,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_dark_matter_propulsion" }
-	component_set = "katzen_thruster_components"
+	component_set = pki_katzen_thruster_components
 	size_restriction = { pki_bomber pki_submarine }
 
 	ai_weight = {
@@ -480,7 +480,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_dark_matter_propulsion" }
-	component_set = "katzen_thruster_components"
+	component_set = pki_katzen_thruster_components
 	size_restriction = { pki_cruiser }
 
 	ai_weight = {

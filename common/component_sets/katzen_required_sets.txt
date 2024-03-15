@@ -1,5 +1,5 @@
 component_set = {
-	key = "katzen_thruster_components"
+	key = pki_katzen_thruster_components
 
 	required_component_set = yes
 	icon = "GFX_ship_part_thruster_1"
@@ -7,15 +7,7 @@ component_set = {
 }
 
 component_set = {
-	key = "katzen_sensor_components"
-
-	required_component_set = yes
-	icon = "GFX_ship_part_sensor"
-	icon_frame = 1
-}
-
-component_set = {
-	key = "katzen_power_core"
+	key = pki_katzen_power_core
 
 	required_component_set = yes
 	icon = "GFX_ship_part_reactor_1"
@@ -23,94 +15,9 @@ component_set = {
 }
 
 component_set = {
-	key = "katzen_station_power_core"
-
-	required_component_set = yes
-	icon = "GFX_ship_part_reactor_1"
-	icon_frame = 1
-}
-
-#This set is still used for a lot of event ships etc
-component_set = {
-	key = "katzen_combat_computers"
+	key = pki_katzen_combat_computers
 
 	required_component_set = yes
 	icon = "GFX_ship_part_computer"
-	icon_frame = 1
-}
-component_set = {
-	key = "katzen_corvette_combat_computers"
-
-	required_component_set = yes
-	icon = "GFX_ship_part_computer"
-	icon_frame = 1
-}
-component_set = {
-	key = "katzen_destroyer_combat_computers"
-
-	required_component_set = yes
-	icon = "GFX_ship_part_computer"
-	icon_frame = 1
-}
-component_set = {
-	key = "katzen_cruiser_combat_computers"
-
-	required_component_set = yes
-	icon = "GFX_ship_part_computer"
-	icon_frame = 1
-}
-component_set = {
-	key = "katzen_battleship_combat_computers"
-
-	required_component_set = yes
-	icon = "GFX_ship_part_computer"
-	icon_frame = 1
-}
-
-component_set = {
-	key = "katzen_aura_components"
-
-	required_component_set = yes
-	icon = "GFX_ship_part_sensor"
-	icon_frame = 1
-}
-
-component_set = {
-	key = "katzen_ftl_inhibitor"
-
-	required_component_set = yes
-	icon = "GFX_ship_part_sensor"
-	icon_frame = 1
-}
-
-component_set = {
-	key = "katzen_ship_aura_components"
-
-	required_component_set = yes
-	icon = "GFX_ship_part_sensor"
-	icon_frame = 1
-}
-
-component_set = {
-	key = "katzen_station_small_aura_components"
-
-	required_component_set = yes
-	icon = "GFX_ship_part_sensor"
-	icon_frame = 1
-}
-
-component_set = {
-	key = "katzen_station_medium_aura_components"
-
-	required_component_set = yes
-	icon = "GFX_ship_part_sensor"
-	icon_frame = 1
-}
-
-component_set = {
-	key = "katzen_station_large_aura_components"
-
-	required_component_set = yes
-	icon = "GFX_ship_part_sensor"
 	icon_frame = 1
 }

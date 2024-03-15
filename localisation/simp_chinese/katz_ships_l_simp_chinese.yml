@@ -57,17 +57,17 @@
  katzen_station_medium_aura_components: "Katzen Auras" #NT!
  katzen_station_large_aura_components: "Katzen Auras" #NT!
   
- KATDESTROYER_FISSION_REACTOR: "Katzen Fission Reactor" #NT!
+ PKI_DESTROYER_FISSION_REACTOR: "Katzen Fission Reactor" #NT!
  KATDESTROYER_FISSION_REACTOR_desc: "A Katzen designed fission reactor, built for the Katzenpanzerkorps." #NT!
- KATCRUISER_FISSION_REACTOR: "Katzen Fission Reactor" #NT!
+ PKI_CRUISER_FISSION_REACTOR: "Katzen Fission Reactor" #NT!
  KATCRUISER_FISSION_REACTOR_desc: "A Katzen designed fission reactor, built for the Leerekatzenbombers." #NT!
- KATTITAN_FISSION_REACTOR: "Katzen Fission Reactor" #NT!
+ PKI_BATTLESHIP_FISSION_REACTOR: "Katzen Fission Reactor" #NT!
  KATTITAN_FISSION_REACTOR_desc: "A Katzen designed fission reactor, built for the Weltraumkatzenmarine." #NT!
- KATSUB_FISSION_REACTOR: "Katzen Fission Reactor" #NT!
+ PKI_SUB_FISSION_REACTOR: "Katzen Fission Reactor" #NT!
  KATSUB_FISSION_REACTOR_desc: "A Katzen designed fission reactor, built for the Unterraumboots." #NT!
- KATSUB_FUSION_REACTOR: "Katzenfusionsreaktor" #NT!
+ PKI_SUB_FUSION_REACTOR: "Katzenfusionsreaktor" #NT!
  KATSUB_FUSION_REACTOR_desc: "A drastic improvement on ancient fission reactors, these new Fusionsreaktoren are a staple power provider on Flusion, and are now adapted for the Unterraumboots." #NT!
- KATSUB_COLD_FUSION_REACTOR: "Cold Katzenfusionsreaktor" #NT!
+ PKI_SUB_COLD_FUSION_REACTOR: "Cold Katzenfusionsreaktor" #NT!
  KATSUB_COLD_FUSION_REACTOR_desc: "With additional technological advancements, these new reactors no longer require massive, overly heavy heat sinks, therefore freeing up space for more power generation components." #NT!
  KATSUB_ANTIMATTER_REACTOR: "Katzen Antimatter Reactor" #NT!
  KATSUB_ANTIMATTER_REACTOR_desc: "Antimatter, despite being a dangerous and new field, promises to be our most efficient power generators yet." #NT!
@@ -87,25 +87,25 @@
  SUBMARINE_CLOAKING_PSI: "Psi-Phase Field Generator" #NT!
  SUBMARINE_CLOAKING_PSI_desc: "Psi-Phase Field Generators focus the psionic potential of the ship's crew to partially phase the vessel into the Shroud. This allows the ship to remain undetected by all but the best sensor arrays, though what the crew may be forced to witness is better left unsaid." #NT!
   
- KATPLATFORM_FISSION_REACTOR: "Katzen Fission Reactor" #NT!
- KATPLATFORM_FUSION_REACTOR: "Katzenfusionsreaktor" #NT!
- KATPLATFORM_COLD_FUSION_REACTOR: "Cold Katzenfusionsreaktor" #NT!
+ PKI_PLATFORM_FISSION_REACTOR: "Katzen Fission Reactor" #NT!
+ PKI_PLATFORM_FUSION_REACTOR: "Katzenfusionsreaktor" #NT!
+ PKI_PLATFORM_COLD_FUSION_REACTOR: "Cold Katzenfusionsreaktor" #NT!
  KATPLATFORM_ANTIMATTER_REACTOR: "Katzen Antimatter Reactor" #NT!
  KATPLATFORM_ZERO_POINT_REACTOR: "Katzen Zero Point Generator" #NT!
  KATPLATFORM_DARK_MATTER_REACTOR: "Katzen Dark Matter Reactor" #NT!
   
- KATDESTROYER_FUSION_REACTOR: "Katzenfusionsreaktor" #NT!
+ PKI_DESTROYER_FUSION_REACTOR: "Katzenfusionsreaktor" #NT!
  KATDESTROYER_FUSION_REACTOR_desc: "A drastic improvement on ancient fission reactors, these new Fusionsreaktoren are a staple power provider on Flusion, and are now adapted for the Katzenpanzerkorps." #NT!
- KATCRUISER_FUSION_REACTOR: "Katzenfusionsreaktor" #NT!
+ PKI_CRUISER_FUSION_REACTOR: "Katzenfusionsreaktor" #NT!
  KATCRUISER_FUSION_REACTOR_desc: "A drastic improvement on ancient fission reactors, these new Fusionsreaktoren are a staple power provider on Flusion, and are now adapted for the Leerekatzenbombers." #NT!
- KATTITAN_FUSION_REACTOR: "Katzenfusionreaktor" #NT!
+ PKI_BATTLESHIP_FUSION_REACTOR: "Katzenfusionreaktor" #NT!
  KATTITAN_FUSION_REACTOR_desc: "A drastic improvement on ancient fission reactors, these new Fusionsreaktoren are a staple power provider on Flusion, and are now adapted for the massive power needs of the Weltraumkatzenmarine." #NT!
   
- KATDESTROYER_COLD_FUSION_REACTOR: "Cold Katzenfusionsreaktor" #NT!
+ PKI_DESTROYER_COLD_FUSION_REACTOR: "Cold Katzenfusionsreaktor" #NT!
  KATDESTROYER_COLD_FUSION_REACTOR_desc: "With additional technological advancements, these new reactors no longer require massive, overly heavy heat sinks, therefore freeing up space for more power generation components." #NT!
- KATCRUISER_COLD_FUSION_REACTOR: "Cold Katzenfusionsreaktor" #NT!
+ PKI_CRUISER_COLD_FUSION_REACTOR: "Cold Katzenfusionsreaktor" #NT!
  KATCRUISER_COLD_FUSION_REACTOR_desc: "With additional technological advancements, these new reactors no longer require massive, overly heavy heat sinks, therefore freeing up space for more power generation components." #NT!
- KATTITAN_COLD_FUSION_REACTOR: "Cold Katzenfusionsreaktor" #NT!
+ PKI_BATTLESHIP_COLD_FUSION_REACTOR: "Cold Katzenfusionsreaktor" #NT!
  KATTITAN_COLD_FUSION_REACTOR_desc: "With additional technological advancements, these new reactors no longer require massive, overly heavy heat sinks, therefore freeing up space for more power generation components." #NT!
   
  KATDESTROYER_ANTIMATTER_REACTOR: "Katzen Antimatter Reactor" #NT!

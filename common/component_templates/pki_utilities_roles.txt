@@ -21,7 +21,7 @@ utility_component_template = {
 	hidden = yes
 
 	class_restriction = { shipclass_military }
-	component_set = "katzen_combat_computers"
+	component_set = pki_katzen_combat_computers
 
 	ai_weight = {
 		weight = 0
@@ -49,7 +49,7 @@ utility_component_template = {
 
 	class_restriction = { shipclass_military }
 	size_restriction = { pki_bomber pki_panzer }
-	component_set = "katzen_combat_computers"
+	component_set = pki_katzen_combat_computers
 	upgrades_to = "KATZEN_COMBAT_COMPUTER_LINE_BASIC"
 
 	ai_weight = {
@@ -73,7 +73,7 @@ utility_component_template = {
 
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
 	size_restriction = { pki_cruiser }
-	component_set = "katzen_combat_computers"
+	component_set = pki_katzen_combat_computers
 	upgrades_to = "KATZEN_COMBAT_COMPUTER_ARTILLERY_BASIC"
 
 	ai_weight = {
@@ -96,7 +96,7 @@ utility_component_template = {
 
 	class_restriction = { shipclass_military }
 	size_restriction = { pki_submarine }
-	component_set = "katzen_combat_computers"
+	component_set = pki_katzen_combat_computers
 	ship_behavior = "giga_katzen_submarine"
 	upgrades_to = "SUBMARINE_COMPUTER_BASIC"
 	ai_tags = { explosive explosive_stealth }
@@ -125,7 +125,7 @@ utility_component_template = {
 	}
 	class_restriction = { shipclass_military }
 	size_restriction = { pki_panzer }
-	component_set = "katzen_combat_computers"
+	component_set = pki_katzen_combat_computers
 	ship_behavior = "swarm"
 	prerequisites = { "tech_combat_computers_1" }
 	upgrades_to = "COMBAT_COMPUTER_SWARM_ADVANCED"
@@ -156,7 +156,7 @@ utility_component_template = {
 	}
 	class_restriction = { shipclass_military }
 	size_restriction = { pki_panzer }
-	component_set = "katzen_combat_computers"
+	component_set = pki_katzen_combat_computers
 	ship_behavior = "swarm"
 	prerequisites = { "tech_combat_computers_2" }
 
@@ -189,7 +189,7 @@ utility_component_template = {
 	}
 	class_restriction = { shipclass_military }
 	size_restriction = { pki_panzer }
-	component_set = "katzen_combat_computers"
+	component_set = pki_katzen_combat_computers
 	ship_behavior = "picket"
 	prerequisites = { "tech_combat_computers_1" }
 	upgrades_to = "KATZEN_COMBAT_COMPUTER_PICKET_ADVANCED"
@@ -218,7 +218,7 @@ utility_component_template = {
 	}
 	class_restriction = { shipclass_military }
 	size_restriction = { pki_panzer }
-	component_set = "katzen_combat_computers"
+	component_set = pki_katzen_combat_computers
 	ship_behavior = "picket"
 	prerequisites = { "tech_combat_computers_2" }
 
@@ -249,7 +249,7 @@ utility_component_template = {
 	}
 	class_restriction = { shipclass_military }
 	size_restriction = { pki_panzer pki_cruiser pki_bomber }
-	component_set = "katzen_combat_computers"
+	component_set = pki_katzen_combat_computers
 	ship_behavior = "line"
 	prerequisites = { "tech_combat_computers_1" }
 	upgrades_to = "KATZEN_COMBAT_COMPUTER_LINE_ADVANCED"
@@ -278,7 +278,7 @@ utility_component_template = {
 	}
 	class_restriction = { shipclass_military }
 	size_restriction = { pki_panzer pki_bomber pki_cruiser }
-	component_set = "katzen_combat_computers"
+	component_set = pki_katzen_combat_computers
 	ship_behavior = "line"
 	prerequisites = { "tech_combat_computers_2" }
 
@@ -309,7 +309,7 @@ utility_component_template = {
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
 	size_restriction = { pki_cruiser pki_bomber }
-	component_set = "katzen_combat_computers"
+	component_set = pki_katzen_combat_computers
 	ship_behavior = "artillery"
 	prerequisites = { "tech_combat_computers_1" }
 	upgrades_to = "KATZEN_COMBAT_COMPUTER_ARTILLERY_ADVANCED"
@@ -338,7 +338,7 @@ utility_component_template = {
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
 	size_restriction = { pki_bomber pki_cruiser }
-	component_set = "katzen_combat_computers"
+	component_set = pki_katzen_combat_computers
 	ship_behavior = "artillery"
 	prerequisites = { "tech_combat_computers_2" }
 
@@ -369,7 +369,7 @@ utility_component_template = {
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
 	size_restriction = { pki_cruiser }
-	component_set = "katzen_combat_computers"
+	component_set = pki_katzen_combat_computers
 	ship_behavior = "carrier"
 	prerequisites = { "tech_combat_computers_1" }
 	upgrades_to = "KATZEN_COMBAT_COMPUTER_CARRIER_ADVANCED"
@@ -397,7 +397,7 @@ utility_component_template = {
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
 	size_restriction = { pki_cruiser }
-	component_set = "katzen_combat_computers"
+	component_set = pki_katzen_combat_computers
 	ship_behavior = "carrier"
 	prerequisites = { "tech_combat_computers_2" }
 
@@ -430,7 +430,7 @@ utility_component_template = {
 
 	class_restriction = { shipclass_military }
 	size_restriction = { pki_submarine }
-	component_set = "katzen_combat_computers"
+	component_set = pki_katzen_combat_computers
 	ship_behavior = "pki_giga_katzen_submarine"
 	prerequisites = { "tech_combat_computers_1" "tech_torpedoes_1" }
 	upgrades_to = "SUBMARINE_COMPUTER_ADVANCED"
@@ -461,7 +461,7 @@ utility_component_template = {
 
 	class_restriction = { shipclass_military }
 	size_restriction = { pki_submarine }
-	component_set = "katzen_combat_computers"
+	component_set = pki_katzen_combat_computers
 	ship_behavior = "pki_giga_katzen_submarine"
 	prerequisites = { "tech_combat_computers_2" "tech_torpedoes_1" }
 	ai_tags = { explosive explosive_stealth }
@@ -491,7 +491,7 @@ utility_component_template = {
 
 	class_restriction = { shipclass_military }
 	size_restriction = { pki_bomber }
-	component_set = "katzen_combat_computers"
+	component_set = pki_katzen_combat_computers
 	ship_behavior = "torpedo"
 	prerequisites = { "tech_combat_computers_1" "tech_torpedoes_1" }
 	upgrades_to = "KATZEN_BOMBER_COMPUTER_ADVANCED"
@@ -522,7 +522,7 @@ utility_component_template = {
 
 	class_restriction = { shipclass_military }
 	size_restriction = { pki_bomber }
-	component_set = "katzen_combat_computers"
+	component_set = pki_katzen_combat_computers
 	ship_behavior = "torpedo"
 	prerequisites = { "tech_combat_computers_2" "tech_torpedoes_1" }
 	ai_tags = { explosive explosive_stealth }

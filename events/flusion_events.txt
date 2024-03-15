@@ -211,6 +211,10 @@ country_event = {
 			custom_catch_phrase = PKI_KAISER_CATCH_PHRASE
 		}
 
+		event_target:kaiser_kattail = {
+			change_species = root.owner_main_species
+		}
+
 		ruler = {
 			save_event_target_as = pki_old_leader
 		}

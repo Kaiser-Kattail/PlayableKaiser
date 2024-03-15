@@ -1,15 +1,29 @@
 pki_panzer = { #Destroyerish, designed to conduct Blitzkrieg and overwhelm enemy forces
 	entity = giga_katzen_panzer_entity
 	graphical_culture = no
-	formation_priority = 20
-	max_speed = 200 #Blitzkrieg
+	formation_priority = @destroyer_formation_priority
+	max_speed = @speed_very_fast #Blitzkrieg
 	acceleration = 0.3
 	rotation_speed = 0.60
-	collision_radius = 3.0
-	max_hitpoints = 500
+	collision_radius = @destroyer_collision_radius
+	max_hitpoints = @destroyer_hp
+	modifier = {
+		ship_evasion_add = @destroyer_evasion
+		ship_piracy_suppression_add = 8
+	}
+	size_multiplier = 2
+	fleet_slot_size = 3
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 4
+	is_space_station = no
+	icon = ship_size_military_2
 	base_buildtime = @destroyer_build_time
 	can_have_federation_design = no
 	enable_default_design = yes
+
+	default_behavior = swarm
+	ship_roles = { screen brawler }
+
 	potential_country = {
 		OR = {
 			has_origin = origin_katzen
@@ -19,18 +33,16 @@ pki_panzer = { #Destroyerish, designed to conduct Blitzkrieg and overwhelm enemy
 	prerequisites = {
 		tech_pki_panzer
 	}
-	modifier = {
-		ship_evasion_add = 50
-		ship_piracy_suppression_add = 8
-		ship_armor_add = 400
-		ship_shield_add = 200
-	}
-	size_multiplier = 2
-	fleet_slot_size = 3
-	section_slots = { "mid" = { locator = "part1" } }
-	num_target_locators = 4
-	is_space_station = no
-	icon = ship_size_military_2
+
+	combat_disengage_chance = 1.00
+
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	required_component_set = pki_katzen_power_core
+	required_component_set = "ftl_components"
+	required_component_set = pki_katzen_thruster_components
+	required_component_set = "sensor_components"
+	required_component_set = pki_katzen_combat_computers
 
 	resources = {
 		category = ships
@@ -44,16 +56,6 @@ pki_panzer = { #Destroyerish, designed to conduct Blitzkrieg and overwhelm enemy
 		alloys = 2
 	}
 
-	combat_disengage_chance = 1.00
-
-	class = shipclass_military
-	construction_type = starbase_shipyard
-	required_component_set = "katzen_power_core"
-	required_component_set = "ftl_components"
-	required_component_set = "katzen_thruster_components"
-	required_component_set = "sensor_components"
-	required_component_set = "katzen_combat_computers"
-
 	ai_ship_data = {
 		fraction = {
 			base = 0
@@ -62,7 +64,7 @@ pki_panzer = { #Destroyerish, designed to conduct Blitzkrieg and overwhelm enemy
 				uses_standard_ship_sizes = yes
 			}
 			modifier = {
-				factor = 2
+				factor = 10
 				pki_is_katzprotektorat = yes
 			}
 			modifier = {
@@ -127,11 +129,11 @@ pki_bomber = { #Cruiser, bomber designed to assault enemy worlds and fortificati
 
 	class = shipclass_military
 	construction_type = starbase_shipyard
-	required_component_set = "katzen_power_core"
+	required_component_set = pki_katzen_power_core
 	required_component_set = "ftl_components"
-	required_component_set = "katzen_thruster_components"
+	required_component_set = pki_katzen_thruster_components
 	required_component_set = "sensor_components"
-	required_component_set = "katzen_combat_computers"
+	required_component_set = pki_katzen_combat_computers
 
 	resources = {
 		category = ships
@@ -223,11 +225,11 @@ pki_cruiser = { #Battleship-Titan, designed to "sit back" and assist the fleet
 
 	class = shipclass_military
 	construction_type = starbase_shipyard
-	required_component_set = "katzen_power_core"
+	required_component_set = pki_katzen_power_core
 	required_component_set = "ftl_components"
-	required_component_set = "katzen_thruster_components"
+	required_component_set = pki_katzen_thruster_components
 	required_component_set = "sensor_components"
-	required_component_set = "katzen_combat_computers"
+	required_component_set = pki_katzen_combat_computers
 
 	ai_ship_data = {
 		fraction = {
@@ -316,11 +318,11 @@ pki_submarine = {
 
 	construction_type = starbase_shipyard
 	class = shipclass_military
-	required_component_set = "katzen_power_core"
+	required_component_set = pki_katzen_power_core
 	required_component_set = "ftl_components"
-	required_component_set = "katzen_thruster_components"
+	required_component_set = pki_katzen_thruster_components
 	required_component_set = "sensor_components"
-	required_component_set = "katzen_combat_computers"
+	required_component_set = pki_katzen_combat_computers
 }
 
 katzen_player_warforge_platform = { #Katzen war forge platform
@@ -352,7 +354,7 @@ katzen_player_warforge_platform = { #Katzen war forge platform
 	icon = ship_size_military_station
 	enable_default_design = yes
 	is_designable = yes
-	required_component_set = "katzen_power_core"
+	required_component_set = pki_katzen_power_core
 	required_component_set = "sensor_components"
 	required_component_set = "combat_computers"
 }

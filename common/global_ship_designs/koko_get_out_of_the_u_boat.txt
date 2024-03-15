@@ -10,7 +10,7 @@ ship_design = {
 		component = { slot = "AUX_UTILITY_1" template = "SUBMARINE_CLOAKING_1" }
 	}
 	
-	required_component = "KATSUB_FISSION_REACTOR"
+	required_component = PKI_SUB_FISSION_REACTOR
 	required_component = "HYPER_DRIVE_1"
 	required_component = "KATCRUISER_SHIP_THRUSTER_1"
 	required_component = "SENSOR_1"

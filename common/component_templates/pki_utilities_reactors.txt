@@ -38,21 +38,30 @@
 @titan_power_5 = 3200
 @titan_power_6 = 4200
 
+# Unlike normal scaling, the base of these is 3.5×
+# the previous ship class instead of 2×.
+@juggernaut_power_1 = 3850
+@juggernaut_power_2 = 5000
+@juggernaut_power_3 = 6500
+@juggernaut_power_4 = 8460
+@juggernaut_power_5 = 11000
+@juggernaut_power_6 = 14300
+
 @colossus_power = 10000
 
-@starbase_power_1 = 1650
-@starbase_power_2 = 2170
-@starbase_power_3 = 2850
-@starbase_power_4 = 3750
-@starbase_power_5 = 4550
-@starbase_power_6 = 6200
+@starbase_power_1 = 1875
+@starbase_power_2 = 2500
+@starbase_power_3 = 3250
+@starbase_power_4 = 4250
+@starbase_power_5 = 5500
+@starbase_power_6 = 7125
 
-@platform_power_1 = 400
-@platform_power_2 = 520
-@platform_power_3 = 680
-@platform_power_4 = 880
-@platform_power_5 = 1150
-@platform_power_6 = 1500
+@platform_power_1 = 200
+@platform_power_2 = 260
+@platform_power_3 = 340
+@platform_power_4 = 440
+@platform_power_5 = 575
+@platform_power_6 = 750
 
 #############
 #	COST	#
@@ -93,6 +102,15 @@
 @titan_cost_5 = 448
 @titan_cost_6 = 592
 
+# Unlike normal scaling, the base of these is 3.5×
+# the previous ship class instead of 2×.
+@juggernaut_cost_1 = 560
+@juggernaut_cost_2 = 730
+@juggernaut_cost_3 = 950
+@juggernaut_cost_4 = 1230
+@juggernaut_cost_5 = 1600
+@juggernaut_cost_6 = 2080
+
 @colossus_cost_1 = 0
 
 @platform_cost_1 = 20
@@ -111,7 +129,7 @@
 ########################
 
 utility_component_template = {
-	key = "KATDESTROYER_FISSION_REACTOR"
+	key = PKI_DESTROYER_FISSION_REACTOR
 	size = small
 	icon = "GFX_ship_part_reactor_1"
 	icon_frame = 1
@@ -128,9 +146,9 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_fission_power" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_panzer }
-	upgrades_to = "KATDESTROYER_FUSION_REACTOR"
+	upgrades_to = PKI_DESTROYER_FUSION_REACTOR
 
 	ai_weight = {
 		weight = 1
@@ -138,7 +156,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATCRUISER_FISSION_REACTOR"
+	key = PKI_CRUISER_FISSION_REACTOR
 	size = small
 	icon = "GFX_ship_part_reactor_1"
 	icon_frame = 1
@@ -155,9 +173,9 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_fission_power" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_bomber }
-	upgrades_to = "KATCRUISER_FUSION_REACTOR"
+	upgrades_to = PKI_CRUISER_FUSION_REACTOR
 
 	ai_weight = {
 		weight = 1
@@ -165,26 +183,26 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATTITAN_FISSION_REACTOR"
+	key = PKI_BATTLESHIP_FISSION_REACTOR
 	size = small
 	icon = "GFX_ship_part_reactor_1"
 	icon_frame = 1
-	power = @titan_power_1
+	power = @battleship_power_1
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @titan_cost_1
+			alloys = @battleship_cost_1
 		}
 		upkeep = {
-			energy = 1.60
-			alloys = 0.16
+			energy = 0.80
+			alloys = 0.08
 		}
 	}
 
 	prerequisites = { "tech_fission_power" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_cruiser }
-	upgrades_to = "KATTITAN_FUSION_REACTOR"
+	upgrades_to = PKI_BATTLESHIP_FUSION_REACTOR
 
 	ai_weight = {
 		weight = 1
@@ -193,26 +211,26 @@ utility_component_template = {
 
 
 utility_component_template = {
-	key = "KATSUB_FISSION_REACTOR"
+	key = PKI_SUB_FISSION_REACTOR
 	size = small
 	icon = "GFX_ship_part_reactor_1"
 	icon_frame = 1
-	power = @cruiser_power_1
+	power = @corvette_power_1
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @cruiser_cost_1
+			alloys = @corvette_cost_1
 		}
 		upkeep = {
-			energy = 0.40
-			alloys = 0.04
+			energy = 0.10
+			alloys = 0.01
 		}
 	}
 
 	prerequisites = { "tech_fission_power" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_submarine }
-	upgrades_to = "KATSUB_FUSION_REACTOR"
+	upgrades_to = PKI_SUB_FUSION_REACTOR
 
 	ai_weight = {
 		weight = 1
@@ -220,7 +238,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATPLATFORM_FISSION_REACTOR"
+	key = PKI_PLATFORM_FISSION_REACTOR
 	size = small
 	icon = "GFX_ship_part_reactor_1"
 	icon_frame = 1
@@ -231,15 +249,15 @@ utility_component_template = {
 			alloys = @platform_cost_1
 		}
 		upkeep = {
-			energy = 0.40
-			alloys = 0.04
+			energy = 0.20
+			alloys = 0.02
 		}
 	}
 
 	prerequisites = { "tech_fission_power" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { katzen_player_warforge_platform }
-	upgrades_to = "KATPLATFORM_FUSION_REACTOR"
+	upgrades_to = PKI_PLATFORM_FUSION_REACTOR
 
 	ai_weight = {
 		weight = 1
@@ -251,34 +269,7 @@ utility_component_template = {
 ########################
 
 utility_component_template = {
-	key = "KATPLATFORM_FUSION_REACTOR"
-	size = small
-	icon = "GFX_ship_part_reactor_2"
-	icon_frame = 1
-	power = @platform_power_2
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @platform_cost_2
-		}
-		upkeep = {
-			energy = 0.40
-			alloys = 0.04
-		}
-	}
-
-	prerequisites = { "tech_fusion_power" }
-	component_set = "katzen_power_core"
-	size_restriction = { katzen_player_warforge_platform }
-	upgrades_to = "KATPLATFORM_COLD_FUSION_REACTOR"
-
-	ai_weight = {
-		weight = 1
-	}
-}
-
-utility_component_template = {
-	key = "KATDESTROYER_FUSION_REACTOR"
+	key = PKI_DESTROYER_FUSION_REACTOR
 	size = small
 	icon = "GFX_ship_part_reactor_2"
 	icon_frame = 1
@@ -295,9 +286,9 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_fusion_power" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_panzer }
-	upgrades_to = "KATDESTROYER_COLD_FUSION_REACTOR"
+	upgrades_to = PKI_DESTROYER_COLD_FUSION_REACTOR
 
 	ai_weight = {
 		weight = 2
@@ -305,7 +296,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATCRUISER_FUSION_REACTOR"
+	key = PKI_CRUISER_FUSION_REACTOR
 	size = small
 	icon = "GFX_ship_part_reactor_2"
 	icon_frame = 1
@@ -322,9 +313,9 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_fusion_power" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_bomber }
-	upgrades_to = "KATCRUISER_COLD_FUSION_REACTOR"
+	upgrades_to = PKI_CRUISER_COLD_FUSION_REACTOR
 
 	ai_weight = {
 		weight = 2
@@ -332,95 +323,92 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATSUB_FUSION_REACTOR"
+	key = PKI_BATTLESHIP_FUSION_REACTOR
 	size = small
 	icon = "GFX_ship_part_reactor_2"
 	icon_frame = 1
-	power = @cruiser_power_2
+	power = @battleship_power_2
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @cruiser_cost_2
+			alloys = @battleship_cost_2
 		}
 		upkeep = {
-			energy = 0.52
-			alloys = 0.052
+			energy = 1.04
+			alloys = 0.104
 		}
 	}
 
 	prerequisites = { "tech_fusion_power" }
-	component_set = "katzen_power_core"
-	size_restriction = { pki_submarine }
-	upgrades_to = "KATSUB_COLD_FUSION_REACTOR"
-
-	ai_weight = {
-		weight = 2
-	}
-}
-
-utility_component_template = {
-	key = "KATTITAN_FUSION_REACTOR"
-	size = small
-	icon = "GFX_ship_part_reactor_2"
-	icon_frame = 1
-	power = @titan_power_2
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @titan_cost_2
-		}
-		upkeep = {
-			energy = 2.08
-			alloys = 0.208
-		}
-	}
-
-	prerequisites = { "tech_fusion_power" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_cruiser }
-	upgrades_to = "KATTITAN_COLD_FUSION_REACTOR"
+	upgrades_to = PKI_BATTLESHIP_COLD_FUSION_REACTOR
 
 	ai_weight = {
 		weight = 2
 	}
 }
 
-
-
-
-########################
-# Cold Fusion Reactors
-########################
-
 utility_component_template = {
-	key = "KATPLATFORM_COLD_FUSION_REACTOR"
+	key = PKI_SUB_FUSION_REACTOR
 	size = small
-	icon = "GFX_ship_part_reactor_3"
+	icon = "GFX_ship_part_reactor_2"
 	icon_frame = 1
-	power = @platform_power_3
+	power = @corvette_power_2
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @platform_cost_3
+			alloys = @corvette_cost_2
 		}
 		upkeep = {
-			energy = 0.40
-			alloys = 0.04
+			energy = 0.13
+			alloys = 0.013
 		}
 	}
 
-	prerequisites = { "tech_cold_fusion_power" }
-	component_set = "katzen_power_core"
+	prerequisites = { "tech_fusion_power" }
+	component_set = pki_katzen_power_core
+	size_restriction = { pki_submarine }
+	upgrades_to = PKI_SUB_COLD_FUSION_REACTOR
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = PKI_PLATFORM_FUSION_REACTOR
+	size = small
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = @platform_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_2
+		}
+		upkeep = {
+			energy = 0.26
+			alloys = 0.026
+		}
+	}
+
+	prerequisites = { "tech_fusion_power" }
+	component_set = pki_katzen_power_core
 	size_restriction = { katzen_player_warforge_platform }
-	upgrades_to = "KATPLATFORM_ANTIMATTER_REACTOR"
+	upgrades_to = PKI_PLATFORM_COLD_FUSION_REACTOR
 
 	ai_weight = {
 		weight = 1
 	}
 }
 
+########################
+# Cold Fusion Reactors
+########################
+
 utility_component_template = {
-	key = "KATDESTROYER_COLD_FUSION_REACTOR"
+	key = PKI_DESTROYER_COLD_FUSION_REACTOR
 	size = small
 	icon = "GFX_ship_part_reactor_3"
 	icon_frame = 1
@@ -437,7 +425,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_cold_fusion_power" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_panzer }
 	upgrades_to = "KATDESTROYER_ANTIMATTER_REACTOR"
 
@@ -447,7 +435,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATCRUISER_COLD_FUSION_REACTOR"
+	key = PKI_CRUISER_COLD_FUSION_REACTOR
 	size = small
 	icon = "GFX_ship_part_reactor_3"
 	icon_frame = 1
@@ -464,7 +452,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_cold_fusion_power" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_bomber }
 	upgrades_to = "KATCRUISER_ANTIMATTER_REACTOR"
 
@@ -474,24 +462,51 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATSUB_COLD_FUSION_REACTOR"
+	key = PKI_BATTLESHIP_COLD_FUSION_REACTOR
 	size = small
 	icon = "GFX_ship_part_reactor_3"
 	icon_frame = 1
-	power = @cruiser_power_3
+	power = @battleship_power_3
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @cruiser_cost_3
+			alloys = @battleship_cost_3
 		}
 		upkeep = {
-			energy = 0.68
-			alloys = 0.068
+			energy = 1.36
+			alloys = 0.136
 		}
 	}
 
 	prerequisites = { "tech_cold_fusion_power" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
+	size_restriction = { pki_cruiser }
+	upgrades_to = "KATTITAN_ANTIMATTER_REACTOR"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = PKI_SUB_COLD_FUSION_REACTOR
+	size = small
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = @corvette_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @corvette_cost_3
+		}
+		upkeep = {
+			energy = 0.17
+			alloys = 0.017
+		}
+	}
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_submarine }
 	upgrades_to = "KATSUB_ANTIMATTER_REACTOR"
 
@@ -501,29 +516,29 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATTITAN_COLD_FUSION_REACTOR"
+	key = PKI_PLATFORM_COLD_FUSION_REACTOR
 	size = small
 	icon = "GFX_ship_part_reactor_3"
 	icon_frame = 1
-	power = @titan_power_3
+	power = @platform_power_3
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @titan_cost_3
+			alloys = @platform_cost_3
 		}
 		upkeep = {
-			energy = 2.70
-			alloys = 0.270
+			energy = 0.34
+			alloys = 0.034
 		}
 	}
 
 	prerequisites = { "tech_cold_fusion_power" }
-	component_set = "katzen_power_core"
-	size_restriction = { pki_cruiser }
-	upgrades_to = "KATTITAN_ANTIMATTER_REACTOR"
+	component_set = pki_katzen_power_core
+	size_restriction = { katzen_player_warforge_platform }
+	upgrades_to = "KATPLATFORM_ANTIMATTER_REACTOR"
 
 	ai_weight = {
-		weight = 3
+		weight = 1
 	}
 }
 
@@ -549,7 +564,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_antimatter_power" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { katzen_player_warforge_platform }
 	upgrades_to = "KATPLATFORM_ZERO_POINT_REACTOR"
 
@@ -576,7 +591,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_antimatter_power" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_panzer }
 	upgrades_to = "KATDESTROYER_ZERO_POINT_REACTOR"
 
@@ -603,7 +618,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_antimatter_power" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_bomber }
 	upgrades_to = "KATCRUISER_ZERO_POINT_REACTOR"
 
@@ -630,7 +645,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_antimatter_power" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_submarine }
 	upgrades_to = "KATSUB_ZERO_POINT_REACTOR"
 
@@ -657,7 +672,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_antimatter_power" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_cruiser }
 	upgrades_to = "KATTITAN_ZERO_POINT_REACTOR"
 
@@ -689,7 +704,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_zero_point_power" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { katzen_player_warforge_platform }
 	upgrades_to = "KATPLATFORM_DARK_MATTER_REACTOR"
 
@@ -716,7 +731,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_zero_point_power" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_panzer }
 	upgrades_to = "KATDESTROYER_DARK_MATTER_REACTOR"
 
@@ -743,7 +758,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_zero_point_power" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_bomber }
 	upgrades_to = "KATCRUISER_DARK_MATTER_REACTOR"
 
@@ -770,7 +785,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_zero_point_power" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_submarine }
 	upgrades_to = "KATSUB_DARK_MATTER_REACTOR"
 
@@ -798,7 +813,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_zero_point_power" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_cruiser }
 	upgrades_to = "KATTITAN_DARK_MATTER_REACTOR"
 
@@ -829,7 +844,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_dark_matter_power_core" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { katzen_player_warforge_platform }
 
 	ai_weight = {
@@ -860,7 +875,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_dark_matter_power_core" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_panzer }
 
 	ai_weight = {
@@ -891,7 +906,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_dark_matter_power_core" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_bomber }
 
 	ai_weight = {
@@ -922,7 +937,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_dark_matter_power_core" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_submarine }
 
 	ai_weight = {
@@ -953,7 +968,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "tech_dark_matter_power_core" }
-	component_set = "katzen_power_core"
+	component_set = pki_katzen_power_core
 	size_restriction = { pki_cruiser }
 
 	ai_weight = {
