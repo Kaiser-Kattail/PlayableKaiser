@@ -8,3 +8,26 @@
 
     pki_flavor.21.name: "Ereignis Horizont Versatz Einrichtung"
     pki_flavor.21.desc: "The initial structure of the facility is complete. Once we have the necessary resources, we will soon be able to travel nearly anywhere."
+
+
+    pki_crisis.100.name: "Galactic Ambitions"
+    pki_crisis.100.desc: "Following our discovery of FTL and our entrance to the galactic stage, "
+
+    pki_crisis.301.name: "Galactic Community Sanctions [event_target:playerflusion.GetName]"
+    pki_crisis.301.desc: "Prominent figures in the Galactic Community have kept a keen eye on the [event_target:playerflusion.GetName] since their discovery of FTL. Of them, the [event_target:pki_galcom_opponent_1.GetName], [event_target:pki_galcom_opponent_2.GetName], and [event_target:pki_galcom_opponent_3.GetName] have joined together in an attempt to sanction the [event_target:playerflusion.GetName]. Following many discussions with community members, all voted as part of a secret vote in favor of sanctioning the  [event_target:playerflusion.GetName] for the threat they pose to the galaxy."
+    pki_crisis.301.a: "We voted correctly."
+    pki_crisis.301.b: "Pitiful."
+
+    pki_crisis.311.name: "Increased Diplomatic Activity"
+    pki_crisis.311.desc: "REPLACE_ME"
+
+
+    pki_crisis.401.name: "REPLACE_ME"
+    pki_crisis.401.desc: "REPLACE_ME"
+    pki_crisis.401.a: "We we not harsh enough."
+    pki_crisis.401.b: "Again?"
+
+    pki_crisis.402.name: "REPLACE_ME"
+    pki_crisis.402.desc: "REPLACE_ME"
+    pki_crisis.402.a: "An outrage!"
+    pki_crisis.402.b: ""

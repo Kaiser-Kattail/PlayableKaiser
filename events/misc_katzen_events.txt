@@ -34,133 +34,12 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = pki_misc.3
-	is_triggered_only = yes
-	hide_window = yes
-	trigger = {
-		has_origin = origin_katzen
-	}
-	immediate = {
-		set_variable = { #count total systems, used so kaiser can change the name
-			which = "player_katzen_galaxy_total_system_count"
-			value = 0
-		}
-		every_system = { #every system in galaxy adds 1
-			event_target:katzenartig = {
-				change_variable = {
-					which = "player_katzen_galaxy_total_system_count"
-					value = 1
-				}
-			}
-		}
-		set_variable = { #count katzen systems, used so kaiser can change the name
-			which = player_katzen_total_system_count
-			value = 0
-		}
-		every_system_within_border = { #count katzen systems
-			event_target:katzenartig = {
-				change_variable = {
-					which = player_katzen_total_system_count
-					value = 1
-				}
-			}
-		}
-		every_subject = {
-			every_system_within_border = { #count katzen systems
-				event_target:katzenartig = {
-					change_variable = {
-						which = player_katzen_total_system_count
-						value = 1
-					}
-				}
-			}
-		}
-		set_variable = { #check for greater katzen imperium
-			which = "player_greater_imperium_limit"
-			value = player_katzen_galaxy_total_system_count
-		}
-		multiply_variable = { #the limit to form greater imperium is 45% the total systems
-			which = "player_greater_imperium_limit"
-			value = 0.45
-		}
-		set_variable = { #check for galactic katzen imperium
-			which = "player_galactic_imperium_limit"
-			value = player_katzen_galaxy_total_system_count
-		}
-		multiply_variable = { #the limit to form galactic imperium is 75% the total systems
-			which = "player_galactic_imperium_limit"
-			value = 0.75
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_country_flag = player_big_katzen_empire_formed
-				}
-				check_variable = {
-					which = player_katzen_total_system_count
-					value >= player_greater_imperium_limit
-				}
-			}
-			set_country_flag = player_big_katzen_empire_formed
-			change_country_flag = {
-				icon = {
-					category="domination"
-					file="domination_3.dds"
-				}
-				background = {
-					category="backgrounds"
-					file="v.dds"
-				}
-				colors = {
-					"indigo"
-					"dark_purple"
-					"null"
-					"null"
-				}
-			}
-			set_name = "NAME_BIG_KATZEN_EMPIRE"
-			every_country = { country_event = { id = pki_misc.4 } }
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_country_flag = player_galactic_katzen_empire_formed
-				}
-				check_variable = {
-					which = player_katzen_total_system_count
-					value >= player_galactic_imperium_limit
-				}
-			}
-			set_country_flag = player_galactic_katzen_empire_formed
-			change_country_flag = {
-				icon = {
-					category="domination"
-					file="domination_18.dds"
-				}
-				background = {
-					category="backgrounds"
-					file="circle.dds"
-				}
-				colors = {
-					"indigo"
-					"dark_blue"
-					"null"
-					"null"
-				}
-			}
-			set_name = "NAME_GALACTIC_KATZEN_EMPIRE"
-			every_country = { country_event = { id = pki_misc.5 } }
-		}
-	}
-}
-
 country_event = { #big
 	id = pki_misc.4
 	title = "pki_misc.4.name"
 	desc = "pki_misc.4.desc"
 
-	picture = GFX_evt_announcement
+	picture = GFX_evt_grand_speech
 	show_sound = event_celebration
 	location = from
 	is_triggered_only = yes
@@ -186,7 +65,7 @@ country_event = { #galactic
 	title = "pki_misc.5.name"
 	desc = "pki_misc.5.desc"
 
-	picture = GFX_evt_binary_stars
+	picture = GFX_evt_grand_speech
 	show_sound = event_celebration
 	location = from
 	is_triggered_only = yes
@@ -382,7 +261,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_origin = origin_katzen
+		pki_is_katzenartig_imperium = yes
 		has_policy_flag = derega_kaiser
 	}
 

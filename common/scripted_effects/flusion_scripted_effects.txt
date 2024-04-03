@@ -1615,7 +1615,7 @@ pki_spawn_defense_fleet = {
 			set_owner = root
 			create_ship = {
 				name = "Katzenplanetenverteidigung"
-				random_existing_design = katzen_player_warforge_platform
+				random_existing_design = pki_warforge_platform
 				upgradable = yes
 			}
 			set_location = {
@@ -1886,6 +1886,42 @@ pki_yearly_migration = {
 		add_modifier = {
 			modifier = temp_job_help
 			days = 1
+		}
+	}
+}
+
+pki_update_galactic_tension = {
+	every_situation = {
+		limit = {
+			is_situation_type = situation_pki_galactic_tension
+		}
+		owner = {
+			set_variable = {
+				which = pki_galaxy_owned
+				value = value:pki_galaxy_owned
+			}
+		}
+		export_trigger_value_to_variable = {
+			trigger = situation_progress
+			variable = pki_situation_progress_situation
+		}
+		owner = {
+			set_variable = {
+				which = pki_situation_progress_country
+				value = prev.pki_situation_progress_situation
+			}
+		}
+		if = {
+			limit = {
+				situation_progress < owner.pki_galaxy_owned
+			}
+			add_situation_progress = owner.value:pki_situation_difference_less_than
+		}
+		else_if = {
+			limit = {
+				situation_progress > owner.pki_galaxy_owned
+			}
+			add_situation_progress = owner.value:pki_situation_difference_greater_than
 		}
 	}
 }

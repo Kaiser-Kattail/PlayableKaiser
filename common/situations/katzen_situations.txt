@@ -527,3 +527,235 @@ situation_project_celestia = {
 		}
 	}
 }
+
+situation_pki_galactic_tension = {
+	picture = GFX_evt_machine_space_battle
+	category = negative
+	start_value = 0
+	complete_icon = GFX_situation_outcome_negative
+	complete_icon_frame = GFX_situation_outcome_frame_red
+
+	monthly_progress = {
+		base = 0
+	}
+
+	on_progress_complete = {
+		custom_tooltip = situation_world_tension_coalition
+	}
+
+	stages = {
+		tension_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			modifier = {
+				planet_metallurgists_alloys_produces_mult = 0.1
+				starbase_shipyard_build_speed_mult = 0.1
+			}
+			end = 10
+		}
+		tension_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_red
+			modifier = {
+				planet_metallurgists_alloys_produces_mult = 0.15
+				starbase_shipyard_build_speed_mult = 0.20
+			}
+			end = 20
+		}
+		tension_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+			modifier = {
+				planet_metallurgists_alloys_produces_mult = 0.20
+				starbase_shipyard_build_speed_mult = 0.30
+				country_trust_growth = -0.1
+			}
+			on_first_enter = {
+				if = {
+					limit = {
+						is_galactic_community_formed = yes
+					}
+					random_galcom_member = {
+						limit = {
+							pki_is_katzenartig_imperium = no
+							galactic_community_rank > 4
+						}
+						set_country_flag = pki_galcom_opponent
+						set_country_flag = pki_galcom_opponent_1
+						save_global_event_target_as = pki_galcom_opponent_1
+					}
+					random_galcom_member = {
+						limit = {
+							NOT = { has_country_flag = pki_galcom_opponent_1}
+							pki_is_katzenartig_imperium = no
+							galactic_community_rank > 4
+						}
+						set_country_flag = pki_galcom_opponent
+						set_country_flag = pki_galcom_opponent_2
+						save_global_event_target_as = pki_galcom_opponent_2
+					}
+					random_galcom_member = {
+						limit = {
+							NOT = { has_country_flag = pki_galcom_opponent_2}
+							pki_is_katzenartig_imperium = no
+							galactic_community_rank > 4
+						}
+						set_country_flag = pki_galcom_opponent
+						set_country_flag = pki_galcom_opponent_3
+						save_global_event_target_as = pki_galcom_opponent_3
+					}
+
+					every_country = {
+						limit = {
+							has_communications = event_target:playerflusion
+						}
+						country_event = { id = pki_crisis.301 days = 90 }
+					}
+				}
+				else = {
+					owner = {
+						every_neighbor_country = {
+							set_country_flag = pki_katzen_neighbor
+						}
+						country_event = { id = pki_crisis.311 days = 90 }
+					}
+				}
+			}
+			end = 30
+		}
+		tension_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_red
+			modifier = {
+				planet_metallurgists_alloys_produces_mult = 0.25
+				starbase_shipyard_build_speed_mult = 0.40
+				planet_stability_add = -5
+			}
+			custom_tooltip = pki_proclaim_big_empire
+			on_first_enter = {
+				owner = {
+					every_country = { country_event = { id = pki_misc.4 } country_event = { id = pki_crisis.401 days = 90 }}
+					hidden_effect = {
+						set_country_flag = player_big_katzen_empire_formed
+						change_country_flag = {
+							icon = {
+								category="domination"
+								file="domination_3.dds"
+							}
+							background = {
+								category="backgrounds"
+								file="v.dds"
+							}
+							colors = {
+								"indigo"
+								"dark_purple"
+								"null"
+								"null"
+							}
+						}
+						set_name = "NAME_BIG_KATZEN_EMPIRE"
+					}
+				}
+			}
+			end = 40
+		}
+		tension_5 = {
+			icon = GFX_situation_stage_5
+			icon_background = GFX_situation_stage_frame_red
+			modifier = {
+				planet_metallurgists_alloys_produces_mult = 0.30
+				starbase_shipyard_build_speed_mult = 0.50
+				planet_stability_add = -10
+			}
+			on_first_enter = {
+
+			}
+			end = 50
+		}
+		tension_6 = {
+			icon = GFX_situation_stage_6
+			icon_background = GFX_situation_stage_frame_red
+			modifier = {
+				planet_metallurgists_alloys_produces_mult = 0.30
+				starbase_shipyard_build_speed_mult = 0.50
+				planet_stability_add = -10
+			}
+			end = 60
+		}
+		tension_7 = {
+			icon = GFX_situation_stage_7
+			icon_background = GFX_situation_stage_frame_red
+			modifier = {
+				planet_metallurgists_alloys_produces_mult = 0.25
+				starbase_shipyard_build_speed_mult = 0.40
+				planet_stability_add = -20
+			}
+			custom_tooltip = pki_proclaim_bigger_empire
+			on_first_enter = {
+				owner = {
+					every_country = { country_event = { id = pki_misc.5 } }
+					hidden_effect = {
+						set_country_flag = player_galactic_katzen_empire_formed
+						change_country_flag = {
+							icon = {
+								category="domination"
+								file="domination_18.dds"
+							}
+							background = {
+								category="backgrounds"
+								file="circle.dds"
+							}
+							colors = {
+								"indigo"
+								"dark_blue"
+								"null"
+								"null"
+							}
+						}
+						set_name = "NAME_GALACTIC_KATZEN_EMPIRE"
+					}
+				}
+			}
+			end = 70
+		}
+		tension_8 = {
+			icon = GFX_situation_stage_8
+			icon_background = GFX_situation_stage_frame_red
+			modifier = {
+				planet_metallurgists_alloys_produces_mult = 0.20
+				starbase_shipyard_build_speed_mult = 0.3
+				planet_stability_add = -20
+			}
+			end = 80
+		}
+		tension_9 = {
+			icon = GFX_situation_stage_9
+			icon_background = GFX_situation_stage_frame_red
+			modifier = {
+				planet_metallurgists_alloys_produces_mult = 0.15
+				starbase_shipyard_build_speed_mult = 0.2
+				planet_stability_add = -20
+			}
+			end = 90
+		}
+		tension_10 = {
+			icon = GFX_situation_stage_10
+			icon_background = GFX_situation_stage_frame_red
+			modifier = {
+				planet_metallurgists_alloys_produces_mult = 0.1
+				starbase_shipyard_build_speed_mult = 0.1
+				planet_stability_add = -20
+			}
+			end = 100
+		}
+	}
+
+	approach = {
+		name = approach_pki_crisis_default
+		icon = GFX_situation_approach_fleet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+	}
+}

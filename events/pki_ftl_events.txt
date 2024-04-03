@@ -45,5 +45,9 @@ country_event = {
 			id = pki_paragons.1
 			days = 180
 		}
+		country_event = {
+			id = pki_crisis.100
+			days = 360
+		}
 	}
 }

@@ -1,0 +1,183 @@
+namespace = pki_crisis
+
+country_event = {
+    id = pki_crisis.100
+    is_triggered_only = yes
+    title = pki_crisis.100.name
+    desc = pki_crisis.100.desc
+
+    picture = GFX_evt_star_chart
+    show_sound = event_yellow_alert
+
+    immediate = {
+        set_variable = {
+            which = pki_num_galaxy_systems
+            value = trigger:count_system
+        }
+        start_situation = {
+            type = situation_pki_galactic_tension
+        }
+        country_event = {
+            id = pki_crisis.102
+        }
+    }
+}
+
+# Monthly update
+country_event = {
+    id = pki_crisis.101
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        pki_is_katzenartig_imperium = yes
+    }
+
+    immediate = {
+        pki_update_galactic_tension = yes
+    }
+}
+
+# Yearly update
+country_event = {
+    id = pki_crisis.102
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        pki_is_katzenartig_imperium = yes
+    }
+
+    immediate = {
+        set_variable = {
+            which = pki_num_galaxy_systems
+            value = trigger:count_system
+        }
+        pki_update_galactic_tension = yes
+    }
+}
+
+# Galcom sanctions
+country_event = {
+    id = pki_crisis.301
+    is_triggered_only = yes
+    title = pki_crisis.301.name
+    desc = pki_crisis.301.desc
+
+    show_sound = event_conversation
+    picture = GFX_evt_signing
+
+    option = { #aw
+        name = "pki_crisis.301.a"
+        trigger = {
+            pki_is_katzenartig_imperium = no
+        }
+    }
+    option = { #:KaiserPog:
+        name = "pki_crisis.301.b"
+        trigger = {
+            pki_is_katzenartig_imperium = yes
+        }
+        add_modifier = {
+            modifier = pki_galcom_sanctions_1
+        }
+    }
+}
+
+# Start of anti-kaiser federation
+country_event = {
+    id = pki_crisis.311
+    is_triggered_only = yes
+    title = pki_crisis.311.name
+    desc = pki_crisis.311.desc
+
+    show_sound = event_conversation
+    picture = GFX_evt_spy_network
+
+    immediate = {
+
+    }
+}
+
+# Galcom sanctions again
+country_event = {
+    id = pki_crisis.401
+    is_triggered_only = yes
+    title = pki_crisis.401.name
+    desc = pki_crisis.401.desc
+
+    trigger = {
+        has_modifier = pki_galcom_sanctions_1
+    }
+
+    show_sound = event_conversation
+    picture = GFX_evt_signing
+
+    immediate = {
+        every_country = {
+            limit = {
+                has_communications = event_target:playerflusion
+            }
+            country_event = { id = pki_crisis.402 days = 60 }
+        }
+    }
+
+    option = { #aw
+        name = "pki_crisis.401.a"
+        trigger = {
+            pki_is_katzenartig_imperium = no
+        }
+    }
+    option = { #:KaiserPog:
+        name = "pki_crisis.401.b"
+        trigger = {
+            pki_is_katzenartig_imperium = yes
+        }
+        add_modifier = {
+            modifier = pki_galcom_sanctions_2
+        }
+    }
+}
+
+# Mocking the galcom
+country_event = {
+    id = pki_crisis.402
+    title = "pki_crisis.402.name"
+    desc = "pki_crisis.402.desc"
+
+    picture = GFX_evt_crisis_declared
+    show_sound = event_conversation
+    location = from
+    is_triggered_only = yes
+
+    option = { #aw
+        name = "pki_crisis.402.a"
+        trigger = {
+            pki_is_katzenartig_imperium = no
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_country_flag = pki_galcom_opponent
+                    is_part_of_galactic_council = yes
+                }
+            }
+            add_opinion_modifier = {
+                modifier = opinion_pki_mocked_galcom_1
+                who = event_target:playerflusion
+            }
+        }
+        else = {
+            add_opinion_modifier = {
+                modifier = opinion_pki_mocked_galcom_2
+                who = event_target:playerflusion
+            }
+        }
+    }
+    option = { #:KaiserPog:
+        name = "pki_crisis.402.b"
+        trigger = {
+            pki_is_katzenartig_imperium = yes
+        }
+    }
+}
