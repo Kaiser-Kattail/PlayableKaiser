@@ -137,14 +137,14 @@ d_propanian_mines = {
 		potential = {
 			is_gestalt = no
 		}
-		job_gas_extractor_add = 1
+		job_gas_extractor_add = 2
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			is_gestalt = yes
 		}
-		job_gas_extraction_drone_add = 1
+		job_gas_extraction_drone_add = 2
 	}
 	
 	drop_weight = {

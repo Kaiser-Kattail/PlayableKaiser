@@ -306,7 +306,7 @@ building_pki_katzen_terraformer = {
 #Katzen rare resources
 building_pki_katzen_synthetizer = {
 	base_buildtime = 360
-	icon = building_giga_katzen_synthetizer
+	icon = building_primitive_labs
 	category = manufacturing
 
 	potential = {
