@@ -21,7 +21,11 @@ katzensoldaten_army = {
 		}
 	}
 
-	potential = { owner = { has_origin = origin_katzen } }
+	potential = {
+		owner = {
+			pki_is_katzenartig_imperium = yes
+		}
+	}
 }
 
 angriffskatze_army = {
@@ -50,7 +54,11 @@ angriffskatze_army = {
 		}
 	}
 
-	potential = { owner = { has_origin = origin_katzen } }
+	potential = {
+		owner = {
+			pki_is_katzenartig_imperium = yes
+		}
+	}
 }
 
 gepanzertertank_army = {
@@ -77,8 +85,12 @@ gepanzertertank_army = {
 			energy = 6
 		}
 	}
-	
-	potential = { owner = { has_origin = origin_katzen } }
+
+	potential = {
+		owner = {
+			pki_is_katzenartig_imperium = yes
+		}
+	}
 }
 
 atmospharischekatzenbomber_army = {
@@ -101,7 +113,11 @@ atmospharischekatzenbomber_army = {
 			energy = 4
 		}
 	}
-	potential = { owner = { has_origin = origin_katzen } }
+	potential = {
+		owner = {
+			pki_is_katzenartig_imperium = yes
+		}
+	}
 }
 
 luftkatzenvernichter_army = {
@@ -126,7 +142,11 @@ luftkatzenvernichter_army = {
 			energy = 6
 		}
 	}
-	potential = { owner = { has_origin = origin_katzen } }
+	potential = {
+		owner = {
+			pki_is_katzenartig_imperium = yes
+		}
+	}
 }
 
 pki_riesigerkatzenpanzer_assault = {
@@ -155,7 +175,9 @@ pki_riesigerkatzenpanzer_assault = {
 	}
 	
 	potential = {
-		pki_is_katzenartig_imperium = yes
+		owner = {
+			pki_is_katzenartig_imperium = yes
+		}
 	}
 }
 

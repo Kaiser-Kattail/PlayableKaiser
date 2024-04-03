@@ -462,13 +462,13 @@ country_event = {
 				effect = {
 					change_leader_portrait = lorisvanilla
 					set_leader_flag = loris
-					save_global_event_target_as = loris
+					save_global_event_target_as = pki_loris
 					set_council_position = councilor_state
 				}
 			}
 
 			event_target:playerflusion = {
-				assign_leader = event_target:loris
+				assign_leader = event_target:pki_loris
 			}
 
 			#Create Douclaw
@@ -551,28 +551,6 @@ country_event = {
 }
 
 namespace = katzen
-
-#Solaktropa dam add
-planet_event = {
-	id = katzen.1
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		add_deposit = d_solaktropa_project
-	}
-}
-
-#Katlantropa dam add
-planet_event = {
-	id = katzen.2
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		add_deposit = d_katlantropa_project
-	}
-}
 
 #Katzen elite to soulbot
 country_event = {

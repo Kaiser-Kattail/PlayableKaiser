@@ -521,10 +521,10 @@
  luftkatzenvernichter_army: "Luftkatzenvernichter Fleet" #NT!
  luftkatzenvernichter_army_desc: "A fleet consisting of nuclear bombers, these squadrons annihilate defenses with ease. Not much will survive the devastation, however." #NT!
   
- PLAYABLE_PANZER_ARTILLERY_1: "Weltraumpanzergewehr" #NT!
+ PKI_PANZER_ARTILLERY_1: "Weltraumpanzergewehr" #NT!
  PLAYABLE_PANZER_ARTILLERY_1_DESC: "A heavy forward cannon designed for use in the Katzenweltraumpanzers." #NT!
   
- KREUZER_KANNONE: "Kreuzerkannone" #NT!
+ PKI_KREUZER_KANNONE: "Kreuzerkannone" #NT!
  KREUZER_KANNONE_DESC: "A huge forward cannon designed for use on Katzenkreuzers. Rushed development means it's not as effective as some other models, but it will do for now..." #NT!
   
  temp_job_help: "Katzen Economical Reinforcement" #NT!

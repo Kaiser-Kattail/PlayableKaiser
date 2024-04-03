@@ -552,12 +552,7 @@
    
     luftkatzenvernichter_army: "Luftkatzenvernichter Fleet"
     luftkatzenvernichter_army_desc: "A fleet consisting of nuclear bombers, these squadrons annihilate defenses with ease. Not much will survive the devastation, however."
-   
-    PLAYABLE_PANZER_ARTILLERY_1:0 "Weltraumpanzergewehr"
-    PLAYABLE_PANZER_ARTILLERY_1_DESC:0 "A heavy forward cannon designed for use in the Katzenweltraumpanzers."
-       
-    KREUZER_KANNONE:0 "Kreuzerkannone"
-    KREUZER_KANNONE_DESC:0 "A huge forward cannon designed for use on Katzenkreuzers. Rushed development means it's not as effective as some other models, but it will do for now..."
+
    
     temp_job_help:0 "Katzen Economical Reinforcement"
     temp_job_help_desc:0 "The Kaiser has ordered specific, somewhat harsh measures to ensure a smooth transition into the Flusio-Arcology."
@@ -711,9 +706,9 @@
     leader_trait_gunfur_desc:1 "This leader has fought on every type of soil and commanded every type of soldier. He blitzed his way through Roqualia, overextended and away from supply lines and continued to thrive. His capacity for autonomy should not be understated."
     NAME_gunfur: "Heinrich Gunfur"
     pki_misc.6.title: "$NAME_gunfur$"
-    pki_misc.6.desc: "§HA battle-scarred Katzen in surprisingly advanced power armor approaches the view screen. He is bedecked in dozens of awards from many Flusionian nations although the bulk comes from the Katzenartig Imperium. Their fur is greying yet they seem surprisingly young for a seemingly vaunted military leader.§!\n\n"I offer my services again to you, mein Kaiser."\n\n§HHe speaks in a rough and coarse accent of a northern Herzlander that has been long since flecked in radiation and wounds.§!"
+    pki_misc.6.desc: "§HA battle-scarred Katzen in surprisingly advanced power armor approaches the view screen. He is bedecked in dozens of awards from many Flusionian nations although the bulk comes from the Katzenartig Imperium. Their fur is greying yet they seem surprisingly young for a seemingly vaunted military leader.§!\n\n\"I offer my services again to you, mein Kaiser.\"\n\n§HHe speaks in a rough and coarse accent of a northern Herzlander that has been long since flecked in radiation and wounds.§!"
     gunfurdesc: "An elite commander, famed for commanding Dominiontracks."
-    gunfur_catch_phrase: "§L"I blitzed through Roqualia, and I hold faith that I could do it again."§!"
+    gunfur_catch_phrase: "§L\"I blitzed through Roqualia, and I hold faith that I could do it again.\"§!"
     pki_misc.6.a: "Who are you?"
     pki_misc.6.a.response: "I am Größterpanzerkommandant Heinrich Gunfur of the Riesigerkatzenpanzer Dominiontracks and conqueror of billions."
     pki_misc.6.b: "What does your army consist of?"
@@ -726,9 +721,9 @@
     leader_trait_neumeyer_desc:0 "This leader promotes a philosophy of his own design - Neumayerism. Along with bolstering planetary control through military rule, he allots additional influence to law enforcement, being made to serve as his personal lackeys."
     NAME_neumeyer: "Emmeownuel Neumayer"
     pki_misc.18.title: "$NAME_neumeyer$"
-    pki_misc.18.desc: "§HA well dressed, authoritative Katzen enters view. Sunglasses adorn his face, and after a brief moment they are taken off. He looks rather haughty, and finally looks at the screen to face the Kaiser.§!\n\n"Greetings."\n\n§HHis voice suggests a tyrant, a rather cold and disinterested tone.§!\n\n"I am a recent promotion to the rank of Katzgouverneur. What is my assignment?""
+    pki_misc.18.desc: "§HA well dressed, authoritative Katzen enters view. Sunglasses adorn his face, and after a brief moment they are taken off. He looks rather haughty, and finally looks at the screen to face the Kaiser.§!\n\n\"Greetings.\"\n\n§HHis voice suggests a tyrant, a rather cold and disinterested tone.§!\n\n\"I am a recent promotion to the rank of Katzgouverneur. What is my assignment?\""
     neumeyerdesc: "Neumayer is an oppressive autocrat, enforcing his rule through the liberal use of truncheons and military force."
-    neumeyer_catch_phrase: "§L"Together, the unterskatzen will know their place."§!"
+    neumeyer_catch_phrase: "§L\"Together, the unterskatzen will know their place.\"§!"
     pki_misc.18.a: "Who are you?"
     pki_misc.18.a.response: "I am Katzgouverneur Emmeownuel Neumayer, as I'm sure you already know."
     pki_misc.18.b: "What are you qualified to do?"
@@ -742,9 +737,9 @@
     leader_trait_schulz_effect: "Able to recruit §YMeowrine Legions§! while governing a planet."
     NAME_schulz: "Dr. Pawtto Schulz"
     schulzdesc: "Dr. Pawtto Schulz is a brilliant mind, dedicated to augmenting and refining meowrines."
-    schulz_catch_phrase: "§L"Y'know, the serum the meowrines use helps keep your fur from falling out..."§!"
+    schulz_catch_phrase: "§L\"Y'know, the serum the meowrines use helps keep your fur from falling out...\"§!"
     pki_paragons.1.title:0 "$NAME_schulz$"
-    pki_paragons.1.desc:0 "§HThe doctor is making use of a cane to enter view. He is clearly quite an old man, but the glint of cybernetics betrays the fact that he will live for quite some time.§!\n\n"Well, hello again!"\n\n§HHe is quite jovial sounding.§!\n\n"My formulas are always getting better, and my soldiers keep getting stronger. What do you say mein Kaiser?""
+    pki_paragons.1.desc:0 "§HThe doctor is making use of a cane to enter view. He is clearly quite an old man, but the glint of cybernetics betrays the fact that he will live for quite some time.§!\n\n\"Well, hello again!\"\n\n§HHe is quite jovial sounding.§!\n\n\"My formulas are always getting better, and my soldiers keep getting stronger. What do you say mein Kaiser?\""
     pki_paragons.1.a:0 "What was your old assignment?"
     pki_paragons.1.a.response: "Well, you had me begin work on the Kaiser's- or, well, I suppose your legions. Legions of space meowrines, one might say! I am an expert at the creation of super soldiers."
     pki_paragons.1.b:0 "How powerful are these soldiers?"
@@ -1006,6 +1001,9 @@
     PKI_TECH_UNLOCK_BOMBER_CONSTRUCTION_TITLE: "§HUnlocks Ship Type:§! Leerekatzenbomber"
     PKI_TECH_UNLOCK_CRUISER_CONSTRUCTION_DESC: "§HKatzenkreuzers§!\nKatzenkreuzers are the backbone of any fleet they are in, being equipped ample armor and shields, and utilizing large railguns and missile batteries to overwhelm enemies. Katzenkreuzers are also equipped with small hangar bays."
     PKI_TECH_UNLOCK_CRUISER_CONSTRUCTION_TITLE: "§HUnlocks Ship Type:§! Katzenkreuzer"
+    PKI_TECH_UNLOCK_SHIP_SECTIONS_TITLE: "§HUnlocks Sections:§! Additional Katzen Ship Sections"
+    PKI_TECH_UNLOCK_SHIP_SECTIONS_DESC: "§HAdditional Sections§!\nWith recent advances and combat experience, [owner_main_species] scientists have come up with additional ship configurations to help our efforts."
+
 
     tech_pki_submarine: "Unterraumboot"
     tech_pki_submarine_desc: "An extrapolation of the stealthy water vessels used by the Imperium's navy, Unterraumboots are equipped with powerful cloaking devices that allow them to go entirely undetected by enemy ships."
@@ -1078,3 +1076,5 @@
     pki_no_metallurgist_allocation: "No Allocation"
     pki_no_metallurgist_allocation_desc: "We will not replace any of our alloy producing jobs with §YSupertensile Jobs§!."
 
+    pki_proclaim_big_empire: "§Y$pki_misc.4.name$§!"
+    pki_proclaim_bigger_empire: "§Y$pki_misc.5.name$§!"

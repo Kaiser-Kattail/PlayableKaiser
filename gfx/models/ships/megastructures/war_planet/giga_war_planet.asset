@@ -131,33 +131,6 @@ entity = {
 	cull_radius = 10000
 	scale = @war_planet_scale
 
-	default_state = "idle"
-	state = { name = "idle" state_time = 5
-		event = { time = 0 node = "engine_large_up_01" particle = "giga_planetcraft_large_idle_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_large_up_02" particle = "giga_planetcraft_large_idle_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_large_up_03" particle = "giga_planetcraft_large_idle_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_large_up_04" particle = "giga_planetcraft_large_idle_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_large_up_05" particle = "giga_planetcraft_large_idle_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_large_down_01" particle = "giga_planetcraft_large_idle_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_large_down_02" particle = "giga_planetcraft_large_idle_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_large_down_03" particle = "giga_planetcraft_large_idle_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_large_down_04" particle = "giga_planetcraft_large_idle_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_large_down_05" particle = "giga_planetcraft_large_idle_particle" trigger_once = yes keep_particle = yes }
-		event = { trigger_once = yes sound = { soundeffect = juggernaut_fungoid_idle } }
-	}
-	state = { name = "moving" state_time = 5
-		event = { time = 0 node = "engine_large_up_01" particle = "giga_planetcraft_large_moving_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_large_up_02" particle = "giga_planetcraft_large_moving_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_large_up_03" particle = "giga_planetcraft_large_moving_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_large_up_04" particle = "giga_planetcraft_large_moving_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_large_up_05" particle = "giga_planetcraft_large_moving_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_large_down_01" particle = "giga_planetcraft_large_moving_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_large_down_02" particle = "giga_planetcraft_large_moving_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_large_down_03" particle = "giga_planetcraft_large_moving_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_large_down_04" particle = "giga_planetcraft_large_moving_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_large_down_05" particle = "giga_planetcraft_large_moving_particle" trigger_once = yes keep_particle = yes }
-		event = { sound = { soundeffect = juggernaut_fungoid_move } }
-	}
 	state = { name = "death" state_time = 5
 		event = { time = 0 node = "explosion_locator1" particle = "ship_explosion_particle" trigger_once = yes keep_particle = yes sound = { soundeffect = "station_explosion_small" } }
 		event = { time = 1 node = "explosion_locator2" particle = "ship_explosion_particle" trigger_once = yes keep_particle = yes sound = { soundeffect = "station_explosion_large" } }
@@ -223,6 +196,35 @@ entity = {
 	pdxmesh = "war_planet_sternthrusters_mesh"
 	cull_radius = 10000
 	scale = @war_planet_scale
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 5
+		event = { time = 0 node = "engine_large_up_01" particle = "giga_planetcraft_large_idle_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_up_02" particle = "giga_planetcraft_large_idle_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_up_03" particle = "giga_planetcraft_large_idle_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_up_04" particle = "giga_planetcraft_large_idle_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_up_05" particle = "giga_planetcraft_large_idle_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_down_01" particle = "giga_planetcraft_large_idle_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_down_02" particle = "giga_planetcraft_large_idle_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_down_03" particle = "giga_planetcraft_large_idle_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_down_04" particle = "giga_planetcraft_large_idle_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_down_05" particle = "giga_planetcraft_large_idle_particle" trigger_once = yes keep_particle = yes }
+		event = { trigger_once = yes sound = { soundeffect = juggernaut_fungoid_idle } }
+	}
+
+	state = { name = "moving" state_time = 5
+		event = { time = 0 node = "engine_large_up_01" particle = "giga_planetcraft_large_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_up_02" particle = "giga_planetcraft_large_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_up_03" particle = "giga_planetcraft_large_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_up_04" particle = "giga_planetcraft_large_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_up_05" particle = "giga_planetcraft_large_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_down_01" particle = "giga_planetcraft_large_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_down_02" particle = "giga_planetcraft_large_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_down_03" particle = "giga_planetcraft_large_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_down_04" particle = "giga_planetcraft_large_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_down_05" particle = "giga_planetcraft_large_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { sound = { soundeffect = juggernaut_fungoid_move } }
+	}
 }
 
 entity = {

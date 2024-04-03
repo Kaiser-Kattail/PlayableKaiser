@@ -76,30 +76,30 @@ ship_design = {
 	name = "Kaiser Behemoth Planet"
 	ship_size = giga_planet_behemoth
 	section = {
-		template = "kaiser_planet_bowgun_01_key"
+		template = pki_kaiser_planet_bowgun_01_key
 		slot = "bowgun"
 	}
 
 	section = {
-		template = "kaiser_planet_bow_01_key"
+		template = pki_kaiser_planet_bow_01_key
 		slot = "bow"
 
 	}
 
 	section = {
-		template = "kaiser_planet_mid_01_key"
+		template = pki_kaiser_planet_mid_01_key
 		slot = "mid"
 
 	}
 
 	section = {
-		template = "kaiser_planet_stern_01_key"
+		template = pki_kaiser_planet_stern_01_key
 		slot = "stern"
 
 	}
 
 	section = {
-		template = "kaiser_planet_sternthrusters_01_key"
+		template = pki_kaiser_planet_sternthrusters_01_key
 		slot = "sternthrusters"
 
 	}
