@@ -1,0 +1,431 @@
+@section_cost = 30
+
+# BOW: 8 S slots equivalent
+
+ship_section_template = {
+	key = "PKI_CRUISER_BOW_X1"
+	ship_size = pki_cruiser
+	fits_on_slot = bow
+	should_draw_components = yes
+	entity = "katzen_cruiser_bow_entity"
+	icon = "GFX_ship_part_core_bow"
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "xl_gun_01"
+	}
+
+	large_utility_slots = 3
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}
+
+ship_section_template = {
+	key = "PKI_CRUISER_BOW_L1M1S2"
+	ship_size = pki_cruiser
+	fits_on_slot = bow
+	should_draw_components = yes
+	entity = "katzen_cruiser_bow_entity"
+	icon = "GFX_ship_part_core_bow"
+
+	prerequisites = { tech_pki_ship_sections }
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "invisible_large_turret"
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "invisible_medium_turret"
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "small_gun_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "small_gun_02"
+	}
+
+	large_utility_slots = 3
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}
+
+# MID: 12 S slots equivalent
+
+ship_section_template = {
+	key = "PKI_CRUISER_MID_L2M2"
+	ship_size = pki_cruiser
+	fits_on_slot = mid
+	should_draw_components = yes
+	entity = "katzen_cruiser_mid_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "medium_gun_02"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "medium_gun_03"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "medium_gun_04"
+	}
+
+	large_utility_slots = 3
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}
+
+ship_section_template = {
+	key = "PKI_CRUISER_MID_H3P2"
+	ship_size = pki_cruiser
+	fits_on_slot = mid
+	should_draw_components = yes
+	entity = "katzen_cruiser_mid_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	prerequisites = { tech_pki_ship_sections }
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		rotation = 0
+		locatorname = "large_hangarbay_L"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		rotation = 0
+		locatorname = "large_hangarbay_R"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		rotation = 0
+		locatorname = "strike_craft_locator_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "point_defence_turret"
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_04"
+		template = "point_defence_turret"
+		locatorname = "medium_gun_02"
+	}
+
+	large_utility_slots = 3
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}
+
+# STERN: 4 S slots equivalent
+
+ship_section_template = {
+	key = "PKI_CRUISER_STERN_M1S2"
+	ship_size = pki_cruiser
+	fits_on_slot = stern
+	should_draw_components = yes
+	entity = "katzen_cruiser_stern_entity"
+	icon = "GFX_ship_part_core_stern"
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "invisible_large_turret"
+		locatorname = "medium_gun_01"
+
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "medium_gun_02"
+	}
+
+	aux_utility_slots = 2
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}
+
+ship_section_template = {
+	key = "PKI_CRUISER_STERN_S2P2"
+	ship_size = pki_cruiser
+	fits_on_slot = stern
+	should_draw_components = yes
+	entity = "katzen_cruiser_stern_entity"
+	icon = "GFX_ship_part_core_stern"
+
+	prerequisites = { tech_pki_ship_sections }
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "medium_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "invisible_point_defence_turret"
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_04"
+		template = "invisible_point_defence_turret"
+		locatorname = "medium_gun_02"
+	}
+
+	aux_utility_slots = 3
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}
+
+###SPACE PANZER###
+ship_section_template = {
+	key = "PKI_SPACE_PANZER_L1P1S1" ### Horribly unbalanced 6 s slots jesus
+	ship_size = pki_panzer
+	fits_on_slot = "mid"
+	entity = "katzen_panzer_full_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = { name = "LARGE_1"		template = "giga_invisible_large_fixed"		locatorname = "gun" }
+	component_slot = { name = "POINT_DEFENCE_01"	template = "invisible_point_defence_turret"			locatorname = "loc102" }
+	component_slot = { name = "SMALL_1"		template = "giga_invisible_small_fixed"	rotation = 180	locatorname = "loc102" }
+
+	small_utility_slots = 2
+	aux_utility_slots = 1
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}
+
+ship_section_template = {
+	key = "PKI_SPACE_PANZER_3L"
+	ship_size = pki_panzer
+	fits_on_slot = "mid"
+	entity = "pki_panzer_3L_full_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	prerequisites = { tech_pki_ship_sections }
+
+	component_slot = { name = "LARGE_1"		template = "giga_invisible_large_fixed"		locatorname = "gun" }
+	component_slot = { name = "LARGE_2"		template = "giga_invisible_large_fixed"		locatorname = "gun" }
+	component_slot = { name = "LARGE_3"		template = "giga_invisible_large_fixed"		locatorname = "gun" }
+
+	small_utility_slots = 1
+	aux_utility_slots = 1
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = 80
+		}
+	}
+}
+
+###SPACE BOMBER###
+ship_section_template = {
+	key = "PKI_SPACE_BOMBER_G5"
+	ship_size = pki_bomber
+	fits_on_slot = "mid"
+	entity = "katzen_plane_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	prerequisites = { tech_torpedoes_1 }
+
+	component_slot = { name = "MISSILE_01"			template = "medium_missile_turret"			locatorname = "gun_1" }
+	component_slot = { name = "MISSILE_02"			template = "medium_missile_turret"			locatorname = "gun_2" }
+	component_slot = { name = "MISSILE_03"			template = "medium_missile_turret"			locatorname = "gun_3" }
+	component_slot = { name = "MISSILE_04"			template = "medium_missile_turret"			locatorname = "gun_4" }
+	component_slot = { name = "MISSILE_05"			template = "medium_missile_turret"			locatorname = "gun_5" }
+
+	medium_utility_slots = 5
+	aux_utility_slots = 2
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = 80
+		}
+	}
+}
+
+ship_section_template = {
+	key = "PKI_SPACE_BOMBER_L2S4"
+	ship_size = pki_bomber
+	fits_on_slot = "mid"
+	entity = "katzen_plane_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = { name = "SMALL_1"		template = "small_turret"					locatorname = "gun_2" }
+	component_slot = { name = "SMALL_2"		template = "small_turret"					locatorname = "gun_3" }
+	component_slot = { name = "SMALL_3"		template = "small_turret"					locatorname = "gun_4" }
+	component_slot = { name = "SMALL_4"		template = "small_turret"					locatorname = "gun_5" }
+	component_slot = { name = "LARGE_1"			template = "large_turret"		locatorname = "xl_gun_01" }
+	component_slot = { name = "LARGE_1"			template = "large_turret"		locatorname = "xl_gun_02" }
+
+	medium_utility_slots = 5
+	aux_utility_slots = 2
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = 80
+		}
+	}
+}
+
+ship_section_template = {
+	key = "PKI_SPACE_BOMBER_L1M4"
+	ship_size = pki_bomber
+	fits_on_slot = "mid"
+	entity = "katzen_plane_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	prerequisites = { tech_pki_ship_sections }
+
+	component_slot = { name = "MEDIUM_GUN_01"		template = "medium_turret"					locatorname = "gun_2" } #Medium guns
+	component_slot = { name = "MEDIUM_GUN_02"		template = "medium_turret"					locatorname = "gun_3" }
+	component_slot = { name = "MEDIUM_GUN_03"		template = "medium_turret"					locatorname = "gun_4" }
+	component_slot = { name = "MEDIUM_GUN_04"		template = "medium_turret"					locatorname = "gun_5" }
+	component_slot = { name = "LARGE_1"			template = "large_turret"		locatorname = "gun_1" }
+
+	medium_utility_slots = 5
+	aux_utility_slots = 2
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = 80
+		}
+	}
+}
+
+###SPACE SUBMARINE###
+ship_section_template = {
+	key = "PKI_SPACE_SUBMARINE"
+	ship_size = pki_submarine
+	fits_on_slot = "mid"
+	entity = "katzen_submarine_full_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	ai_tags = { explosive explosive_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	ai_weight = {
+		modifier = {
+			factor = 10.0
+			is_preferred_weapons = weapon_type_explosive
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { is_preferred_weapons = weapon_type_explosive }
+		}
+	}
+
+	component_slot = { name = "MISSILE_01"			template = "medium_missile_turret"			locatorname = "loc101" }
+	component_slot = { name = "MISSILE_02"			template = "medium_missile_turret"			locatorname = "loc101" }
+	component_slot = { name = "MISSILE_03"			template = "medium_missile_turret"			locatorname = "loc101" }
+
+	medium_utility_slots = 3
+	aux_utility_slots = 1
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}
+
+## 16 s slots
+ship_section_template = {
+	key = "PKI_DEFENCE_ARRAY"
+	ship_size = pki_warforge_platform
+	fits_on_slot = "mid"
+	icon = "GFX_ship_part_core_mid"
+	entity = "pki_warforge_platform_planet_entity"
+
+	component_slot = { name = "KINETIC_01"			template = "large_turret"							locatorname = "medium_gun_01" }
+	component_slot = { name = "MEDIUM_GUN_01"		template = "medium_turret"							locatorname = "medium_gun_02" }
+	component_slot = { name = "MEDIUM_GUN_02"		template = "medium_turret"							locatorname = "medium_gun_03" }
+	component_slot = { name = "MEDIUM_GUN_03"		template = "medium_turret"							locatorname = "medium_gun_04" }
+	component_slot = { name = "MEDIUM_GUN_04"		template = "medium_turret"							locatorname = "medium_gun_05" }
+	component_slot = { name = "MEDIUM_GUN_05"		template = "medium_turret"							locatorname = "medium_gun_06" }
+	component_slot = { name = "MEDIUM_GUN_06"		template = "medium_turret"							locatorname = "medium_gun_07" }
+
+
+	large_utility_slots = 4
+	aux_utility_slots = 2
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}

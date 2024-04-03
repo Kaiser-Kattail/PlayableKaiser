@@ -5,7 +5,7 @@
 @very_high_strength	= 5
 
 utility_component_template = {
-	key = "SUBMARINE_CLOAKING_1"
+	key = PKI_SUBMARINE_CLOAKING_1
 	size = aux
 	icon = "GFX_ship_part_cloak_1"
 	icon_frame = 1
@@ -47,7 +47,7 @@ utility_component_template = {
 	}
 	prerequisites = { "tech_cloaking_1" }
 	component_set = "CLOAKING_1"
-	upgrades_to = "SUBMARINE_CLOAKING_2"
+	upgrades_to = PKI_SUBMARINE_CLOAKING_2
 	ai_tags = {
 		gunship_stealth
 		explosive_stealth
@@ -65,7 +65,7 @@ utility_component_template = {
 
 # Advanced Cloaking Device
 utility_component_template = {
-	key = "SUBMARINE_CLOAKING_2"
+	key = PKI_SUBMARINE_CLOAKING_2
 	size = aux
 	icon = "GFX_ship_part_cloak_2"
 	icon_frame = 1
@@ -101,14 +101,14 @@ utility_component_template = {
 	
 	size_restriction = { pki_submarine }
 	blocked_by = {
-		SUBMARINE_CLOAKING_1
-		SUBMARINE_CLOAKING_3
-		SUBMARINE_CLOAKING_DARK_MATTER
-		SUBMARINE_CLOAKING_PSI
+		PKI_SUBMARINE_CLOAKING_1
+		PKI_SUBMARINE_CLOAKING_3
+		PKI_SUBMARINE_CLOAKING_DARK_MATTER
+		PKI_SUBMARINE_CLOAKING_PSI
 	}
 	prerequisites = { "tech_cloaking_2" }
 	component_set = "CLOAKING_2"
-	upgrades_to = "SUBMARINE_CLOAKING_3"
+	upgrades_to = PKI_SUBMARINE_CLOAKING_3
 	ai_tags = {
 		gunship_stealth
 		explosive_stealth
@@ -125,7 +125,7 @@ utility_component_template = {
 
 # Elite Cloaking Device
 utility_component_template = {
-	key = "SUBMARINE_CLOAKING_3"
+	key = PKI_SUBMARINE_CLOAKING_3
 	size = aux
 	icon = "GFX_ship_part_cloak_3"
 	icon_frame = 1
@@ -159,10 +159,10 @@ utility_component_template = {
 
 	ship_limit = 1
 	blocked_by = {
-		SUBMARINE_CLOAKING_1
-		SUBMARINE_CLOAKING_2
-		SUBMARINE_CLOAKING_DARK_MATTER
-		SUBMARINE_CLOAKING_PSI
+		PKI_SUBMARINE_CLOAKING_1
+		PKI_SUBMARINE_CLOAKING_2
+		PKI_SUBMARINE_CLOAKING_DARK_MATTER
+		PKI_SUBMARINE_CLOAKING_PSI
 	}
 	size_restriction = { pki_submarine }
 	prerequisites = { "tech_cloaking_3" }
@@ -183,7 +183,7 @@ utility_component_template = {
 
 # Dark Matter Cloaking Device
 utility_component_template = {
-	key = "SUBMARINE_CLOAKING_DARK_MATTER"
+	key = PKI_SUBMARINE_CLOAKING_DARK_MATTER
 	size = aux
 	icon = "GFX_ship_part_cloak_dark_matter"
 	icon_frame = 1
@@ -217,10 +217,10 @@ utility_component_template = {
 
 	ship_limit = 1
 	blocked_by = {
-		SUBMARINE_CLOAKING_1
-		SUBMARINE_CLOAKING_2
-		SUBMARINE_CLOAKING_3
-		SUBMARINE_CLOAKING_PSI
+		PKI_SUBMARINE_CLOAKING_1
+		PKI_SUBMARINE_CLOAKING_2
+		PKI_SUBMARINE_CLOAKING_3
+		PKI_SUBMARINE_CLOAKING_PSI
 	}
 	size_restriction = { pki_submarine }
 	prerequisites = { "tech_cloaking_dark_matter" }
@@ -241,7 +241,7 @@ utility_component_template = {
 
 # Psionic Cloaking Device
 utility_component_template = {
-	key = "SUBMARINE_CLOAKING_PSI"
+	key = PKI_SUBMARINE_CLOAKING_PSI
 	size = aux
 	icon = "GFX_ship_part_cloak_psi"
 	icon_frame = 1
@@ -276,10 +276,10 @@ utility_component_template = {
 
 	ship_limit = 1
 	blocked_by = {
-		SUBMARINE_CLOAKING_1
-		SUBMARINE_CLOAKING_2
-		SUBMARINE_CLOAKING_3
-		SUBMARINE_CLOAKING_DARK_MATTER
+		PKI_SUBMARINE_CLOAKING_1
+		PKI_SUBMARINE_CLOAKING_2
+		PKI_SUBMARINE_CLOAKING_3
+		PKI_SUBMARINE_CLOAKING_DARK_MATTER
 	}
 	size_restriction = { pki_submarine }
 	prerequisites = { "tech_cloaking_psi" }

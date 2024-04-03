@@ -1,5 +1,5 @@
 ship_section_template = {
-	key = "kaiser_planet_bowgun_01_key"
+	key = pki_kaiser_planet_bowgun_01_key
 	ship_size = giga_planet_behemoth
 	fits_on_slot = "bowgun"
 	entity = "kaiser_planet_bowgun_entity"
@@ -34,7 +34,7 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "kaiser_planet_bow_01_key"
+	key = pki_kaiser_planet_bow_01_key
 	ship_size = giga_planet_behemoth
 	fits_on_slot = "bow"
 	entity = "kaiser_planet_bow_entity"
@@ -69,7 +69,7 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "kaiser_planet_mid_01_key"
+	key = pki_kaiser_planet_mid_01_key
 	ship_size = giga_planet_behemoth
 	fits_on_slot = "mid"
 	entity = "kaiser_planet_mid_entity"
@@ -104,7 +104,7 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "kaiser_planet_stern_01_key"
+	key = pki_kaiser_planet_stern_01_key
 	ship_size = giga_planet_behemoth
 	fits_on_slot = "stern"
 	entity = "kaiser_planet_stern_entity"
@@ -139,7 +139,7 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "kaiser_planet_sternthrusters_01_key"
+	key = pki_kaiser_planet_sternthrusters_01_key
 	ship_size = giga_planet_behemoth
 	fits_on_slot = "sternthrusters"
 	entity = "kaiser_planet_sternthrusters_entity"

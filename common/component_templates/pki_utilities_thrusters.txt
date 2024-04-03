@@ -30,18 +30,6 @@
 @battleship_power_4 = -200
 @battleship_power_5 = -240
 
-@titan_power_1 = -160
-@titan_power_2 = -240
-@titan_power_3 = -320
-@titan_power_4 = -400
-@titan_power_5 = -480
-
-@colossus_power_1 = -200
-@colossus_power_2 = -300
-@colossus_power_3 = -400
-@colossus_power_4 = -500
-@colossus_power_5 = -600
-
 @destroyer_cost1 = 6
 @destroyer_cost2 = 12
 @destroyer_cost3 = 18
@@ -60,18 +48,6 @@
 @battleship_cost4 = 96
 @battleship_cost5 = 120
 
-@titan_cost1 = 48
-@titan_cost2 = 96
-@titan_cost3 = 144
-@titan_cost4 = 192
-@titan_cost5 = 240
-
-@colossus_cost1 = 60
-@colossus_cost2 = 120
-@colossus_cost3 = 180
-@colossus_cost4 = 240
-@colossus_cost5 = 300
-
 
 #############
 # THRUSTERS #
@@ -81,7 +57,7 @@
 
 
 utility_component_template = {
-	key = "KATDESTROYER_SHIP_THRUSTER_1"
+	key = PKI_DESTROYER_SHIP_THRUSTER_1
 	size = small
 	icon = "GFX_ship_part_thruster_1"
 	icon_frame = 1
@@ -98,8 +74,8 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_1" }
 	component_set = pki_katzen_thruster_components
-	size_restriction = { pki_panzer }
-	upgrades_to = "KATDESTROYER_SHIP_THRUSTER_2"
+	size_restriction = { pki_panzer pki_submarine }
+	upgrades_to = PKI_DESTROYER_SHIP_THRUSTER_2
 
 	ai_weight = {
 		weight = 1
@@ -107,7 +83,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATCRUISER_SHIP_THRUSTER_1"
+	key = PKI_CRUISER_SHIP_THRUSTER_1
 	size = small
 	icon = "GFX_ship_part_thruster_1"
 	icon_frame = 1
@@ -124,8 +100,8 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_1" }
 	component_set = pki_katzen_thruster_components
-	size_restriction = { pki_bomber pki_submarine }
-	upgrades_to = "KATCRUISER_SHIP_THRUSTER_2"
+	size_restriction = { pki_bomber }
+	upgrades_to = PKI_CRUISER_SHIP_THRUSTER_2
 
 	ai_weight = {
 		weight = 1
@@ -134,15 +110,15 @@ utility_component_template = {
 
 
 utility_component_template = {
-	key = "KATTITAN_SHIP_THRUSTER_1"
+	key = PKI_BATTLESHIP_SHIP_THRUSTER_1
 	size = small
 	icon = "GFX_ship_part_thruster_1"
 	icon_frame = 1
-	power = @titan_power_1
+	power = @battleship_power_1
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @titan_cost1
+			alloys = @battleship_cost1
 		}
 	}
 
@@ -152,7 +128,7 @@ utility_component_template = {
 	prerequisites = { "tech_thrusters_1" }
 	component_set = pki_katzen_thruster_components
 	size_restriction = { pki_cruiser }
-	upgrades_to = "KATTITAN_SHIP_THRUSTER_2"
+	upgrades_to = PKI_BATTLESHIP_SHIP_THRUSTER_2
 
 	ai_weight = {
 		weight = 1
@@ -162,7 +138,7 @@ utility_component_template = {
 ### 2
 
 utility_component_template = {
-	key = "KATDESTROYER_SHIP_THRUSTER_2"
+	key = PKI_DESTROYER_SHIP_THRUSTER_2
 	size = small
 	icon = "GFX_ship_part_thruster_2"
 	icon_frame = 1
@@ -181,8 +157,8 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_2" }
 	component_set = pki_katzen_thruster_components
-	size_restriction = { pki_panzer }
-	upgrades_to = "KATDESTROYER_SHIP_THRUSTER_3"
+	size_restriction = { pki_panzer pki_submarine }
+	upgrades_to = PKI_DESTROYER_SHIP_THRUSTER_3
 
 	ai_weight = {
 		weight = 2
@@ -190,7 +166,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATCRUISER_SHIP_THRUSTER_2"
+	key = PKI_CRUISER_SHIP_THRUSTER_2
 	size = small
 	icon = "GFX_ship_part_thruster_2"
 	icon_frame = 1
@@ -209,8 +185,8 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_2" }
 	component_set = pki_katzen_thruster_components
-	size_restriction = { pki_bomber pki_submarine }
-	upgrades_to = "KATCRUISER_SHIP_THRUSTER_3"
+	size_restriction = { pki_bomber  }
+	upgrades_to = PKI_CRUISER_SHIP_THRUSTER_3
 
 	ai_weight = {
 		weight = 2
@@ -218,27 +194,27 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATTITAN_SHIP_THRUSTER_2"
+	key = PKI_BATTLESHIP_SHIP_THRUSTER_2
 	size = small
 	icon = "GFX_ship_part_thruster_2"
 	icon_frame = 1
-	power = @titan_power_2
+	power = @battleship_power_2
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @titan_cost2
+			alloys = @battleship_cost2
 		}
 	}
 
 	modifier = {
 		ship_base_speed_mult = 0.25
-		ship_evasion_add = 1
+		ship_evasion_add = 2
 	}
 
 	prerequisites = { "tech_thrusters_2" }
 	component_set = pki_katzen_thruster_components
 	size_restriction = { pki_cruiser }
-	upgrades_to = "KATTITAN_SHIP_THRUSTER_3"
+	upgrades_to = PKI_BATTLESHIP_SHIP_THRUSTER_3
 
 	ai_weight = {
 		weight = 2
@@ -246,7 +222,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATDESTROYER_SHIP_THRUSTER_3"
+	key = PKI_DESTROYER_SHIP_THRUSTER_3
 	size = small
 	icon = "GFX_ship_part_thruster_3"
 	icon_frame = 1
@@ -264,8 +240,8 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_3" }
 	component_set = pki_katzen_thruster_components
-	size_restriction = { pki_panzer }
-	upgrades_to = "KATDESTROYER_SHIP_THRUSTER_4"
+	size_restriction = { pki_panzer pki_submarine }
+	upgrades_to = PKI_DESTROYER_SHIP_THRUSTER_4
 
 	ai_weight = {
 		weight = 3
@@ -273,7 +249,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATCRUISER_SHIP_THRUSTER_3"
+	key = PKI_CRUISER_SHIP_THRUSTER_3
 	size = small
 	icon = "GFX_ship_part_thruster_3"
 	icon_frame = 1
@@ -291,8 +267,8 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_3" }
 	component_set = pki_katzen_thruster_components
-	size_restriction = { pki_bomber pki_submarine }
-	upgrades_to = "KATCRUISER_SHIP_THRUSTER_4"
+	size_restriction = { pki_bomber  }
+	upgrades_to = PKI_CRUISER_SHIP_THRUSTER_4
 
 	ai_weight = {
 		weight = 3
@@ -300,26 +276,26 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATTITAN_SHIP_THRUSTER_3"
+	key = PKI_BATTLESHIP_SHIP_THRUSTER_3
 	size = small
 	icon = "GFX_ship_part_thruster_3"
 	icon_frame = 1
-	power = @titan_power_3
+	power = @battleship_power_3
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @titan_cost3
+			alloys = @battleship_cost3
 		}
 	}
 	modifier = {
 		ship_base_speed_mult = 0.50
-		ship_evasion_add = 2
+		ship_evasion_add = 4
 	}
 
 	prerequisites = { "tech_thrusters_3" }
 	component_set = pki_katzen_thruster_components
 	size_restriction = { pki_cruiser }
-	upgrades_to = "KATTITAN_SHIP_THRUSTER_4"
+	upgrades_to = PKI_BATTLESHIP_SHIP_THRUSTER_4
 
 	ai_weight = {
 		weight = 3
@@ -327,7 +303,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATDESTROYER_SHIP_THRUSTER_4"
+	key = PKI_DESTROYER_SHIP_THRUSTER_4
 	size = small
 	icon = "GFX_ship_part_thruster_4"
 	icon_frame = 1
@@ -345,8 +321,8 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_4" }
 	component_set = pki_katzen_thruster_components
-	size_restriction = { pki_panzer }
-	upgrades_to = "KATDESTROYER_SHIP_THRUSTER_5"
+	size_restriction = { pki_panzer pki_submarine }
+	upgrades_to = PKI_DESTROYER_SHIP_THRUSTER_5
 
 	ai_weight = {
 		weight = 4
@@ -354,7 +330,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATCRUISER_SHIP_THRUSTER_4"
+	key = PKI_CRUISER_SHIP_THRUSTER_4
 	size = small
 	icon = "GFX_ship_part_thruster_4"
 	icon_frame = 1
@@ -372,8 +348,8 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_4" }
 	component_set = pki_katzen_thruster_components
-	size_restriction = { pki_bomber pki_submarine }
-	upgrades_to = "KATCRUISER_SHIP_THRUSTER_5"
+	size_restriction = { pki_bomber  }
+	upgrades_to = PKI_CRUISER_SHIP_THRUSTER_5
 
 	ai_weight = {
 		weight = 0
@@ -381,26 +357,26 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATTITAN_SHIP_THRUSTER_4"
+	key = PKI_BATTLESHIP_SHIP_THRUSTER_4
 	size = small
 	icon = "GFX_ship_part_thruster_4"
 	icon_frame = 1
-	power = @titan_power_4
+	power = @battleship_power_4
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @titan_cost4
+			alloys = @battleship_cost4
 		}
 	}
 	modifier = {
 		ship_base_speed_mult = 0.75
-		ship_evasion_add = 3
+		ship_evasion_add = 6
 	}
 
 	prerequisites = { "tech_thrusters_4" }
 	component_set = pki_katzen_thruster_components
 	size_restriction = { pki_cruiser }
-	upgrades_to = "KATTITAN_SHIP_THRUSTER_5"
+	upgrades_to = PKI_BATTLESHIP_SHIP_THRUSTER_5
 
 	ai_weight = {
 		weight = 4
@@ -408,7 +384,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATDESTROYER_SHIP_THRUSTER_5"
+	key = PKI_DESTROYER_SHIP_THRUSTER_5
 	size = small
 	icon = "GFX_ship_part_thruster_5"
 	icon_frame = 1
@@ -427,7 +403,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_dark_matter_propulsion" }
 	component_set = pki_katzen_thruster_components
-	size_restriction = { pki_panzer }
+	size_restriction = { pki_panzer pki_submarine }
 
 	ai_weight = {
 		weight = 5
@@ -435,7 +411,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATCRUISER_SHIP_THRUSTER_5"
+	key = PKI_CRUISER_SHIP_THRUSTER_5
 	size = small
 	icon = "GFX_ship_part_thruster_5"
 	icon_frame = 1
@@ -454,7 +430,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_dark_matter_propulsion" }
 	component_set = pki_katzen_thruster_components
-	size_restriction = { pki_bomber pki_submarine }
+	size_restriction = { pki_bomber  }
 
 	ai_weight = {
 		weight = 5
@@ -462,21 +438,21 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATTITAN_SHIP_THRUSTER_5"
+	key = PKI_BATTLESHIP_SHIP_THRUSTER_5
 	size = small
 	icon = "GFX_ship_part_thruster_5"
 	icon_frame = 1
-	power = @titan_power_5
+	power = @battleship_power_5
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @titan_cost4
+			alloys = @battleship_cost5
 			sr_dark_matter = 16
 		}
 	}
 	modifier = {
 		ship_base_speed_mult = 1.25
-		ship_evasion_add = 4
+		ship_evasion_add = 8
 	}
 
 	prerequisites = { "tech_dark_matter_propulsion" }

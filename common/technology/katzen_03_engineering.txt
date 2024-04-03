@@ -202,7 +202,7 @@ tech_pki_panzer = {
 	tier = 2
 	category = { voidcraft }
 	prerequisites = { "tech_destroyers" }
-	weight = @tier2weight1
+	weight = @tier1weight1
 
 	potential = {
 		OR = {
@@ -263,8 +263,8 @@ tech_pki_bomber = {
 	area = engineering
 	tier = 3
 	category = { voidcraft }
-	prerequisites = { "tech_cruisers" }
-	weight = @tier3weight1
+	prerequisites = { "tech_pki_panzer" }
+	weight = @tier1weight1
 
 	is_rare = yes
 
@@ -325,8 +325,8 @@ tech_pki_cruiser = {
 	area = engineering
 	tier = 4
 	category = { voidcraft }
-	prerequisites = { "tech_battleships" }
-	weight = @tier4weight1
+	prerequisites = { "tech_pki_bomber" }
+	weight = @tier1weight1
 
 	is_rare = yes
 
@@ -356,6 +356,59 @@ tech_pki_cruiser = {
 		modifier = {
 			factor = 15
 			has_technology = tech_battleships
+		}
+		modifier = {
+			factor = 2
+			years_passed > 60
+		}
+		modifier = {
+			factor = 3
+			years_passed > 65
+		}
+		modifier = {
+			factor = 4
+			years_passed > 70
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+	}
+
+	ai_weight = {
+		factor = @ai_ship_types_factor
+	}
+}
+
+tech_pki_ship_sections = {
+	cost = @tier4cost1
+	area = engineering
+	tier = 4
+	category = { voidcraft }
+	prerequisites = { "tech_pki_bomber" "tech_pki_cruiser" "tech_pki_panzer" }
+	weight = @tier1weight1
+
+	is_rare = yes
+
+	potential = {
+		pki_is_katzenartig_imperium = yes
+	}
+
+	prereqfor_desc = {
+		ship = {
+			title = "PKI_TECH_UNLOCK_SHIP_SECTIONS_TITLE"
+			desc = "PKI_TECH_UNLOCK_SHIP_SECTIONS_DESC"
+		}
+	}
+
+	modifier = {
+		ship_experience_gain_mult = 0.05
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOT = { years_passed > 50 }
 		}
 		modifier = {
 			factor = 2

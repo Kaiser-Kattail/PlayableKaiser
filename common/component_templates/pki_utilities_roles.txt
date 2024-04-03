@@ -13,7 +13,7 @@
 ####################
 
 utility_component_template = {
-	key = "KATZEN_COMBAT_COMPUTER_DEFAULT"
+	key = PKI_COMBAT_COMPUTER_DEFAULT
 	size = small
 	icon = "GFX_ship_part_computer_default"
 	icon_frame = 1
@@ -34,7 +34,7 @@ utility_component_template = {
 
 
 utility_component_template = {
-	key = "KATZEN_COMBAT_COMPUTER_LINE_DEFAULT"
+	key = PKI_COMBAT_COMPUTER_LINE_DEFAULT
 	size = small
 	icon = "GFX_ship_part_computer_default"
 	icon_frame = 1
@@ -48,9 +48,9 @@ utility_component_template = {
 	ship_behavior = "line"
 
 	class_restriction = { shipclass_military }
-	size_restriction = { pki_bomber pki_panzer }
+	size_restriction = { pki_bomber pki_panzer pki_cruiser }
 	component_set = pki_katzen_combat_computers
-	upgrades_to = "KATZEN_COMBAT_COMPUTER_LINE_BASIC"
+	upgrades_to = PKI_COMBAT_COMPUTER_LINE_BASIC
 
 	ai_weight = {
 		weight = 0
@@ -58,31 +58,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATZEN_COMBAT_COMPUTER_ARTILLERY_DEFAULT"
-	size = small
-	icon = "GFX_ship_part_computer_default"
-	icon_frame = 1
-	power = @power0
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @cost0
-		}
-	}
-	ship_behavior = "artillery"
-
-	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { pki_cruiser }
-	component_set = pki_katzen_combat_computers
-	upgrades_to = "KATZEN_COMBAT_COMPUTER_ARTILLERY_BASIC"
-
-	ai_weight = {
-		weight = 0
-	}
-}
-
-utility_component_template = {
-	key = "SUBMARINE_COMPUTER_DEFAULT"
+	key = PKI_SUBMARINE_COMPUTER_DEFAULT
 	size = small
 	icon = "GFX_ship_part_computer_default"
 	icon_frame = 1
@@ -97,8 +73,8 @@ utility_component_template = {
 	class_restriction = { shipclass_military }
 	size_restriction = { pki_submarine }
 	component_set = pki_katzen_combat_computers
-	ship_behavior = "giga_katzen_submarine"
-	upgrades_to = "SUBMARINE_COMPUTER_BASIC"
+	ship_behavior = "pki_giga_katzen_submarine"
+	upgrades_to = PKI_SUBMARINE_COMPUTER_BASIC
 	ai_tags = { explosive explosive_stealth }
 	ai_tag_weight = 0
 
@@ -112,7 +88,7 @@ utility_component_template = {
 #####################
 
 utility_component_template = {
-	key = "KATZEN_COMBAT_COMPUTER_SWARM_BASIC"
+	key = PKI_COMBAT_COMPUTER_SWARM_BASIC
 	size = small
 	icon = "GFX_ship_part_computer_swarm_basic"
 	icon_frame = 1
@@ -143,7 +119,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATZEN_COMBAT_COMPUTER_SWARM_ADVANCED"
+	key = PKI_COMBAT_COMPUTER_SWARM_ADVANCED
 	size = small
 	icon = "GFX_ship_part_computer_swarm_advanced"
 	icon_frame = 1
@@ -176,7 +152,7 @@ utility_component_template = {
 # 'PICKET' COMPUTERS #
 ######################
 utility_component_template = {
-	key = "KATZEN_COMBAT_COMPUTER_PICKET_BASIC"
+	key = PKI_COMBAT_COMPUTER_PICKET_BASIC
 	size = small
 	icon = "GFX_ship_part_computer_picket_basic"
 	icon_frame = 1
@@ -192,7 +168,7 @@ utility_component_template = {
 	component_set = pki_katzen_combat_computers
 	ship_behavior = "picket"
 	prerequisites = { "tech_combat_computers_1" }
-	upgrades_to = "KATZEN_COMBAT_COMPUTER_PICKET_ADVANCED"
+	upgrades_to = PKI_COMBAT_COMPUTER_PICKET_ADVANCED
 
 	ship_modifier = {
 		ship_fire_rate_mult = 0.05
@@ -205,7 +181,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATZEN_COMBAT_COMPUTER_PICKET_ADVANCED"
+	key = PKI_COMBAT_COMPUTER_PICKET_ADVANCED
 	size = small
 	icon = "GFX_ship_part_computer_picket_advanced"
 	icon_frame = 1
@@ -236,7 +212,7 @@ utility_component_template = {
 # 'LINE' COMPUTERS #
 ####################
 utility_component_template = {
-	key = "KATZEN_COMBAT_COMPUTER_LINE_BASIC"
+	key = PKI_COMBAT_COMPUTER_LINE_BASIC
 	size = small
 	icon = "GFX_ship_part_computer_line_basic"
 	icon_frame = 1
@@ -252,7 +228,7 @@ utility_component_template = {
 	component_set = pki_katzen_combat_computers
 	ship_behavior = "line"
 	prerequisites = { "tech_combat_computers_1" }
-	upgrades_to = "KATZEN_COMBAT_COMPUTER_LINE_ADVANCED"
+	upgrades_to = PKI_COMBAT_COMPUTER_LINE_ADVANCED
 
 	ship_modifier = {
 		ship_fire_rate_mult = 0.05
@@ -265,7 +241,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATZEN_COMBAT_COMPUTER_LINE_ADVANCED"
+	key = PKI_COMBAT_COMPUTER_LINE_ADVANCED
 	size = small
 	icon = "GFX_ship_part_computer_line_advanced"
 	icon_frame = 1
@@ -296,7 +272,7 @@ utility_component_template = {
 # 'ARTILLERY' COMPUTERS #
 ######################
 utility_component_template = {
-	key = "KATZEN_COMBAT_COMPUTER_ARTILLERY_BASIC"
+	key = PKI_COMBAT_COMPUTER_ARTILLERY_BASIC
 	size = small
 	icon = "GFX_ship_part_computer_artillery_basic"
 	icon_frame = 1
@@ -308,11 +284,11 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { pki_cruiser pki_bomber }
+	size_restriction = { pki_cruiser pki_bomber pki_panzer }
 	component_set = pki_katzen_combat_computers
 	ship_behavior = "artillery"
 	prerequisites = { "tech_combat_computers_1" }
-	upgrades_to = "KATZEN_COMBAT_COMPUTER_ARTILLERY_ADVANCED"
+	upgrades_to = PKI_COMBAT_COMPUTER_ARTILLERY_ADVANCED
 
 	ship_modifier = {
 		ship_fire_rate_mult = 0.05
@@ -325,7 +301,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATZEN_COMBAT_COMPUTER_ARTILLERY_ADVANCED"
+	key = PKI_COMBAT_COMPUTER_ARTILLERY_ADVANCED
 	size = small
 	icon = "GFX_ship_part_computer_artillery_advanced"
 	icon_frame = 1
@@ -337,7 +313,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { pki_bomber pki_cruiser }
+	size_restriction = { pki_bomber pki_cruiser pki_panzer }
 	component_set = pki_katzen_combat_computers
 	ship_behavior = "artillery"
 	prerequisites = { "tech_combat_computers_2" }
@@ -356,7 +332,7 @@ utility_component_template = {
 # 'CARRIER' COMPUTERS #
 ######################
 utility_component_template = {
-	key = "KATZEN_COMBAT_COMPUTER_CARRIER_BASIC"
+	key = PKI_COMBAT_COMPUTER_CARRIER_BASIC
 	size = small
 	icon = "GFX_ship_part_computer_carrier_basic"
 	icon_frame = 1
@@ -372,7 +348,7 @@ utility_component_template = {
 	component_set = pki_katzen_combat_computers
 	ship_behavior = "carrier"
 	prerequisites = { "tech_combat_computers_1" }
-	upgrades_to = "KATZEN_COMBAT_COMPUTER_CARRIER_ADVANCED"
+	upgrades_to = PKI_COMBAT_COMPUTER_CARRIER_ADVANCED
 
 	ship_modifier = {
 		ship_engagement_range_mult = 0.25
@@ -384,7 +360,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATZEN_COMBAT_COMPUTER_CARRIER_ADVANCED"
+	key = PKI_COMBAT_COMPUTER_CARRIER_ADVANCED
 	size = small
 	icon = "GFX_ship_part_computer_carrier_advanced"
 	icon_frame = 1
@@ -416,7 +392,7 @@ utility_component_template = {
 ######################
 
 utility_component_template = {
-	key = SUBMARINE_COMPUTER_BASIC
+	key = PKI_SUBMARINE_COMPUTER_BASIC
 	size = small
 	icon = "GFX_ship_part_computer_swarm_basic"
 	icon_frame = 1
@@ -433,7 +409,7 @@ utility_component_template = {
 	component_set = pki_katzen_combat_computers
 	ship_behavior = "pki_giga_katzen_submarine"
 	prerequisites = { "tech_combat_computers_1" "tech_torpedoes_1" }
-	upgrades_to = "SUBMARINE_COMPUTER_ADVANCED"
+	upgrades_to = PKI_SUBMARINE_COMPUTER_ADVANCED
 	ai_tags = { explosive explosive_stealth }
 	ai_tag_weight = 0
 
@@ -447,7 +423,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "SUBMARINE_COMPUTER_ADVANCED"
+	key = PKI_SUBMARINE_COMPUTER_ADVANCED
 	size = small
 	icon = "GFX_ship_part_computer_swarm_advanced"
 	icon_frame = 1
@@ -477,7 +453,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATZEN_BOMBER_COMPUTER_BASIC"
+	key = PKI_COMBAT_COMPUTER_TORPEDO_BASIC
 	size = small
 	icon = "GFX_ship_part_computer_swarm_basic"
 	icon_frame = 1
@@ -494,7 +470,7 @@ utility_component_template = {
 	component_set = pki_katzen_combat_computers
 	ship_behavior = "torpedo"
 	prerequisites = { "tech_combat_computers_1" "tech_torpedoes_1" }
-	upgrades_to = "KATZEN_BOMBER_COMPUTER_ADVANCED"
+	upgrades_to = PKI_COMBAT_COMPUTER_TORPEDO_ADVANCED
 	ai_tags = { explosive explosive_stealth }
 	ai_tag_weight = 0
 
@@ -508,7 +484,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "KATZEN_BOMBER_COMPUTER_ADVANCED"
+	key = PKI_COMBAT_COMPUTER_TORPEDO_ADVANCED
 	size = small
 	icon = "GFX_ship_part_computer_swarm_advanced"
 	icon_frame = 1

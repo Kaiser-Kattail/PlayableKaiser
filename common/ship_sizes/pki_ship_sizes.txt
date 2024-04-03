@@ -26,7 +26,7 @@ pki_panzer = { #Destroyerish, designed to conduct Blitzkrieg and overwhelm enemy
 
 	potential_country = {
 		OR = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 			pki_is_katzprotektorat_tier_2 = yes
 		}
 	}
@@ -117,7 +117,7 @@ pki_bomber = { #Cruiser, bomber designed to assault enemy worlds and fortificati
 	enable_default_design = yes
 	potential_country = {
 		OR = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 			pki_is_katzprotektorat_tier_3 = yes
 		}
 	}
@@ -155,7 +155,7 @@ pki_bomber = { #Cruiser, bomber designed to assault enemy worlds and fortificati
 				uses_standard_ship_sizes = yes
 			}
 			modifier = {
-				factor = 2
+				factor = 10
 				pki_is_katzprotektorat = yes
 			}
 			modifier = {
@@ -188,7 +188,7 @@ pki_cruiser = { #Battleship-Titan, designed to "sit back" and assist the fleet
 	enable_default_design = yes
 	potential_country = {
 		OR = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 			pki_is_katzprotektorat_tier_3 = yes
 		}
 	}
@@ -196,10 +196,8 @@ pki_cruiser = { #Battleship-Titan, designed to "sit back" and assist the fleet
 		tech_pki_cruiser
 	}
 	modifier = {
-		ship_evasion_add = 5
-		ship_armor_add = 1000
-		ship_shield_add = 500
-		ship_piracy_suppression_add = 2
+		ship_evasion_add = @battleship_evasion
+		ship_piracy_suppression_add = 4
 		ship_fire_rate_mult = 0.1
 	}
 	size_multiplier = 8
@@ -239,7 +237,7 @@ pki_cruiser = { #Battleship-Titan, designed to "sit back" and assist the fleet
 				uses_standard_ship_sizes = yes
 			}
 			modifier = {
-				factor = 2
+				factor = 10
 				pki_is_katzprotektorat = yes
 			}
 			modifier = {
@@ -275,13 +273,13 @@ pki_submarine = {
 	max_speed = @speed_default
 	acceleration = 0.3
 	rotation_speed = 0.2
-	collision_radius = 3.5
-	max_hitpoints = 450
-	build_time = @cruiser_build_time
+	collision_radius = 3.0
+	max_hitpoints = @frigate_hp
+	build_time = @destroyer_build_time
 	modifier = {
-		ship_evasion_add = 25
+		ship_evasion_add = @frigate_evasion
 		ship_engagement_range_mult = 4
-		ship_cloaking_strength_add = 1
+		ship_cloaking_strength_add = 3
 		ship_piracy_suppression_add = 10
 	}
 	size_multiplier = 4
@@ -293,13 +291,13 @@ pki_submarine = {
 
 	default_behavior = line
 
-	combat_disengage_chance = 100
+	combat_disengage_chance = 1.00
 
 	can_have_federation_design = no
 	enable_default_design = yes
 
 	potential_country = {
-		has_origin = origin_katzen
+		pki_is_katzenartig_imperium = yes
 	}
 	prerequisites = {
 		tech_pki_submarine
@@ -307,8 +305,8 @@ pki_submarine = {
 	resources = {
 		category = ships
 		upkeep = {
-			energy = @cruiser_upkeep_energy
-			alloys = @cruiser_upkeep_alloys
+			energy = @destroyer_upkeep_energy
+			alloys = @destroyer_upkeep_alloys
 		}
 	}
 
@@ -325,16 +323,14 @@ pki_submarine = {
 	required_component_set = pki_katzen_combat_computers
 }
 
-katzen_player_warforge_platform = { #Katzen war forge platform
+pki_warforge_platform = { #Katzen war forge platform
 	graphical_culture = no
-	entity = "katzen_warforge_platform_planet_entity"
+	entity = "pki_warplatform_invisible_entity"
 	max_speed = 0.0
 	acceleration = 0.0
 	rotation_speed = 0.0
 	modifier = {
 		ship_evasion_mult = -1
-		ship_armor_add = 5000
-		ship_shield_add = 1000
 	}
 	ship_modifier = {
 		ship_weapon_range_mult = 0.20
@@ -348,7 +344,7 @@ katzen_player_warforge_platform = { #Katzen war forge platform
 	is_space_station = yes
 	build_block_radius = 0
 	potential_country = {
-		has_origin = origin_katzen
+		pki_is_katzenartig_imperium = yes
 	}
 	class = shipclass_military_station
 	icon = ship_size_military_station

@@ -1,0 +1,33 @@
+entity = {
+    name = "pki_panzer_3L_full_entity"
+    pdxmesh = "reptilian_01_battleship_stern_M1S2_mesh"
+
+    scale = 0.7
+
+    default_state = idle
+    state = { name = "idle" state_time = 5
+        event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
+        event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
+        event = { time = 0 node = "engine_medium_01" particle = "generic_075_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+        event = { time = 0 node = "engine_medium_02" particle = "generic_035_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+        event = { time = 0 node = "engine_medium_03" particle = "generic_035_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+        event = { time = 0 node = "engine_medium_04" particle = "generic_025_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+    }
+    state = { name = "moving" state_time = 5
+        event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
+        event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
+        event = { time = 0 node = "engine_medium_01" particle = "generic_075_exhaust_line_wide_moving" trigger_once = yes keep_particle = yes }
+        event = { time = 0 node = "engine_medium_02" particle = "generic_05_exhaust_line_moving" trigger_once = yes keep_particle = yes }
+        event = { time = 0 node = "engine_medium_03" particle = "generic_05_exhaust_line_moving" trigger_once = yes keep_particle = yes }
+        event = { time = 0 node = "engine_medium_04" particle = "generic_04_exhaust_line_moving" trigger_once = yes keep_particle = yes }
+    }
+    state = { name = "death" state_time = 5 }
+
+    locator = { name = "loc101" position = { 0 -2 10 } rotation = { 0 0 0 } }
+    locator = { name = "loc102" position = { 0 0 8 } rotation = { 180 0 0 } }
+    locator = { name = "loc103" position = { 0 -1 4 } rotation = { 0 0 0 } scale = 1.7 }
+    locator = { name = "gun" position = { 0 2 -4 } rotation = { 0 0 0 } }
+
+    attach = { loc101 = "katzen_panzer_hull_entity" }
+    attach = { loc103 = "katzen_panzer_autocannon" }
+}

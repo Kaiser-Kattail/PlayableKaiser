@@ -1,14 +1,16 @@
 ship_behavior = {
     name = "pki_giga_katzen_submarine"
-    preferred_attack_range = min
-    formation_distance = 450
-    return_to_formation_distance = 450
+    preferred_attack_range = 150
+    formation_distance = 200
+    return_to_formation_distance = 250
 
     combat_target_anchor = root
 
     collision_awareness = 0.2
     collision_radius = 0.1							#collision_radius is a multiplier on the radius specified in the ship size
     collision_strafe = 2.5							#collision_strafe allows the ship to move in any direction while colliding with another
-    attack_move_pattern = stay_at_range
-    passive_move_pattern = stay_at_range
+    attack_move_pattern = charge
+    passive_move_pattern = orbit
+
+    desc = PKI_SUBMARINE_COMPUTER_DESC
 }

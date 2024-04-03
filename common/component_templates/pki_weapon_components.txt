@@ -1,12 +1,13 @@
 # SPACE PANZER
 weapon_component_template = {
-	key = "PLAYABLE_PANZER_ARTILLERY_1"
+	key = PKI_PANZER_ARTILLERY_1
 	size = large
 	entity = "invisible_turret_entity"
 	type = instant
 	icon = "GFX_ship_part_pki_panzer_artillery"
 	icon_frame = 1
 
+	power = -60
 	damage = { min = 50 max = 250 }
 	windup = { min = 5 max = 20 }
 	total_fire_time = 50
@@ -20,15 +21,14 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @l_t6_cost
-			volatile_motes = @l_t6_rare
 		}
 		upkeep = {
-			energy = @l_t6_upkeep_energy
-			alloys = @l_t6_upkeep_alloys
+			energy = @l_t3_upkeep_energy
+			alloys = @l_t3_upkeep_alloys
 		}
 	}
 
-	component_set = "PLAYABLE_PANZER_ARTILLERY_1"
+	component_set = "PKI_PANZER_ARTILLERY_1"
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic }
 
@@ -38,18 +38,18 @@ weapon_component_template = {
 	min_range = 10.0
 
 	ai_tags = { weapon_role_artillery }
-	ai_tag_weight = 0
+	ai_tag_weight = 999
 	ai_weight = {
 		weight = 999
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = volatile_motes }
+			has_technology = tech_kinetic_artillery_1
+			factor = 0
 		}
 	}
 }
 
 weapon_component_template = {
-	key = "SUBMARINE_MISSILE"
+	key = PKI_SUBMARINE_MISSILE
 	size = torpedo
 	entity = "invisible_turret_entity"
 
@@ -59,14 +59,14 @@ weapon_component_template = {
 
 	firing_arc = 70
 
-	prerequisites = { "tech_torpedoes_1" }
-	component_set = "SUBMARINE_MISSILE"
+	component_set = "PKI_SUBMARINE_MISSILE"
 	projectile_gfx = "flusion_missile"
 	tags = { weapon_type_explosive g_slot }
 	size_restriction = { pki_submarine }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
+	ai_tag_weight = 999
 
-	power = -25
+	power = -20
 	damage = { min = 100 max = 150 }
 	hull_damage = 1
 	shield_damage = 1.00
@@ -82,8 +82,8 @@ weapon_component_template = {
 	missile_speed = 8
 	missile_evasion = 0.10
 	missile_shield = 0
-	missile_armor = 3
-	missile_health = 3
+	missile_armor = 10
+	missile_health = 20
 	missile_retarget_range = 100
 	min_range = 10
 
@@ -91,21 +91,16 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @m_t6_cost
-			volatile_motes = @m_t6_rare
+			volatile_motes = @m_t4_rare
 		}
 		upkeep = {
-			energy = @m_t6_upkeep_energy
-			alloys = @m_t6_upkeep_alloys
-			volatile_motes = @m_t6_upkeep_alloys
+			energy = @m_t3_upkeep_energy
+			alloys = @m_t3_upkeep_alloys
 		}
 	}
 
 	ai_weight = {
 		weight = 999
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = volatile_motes }
-		}
 	}
 }
 
@@ -113,7 +108,7 @@ weapon_component_template = {
 weapon_component_template = {
 	type = instant
 
-	key = "KREUZER_KANNONE"
+	key = PKI_KREUZER_KANNONE
 	size = extra_large
 
 	icon = "GFX_ship_part_pki_kreuzerkannone"
@@ -123,6 +118,7 @@ weapon_component_template = {
 	min_range = 45.0
 	use_ship_kill_target = no
 
+	power = -150
 	damage = { min = 500 max = 1500 }
 	hull_damage = 1
 	shield_damage = 1.50
@@ -133,11 +129,11 @@ weapon_component_template = {
 	accuracy = 0.75
 
 	prerequisites = { "tech_pki_cruiser" }
-	component_set = "KREUZER_KANNONE"
+	component_set = "PKI_KREUZER_KANNONE"
 	projectile_gfx = "kinetic_artillery"
 	tags = { weapon_type_kinetic weapon_role_artillery x_slot }
 	ai_tags = { weapon_role_artillery artillery }
-	ai_tag_weight = 0
+	ai_tag_weight = 999
 
 	resources = {
 		category = ship_components
@@ -155,9 +151,5 @@ weapon_component_template = {
 
 	ai_weight = {
 		weight = 999
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = volatile_motes }
-		}
 	}
 }
