@@ -73,7 +73,7 @@ pki_flusion_rich_modifier = {
 	planet_jobs_minerals_produces_mult = 0.10
 	planet_jobs_energy_produces_mult = 0.10
 	planet_jobs_food_produces_mult = 0.10
-	planet_jobs_produces_mult = 0.05
+	planet_jobs_produces_mult = 0.1
 	pop_environment_tolerance = 0.10
 	planet_max_buildings_add = 12
 
@@ -83,11 +83,7 @@ pki_flusion_rich_modifier = {
 
 pki_warforge_in_orbit = {
 	icon = gfx/interface/icons/planet_modifiers/pm_satellite_in_orbit.dds
-	planet_jobs_alloys_produces_mult = 0.05
-}
-
-pki_yeah = {
-	country_trust_growth = 100
+	planet_jobs_alloys_produces_mult = 0.1
 }
 
 pki_scaling_colony = {
@@ -107,8 +103,11 @@ pki_warforge_naval_cap = {
 }
 
 pki_attack_moon_upkeep = {
-	icon = gfx/interface/icons/modifiers/mod_ship_upkeep_mult.dds
 	shipsize_giga_massive_planet_upkeep = -0.75
+}
+
+pki_galcom_mobilizes_against_kaiser = {
+	damage_vs_superior_empires_mult = 0.25
 }
 
 pki_galcom_sanctions_1 = {
@@ -119,4 +118,26 @@ pki_galcom_sanctions_1 = {
 pki_galcom_sanctions_2 = {
 	diplo_weight_mult = -0.75
 	country_trust_growth = -0.75
+}
+
+pki_crisis_war_buffs = {
+	ship_speed_mult = 0.15
+	ship_fire_rate_mult = 0.15
+	ships_upkeep_mult = 0.5
+	starbase_shipyard_build_speed_mult = -0.5
+	planet_building_build_speed_mult = -0.5
+}
+
+pki_crisis_peace_buffs = {
+	ships_upkeep_mult = -0.5
+	starbase_shipyard_build_speed_mult = 0.5
+	planet_building_build_speed_mult = 0.5
+	megastructure_build_speed_mult = 0.25
+}
+
+pki_crisis_buffs = {
+	planet_jobs_produces_mult = 0.10
+	megastructure_build_speed_mult = 0.1
+	ship_starting_experience_add = 50
+	country_naval_cap_add = 50
 }

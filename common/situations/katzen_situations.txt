@@ -530,7 +530,7 @@ situation_project_celestia = {
 
 situation_pki_galactic_tension = {
 	picture = GFX_evt_machine_space_battle
-	category = negative
+	category = neutral
 	start_value = 0
 	complete_icon = GFX_situation_outcome_negative
 	complete_icon_frame = GFX_situation_outcome_frame_red
@@ -539,38 +539,114 @@ situation_pki_galactic_tension = {
 		base = 0
 	}
 
+	abort_trigger = {
+		any_country = {
+			is_country_type = default
+			NOT = {
+				exists = this
+			}
+			pki_is_katzenartig_imperium = no
+		}
+	}
+
+	on_abort = {
+		owner = {
+			#every_country = { country_event = { id = pki_misc.5 } }
+			hidden_effect = {
+				set_country_flag = player_galactic_katzen_empire_formed
+				change_country_flag = {
+					icon = {
+						category="domination"
+						file="domination_8.dds"
+					}
+					background = {
+						category="backgrounds"
+						file="v.dds"
+					}
+					colors = {
+						"dark_blue"
+						"shadow_blue"
+						"null"
+						"null"
+					}
+				}
+				set_name = "NAME_BIGGEST_KATZEN_EMPIRE"
+			}
+		}
+	}
+
 	on_progress_complete = {
-		custom_tooltip = situation_world_tension_coalition
+		custom_tooltip = situation_pki_galactic_tension_outcome
+	}
+
+	triggered_modifier = {
+
 	}
 
 	stages = {
+		## 0% - 9%
 		tension_1 = {
 			icon = GFX_situation_stage_1
 			icon_background = GFX_situation_stage_frame_red
+
 			modifier = {
-				planet_metallurgists_alloys_produces_mult = 0.1
-				starbase_shipyard_build_speed_mult = 0.1
+				pki_crisis_buffs = 1
 			}
+
 			end = 10
+
+			on_first_enter = {
+
+			}
 		}
+		## 10% - 19%
 		tension_2 = {
 			icon = GFX_situation_stage_2
 			icon_background = GFX_situation_stage_frame_red
+
 			modifier = {
-				planet_metallurgists_alloys_produces_mult = 0.15
-				starbase_shipyard_build_speed_mult = 0.20
+				pki_crisis_buffs = 1.5
 			}
+
 			end = 20
+
+			on_first_enter = {
+
+			}
 		}
+		## 20% - 29%
 		tension_3 = {
 			icon = GFX_situation_stage_3
 			icon_background = GFX_situation_stage_frame_red
+
 			modifier = {
-				planet_metallurgists_alloys_produces_mult = 0.20
-				starbase_shipyard_build_speed_mult = 0.30
-				country_trust_growth = -0.1
+				pki_crisis_buffs = 2.0
 			}
+
 			on_first_enter = {
+
+			}
+			end = 30
+		}
+		## 30% - 39%
+		tension_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_red
+
+			modifier = {
+				pki_crisis_buffs = 2.25
+			}
+
+			on_first_enter = {
+				set_global_flag = pki_galactic_tension_stage_4
+
+				owner = {
+					set_country_flag = pki_crisis_buffs_enabled
+					country_event = {
+						id = pki_crisis.104
+					}
+				}
+
 				if = {
 					limit = {
 						is_galactic_community_formed = yes
@@ -607,34 +683,41 @@ situation_pki_galactic_tension = {
 
 					every_country = {
 						limit = {
-							has_communications = event_target:playerflusion
+							is_country_type = default
+							OR = {
+								has_communications = event_target:katzenartig
+								pki_is_katzenartig_imperium = yes
+							}
 						}
-						country_event = { id = pki_crisis.301 days = 90 }
+						country_event = { id = pki_crisis.301 days = 90 random = 30 }
 					}
 				}
 				else = {
 					owner = {
 						every_neighbor_country = {
+							limit = {
+								is_country_type = default
+							}
 							set_country_flag = pki_katzen_neighbor
 						}
-						country_event = { id = pki_crisis.311 days = 90 }
+						country_event = { id = pki_crisis.311 days = 90 random = 30 }
 					}
 				}
 			}
-			end = 30
+			end = 40
 		}
-		tension_4 = {
-			icon = GFX_situation_stage_4
+		## 40% - 49%
+		tension_5 = {
+			icon = GFX_situation_stage_5
 			icon_background = GFX_situation_stage_frame_red
+
 			modifier = {
-				planet_metallurgists_alloys_produces_mult = 0.25
-				starbase_shipyard_build_speed_mult = 0.40
-				planet_stability_add = -5
+				pki_crisis_buffs = 2.5
 			}
-			custom_tooltip = pki_proclaim_big_empire
+
 			on_first_enter = {
 				owner = {
-					every_country = { country_event = { id = pki_misc.4 } country_event = { id = pki_crisis.401 days = 90 }}
+					every_country = { country_event = { id = pki_misc.4 } }
 					hidden_effect = {
 						set_country_flag = player_big_katzen_empire_formed
 						change_country_flag = {
@@ -656,41 +739,47 @@ situation_pki_galactic_tension = {
 						set_name = "NAME_BIG_KATZEN_EMPIRE"
 					}
 				}
-			}
-			end = 40
-		}
-		tension_5 = {
-			icon = GFX_situation_stage_5
-			icon_background = GFX_situation_stage_frame_red
-			modifier = {
-				planet_metallurgists_alloys_produces_mult = 0.30
-				starbase_shipyard_build_speed_mult = 0.50
-				planet_stability_add = -10
-			}
-			on_first_enter = {
-
+				every_country = {
+					limit = {
+						is_country_type = default
+						has_global_flag = pki_galcom_sanctions_1
+						OR = {
+							has_communications = event_target:katzenartig
+							pki_is_katzenartig_imperium = yes
+						}
+					}
+					country_event = { id = pki_crisis.401 days = 90 random = 15 }
+					country_event = { id = pki_crisis.402 days = 120 random = 30 }
+				}
 			}
 			end = 50
 		}
+		## 50% - 59%
 		tension_6 = {
 			icon = GFX_situation_stage_6
 			icon_background = GFX_situation_stage_frame_red
+
 			modifier = {
-				planet_metallurgists_alloys_produces_mult = 0.30
-				starbase_shipyard_build_speed_mult = 0.50
-				planet_stability_add = -10
+				pki_crisis_buffs = 2.5
 			}
+
+			on_first_enter = {
+				owner = {
+					country_event = { id = pki_corrona.004 days = 1800 random = 1800 }
+				}
+			}
+
 			end = 60
 		}
+		## 60% - 69%
 		tension_7 = {
 			icon = GFX_situation_stage_7
 			icon_background = GFX_situation_stage_frame_red
+
 			modifier = {
-				planet_metallurgists_alloys_produces_mult = 0.25
-				starbase_shipyard_build_speed_mult = 0.40
-				planet_stability_add = -20
+				pki_crisis_buffs = 2.5
 			}
-			custom_tooltip = pki_proclaim_bigger_empire
+
 			on_first_enter = {
 				owner = {
 					every_country = { country_event = { id = pki_misc.5 } }
@@ -716,36 +805,66 @@ situation_pki_galactic_tension = {
 					}
 				}
 			}
+
 			end = 70
 		}
+		## 70% - 79%
 		tension_8 = {
 			icon = GFX_situation_stage_8
 			icon_background = GFX_situation_stage_frame_red
+
 			modifier = {
-				planet_metallurgists_alloys_produces_mult = 0.20
-				starbase_shipyard_build_speed_mult = 0.3
-				planet_stability_add = -20
+				pki_crisis_buffs = 2.5
 			}
+
 			end = 80
 		}
+		## 80% - 89%
 		tension_9 = {
 			icon = GFX_situation_stage_9
 			icon_background = GFX_situation_stage_frame_red
+
 			modifier = {
-				planet_metallurgists_alloys_produces_mult = 0.15
-				starbase_shipyard_build_speed_mult = 0.2
-				planet_stability_add = -20
+				pki_crisis_buffs = 2.5
 			}
+
 			end = 90
 		}
+		## 90% - 100%
 		tension_10 = {
 			icon = GFX_situation_stage_10
 			icon_background = GFX_situation_stage_frame_red
+
 			modifier = {
-				planet_metallurgists_alloys_produces_mult = 0.1
-				starbase_shipyard_build_speed_mult = 0.1
-				planet_stability_add = -20
+				pki_crisis_buffs = 2.5
 			}
+
+			on_first_enter = {
+				owner = {
+					#every_country = { country_event = { id = pki_crisis.105 } }
+					hidden_effect = {
+						set_country_flag = player_galactic_katzen_empire_formed
+						change_country_flag = {
+							icon = {
+								category="domination"
+								file="domination_8.dds"
+							}
+							background = {
+								category="backgrounds"
+								file="v.dds"
+							}
+							colors = {
+								"dark_blue"
+								"shadow_blue"
+								"null"
+								"null"
+							}
+						}
+						set_name = "NAME_BIGGEST_KATZEN_EMPIRE"
+					}
+				}
+			}
+
 			end = 100
 		}
 	}
@@ -755,7 +874,7 @@ situation_pki_galactic_tension = {
 		icon = GFX_situation_approach_fleet
 		icon_background = GFX_situation_approach_bg_yellow
 		on_select = {
-			custom_tooltip = approach_outcome_tooltip
+			custom_tooltip = approach_pki_galactic_tension_outcome_tooltip
 		}
 	}
 }

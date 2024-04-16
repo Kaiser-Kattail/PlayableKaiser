@@ -47,22 +47,26 @@ pki_attack_moon_upkeep = {
     add = modifier:shipsize_giga_massive_planet_upkeep
 }
 
+pki_galaxy_systems = {
+    complex_trigger_modifier = {
+        trigger = count_system
+        trigger_scope = system_star
+        parameters = {
+            limit = {
+                giga_is_empty_space = no
+            }
+        }
+        mode = add
+    }
+}
+
 pki_galaxy_owned = {
     add = trigger:count_system_within_border
     divide = pki_num_galaxy_systems
     multiply = 100
-    floor = yes
 }
 
-pki_situation_difference_less_than = {
-    add = value:pki_galaxy_owned
-    subtract = pki_situation_progress_country
-    floor = yes
-}
-
-pki_situation_difference_greater_than = {
-    add = pki_situation_progress_country
-    subtract = value:pki_galaxy_owned
-    multiply = -1
-    floor = yes
+pki_set_situation_progress_effect = {
+    add = $NEW_PROGRESS$
+    subtract = trigger:situation_progress
 }

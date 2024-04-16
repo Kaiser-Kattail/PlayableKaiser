@@ -1,36 +1,16 @@
 opinion_katzen_militarism = {
-	trigger = {
-		pki_is_katzenartig_imperium = no
-		is_country_type = default
-		NOT = {
-			pki_is_katzprotektorat = yes
-		}
-		from = {
-			pki_is_katzenartig_imperium = yes
-		}
-	}
-
 	opinion = {
 		base = -5
 		modifier = {
-			multiply = event_target:playerflusion.value:pki_galaxy_owned
+			multiply = event_target:katzenartig.value:pki_galaxy_owned
 		}
 	}
 	unique = yes
 }
 
 opinion_pki_mocked_galcom_1 = {
-	trigger = {
-		pki_is_katzenartig_imperium = no
-		is_country_type = default
-		from = {
-			pki_is_katzenartig_imperium = yes
-		}
-	}
-
 	opinion = {
 		base = -100
-
 	}
 
 	decay = {
@@ -41,14 +21,6 @@ opinion_pki_mocked_galcom_1 = {
 }
 
 opinion_pki_mocked_galcom_2 = {
-	trigger = {
-		pki_is_katzenartig_imperium = no
-		is_country_type = default
-		from = {
-			pki_is_katzenartig_imperium = yes
-		}
-	}
-
 	opinion = {
 		base = -50
 	}

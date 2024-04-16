@@ -9,16 +9,20 @@ country_event = {
     picture = GFX_evt_star_chart
     show_sound = event_yellow_alert
 
-    immediate = {
-        set_variable = {
-            which = pki_num_galaxy_systems
-            value = trigger:count_system
-        }
+
+    option = {
+        name = OK
         start_situation = {
             type = situation_pki_galactic_tension
         }
-        country_event = {
-            id = pki_crisis.102
+        hidden_effect = {
+            set_variable = {
+                which = pki_num_galaxy_systems
+                value = trigger:num_galaxy_systems
+            }
+            country_event = {
+                id = pki_crisis.102
+            }
         }
     }
 }
@@ -51,9 +55,81 @@ country_event = {
     immediate = {
         set_variable = {
             which = pki_num_galaxy_systems
-            value = trigger:count_system
+            value = value:pki_galaxy_systems
         }
         pki_update_galactic_tension = yes
+    }
+}
+
+country_event = {
+    id = pki_crisis.103
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        pki_is_katzenartig_imperium = yes
+        has_country_flag = pki_crisis_buffs_enabled
+    }
+
+    immediate = {
+        remove_modifier = pki_crisis_peace_buffs
+        remove_modifier = pki_crisis_war_buffs
+        if = {
+            limit = {
+                is_at_war = yes
+            }
+            add_modifier = {
+                modifier = pki_crisis_war_buffs
+                multiplier = trigger:count_war
+            }
+        }
+        else_if = {
+            limit = {
+                is_at_war = no
+            }
+            add_modifier = {
+                modifier = pki_crisis_peace_buffs
+            }
+        }
+    }
+}
+
+country_event = {
+    id = pki_crisis.104
+    is_triggered_only = yes
+    picture = "GFX_evt_space_station"
+    title = "pki_crisis.104.name"
+    desc = "pki_crisis.104.desc"
+
+    trigger = {
+        pki_is_katzenartig_imperium = yes
+        has_country_flag = pki_crisis_buffs_enabled
+    }
+
+    immediate = {
+        remove_modifier = pki_crisis_peace_buffs
+        remove_modifier = pki_crisis_war_buffs
+        if = {
+            limit = {
+                is_at_war = yes
+            }
+            add_modifier = {
+                modifier = pki_crisis_war_buffs
+                multiplier = trigger:count_war
+            }
+        }
+        else_if = {
+            limit = {
+                is_at_war = no
+            }
+            add_modifier = {
+                modifier = pki_crisis_peace_buffs
+            }
+        }
+    }
+
+    option = {
+        name = "ACKNOWLEDGED"
     }
 }
 
@@ -64,19 +140,27 @@ country_event = {
     title = pki_crisis.301.name
     desc = pki_crisis.301.desc
 
+    immediate = {
+        set_global_flag = pki_galcom_sanctions_1
+    }
+
     show_sound = event_conversation
     picture = GFX_evt_signing
 
     option = { #aw
         name = "pki_crisis.301.a"
         trigger = {
-            pki_is_katzenartig_imperium = no
+            hidden_trigger = {
+                pki_is_katzenartig_imperium = no
+            }
         }
     }
     option = { #:KaiserPog:
         name = "pki_crisis.301.b"
         trigger = {
-            pki_is_katzenartig_imperium = yes
+            hidden_trigger = {
+                pki_is_katzenartig_imperium = yes
+            }
         }
         add_modifier = {
             modifier = pki_galcom_sanctions_1
@@ -96,6 +180,10 @@ country_event = {
 
     immediate = {
 
+    }
+
+    option = {
+        name = OK
     }
 }
 
@@ -125,16 +213,24 @@ country_event = {
     option = { #aw
         name = "pki_crisis.401.a"
         trigger = {
-            pki_is_katzenartig_imperium = no
+            hidden_trigger = {
+                pki_is_katzenartig_imperium = no
+            }
         }
     }
     option = { #:KaiserPog:
         name = "pki_crisis.401.b"
         trigger = {
-            pki_is_katzenartig_imperium = yes
+            hidden_trigger = {
+                pki_is_katzenartig_imperium = yes
+            }
         }
-        add_modifier = {
-            modifier = pki_galcom_sanctions_2
+        custom_tooltip = pki_sanctions_worsening
+        hidden_effect = {
+            remove_modifier = pki_galcom_sanctions_1
+            add_modifier = {
+                modifier = pki_galcom_sanctions_2
+            }
         }
     }
 }
@@ -150,7 +246,11 @@ country_event = {
     location = from
     is_triggered_only = yes
 
-    option = { #aw
+    immediate = {
+        set_global_flag = pki_galactic_tension_stage_5
+    }
+
+    option = { #awww
         name = "pki_crisis.402.a"
         trigger = {
             pki_is_katzenartig_imperium = no
@@ -176,8 +276,582 @@ country_event = {
     }
     option = { #:KaiserPog:
         name = "pki_crisis.402.b"
+        custom_tooltip = pki_ejected_from_galcom
+        remove_from_galactic_community = yes
         trigger = {
+            hidden_trigger = {
+                pki_is_katzenartig_imperium = yes
+            }
+        }
+    }
+}
+
+country_event = {
+    id = pki_crisis.666
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        every_country = {
+            country_event = { id = pki_crisis.667 }
+        }
+        set_global_flag = galcom_kaiser_crusade
+        # War against kaiser
+        every_war = {
+            limit = { any_war_participant = { pki_is_katzenartig_imperium = yes } }
+            end_war_effect = yes
+        }
+        # Random normal war (not crisis/FE)
+        every_war = {
+            limit = {
+                any_war_participant = {
+                    is_country_type = default
+                    is_galactic_community_member = yes
+                    NOR = {
+                        pki_is_katzprotektorat = yes
+                        pki_is_allied_with_katzen = yes
+                    }
+                }
+                NOT = { any_war_participant = { is_galactic_community_member = no } }
+                NOT = { any_war_participant = { NOT = { is_country_type = default } } }
+                NOT = { any_war_participant = { is_crisis_faction = yes } }
+                NOT = { any_war_participant = { has_ascension_perk = ap_become_the_crisis } }
+            }
+            end_war_effect = yes
+        }
+        if = {
+            # Check if player war leader candidate exists
+            limit = {
+                any_country = {
+                    is_ai = no
+                    NOT = { is_at_war_with = event_target:katzenartig }
+                    is_country_type = default
+                    NOR = {
+                        pki_is_katzenartig_imperium = yes
+                        is_at_war_with = event_target:katzenartig
+                        pki_is_katzprotektorat = yes
+                        pki_is_allied_with_katzen = yes
+                        is_subject = yes
+                    }
+                    is_galactic_community_member = yes
+                }
+            }
+            # Setting player war leader
+            random_country = {
+                limit = {
+                    is_ai = no
+                    NOT = { is_at_war_with = event_target:katzenartig }
+                    is_country_type = default
+                    NOR = {
+                        pki_is_katzenartig_imperium = yes
+                        is_at_war_with = event_target:katzenartig
+                        pki_is_katzprotektorat = yes
+                        pki_is_allied_with_katzen = yes
+                        is_subject = yes
+                    }
+                    is_galactic_community_member = yes
+                }
+                declare_war = {
+                    target = event_target:katzenartig
+                    attacker_war_goal = "wg_katzen_defence"
+                    name = "Katzenkrieg"
+                }
+                if = {
+                    limit = { has_modifier = katzen_attache }
+                    remove_modifier = katzen_attache
+                }
+                save_global_event_target_as = pki_katzen_crusade_war_leader
+                set_global_flag = pki_katzen_crusade_war_leader_set
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_global_flag = pki_katzen_crusade_war_leader_set
+                }
+            }
+            # Setting war leader to random ai
+            if = {
+                limit = {
+                    any_country = {
+                        NOT = { is_at_war_with = event_target:katzenartig }
+                        is_country_type = default
+                        has_country_flag = pki_galcom_opponent
+                        NOR = {
+                            is_at_war_with = event_target:katzenartig
+                            pki_is_katzprotektorat = yes
+                            pki_is_allied_with_katzen = yes
+                            is_subject = yes
+                        }
+                        is_galactic_community_member = yes
+                    }
+                }
+                random_country = {
+                    limit = {
+                        NOT = { is_at_war_with = event_target:katzenartig }
+                        is_country_type = default
+                        has_country_flag = pki_galcom_opponent
+                        NOR = {
+                            is_at_war_with = event_target:katzenartig
+                            pki_is_katzprotektorat = yes
+                            pki_is_allied_with_katzen = yes
+                            is_subject = yes
+                        }
+                        is_galactic_community_member = yes
+                    }
+                    declare_war = {
+                        target = event_target:katzenartig
+                        attacker_war_goal = "wg_katzen_defence"
+                        name = "Katzenkrieg"
+                    }
+                    if = {
+                        limit = { has_modifier = katzen_attache }
+                        remove_modifier = katzen_attache
+                    }
+                    save_global_event_target_as = pki_katzen_crusade_war_leader
+                    set_global_flag = pki_katzen_crusade_war_leader_set
+                }
+            }
+            else = {
+                random_country = {
+                    limit = {
+                        NOT = { is_at_war_with = event_target:katzenartig }
+                        is_country_type = default
+                        NOR = {
+                            is_at_war_with = event_target:katzenartig
+                            pki_is_katzprotektorat = yes
+                            pki_is_allied_with_katzen = yes
+                            is_subject = yes
+                        }
+                        is_galactic_community_member = yes
+                    }
+                    declare_war = {
+                        target = event_target:katzenartig
+                        attacker_war_goal = "wg_katzen_defence"
+                        name = "Katzenkrieg"
+                    }
+                    if = {
+                        limit = { has_modifier = katzen_attache }
+                        remove_modifier = katzen_attache
+                    }
+                    save_global_event_target_as = pki_katzen_crusade_war_leader
+                    set_global_flag = pki_katzen_crusade_war_leader_set
+                }
+            }
+        }
+        every_country = {
+            limit = {
+                NOT = { is_country = event_target:pki_katzen_crusade_war_leader }
+                NOT = { is_at_war_with = event_target:katzenartig }
+                is_country_type = default
+                NOR = {
+                    is_at_war_with = event_target:katzenartig
+                    pki_is_katzprotektorat = yes
+                    pki_is_allied_with_katzen = yes
+                }
+                is_galactic_community_member = yes
+            }
+            if = {
+                limit = { has_modifier = katzen_attache }
+                remove_modifier = katzen_attache
+            }
+            join_war = event_target:pki_katzen_crusade_war_leader
+        }
+        every_country = {
+            limit = {
+                OR = {
+                    pki_is_katzprotektorat = yes
+                    pki_is_allied_with_katzen = yes
+                }
+            }
+            remove_from_galactic_community = yes
+        }
+    }
+}
+
+country_event = { #galcom war
+    id = pki_crisis.667
+    title = "giga_katzen.8001.name"
+    desc = "giga_katzen.8001.desc"
+    picture = GFX_evt_open_revolt
+    show_sound = event_air_raid_siren
+
+    is_triggered_only = yes
+
+    option = {
+        name = "giga_katzen.8001.a"
+        custom_tooltip = "giga_katzen.8001.a.tooltip"
+        trigger = {
+            hidden_trigger = {
+                pki_is_katzenartig_imperium = no
+            }
+        }
+    }
+
+    option = {
+        name = pki_crisis.667.a
+        trigger = {
+            hidden_trigger = {
+                pki_is_katzenartig_imperium = yes
+            }
+        }
+    }
+}
+
+country_event = { #galactic
+    id = pki_crisis.999
+    title = "pki_crisis.999.name"
+    desc = "pki_crisis.999.desc"
+
+    picture = GFX_evt_grand_speech
+    show_sound = event_celebration
+    location = from
+    is_triggered_only = yes
+
+    option = { #aw
+        name = "pki_crisis.999.a"
+        trigger = {
+            hidden_trigger = {
+                pki_is_katzenartig_imperium = no
+            }
+        }
+    }
+    option = { #:KaiserPog:
+        name = "pki_crisis.999.b"
+        trigger = {
+            hidden_trigger = {
+                pki_is_katzenartig_imperium = yes
+            }
+        }
+    }
+}
+
+# Corrona stuff
+namespace = pki_corrona
+
+ship_event = { #jupitwo
+    id = pki_corrona.001
+    title = "giga_corrona.001.name"
+    desc = "giga_corrona.001.desc"
+    picture = GFX_evt_browndwarf
+    show_sound = event_radio_chatter
+    location = from
+    is_triggered_only = yes
+
+    trigger = {
+        owner = { NOT = { has_country_flag = pki_encountered_jupitwo } }
+        from = {
+            has_star_flag = pki_jupitwo_system
+            any_system_planet = { has_planet_flag = pki_corrona }
+        }
+        NOT = { has_global_flag = giga_jublio_disabled }
+    }
+
+    immediate = { owner = { set_country_flag = pki_encountered_jupitwo } }
+    option = {
+        name = "giga_corrona.001.a"
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = @tier3researchreward
+                min = @tier3researchmin
+                max = @tier3researchmax
+            }
+        }
+    }
+}
+
+ship_event = { #surveyed corrona
+    id = pki_corrona.002
+    title = "giga_corrona.002.name"
+    desc = "giga_corrona.002.desc"
+    picture = GFX_evt_surreal_visions
+    show_sound = event_mystic_reveal
+    location = from
+    is_triggered_only = yes
+    trigger = {
+        from = {
+            has_planet_flag = pki_corrona
+            NOT = { is_planet_class = pc_shrouded }
+        }
+    }
+
+    option = {
+        name = "giga_corrona.002.a"
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = @tier4researchreward
+                min = @tier4researchmin
+                max = @tier4researchmax
+            }
+        }
+    }
+}
+
+country_event = { #corrona start
+    id = pki_corrona.004
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        any_country = {
             pki_is_katzenartig_imperium = yes
         }
+        has_global_flag = pki_katzen_is_being_played
+        NOT = {
+            has_global_flag = katzenartig_imperium_defeated
+        }
+        exists = event_target:pki_corrona
+    }
+
+    immediate = {
+        event_target:global_event_country = {
+            country_event = { id = pki_corrona.006 days = 30 }
+        }
+        every_country = { country_event = { id = pki_corrona.005 } }
+    }
+}
+
+country_event = { #energy spike
+    id = pki_corrona.005
+    title = "giga_corrona.005.name"
+    desc = "giga_corrona.005.desc"
+
+    is_triggered_only = yes
+
+    show_sound = event_alien_signal
+    picture = GFX_evt_surreal_visions
+
+    location = event_target:pki_corrona
+
+    trigger = {
+        any_country = {
+            pki_is_katzenartig_imperium = yes
+        }
+    }
+
+    option = {
+        name = "giga_corrona.005.a"
+    }
+}
+
+#The Corronian Magocracy
+country_event = {
+    id = pki_corrona.006
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        event_target:pki_corrona_country = {
+            #apply_katzen_difficulty = yes
+            set_country_type = awakaned_corrona
+            create_leader = {
+                class = commander
+                species = event_target:pki_corronaskeletons
+                name = "Skeletor"
+                skill = 5
+                gender = male
+                traits = {
+                    trait = leader_trait_gale_speed
+                    trait = leader_trait_aggressive
+                }
+                effect = {
+                    save_event_target_as = pki_corrona_admiral
+                }
+            }
+            change_government = {
+                authority = auth_imperial
+            }
+            set_name = "Corronian Magocracy"
+            create_fleet = {
+                name = "Grand Corronian Dominance"
+                settings = {
+                    uses_naval_capacity = no
+                    spawn_debris = no
+                    can_change_composition = no
+                    can_change_leader = no
+                    can_upgrade = no
+                    can_disband = no
+                }
+                effect = {
+                    save_global_event_target_as = pki_corrona_fleet
+                    set_fleet_flag = pki_corrona_fleet
+                    set_owner = event_target:pki_corrona_country
+                    create_ship = {
+                        name = "Corrona Worldcraft"
+                        design = "Esoteric Planetcraft"
+                        prefix = no
+                        effect = {
+                            save_global_event_target_as = pki_corrona_craft
+                            set_ship_flag = pki_corrona_craft
+                        }
+                    }
+                    while = {
+                        count = 50
+                        create_ship = {
+                            name = random
+                            design = "Beast of War"
+                            prefix = no
+                        }
+                    }
+                    assign_leader = event_target:pki_corrona_admiral
+                    set_location = {
+                        target = event_target:pki_corrona
+                        distance = 15
+                        angle = random
+                    }
+                }
+            }
+            pki_create_corrona_dragon_fleet_corrona = yes
+            pki_create_corrona_dragon_fleet_corrona = yes
+            pki_create_corrona_dragon_fleet_corrona = yes
+        }
+        event_target:pki_corrona = {
+            destroy_colony = yes
+            remove_planet = yes
+        }
+        every_country = {
+            country_event = { id = pki_corrona.007 days = 1 }
+        }
+    }
+}
+
+country_event = { #here they come
+    id = pki_corrona.007
+    title = "giga_corrona.007.name"
+    desc = "giga_corrona.007.desc"
+
+    is_triggered_only = yes
+
+    show_sound = event_red_alert
+    picture = GFX_evt_binary_stars
+
+    location = event_target:pki_corrona_fleet
+
+    trigger = {
+        any_country = {
+            pki_is_katzenartig_imperium = yes
+        }
+    }
+
+    option = {
+        name = "giga_corrona.007.a"
+        hidden_effect = {
+            country_event = { id = pki_corrona.008 }
+        }
+    }
+}
+
+country_event = { #here they come
+    id = pki_corrona.008
+    title = "giga_corrona.008.name"
+    desc = "giga_corrona.008.desc"
+
+    is_triggered_only = yes
+
+    show_sound = event_corrona_skeletor
+
+    diplomatic = yes
+
+    picture_event_data = {
+        portrait = event_target:pki_corrona_country.ruler
+        room = "corrona_room"
+    }
+
+    option = {
+        name = "giga_corrona.008.a"
+        custom_tooltip = "giga_corrona.008.a.tooltip"
+    }
+
+    option = {
+        name = "pki_corrona.008.b"
+        trigger = {
+            hidden_trigger = {
+                pki_is_katzenartig_imperium = yes
+            }
+        }
+    }
+}
+
+#destroyed
+country_event = { #Corrona Moon destroyed :(
+    id = pki_corrona.020
+    title = "giga_corrona.020.name"
+    desc = "giga_corrona.020.desc"
+    location = from
+    is_triggered_only = yes
+
+    picture = GFX_evt_surreal_visions
+    show_sound = event_structural_collapse
+
+    trigger = {
+        from = { is_country_type = awakaned_corrona }
+        fromfromfrom = {
+            is_ship_size = giga_corrona_planetcraft
+        }
+    }
+
+    immediate = {
+        set_country_flag = corrona_moon_slayer
+        save_global_event_target_as = corrona_moon_slayer
+        every_country = {
+            limit = {
+                NOT = { has_country_flag = corrona_moon_slayer }
+            }
+            if = {
+                limit = { ROOT = { pki_is_katzenartig_imperium = yes } }
+                country_event = { id = pki_corrona.022 }
+            }
+            else = { country_event = { id = pki_corrona.021 } }
+        }
+        event_target:pki_corrona_country = {
+            destroy_country = yes
+        }
+    }
+
+    option = { #RIP
+        name = "giga_corrona.020.a"
+        add_resource = {
+            sr_zro = 10000
+            physics_research = 15000
+            energy = 15000
+        }
+        add_monthly_resource_mult = {
+            resource = unity
+            value = @tier5unityreward
+            min = @tier5unitymin
+            max = @tier5unitymax
+        }
+    }
+}
+
+country_event = { #Corrona Moon destroyed (broadcast) :(
+    id = pki_corrona.021
+    title = "giga_corrona.021.name"
+    desc = "giga_corrona.021.desc"
+    location = from
+    is_triggered_only = yes
+
+    picture = GFX_evt_surreal_visions
+    show_sound = event_structural_collapse
+
+    option = { #RIP
+        name = "giga_corrona.021.a"
+    }
+}
+
+country_event = { #Corrona Moon destroyed by Katzens (broadcast) :(
+    id = pki_corrona.022
+    title = "giga_corrona.022.name"
+    desc = "giga_corrona.022.desc"
+    location = from
+    is_triggered_only = yes
+
+    picture = GFX_evt_surreal_visions
+    show_sound = event_structural_collapse
+
+    option = { #RIP
+        name = "giga_corrona.022.a"
     }
 }

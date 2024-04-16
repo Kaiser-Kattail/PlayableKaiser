@@ -873,6 +873,9 @@ decision_pki_further_restructuring = {
 
 decision_create_kaiser_legion = {
 	potential = {
+		from = {
+			pki_is_katzenartig_imperium = yes
+		}
 		is_colony = yes
 		planet = {
 			leader = {
@@ -951,21 +954,27 @@ decision_pki_sector_auto = {
 								}
 								if = {
 									limit = {
-										is_gestalt = no
+										owner = {
+											is_gestalt = no
+										}
 									}
 									add_building = building_capital
 								}
 								else_if = {
 									limit = {
-										is_gestalt = yes
-										is_machine_empire = yes
+										owner = {
+											is_gestalt = yes
+											is_machine_empire = yes
+										}
 									}
 									add_building = building_machine_capital
 								}
 								else_if = {
 									limit = {
-										is_gestalt = yes
-										is_hive_empire = yes
+										owner = {
+											is_gestalt = yes
+											is_hive_empire = yes
+										}
 									}
 									add_building = building_hive_capital
 								}
@@ -973,21 +982,27 @@ decision_pki_sector_auto = {
 							else = {
 								if = {
 									limit = {
-										is_gestalt = no
+										owner = {
+											is_gestalt = no
+										}
 									}
 									add_building = building_colony_shelter
 								}
 								else_if = {
 									limit = {
-										is_gestalt = yes
-										is_machine_empire = yes
+										owner = {
+											is_gestalt = yes
+											is_machine_empire = yes
+										}
 									}
 									add_building = building_deployment_post
 								}
 								else_if = {
 									limit = {
-										is_gestalt = yes
-										is_hive_empire = yes
+										owner = {
+											is_gestalt = yes
+											is_hive_empire = yes
+										}
 									}
 									add_building = building_hive_capital
 								}

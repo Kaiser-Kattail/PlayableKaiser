@@ -375,6 +375,14 @@ NAME_symbie_defense: "Wacegi Army"
  tension_1: "Stage 1"
  tension_2: "Stage 2"
  tension_3: "Stage 3"
+ tension_4: "Stage 4"
+ tension_5: "Stage 5"
+ tension_6: "Stage 6"
+ tension_7: "Stage 7"
+ tension_8: "Stage 8"
+ tension_9: "Stage 9"
+ tension_10: "Stage 10"
+
 
 
  conquest.090909.title:0 "The Unification of Flusion"

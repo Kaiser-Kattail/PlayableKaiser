@@ -50,6 +50,7 @@
 
     NAME_BIG_KATZEN_EMPIRE:0 "Großkatzenartig Imperium"
     NAME_GALACTIC_KATZEN_EMPIRE:0 "Galaktisches Katzimperium"
+    NAME_BIGGEST_KATZEN_EMPIRE: "Übergalaktisches Katzimperium"
     # Traits
 
     pki_katzen_trait_elite:0 "Großewichtigekatze"
@@ -248,7 +249,7 @@
     tech_katzen_theater_desc:0 "Control of entertainment and the media are paramount to the success of our Imperium and the Kaiser's vision. Small-scale self-sustaining enterprises will provide all of the information our citizens need to know."
     tech_katzen_flusioarc:0 "Project Flusionform"
     tech_katzen_flusioarc_desc:0 "Flusion has had oceans drained, megalopolises established, and gargantuan quarries built. And yet, many bountiful resources remain untouched. To fix this glaring issue, a Flusio-Arcology will be constructed around our homeworld to ensure all of Flusion's natural resources are utilized."
-   
+
     # Buildings
     building_katzen_civilian_forge:0 "Katzen Factories"
     building_katzen_civilian_forge_desc:0 "Massive industrial complexes dedicated to mixed industrial use."
@@ -1001,8 +1002,12 @@
     PKI_TECH_UNLOCK_BOMBER_CONSTRUCTION_TITLE: "§HUnlocks Ship Type:§! Leerekatzenbomber"
     PKI_TECH_UNLOCK_CRUISER_CONSTRUCTION_DESC: "§HKatzenkreuzers§!\nKatzenkreuzers are the backbone of any fleet they are in, being equipped ample armor and shields, and utilizing large railguns and missile batteries to overwhelm enemies. Katzenkreuzers are also equipped with small hangar bays."
     PKI_TECH_UNLOCK_CRUISER_CONSTRUCTION_TITLE: "§HUnlocks Ship Type:§! Katzenkreuzer"
+
+
+    tech_pki_ship_sections: "Expanded Ship Designs"
+    tech_pki_ship_sections_desc: "With combat experience we have determined new ship loadouts could benefit our effectiveness."
     PKI_TECH_UNLOCK_SHIP_SECTIONS_TITLE: "§HUnlocks Sections:§! Additional Katzen Ship Sections"
-    PKI_TECH_UNLOCK_SHIP_SECTIONS_DESC: "§HAdditional Sections§!\nWith recent advances and combat experience, [owner_main_species] scientists have come up with additional ship configurations to help our efforts."
+    PKI_TECH_UNLOCK_SHIP_SECTIONS_DESC: "§HAdditional Sections§!\nWith recent advances and combat experience, Katzen scientists have come up with additional ship configurations to help our efforts."
 
 
     tech_pki_submarine: "Unterraumboot"
@@ -1078,3 +1083,45 @@
 
     pki_proclaim_big_empire: "§Y$pki_misc.4.name$§!"
     pki_proclaim_bigger_empire: "§Y$pki_misc.5.name$§!"
+
+    resolution_category_pki_katzen_focus: "$resolution_category_katzen_focus$"
+
+    galactic_focus_pki_crisis_katzen: "$resolution_galactic_focus_crisis_katzen$"
+    galactic_focus_pki_crisis_katzen_desc: "$galactic_focus_crisis_katzen_desc$"
+
+    resolution_pki_public_recognition_of_solakia: "$resolution_public_recognition_of_solakia$"
+    resolution_pki_public_recognition_of_solakia_desc: "$resolution_public_recognition_of_solakia_desc$"
+    resolution_pki_public_recognition_of_laurandar: "$resolution_public_recognition_of_laurandar$"
+    resolution_pki_public_recognition_of_laurandar_desc: "$resolution_public_recognition_of_laurandar_desc$"
+    resolution_pki_denounce_ezic_warcrimes: "$resolution_denounce_ezic_warcrimes$"
+    resolution_pki_denounce_ezic_warcrimes_desc: "$resolution_denounce_ezic_warcrimes_desc$"
+    resolution_pki_galactic_focus_crisis_katzen: "$resolution_galactic_focus_crisis_katzen$"
+    resolution_pki_galactic_focus_crisis_katzen_desc: "$resolution_galactic_focus_crisis_katzen_desc$"
+    resolution_pki_anti_kaiser_crusade: "$resolution_anti_kaiser_crusade$"
+    resolution_pki_anti_kaiser_crusade_desc: "$resolution_anti_kaiser_crusade_desc$"
+
+    resolution_pki_galactic_focus_crisis_katzen_effect_success: "Every member of the [global_event_country.GetGalCommunityOrGalImperium] will open borders to one another and mobilize for war, gaining §Y+25%§! damage against the §YKatzenartig Imperium§!."
+    pki_must_have_mobilized_and_supported_flusion: "We must have mobilized against the Kaiser."
+
+    pki_galcom_mobilizes_against_kaiser: "$galcom_mobilizes_against_kaiser$"
+    pki_galcom_mobilizes_against_kaiser_desc: "$galcom_mobilizes_against_kaiser_desc$"
+
+    pki_galcom_sanctions_1: "Galactic Community Sanctions"
+    pki_galcom_sanctions_1_desc: "The [global_event_country.GetGalCommunityOrGalImperium] is sanctioning the Katzenartig Imperium."
+    pki_galcom_sanctions_2: "$pki_galcom_sanctions_1$"
+    pki_galcom_sanctions_2_desc: "$pki_galcom_sanctions_1_desc$"
+    pki_crisis_buffs: "Katzen Mobilization"
+    pki_crisis_buffs_desc: "you shouldnt be able to see this"
+
+    pki_crisis_war_buffs: "Wartime Focus"
+    pki_crisis_war_buffs_desc: "An intense focus on raw power and might will ensure victory."
+    pki_crisis_peace_buffs: "Peacetime Focus"
+    pki_crisis_peace_buffs_desc: "In out temporary pause from conquest, we must build up our forces to crush any opposition. "
+
+    pki_is_katzenartig_imperium: "Is Katzenartig Imperium"
+    pki_angry_with_katzen: "Angry at Katzenartig Imperium"
+
+    opinion_pki_mocked_galcom_1: "Mocked Galactic Community"
+    opinion_pki_mocked_galcom_2: "$opinion_pki_mocked_galcom_1$"
+
+    pki_sanctions_worsening: "Modify §Y$pki_galcom_sanctions_1$§! by:\n$DIPLOMACY_WEIGHT_LABEL$: §R-25%§!\n$MOD_COUNTRY_TRUST_GROWTH$: §R-25%§!"

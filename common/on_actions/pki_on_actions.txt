@@ -8,7 +8,6 @@ on_game_start = {
 on_press_begin = {
 	events = {
 		flusion.42
-		pki_misc.9
 		flusion.41
 	}
 }
@@ -35,6 +34,11 @@ on_monthly_pulse_country = {
 		pki_misc.25
 	}
 }
+
+on_ship_destroyed_perp = {						events = { pki_corrona.020 } }			# Corrona Moon destroyed
+
+on_entering_system_first_time = {				events = { pki_corrona.001 } }			# Entered Jupitwo System
+on_survey_planet = {									events = { pki_corrona.002 } }			# Surveyed Corrona
 
 on_fleet_enter_orbit = {
 	events = {
@@ -112,6 +116,13 @@ on_war_beginning = {
 	events = {
 		pki_misc.212
 		pki_misc.2122
+		pki_crisis.103
+	}
+}
+
+on_war_ended = {
+	events = {
+		pki_crisis.103
 	}
 }
 

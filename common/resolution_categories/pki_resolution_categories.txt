@@ -1,0 +1,12 @@
+resolution_category_pki_katzen_focus = {
+	group = galactic_focus
+	icon = "GFX_resolution_category_katzen_focus"
+
+	resolution_types = {
+		"resolution_pki_public_recognition_of_solakia"
+		"resolution_pki_public_recognition_of_laurandar"
+		"resolution_pki_denounce_ezic_warcrimes"
+		"resolution_pki_galactic_focus_crisis_katzen"
+		"resolution_pki_anti_kaiser_crusade"
+	}
+}
