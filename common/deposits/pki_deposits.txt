@@ -135,14 +135,18 @@ d_propanian_mines = {
 	
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = no
+			owner = {
+				is_gestalt = no
+			}
 		}
 		job_gas_extractor_add = 2
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = yes
+			owner = {
+				is_gestalt = yes
+			}
 		}
 		job_gas_extraction_drone_add = 2
 	}
@@ -298,14 +302,18 @@ d_catspian_crystal_mines = {
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = no
+			owner = {
+				is_gestalt = no
+			}
 		}
 		job_crystal_miner_add = 2
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = yes
+			owner = {
+				is_gestalt = yes
+			}
 		}
 		job_crystal_mining_drone_add = 2
 	}
@@ -563,14 +571,18 @@ d_katzen_mineral_dam = {
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = no
+			owner = {
+				is_gestalt = no
+			}
 		}
 		job_miner_per_pop = 0.1
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = yes
+			owner = {
+				is_gestalt = yes
+			}
 		}
 		job_mining_drone_per_pop = 0.1
 	}
@@ -593,14 +605,18 @@ d_katzen_energy_dam = {
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = no
+			owner = {
+				is_gestalt = no
+			}
 		}
 		job_technician_per_pop = 0.1
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = yes
+			owner = {
+				is_gestalt = yes
+			}
 		}
 		job_technician_drone_per_pop = 0.1
 	}
@@ -629,14 +645,18 @@ d_katzen_food_dam = {
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = no
+			owner = {
+				is_gestalt = no
+			}
 		}
 		job_farmer_per_pop = 0.1
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = yes
+			owner = {
+				is_gestalt = yes
+			}
 		}
 		job_agri_drone_per_pop = 0.1
 	}
