@@ -153,7 +153,7 @@ katzen_trait_martial_free = {
 # Leader Traits
 
 leader_trait_ruler_kaiser_cattail = {
-	destiny_trait = yes
+	leader_trait_type = destiny
 	immortal_leaders = yes
 	inline_script = {
 		script = trait/icon
@@ -174,7 +174,7 @@ leader_trait_ruler_kaiser_cattail = {
 }
 
 leader_trait_gunfur = {
-	destiny_trait = yes
+	leader_trait_type = destiny
 	ethic_destiny_trait = no
 	inline_script = {
 		script = trait/icon
@@ -198,7 +198,7 @@ leader_trait_gunfur = {
 }
 
 leader_trait_neumeyer = {
-	destiny_trait = yes
+	leader_trait_type = destiny
 	ethic_destiny_trait = no
 	inline_script = {
 		script = trait/icon
@@ -230,7 +230,7 @@ leader_trait_neumeyer = {
 }
 
 leader_trait_schulz = {
-	destiny_trait = yes
+	leader_trait_type = destiny
 	ethic_destiny_trait = no
 	inline_script = {
 		script = trait/icon
@@ -438,18 +438,18 @@ pki_leader_trait_nukelad = {
 }
 
 pki_leader_trait_command_limit = {
-	veteran_class_locked_trait = yes
+	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
-		CLASS = leader
+		CLASS = commander
 		ICON = "GFX_leader_trait_supreme_admiral"
-		RARITY = veteran
+		RARITY = paragon
 		COUNCIL = no
-		TIER = 1
+		TIER = none
 	}
 
 	fleet_modifier = {
-		command_limit_mult = 1
+		command_limit_mult = 150
 	}
 
 	leader_potential_add = {
@@ -465,47 +465,5 @@ pki_leader_trait_command_limit = {
 	selectable_weight = {
 		weight = @subclass_trait_weight
 		inline_script = paragon/pilot_weight_mult
-		inline_script = {
-			script = paragon/subclass_weight_mult
-			SUBCLASS = commander_admiral
-		}
 	}
-}
-
-pki_leader_trait_command_limit_2 = {
-	veteran_class_locked_trait = yes
-	replace_traits = { pki_leader_trait_command_limit }
-	inline_script = {
-		script = trait/icon
-		CLASS = leader
-		ICON = "GFX_leader_trait_supreme_admiral"
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 2
-	}
-
-	fleet_modifier = {
-		command_limit_mult = 1.5
-	}
-
-	leader_class = { commander }
-}
-
-pki_leader_trait_command_limit_3 = {
-	veteran_class_locked_trait = yes
-	replace_traits = { pki_leader_trait_command_limit_2 }
-	inline_script = {
-		script = trait/icon
-		CLASS = leader
-		ICON = "GFX_leader_trait_supreme_admiral"
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 3
-	}
-
-	fleet_modifier = {
-		command_limit_mult = 2
-	}
-
-	leader_class = { commander }
 }
