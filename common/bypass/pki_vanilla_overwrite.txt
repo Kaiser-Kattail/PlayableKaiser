@@ -24,7 +24,7 @@ quantum_catapult = {
 				is_in_federation_with = from
 				is_overlord_to = from
 				from = { is_overlord_to = root }
-				NOT = { from = { has_origin = origin_katzen } }
+				NOT = { from = { pki_is_katzenartig_imperium = yes } }
 			}
 		}
 	}

@@ -1,0 +1,356 @@
+pki_panzer = { #Destroyerish, designed to conduct Blitzkrieg and overwhelm enemy forces
+	entity = giga_katzen_panzer_entity
+	graphical_culture = no
+	formation_priority = @destroyer_formation_priority
+	max_speed = @speed_very_fast #Blitzkrieg
+	acceleration = 0.3
+	rotation_speed = 0.60
+	collision_radius = @destroyer_collision_radius
+	max_hitpoints = @destroyer_hp
+	modifier = {
+		ship_evasion_add = @destroyer_evasion
+		ship_piracy_suppression_add = 8
+	}
+	size_multiplier = 2
+	fleet_slot_size = 3
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 4
+	is_space_station = no
+	icon = ship_size_military_2
+	base_buildtime = @destroyer_build_time
+	can_have_federation_design = no
+	enable_default_design = yes
+
+	default_behavior = swarm
+	ship_roles = { screen brawler }
+
+	potential_country = {
+		OR = {
+			pki_is_katzenartig_imperium = yes
+			pki_is_katzprotektorat_tier_2 = yes
+		}
+	}
+	prerequisites = {
+		tech_pki_panzer
+	}
+
+	combat_disengage_chance = 1.00
+
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	required_component_set = pki_katzen_power_core
+	required_component_set = "ftl_components"
+	required_component_set = pki_katzen_thruster_components
+	required_component_set = "sensor_components"
+	required_component_set = pki_katzen_combat_computers
+
+	resources = {
+		category = ships
+		upkeep = {
+			energy = @destroyer_upkeep_energy
+			alloys = @destroyer_upkeep_alloys
+		}
+	}
+
+	min_upgrade_cost = {
+		alloys = 2
+	}
+
+	ai_ship_data = {
+		fraction = {
+			base = 0
+			modifier = {
+				add = 20
+				uses_standard_ship_sizes = yes
+			}
+			modifier = {
+				factor = 10
+				pki_is_katzprotektorat = yes
+			}
+			modifier = {
+				factor = 1.5
+				has_valid_ai_personality = yes
+				OR = {
+					has_ai_personality = erudite_explorers
+					has_ai_personality = federation_builders
+					has_ai_personality = peaceful_traders
+				}
+			}
+			modifier = {
+				factor = 1.5
+				has_valid_civic = civic_hive_devouring_swarm
+			}
+			modifier = {
+				factor = 1.5
+				has_valid_civic = civic_hive_devouring_swarm
+				NOT = { has_technology = tech_battleships }
+			}
+		}
+	}
+}
+
+pki_bomber = { #Cruiser, bomber designed to assault enemy worlds and fortifications from afar.
+	entity = giga_katzen_bomber_entity
+	formation_priority = @cruiser_formation_priority
+	max_speed = @speed_very_fast
+	acceleration = 0.25
+	rotation_speed = 0.175
+	collision_radius = @cruiser_collision_radius
+	max_hitpoints = @cruiser_hp
+	modifier = {
+		ship_evasion_add = @cruiser_evasion
+		ship_piracy_suppression_add = 4
+		ship_orbital_bombardment_mult = 2
+	}
+	size_multiplier = 4
+	fleet_slot_size = 4
+	section_slots = { "mid" = { locator = "part2" } }
+	num_target_locators = 4
+	is_space_station = no
+	icon = ship_size_military_4
+	base_buildtime = @cruiser_build_time
+	can_have_federation_design = no
+	enable_3dview_in_ship_browser = no #if yes, ship design will have a 3d view in the ship browser
+
+	default_behavior = line
+
+	enable_default_design = yes
+	potential_country = {
+		OR = {
+			pki_is_katzenartig_imperium = yes
+			pki_is_katzprotektorat_tier_3 = yes
+		}
+	}
+	prerequisites = {
+		tech_pki_bomber
+	}
+
+	combat_disengage_chance = 1.50
+
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	required_component_set = pki_katzen_power_core
+	required_component_set = "ftl_components"
+	required_component_set = pki_katzen_thruster_components
+	required_component_set = "sensor_components"
+	required_component_set = pki_katzen_combat_computers
+
+	resources = {
+		category = ships
+		upkeep = {
+			energy = @cruiser_upkeep_energy
+			alloys = @cruiser_upkeep_alloys
+		}
+	}
+
+	min_upgrade_cost = {
+		alloys = 4
+	}
+
+	ai_ship_data = {
+		fraction = {
+			base = 0
+			modifier = {
+				add = 30
+				uses_standard_ship_sizes = yes
+			}
+			modifier = {
+				factor = 10
+				pki_is_katzprotektorat = yes
+			}
+			modifier = {
+				factor = 1.5
+				is_preferred_weapons = weapon_type_strike_craft
+			}
+			modifier = {
+				factor = 1.5
+				has_valid_ai_personality = yes
+				OR = {
+					has_ai_personality = evangelising_zealots
+					has_ai_personality = spiritual_seekers
+					has_ai_personality = slaving_despots
+				}
+			}
+		}
+	}
+}
+
+pki_cruiser = { #Battleship-Titan, designed to "sit back" and assist the fleet
+	entity = giga_katzen_cruiser_entity
+	formation_priority = 50
+	max_speed = 120
+	acceleration = 0.2
+	rotation_speed = 0.15
+	collision_radius = 7
+	max_hitpoints = 5000
+	base_buildtime = @battleship_build_time
+	can_have_federation_design = no
+	enable_default_design = yes
+	potential_country = {
+		OR = {
+			pki_is_katzenartig_imperium = yes
+			pki_is_katzprotektorat_tier_3 = yes
+		}
+	}
+	prerequisites = {
+		tech_pki_cruiser
+	}
+	modifier = {
+		ship_evasion_add = @battleship_evasion
+		ship_piracy_suppression_add = 4
+		ship_fire_rate_mult = 0.1
+	}
+	size_multiplier = 8
+	fleet_slot_size = 8
+	section_slots = { "bow" = { locator = "part1" } "mid" = { locator = "part2" } "stern" = { locator = "part3" } }
+	num_target_locators = 4
+	is_space_station = no
+	icon = ship_size_military_8
+
+	combat_disengage_chance = 1.25
+
+	resources = {
+		category = ships
+		upkeep = {
+			energy = @battleship_upkeep_energy
+			alloys = @battleship_upkeep_alloys
+		}
+	}
+
+	min_upgrade_cost = {
+		alloys = 6
+	}
+
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	required_component_set = pki_katzen_power_core
+	required_component_set = "ftl_components"
+	required_component_set = pki_katzen_thruster_components
+	required_component_set = "sensor_components"
+	required_component_set = pki_katzen_combat_computers
+
+	ai_ship_data = {
+		fraction = {
+			base = 0
+			modifier = {
+				add = 55
+				uses_standard_ship_sizes = yes
+			}
+			modifier = {
+				factor = 10
+				pki_is_katzprotektorat = yes
+			}
+			modifier = {
+				factor = 1.5
+				is_preferred_weapons = weapon_type_strike_craft
+			}
+			modifier = {
+				factor = 1.5
+				has_valid_civic = civic_hive_devouring_swarm
+			}
+			modifier = {
+				factor = 1.5
+				is_machine_empire = yes
+			}
+			modifier = {
+				factor = 1.5
+				has_valid_ai_personality = yes
+				OR = {
+					has_ai_personality = honorbound_warriors
+					has_ai_personality = hegemonic_imperialists
+					has_ai_personality = democratic_crusaders
+					has_ai_personality = became_the_crisis
+				}
+			}
+		}
+	}
+}
+
+pki_submarine = {
+	entity = giga_katzen_submarine_entity
+	graphical_culture = no
+	formation_priority = @frigate_formation_priority
+	max_speed = @speed_default
+	acceleration = 0.3
+	rotation_speed = 0.2
+	collision_radius = 3.0
+	max_hitpoints = @frigate_hp
+	build_time = @destroyer_build_time
+	modifier = {
+		ship_evasion_add = @frigate_evasion
+		ship_engagement_range_mult = 4
+		ship_cloaking_strength_add = 3
+		ship_piracy_suppression_add = 10
+	}
+	size_multiplier = 4
+	fleet_slot_size = 2
+	section_slots = { "mid" = { locator = "part2" } }
+	num_target_locators = 4
+	is_space_station = no
+	icon = ship_size_military_1_torpedo
+
+	default_behavior = line
+
+	combat_disengage_chance = 1.00
+
+	can_have_federation_design = no
+	enable_default_design = yes
+
+	potential_country = {
+		pki_is_katzenartig_imperium = yes
+	}
+	prerequisites = {
+		tech_pki_submarine
+	}
+	resources = {
+		category = ships
+		upkeep = {
+			energy = @destroyer_upkeep_energy
+			alloys = @destroyer_upkeep_alloys
+		}
+	}
+
+	min_upgrade_cost = {
+		alloys = 1
+	}
+
+	construction_type = starbase_shipyard
+	class = shipclass_military
+	required_component_set = pki_katzen_power_core
+	required_component_set = "ftl_components"
+	required_component_set = pki_katzen_thruster_components
+	required_component_set = "sensor_components"
+	required_component_set = pki_katzen_combat_computers
+}
+
+pki_warforge_platform = { #Katzen war forge platform
+	graphical_culture = no
+	entity = "pki_warplatform_invisible_entity"
+	max_speed = 0.0
+	acceleration = 0.0
+	rotation_speed = 0.0
+	modifier = {
+		ship_evasion_mult = -1
+	}
+	ship_modifier = {
+		ship_weapon_range_mult = 0.20
+		ship_fire_rate_mult = 0.10
+	}
+	max_hitpoints = 12000
+	size_multiplier = 4
+	fleet_slot_size = 4
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = yes
+	build_block_radius = 0
+	potential_country = {
+		pki_is_katzenartig_imperium = yes
+	}
+	class = shipclass_military_station
+	icon = ship_size_military_station
+	enable_default_design = yes
+	is_designable = yes
+	required_component_set = pki_katzen_power_core
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+}

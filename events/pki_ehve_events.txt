@@ -39,7 +39,15 @@ country_event = {
 	picture = GFX_evt_ehof
 	is_triggered_only = yes
 	location = FROM
-	fire_only_once = yes
+
+	trigger = {
+		from = {
+			NOT = {
+				has_megastructure_flag = pki_dont_do_completion_event
+			}
+		}
+	}
+
 	option = {
 		name = pki_ehve.3.a
 	}

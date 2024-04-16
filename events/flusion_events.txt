@@ -48,6 +48,7 @@ country_event = {
 	immediate = {
 		set_country_flag = starting_event
 		save_global_event_target_as = katzenartig
+		set_global_flag = pki_katzen_is_being_played
 		owner_main_species = {
 			save_global_event_target_as = pki_katzen_species
 		}
@@ -119,6 +120,8 @@ country_event = {
 				save_global_event_target_as = flusionhome
 			}
 		}
+
+
 
 		#Leader Portraits
 		create_species = {
@@ -332,7 +335,7 @@ country_event = {
 
 			while = {
 				count = 9
-				random_pop = {
+				random_owned_pop = {
 					limit = {
 						is_pop_category = specialist
 					}
@@ -355,7 +358,7 @@ country_event = {
 				}
 				while = {
 					count = 10
-					random_pop = {
+					random_owned_pop = {
 						limit = {
 							is_pop_category = specialist
 						}
@@ -380,8 +383,38 @@ country_event = {
 			}
 		}
 		set_country_flag = flusion_setup_complete
+
+
 		#Create Jublio
 
+		event_target:player_jublio_system = {
+			spawn_system = {
+				max_distance = 4
+				min_distance = 5
+				initializer = pki_jupitwo_initializer
+			}
+			last_created_system = {
+				# Add extra hyperlane
+				random_list = {
+					1 = {
+						while = {
+							count = 1
+							giga_generate_hyperlane = {
+								TRIGGER = " pki_is_allowed_for_kaiser_spawn = yes "
+							}
+						}
+					}
+					1 = {
+						while = {
+							count = 2
+							giga_generate_hyperlane = {
+								TRIGGER = " pki_is_allowed_for_kaiser_spawn = yes "
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -458,13 +491,13 @@ country_event = {
 				effect = {
 					change_leader_portrait = lorisvanilla
 					set_leader_flag = loris
-					save_global_event_target_as = loris
+					save_global_event_target_as = pki_loris
 					set_council_position = councilor_state
 				}
 			}
 
 			event_target:playerflusion = {
-				assign_leader = event_target:loris
+				assign_leader = event_target:pki_loris
 			}
 
 			#Create Douclaw
@@ -496,13 +529,17 @@ country_event = {
 	}
 }
 
-event = {
+country_event = {
 	id = flusion.42
 	hide_window = yes
 	is_triggered_only = yes
 
+	trigger = {
+		pki_is_katzenartig_imperium = yes
+	}
+
 	immediate = {
-		set_global_flag = kaiser_is_player
+		set_global_flag = pki_katzen_is_being_played
 		set_global_flag = katzenartig_disabled
 		set_global_flag = giga_jublio_disabled
 		set_global_flag = giga_jupitwo_disabled
@@ -547,28 +584,6 @@ country_event = {
 }
 
 namespace = katzen
-
-#Solaktropa dam add
-planet_event = {
-	id = katzen.1
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		add_deposit = d_solaktropa_project
-	}
-}
-
-#Katlantropa dam add
-planet_event = {
-	id = katzen.2
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		add_deposit = d_katlantropa_project
-	}
-}
 
 #Katzen elite to soulbot
 country_event = {

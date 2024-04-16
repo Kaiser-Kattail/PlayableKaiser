@@ -1,0 +1,23 @@
+component_set = {
+	key = pki_katzen_thruster_components
+
+	required_component_set = yes
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = pki_katzen_power_core
+
+	required_component_set = yes
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = pki_katzen_combat_computers
+
+	required_component_set = yes
+	icon = "GFX_ship_part_computer"
+	icon_frame = 1
+}

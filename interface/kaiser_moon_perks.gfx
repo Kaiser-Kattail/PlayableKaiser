@@ -253,5 +253,25 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/diplomacy/diplomacy_isvassal.dds"
 	}
 
+	spriteType = {
+		name = "GFX_ship_part_pki_torpedo"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_pki_torpedo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_pki_kreuzerkannone"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_pki_mass_accelerator.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_pki_panzer_artillery"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_pki_kinetic_artillery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_pki_swarmer_missile"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_pki_swarmer_missile.dds"
+	}
+
 }
 

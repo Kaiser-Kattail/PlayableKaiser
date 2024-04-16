@@ -1,0 +1,385 @@
+@distance = 50
+@base_moon_distance = 10
+
+
+### Flusion System
+flusion_new_initializer = {
+    name = "NAME_JUBLIO_SYSTEM"
+    class = "sc_g"
+    flags = { flusion_system empire_home_system }
+    asteroid_belt = { type = rocky_asteroid_belt radius = 37 }
+
+    usage = origin
+
+    init_effect = {
+        every_neighbor_system = {
+            set_star_flag = empire_cluster
+            every_neighbor_system = {
+                set_star_flag = empire_cluster
+            }
+        }
+        generate_home_system_resources = yes
+    }
+
+    planet = {
+        name = "NAME_Jublio"
+        class = "pc_g_star"
+        orbit_distance = 0
+        orbit_angle = 1
+        size = 30
+        has_ring = no
+        init_effect = {
+            set_planet_flag = jublio
+            save_global_event_target_as = jublio
+            set_planet_flag = forbid_guillis_planet_modifiers
+        }
+    }
+
+    planet = {
+        name = "NAME_Sur"
+        class = "pc_asteroid"
+        orbit_distance = 37
+        orbit_angle = 78
+        size = 3
+        has_ring = no
+
+        init_effect = {
+            set_planet_flag = forbid_guillis_planet_modifiers
+        }
+    }
+
+    planet = {
+        name = "NAME_Zefi"
+        class = "pc_asteroid"
+        orbit_distance = 0
+        orbit_angle = 195
+        size = 4
+        has_ring = no
+
+        init_effect = {
+            set_planet_flag = forbid_guillis_planet_modifiers
+        }
+    }
+
+    planet = {
+        name = "NAME_Veene"
+        class = "pc_toxic"
+        orbit_distance = 23
+        orbit_angle = 15
+        size = 17
+        has_ring = no
+        init_effect = {
+            add_modifier = { modifier = "terraforming_candidate" days = -1 }
+            set_planet_flag = veene
+            save_global_event_target_as = veene
+            set_planet_flag = forbid_guillis_planet_modifiers
+        }
+    }
+
+    planet = {
+        name = "NAME_Doughland"
+        class = "pc_barren"
+        orbit_distance = 25
+        orbit_angle = 125
+        size = 23
+        has_ring = yes
+        init_effect = {
+            prevent_anomaly = yes
+            set_planet_flag = doughland
+            save_global_event_target_as = doughland
+            set_planet_flag = forbid_guillis_planet_modifiers
+            giga_set_has_mega_flag = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Flusion"
+        class = "pc_continental"
+        orbit_distance = 25
+        orbit_angle = 120
+        size = 16
+        starting_planet = yes
+        has_ring = no
+        entity = "flusion_planet_entity"
+        init_effect = {
+            clear_planet_modifiers = yes
+            add_modifier = { modifier = pki_flusion_rich_modifier days = -1 }
+            prevent_anomaly = yes
+            save_global_event_target_as = gigaflusion
+            save_global_event_target_as = playerflusion
+            set_planet_flag = gigaflusion
+            set_planet_flag = playerflusion
+            set_planet_flag = cant_build_here
+            set_planet_flag = kaiser_update
+            set_planet_flag = forbid_guillis_planet_modifiers
+        }
+
+        moon = {
+            name = "NAME_Xenon"
+            class = "pc_toxic"
+            size = 6
+            orbit_distance = 8
+            orbit_angle = 40
+            has_ring = no
+            init_effect = {
+                prevent_anomaly = yes
+                set_planet_flag = xenon
+                save_global_event_target_as = xenon
+                set_planet_flag = forbid_guillis_planet_modifiers
+            }
+        }
+
+        moon = {
+            name = "NAME_Muno"
+            class = "pc_barren_cold"
+            size = 5
+            orbit_distance = 7
+            orbit_angle = 40
+            has_ring = no
+            init_effect = {
+                prevent_anomaly = yes
+                set_planet_flag = gigamuno
+                save_global_event_target_as = gigamuno
+                set_planet_flag = forbid_guillis_planet_modifiers
+                giga_set_has_mega_flag = yes
+            }
+        }
+    }
+
+    planet = {
+        name = "NAME_Merries"
+        class = "pc_barren"
+        orbit_distance = 25
+        orbit_angle = 60
+        size = 12
+        has_ring = no
+        init_effect = {
+            add_modifier = { modifier = "terraforming_candidate" days = -1 }
+            set_planet_flag = merries
+            save_global_event_target_as = merries
+            set_planet_flag = forbid_guillis_planet_modifiers
+        }
+    }
+
+    planet = {
+        name = "NAME_Ledigen"
+        class = "pc_frozen"
+        orbit_distance = 25
+        orbit_angle = -210
+        size = 9
+        has_ring = no
+
+        init_effect = {
+            prevent_anomaly = yes
+            set_planet_flag = ledigen
+            save_global_event_target_as = ledigen
+            set_planet_flag = forbid_guillis_planet_modifiers
+        }
+
+        moon = {
+            name = "NAME_Magmoon"
+            class = "pc_molten"
+            size = 4
+            orbit_distance = 10
+            orbit_angle = 110
+            has_ring = no
+
+            init_effect = {
+                set_planet_flag = forbid_guillis_planet_modifiers
+            }
+        }
+    }
+
+    planet = {
+        name = "NAME_Glaka"
+        class = "pc_gas_giant"
+        orbit_distance = 25
+        orbit_angle = -95
+        size = 20
+        has_ring = no
+
+        init_effect = {
+            prevent_anomaly = yes
+            set_planet_flag = glaka
+            save_global_event_target_as = glaka
+            set_planet_flag = forbid_guillis_planet_modifiers
+        }
+
+        moon = {
+            name = "NAME_Denerth"
+            class = "pc_barren"
+            size = 5
+            orbit_distance = 15
+            orbit_angle = 110
+            has_ring = no
+
+            init_effect = {
+                set_planet_flag = forbid_guillis_planet_modifiers
+            }
+        }
+    }
+
+    planet = {
+        name = "NAME_Nesar"
+        class = "pc_molten"
+        orbit_distance = 25
+        orbit_angle = 285
+        size = 12
+        has_ring = no
+
+        init_effect = {
+            prevent_anomaly = yes
+            set_planet_flag = nesar
+            save_global_event_target_as = nesar
+            set_planet_flag = forbid_guillis_planet_modifiers
+            giga_set_has_mega_flag = yes
+        }
+
+        moon = {
+            name = "NAME_Altaselon"
+            class = "pc_frozen"
+            size = 3
+            orbit_distance = 5
+            orbit_angle = 110
+            has_ring = no
+
+            init_effect = {
+                set_planet_flag = forbid_guillis_planet_modifiers
+            }
+        }
+        moon = {
+            name = "NAME_Folia"
+            class = "pc_barren_cold"
+            size = 2
+            orbit_distance = 4
+            orbit_angle = 10
+            has_ring = no
+
+            init_effect = {
+                set_planet_flag = forbid_guillis_planet_modifiers
+            }
+        }
+    }
+
+    planet = {
+        name = "NAME_Creeo"
+        class = "pc_frozen"
+        orbit_distance = 25
+        orbit_angle = -80
+        size = 10
+        has_ring = no
+
+        init_effect = {
+            prevent_anomaly = yes
+            set_planet_flag = creeo
+            save_global_event_target_as = creeo
+            set_planet_flag = forbid_guillis_planet_modifiers
+        }
+    }
+
+    planet = {
+        name = "NAME_Mlekane"
+        class = "pc_toxic"
+        orbit_distance = 25
+        orbit_angle = -80
+        size = 15
+        has_ring = yes
+
+        init_effect = {
+            prevent_anomaly = yes
+            set_planet_flag = mlekane
+            save_global_event_target_as = mlekane
+            set_planet_flag = forbid_guillis_planet_modifiers
+        }
+    }
+
+    init_effect = {
+        save_global_event_target_as = player_jublio_system
+    }
+}
+
+pki_jupitwo_initializer = {
+    name = "Jupitwo"
+    class = "sc_t"
+    flags = { pki_jupitwo_system }
+    asteroid_belt = { type = rocky_asteroid_belt radius = 65 }
+
+    planet = {
+        name = "Jupitwo"
+        class = "pc_t_star_big"
+        orbit_distance = 0
+        orbit_angle = 1
+        size = 35
+        has_ring = no
+        init_effect = {
+            set_planet_flag = pki_jupitwo
+            set_planet_flag = forbid_guillis_planet_modifiers
+            save_global_event_target_as = pki_jupitwo
+        }
+    }
+
+    planet = {
+        name = "Corrona"
+        class = "pc_continental"
+        size = 20
+        orbit_distance = 50
+        orbit_angle = 110
+        has_ring = no
+
+        init_effect = {
+            set_planet_flag = pki_corrona
+            set_planet_flag = forbid_guillis_planet_modifiers
+            save_global_event_target_as = pki_corrona
+            add_modifier = {
+                modifier = corrona_defence_buff
+                days = -1
+            }
+            pki_generate_corrona_primitives_on_planet = yes
+        }
+    }
+
+    planet = {
+        name = "Regan"
+        class = "pc_barren_cold"
+        size = 12
+        orbit_distance = 25
+        orbit_angle = 110
+        has_ring = no
+
+        init_effect = {
+            set_planet_flag = pki_jupitwo1
+            save_global_event_target_as = pki_jupitwo1
+            set_planet_flag = forbid_guillis_planet_modifiers
+        }
+    }
+
+    planet = {
+        name = "Tandra"
+        class = "pc_frozen"
+        size = 14
+        orbit_distance = 25
+        orbit_angle = 7
+        has_ring = no
+
+        init_effect = {
+            set_planet_flag = pki_jupitwo2
+            set_planet_flag = forbid_guillis_planet_modifiers
+            save_global_event_target_as = pki_jupitwo2
+        }
+    }
+
+    planet = {
+        name = "Tuia"
+        class = "pc_barren"
+        size = 17
+        orbit_distance = 25
+        orbit_angle = 110
+        has_ring = no
+
+        init_effect = {
+            set_planet_flag = pki_jupitwo3
+            set_planet_flag = forbid_guillis_planet_modifiers
+            save_global_event_target_as = pki_jupitwo3
+        }
+    }
+}

@@ -1,21 +1,33 @@
-##########################################################################
-# HARD FIXED STATE - DO NOT REMOVE OR RENAME ANY OF THESE
-##########################################################################
-
 opinion_katzen_militarism = {
-	trigger = {
-		is_country_type = default
-		NOT = {
-			pki_is_katzprotektorat = yes
-		}
-		from = {
-			has_origin = origin_katzen
-		}
-	}
 	opinion = {
-		base = -2.5
+		base = -5
 		modifier = {
-			multiply = trigger:years_passed
+			multiply = event_target:katzenartig.value:pki_galaxy_owned
 		}
 	}
+	unique = yes
+}
+
+opinion_pki_mocked_galcom_1 = {
+	opinion = {
+		base = -100
+	}
+
+	decay = {
+		base = 2
+	}
+
+	unique = yes
+}
+
+opinion_pki_mocked_galcom_2 = {
+	opinion = {
+		base = -50
+	}
+
+	decay = {
+		base = 2
+	}
+
+	unique = yes
 }

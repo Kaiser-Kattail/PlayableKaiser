@@ -3,6 +3,13 @@ flusion_empire_ratio = {
     divide = owner.capital_scope.trigger:num_pops
 }
 
+pki_flusion_half_threshold = {
+    add = root.capital_scope.trigger:num_pops
+    divide = 2
+    floor = yes
+    subtract = 5
+}
+
 flusion_empire_ratio_five = {
     weight = value:flusion_empire_ratio
     subtract = 0.5
@@ -38,4 +45,28 @@ pki_num_total_warforges = {
 pki_attack_moon_upkeep = {
     base = 1
     add = modifier:shipsize_giga_massive_planet_upkeep
+}
+
+pki_galaxy_systems = {
+    complex_trigger_modifier = {
+        trigger = count_system
+        trigger_scope = system_star
+        parameters = {
+            limit = {
+                giga_is_empty_space = no
+            }
+        }
+        mode = add
+    }
+}
+
+pki_galaxy_owned = {
+    add = trigger:count_system_within_border
+    divide = pki_num_galaxy_systems
+    multiply = 100
+}
+
+pki_set_situation_progress_effect = {
+    add = $NEW_PROGRESS$
+    subtract = trigger:situation_progress
 }

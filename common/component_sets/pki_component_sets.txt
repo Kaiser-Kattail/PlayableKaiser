@@ -1,0 +1,34 @@
+component_set = {
+	key = PKI_PANZER_ARTILLERY_1
+
+	icon = "GFX_ship_part_pki_panzer_artillery"
+	icon_frame = 1
+}
+
+component_set = {
+	key = PKI_KAISER_CANNON_1
+
+	icon = "GFX_ship_part_moon_artillery_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = PKI_KAISER_MISSILE_1
+
+	icon = "GFX_ship_part_pki_swarmer_missile"
+	icon_frame = 1
+}
+
+component_set = {
+	key = PKI_SUBMARINE_MISSILE
+
+	icon = "GFX_ship_part_pki_torpedo"
+	icon_frame = 1
+}
+
+component_set = {
+	key = PKI_KREUZER_KANNONE
+
+	icon = "GFX_ship_part_pki_kreuzerkannone"
+	icon_frame = 1
+}

@@ -1,0 +1,469 @@
+
+# All leaders will have a common trait-point value set in defines, which they use to grab traits
+
+# leader_trait = yes - this tags the trait as a leader-trait and not a species-trait
+# initial = no - if set to no, this trait can not be granted to leaders when they are generated
+# leader_class = { admiral scientist }  -- OR  - if not set, it can be given to all leader-types except Rulers
+# requires_traits = { trait_psionic } -- AND - leader-trait can only be randomly given on generation if the leaders species has this trait
+# requires_governments = { despotic_hegemony ai_overlordship } -- OR - leader-trait can only be randomly given on generation if the Empire has this type of government form
+# prerequisites = { tech_psionic_theory } - AND - leader-trait can only be given if the technology specified has been researched by the Empire
+
+#################
+#  Ruler Traits #
+#################
+
+# Ruler-traits have the same parameters as leader-traits
+# leader_class has to be set to include "ruler" for a ruler to be valid for a trait
+# modifiers granted to rulers are applied to the entire Empire
+
+trait_ruler_katzen_cruiser_focus = {
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_battleship_focus
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = none
+	}
+	councilor_modifier = {
+		ship_katzen_cruiser_cost_mult = -0.3
+	}
+	leader_potential_add = {
+		has_paragon_dlc = no
+		from = { has_country_flag = kaiser_preset }
+	}
+	leader_class = { commander }
+	prerequisites = { tech_battleships }
+	opposites = {
+		trait_ruler_corvette_focus
+		trait_ruler_destroyer_focus
+		trait_ruler_cruiser_focus
+		trait_ruler_battleship_focus
+		trait_ruler_katzen_panzer_focus
+		trait_ruler_katzen_unterraumboot_focus
+		trait_ruler_katzen_bomber_focus
+	}
+}
+
+trait_ruler_katzen_bomber_focus = {
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_cruiser_focus
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = none
+	}
+	councilor_modifier = {
+		ship_katzen_bomber_cost_mult = -0.3
+	}
+	leader_potential_add = {
+		has_paragon_dlc = no
+		from = { has_country_flag = kaiser_preset }
+	}
+	leader_class = { commander }
+	prerequisites = { tech_cruisers }
+	opposites = {
+		trait_ruler_corvette_focus
+		trait_ruler_destroyer_focus
+		trait_ruler_cruiser_focus
+		trait_ruler_battleship_focus
+		trait_ruler_katzen_panzer_focus
+		trait_ruler_katzen_unterraumboot_focus
+		trait_ruler_katzen_cruiser_focus
+	}
+}
+
+trait_ruler_katzen_panzer_focus = {
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_destroyer_focus
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = none
+	}
+	councilor_modifier = {
+		ship_katzen_panzer_cost_mult = -0.3
+	}
+	leader_potential_add = {
+		has_paragon_dlc = no
+		from = { has_country_flag = kaiser_preset }
+	}
+	leader_class = { commander }
+	prerequisites = { tech_destroyers }
+	opposites = {
+		trait_ruler_corvette_focus
+		trait_ruler_destroyer_focus
+		trait_ruler_cruiser_focus
+		trait_ruler_battleship_focus
+		trait_ruler_katzen_bomber_focus
+		trait_ruler_katzen_unterraumboot_focus
+		trait_ruler_katzen_cruiser_focus
+	}
+}
+
+trait_ruler_katzen_unterraumboot_focus = {
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_corvette_focus
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = none
+	}
+	councilor_modifier = {
+		ship_katzen_submarine_cost_mult = -0.3
+	}
+	leader_potential_add = {
+		has_paragon_dlc = no
+		from = { has_country_flag = kaiser_preset }
+	}
+	leader_class = { commander }
+	prerequisites = { tech_cloaking_1 }
+	opposites = {
+		trait_ruler_corvette_focus
+		trait_ruler_destroyer_focus
+		trait_ruler_cruiser_focus
+		trait_ruler_battleship_focus
+		trait_ruler_katzen_bomber_focus
+		trait_ruler_katzen_panzer_focus
+		trait_ruler_katzen_cruiser_focus
+	}
+}
+
+katzen_trait_martial_free = {
+	cost = 0
+	species_potential_add = {
+		always = no
+	}
+	initial = no
+	randomized = no
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		pop_cat_slave_happiness = -0.5
+		species_empire_size_mult = -0.10
+		army_damage_mult = 0.15
+		army_health = 0.15
+		army_morale = 0.4
+	}
+}
+
+
+# Leader Traits
+
+leader_trait_ruler_kaiser_cattail = {
+	leader_trait_type = destiny
+	immortal_leaders = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ruler_kaiser_kattail"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	councilor_modifier = {
+		army_morale = 0.25
+		ship_weapon_damage = 0.05
+		pop_government_ethic_attraction = 0.10
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+leader_trait_gunfur = {
+	leader_trait_type = destiny
+	ethic_destiny_trait = no
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_rocketry_specialization"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	modifier = {
+		army_damage_mult = 0.5
+		army_attack_morale_mult = 0.5
+		army_collateral_damage_mult = 2
+	}
+	leader_potential_add = {
+		always = no
+	}
+	leader_class = { commander }
+	custom_tooltip_with_modifiers = leader_trait_gunfur_effect
+	selectable_weight = 0
+}
+
+leader_trait_neumeyer = {
+	leader_trait_type = destiny
+	ethic_destiny_trait = no
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_neumeyer"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	planet_modifier = {
+		planet_enforcers_unity_produces_add = 3
+		job_soldier_stability_add = 1
+		planet_stability_add = 10
+		pop_happiness = -0.1
+		defense_armies_add = 6
+	}
+	sector_modifier = {
+		planet_enforcers_unity_produces_add = 1.5
+		job_soldier_stability_add = 0.5
+		planet_stability_add = 5
+		pop_happiness = -0.05
+		defense_armies_add = 3
+	}
+	leader_potential_add = {
+		always = no
+	}
+	leader_class = { commander }
+	selectable_weight = 0
+}
+
+leader_trait_schulz = {
+	leader_trait_type = destiny
+	ethic_destiny_trait = no
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_legendary_xenophobe_one"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_self_modifier = {
+		potential = {
+			always = yes
+		}
+		leader_scientists_physics_research_produces_add = 2
+		leader_scientists_society_research_produces_add = 3
+		leader_scientists_engineering_research_produces_add = 2
+		mult = trigger:has_skill
+	}
+	leader_potential_add = {
+		always = no
+	}
+	leader_class = { scientist }
+	custom_tooltip_with_modifiers = leader_trait_schulz_effect
+	selectable_weight = 0
+}
+
+pki_katzen_trait_elite = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_from_the_ranks"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = none
+	}
+	immortal_leaders = yes
+	self_modifier = {
+		species_leader_exp_gain = -0.15
+	}
+	leader_class = all
+	initial = no
+	randomized = no
+	custom_tooltip_with_modifiers = pki_katzen_trait_elite_effect
+}
+
+leader_trait_katzen_overseer = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_micromanager"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = none
+	}
+	modifier = {
+		planet_stability_add = 10
+		planet_jobs_upkeep_mult = -0.1
+		job_katzen_administrator_add = 1
+	}
+	
+	leader_class = { official }
+	initial = no
+	randomized = no
+	selectable_weight = 0
+	leader_potential_add = {
+		always = no
+	}
+}
+
+leader_trait_katzen_trained = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_educator"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_fleet_modifier = {
+		potential = {
+			leader_class = commander
+		}
+		ship_accuracy_mult = 0.1
+		ship_tracking_mult = 0.1
+		ship_speed_mult = 0.05
+	}
+	triggered_modifier = {
+		potential = {
+			leader_class = scientist
+		}
+		science_ship_survey_speed = 0.15
+	}
+	triggered_planet_modifier = {
+		potential = {
+			NOT = {
+				leader_class = scientist
+			}
+		}
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+		planet_jobs_engineering_research_produces_mult = 0.05
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			leader_class = official
+		}
+		country_unity_produces_mult = 0.05
+	}
+	triggered_planet_modifier = {
+		potential = {
+			leader_class = commander
+		}
+		defense_armies_add = 3
+	}
+	triggered_sector_modifier = {
+		potential = {
+			leader_class = commander
+		}
+		defense_armies_add = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			leader_class = scientist
+		}
+		planet_jobs_physics_research_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.1
+		planet_jobs_engineering_research_produces_mult = 0.1
+	}
+	triggered_sector_modifier = {
+		potential = {
+			leader_class = scientist
+		}
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+		planet_jobs_engineering_research_produces_mult = 0.05
+	}
+	triggered_planet_modifier = {
+		potential = {
+			leader_class = official
+		}
+		planet_jobs_specialist_produces_mult = 0.1
+	}
+	triggered_sector_modifier = {
+		potential = {
+			leader_class = official
+		}
+		planet_jobs_specialist_produces_mult = 0.05
+	}
+
+	leader_class = all
+	selectable_weight = 1500
+
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		is_pool_leader = yes
+		from = {
+			pki_is_katzprotektorat_tier_2 = yes
+		}
+	}
+}
+
+pki_leader_trait_armored_warfare = {
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_artillerist"
+		RARITY = common
+		COUNCIL = no
+		TIER = no
+	}
+	fleet_modifier = {
+		ship_armor_mult = 0.1
+		ship_speed_mult = 0.15
+	}
+	leader_class = { commander }
+
+	leader_potential_add = {
+		always = no
+	}
+}
+
+pki_leader_trait_nukelad = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_expertise_propulsion"
+		RARITY = common
+		COUNCIL = no
+		TIER = no
+	}
+	army_modifier = {
+		army_collateral_damage_mult = 0.5
+		army_damage_mult = 0.5
+	}
+	fleet_modifier = {
+		weapon_type_explosive_weapon_damage_mult = 0.1
+		weapon_type_explosive_weapon_fire_rate_mult = 0.1
+	}
+	fleet_specialization_tag = explosive
+	leader_class = { commander }
+
+	leader_potential_add = {
+		always = no
+	}
+}
+
+pki_leader_trait_command_limit = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_supreme_admiral"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+
+	fleet_modifier = {
+		command_limit_mult = 150
+	}
+
+	leader_potential_add = {
+		from = {
+			pki_is_katzenartig_imperium = yes
+		}
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_admiral
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/pilot_weight_mult
+	}
+}

@@ -36,8 +36,8 @@ pki_katzprotektorat_1_modifier = {
 				}
 				colors = {
 					"blue"
-					"dark_blue"
-					"dark_blue"
+					"indigo"
+					"null"
 					"null"
 				}
 			}

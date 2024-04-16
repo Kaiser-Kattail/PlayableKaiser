@@ -1,0 +1,1005 @@
+#katzen cg building
+building_katzen_civilian_forge = {
+	base_buildtime = 360
+
+	category = manufacturing
+
+	potential = { 
+		owner = {
+			pki_is_katzenartig_imperium = yes
+		}
+	}
+
+	prerequisites = {
+		"tech_katzen_luxuries"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+        upkeep = {
+            energy = @b3_upkeep
+			
+        }
+	}
+
+	inline_script = {
+		script = jobs/factory_add
+		AMOUNT = 6
+	}
+
+	destroy_trigger = {
+		is_gestalt = yes
+	}
+
+}
+
+building_siegfried_stronghold = {
+	base_buildtime = 720
+	base_cap_amount = 1
+	planetary_ftl_inhibitor = yes
+	position_priority = 200
+	#add_to_first_building_slot = yes
+
+	category = army
+
+	potential = {
+		# Maginot World should always have the better version
+		NOT = {
+			is_giga_maginot_world = yes
+			has_planet_flag = giga_maginot_world
+			has_planet_flag = gigaflusion
+		}
+		is_artificial = no
+		owner = {
+			has_origin = origin_katzen
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.15
+	}
+
+	army_modifier = {
+		# army buffs
+		army_starting_experience_add = 25
+		army_experience_gain_mult = 0.05
+		army_defense_damage_mult = 0.05
+		army_defense_health_mult = 0.05
+		army_defense_morale_mult = 0.05
+		army_collateral_damage_mult = -0.05
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_maginot_bunker_officer_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_maginot_bunker_officer_gestalt_add = 1
+		}
+	}
+
+	resources = {
+		category = planet_buildings_strongholds
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_active_tradition = tr_unyielding_resistance_is_frugal
+				}
+			}
+			unity = 10
+		}
+		cost = {
+			minerals = 1000
+			alloys = 100
+		}
+		upkeep = {
+			energy = 10
+			alloys = 1
+		}
+	}
+
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_maginot_bunker_officer_gestalt_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_maginot_bunker_officer_effect_desc
+	}
+}
+
+building_player_siegfried_centcom = {
+	base_buildtime = 720
+	base_cap_amount = 1
+	planetary_ftl_inhibitor = yes
+	can_build = no
+	can_demolish = no
+	position_priority = 200
+	#add_to_first_building_slot = yes
+
+	category = army
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.25
+	}
+
+	army_modifier = {
+		# army buffs
+		army_starting_experience_add = 200
+		army_experience_gain_mult = 0.25
+		army_defense_damage_mult = 0.25
+		army_damage_mult = 0.15
+		army_morale_damage_mult = 0.15
+		army_attack_damage_mult = 0.15
+		army_attack_health_mult = 0.15
+		army_attack_morale_mult = 0.15
+		army_defense_health_mult = 0.25
+		army_defense_morale_mult = 0.25
+		army_health = 0.15
+		army_morale = 0.15
+		army_collateral_damage_mult = -0.15
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_maginot_bunker_officer_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_maginot_bunker_officer_gestalt_add = 1
+		}
+	}
+
+	resources = {
+		category = planet_buildings_strongholds
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_active_tradition = tr_unyielding_resistance_is_frugal
+				}
+			}
+			unity = 10
+		}
+		cost = {
+			minerals = 1000
+			alloys = 100
+		}
+		upkeep = {
+			energy = 10
+			alloys = 1
+		}
+	}
+
+
+	# just to have this tooltip show up somewhere, deposits do not accept triggered desc...
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_maginot_central_command_gestalt_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_maginot_central_command_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_maginot_bunker_officer_gestalt_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_maginot_bunker_officer_effect_desc
+	}
+}
+
+#Katzen reactor
+building_pki_flusion_fusion_power_plant = {
+	base_buildtime = 360
+	icon = building_giga_flusion_fusion_power_plant
+	category = resource
+
+	potential = {
+		owner = {
+			pki_is_katzenartig_imperium = yes
+		}
+	}
+
+	prerequisites = {
+		"tech_katzen_reactor"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		produces = {
+			energy = 10
+		}
+	}
+
+	inline_script = {
+		script = jobs/technicians_add
+		AMOUNT = 6
+	}
+}
+
+#Katzen habitability
+building_pki_katzen_terraformer = {
+	base_buildtime = 360
+	icon = building_giga_katzen_terraformer
+	potential = {
+		owner = {
+			pki_is_katzenartig_imperium = yes
+		}
+	}
+
+	prerequisites = {
+		"tech_katzen_habitability"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 20
+		}
+	}
+
+	planet_modifier = {
+		pop_environment_tolerance = 0.10
+	}
+}
+
+#Katzen rare resources
+building_pki_katzen_synthetizer = {
+	base_buildtime = 360
+	icon = building_primitive_labs
+	category = manufacturing
+
+	potential = {
+		owner = {
+			pki_is_katzenartig_imperium = yes
+		}
+	}
+
+	prerequisites = {
+		"tech_katzen_rr"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+	}
+
+	inline_script = {
+		script = jobs/refiner_add
+		AMOUNT = 2
+	}
+
+	inline_script = {
+		script = jobs/chemist_add
+		AMOUNT = 2
+	}
+
+	inline_script = {
+		script = jobs/translucer_add
+		AMOUNT = 2
+	}
+}
+
+#Katzen foundry
+building_pki_foundry = {
+	base_buildtime = @b2_time
+	icon = building_katzen_foundry
+	category = manufacturing
+
+	potential = {
+		owner = {
+			pki_is_katzenartig_imperium = yes
+		}
+	}
+
+	prerequisites = {
+		"tech_katzen_forge"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+	}
+
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	planet_modifier = {
+		pop_environment_tolerance = -0.05
+	}
+
+	inline_script = {
+		script = jobs/foundry_add
+		AMOUNT = 6
+	}
+}
+
+#Katzen theater
+building_pki_theater = {
+	base_buildtime = @b2_time
+	icon = building_katzen_theater
+	category = amenity
+
+	potential = {
+		owner = {
+			pki_is_katzenartig_imperium = yes
+		}
+	}
+
+	prerequisites = {
+		"tech_katzen_theater"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			owner = {
+				is_gestalt = yes
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 12
+		pop_happiness = 0.1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			NOT = {
+				owner = {
+					has_origin = origin_katzen
+				}
+			}
+		}
+		pop_ethic_militarist_attraction_mult = 0.5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				has_origin = origin_katzen
+			}
+		}
+		pop_government_ethic_attraction = 0.5
+	}
+}
+
+#Katzen science lab
+building_pki_science = {
+	base_buildtime = @b2_time
+	icon = building_katzen_science
+	category = research
+
+	potential = {
+		owner = {
+			pki_is_katzenartig_imperium = yes
+		}
+	}
+
+	prerequisites = {
+		"tech_katzen_lab"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+	}
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	planet_modifier = {
+		pop_happiness = -0.05
+	}
+
+	inline_script = {
+		script = jobs/researchers_add
+		AMOUNT = 6
+	}
+}
+
+building_pki_katzen_housing = {
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 1
+
+	icon = building_maintenance_depot
+
+	category = government
+
+	potential = {
+		exists = owner
+		owner = {
+			pki_is_katzenartig_imperium = yes
+			is_gestalt = no
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 2
+		}
+
+		# Org/Lith upkeep
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid_empire = no }
+				owner = { has_tradition = tr_genetics_adopt }
+			}
+			food = 30
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid_empire = yes }
+				owner = { has_tradition = tr_genetics_adopt }
+			}
+			minerals = 30
+		}
+	}
+
+	triggered_desc = {
+		text = building_giga_elysium_host_jobs_amenities_effect
+	}
+
+	# clerks
+	triggered_planet_modifier = { job_clerk_per_pop = 1 	multiplier = value:giga_elysium_regular_job_mult|JOB|clerk| }
+
+	# farmers / anglers+divers
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			nand = {
+				is_wet = yes
+				owner = { is_anglers_empire = yes }
+			}
+			giga_planet_no_farming = no
+		}
+		job_farmer_per_pop = 1
+		multiplier = value:giga_elysium_regular_job_mult|JOB|farmer|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			is_wet = yes
+			owner = { is_anglers_empire = yes }
+		}
+		job_angler_per_pop = 0.5
+		job_pearl_diver_per_pop = 0.5
+		multiplier = value:giga_elysium_regular_job_mult|JOB|farmer|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			giga_planet_no_farming = yes
+		}
+		job_miner_per_pop = 0.5
+		job_technician_per_pop = 0.5
+		multiplier = value:giga_elysium_regular_job_mult|JOB|farmer|
+	}
+
+	# miners / clerks+scrap miners
+	triggered_planet_modifier = {
+		potential = {
+			giga_planet_is_ecumenopolis = no
+		}
+		job_miner_per_pop = 1
+		multiplier = value:giga_elysium_regular_job_mult|JOB|miner|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			giga_planet_is_ecumenopolis = yes
+		}
+		job_clerk_per_pop = 0.5
+		job_scrap_miner_per_pop = 0.5
+		multiplier = value:giga_elysium_regular_job_mult|JOB|miner|
+	}
+
+	# technicians
+	triggered_planet_modifier = { job_technician_per_pop = 1 	multiplier = value:giga_elysium_regular_job_mult|JOB|technician| }
+	triggered_planet_modifier = {
+		potential = {
+			has_bug_branch = yes
+			exists = owner
+			owner = {
+				has_policy_flag = economic_stance_bugged_free_market
+			}
+		}
+		job_technician_per_pop = -0.5
+		job_bugged_trader_per_pop = 0.5
+		multiplier = value:giga_elysium_regular_job_mult|JOB|technician|
+	}
+
+	# soldiers
+	triggered_planet_modifier = { job_soldier_per_pop = 1 	multiplier = value:giga_elysium_regular_job_mult|JOB|soldier| }
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_reanimated_armies
+			}
+		}
+		job_necromancer_per_pop = 0.1
+		job_soldier_per_pop = -0.1
+		multiplier = value:giga_elysium_regular_job_mult|JOB|soldier|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_bug_branch = yes
+			exists = owner
+			owner = {
+				or = {
+					has_valid_civic = civic_bugged_private_militaries
+					has_valid_civic = civic_bugged_private_militaries_corpo
+				}
+			}
+		}
+		job_soldier_per_pop = -0.5
+		job_bugged_mercenary_per_pop = 0.5
+		multiplier = value:giga_elysium_regular_job_mult|JOB|soldier|
+	}
+
+	# artisans / artificers
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_crafter_empire = no }
+		}
+		job_artisan_per_pop = 1
+		multiplier = value:giga_elysium_regular_job_mult|JOB|artisan|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_crafter_empire = yes }
+		}
+		job_artificer_per_pop = 1
+		multiplier = value:giga_elysium_regular_job_mult|JOB|artisan|
+	}
+
+	# metallurgists / catalytic technicians
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_catalytic_empire = no }
+		}
+		job_foundry_per_pop = 1
+		multiplier = value:giga_elysium_regular_job_mult|JOB|metallurgist|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_catalytic_empire = yes }
+		}
+		job_catalytic_technician_per_pop = 1
+		multiplier = value:giga_elysium_regular_job_mult|JOB|metallurgist|
+	}
+
+	# bureaucrats / priests / death priests / managers
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = no
+				giga_country_uses_priests = no
+			}
+		}
+		job_bureaucrat_per_pop = 1
+		multiplier = value:giga_elysium_regular_job_mult|JOB|bureaucrat|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = no
+				giga_country_uses_priests = no
+			}
+		}
+		job_manager_per_pop = 1
+		multiplier = value:giga_elysium_regular_job_mult|JOB|bureaucrat|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = yes
+				giga_country_uses_priests = no
+			}
+		}
+		job_steward_per_pop = 1
+		multiplier = value:giga_elysium_regular_job_mult|JOB|bureaucrat|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = no
+				giga_country_uses_priests = yes
+				is_death_cult_empire = no
+			}
+		}
+		job_priest_per_pop = 1
+		multiplier = value:giga_elysium_regular_job_mult|JOB|bureaucrat|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = no
+				giga_country_uses_priests = yes
+				is_death_cult_empire = no
+			}
+		}
+		job_priest_per_pop = 0.5
+		job_manager_per_pop = 0.5
+		multiplier = value:giga_elysium_regular_job_mult|JOB|bureaucrat|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = yes
+				giga_country_uses_priests = yes
+				is_death_cult_empire = no
+			}
+		}
+		job_priest_per_pop = 0.5
+		job_steward_per_pop = 0.5
+		multiplier = value:giga_elysium_regular_job_mult|JOB|bureaucrat|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = no
+				giga_country_uses_priests = yes
+				is_death_cult_empire = yes
+			}
+		}
+		job_death_priest_per_pop = 1
+		multiplier = value:giga_elysium_regular_job_mult|JOB|bureaucrat|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = no
+				giga_country_uses_priests = yes
+				is_death_cult_empire = yes
+			}
+		}
+		job_death_priest_per_pop = 0.5
+		job_manager_per_pop = 0.5
+		multiplier = value:giga_elysium_regular_job_mult|JOB|bureaucrat|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = yes
+				giga_country_uses_priests = yes
+				is_death_cult_empire = yes
+			}
+		}
+		job_death_priest_per_pop = 0.5
+		job_steward_per_pop = 0.5
+		multiplier = value:giga_elysium_regular_job_mult|JOB|bureaucrat|
+	}
+
+	# Researchers
+	triggered_planet_modifier = {
+		job_researcher_per_pop = 1
+		multiplier = value:giga_elysium_regular_job_mult|JOB|researcher|
+	}
+
+	# Researchers
+	triggered_planet_modifier = { job_researcher_per_pop = 1 multiplier = value:giga_elysium_regular_job_mult|JOB|researcher| }
+
+	# Chemists
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_volatile_motes
+			}
+		}
+		job_chemist_per_pop = 1
+		multiplier = value:giga_elysium_regular_job_mult|JOB|chemist|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				not = { has_technology = tech_volatile_motes }
+			}
+		}
+		job_clerk_per_pop = 1
+		multiplier = value:giga_elysium_regular_job_mult|JOB|chemist|
+	}
+
+	# Translucers
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_rare_crystals
+			}
+		}
+		job_translucer_per_pop = 1
+		multiplier = value:giga_elysium_regular_job_mult|JOB|translucer|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				not = { has_technology = tech_rare_crystals }
+			}
+		}
+		job_clerk_per_pop = 1
+		multiplier = value:giga_elysium_regular_job_mult|JOB|translucer|
+	}
+
+	# Gas refiners
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_exotic_gases
+			}
+		}
+		job_gas_refiner_per_pop = 1
+		multiplier = value:giga_elysium_regular_job_mult|JOB|gas_refiner|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				not = { has_technology = tech_exotic_gases }
+			}
+		}
+		job_clerk_per_pop = 1
+		multiplier = value:giga_elysium_regular_job_mult|JOB|gas_refiner|
+	}
+
+	# Supertensiles techs
+	triggered_planet_modifier = { job_giga_megaengineer_per_pop = 1 multiplier = value:giga_elysium_regular_job_mult|JOB|megaengineer| }
+
+	# Enforcers for Oppressive Autocracy, other jobs are squashed down in the script values
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_dystopian_society
+			}
+		}
+		job_enforcer_per_pop = 0.07 # 7 per 100
+	}
+
+	triggered_planet_modifier = {
+		planet_amenities_add = 1
+		multiplier = value:giga_elysium_clerk_count
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_genetics_adopt }
+		}
+		planet_pop_assembly_organic_add = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_genetics_efficient_cloning }
+		}
+		planet_pop_assembly_organic_add = 1.5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_robotic_workers }
+			OR = {
+				owner = { is_ai = no }
+				NOT = { exists = assembling_species }
+				assembling_species = { is_robotic_species = yes }
+			}
+			owner = {
+				is_regular_empire = yes
+				NOT = { has_policy_flag = robots_outlawed }
+				OR = {
+					is_ai = no
+					NOT = { has_ascension_perk = ap_engineered_evolution }
+					is_materialist = yes
+				}
+			}
+			NOT = { has_modifier = slave_colony }
+		}
+		job_roboticist_per_pop = 0.02
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+			NOT = { has_modifier = crucible_colony }
+		}
+		job_replicator_per_pop = 0.02
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { pki_is_katzenartig_imperium = no }
+	}
+
+	on_destroy = {
+		remove_modifier = pki_scaling_colony
+	}
+}
+
+building_pki_katzen_outpost = {
+	base_buildtime = @b1_time
+	owner_type = subject_holding
+	icon = building_dread_encampment
+	base_cap_amount = 1
+
+	category = army
+
+	potential = {
+		owner.overlord = {
+			has_origin = origin_katzen
+		}
+	}
+
+	resources = {
+		category = planet_holdings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+	}
+
+	country_modifier = {
+		defense_armies_add = 2
+		country_naval_cap_mult = 0.05
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			planet.owner = { is_gestalt = no }
+		}
+		job_overlord_propagandist_add = 1
+		job_pki_recruiter_per_pop = 0.033
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			planet.owner = { is_gestalt = yes }
+		}
+		job_overlord_propagandist_drone_add = 1
+		job_pki_recruiter_drone_per_pop = 0.033
+	}
+
+	planet_modifier = {
+		monthly_loyalty = -0.5
+	}
+
+	triggered_desc = {
+		text = job_pki_recruiter_effect_desc
+		trigger = { planet.owner = { is_gestalt = no } }
+	}
+
+	triggered_desc = {
+		text = job_pki_recruiter_drone_effect_desc
+		trigger = { planet.owner = { is_gestalt = yes } }
+	}
+}

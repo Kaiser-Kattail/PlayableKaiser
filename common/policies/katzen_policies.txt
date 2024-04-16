@@ -79,11 +79,8 @@ consumer_alloys = {
 
 flusion_migration = {
 	potential = {
-		AND = {
-			is_country_type = default
-			has_origin = origin_katzen
-			has_tradition = tr_work_arrangements
-		}
+		pki_is_katzenartig_imperium = yes
+		has_tradition = tr_work_arrangements
 	}
 
 	option = {
@@ -95,7 +92,7 @@ flusion_migration = {
 		modifier = {}
 
 		AI_weight = {
-			factor = 0
+			factor = 1
 		}
 	}
 
@@ -129,6 +126,18 @@ flusion_migration = {
 		}
 
 		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "pki_dynamic_migration"
+
+		policy_flags = {
+			dynamic_migration
+		}
+
+		ai_weight = {
 			factor = 0
 		}
 	}
@@ -198,6 +207,7 @@ pki_metallurgists_to_supertensiles = {
 
 		modifier = {
 			pki_supertensile_jobs_from_industry = 1
+			pki_foundry_jobs_from_industry = -1
 		}
 	}
 
@@ -207,6 +217,7 @@ pki_metallurgists_to_supertensiles = {
 
 		modifier = {
 			pki_supertensile_jobs_from_industry = 2
+			pki_foundry_jobs_from_industry = -2
 		}
 	}
 
@@ -216,6 +227,7 @@ pki_metallurgists_to_supertensiles = {
 
 		modifier = {
 			pki_supertensile_jobs_from_industry = 3
+			pki_foundry_jobs_from_industry = -3
 		}
 	}
 
@@ -225,6 +237,7 @@ pki_metallurgists_to_supertensiles = {
 
 		modifier = {
 			pki_supertensile_jobs_from_industry = 4
+			pki_foundry_jobs_from_industry = -4
 		}
 	}
 }

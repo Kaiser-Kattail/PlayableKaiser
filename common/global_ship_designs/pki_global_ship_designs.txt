@@ -1,0 +1,110 @@
+
+#Kaiser Moon
+ship_design = {
+	name = "NAME_PKI_ATTACK_MOON"
+	ship_size = giga_massive_planet
+	section = {
+		template = "kaiser_moon_bow_01_key"
+		slot = "bow"
+		component = { slot = "OMEGA_GUN_01"			template = "GIGA_MOON_ARTILLERY_1" }
+		component = { slot = "EXTRALARGE_GUN_01"	template = "MASS_ACCELERATOR_2" }
+		component = { slot = "EXTRALARGE_GUN_02"	template = "MASS_ACCELERATOR_2" }
+		component = { slot = "EXTRALARGE_GUN_07"	template = "GIGA_FLUSION_AUTOCANNON_02" }
+		component = { slot = "EXTRALARGE_GUN_08"	template = "GIGA_FLUSION_AUTOCANNON_02" }
+		component = { slot = "LARGE_UTILITY_1" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_2" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_3" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_4" template = "LARGE_SHIELD_3" }
+		component = { slot = "LARGE_UTILITY_5" template = "LARGE_SHIELD_3" }
+		component = { slot = "LARGE_UTILITY_6" template = "LARGE_SHIELD_3" }
+	}
+
+	section = {
+		template = "kaiser_moon_mid_01_key"
+		slot = "mid"
+		component = { slot = "LARGE_GUN_01"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_02"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_03"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_04"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_UTILITY_1" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_2" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_3" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_4" template = "LARGE_SHIELD_3" }
+		component = { slot = "LARGE_UTILITY_5" template = "LARGE_SHIELD_3" }
+		component = { slot = "LARGE_UTILITY_6" template = "LARGE_SHIELD_3" }
+	}
+
+	section = {
+		template = "kaiser_moon_stern_01_key"
+		slot = "stern"
+		component = { slot = "STRIKE_CRAFT_01"		template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_02"		template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_03"		template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_04"		template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "LARGE_UTILITY_1" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_2" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_3" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_4" template = "LARGE_SHIELD_3" }
+		component = { slot = "LARGE_UTILITY_5" template = "LARGE_SHIELD_3" }
+		component = { slot = "LARGE_UTILITY_6" template = "LARGE_SHIELD_3" }
+	}
+
+	section = {
+		template = "kaiser_moon_sternthrusters_01_key"
+		slot = "sternthrusters"
+		component = { slot = "MISSILE_01"		template = "GIGA_FLUSION_MISSILE_01" }
+		component = { slot = "MISSILE_02"		template = "GIGA_FLUSION_MISSILE_01" }
+		component = { slot = "PD_01"			template = "FLAK_BATTERY_3" }
+		component = { slot = "PD_02"			template = "FLAK_BATTERY_3" }
+		component = { slot = "LARGE_UTILITY_1" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_2" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_3" template = "LARGE_ARMOR_3" }
+		component = { slot = "LARGE_UTILITY_4" template = "LARGE_SHIELD_3" }
+		component = { slot = "LARGE_UTILITY_5" template = "LARGE_SHIELD_3" }
+		component = { slot = "LARGE_UTILITY_6" template = "LARGE_SHIELD_3" }
+	}
+
+	required_component = "GIGA_MOON_COMPUTER"
+	required_component = "SENSOR_4"
+	required_component = "REACTOR_MOON"
+	required_component = "HYPER_DRIVE_3"
+	required_component = "SHIP_THRUSTER_4"
+
+}
+
+ship_design = {
+	name = "Kaiser Behemoth Planet"
+	ship_size = giga_planet_behemoth
+	section = {
+		template = pki_kaiser_planet_bowgun_01_key
+		slot = "bowgun"
+	}
+
+	section = {
+		template = pki_kaiser_planet_bow_01_key
+		slot = "bow"
+
+	}
+
+	section = {
+		template = pki_kaiser_planet_mid_01_key
+		slot = "mid"
+
+	}
+
+	section = {
+		template = pki_kaiser_planet_stern_01_key
+		slot = "stern"
+
+	}
+
+	section = {
+		template = pki_kaiser_planet_sternthrusters_01_key
+		slot = "sternthrusters"
+
+	}
+	required_component = "REACTOR_PLANET"
+	required_component = "HYPER_DRIVE_1"
+	required_component = "SENSOR_1"
+	required_component = "GIGA_PLANET_COMPUTER"
+}

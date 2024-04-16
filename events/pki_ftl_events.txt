@@ -1,0 +1,53 @@
+namespace = pki_ftl
+
+country_event = {
+	id = pki_ftl.1
+	picture = GFX_evt_atmospheric_flight
+	title = pki_ftl.1.title
+	desc = pki_ftl.1.desc
+	is_triggered_only = yes
+	option = {
+		name = pki_ftl.1.a
+	}
+	immediate = {
+		start_situation = {
+			type = situation_ftl_development
+		}
+	}
+}
+
+country_event = {
+	id = pki_ftl.2
+	picture = GFX_evt_atmospheric_flight
+	title = pki_ftl.2.title
+	desc = pki_ftl.2.desc
+	is_triggered_only = yes
+
+	option = {
+		name = pki_ftl.2.a
+	}
+	immediate = {
+		every_situation = {
+			limit = {
+				is_situation_type = situation_ftl_development
+			}
+			destroy_situation = this
+		}
+		remove_modifier = pki_no_ftl_capability
+		if = {
+			limit = {
+				has_first_contact_dlc = yes
+			}
+			set_country_flag = pki_completed_ftl
+			add_tech_progress = { tech = tech_hyper_drive_1 progress = 0.25 }
+		}
+		country_event = {
+			id = pki_paragons.1
+			days = 180
+		}
+		country_event = {
+			id = pki_crisis.100
+			days = 360
+		}
+	}
+}
