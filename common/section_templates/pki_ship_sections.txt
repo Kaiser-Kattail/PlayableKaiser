@@ -98,7 +98,7 @@ ship_section_template = {
 		locatorname = "medium_gun_04"
 	}
 
-	large_utility_slots = 3
+	large_utility_slots = 4
 
 	resources = {
 		category = ships
@@ -149,7 +149,7 @@ ship_section_template = {
 		locatorname = "medium_gun_02"
 	}
 
-	large_utility_slots = 3
+	large_utility_slots = 4
 
 	resources = {
 		category = ships
@@ -253,7 +253,7 @@ ship_section_template = {
 	component_slot = { name = "POINT_DEFENCE_01"	template = "invisible_point_defence_turret"			locatorname = "loc102" }
 	component_slot = { name = "SMALL_1"		template = "giga_invisible_small_fixed"	rotation = 180	locatorname = "loc102" }
 
-	small_utility_slots = 2
+	small_utility_slots = 4
 	aux_utility_slots = 1
 
 	resources = {
@@ -277,13 +277,13 @@ ship_section_template = {
 	component_slot = { name = "LARGE_2"		template = "giga_invisible_large_fixed"		locatorname = "gun" }
 	component_slot = { name = "LARGE_3"		template = "giga_invisible_large_fixed"		locatorname = "gun" }
 
-	small_utility_slots = 1
+	small_utility_slots = 3
 	aux_utility_slots = 1
 
 	resources = {
 		category = ships
 		cost = {
-			alloys = 80
+			alloys = 100
 		}
 	}
 }
@@ -304,7 +304,7 @@ ship_section_template = {
 	component_slot = { name = "MISSILE_04"			template = "medium_missile_turret"			locatorname = "gun_4" }
 	component_slot = { name = "MISSILE_05"			template = "medium_missile_turret"			locatorname = "gun_5" }
 
-	medium_utility_slots = 5
+	medium_utility_slots = 6
 	aux_utility_slots = 2
 
 	resources = {
@@ -329,7 +329,7 @@ ship_section_template = {
 	component_slot = { name = "LARGE_1"			template = "large_turret"		locatorname = "xl_gun_01" }
 	component_slot = { name = "LARGE_1"			template = "large_turret"		locatorname = "xl_gun_02" }
 
-	medium_utility_slots = 5
+	medium_utility_slots = 6
 	aux_utility_slots = 2
 
 	resources = {
@@ -355,7 +355,7 @@ ship_section_template = {
 	component_slot = { name = "MEDIUM_GUN_04"		template = "medium_turret"					locatorname = "gun_5" }
 	component_slot = { name = "LARGE_1"			template = "large_turret"		locatorname = "gun_1" }
 
-	medium_utility_slots = 5
+	medium_utility_slots = 6
 	aux_utility_slots = 2
 
 	resources = {

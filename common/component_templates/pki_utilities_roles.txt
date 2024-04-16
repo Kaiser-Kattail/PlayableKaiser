@@ -47,6 +47,7 @@ utility_component_template = {
 	}
 	ship_behavior = "line"
 
+
 	class_restriction = { shipclass_military }
 	size_restriction = { pki_bomber pki_panzer pki_cruiser }
 	component_set = pki_katzen_combat_computers
@@ -343,6 +344,7 @@ utility_component_template = {
 			alloys = @cost1
 		}
 	}
+
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
 	size_restriction = { pki_cruiser }
 	component_set = pki_katzen_combat_computers
@@ -404,11 +406,15 @@ utility_component_template = {
 		}
 	}
 
+	valid_for_country = {
+		has_technology = tech_torpedoes_1
+	}
+
 	class_restriction = { shipclass_military }
 	size_restriction = { pki_submarine }
 	component_set = pki_katzen_combat_computers
 	ship_behavior = "pki_giga_katzen_submarine"
-	prerequisites = { "tech_combat_computers_1" "tech_torpedoes_1" }
+	prerequisites = { "tech_combat_computers_1" }
 	upgrades_to = PKI_SUBMARINE_COMPUTER_ADVANCED
 	ai_tags = { explosive explosive_stealth }
 	ai_tag_weight = 0
@@ -435,11 +441,15 @@ utility_component_template = {
 		}
 	}
 
+	valid_for_country = {
+		has_technology = tech_torpedoes_1
+	}
+
 	class_restriction = { shipclass_military }
 	size_restriction = { pki_submarine }
 	component_set = pki_katzen_combat_computers
 	ship_behavior = "pki_giga_katzen_submarine"
-	prerequisites = { "tech_combat_computers_2" "tech_torpedoes_1" }
+	prerequisites = { "tech_combat_computers_2" }
 	ai_tags = { explosive explosive_stealth }
 	ai_tag_weight = 0
 
@@ -465,11 +475,15 @@ utility_component_template = {
 		}
 	}
 
+	valid_for_country = {
+		has_technology = tech_torpedoes_1
+	}
+
 	class_restriction = { shipclass_military }
 	size_restriction = { pki_bomber }
 	component_set = pki_katzen_combat_computers
 	ship_behavior = "torpedo"
-	prerequisites = { "tech_combat_computers_1" "tech_torpedoes_1" }
+	prerequisites = { "tech_combat_computers_1" }
 	upgrades_to = PKI_COMBAT_COMPUTER_TORPEDO_ADVANCED
 	ai_tags = { explosive explosive_stealth }
 	ai_tag_weight = 0
@@ -496,11 +510,15 @@ utility_component_template = {
 		}
 	}
 
+	valid_for_country = {
+		has_technology = tech_torpedoes_1
+	}
+
 	class_restriction = { shipclass_military }
 	size_restriction = { pki_bomber }
 	component_set = pki_katzen_combat_computers
 	ship_behavior = "torpedo"
-	prerequisites = { "tech_combat_computers_2" "tech_torpedoes_1" }
+	prerequisites = { "tech_combat_computers_2" }
 	ai_tags = { explosive explosive_stealth }
 	ai_tag_weight = 0
 
