@@ -35,7 +35,7 @@ decision_flusion_arc = {
 		num_uncleared_blockers < 1
 		num_pops >= 90
 		custom_tooltip = {
-			fail_text = need_both_dams
+			fail_text = decision_flusion_arc_requirements
 			has_planet_flag = solaktropa
 			has_planet_flag = katlantropa
 		}
@@ -70,6 +70,7 @@ decision_flusion_arc = {
 		}
 		change_pc = pc_pki_flusion_ecu
 		hidden_effect = {
+			planet_event = { id = pki_flavor.1 }
 			add_deposit = d_giga_job_upkeep
 			pki_district_convert = {
 				VARIABLE = pki_num_city_districts
@@ -240,7 +241,9 @@ decision_kaiser_moon = {
 		from = {
 			NOT = {
 				any_controlled_fleet = {
-					has_fleet_flag = current_katzen_flagship
+					any_controlled_ship = {
+						has_ship_flag = current_katzen_flagship
+					}
 				}
 			}
 		}
@@ -308,7 +311,7 @@ decision_solaktropa = {
 	}
 }
 
-#Housing Dam
+#Katlantropa
 decision_katlantropa = {
 	prerequisites = {
 		"tech_capital_productivity_1"
@@ -339,226 +342,15 @@ decision_katlantropa = {
     }
 }
 
-#Housing Dam
-decision_katzen_housing_dam = {
+decision_pki_dams = {
 	owned_planets_only = yes
-    prerequisites = {
-        "tech_capital_productivity_2"
-    }
-    enactment_time = 720
-    resources = {
-        category = decisions
-        cost = {
-            influence = 50
-            minerals = 7500
-        }
-    }
-    potential = {
-    	from = {
-        	has_origin = origin_katzen
-        }
-	NOT = {
-		has_planet_flag = pki_flusion_planet
-	}
-		
-	is_artificial = no
-    }
 
-	allow = {
-		custom_tooltip = {
-			fail_text = no_other_dam
-        	NOR = {
-				has_deposit = d_katzen_housing_dam
-				has_deposit = d_katzen_food_dam
-				has_deposit = d_katzen_mineral_dam
-				has_deposit = d_katzen_energy_dam
-				has_deposit = d_katzen_industrial_dam
-        	}
-		}
-	}
-
-	on_queued = {
-		set_planet_flag = katzen_dam
-	}
-
-	on_unqueued = {
-		remove_planet_flag = katzen_dam
-	}
-    effect = {
-		add_deposit = d_katzen_housing_dam
-    }
-}
-
-#food dam
-decision_katzen_food_dam = {
-	owned_planets_only = yes
-    prerequisites = {
-        "tech_capital_productivity_2"
-    }
-    enactment_time = 720
-    resources = {
-        category = decisions
-        cost = {
-            influence = 50
-            minerals = 7500
-        }
-    }
-    potential = {
-    	from = {
-        	has_origin = origin_katzen
-        }
-	NOT = {
-		has_planet_flag = pki_flusion_planet
-	}
-		
-	is_artificial = no
-    }
-
-	allow = {
-		custom_tooltip = {
-			fail_text = no_other_dam
-        	NOR = {
-				has_deposit = d_katzen_housing_dam
-				has_deposit = d_katzen_food_dam
-				has_deposit = d_katzen_mineral_dam
-				has_deposit = d_katzen_energy_dam
-				has_deposit = d_katzen_industrial_dam
-        	}
-		}
-		custom_tooltip = {
-			fail_text = cannot_be_dry
-			NOR = {
-				is_planet_class = pc_desert
-				is_planet_class = pc_arid
-				is_planet_class = pc_savannah
-				is_pd_arid = yes
-				is_pd_desert = yes
-				is_pd_savannah = yes
-			}
-		}
-	}
-
-	on_queued = {
-		set_planet_flag = katzen_dam
-	}
-
-	on_unqueued = {
-		remove_planet_flag = katzen_dam
-	}
-    effect = {
-		add_deposit = d_katzen_food_dam
-    }
-}
-
-#mineral dam
-decision_katzen_mineral_dam = {
-	owned_planets_only = yes
-    prerequisites = {
-        "tech_capital_productivity_2"
-    }
-    enactment_time = 720
-    resources = {
-        category = decisions
-        cost = {
-            influence = 50
-            minerals = 7500
-        }
-    }
-    potential = {
-    	from = {
-        	has_origin = origin_katzen
-        }
-	NOT = {
-		has_planet_flag = pki_flusion_planet
-	}
-		
-	is_artificial = no
-    }
-
-	allow = {
-		custom_tooltip = {
-			fail_text = no_other_dam
-        	NOR = {
-				has_deposit = d_katzen_housing_dam
-				has_deposit = d_katzen_food_dam
-				has_deposit = d_katzen_mineral_dam
-				has_deposit = d_katzen_energy_dam
-				has_deposit = d_katzen_industrial_dam
-        	}
-		}
-	}
-
-	on_queued = {
-		set_planet_flag = katzen_dam
-	}
-
-	on_unqueued = {
-		remove_planet_flag = katzen_dam
-	}
-
-    effect = {
-		add_deposit = d_katzen_mineral_dam
-    }
-}
-
-#katzen energy dam
-decision_katzen_energy_dam = {
-	owned_planets_only = yes
-    prerequisites = {
-        "tech_capital_productivity_2"
-    }
-    enactment_time = 720
-    resources = {
-        category = decisions
-        cost = {
-            influence = 50
-            minerals = 7500
-        }
-    }
-    potential = {
-    	from = {
-        	has_origin = origin_katzen
-        }
-	NOT = {
-		has_planet_flag = pki_flusion_planet
-	}
-		
-	is_artificial = no
-    }
-
-	allow = {
-		custom_tooltip = {
-			fail_text = no_other_dam
-        	NOR = {
-            	has_deposit = d_katzen_housing_dam
-				has_deposit = d_katzen_food_dam
-				has_deposit = d_katzen_mineral_dam
-				has_deposit = d_katzen_energy_dam
-				has_deposit = d_katzen_industrial_dam
-        	}
-		}
-	}
-
-	on_queued = {
-		set_planet_flag = katzen_dam
-	}
-
-	on_unqueued = {
-		remove_planet_flag = katzen_dam
-	}
-
-    effect = {
-		add_deposit = d_katzen_energy_dam
-    }
-}
-
-#katzen Industrial Dam
-decision_katzen_industrial_dam = {
-	owned_planets_only = yes
 	prerequisites = {
 		"tech_capital_productivity_2"
 	}
+
 	enactment_time = 720
+
 	resources = {
 		category = decisions
 		cost = {
@@ -566,40 +358,51 @@ decision_katzen_industrial_dam = {
 			minerals = 7500
 		}
 	}
-	potential = {
-		from = {
-			has_origin = origin_katzen
-		}
-		NOT = {
-			has_planet_flag = pki_flusion_planet
-		}
-
-		is_artificial = no
-	}
 
 	allow = {
-		custom_tooltip = {
-			fail_text = no_other_dam
-			NOR = {
-				has_deposit = d_katzen_housing_dam
-				has_deposit = d_katzen_food_dam
-				has_deposit = d_katzen_mineral_dam
-				has_deposit = d_katzen_energy_dam
-				has_deposit = d_katzen_industrial_dam
-			}
+		OR = {
+			is_dry = no
+			is_wet = yes
 		}
 	}
 
-	on_queued = {
-		set_planet_flag = katzen_dam
+	potential = {
+		exists = owner
+		from = {
+			pki_is_katzenartig_imperium = yes
+		}
+		NOT = {
+			has_planet_flag = gigaflusion
+			has_planet_flag = pki_has_dam
+		}
+		is_artificial = no
+		NOR = {
+			has_deposit = d_katzen_housing_dam
+			has_deposit = d_katzen_food_dam
+			has_deposit = d_katzen_mineral_dam
+			has_deposit = d_katzen_energy_dam
+			has_deposit = d_katzen_industrial_dam
+		}
 	}
 
-	on_unqueued = {
-		remove_planet_flag = katzen_dam
+	abort_trigger = {
+		OR = {
+			has_deposit = d_katzen_housing_dam
+			has_deposit = d_katzen_food_dam
+			has_deposit = d_katzen_mineral_dam
+			has_deposit = d_katzen_energy_dam
+			has_deposit = d_katzen_industrial_dam
+		}
 	}
 
 	effect = {
-		add_deposit = d_katzen_industrial_dam
+		custom_tooltip = decision_pki_dams_effect
+		hidden_effect = {
+			set_planet_flag = pki_has_dam
+			planet_event = {
+				id = pki_misc.26
+			}
+		}
 	}
 }
 
@@ -789,7 +592,9 @@ decision_kaiser_craft_recall = {
         from = {
 			has_origin = origin_katzen
 			any_controlled_fleet = {
-				has_fleet_flag = current_katzen_flagship
+				any_controlled_ship = {
+					has_ship_flag = current_katzen_flagship
+				}
 			}
         }
 		has_planet_flag = pki_flusion_planet
@@ -798,7 +603,9 @@ decision_kaiser_craft_recall = {
 		from = {
 			every_controlled_fleet = {
 				limit = {
-					has_fleet_flag = current_katzen_flagship
+					any_controlled_ship = {
+						has_ship_flag = current_katzen_flagship
+					}
 				}
 				set_location = event_target:pki_flusion_planet
 			}
@@ -806,28 +613,38 @@ decision_kaiser_craft_recall = {
 	}
 }
 
-#decision_demotion_modifier = {
-#	enactment_time = 10
-#    resources = {
-#        category = decisions
-#        cost = {
-#            influence = 100
-#        }
-#    }
-#sound = event_administrative_work
-#  potential = {
-#       from = {
-#			has_origin = origin_katzen
-#			has_tradition = tr_flusion_finish
-#        }
-#		has_planet_flag = pki_flusion_planet
-#   }
-#	effect = {
-#		add_modifier = {
-#			modifier = temp_job_help days = 30
-#		}
-#	}
-#}
+decision_pki_demotion_modifier = {
+	enactment_time = 0
+    resources = {
+        category = decisions
+        cost = {
+            influence = 100
+        }
+    }
+	sound = event_administrative_work
+  	potential = {
+		from = {
+			has_origin = origin_katzen
+			has_tradition = tr_flusion_finish
+	    }
+	    has_planet_flag = playerflusion
+   	}
+	effect = {
+		custom_tooltip = decision_pki_demotion_modifier_effect
+		hidden_effect = {
+			every_owned_pop = {
+				limit = {
+					is_unemployed = yes
+				}
+				add_modifier = {
+					modifier = temp_job_help
+					days = 1
+				}
+				clear_pop_category = yes
+			}
+		}
+	}
+}
 
 decision_toggle_relocation = {
     resources = {
@@ -945,14 +762,10 @@ decision_pki_societal_restructuring = {
 			while = {
 				count = pki_flusion_pops
 				this = {
-					random_pop = {
+					random_owned_pop = {
 						kill_pop = yes
 					}
 				}
-			}
-			pki_district_half = {
-				DISTRICT = district_pki_flusion_city
-				VARIABLE = pki_num_city_districts
 			}
 			pki_district_half = {
 				DISTRICT = district_pki_flusion_civilian_industry
@@ -1024,14 +837,10 @@ decision_pki_further_restructuring = {
 			while = {
 				count = pki_flusion_pops
 				this = {
-					random_pop = {
+					random_owned_pop = {
 						kill_pop = yes
 					}
 				}
-			}
-			pki_district_half = {
-				DISTRICT = district_pki_flusion_city
-				VARIABLE = pki_num_city_districts
 			}
 			pki_district_half = {
 				DISTRICT = district_pki_flusion_civilian_industry
@@ -1064,6 +873,9 @@ decision_pki_further_restructuring = {
 
 decision_create_kaiser_legion = {
 	potential = {
+		from = {
+			pki_is_katzenartig_imperium = yes
+		}
 		is_colony = yes
 		planet = {
 			leader = {
@@ -1108,6 +920,7 @@ decision_pki_sector_auto = {
 		is_sector_capital = yes
 		is_capital = no
 		has_upgraded_capital = yes
+		has_planet_flag = pki_scaling_colony
 	}
 
 	effect = {
@@ -1141,21 +954,27 @@ decision_pki_sector_auto = {
 								}
 								if = {
 									limit = {
-										is_gestalt = no
+										owner = {
+											is_gestalt = no
+										}
 									}
 									add_building = building_capital
 								}
 								else_if = {
 									limit = {
-										is_gestalt = yes
-										is_machine_empire = yes
+										owner = {
+											is_gestalt = yes
+											is_machine_empire = yes
+										}
 									}
 									add_building = building_machine_capital
 								}
 								else_if = {
 									limit = {
-										is_gestalt = yes
-										is_hive_empire = yes
+										owner = {
+											is_gestalt = yes
+											is_hive_empire = yes
+										}
 									}
 									add_building = building_hive_capital
 								}
@@ -1163,21 +982,27 @@ decision_pki_sector_auto = {
 							else = {
 								if = {
 									limit = {
-										is_gestalt = no
+										owner = {
+											is_gestalt = no
+										}
 									}
 									add_building = building_colony_shelter
 								}
 								else_if = {
 									limit = {
-										is_gestalt = yes
-										is_machine_empire = yes
+										owner = {
+											is_gestalt = yes
+											is_machine_empire = yes
+										}
 									}
 									add_building = building_deployment_post
 								}
 								else_if = {
 									limit = {
-										is_gestalt = yes
-										is_hive_empire = yes
+										owner = {
+											is_gestalt = yes
+											is_hive_empire = yes
+										}
 									}
 									add_building = building_hive_capital
 								}

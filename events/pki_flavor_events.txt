@@ -1,0 +1,52 @@
+namespace = pki_flavor
+
+#Flusio-arc
+planet_event = {
+    id = pki_flavor.1
+    title = pki_flavor.1.name
+    desc = pki_flavor.1.desc
+    picture = GFX_evt_city_planet
+    show_sound = event_cityscape
+    location = root
+
+    is_triggered_only = yes
+
+    trigger = {
+        is_planet_class = pc_pki_flusion_ecu
+    }
+
+    option = {
+        name = mega.200.a
+    }
+}
+
+## EHVE COMPLETION EVENTS
+country_event = {
+    id = pki_flavor.20
+    title = "pki_flavor.20.name"
+    picture = GFX_evt_ehof
+    show_sound = event_dyson_sphere_build_complete
+    location = fromfrom
+    is_triggered_only = yes
+
+    desc = "pki_flavor.20.desc"
+
+    option = {
+        name = GOOD
+    }
+}
+
+country_event = {
+    id = pki_flavor.21
+    title = "pki_flavor.21.name"
+    picture = GFX_evt_ehof
+    show_sound = event_dyson_sphere_build_complete
+    location = fromfrom
+    is_triggered_only = yes
+
+    desc = "pki_flavor.21.desc"
+
+    option = {
+        name = GOOD
+    }
+}

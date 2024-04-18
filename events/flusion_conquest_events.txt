@@ -55,6 +55,7 @@ country_event = { #Flusion is INVADED
 	}
 
 	immediate = {
+		set_global_flag = pki_katzen_defeated
 		every_country = {
 			limit = {
 				has_origin = origin_katzen

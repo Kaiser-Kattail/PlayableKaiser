@@ -1,0 +1,78 @@
+katzen_leader_upgrade = {
+	icon = "GFX_edict_type_policy"
+	length = 1
+	resources = { category = edicts }
+	potential = { has_origin = origin_katzen }
+	effect = {
+		country_event = {
+			id = katzen.7
+		}
+	}
+	ai_weight = { weight = 0 }
+}
+
+katzen_conquest_map = {
+	icon = "GFX_edict_type_policy"
+	length = 1
+	resources = { category = edicts }
+	potential = { has_origin = origin_katzen has_country_flag = kaiser_bureau_formed }
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = kaiser_bureau.2
+			}
+		}
+	}
+
+	ai_weight = { weight = 0 }
+}
+
+katzen_war_forge_construction = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		upkeep = {
+			unity = 10
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+	}
+
+	potential = {
+		pki_is_katzenartig_imperium = yes
+		has_technology = tech_pki_warforge
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+pki_defense_station_construction = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		upkeep = {
+			unity = 10
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+	}
+
+	potential = {
+		pki_is_katzenartig_imperium = yes
+		has_country_flag = unified_flusion
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

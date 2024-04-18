@@ -28,9 +28,9 @@ pki_is_katzprotektorat_tier_3 = {
 
 pki_is_katzen_ship = {
 	OR = {
-		is_ship_size = katzen_panzer
-		is_ship_size = katzen_bomber
-		is_ship_size = katzen_cruiser
+		is_ship_size = pki_panzer
+		is_ship_size = pki_bomber
+		is_ship_size = pki_cruiser
 	}
 }
 
@@ -79,5 +79,40 @@ pki_is_normal_army = {
 pki_is_air_wing = {
 	OR = {
 		army_type = pki_air_fighter
+	}
+}
+
+pki_is_allied_with_katzen = {
+	any_federation_ally = {
+		pki_is_katzenartig_imperium = yes
+	}
+}
+
+pki_is_allowed_for_kaiser_spawn = {
+	NOR = {
+		AND = {
+			exists = space_owner
+			space_owner = { is_fallen_empire = yes }
+		}
+		any_neighbor_system = {
+			OR = {
+				# is_fe_cluster = yes
+				has_star_flag = empire_home_system
+				AND = {
+					exists = space_owner
+					space_owner = { is_fallen_empire = yes }
+				}
+				any_neighbor_system = {
+					OR = {
+						# is_fe_cluster = yes
+						has_star_flag = empire_home_system
+						AND = {
+							exists = space_owner
+							space_owner = { is_fallen_empire = yes }
+						}
+					}
+				}
+			}
+		}
 	}
 }

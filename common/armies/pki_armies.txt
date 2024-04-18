@@ -54,7 +54,7 @@ gepanzertertank_army = {
 			energy = 6
 		}
 	}
-	
+
 	potential = { owner = { has_origin = origin_katzen has_technology = pki_tech_panzers_1} }
 
 	inline_script = {
@@ -185,7 +185,7 @@ corrona_army = {
 	health = 40
 	morale = 10
 	icon = GFX_army_type_undead
-	
+
 
 	potential = {
 		owner = {

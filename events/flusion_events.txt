@@ -29,10 +29,10 @@ planet_event = {
 	hide_window = yes
 	is_triggered_only = yes
 
-	pre_triggers = { 
+	pre_triggers = {
 		has_owner = yes
 	}
-	
+
 	trigger = {
 		has_planet_flag = pki_flusion_planet
 	}
@@ -232,7 +232,7 @@ country_event = {
 	immediate = {
 		set_country_flag = starting_event
 		save_global_event_target_as = pki_player
-
+        set_global_flag = pki_katzen_is_being_played
 		owner_main_species = {
 			save_global_event_target_as = pki_katzen_species
 		}
@@ -274,8 +274,10 @@ country_event = {
 		#		event_chain = "kaiser_docs_chain"
 		#		location = capital_scope
 		#	}
-		
+
 		# END DOCS
+
+		set_country_flag = pki_hasnt_used_ehve
 
 		if = {
 			limit = {
@@ -295,6 +297,8 @@ country_event = {
 			modifier = pki_economy_start
 			days = -1
 		}
+
+
 
 		#Leader Portraits
 		create_species = {
@@ -415,7 +419,7 @@ country_event = {
 
 			while = {
 				count = 9
-				random_pop = {
+				random_owned_pop = {
 					limit = {
 						is_pop_category = specialist
 					}
@@ -438,7 +442,7 @@ country_event = {
 				}
 				while = {
 					count = 10
-					random_pop = {
+					random_owned_pop = {
 						limit = {
 							is_pop_category = specialist
 						}
@@ -480,6 +484,34 @@ country_event = {
 
 		pki_setup_flusion_economy = yes
 
+		event_target:player_jublio_system = {
+			spawn_system = {
+				max_distance = 4
+				min_distance = 5
+				initializer = pki_jupitwo_initializer
+			}
+			last_created_system = {
+				# Add extra hyperlane
+				random_list = {
+					1 = {
+						while = {
+							count = 1
+							giga_generate_hyperlane = {
+								TRIGGER = " pki_is_allowed_for_kaiser_spawn = yes "
+							}
+						}
+					}
+					1 = {
+						while = {
+							count = 2
+							giga_generate_hyperlane = {
+								TRIGGER = " pki_is_allowed_for_kaiser_spawn = yes "
+							}
+						}
+					}
+				}
+			}
+		}
 		if = {
 			limit = {
 				has_origin = origin_katzen
@@ -561,32 +593,34 @@ country_event = {
 			}
 		}
 
-		create_leader = {
-			class = official
-			species = owner_main_species
-			name = "Loris Von Kattensbach"
-			gender = male
-			skill = 3
-			immortal = yes
-			traits = {
-				trait = pki_katzen_trait_elite
-				trait = leader_trait_architectural_interest
-				trait = leader_trait_army_veteran
-				trait = subclass_official_governor
-			}
-			background_planet = event_target:pki_flusion_planet
-			background_job = politician
-			background_ethic = ethic_materialist
-			effect = {
-				change_leader_portrait = lorisvanilla
-				set_leader_flag = loris
-				save_global_event_target_as = loris
-				set_council_position = councilor_state
-				event_target:pki_flusion_planet = {
-					assign_leader = prev
+			#Create Loris
+			create_leader = {
+				class = official
+				species = owner_main_species
+				name = "Loris Von Kattensbach"
+				gender = male
+				skill = 3
+
+				immortal = yes
+				traits = {
+					trait = pki_katzen_trait_elite
+					trait = leader_trait_architectural_interest
+					trait = leader_trait_army_veteran
+					trait = subclass_official_governor
+				}
+                background_planet = event_target:pki_flusion_planet
+                background_job = politician
+                background_ethic = ethic_materialist
+				effect = {
+					change_leader_portrait = lorisvanilla
+					set_leader_flag = pki_leader_douclaw
+					save_global_event_target_as = pki_leader_douclaw
+					set_council_position = councilor_state
+                    event_target:pki_flusion_planet = {
+                        assign_leader = prev
+                    }
 				}
 			}
-		}
 
 		#Create Douclaw
 		create_leader = {
@@ -609,10 +643,46 @@ country_event = {
 			background_ethic = ethic_materialist
 			effect = {
 				change_leader_portrait = douclaw
-				set_leader_flag = douclaw
-				save_global_event_target_as = douclaw
+				set_leader_flag = pki_leader_douclaw
+				save_global_event_target_as = pki_leader_douclaw
 				set_council_position = councilor_defense
 			}
+		}
+	}
+}
+
+country_event = {
+	id = flusion.42
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		pki_is_katzenartig_imperium = yes
+	}
+
+	immediate = {
+		set_global_flag = pki_katzen_is_being_played
+		set_global_flag = katzenartig_disabled
+		set_global_flag = giga_jublio_disabled
+		set_global_flag = giga_jupitwo_disabled
+		set_global_flag = giga_fe_pouchkinn_disabled
+	}
+}
+
+event = {
+	id = flusion.43
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_playable_country = {
+			limit = {
+				has_origin = origin_katzen
+				NOT = {
+					has_country_flag = kaiser_preset
+				}
+			}
+			country_event = { id = flusion.44 }
 		}
 	}
 }

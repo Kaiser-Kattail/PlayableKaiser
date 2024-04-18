@@ -5,41 +5,41 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 
-
-	immediate = {
-		every_owned_planet = {
-			remove_modifier = central_instability
-			planet_event = {
-				id = centrism.2
-			}
-		}
-	}
-}
-
-planet_event = {
-	id = centrism.2
-	is_triggered_only = yes
-	hide_window = yes
 	trigger = {
-		from = {
-			has_origin = origin_katzen
-			has_tradition = tr_flusion_finish
-		}
-	}
-	immediate = {
-		if = {
-			limit = {
+		pki_is_katzenartig_imperium = yes
+		any_owned_planet = {
+			NOT = {
+				has_planet_flag = playerflusion
+			}
+			OR = {
 				check_variable_arithmetic = {
 					which = value:flusion_empire_ratio
 					value >= 0.5
-				} 
-				NOT = {
-					has_planet_flag = playerflusion
+				}
+				has_modifier = central_instability
+			}
+		}
+	}
+
+	immediate = {
+		every_owned_planet = {
+			if = {
+				limit = {
+					NOT = {
+						has_planet_flag = playerflusion
+					}
+					check_variable_arithmetic = {
+						which = value:flusion_empire_ratio
+						value >= 0.5
+					}
+				}
+				add_modifier = {
+					modifier = central_instability
+					mult = value:flusion_empire_ratio_five
 				}
 			}
-			add_modifier = {
-				modifier = central_instability
-				mult = value:flusion_empire_ratio_five
+			else = {
+				remove_modifier = central_instability
 			}
 		}
 	}
@@ -76,10 +76,7 @@ planet_event = {
 	hide_window = yes
 	trigger = {
 		from = {
-			has_origin = origin_katzen
-		}
-		NOT = {
-			has_planet_flag = playerflusion
+			pki_is_katzenartig_imperium = yes
 		}
 		exists = fromfrom
 	}
@@ -128,54 +125,36 @@ country_event = {
 	}
 }
 
-planet_event = {
+country_event = {
 	id = centrism.6
 	is_triggered_only = yes
 	hide_window = yes
 
+	trigger = {
+		pki_is_katzenartig_imperium = yes
+		OR = {
+			has_tradition = tr_border_colonies
+			has_tradition = tr_flusions_bounty
+			has_tradition = tr_work_arrangements
+		}
+	}
+
 	immediate = {
-		from = {
-			if = {
-				limit = { has_origin = origin_katzen has_tradition = tr_border_colonies }
-				every_owned_planet = {
-					limit = {
-						NOR = {
-							has_planet_flag = playerflusion
-							has_modifier = katzen_colony
-						}
-					}
-					add_modifier = {
-						modifier = katzen_colony
-						days = -1
-						clear_on_owner_change = yes
-					}
+		every_owned_planet = {
+			limit = {
+				exists = owner
+				is_colony = yes
+				NOR = {
+					has_planet_flag = playerflusion
 				}
 			}
-		}
-	}
-}
-country_event = {
-	id = centrism.61
-	is_triggered_only = yes
-	hide_window = yes
-
-	trigger = {
-		any_owned_planet = {
-			NOR = {
-				has_planet_flag = playerflusion
-				has_modifier = katzen_colony
-			}
-		}
-	}
-
-	immediate = {
-		if = {
-			limit = { has_origin = origin_katzen has_tradition = tr_border_colonies }
-			every_owned_planet = {
+			if = {
 				limit = {
-					NOR = {
-						has_planet_flag = playerflusion
+					NOT = {
 						has_modifier = katzen_colony
+					}
+					root = {
+						has_tradition = tr_border_colonies
 					}
 				}
 				add_modifier = {
@@ -183,6 +162,28 @@ country_event = {
 					days = -1
 					clear_on_owner_change = yes
 				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_deposit = d_flusion_bounty_colony
+					}
+					root = {
+						has_tradition = tr_flusions_bounty
+					}
+				}
+				add_deposit = d_flusion_bounty_colony
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_deposit = d_bureau_of_colonial_benefits
+					}
+					root = {
+						has_tradition = tr_work_arrangements
+					}
+				}
+				add_deposit = d_bureau_of_colonial_benefits
 			}
 		}
 	}
@@ -193,60 +194,25 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 
-	immediate = {
-		if = {
-			limit = {
-				NOT = {
-					has_origin = origin_katzen
-				}
-			}
-			every_owned_planet = {
-				remove_modifier = katzen_colony
-				remove_deposit = d_bureau_of_colonial_benefits
-				remove_deposit = d_flusion_bounty_colony
-				remove_modifier = pki_scaling_colony
+	trigger = {
+		pki_is_katzenartig_imperium = no
+		any_owned_planet = {
+			exists = owner
+			OR = {
+				has_modifier = katzen_colony
+				has_modifier = pki_scaling_colony
+				has_deposit = d_bureau_of_colonial_benefits
+				has_deposit = d_flusion_bounty_colony
 			}
 		}
 	}
-}
-
-country_event = {
-	id = centrism.7
-	is_triggered_only = yes
-	hide_window = yes
 
 	immediate = {
-		if = {
-			limit = { has_origin = origin_katzen has_tradition = tr_flusions_bounty }
-			every_owned_planet = {
-				limit = {
-					NOR = {
-						has_planet_flag = playerflusion
-						has_deposit = d_flusion_bounty_colony
-					}
-				}
-				add_deposit = d_flusion_bounty_colony
-			}
-		}
-	}
-}
-country_event = {
-	id = centrism.8
-	is_triggered_only = yes
-	hide_window = yes
-
-	immediate = {
-		if = {
-			limit = { has_origin = origin_katzen has_tradition = tr_work_arrangements }
-			every_owned_planet = {
-				limit = {
-					NOR = {
-						has_planet_flag = playerflusion
-						has_deposit = d_bureau_of_colonial_benefits
-					}
-				}
-				add_deposit = d_bureau_of_colonial_benefits
-			}
+		every_owned_planet = {
+			remove_modifier = katzen_colony
+			remove_deposit = d_bureau_of_colonial_benefits
+			remove_deposit = d_flusion_bounty_colony
+			remove_modifier = pki_scaling_colony
 		}
 	}
 }
@@ -299,30 +265,60 @@ country_event = {
 	hide_window = yes
 
 	trigger = {
-		has_origin = origin_katzen
-		has_policy_flag = smol_migration
+		pki_is_katzenartig_imperium = yes
 		has_tradition = tr_work_arrangements
-		NOT = {
-			has_country_flag = recent_migration
-		}
+		not = { has_country_flag = pki_just_resettled }
 	}
 
 	immediate = {
-		every_owned_planet = {
+		set_timed_country_flag = {
+			years = 5
+			flag = pki_just_resettled
+		}
+		if = {
 			limit = {
-				NOR = {
-					has_planet_flag = playerflusion
-					has_modifier = no_relocation
-				}
-				count_owned_pop = {
-					count >= 15
-				}
+				has_policy_flag = smol_migration
 			}
-			every_owned_pop = {
-				random_list = {
-					95 = {
+			pki_yearly_migration = {
+				HIGH_BOUND = 95
+				LOW_BOUND = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_policy_flag = more_migration
+			}
+			pki_yearly_migration = {
+				HIGH_BOUND = 90
+				LOW_BOUND = 10
+			}
+		}
+		else_if = {
+			limit = {
+				has_policy_flag = much_migration
+			}
+			pki_yearly_migration = {
+				HIGH_BOUND = 85
+				LOW_BOUND = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_policy_flag = dynamic_migration
+			}
+			every_owned_planet = {
+				limit = {
+					NOR = {
+						has_planet_flag = playerflusion
+						has_modifier = no_relocation
 					}
-					5 = {
+					count_owned_pop = {
+						count >= value:pki_flusion_half_threshold
+					}
+				}
+				while = {
+					count = 10
+					random_owned_pop = {
 						resettle_pop = {
 							pop = THIS
 							planet = event_target:pki_flusion_planet
@@ -330,120 +326,12 @@ country_event = {
 					}
 				}
 			}
-		}
-		event_target:pki_flusion_planet = {
-			add_modifier = {
-				modifier = temp_job_help
-				days = 5
+			event_target:pki_flusion_planet = {
+				add_modifier = {
+					modifier = temp_job_help
+					days = 1
+				}
 			}
-		}
-		set_timed_country_flag = {
-			flag = recent_migration
-			days = 1800
 		}
 	}
-
-}
-country_event = {
-	id = centrism.98
-	is_triggered_only = yes
-	hide_window = yes
-
-	trigger = {
-		has_origin = origin_katzen
-		has_policy_flag = more_migration
-		has_tradition = tr_work_arrangements
-		NOT = {
-			has_country_flag = recent_migration
-		}
-	}
-
-	immediate = {
-		every_owned_planet = {
-			limit = {
-				NOR = {
-					has_planet_flag = playerflusion
-					has_modifier = no_relocation
-				}
-				count_owned_pop = {
-					count >= 15
-				}
-			}
-			every_owned_pop = {
-				random_list = {
-					90 = {
-					}
-					10 = {
-						resettle_pop = {
-							pop = THIS
-							planet = event_target:pki_flusion_planet
-						}
-					}
-				}
-			}
-		}
-		event_target:pki_flusion_planet = {
-			add_modifier = {
-				modifier = temp_job_help
-				days = 5
-			}
-		}
-		set_timed_country_flag = {
-			flag = recent_migration
-			days = 1800
-		}
-	}
-
-}
-
-country_event = {
-	id = centrism.99
-	is_triggered_only = yes
-	hide_window = yes
-
-	trigger = {
-		has_origin = origin_katzen
-		has_policy_flag = much_migration
-		has_tradition = tr_work_arrangements
-		NOT = {
-			has_country_flag = recent_migration
-		}
-	}
-
-	immediate = {
-		every_owned_planet = {
-			limit = {
-				NOR = {
-					has_planet_flag = playerflusion
-					has_modifier = no_relocation
-				}
-				count_owned_pop = {
-					count >= 15
-				}
-			}
-			every_owned_pop = {
-				random_list = {
-					85 = {
-					}
-					15 = {
-						resettle_pop = {
-							pop = THIS
-							planet = event_target:pki_flusion_planet
-						}
-					}
-				}
-			}
-		}
-		event_target:pki_flusion_planet = {
-			add_modifier = {
-				modifier = temp_job_help
-				days = 5
-			}
-		}
-		set_timed_country_flag = {
-			flag = recent_migration
-			days = 1800
-		}
-	}
-
 }

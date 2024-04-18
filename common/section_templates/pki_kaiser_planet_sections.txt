@@ -1,0 +1,174 @@
+ship_section_template = {
+	key = pki_kaiser_planet_bowgun_01_key
+	ship_size = giga_planet_behemoth
+	fits_on_slot = "bowgun"
+	entity = "kaiser_planet_bowgun_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = { name = "TITANIC_GUN_01"		template = "invisible_titanic_fixed"			locatorname = "titanic_gun_01" }
+	component_slot = { name = "TITANIC_GUN_02"		template = "invisible_titanic_fixed"			locatorname = "titanic_gun_01" }
+	component_slot = { name = "TITANIC_GUN_03"		template = "invisible_titanic_fixed"			locatorname = "titanic_gun_01" }
+	component_slot = { name = "TITANIC_GUN_04"		template = "invisible_titanic_fixed"			locatorname = "titanic_gun_01" }
+	component_slot = { name = "TITANIC_GUN_05"		template = "invisible_titanic_fixed"			locatorname = "titanic_gun_01" }
+	component_slot = { name = "TITANIC_GUN_06"		template = "invisible_titanic_fixed"			locatorname = "titanic_gun_01" }
+	component_slot = { name = "TITANIC_GUN_07"		template = "invisible_titanic_fixed"			locatorname = "titanic_gun_01" }
+	component_slot = { name = "TITANIC_GUN_08"		template = "invisible_titanic_fixed"			locatorname = "titanic_gun_01" }
+	component_slot = { name = "TITANIC_GUN_09"		template = "invisible_titanic_fixed"			locatorname = "titanic_gun_01" }
+	component_slot = { name = "TITANIC_GUN_10"		template = "invisible_titanic_fixed"			locatorname = "titanic_gun_01" }
+	component_slot = { name = "MISSILE_01"			template = "invisible_missile_fixed"			locatorname = "torp_01" }
+	component_slot = { name = "MISSILE_02"			template = "invisible_missile_fixed"			locatorname = "torp_02" }
+	component_slot = { name = "MISSILE_03"			template = "invisible_missile_fixed"			locatorname = "torp_03" }
+	component_slot = { name = "MISSILE_04"			template = "invisible_missile_fixed"			locatorname = "torp_04" }
+	component_slot = { name = "MISSILE_05"			template = "invisible_missile_fixed"			locatorname = "torp_05" }
+	component_slot = { name = "MISSILE_06"			template = "invisible_missile_fixed"			locatorname = "torp_06" }
+	component_slot = { name = "MISSILE_07"			template = "invisible_missile_fixed"			locatorname = "torp_07" }
+	component_slot = { name = "MISSILE_08"			template = "invisible_missile_fixed"			locatorname = "torp_08" }
+	component_slot = { name = "MISSILE_09"			template = "invisible_missile_fixed"			locatorname = "torp_09" }
+	component_slot = { name = "MISSILE_10"			template = "invisible_missile_fixed"			locatorname = "torp_10" }
+	
+	prerequisites = { "tech_kaiser_planet_sections" }
+	ai_tags = { artillery explosive }
+
+	large_utility_slots = 15
+	aux_utility_slots = 3
+}
+
+ship_section_template = {
+	key = pki_kaiser_planet_bow_01_key
+	ship_size = giga_planet_behemoth
+	fits_on_slot = "bow"
+	entity = "kaiser_planet_bow_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = { name = "XL_GUN_01"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_01" }
+	component_slot = { name = "XL_GUN_02"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_02" }
+	component_slot = { name = "XL_GUN_03"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_03" }
+	component_slot = { name = "XL_GUN_04"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_04" }
+	component_slot = { name = "XL_GUN_05"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_05" }
+	component_slot = { name = "XL_GUN_06"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_06" }
+	component_slot = { name = "XL_GUN_07"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_07" }
+	component_slot = { name = "XL_GUN_08"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_08" }
+	component_slot = { name = "XL_GUN_09"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_09" }
+	component_slot = { name = "XL_GUN_10"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_10" }
+	component_slot = { name = "XL_GUN_11"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_11" }
+	component_slot = { name = "XL_GUN_12"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_12" }
+	component_slot = { name = "XL_GUN_13"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_13" }
+	component_slot = { name = "XL_GUN_14"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_14" }
+	component_slot = { name = "XL_GUN_15"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_15" }
+	component_slot = { name = "XL_GUN_16"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_16" }
+	component_slot = { name = "XL_GUN_17"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_17" }
+	component_slot = { name = "XL_GUN_18"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_18" }
+	component_slot = { name = "XL_GUN_19"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_19" }
+	component_slot = { name = "XL_GUN_20"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_20" }
+
+	prerequisites = { "tech_kaiser_planet_sections" }
+	ai_tags = { artillery }
+
+	large_utility_slots = 15
+	aux_utility_slots = 3
+}
+
+ship_section_template = {
+	key = pki_kaiser_planet_mid_01_key
+	ship_size = giga_planet_behemoth
+	fits_on_slot = "mid"
+	entity = "kaiser_planet_mid_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = { name = "XL_GUN_21"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_21" }
+	component_slot = { name = "XL_GUN_22"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_22" }
+	component_slot = { name = "XL_GUN_23"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_23" }
+	component_slot = { name = "XL_GUN_24"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_24" }
+	component_slot = { name = "XL_GUN_25"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_25" }
+	component_slot = { name = "XL_GUN_26"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_26" }
+	component_slot = { name = "XL_GUN_27"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_27" }
+	component_slot = { name = "XL_GUN_28"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_28" }
+	component_slot = { name = "XL_GUN_29"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_29" }
+	component_slot = { name = "XL_GUN_30"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_30" }
+	component_slot = { name = "XL_GUN_31"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_31" }
+	component_slot = { name = "XL_GUN_32"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_32" }
+	component_slot = { name = "XL_GUN_33"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_33" }
+	component_slot = { name = "XL_GUN_34"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_34" }
+	component_slot = { name = "XL_GUN_35"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_35" }
+	component_slot = { name = "XL_GUN_36"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_36" }
+	component_slot = { name = "XL_GUN_37"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_37" }
+	component_slot = { name = "XL_GUN_38"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_38" }
+	component_slot = { name = "XL_GUN_39"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_39" }
+	component_slot = { name = "XL_GUN_40"			template = "invisible_extra_large_fixed"		locatorname = "xl_gun_40" }
+
+	prerequisites = { "tech_kaiser_planet_sections" }
+	ai_tags = { artillery }
+
+	large_utility_slots = 15
+	aux_utility_slots = 3
+}
+
+ship_section_template = {
+	key = pki_kaiser_planet_stern_01_key
+	ship_size = giga_planet_behemoth
+	fits_on_slot = "stern"
+	entity = "kaiser_planet_stern_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = { name = "STRIKE_CRAFT_01"		template = "large_strike_craft"					locatorname = "strike_craft_01" }
+	component_slot = { name = "STRIKE_CRAFT_02"		template = "large_strike_craft"					locatorname = "strike_craft_01" }
+	component_slot = { name = "STRIKE_CRAFT_03"		template = "large_strike_craft"					locatorname = "strike_craft_01" }
+	component_slot = { name = "STRIKE_CRAFT_04"		template = "large_strike_craft"					locatorname = "strike_craft_01" }
+	component_slot = { name = "STRIKE_CRAFT_05"		template = "large_strike_craft"					locatorname = "strike_craft_01" }
+	component_slot = { name = "STRIKE_CRAFT_06"		template = "large_strike_craft"					locatorname = "strike_craft_01" }
+	component_slot = { name = "STRIKE_CRAFT_07"		template = "large_strike_craft"					locatorname = "strike_craft_01" }
+	component_slot = { name = "STRIKE_CRAFT_08"		template = "large_strike_craft"					locatorname = "strike_craft_01" }
+	component_slot = { name = "STRIKE_CRAFT_09"		template = "large_strike_craft"					locatorname = "strike_craft_01" }
+	component_slot = { name = "STRIKE_CRAFT_10"		template = "large_strike_craft"					locatorname = "strike_craft_01" }
+	component_slot = { name = "STRIKE_CRAFT_11"		template = "large_strike_craft"					locatorname = "strike_craft_02" }
+	component_slot = { name = "STRIKE_CRAFT_12"		template = "large_strike_craft"					locatorname = "strike_craft_02" }
+	component_slot = { name = "STRIKE_CRAFT_13"		template = "large_strike_craft"					locatorname = "strike_craft_02" }
+	component_slot = { name = "STRIKE_CRAFT_14"		template = "large_strike_craft"					locatorname = "strike_craft_02" }
+	component_slot = { name = "STRIKE_CRAFT_15"		template = "large_strike_craft"					locatorname = "strike_craft_02" }
+	component_slot = { name = "STRIKE_CRAFT_16"		template = "large_strike_craft"					locatorname = "strike_craft_02" }
+	component_slot = { name = "STRIKE_CRAFT_17"		template = "large_strike_craft"					locatorname = "strike_craft_02" }
+	component_slot = { name = "STRIKE_CRAFT_18"		template = "large_strike_craft"					locatorname = "strike_craft_02" }
+	component_slot = { name = "STRIKE_CRAFT_19"		template = "large_strike_craft"					locatorname = "strike_craft_02" }
+	component_slot = { name = "STRIKE_CRAFT_20"		template = "large_strike_craft"					locatorname = "strike_craft_02" }
+
+	prerequisites = { "tech_kaiser_planet_sections" }
+	ai_tags = { artillery carrier }
+
+	large_utility_slots = 15
+	aux_utility_slots = 3
+}
+
+ship_section_template = {
+	key = pki_kaiser_planet_sternthrusters_01_key
+	ship_size = giga_planet_behemoth
+	fits_on_slot = "sternthrusters"
+	entity = "kaiser_planet_sternthrusters_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = { name = "LARGE_GUN_01"		template = "giga_large"						locatorname = "xl_gun_21" }
+	component_slot = { name = "LARGE_GUN_02"		template = "giga_large"						locatorname = "xl_gun_22" }
+	component_slot = { name = "LARGE_GUN_03"		template = "giga_large"						locatorname = "xl_gun_23" }
+	component_slot = { name = "LARGE_GUN_04"		template = "giga_large"						locatorname = "xl_gun_24" }
+	component_slot = { name = "LARGE_GUN_05"		template = "giga_large"						locatorname = "xl_gun_25" }
+	component_slot = { name = "LARGE_GUN_06"		template = "giga_large"						locatorname = "xl_gun_26" }
+	component_slot = { name = "LARGE_GUN_07"		template = "giga_large"						locatorname = "xl_gun_27" }
+	component_slot = { name = "LARGE_GUN_08"		template = "giga_large"						locatorname = "xl_gun_28" }
+	component_slot = { name = "LARGE_GUN_09"		template = "giga_large"						locatorname = "xl_gun_29" }
+	component_slot = { name = "LARGE_GUN_10"		template = "giga_large"						locatorname = "xl_gun_30" }
+	component_slot = { name = "LARGE_GUN_11"		template = "giga_large"						locatorname = "xl_gun_31" }
+	component_slot = { name = "LARGE_GUN_12"		template = "giga_large"						locatorname = "xl_gun_32" }
+	component_slot = { name = "LARGE_GUN_13"		template = "giga_large"						locatorname = "xl_gun_33" }
+	component_slot = { name = "LARGE_GUN_14"		template = "giga_large"						locatorname = "xl_gun_34" }
+	component_slot = { name = "LARGE_GUN_15"		template = "giga_large"						locatorname = "xl_gun_35" }
+	component_slot = { name = "LARGE_GUN_16"		template = "giga_large"						locatorname = "xl_gun_36" }
+	component_slot = { name = "LARGE_GUN_17"		template = "giga_large"						locatorname = "xl_gun_37" }
+	component_slot = { name = "LARGE_GUN_18"		template = "giga_large"						locatorname = "xl_gun_38" }
+	component_slot = { name = "LARGE_GUN_19"		template = "giga_large"						locatorname = "xl_gun_39" }
+	component_slot = { name = "LARGE_GUN_20"		template = "giga_large"						locatorname = "xl_gun_40" }
+
+	prerequisites = { "tech_kaiser_planet_sections" }
+	ai_tags = { artillery }
+
+	large_utility_slots = 15
+	aux_utility_slots = 3
+}

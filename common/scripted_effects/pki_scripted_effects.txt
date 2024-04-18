@@ -1,3 +1,88 @@
+pki_district_half = {
+    export_trigger_value_to_variable = {
+        trigger = num_districts
+        parameters = {
+            type = $DISTRICT$
+        }
+        variable = $VARIABLE$
+    }
+    divide_variable = { which = $VARIABLE$ value = 2 }
+    floor_variable = $VARIABLE$
+    while = {
+        count = $VARIABLE$
+        remove_district = $DISTRICT$
+    }
+    clear_variable = $VARIABLE$
+}
+
+pki_district_var_set = {
+    export_trigger_value_to_variable = {
+        trigger = num_districts
+        parameters = {
+            type = $DISTRICT$
+        }
+        variable = $VARIABLE$
+    }
+    divide_variable = { which = $VARIABLE$ value = 2 }
+    floor_variable = $VARIABLE$
+}
+
+pki_district_convert = {
+    while = {
+        count = $VARIABLE$
+        add_district = $DISTRICT$
+    }
+    clear_variable = $VARIABLE$
+}
+
+pki_spawn_warforge_fleet = {
+    create_fleet = {
+        name = "Katzenkriegsschmiedekanone"
+        settings = {
+            spawn_debris = no
+        }
+        effect = {
+            set_owner = $OWNER$
+            if = {
+                limit = {
+                    fromfrom = {
+                        space_owner = {
+                            NOT = {
+                                pki_is_katzenartig_imperium = yes
+                            }
+                        }
+                    }
+                }
+                set_owner = event_target:pki_warforge_country
+            }
+            create_ship = {
+                name = "Katzenkriegsschmiedekanone"
+                design = "Rhawn"
+                upgradable = no
+            }
+            set_location = fromfrom
+            set_fleet_flag = warforge_platform
+            set_fleet_flag = warforge_platform@fromfrom
+        }
+    }
+    if = {
+        limit = {
+            space_owner = {
+                pki_is_katzprotektorat = yes
+            }
+        }
+        every_system_planet = {
+            limit = {
+                has_planet_flag = war_forge
+            }
+            add_modifier = {
+                modifier = pki_warforge_in_orbit
+                days = -1
+            }
+        }
+    }
+}
+
 pki_refrest_army_limit = {
     set_variable = {
         which = pki_$ARMY$_current
@@ -58,6 +143,215 @@ pki_setup_flusion_economy = {
     set_variable = {
         which = pki_used_industry
         value = 0
+    }
+}
+
+pki_spawn_defense_fleet = {
+    create_fleet = {
+        name = "Katzenplanetenverteidigung"
+        settings = { spawn_debris = no }
+        effect = {
+            set_owner = root
+            create_ship = {
+                name = "Katzenplanetenverteidigung"
+                random_existing_design = pki_warforge_platform
+                upgradable = yes
+            }
+            set_location = {
+                target = prev
+                distance = 10
+                angle = @\[90*($NUMBER$ - 1) ]
+            }
+            set_fleet_flag = pki_platform_planet_@prev
+            set_fleet_flag = pki_platform_$NUMBER$_@prev
+        }
+    }
+}
+
+pki_count_ships = {
+    every_controlled_ship = {
+        fleet = {
+            set_variable = {
+                which = pki_$SHIP$_count
+                value = 0
+            }
+        }
+        limit = {
+            is_ship_size = $SHIP$
+        }
+        fleet = {
+            change_variable = {
+                which = pki_$SHIP$_count
+                value = 1
+            }
+        }
+    }
+}
+
+pki_yearly_migration = {
+    every_owned_planet = {
+        limit = {
+            NOR = {
+                has_planet_flag = playerflusion
+                has_modifier = no_relocation
+            }
+            count_owned_pop = {
+                count >= 15
+            }
+        }
+        every_owned_pop = {
+            random_list = {
+                $HIGH_BOUND$ = {
+                }
+                $LOW_BOUND$ = {
+                    resettle_pop = {
+                        pop = THIS
+                        planet = event_target:playerflusion
+                    }
+                }
+            }
+        }
+    }
+    event_target:playerflusion = {
+        add_modifier = {
+            modifier = temp_job_help
+            days = 1
+        }
+    }
+}
+
+pki_update_galactic_tension = {
+    every_situation = {
+        limit = {
+            is_situation_type = situation_pki_galactic_tension
+        }
+        owner = {
+            set_variable = {
+                which = pki_galaxy_owned
+                value = value:pki_galaxy_owned
+            }
+        }
+        add_situation_progress = value:pki_set_situation_progress_effect|NEW_PROGRESS|owner.pki_galaxy_owned|
+    }
+}
+
+pki_generate_corrona_primitives_on_planet = {
+    create_species = {
+        name = "Skeletoid"
+        plural = "Skeletoids"
+        class = corrona
+        portrait = corrona1
+        namelist = MAM1
+        homeworld = THIS
+        traits = {
+            trait = trait_pc_continental_preference
+            trait = trait_enduring
+            trait = trait_quarrelsome
+            trait = trait_strong
+            trait = trait_resilient
+        }
+        effect = {
+            save_global_event_target_as = pki_corronaskeletons
+        }
+    }
+    create_country = {
+        name = "Corronian Kingdoms"
+        name_list = random
+        authority = auth_oligarchic
+        civics = {
+            civic = civic_increasing_urbanization
+            civic = civic_atmospheric_pollution
+        }
+        species = last_created_species
+        ethos = {
+            ethic = ethic_xenophobe
+            ethic = ethic_authoritarian
+            ethic = ethic_spiritualist
+        }
+        flag={
+            icon={
+                category="spherical"
+                file="flag_spherical_19.dds"
+            }
+            background={
+                category="backgrounds"
+                file="circle.dds"
+            }
+            colors={
+                "grey"
+                "beige"
+                "null"
+                "null"
+            }
+        }
+        type = primitive
+    }
+    last_created_country = {
+        set_graphical_culture = industrial_01
+        set_country_flag = tech_frozen
+        set_country_flag = custom_preftl_diplomacy
+        set_country_flag = custom_preftl_espionage
+        set_country_flag = corrona_age
+        set_pre_ftl_age = giga_corrona_age
+        set_country_flag = corrona_primitives
+        save_global_event_target_as = pki_corrona_country
+    }
+    while = {
+        count = 20
+        create_pop = {
+            species = event_target:pki_corronaskeletons
+        }
+    }
+    while = { count = 10   create_army = { name = NAME_bone	   	  owner = last_created_country species = event_target:pki_corronaskeletons type = "corrona_army" } }
+    while = { count = 1	   create_army = { name = NAME_madknight  owner = last_created_country species = event_target:pki_corronaskeletons type = "corrona_army" } }
+    remove_building = building_colony_shelter
+    remove_all_buildings = yes
+    add_building = building_giga_corrona_homes
+    add_building = building_giga_corrona_homes
+    add_building = building_giga_corrona_homes
+    add_building = building_giga_corrona_capital
+    create_pre_ftl_blockers = yes
+}
+
+pki_create_corrona_dragon_fleet_corrona = {
+    create_leader = {
+        class = commander
+        species = event_target:pki_corronaskeletons
+        name = random
+        skill = 3
+        gender = male
+        effect = {
+            save_event_target_as = pki_corrona_admiral
+        }
+    }
+    create_fleet = {
+        name = "Draconic Horde"
+        settings = {
+            uses_naval_capacity = no
+            spawn_debris = no
+            can_change_composition = no
+            can_change_leader = no
+            can_upgrade = no
+            can_disband = no
+        }
+        effect = {
+            set_fleet_flag = pki_corrona_dragon_fleet
+            set_owner = event_target:pki_corrona_country
+            while = {
+                count = 25
+                create_ship = {
+                    name = random
+                    design = "Beast of War"
+                    prefix = no
+                }
+            }
+            assign_leader = event_target:pki_corrona_admiral
+            set_location = {
+                target = event_target:pki_corrona
+                distance = 10
+                angle = random
+            }
+        }
     }
 }
 

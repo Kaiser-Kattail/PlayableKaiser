@@ -10,7 +10,21 @@ gigas_kilostructure_list = {
 
 		# asteroid manufactury
 		$CONDITION$ = asteroid_manufactory_0
-		$CONDITION$ = asteroid_manufactory_1
+		$CONDITION$ = asteroid_manufactory_alloys
+		$CONDITION$ = asteroid_manufactory_platform_alloys
+		$CONDITION$ = asteroid_manufactory_ai_alloys
+		$CONDITION$ = asteroid_manufactory_consumer_goods
+		$CONDITION$ = asteroid_manufactory_platform_consumer_goods
+		$CONDITION$ = asteroid_manufactory_ai_consumer_goods
+		$CONDITION$ = asteroid_manufactory_energy
+		$CONDITION$ = asteroid_manufactory_platform_energy
+		$CONDITION$ = asteroid_manufactory_ai_energy
+		$CONDITION$ = asteroid_manufactory_food
+		$CONDITION$ = asteroid_manufactory_platform_food
+		$CONDITION$ = asteroid_manufactory_ai_food
+		$CONDITION$ = asteroid_manufactory_supertensiles
+		$CONDITION$ = asteroid_manufactory_platform_supertensiles
+		$CONDITION$ = asteroid_manufactory_ai_supertensiles
 		$CONDITION$ = asteroid_manufactory_2
 
 		# dynamic core ignitor
@@ -41,7 +55,12 @@ gigas_kilostructure_list = {
 		$CONDITION$ = terraform_shattered_4
 
 		# habitats
-		$CONDITION$ = habitat_0
+		$CONDITION$ = habitat_central_complex
+		$CONDITION$ = habitat_central_complex_ruined
+		$CONDITION$ = habitat_central_complex_restored
+		$CONDITION$ = major_orbital
+		$CONDITION$ = major_orbital_knights
+		$CONDITION$ = minor_orbital
 
 		# macroatmospheric stabilizer
 		$CONDITION$ = macro_stabilizer_0
@@ -81,10 +100,17 @@ gigas_kilostructure_list = {
 		#$CONDITION$ = frameworld_salvage_habitat_0
 
 		# frameworld outpost
-		$CONDITION$ = frameworld_outpost_0
-		$CONDITION$ = frameworld_outpost_marked_0
-		$CONDITION$ = frameworld_outpost_wreck_0
-		$CONDITION$ = frameworld_outpost_wreck_1
+		$CONDITION$ = frameworld_outpost_construction
+		$CONDITION$ = frameworld_outpost_construction_lithoid
+		$CONDITION$ = frameworld_outpost_construction_hive
+		$CONDITION$ = frameworld_outpost_construction_hive_lithoid
+		$CONDITION$ = frameworld_outpost_construction_machine
+		# deprecated
+		#$CONDITION$ = frameworld_outpost_deconstruction
+		#$CONDITION$ = frameworld_outpost_0
+		#$CONDITION$ = frameworld_outpost_marked_0
+		#$CONDITION$ = frameworld_outpost_wreck_0
+		#$CONDITION$ = frameworld_outpost_wreck_1
 
 		# planetary mass planet cracker
 		$CONDITION$ = moon_printer_orbital_mass_harvester_0

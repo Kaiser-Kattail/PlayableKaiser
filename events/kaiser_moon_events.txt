@@ -132,8 +132,10 @@ country_event = {
 					name = "Kaiservorherrschaft"
 					design = "NAME_PKI_ATTACK_MOON"
 					upgradable = yes
+					effect = {
+						set_ship_flag = current_katzen_flagship
+					}
 				}
-				set_fleet_flag = current_katzen_flagship
 				set_location = event_target:pki_flusion_planet
 			}
 		}
