@@ -568,6 +568,7 @@ country_event = {
 			every_system_megastructure = {
 				if = {
 					limit = {
+						is_megastructure_type = katzen_war_forge_1
 						prev = {
 							any_fleet_in_system = {
 								NOT = {
