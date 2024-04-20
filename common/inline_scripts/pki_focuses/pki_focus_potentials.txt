@@ -1,0 +1,3 @@
+pki_focus_$FOCUS$_potential = {
+    always = yes
+}

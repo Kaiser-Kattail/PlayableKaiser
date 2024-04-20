@@ -46,7 +46,7 @@ country_event = { #Flusion is INVADED
 	hide_window = yes
 
 	trigger = {
-		fromfrom = { has_planet_flag = playerflusion }
+		fromfrom = { has_planet_flag = pki_flusion_planet }
 		this = {
 			NOT = {
 				is_country_type = flusion_nation
@@ -72,7 +72,7 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
-		fromfrom = { has_planet_flag = playerflusion }
+		fromfrom = { has_planet_flag = pki_flusion_planet }
 		this = {
 			is_country_type = flusion_nation
 		}
@@ -984,7 +984,7 @@ country_event = { #Flusion is INVADED
 	hide_window = yes
 
 	trigger = {
-		fromfrom = { has_planet_flag = playerflusion }
+		fromfrom = { has_planet_flag = pki_flusion_planet }
 		from = {
 			is_country_type = flusion_coalition
 		}
@@ -1156,7 +1156,7 @@ country_event = {
 			has_origin = origin_katzen
 		}
 		fromfrom = {
-			has_planet_flag = playerflusion
+			has_planet_flag = pki_flusion_planet
 		}
 		this = {
 			is_country_type = flusion_nation

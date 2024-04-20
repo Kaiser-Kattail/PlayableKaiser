@@ -18,10 +18,14 @@ concept_pki_industrial_dam = {
 
 }
 
-concept_pki_destabilized_government  = {
-    icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
-}
-
 concept_pki_neighbors = {
     icon = "gfx/interface/icons/diplomacy/diplomacy_envoy.dds"
+}
+
+concept_pki_focus_tree = {
+    icon = "gfx/interface/icons/situation_log/situations/stages/situation_severity_level_pki_national_focus.dds"
+}
+
+concept_pki_trait_martial_dicipline = {
+    icon = "gfx/interface/icons/traits/trait_pki_martial_free.dds"
 }

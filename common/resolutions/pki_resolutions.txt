@@ -319,8 +319,8 @@ resolution_pki_galactic_focus_crisis_katzen = {
         modifier = { factor = 1.2	OR = { is_materialist = yes	is_synthetic_empire = yes } desc = ethic_materialist }
         modifier = { factor = 0.1	is_xenophobe = yes desc = ethic_xenophobe }
         modifier = { factor = 0.5	is_at_war = yes desc = galcom_giga_at_war }
-        modifier = { factor = 1.3   has_opinion_modifier = { modifier = opinion_pki_mocked_galcom_1 who = event_target:katzenartig } desc = pki_angry_with_katzen }
-        modifier = { factor = 1.15   has_opinion_modifier = { modifier = opinion_pki_mocked_galcom_2 who = event_target:katzenartig } desc = pki_angry_with_katzen }
+        modifier = { factor = 1.3   has_opinion_modifier = { modifier = opinion_pki_mocked_galcom_1 who = event_target:pki_player } desc = pki_angry_with_katzen }
+        modifier = { factor = 1.15   has_opinion_modifier = { modifier = opinion_pki_mocked_galcom_2 who = event_target:pki_player } desc = pki_angry_with_katzen }
         modifier = { factor = 0     pki_is_katzenartig_imperium = yes desc = pki_is_katzenartig_imperium }
     }
 }

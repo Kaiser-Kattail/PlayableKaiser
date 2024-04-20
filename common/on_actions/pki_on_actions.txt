@@ -21,7 +21,6 @@ on_monthly_pulse_country = {
 		#pki_misc.10
 		centrism.65
 		pki_misc.15
-		pki_misc.10
 		pki_misc.14
 		pki_misc.15
 		pki_misc.151

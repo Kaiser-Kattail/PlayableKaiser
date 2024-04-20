@@ -204,7 +204,7 @@ country_event = {
     immediate = {
         every_country = {
             limit = {
-                has_communications = event_target:playerflusion
+                has_communications = event_target:pki_player
             }
             country_event = { id = pki_crisis.402 days = 60 }
         }
@@ -264,13 +264,13 @@ country_event = {
             }
             add_opinion_modifier = {
                 modifier = opinion_pki_mocked_galcom_1
-                who = event_target:playerflusion
+                who = event_target:pki_player
             }
         }
         else = {
             add_opinion_modifier = {
                 modifier = opinion_pki_mocked_galcom_2
-                who = event_target:playerflusion
+                who = event_target:pki_player
             }
         }
     }
@@ -324,11 +324,11 @@ country_event = {
             limit = {
                 any_country = {
                     is_ai = no
-                    NOT = { is_at_war_with = event_target:katzenartig }
+                    NOT = { is_at_war_with = event_target:pki_player }
                     is_country_type = default
                     NOR = {
                         pki_is_katzenartig_imperium = yes
-                        is_at_war_with = event_target:katzenartig
+                        is_at_war_with = event_target:pki_player
                         pki_is_katzprotektorat = yes
                         pki_is_allied_with_katzen = yes
                         is_subject = yes
@@ -340,11 +340,11 @@ country_event = {
             random_country = {
                 limit = {
                     is_ai = no
-                    NOT = { is_at_war_with = event_target:katzenartig }
+                    NOT = { is_at_war_with = event_target:pki_player }
                     is_country_type = default
                     NOR = {
                         pki_is_katzenartig_imperium = yes
-                        is_at_war_with = event_target:katzenartig
+                        is_at_war_with = event_target:pki_player
                         pki_is_katzprotektorat = yes
                         pki_is_allied_with_katzen = yes
                         is_subject = yes
@@ -352,7 +352,7 @@ country_event = {
                     is_galactic_community_member = yes
                 }
                 declare_war = {
-                    target = event_target:katzenartig
+                    target = event_target:pki_player
                     attacker_war_goal = "wg_katzen_defence"
                     name = "Katzenkrieg"
                 }
@@ -374,11 +374,11 @@ country_event = {
             if = {
                 limit = {
                     any_country = {
-                        NOT = { is_at_war_with = event_target:katzenartig }
+                        NOT = { is_at_war_with = event_target:pki_player }
                         is_country_type = default
                         has_country_flag = pki_galcom_opponent
                         NOR = {
-                            is_at_war_with = event_target:katzenartig
+                            is_at_war_with = event_target:pki_player
                             pki_is_katzprotektorat = yes
                             pki_is_allied_with_katzen = yes
                             is_subject = yes
@@ -388,11 +388,11 @@ country_event = {
                 }
                 random_country = {
                     limit = {
-                        NOT = { is_at_war_with = event_target:katzenartig }
+                        NOT = { is_at_war_with = event_target:pki_player }
                         is_country_type = default
                         has_country_flag = pki_galcom_opponent
                         NOR = {
-                            is_at_war_with = event_target:katzenartig
+                            is_at_war_with = event_target:pki_player
                             pki_is_katzprotektorat = yes
                             pki_is_allied_with_katzen = yes
                             is_subject = yes
@@ -400,7 +400,7 @@ country_event = {
                         is_galactic_community_member = yes
                     }
                     declare_war = {
-                        target = event_target:katzenartig
+                        target = event_target:pki_player
                         attacker_war_goal = "wg_katzen_defence"
                         name = "Katzenkrieg"
                     }
@@ -415,10 +415,10 @@ country_event = {
             else = {
                 random_country = {
                     limit = {
-                        NOT = { is_at_war_with = event_target:katzenartig }
+                        NOT = { is_at_war_with = event_target:pki_player }
                         is_country_type = default
                         NOR = {
-                            is_at_war_with = event_target:katzenartig
+                            is_at_war_with = event_target:pki_player
                             pki_is_katzprotektorat = yes
                             pki_is_allied_with_katzen = yes
                             is_subject = yes
@@ -426,7 +426,7 @@ country_event = {
                         is_galactic_community_member = yes
                     }
                     declare_war = {
-                        target = event_target:katzenartig
+                        target = event_target:pki_player
                         attacker_war_goal = "wg_katzen_defence"
                         name = "Katzenkrieg"
                     }
@@ -442,10 +442,10 @@ country_event = {
         every_country = {
             limit = {
                 NOT = { is_country = event_target:pki_katzen_crusade_war_leader }
-                NOT = { is_at_war_with = event_target:katzenartig }
+                NOT = { is_at_war_with = event_target:pki_player }
                 is_country_type = default
                 NOR = {
-                    is_at_war_with = event_target:katzenartig
+                    is_at_war_with = event_target:pki_player
                     pki_is_katzprotektorat = yes
                     pki_is_allied_with_katzen = yes
                 }

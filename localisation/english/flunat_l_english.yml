@@ -1,6 +1,6 @@
 ﻿l_english:
-  d_flunat:0 "Flusonian Nations"
-  d_flunat_desc:0 "There are many other nations on Flusion, ready to be conquered."
+  d_pki_flusion_nations:0 "Flusonian Nations"
+  d_pki_flusion_nations_desc:0 "There are many other nations on Flusion, ready to be conquered."
      
  ###DIPLOMACY EVENTS###
   flunat_get_lore:0 "Learn about their nation's history and culture."

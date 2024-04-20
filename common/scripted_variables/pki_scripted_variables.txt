@@ -1,8 +1,6 @@
 @pki_vassal_peacekeeper_amt = 2
 
 @pki_kaiser_arrival_speed = 5
-@pki_neighbors_speed = 5
-@pki_harania_speed = 5
 
 #@pki_COUNTRY_pops =
 #@pki_COUNTRY_building_slots =
@@ -16,12 +14,155 @@
 #@pki_COUNTRY_planes_ratio =
 #@pki_COUNTRY_fighters_cas_ratio =
 
-@pki_KAT_building_slots = 126
-@pki_KAT_industry_level = 35
+@pki_KAT_industry_level = 7
 
-@pki_ATA_pops = 6
-@pki_ATA_building_slots = 24
-@pki_ATA_industry_level = 10
+
+@pki_ATA_pops = 3
+@pki_ATA_building_slots = 4
+@pki_ATA_industry_level = 2
+
+@pki_AXO_pops = 1
+@pki_AXO_building_slots = 1
+@pki_AXO_industry_level = 1
+
+@pki_BYU_pops = 3
+@pki_BYU_building_slots = 3
+@pki_BYU_industry_level = 1
+
+@pki_CYA_pops = 2
+@pki_CYA_building_slots = 3
+@pki_CYA_industry_level = 1
+
+@pki_DTC_pops = 6
+@pki_DTC_building_slots = 9
+@pki_DTC_industry_level = 2
+
+@pki_GNA_pops = 2
+@pki_GNA_building_slots = 2
+@pki_GNA_industry_level = 1
+
+@pki_GTA_pops = 5
+@pki_GTA_building_slots = 7
+@pki_GTA_industry_level = 3
+
+@pki_HAR_pops = 4
+@pki_HAR_building_slots = 6
+@pki_HAR_industry_level = 3
+
+@pki_HOS_pops = 2
+@pki_HOS_building_slots = 2
+@pki_HOS_industry_level = 1
+
+@pki_ILY_pops = 3
+@pki_ILY_building_slots = 5
+@pki_ILY_industry_level = 1
+
+@pki_KIT_pops = 3
+@pki_KIT_building_slots = 4
+@pki_KIT_industry_level = 1
+
+@pki_KRK_pops = 1
+@pki_KRK_building_slots = 2
+@pki_KRK_industry_level = 1
+
+@pki_KRO_pops = 4
+@pki_KRO_building_slots = 5
+@pki_KRO_industry_level = 2
+
+@pki_LAU_pops = 4
+@pki_LAU_building_slots = 6
+@pki_LAU_industry_level = 3
+
+@pki_LIN_pops = 6
+@pki_LIN_building_slots = 5
+@pki_LIN_industry_level = 2
+
+@pki_MER_pops = 2
+@pki_MER_building_slots = 3
+@pki_MER_industry_level = 1
+
+@pki_NDK_pops = 1
+@pki_NDK_building_slots = 2
+@pki_NDK_industry_level = 1
+
+@pki_NDR_pops = 1
+@pki_NDR_building_slots = 2
+@pki_NDR_industry_level = 1
+
+@pki_NEK_pops = 1
+@pki_NEK_building_slots = 2
+@pki_NEK_industry_level = 1
+
+@pki_NOR_pops = 1
+@pki_NOR_building_slots = 2
+@pki_NOR_industry_level = 1
+
+@pki_PFL_pops = 4
+@pki_PFL_building_slots = 6
+@pki_PFL_industry_level = 3
+
+@pki_PGM_pops = 2
+@pki_PGM_building_slots = 2
+@pki_PGM_industry_level = 1
+
+@pki_PHH_pops = 1
+@pki_PHH_building_slots = 1
+@pki_PHH_industry_level = 1
+
+@pki_POZ_pops = 2
+@pki_POZ_building_slots = 3
+@pki_POZ_industry_level = 1
+
+@pki_PRO_pops = 1
+@pki_PRO_building_slots = 1
+@pki_PRO_industry_level = 1
+
+@pki_RAV_pops = 5
+@pki_RAV_building_slots = 7
+@pki_RAV_industry_level = 3
+
+@pki_ROQ_pops = 5
+@pki_ROQ_building_slots = 8
+@pki_ROQ_industry_level = 3
+
+@pki_RUS_pops = 2
+@pki_RUS_building_slots = 2
+@pki_RUS_industry_level = 1
+
+@pki_SAR_pops = 2
+@pki_SAR_building_slots = 2
+@pki_SAR_industry_level = 1
+
+@pki_SOB_pops = 2
+@pki_SOB_building_slots = 2
+@pki_SOB_industry_level = 1
+
+@pki_TER_pops = 2
+@pki_TER_building_slots = 2
+@pki_TER_industry_level = 1
+
+@pki_VIX_pops = 2
+@pki_VIX_building_slots = 3
+@pki_VIX_industry_level = 1
+
+@pki_WAC_pops = 2
+@pki_WAC_building_slots = 3
+@pki_WAC_industry_level = 1
+
+@pki_WIN_pops = 6
+@pki_WIN_building_slots = 9
+@pki_WIN_industry_level = 5
+
+@pki_YIN_pops = 4
+@pki_YIN_building_slots = 5
+@pki_YIN_industry_level = 3
+
+@pki_ZUS_pops = 3
+@pki_ZUS_building_slots = 4
+@pki_ZUS_industry_level = 2
+
+
+
 @pki_ATA_used_industry_ratio = 0.5
 @pki_ATA_army_count = 15
 @pki_ATA_army_strength = 0.7

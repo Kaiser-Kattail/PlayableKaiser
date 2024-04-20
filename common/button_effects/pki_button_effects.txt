@@ -4,13 +4,13 @@ kaiser_bureau = {
 		from = {
 			NOT = { has_country_flag = giga_diplo_sa_buttons }
 			AND = { 
-				has_country_flag = kaiser_bureau_formed
+				has_country_flag = pki_menu_formed
 				has_origin = origin_katzen
 			}
 		}
 	}
 	allow = { HIDDEN_TRIGGER = { from = { NOT = { has_country_flag = conquest_map_active } } } }
-	effect = { custom_tooltip = "kaiser_bureau_tooltip" hidden_effect = { from = { country_event = { id = kaiser_bureau.2 } } } }
+	effect = { custom_tooltip = "kaiser_bureau_tooltip" hidden_effect = { from = { country_event = { id = pki_menu.2 } } } }
 }
 
 pki_always_no_effect = {
@@ -89,7 +89,7 @@ pki_map_mult_100 = {
 pki_map_mult_100_active = {
 	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab  has_country_flag = pki_map_industry_mult_100 } }
 	allow = { always = yes }
-	effect = {}
+	effect = { }
 }
 
 pki_map_increase = {

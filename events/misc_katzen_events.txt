@@ -12,7 +12,7 @@ country_event = {
 		every_controlled_planet = {
 			limit = {
 				NOT = {
-					has_planet_flag = playerflusion
+					has_planet_flag = pki_flusion_planet
 					any_planet_army = {
 						army_type = peacekeeper_army
 					}
@@ -448,7 +448,7 @@ country_event = {
 #				effect = {
 #					set_leader_flag = kaiser_kattail
 #					save_global_event_target_as = kaiser_kattail
-#					event_target:katzenartig = {
+#					event_target:pki_player = {
 #						ruler = {
 #							unassign_leader = this
 #						}

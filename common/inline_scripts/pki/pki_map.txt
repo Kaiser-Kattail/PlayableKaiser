@@ -17,7 +17,7 @@ pki_map_$COUNTRY$_captured_effect = {
 }
 
 pki_map_$COUNTRY$_selected_effect = {
-    potential = { event_target:pki_player = { has_country_flag = pki_map_$COUNTRY$_selected } }
+    potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab has_country_flag = pki_map_$COUNTRY$_selected } }
     allow = { always = yes }
     effect = {}
 }

@@ -201,4 +201,5 @@ spriteTypes = {
 	spriteType = { name = "GFX_pki_map_ZUS_occupation" texturefile = "gfx/interface/pki_ui/pki_map_occupation.dds" masking_texture = "gfx/interface/pki_ui/regions/pki_map_ZUS_mask.dds" transParencecheck = yes }
 	spriteType = { name = "GFX_pki_map_ZUS_captured" texturefile = "gfx/interface/pki_ui/pki_map_captured.dds" masking_texture = "gfx/interface/pki_ui/regions/pki_map_ZUS_mask.dds" transParencecheck = yes }
 
+	spriteType = { name = "GFX_pki_map_ATA_flag" textureFile = "gfx/interface/pki_ui/flags/pki_ATA_flag.dds" alwaysTransparent = yes}
 }

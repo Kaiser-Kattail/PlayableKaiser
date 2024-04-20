@@ -372,7 +372,7 @@ decision_pki_dams = {
 			pki_is_katzenartig_imperium = yes
 		}
 		NOT = {
-			has_planet_flag = gigaflusion
+			has_planet_flag = pki_flusion_planet
 			has_planet_flag = pki_has_dam
 		}
 		is_artificial = no
@@ -627,7 +627,7 @@ decision_pki_demotion_modifier = {
 			has_origin = origin_katzen
 			has_tradition = tr_flusion_finish
 	    }
-	    has_planet_flag = playerflusion
+	    has_planet_flag = pki_flusion_planet
    	}
 	effect = {
 		custom_tooltip = decision_pki_demotion_modifier_effect

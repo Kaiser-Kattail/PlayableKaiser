@@ -1,35 +1,19 @@
-## Possible Deposit Variables ##
-# resources, resource and amount
-# potential trigger (planet scope)
-# planet_modifier - applied to planet only when deposit blocker has been cleared
-# constant_modifier - applied to planet always
-# blocker = <key/any/none> - default any
-# station = station class in orbit to gather
-
-# Flusion Deposits (game start)
-d_grand_kronk_quarry = {
-	is_for_colonizable = yes
-	icon = d_ore_rich_caverns
-	
-	planet_modifier = { 
-		district_mining_max = 4
-	}
-
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_katown = {
+d_pki_katown = {
 	is_for_colonizable = yes
 	icon = d_city
-	
-	planet_modifier = { 
-		planet_max_districts_add = 1
+
+	planet_modifier = {
+		planet_stability_add = 5
+		planet_max_districts_add = 3
 		planet_housing_add = 5
-		pki_industry_building_slots = 126
 	}
-	
+
+	resources = {
+		produces = {
+			unity = 30
+		}
+	}
+
 	drop_weight = {
 		weight = 0
 	}
@@ -60,462 +44,135 @@ d_katown_palace ={
 	}
 }
 
-d_katown_palace_primitive ={
-	is_for_colonizable = yes
-	icon = d_central_spire
-
-	planet_modifier = {
-		planet_stability_add = 5
-	}
-	resources = {
-		category = planet_deposits
-		produces = {
-			unity = 35
-		}
-	}
-
-	drop_weight = {
-		weight = 0
-	}
-}
-
 d_pki_ATA = {
 	is_for_colonizable = yes
 	icon = d_teeming_reef
+	category = deposit_cat_giga_mechanics
+
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+
+	planet_modifier = {
+		district_farming_max = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				pki_is_katzenartig_imperium = yes
+			}
+		}
+		pki_industry_building_slots = 4
+	}
+}
+
+d_pki_AXO = {
+	is_for_colonizable = yes
+	icon = d_crystal_reef
+	category = deposit_cat_giga_mechanics
+
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+
+	planet_modifier = {
+		building_crystal_mines_max = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				pki_is_katzenartig_imperium = yes
+			}
+		}
+		pki_industry_building_slots = 1
+	}
+}
+
+d_pki_BYU = {
+	is_for_colonizable = yes
+	icon = d_ore_rich_caverns
+	category = deposit_cat_giga_mechanics
+
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+
+	planet_modifier = {
+		district_mining_max = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				pki_is_katzenartig_imperium = yes
+			}
+		}
+		pki_industry_building_slots = 3
+	}
+}
+
+d_pki_CYA = {
+	is_for_colonizable = yes
+	icon = d_natural_farmland
+	category = deposit_cat_giga_mechanics
+
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+
+	planet_modifier = {
+		district_farming_max = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				pki_is_katzenartig_imperium = yes
+			}
+		}
+		pki_industry_building_slots = 3
+	}
+}
+
+d_pki_DTC = {
+	is_for_colonizable = yes
+	icon = d_searing_desert
+	category = deposit_cat_giga_mechanics
+
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+
+	planet_modifier = {
+		district_mining_max = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				pki_is_katzenartig_imperium = yes
+			}
+		}
+		pki_industry_building_slots = 9
+	}
+}
+
+d_pki_KAT = {
+	is_for_colonizable = yes
+	icon = d_buzzing_plains
+	category = deposit_cat_giga_mechanics
+
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+
 	planet_modifier = {
 		district_farming_max = 2
-		pki_industry_building_slots = 24
-	}
-
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_ezic_farmland = {
-	is_for_colonizable = yes
-	icon = d_green_hills
-	
-	planet_modifier = { 
-		district_farming_max = 3
-	}
-
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_mercurian_plains = {
-	is_for_colonizable = yes
-	icon = d_fertile_lands
-	
-	planet_modifier = { 
-		district_farming_max = 3
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_yinjite_sea_mines = {
-	is_for_colonizable = yes
-	icon = d_submerged_ore_veins
-	
-	planet_modifier = { 
-		district_mining_max = 2
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_laurandar_shores = {
-	is_for_colonizable = yes
-	icon = d_tropical_island
-	
-	planet_modifier = { 
-		planet_amenities_add = 10
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_propanian_mines = {
-	is_for_colonizable = yes
-	icon = d_gaseous_eruption
-	
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_gas_extractor_add = 2
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			owner = {
-				is_gestalt = yes
+				pki_is_katzenartig_imperium = yes
 			}
 		}
-		job_gas_extraction_drone_add = 2
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_magnetic_puffy = {
-	is_for_colonizable = yes
-	icon = d_rich_mountain
-	
-	planet_modifier = { 
-		district_mining_max = 2
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_cookian_steppes_mining = {
-	is_for_colonizable = yes
-	icon = d_building_complex
-	
-	planet_modifier = { 
-		district_mining_max = 2
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-#Flusion blockers
-d_altarian_jungle = {
-	icon = d_dense_jungle
-	time = 360
-	
-	is_for_colonizable = yes
-	category = deposit_cat_blockers	
-	
-	potential = { always = no }
-	
-	use_weights_for_blocker_swap_types = no
-
-	blocker_swap_types = {
-		d_altarian_island
-	}
-	
-	resources = {
-		category = deposit_blockers
-		cost = {
-			energy = 2500
-		}
-	}
-}
-
-d_altarian_island = {
-	is_for_colonizable = yes
-	icon = d_betharian_deposit
-	
-	planet_modifier = { 
-		planet_max_districts_add = 1
-		building_betharian_power_plant_max = 1
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_manglarian_junkyard = {
-	icon = d_city_ruins
-	time = 360
-	
-	is_for_colonizable = yes
-	category = deposit_cat_blockers	
-	
-	potential = { always = no }
-	
-	use_weights_for_blocker_swap_types = no
-
-	blocker_swap_types = {
-		d_restored_solak
-	}
-	
-	resources = {
-		category = deposit_blockers
-		cost = {
-			energy = 2000
-			minerals = 500
-		}
-	}
-}
-
-d_restored_solak = {
-	is_for_colonizable = yes
-	icon = d_city
-	
-	planet_modifier = { 
-		planet_max_districts_add = 1
-		planet_amenities_add = 10
-		planet_housing_add = 10
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_catspian_sea = {
-	icon = d_toxic_kelp
-	time = 420
-	
-	is_for_colonizable = yes
-	category = deposit_cat_blockers	
-	
-	potential = { always = no }
-
-	can_be_cleared = {
-		custom_tooltip = {
-			fail_text = has_katlantropa_dam
-			planet = {
-				has_planet_flag = katlantropa
-			}
-		}
-	}
-	
-	use_weights_for_blocker_swap_types = no
-
-	blocker_swap_types = {
-		d_catspian_crystal_mines
-	}
-	
-	resources = {
-		category = deposit_blockers
-		cost = {
-			energy = 3500
-			minerals = 3000
-		}
-	}
-}
-
-d_catspian_crystal_mines = {
-	is_for_colonizable = yes
-	icon = d_crystal_forest
-	
-	planet_modifier = { 
-		planet_max_districts_add = 1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_crystal_miner_add = 2
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_crystal_mining_drone_add = 2
-	}
-
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_northern_ice_cap = {
-	icon = d_massive_glacier
-	time = 360
-	
-	is_for_colonizable = yes
-	category = deposit_cat_blockers	
-	
-	potential = { always = no }
-	
-	use_weights_for_blocker_swap_types = no
-
-	blocker_swap_types = {
-		d_polar_mineral_fields
-	}
-	
-	resources = {
-		category = deposit_blockers
-		cost = {
-			energy = 3500
-			minerals = 1500
-		}
-	}
-}
-
-d_polar_mineral_fields = {
-	is_for_colonizable = yes
-	icon = d_mineral_fields
-	
-	planet_modifier = { 
-		planet_max_districts_add = 1
-		district_mining_max = 3
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_southern_ice_cap = {
-	icon = d_massive_glacier
-	time = 360
-	
-	is_for_colonizable = yes
-	category = deposit_cat_blockers	
-	
-	potential = { always = no }
-	
-	use_weights_for_blocker_swap_types = no
-
-	blocker_swap_types = {
-		d_antarctic_uranium_fields
-	}
-	
-	resources = {
-		category = deposit_blockers
-		cost = {
-			energy = 3500
-			minerals = 1500
-		}
-	}
-}
-
-d_antarctic_uranium_fields = {
-	is_for_colonizable = yes
-	icon = d_buried_lithoids
-	
-	planet_modifier = { 
-		planet_max_districts_add = 1
-		district_generator_max = 3
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_katzen_mountain_range = {
-	icon = d_mountain_range
-	time = 420
-	
-	is_for_colonizable = yes
-	category = deposit_cat_blockers	
-	
-	potential = { always = no }
-	
-	use_weights_for_blocker_swap_types = no
-
-	blocker_swap_types = {
-		d_katzen_mote_field
-	}
-	
-	resources = {
-		category = deposit_blockers
-		cost = {
-			energy = 4000
-		}
-	}
-}
-
-d_katzen_mote_field = {
-	is_for_colonizable = yes
-	icon = d_dust_desert
-	
-	planet_modifier = { 
-		planet_max_districts_add = 1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			is_gestalt = no
-		}
-		job_mote_harvester_add = 2
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			is_gestalt = yes
-		}
-		job_mote_harvesting_drone_add = 2
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-
-
-d_meowriana_trench = {
-	icon = d_underwater_vent
-	time = 420
-	
-	is_for_colonizable = yes
-	category = deposit_cat_blockers	
-	
-	potential = { always = no }
-	
-	use_weights_for_blocker_swap_types = no
-
-	blocker_swap_types = {
-		d_flusion_sea_temple
-	}
-	
-	resources = {
-		category = deposit_blockers
-		cost = {
-			energy = 7500
-		}
-	}
-}
-
-d_flusion_sea_temple = {
-	is_for_colonizable = yes
-	icon = d_ancient_vault
-	
-	planet_modifier = { 
-		planet_max_districts_add = 1
-		planet_researchers_produces_mult = 0.2
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_solakian_factory = {
-	is_for_colonizable = yes
-	icon = d_building
-
-	resources = {
-		category = planet_deposits
-		produces = {
-			consumer_goods = 10
-		}
-	}
-	
-	drop_weight = {
-		weight = 0
+		pki_industry_building_slots = 15
 	}
 }
 

@@ -136,7 +136,7 @@ situation_naitonal_focus = {
                     set_situation_approach = approach_focus_fast
                 }
                 owner = {
-                    country_event = { id = kaiser_bureau.2 }
+                    country_event = { id = pki_menu.2 }
                     pki_clear_gui_flags = yes
                     set_country_flag = pki_focus_tree_tab
                 }

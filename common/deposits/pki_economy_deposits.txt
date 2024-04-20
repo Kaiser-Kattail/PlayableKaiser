@@ -1,7 +1,7 @@
 d_pki_economic_mechanics = {
     is_for_colonizable = yes
-    icon = unused/d_strategic_resources
-    category = deposit_cat_energy
+    icon = d_industrial_district
+    category = deposit_cat_giga_mechanics
 
     drop_weight = { weight = 0 }
     potential = { always = no }
@@ -17,22 +17,28 @@ d_pki_economic_mechanics = {
     triggered_planet_modifier = {
         potential = {
             exists = owner
-            owner = {
-                is_regular_empire = yes
-            }
         }
-        multiplier = owner.value:pki_job_industry
-        job_pki_war_worker_add = 1
+        multiplier = owner.value:pki_job_industry_factories
+        planet_jobs_produces_mult = 0.01
     }
+}
+
+d_pki_flusion_nations = {
+    icon = unused/d_galactic_senate
+    is_for_colonizable = yes
+    category = deposit_cat_blockers
+
+    drop_weight = { weight = 0 }
+    potential = { always = no }
 
     triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_gestalt = yes
-            }
-        }
-        multiplier = owner.value:pki_job_industry
-        job_pki_war_worker_drone_add = 1
+        planet_max_districts_add = -16
+        planet_max_buildings_add = -12
+        multiplier = owner.value:pki_world_domination_opposite
     }
+
+    custom_tooltip = pki_flusion_nation_deposit_scaling
+    custom_tooltip_short = pki_flusion_nation_deposit_scaling
+
+    can_be_cleared = { always = no }
 }

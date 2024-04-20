@@ -31,7 +31,7 @@ decision_flusion_strike_cheap = {
 				current_situation_approach = approach_mobile
 			}
 		}
-		has_planet_flag = playerflusion
+		has_planet_flag = pki_flusion_planet
 	}
 	allow = {
 		custom_tooltip = {
@@ -115,7 +115,7 @@ decision_flusion_strike_mixed = {
 				current_situation_approach = approach_mixed
 			}
 		}
-		has_planet_flag = playerflusion
+		has_planet_flag = pki_flusion_planet
 	}
 	allow = {
 		custom_tooltip = {
@@ -200,7 +200,7 @@ decision_flusion_strike_attrition = {
 				current_situation_approach = approach_attrition
 			}
 		}
-		has_planet_flag = playerflusion
+		has_planet_flag = pki_flusion_planet
 	}
 	allow = {
 		custom_tooltip = {

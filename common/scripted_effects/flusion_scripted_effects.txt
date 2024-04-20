@@ -250,125 +250,9 @@ pki_create_flusion_nations = {
 	}
 }
 
-flusion_conversion_effect_step_1 = {
-	#City districts
-	export_trigger_value_to_variable = {
-		trigger = num_districts
-		parameters = {
-			type = district_city
-		}
-		variable = city_count
-	}
-	export_trigger_value_to_variable = {
-		trigger = num_districts
-		parameters = {
-			type = district_hive
-		}
-		variable = hive_count
-	}
-	export_trigger_value_to_variable = {
-		trigger = num_districts
-		parameters = {
-			type = district_nexus
-		}
-		variable = nexus_count
-	}
-
-	#Industrial
-	export_trigger_value_to_variable = {
-		trigger = num_districts
-		parameters = {
-			type = district_industrial
-		}
-		variable = industrial_count
-	}
-
-	#Mining
-	export_trigger_value_to_variable = {
-		trigger = num_districts
-		parameters = {
-			type = district_mining
-		}
-		variable = mining_count
-	}
-	export_trigger_value_to_variable = {
-		trigger = num_districts
-		parameters = {
-			type = district_mining_uncapped
-		}
-		variable = mining_u_count
-	}
-
-	#Farming
-	export_trigger_value_to_variable = {
-		trigger = num_districts
-		parameters = {
-			type = district_farming
-		}
-		variable = farm_count
-	}
-	export_trigger_value_to_variable = {
-		trigger = num_districts
-		parameters = {
-			type = district_farming_uncapped
-		}
-		variable = farm_u_count
-	}
-}
-
-flusion_conversion_effect_step_2 = {
-	#City
-	while = {
-		count = city_count
-		add_district = district_flusion_city
-	}
-	clear_variable = city_count
-	while = {
-		count = hive_count
-		add_district = district_flusion_city
-	}
-	clear_variable = hive_count
-	while = {
-		count = nexus_count
-		add_district = district_flusion_city
-	}
-	clear_variable = nexus_count
-
-	#Industry
-	while = {
-		count = industrial_count
-		add_district = district_flusion_heavy_industry
-	}
-	clear_variable = industrial_count
-
-	#Mine
-	while = {
-		count = mining_count
-		add_district = district_flusion_mining
-	}
-	clear_variable = mining_count
-	while = {
-		count = mining_u_count
-		add_district = district_flusion_mining
-	}
-	clear_variable = mining_u_count
-
-	#Farm
-	while = {
-		count = farm_count
-		add_district = district_flusion_farming
-	}
-	clear_variable = farm_count
-	while = {
-		count = farm_u_count
-		add_district = district_flusion_farming
-	}
-	clear_variable = farm_u_count
-}
-
 player_flusion_unify_flusion = {
 	event_target:pki_flusion_planet = {
-		remove_deposit = d_flunat
+		remove_deposit = d_pki_flusion_nations
 		every_planet_army = {
 			limit = {
 				owner = {
@@ -680,7 +564,7 @@ player_flusion_unify_flusion = {
 			limit = { event_target:pki_flusion_planet = { NOT = { has_deposit = d_solakian_factory } } }
 			add_deposit = d_solakian_factory
 		}
-		remove_deposit = d_flunat
+		remove_deposit = d_pki_flusion_nations
 	}
 	every_country = {
 		limit = {
@@ -709,279 +593,6 @@ player_flusion_unify_flusion = {
 			is_situation_type = situation_world_tension
 		}
 		destroy_situation = this
-	}
-}
-
-player_flusion_annexed_solak = {
-	add_deposit = d_annexed_region_solak
-	random_owned_pop = {
-		kill_pop = yes
-	}
-}
-
-player_flusion_liberated_solak = {
-	while = {
-		count = 10
-		remove_deposit = d_annexed_region_solak
-	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
-	}
-}
-
-player_flusion_annexed_cookie = {
-	add_deposit = d_annexed_region_cookie
-	random_owned_pop = {
-		kill_pop = yes
-	}
-}
-
-player_flusion_liberated_cookie = {
-	while = {
-		count = 10
-		remove_deposit = d_annexed_region_cookie
-	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
-	}
-}
-
-player_flusion_annexed_kronk = {
-	add_deposit = d_annexed_region_kronk
-	random_owned_pop = {
-		kill_pop = yes
-	}
-}
-
-player_flusion_liberated_kronk = {
-	while = {
-		count = 10
-		remove_deposit = d_annexed_region_kronk
-	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
-	}
-}
-
-player_flusion_annexed_ravka = {
-	add_deposit = d_annexed_region_ravka
-	random_owned_pop = {
-		kill_pop = yes
-	}
-}
-
-player_flusion_liberated_ravka = {
-	while = {
-		count = 10
-		remove_deposit = d_annexed_region_ravka
-	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
-	}
-}
-
-player_flusion_annexed_zousa = {
-	add_deposit = d_annexed_region_zousa
-	random_owned_pop = {
-		kill_pop = yes
-	}
-}
-
-player_flusion_liberated_zousa = {
-	while = {
-		count = 10
-		remove_deposit = d_annexed_region_zousa
-	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
-	}
-}
-
-player_flusion_annexed_droog = {
-	add_deposit = d_annexed_region_droog
-	random_owned_pop = {
-		kill_pop = yes
-	}
-}
-
-player_flusion_liberated_droog = {
-	while = {
-		count = 10
-		remove_deposit = d_annexed_region_droog
-	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
-	}
-}
-
-player_flusion_annexed_ezic = {
-	add_deposit = d_annexed_region_ezic
-	random_owned_pop = {
-		kill_pop = yes
-	}
-}
-
-player_flusion_liberated_ezic = {
-	while = {
-		count = 10
-		remove_deposit = d_annexed_region_ezic
-	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
-	}
-}
-
-player_flusion_annexed_mercuria = {
-	add_deposit = d_annexed_region_mercuria
-	random_owned_pop = {
-		kill_pop = yes
-	}
-}
-
-player_flusion_liberated_mercuria = {
-	while = {
-		count = 10
-		remove_deposit = d_annexed_region_mercuria
-	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
-	}
-}
-
-player_flusion_annexed_cyatianala = {
-	add_deposit = d_annexed_region_cyatianala
-	random_owned_pop = {
-		kill_pop = yes
-	}
-}
-
-player_flusion_liberated_cyatianala = {
-	while = {
-		count = 10
-		remove_deposit = d_annexed_region_cyatianala
-	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
-	}
-}
-
-player_flusion_annexed_yinja = {
-	add_deposit = d_annexed_region_yinja
-	random_owned_pop = {
-		kill_pop = yes
-	}
-}
-
-player_flusion_liberated_yinja = {
-	while = {
-		count = 10
-		remove_deposit = d_annexed_region_yinja
-	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
-	}
-}
-
-player_flusion_annexed_symbie = {
-	add_deposit = d_annexed_region_symbie
-	random_owned_pop = {
-		kill_pop = yes
-	}
-}
-
-player_flusion_liberated_symbie = {
-	while = {
-		count = 10
-		remove_deposit = d_annexed_region_symbie
-	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
-	}
-}
-
-player_flusion_annexed_lauranaise = {
-	add_deposit = d_annexed_region_lauranaise
-	random_owned_pop = {
-		kill_pop = yes
-	}
-}
-
-player_flusion_liberated_lauranaise = {
-	while = {
-		count = 10
-		remove_deposit = d_annexed_region_lauranaise
-	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
-	}
-}
-
-player_flusion_annexed_haranian = {
-	add_deposit = d_annexed_region_haranian
-	random_owned_pop = {
-		kill_pop = yes
-	}
-}
-
-player_flusion_liberated_haranian = {
-	while = {
-		count = 10
-		remove_deposit = d_annexed_region_haranian
-	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
 	}
 }
 
@@ -1197,6 +808,15 @@ create_meowrines = {
 pki_increase_used_factories = {
 	if = {
 		limit = {
+			has_country_flag = pki_used_all_building_slots
+		}
+		set_variable = {
+			which = pki_used_industry
+			value = 0
+		}
+	}
+	else_if = {
+		limit = {
 			check_variable = {
 				which = pki_map_industry_select_mult
 				value >= value:pki_job_industry_factories
@@ -1235,6 +855,16 @@ pki_decrease_used_factories = {
 		subtract_variable = {
 			which = pki_used_industry
 			value = pki_map_industry_select_mult
+		}
+	}
+
+	if = {
+		limit = {
+			has_country_flag = pki_used_all_building_slots
+		}
+		set_variable = {
+			which = pki_used_industry
+			value = 0
 		}
 	}
 }

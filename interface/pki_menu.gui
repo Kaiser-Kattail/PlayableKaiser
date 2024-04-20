@@ -1,6 +1,7 @@
+#noinspection ParadoxScriptUnresolvedExpression,ParadoxScriptMissingExpression
+
 # Dont fuck with things even if they give errors, your IDE is not as smart as me
 # Button effects arent predicted with inline scripts idgaf
-
 
 guiTypes = {
 
@@ -10,29 +11,36 @@ guiTypes = {
 	@map_scale = 0.9
 
 	@tile_x_100 = 0
-	@tile_x_150 = 90
-	@tile_x_200 = 180
-	@tile_x_250 = 270
-	@tile_x_300 = 360
-	@tile_x_350 = 450
-	@tile_x_400 = 540
-	@tile_x_450 = 630
-	@tile_x_500 = 720
-	@tile_x_550 = 810
-	@tile_x_600 = 900
-	@tile_x_650 = 990
-	@tile_x_700 = 1080
-	@tile_x_750 = 1170
-	@tile_x_800 = 1260
+	@tile_x_150 = 96
+	@tile_x_200 = 192
+	@tile_x_250 = 288
+	@tile_x_300 = 384
+	@tile_x_350 = 480
+	@tile_x_400 = 576
+	@tile_x_450 = 672
+	@tile_x_500 = 768
+	@tile_x_550 = 864
+	@tile_x_600 = 960
+	@tile_x_650 = 1056
+	@tile_x_700 = 1152
+	@tile_x_750 = 1248
+	@tile_x_800 = 1344
+	@tile_x_850 = 1440
+	@tile_x_900 = 1536
 
-	@tile_y_100 = 0
-	@tile_y_200 = 140
-	@tile_y_300 = 280
-	@tile_y_400 = 420
-	@tile_y_500 = 560
-	@tile_y_600 = 700
-	@tile_y_700 = 840
-	@tile_y_800 = 980
+	@tile_y_1 = 0
+	@tile_y_2 = 130
+	@tile_y_3 = 260
+	@tile_y_4 = 390
+	@tile_y_5 = 520
+	@tile_y_6 = 650
+	@tile_y_7 = 780
+	@tile_y_8 = 910
+	@tile_y_9 = 1040
+	@tile_y_10 = 1170
+	@tile_y_11 = 1300
+	@tile_y_12 = 1430
+	@tile_y_13 = 1560
 
 	containerWindowType = {
 		name = "pki_menu"
@@ -293,7 +301,7 @@ guiTypes = {
 
 			gridBoxType = {
 				name = box
-				size = { width = 1 height = 1220 }
+				size = { width = 1 height = 1600 }
 				alwaysTransparent = yes
 			}
 
@@ -328,39 +336,86 @@ guiTypes = {
 
 			containerWindowType = {
 				name = focus_tree
-				position = { x = 0 y = 20}
+				position = { x = 0  y = 0 }
 
 				containerWindowType = {
 					name = focus_lines
-					position = { x = 5 y = 22 }
+					position = { x = 0 y = 0 }
 
+					effectButtonType = {
+						name = kaiser_arrival_down_blue
+						position = { x = @tile_x_450 y = @tile_y_1 }
+
+						quadTextureSprite = "GFX_pki_focus_line_d_s_b"
+
+						effect = pki_focus_kaiser_arrival_line
+					}
+
+					effectButtonType = {
+						name = kaiser_arrival_down_green
+						position = { x = @tile_x_450 y = @tile_y_1 }
+
+						quadTextureSprite = "GFX_pki_focus_line_d_s_g"
+
+						effect = pki_focus_kaiser_arrival_line_completed
+					}
+
+					containerWindowType = {
+						name = right
+
+						effectButtonType = {
+							name = kaiser_arrival_right_blue
+							position = { x = @tile_x_450 y = @tile_y_1 }
+
+							quadTextureSprite = "GFX_pki_focus_line_h_s_b"
+
+							effect = pki_focus_kaiser_arrival_line
+						}
+
+						effectButtonType = {
+							name = kaiser_arrival_right_green
+							position = { x = @tile_x_450 y = @tile_y_1 }
+
+							quadTextureSprite = "GFX_pki_focus_line_h_s_g"
+
+							effect = pki_focus_kaiser_arrival_line_completed
+						}
+
+						effectButtonType = {
+							name = kaiser_arrival_up_blue
+							position = { x = @tile_x_500 y = @tile_y_2 }
+
+							quadTextureSprite = "GFX_pki_focus_line_u_s_b"
+
+							effect = pki_focus_kaiser_arrival_line
+						}
+
+						effectButtonType = {
+							name = kaiser_arrival_up_green
+							position = { x = @tile_x_500 y = @tile_y_2 }
+
+							quadTextureSprite = "GFX_pki_focus_line_u_s_g"
+
+							effect = pki_focus_kaiser_arrival_line_completed
+						}
+					}
 				}
 
 				### ADD FOCUSES HERE
 
 				containerWindowType = {
 					name = focus_kaiser_arrival
-					position = { x = @tile_x_500 y = @tile_y_100 }
+					position = { x = @tile_x_450 y = @tile_y_1 }
 
 					containerWindowType = {
 						name = focus
-						orientation = upper_left
-						origo = upper_left
-
-						effectButtonType = {
-							name = focus_background
-							size = { x = 170 y = 130 }
-							position = { x = +0 y = +12 }
-							orientation = center
-							quadTextureSprite = "GFX_glow_tile_cyan"
-							effect = pki_focus_kaiser_arrival_effect
-						}
+						orientation = CENTER
 
 						effectButtonType = {
 							name = focus_label
-							position = { x = +5 y = +84 }
-							size = { x = 160 y = 50 }
-							alwaysTransparent = yes
+							position = { x = +0 y = +70 }
+							size = { x = 170 y = 50 }
+							orientation = CENTER
 							quadTextureSprite = "GFX_glow_tile_cyan"
 							effect = pki_focus_kaiser_arrival_effect
 						}
@@ -368,22 +423,12 @@ guiTypes = {
 
 					containerWindowType = {
 						name = focus_in_progress
-						orientation = upper_left
-						origo = upper_left
+						orientation = CENTER
 
 						effectButtonType = {
-							name = focus_background
-							size = { x = 170 y = 130 }
-							position = { x = +0 y = +12 }
-							orientation = center
-							quadTextureSprite = "GFX_glow_tile_striped"
-							effect = pki_focus_kaiser_arrival_in_progress_effect
-						}
-						effectButtonType = {
 							name = focus_label
-							position = { x = +5 y = +84 }
-							size = { x = 160 y = 50 }
-							alwaysTransparent = yes
+							position = { x = +0 y = +70 }
+							size = { x = 170 y = 50 }
 							quadTextureSprite = "GFX_glow_tile_striped"
 							effect = pki_focus_kaiser_arrival_in_progress_effect
 						}
@@ -391,22 +436,12 @@ guiTypes = {
 
 					containerWindowType = {
 						name = focus_completed
-						orientation = upper_left
-						origo = upper_left
+						orientation = CENTER
 
 						effectButtonType = {
-							name = focus_background
-							size = { x = 170 y = 130 }
-							position = { x = +0 y = +12 }
-							orientation = center
-							quadTextureSprite = "GFX_glow_tile_orange"
-							effect = pki_focus_kaiser_arrival_completed_effect
-						}
-						effectButtonType = {
 							name = focus_label
-							position = { x = +5 y = +84 }
-							size = { x = 160 y = 50 }
-							alwaysTransparent = yes
+							position = { x = +0 y = +70 }
+							size = { x = 170 y = 50 }
 							quadTextureSprite = "GFX_glow_tile_orange"
 							effect = pki_focus_kaiser_arrival_completed_effect
 						}
@@ -414,23 +449,24 @@ guiTypes = {
 
 					effectButtonType = {
 						name = focus_icon
-						position = { x = +0 y = -6 }
-						orientation = center
-						alwaysTransparent = yes
+						position = { x = +0 y = 0 }
+						orientation = CENTER
+						alwaysTransparent = no
 						quadTextureSprite = "GFX_pki_focus_kaiser_arrival"
-						effect = pki_focus_tree_no_effect
+						effect = pki_focus_kaiser_arrival_icon
 					}
 
 					effectButtonType = {
 						name = focus_label
-						position = { x = +5 y = +84 }
-						size = { x = 160 y = 50 }
+						position = { x = +0 y = +70 }
+						size = { x = 170 y = 50 }
+						orientation = CENTER
 						font = cg_16b
 						multiline = yes
 						alwaysTransparent = yes
 						text = "pki_focus_kaiser_arrival_label"
 						quadTextureSprite = "GFX_invisible"
-						effect = pki_focus_tree_no_effect
+						effect = pki_focus_kaiser_arrival_icon
 					}
 				}
 
@@ -450,6 +486,21 @@ guiTypes = {
 			name = map
 
 			position = { x = +2 y = +7 }
+
+			containerWindowType = {
+				name = country_flags
+
+				effectButtonType = {
+					name = ATA_flag
+					position = { x = +17 y = +728 }
+					size = { x = 640 y = 616 }
+					orientation = upper_left
+					alwaysTransparent = yes
+					quadTextureSprite = "GFX_pki_map_ATA_flag"
+
+					effect = pki_map_ATA_selected_effect
+				}
+			}
 
 			effectButtonType = {
 				name = country_flag
@@ -513,20 +564,59 @@ guiTypes = {
 
 					effect = pki_map_country_contact
 				}
+
+				containerWindowType = {
+					name = military_counters
+
+					effectButtonType = {
+						name = bg
+						size = { x = 328 y = 115 }
+						position = { x = 340 y = 0 }
+						quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+
+						effect = pki_map_no_effect
+					}
+
+					effectButtonType = {
+						name = army_bg
+						size = { x = 60 y = 30 }
+						position = { x = 356 y = 14 }
+						quadTextureSprite = "GFX_tiles_frame_extra_light"
+
+						effect = pki_map_no_effect
+					}
+				}
 			}
 
 			containerWindowType = {
 				name = economy
 
-				position = { x = +0 y = -12 }
+				position = { x = +270 y = 20 }
 
 				effectButtonType = {
 					name = economy_bg
-					position = { x = +880 y = +724 }
-					size = { x = 410 y = 173 }
+					position = { x = +880 y = +704 }
+					size = { x = 140 y = 142 }
 					orientation = upper_left
 					alwaysTransparent = yes
 					quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+
+					effect = pki_map_no_effect
+				}
+
+				effectButtonType = {
+					name = eco_title
+					position = { x = +896 y = +715 }
+					size = { x = 130 y = 10 }
+					orientation = upper_left
+					alwaysTransparent = no
+					multiline = yes
+					format = left
+					vertical_alignment = top
+					text = "pki_economy_title"
+					font = cg_16b
+					quadTextureSprite = "GFX_invisible"
+					clicksound = no_sound
 
 					effect = pki_map_no_effect
 				}
@@ -565,7 +655,7 @@ guiTypes = {
 				containerWindowType = {
 					name = counter
 
-					position = { x = 1 y = 10 }
+					position = { x = 1 y = -25 }
 
 					effectButtonType = {
 						name = counter_bg
@@ -617,7 +707,7 @@ guiTypes = {
 				containerWindowType = {
 					name = multipliers
 
-					position = { x = -8 y = -8 }
+					position = { x = -8 y = 17 }
 
 					effectButtonType = {
 						name = x1
@@ -2415,7 +2505,7 @@ guiTypes = {
 			background = {
 				name = background
 				alwaysTransparent = yes
-				quadTextureSprite = "GFX_dark_area_cut"
+				quadTextureSprite = "GFX_tiles_dark_area_cut_8"
 			}
 		}
 

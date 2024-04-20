@@ -130,10 +130,6 @@ pki_setup_flusion_economy = {
     event_target:pki_flusion_planet = {
         add_deposit = d_pki_economic_mechanics
     }
-    set_variable = {
-        which = pki_building_slots
-        value = @pki_KAT_building_slots
-    }
 
     set_variable = {
         which = pki_industry_level
@@ -192,7 +188,7 @@ pki_yearly_migration = {
     every_owned_planet = {
         limit = {
             NOR = {
-                has_planet_flag = playerflusion
+                has_planet_flag = pki_flusion_planet
                 has_modifier = no_relocation
             }
             count_owned_pop = {
@@ -206,13 +202,13 @@ pki_yearly_migration = {
                 $LOW_BOUND$ = {
                     resettle_pop = {
                         pop = THIS
-                        planet = event_target:playerflusion
+                        planet = event_target:pki_flusion_planet
                     }
                 }
             }
         }
     }
-    event_target:playerflusion = {
+    event_target:pki_flusion_planet = {
         add_modifier = {
             modifier = temp_job_help
             days = 1

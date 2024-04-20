@@ -1,9 +1,9 @@
-namespace = kaiser_bureau
+namespace = pki_menu
 
 country_event = {
-	id = kaiser_bureau.0
-	title = "kaiser_bureau.0.name"
-	desc = "kaiser_bureau.0.desc"
+	id = pki_menu.0
+	title = "pki_menu.0.name"
+	desc = "pki_menu.0.desc"
 
 	is_triggered_only = yes
 	
@@ -21,20 +21,20 @@ country_event = {
 		event_target:world_tension_sit = {
 			set_situation_approach = approach_ignore
 		}
-		set_country_flag = kaiser_bureau_formed
+		set_country_flag = pki_menu_formed
 	}
 	option = {
-		name = "kaiser_bureau.0.a"
+		name = "pki_menu.0.a"
 		hidden_effect = {
-			country_event = { id = kaiser_bureau.1 }
+			country_event = { id = pki_menu.1 }
 		}
 	}
 }
 
 country_event = {
-	id = kaiser_bureau.1
-	title = "kaiser_bureau.1.name"
-	desc = "kaiser_bureau.1.desc"
+	id = pki_menu.1
+	title = "pki_menu.1.name"
+	desc = "pki_menu.1.desc"
 
 	is_triggered_only = yes
 
@@ -46,23 +46,23 @@ country_event = {
 	}
 
 	immediate = {
-		set_country_flag = kaiser_bureau_opened
+		set_country_flag = pki_menu_opened
 	}
 
 	option = {
 		default_hide_option = yes
-		name = "kaiser_bureau.1.a"
-		custom_tooltip = "kaiser_bureau.1.a.tooltip"
+		name = "pki_menu.1.a"
+		custom_tooltip = "pki_menu.1.a.tooltip"
 		hidden_effect = {
 			pki_clear_gui_flags = yes
-			country_event = { id = kaiser_bureau.2 }
+			country_event = { id = pki_menu.2 }
 		}
 	}
 }
 
 country_event = {
-	id = kaiser_bureau.2
-	title = "kaiser_bureau.2.name"
+	id = pki_menu.2
+	title = "pki_menu.2.name"
 
 	diplomatic = yes
 	custom_gui = "pki_menu"
@@ -90,8 +90,8 @@ country_event = {
 }
 
 country_event = {
-	id = kaiser_bureau.3
-	title = "kaiser_bureau.3.name"
+	id = pki_menu.3
+	title = "pki_menu.3.name"
 
 	diplomatic = yes
 	custom_gui = "focus_confirm_screen"

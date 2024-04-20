@@ -31,10 +31,10 @@ pki_focus_kaiser_arrival_effects = {
             set_age = 189
             randomize_traits = no
             traits = {
-                trait = leader_trait_ruler_kaiser_cattail
+                trait = pki_leader_trait_kaiser_kattail
+                trait = leader_trait_legendary_military_knowledge
+                trait = leader_trait_legendary_foe_hammer
                 trait = trait_ruler_charismatic_2
-                trait = trait_ruler_military_pioneer
-                trait = leader_trait_intimidator
                 trait = subclass_commander_councilor
             }
             gender = male

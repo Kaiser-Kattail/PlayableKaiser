@@ -56,10 +56,10 @@
  pki_katzen_trait_elite_desc: "This leader is an extremely important figure within Flusionian society, and their skills are far beyond average. They are given the latest in anti-aging technology and cybernetics in order to keep them alive." #NT!
  pki_katzen_trait_elite_effect: "$t$Does not use Leader Capacity." #NT!
   
- leader_trait_ruler_kaiser_cattail: "The Kaiser" #NT!
- leader_trait_ruler_kaiser_cattail_desc: "Kaiser Kattail is a nigh-immortal entity of high charisma yet pronounced goofyness and megalomania." #NT!
- katzen_trait_martial_free: "Martial Discipline" #NT!
- katzen_trait_martial_free_desc: "This species is incredibly disciplined, thanks to long-standing martial traditions. They will fight like no other on the battlefield and vow absolute loyalty to their nation, defending it to the very end." #NT!
+ pki_leader_trait_kaiser_kattail: "The Kaiser" #NT!
+ pki_leader_trait_kaiser_kattail_desc: "Kaiser Kattail is a nigh-immortal entity of high charisma yet pronounced goofyness and megalomania." #NT!
+ trait_pki_martial_free: "Martial Discipline" #NT!
+ trait_pki_martial_free_desc: "This species is incredibly disciplined, thanks to long-standing martial traditions. They will fight like no other on the battlefield and vow absolute loyalty to their nation, defending it to the very end." #NT!
   
  trait_ruler_katzen_cruiser_focus: "Katzenkreuzer Production Focus" #NT!
  trait_ruler_katzen_cruiser_focus_desc: "This leader is intent on promoting the construction of Katzenkreuzers." #NT!
@@ -116,8 +116,8 @@
      # Deposits 
  d_grand_kronk_quarry: "Grand Kronk Quarry" #NT!
  d_grand_kronk_quarry_desc: "A massive quarry built and operated by the Kronks, harvesting untold amounts of minerals." #NT!
- d_katown: "Katown Megalopolis" #NT!
- d_katown_desc: "The largest urban area on Flusion, Katown is home to hundreds of millions of inhabitants of all species." #NT!
+ d_pki_katown: "Katown Megalopolis" #NT!
+ d_pki_katown_desc: "The largest urban area on Flusion, Katown is home to hundreds of millions of inhabitants of all species." #NT!
  d_katzen_generator: "Katzen Megareactor" #NT!
  d_katzen_generator_desc: "The Megareactor provides Flusion with clean energy thanks to the power of nuclear fusion." #NT!
  d_ezic_farmland: "Zuspri Pastures" #NT!

@@ -9,7 +9,7 @@ country_event = {
 		pki_is_katzenartig_imperium = yes
 		any_owned_planet = {
 			NOT = {
-				has_planet_flag = playerflusion
+				has_planet_flag = pki_flusion_planet
 			}
 			OR = {
 				check_variable_arithmetic = {
@@ -26,7 +26,7 @@ country_event = {
 			if = {
 				limit = {
 					NOT = {
-						has_planet_flag = playerflusion
+						has_planet_flag = pki_flusion_planet
 					}
 					check_variable_arithmetic = {
 						which = value:flusion_empire_ratio
@@ -145,7 +145,7 @@ country_event = {
 				exists = owner
 				is_colony = yes
 				NOR = {
-					has_planet_flag = playerflusion
+					has_planet_flag = pki_flusion_planet
 				}
 			}
 			if = {
@@ -239,7 +239,7 @@ country_event = {
 						has_modifier = central_instability
 					}
 					NOT = {
-						has_planet_flag = playerflusion
+						has_planet_flag = pki_flusion_planet
 					}
 				}
 				event_target:pki_player = {
@@ -309,7 +309,7 @@ country_event = {
 			every_owned_planet = {
 				limit = {
 					NOR = {
-						has_planet_flag = playerflusion
+						has_planet_flag = pki_flusion_planet
 						has_modifier = no_relocation
 					}
 					count_owned_pop = {

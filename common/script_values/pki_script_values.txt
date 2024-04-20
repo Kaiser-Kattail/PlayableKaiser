@@ -3,6 +3,37 @@ flusion_empire_ratio = {
     divide = owner.capital_scope.trigger:num_pops
 }
 
+pki_flusion_half_threshold = {
+    add = root.capital_scope.trigger:num_pops
+    divide = 2
+    floor = yes
+    subtract = 5
+}
+
+pki_galaxy_systems = {
+    complex_trigger_modifier = {
+        trigger = count_system
+        trigger_scope = system_star
+        parameters = {
+            limit = {
+                giga_is_empty_space = no
+            }
+        }
+        mode = add
+    }
+}
+
+pki_galaxy_owned = {
+    add = trigger:count_system_within_border
+    divide = pki_num_galaxy_systems
+    multiply = 100
+}
+
+pki_set_situation_progress_effect = {
+    add = $NEW_PROGRESS$
+    subtract = trigger:situation_progress
+}
+
 flusion_empire_ratio_five = {
     weight = value:flusion_empire_ratio
     subtract = 0.5
@@ -45,38 +76,26 @@ pki_focus_length = {
 }
 
 pki_world_domination = {
-    add = modifier:pki_industry_building_slots
-    divide = 10
+    add = event_target:pki_flusion_planet.modifier:pki_industry_building_slots
+    divide = 1.5
 }
 
-pki_world_domination_percent = {
-    add = pki_world_domination
+pki_world_domination_opposite = {
+    add = 100
+    subtract = value:pki_world_domination
     divide = 100
 }
 
 pki_total_industry = {
     base = 1
-    add = modifier:pki_industry_factory_efficiency
     mult = pki_industry_level
     floor = yes
-}
-
-pki_flusion_economy_efficiency = {
-    add = modifier:pki_industry_factory_efficiency
 }
 
 pki_job_industry_factories = {
     base = 1
     mult = value:pki_total_industry
     subtract = pki_used_industry
-}
-
-pki_job_industry = {
-    base = 1
-    mult = value:pki_total_industry
-    subtract = pki_used_industry
-    divide = modifier:pki_industry_factories_per_job
-    floor = yes
 }
 
 pki_used_factories_check = {

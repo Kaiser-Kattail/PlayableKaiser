@@ -1,6 +1,6 @@
 ﻿l_braz_por:
- d_flunat: "Flusonian Nations" #NT!
- d_flunat_desc: "There are many other nations on Flusion, ready to be conquered." #NT!
+ d_pki_flusion_nations: "Flusonian Nations" #NT!
+ d_pki_flusion_nations_desc: "There are many other nations on Flusion, ready to be conquered." #NT!
   
   ###DIPLOMACY EVENTS### 
  flunat_get_lore: "Learn about their nation's history and culture." #NT!

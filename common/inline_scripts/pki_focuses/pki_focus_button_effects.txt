@@ -1,17 +1,35 @@
 pki_focus_$FOCUS$_effect = {
-    potential = { event_target:pki_player = { has_country_flag = pki_focus_tree_tab NOT = { has_country_flag = pki_focus_$FOCUS$_completed } } }
-    allow = { event_target:pki_player = { pki_$FOCUS$_focus_requirements = yes } custom_tooltip_fail = { event_target:pki_player = { NOT = { has_country_flag = pki_selected_focus } } text = PKI_ALREADY_SELECTED_FOCUS  } }
-    effect = { custom_tooltip = pki_focus_$FOCUS$_tt hidden_effect = { event_target:pki_player = { country_event = { id = kaiser_bureau.3 } set_country_flag = pki_selected_$FOCUS$ } set_variable = { which = pki_focus_speed value = @pki_$FOCUS$_speed } } }
+    potential = { event_target:pki_player = { has_country_flag = pki_focus_tree_tab pki_focus_$FOCUS$_potential = yes NOR= { has_country_flag = pki_focus_$FOCUS$_completed any_situation = { has_situation_flag = pki_$FOCUS$ } } } }
+    allow = { event_target:pki_player = { pki_$FOCUS$_focus_requirements = yes } custom_tooltip_fail = { event_target:pki_player = { NOT = { has_country_flag = pki_selected_focus } } text = PKI_ALREADY_SELECTED_FOCUS } }
+    effect = { custom_tooltip = pki_focus_$FOCUS$_tt hidden_effect = { event_target:pki_player = { country_event = { id = pki_menu.3 } set_country_flag = pki_selected_$FOCUS$ } set_variable = { which = pki_focus_speed value = @pki_$FOCUS$_speed } } }
 }
 
 pki_focus_$FOCUS$_in_progress_effect = {
-    potential = { event_target:pki_player = { has_country_flag = pki_focus_tree_tab has_country_flag = pki_selected_focus any_situation = { has_situation_flag = pki_$FOCUS$ } } }
+    potential = { event_target:pki_player = { has_country_flag = pki_focus_tree_tab pki_focus_$FOCUS$_potential = yes has_country_flag = pki_selected_focus any_situation = { has_situation_flag = pki_$FOCUS$ } } }
     allow = { always = yes }
     effect = { custom_tooltip = pki_focus_$FOCUS$_tt }
 }
 
 pki_focus_$FOCUS$_completed_effect = {
-    potential = { event_target:pki_player = { has_country_flag = pki_focus_tree_tab has_country_flag = pki_focus_$FOCUS$_completed } }
+    potential = { event_target:pki_player = { has_country_flag = pki_focus_tree_tab pki_focus_$FOCUS$_potential = yes has_country_flag = pki_focus_$FOCUS$_completed } }
     allow = { always = yes }
     effect = { custom_tooltip = pki_focus_$FOCUS$_tt }
+}
+
+pki_focus_$FOCUS$_icon = {
+    potential = { event_target:pki_player = { has_country_flag = pki_focus_tree_tab pki_focus_$FOCUS$_potential = yes } }
+    allow = { event_target:pki_player = { pki_$FOCUS$_focus_requirements = yes } custom_tooltip_fail = { OR = { any_situation = { has_situation_flag = pki_$FOCUS$ } NOT = { has_country_flag = pki_focus_selected } } text = PKI_ALREADY_SELECTED_FOCUS }}
+    effect = { custom_tooltip = pki_focus_$FOCUS$_tt hidden_effect = { if = { limit = { NOR = { has_country_flag = pki_focus_$FOCUS$_completed has_country_flag = pki_selected_focus event_target:pki_player = { any_situation = { has_situation_flag = pki_$FOCUS$ } } } } event_target:pki_player = { country_event = { id = pki_menu.3 } set_country_flag = pki_selected_$FOCUS$ } set_variable = { which = pki_focus_speed value = @pki_$FOCUS$_speed } } } }
+}
+
+pki_focus_$FOCUS$_line = {
+    potential = { event_target:pki_player = { has_country_flag = pki_focus_tree_tab pki_focus_$FOCUS$_potential = yes NOT = { has_country_flag = pki_focus_$FOCUS$_completed } } }
+    allow = { always = yes }
+    effect = {}
+}
+
+pki_focus_$FOCUS$_line_completed = {
+    potential = { event_target:pki_player = { has_country_flag = pki_focus_tree_tab pki_focus_$FOCUS$_potential = yes has_country_flag = pki_focus_$FOCUS$_completed } }
+    allow = { always = yes }
+    effect = {}
 }

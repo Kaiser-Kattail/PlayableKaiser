@@ -2,7 +2,7 @@ opinion_katzen_militarism = {
 	opinion = {
 		base = -5
 		modifier = {
-			multiply = event_target:katzenartig.value:pki_galaxy_owned
+			multiply = event_target:pki_player.value:pki_galaxy_owned
 		}
 	}
 	unique = yes

@@ -685,7 +685,7 @@ situation_pki_galactic_tension = {
 						limit = {
 							is_country_type = default
 							OR = {
-								has_communications = event_target:katzenartig
+								has_communications = event_target:pki_player
 								pki_is_katzenartig_imperium = yes
 							}
 						}
@@ -744,7 +744,7 @@ situation_pki_galactic_tension = {
 						is_country_type = default
 						has_global_flag = pki_galcom_sanctions_1
 						OR = {
-							has_communications = event_target:katzenartig
+							has_communications = event_target:pki_player
 							pki_is_katzenartig_imperium = yes
 						}
 					}

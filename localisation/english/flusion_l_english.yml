@@ -59,10 +59,10 @@
     pki_katzen_trait_elite_desc:0 "This leader is an extremely important figure within Flusionian society, and their skills are far beyond average. They are given the latest in anti-aging technology and cybernetics in order to keep them alive."
     pki_katzen_trait_elite_effect: "$t$Does not use Leader Capacity."
 
-    leader_trait_ruler_kaiser_cattail:0 "The Kaiser"
-    leader_trait_ruler_kaiser_cattail_desc:0 "Kaiser Kattail is a nigh-immortal entity of high charisma yet pronounced goofyness and megalomania."
-    katzen_trait_martial_free:0 "Martial Discipline"
-    katzen_trait_martial_free_desc:0 "This species is incredibly disciplined, thanks to long-standing martial traditions. They will fight like no other on the battlefield and vow absolute loyalty to their nation, defending it to the very end."
+    pki_leader_trait_kaiser_kattail:0 "The Kaiser"
+    pki_leader_trait_kaiser_kattail_desc:0 "Kaiser Kattail is a nigh-immortal entity of high charisma yet pronounced goofyness and megalomania."
+    trait_pki_martial_free:0 "Martial Discipline"
+    trait_pki_martial_free_desc:0 "This species is incredibly disciplined, thanks to long-standing martial traditions. They will fight like no other on the battlefield and vow absolute loyalty to their nation, defending it to the very end."
 
     trait_ruler_katzen_cruiser_focus:0 "Katzenkreuzer Production Focus"
     trait_ruler_katzen_cruiser_focus_desc:0 "This leader is intent on promoting the construction of Katzenkreuzers."
@@ -80,8 +80,8 @@
     trait_pc_pki_flusion_ecu_preference_desc:0 "This species have evolved to prefer the endless cityscapes of the rich Flusio-Arcology."
 
     # Civics/Origins
-    origin_katzen:0 "Katzen Unification"
-    origin_katzen_desc:0 "Through sheer militarism and quite a lot of luck, the extremely militaristic Katzens plan to unite Flusion under their banner. This will prove to be interesting..."
+    origin_katzen:0 "Flusionian Unification"
+    origin_katzen_desc:0 "The appearance of a mysterious figure among the inhabitants of the Central Katzen Plain were first unnoticed. No one could have expected what was to come of it. In the midst of a power vacuum he made a move, signaling for the unification of the entire planet. This is the story of Kaiser Kattail, a story that has been told many times."
 
     START_SCREEN_PKI_PRESET: "Ever since the Katzen race first appeared on the surface of Flusion, we have grown only stronger as a species. Our true origin is shrouded in mystery, with several biohistorians and theorists claiming that the difference in genetic structure between Katzens and other Flusionian species can only be explained with our being of a different planet. While this is not an impossible theory, it is, overall, irrelevant to our history. Our expansion across what is now the Katzen Herzlands, as well as the growth of our political power internationally, has been incredible.\n\nDuring the course of the Wacegi War, the use of nuclear weaponry by our forces was instrumental in bringing out a swift end to the conflict. However, after the end of the war, the international community has begun scorning us for such bombardment, especially our Roqualian rivals. Factions within our government endlessly argue over the morality of our actions, and political turmoil has brought us almost to the point of civil war.\n\nRecently, however, an individual has appeared within our political system, and begun maneuvering his way into higher positions. And so, the balance of power within the Kingdom begins to shift..."
     START_SCREEN_PKI_DOCS: "Documentation on §YKatzen Unification§! Origin can be found in the Situation Log."
@@ -119,8 +119,8 @@
     # Deposits
     d_grand_kronk_quarry:0 "Grand Kronk Quarry"
     d_grand_kronk_quarry_desc:0 "A massive quarry built and operated by the Kronks, harvesting untold amounts of minerals."
-    d_katown:0 "Katown Megalopolis"
-    d_katown_desc:0 "The largest urban area on Flusion, Katown is home to hundreds of millions of inhabitants of all species."
+    d_pki_katown:0 "Katown Megalopolis"
+    d_pki_katown_desc:0 "The largest urban area on Flusion, Katown is home to hundreds of millions of inhabitants of all species."
     d_katzen_generator:0 "Katzen Megareactor"
     d_katzen_generator_desc:0 "The Megareactor provides Flusion with clean energy thanks to the power of nuclear fusion."
     d_ezic_farmland:0 "Zuspri Pastures"
@@ -574,9 +574,17 @@
    
     temp_job_help:0 "Katzen Economical Reinforcement"
     temp_job_help_desc:0 "The Kaiser has ordered specific, somewhat harsh measures to ensure a smooth transition into the Flusio-Arcology."
-   
-    civic_tooltip_flusion_effects:0 "$TABBED_NEW_LINE$- $PLANETARY_MODIFIERS$ ['concept_pki_destabilized_government']$NEW_LINE$"
-   
+
+    #noinspection ParadoxLocalisationUnresolvedConcept
+    origin_tooltip_pki_katzen_effects:0 "- $SPECIES_TRAITS$ ['concept_pki_trait_martial_dicipline']$NEW_LINE$- Access to a unique ['concept_pki_focus_tree'] and §YPlanet Interface§!"
+    origin_tooltip_pki_katzen_negative_effects: "- $INITIAL_POPS$ §R-18§!$NEW_LINE$- $STARTING_SYSTEM$ $TABBED_NEW_LINE$- §IResource Deposits§! are unexploited$TABBED_NEW_LINE$- §YStarbase§! is §Rnot§! a §YStarport§! $NEW_LINE$- Starting Ships: §YScience Ship§! and §YConstruction Ship§! are §Rnot§! present$NEW_LINE$- $MISSING_TECHNOLOGIES_STRING$ $TABBED_NEW_LINE$- ['technology:tech_hyper_drive_1']"
+
+    concept_pki_focus_tree: "Focus Tree"
+    concept_pki_focus_tree_desc: "A §YFocus Tree§! guides your nation on a specific path. §YFocuses§! take some years to complete then provide bonuses based on that area of focus.\n\n§HIn Playable Katzenartig Imperium, only empires with the §Y$origin_katzen$§! origin and successors of this empire will have a §YFocus Tree§!.§!"
+
+    concept_pki_trait_martial_dicipline: "Martial Dicipline"
+    concept_pki_trait_martial_dicipline_desc: "- $mod_pop_cat_slave_happiness$: §R-50%§!$NEW_LINE$- $MOD_ARMY_ATTACK_DAMAGE_MULT$: §G+15%§!$NEW_LINE$- $MOD_ARMY_ATTACK_MORALE_MULT$: §G+15%§!"
+
     edict_katzen_leader_upgrade:0 "Leader Katzenification"
     edict_katzen_leader_upgrade_desc:0 "Our leaders are national treasures, and should be treated as such. The very latest in anti-aging technology and special training will be made available to choice leaders."
 

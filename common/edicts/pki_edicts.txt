@@ -19,7 +19,7 @@ katzen_conquest_map = {
 	effect = {
 		hidden_effect = {
 			country_event = {
-				id = kaiser_bureau.2
+				id = pki_menu.2
 			}
 		}
 	}

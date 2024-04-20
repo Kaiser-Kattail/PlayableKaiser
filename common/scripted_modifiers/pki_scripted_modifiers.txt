@@ -4,19 +4,6 @@ pki_industry_factories = {
     category = planet
 }
 
-pki_industry_factory_efficiency = {
-    icon = mod_economy_capacity_mult
-    good = yes
-    category = planet
-    percentage = yes
-}
-
-pki_industry_factories_per_job = {
-    icon = mod_economy_capacity
-    good = yes
-    category = planet
-}
-
 pki_industry_building_slots = {
     icon = mod_planet_max_buildings_add
     good = yes

@@ -52,112 +52,12 @@ defined_text = {
 
 defined_text = {
     name = pki_industry_building_slots
-    value = event_target:pki_player.modifier:pki_industry_building_slots
-}
-
-defined_text = {
-    name = pki_industry_factory_efficiency
-    value = event_target:pki_player.modifier:pki_industry_factory_efficiency
-}
-
-defined_text = {
-    name = pki_industry_factory_modifier
-    text = {
-        trigger = {
-            check_modifier_value = {
-                modifier = pki_industry_factory_efficiency
-                value = 0
-            }
-        }
-        localization_key = pki_industry_factory_efficiency_none
-    }
-    default = pki_industrial_efficiency
-}
-
-defined_text = {
-    name = pki_industry_factory_color
-
-    text = {
-        trigger = {
-            check_modifier_value = {
-                modifier = pki_industry_factory_efficiency
-                value <= 0
-            }
-        }
-        localization_key = pki_text_color_red
-    }
-    text = {
-        trigger = {
-            check_modifier_value = {
-                modifier = pki_industry_factory_efficiency
-                value >= 0
-            }
-        }
-        localization_key = pki_text_color_green
-    }
-}
-
-defined_text = {
-    name = pki_job_industry
-    value = event_target:pki_player.value:pki_job_industry
+    value = event_target:pki_flusion_planet.modifier:pki_industry_building_slots
 }
 
 defined_text = {
     name = pki_job_industry_factories
     value = event_target:pki_player.value:pki_job_industry_factories
-}
-
-defined_text = {
-    name = pki_industry_job_name
-    text = {
-        trigger = {
-            is_gestalt = no
-        }
-        localization_key = job_pki_war_worker
-    }
-    text = {
-        trigger = {
-            is_gestalt = yes
-        }
-        localization_key = job_pki_war_worker_drone
-    }
-}
-
-defined_text = {
-    name = pki_industry_job_name_plural
-    text = {
-        trigger = {
-            is_gestalt = no
-        }
-        localization_key = job_pki_war_worker_plural
-    }
-    text = {
-        trigger = {
-            is_gestalt = yes
-        }
-        localization_key = job_pki_war_worker_drone_plural
-    }
-}
-
-defined_text = {
-    name = pki_industry_job_effect_desc
-    text = {
-        trigger = {
-            is_gestalt = no
-        }
-        localization_key = job_pki_war_worker_effect_desc
-    }
-    text = {
-        trigger = {
-            is_gestalt = yes
-        }
-        localization_key = job_pki_war_worker_drone_effect_desc
-    }
-}
-
-defined_text = {
-    name = pki_industry_factories_per_job
-    value = event_target:pki_player.modifier:pki_industry_factories_per_job
 }
 
 defined_text = {
