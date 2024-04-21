@@ -20,6 +20,8 @@ katzenartig_imperium= {
 		trait = "trait_wasteful"
 	}
 
+	playable = pki_has_no_ethics_mods
+
 	authority="auth_dictatorial"
 	government="gov_military_dictatorship"
 	advisor_voice_type="l_the_soldier"
@@ -71,6 +73,90 @@ katzenartig_imperium= {
 	spawn_enabled=no
 	ethic="ethic_xenophile"
 	ethic="ethic_fanatic_militarist"
+	civics={
+		"civic_distinguished_admiralty"
+		"civic_nationalistic_zeal"
+	}
+	origin="origin_katzen"
+}
+
+katzenartig_imperium_bugged= {
+	name = "PKI_PRESCRIPTED_EMPIRE_NAME"
+	adjective = "PKI_PRESCRIPTED_EMPIRE_ADJ"
+
+	ship_prefix = "PKI_PRESCRIPTED_SHIP_PREFIX"
+
+	species = {
+		class = "MAM"
+		portrait = "mam14"
+		name = "PKI_PRESCRIPTED_SPECIES_NAME"
+		plural = "PKI_PRESCRIPTED_SPECIES_PLURAL"
+		adjective = "PKI_PRESCRIPTED_SPECIES_ADJ"
+		name_list="KAT"
+		gender=not_set
+		trait = "katzen_trait_martial_free"
+		trait = "trait_adaptive"
+		trait = "trait_quick_learners"
+		trait = "trait_traditional"
+		trait = "trait_sedentary"
+		trait = "trait_wasteful"
+	}
+
+	playable = has_bug_branch
+
+	authority="auth_dictatorial"
+	government="gov_military_dictatorship"
+	advisor_voice_type="l_the_soldier"
+
+	planet_name = "PKI_PRESCRIPTED_CAPITAL_PLANET_NAME"
+	planet_class="pc_continental"
+	system_name = "PKI_PRESCRIPTED_CAPITAL_SYSTEM_NAME"
+
+	initializer="flusion_new_initializer"
+	graphical_culture="reptilian_01"
+	city_graphical_culture="mammalian_01"
+	empire_flag = {
+		icon = {
+			category="domination"
+			file="domination_8.dds"
+		}
+		background = {
+			category="backgrounds"
+			file="v.dds"
+		}
+		colors = {
+			"blue"
+			"indigo"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		gender = male
+		name = "PKI_PRESCRIPTED_RULER_NAME"
+		portrait="mam14"
+		texture=0
+		attachment=0
+		clothes=4
+		ruler_title = "PKI_PRESCRIPTED_RULER_TITLE_MALE"
+		ruler_title_female = "PKI_PRESCRIPTED_RULER_TITLE_FEMALE"
+		trait= "trait_ruler_charismatic"
+		leader_class= "commander"
+	}
+
+	flags = {
+		kaiser_preset
+	}
+
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+	room="personality_hegemonic_imperialists_room"
+	spawn_enabled=no
+	ethic="ethic_xenophile"
+	ethic="ethic_fanatic_militarist"
+	ethic="ethic_authoritarian"
+	ethic="ethic_anthropocentric"
 	civics={
 		"civic_distinguished_admiralty"
 		"civic_nationalistic_zeal"

@@ -4,7 +4,7 @@ pki_is_katzenartig_imperium = {
 	}
 }
 
-phi_has_no_ethics_mods = {
+pki_has_no_ethics_mods = {
 	NOR = {
 		has_bug_branch = yes
 	}
