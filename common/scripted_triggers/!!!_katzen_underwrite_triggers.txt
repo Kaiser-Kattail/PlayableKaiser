@@ -1,3 +1,4 @@
+#noinspection ParadoxScriptIncorrectOverriddenForDefinition
 has_bug_branch = {
 	always = no
 }
