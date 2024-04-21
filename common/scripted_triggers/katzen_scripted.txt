@@ -4,6 +4,12 @@ pki_is_katzenartig_imperium = {
 	}
 }
 
+phi_has_no_ethics_mods = {
+	NOR = {
+		has_bug_branch = yes
+	}
+}
+
 pki_is_katzprotektorat = {
 	OR = {
 		has_country_flag = pki_katzprotectorat
