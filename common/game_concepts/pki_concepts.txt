@@ -17,3 +17,7 @@ concept_pki_food_dam = {
 concept_pki_industrial_dam = {
 
 }
+
+concept_pki_war_preparation_edict = {
+	icon = "gfx/interface/icons/concepts/kaiser_concept.dds"
+}

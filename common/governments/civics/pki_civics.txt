@@ -1,0 +1,26 @@
+civic_militarised_society= {
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+
+	possible = {
+		ethics = {
+			value = ethic_fanatic_militarist
+		}
+	}
+
+	description = "civic_tooltip_militarised_society_effects"
+
+	modifier = {
+		job_soldier_per_pop = 0.05
+		commander_initial_skill = 1
+		country_commander_cap_add = 2
+		commander_exp_gain = 0.2
+		army_morale = 0.2
+		army_starting_experience_add = 100
+		ship_starting_experience_add = 100
+		planet_artisans_upkeep_mult = 0.1
+	}
+
+	random_weight = { base = 5 }
+}

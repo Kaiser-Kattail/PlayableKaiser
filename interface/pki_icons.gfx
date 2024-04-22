@@ -1,0 +1,11 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_mod_job_foundry_upkeep_mult"
+		textureFile = "gfx/interface/icons/modifiers/mod_job_foundry_upkeep_mult.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kaiser_concept"
+		textureFile = "gfx/interface/icons/concepts/kaiser_concept.dds"
+	}
+}

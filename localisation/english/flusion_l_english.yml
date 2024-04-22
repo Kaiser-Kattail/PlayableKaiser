@@ -87,6 +87,13 @@
     flusion_new_initializer_NAME:0 "Jublio System"
     flusion_new_initializer_DESC:0 "The system in which Flusion and its many species is located.\n\n$system_initializer_DESC$"
 
+    civic_militarised_society: "Hypermilitarized Society"
+    civic_militarised_society_desc: "This empire is one subject to incredibly high levels of militarism, nearly every aspect of their society is geared towards encouraging its populace to enlist or support the military and the never ending war machine."
+    civic_tooltip_militarised_society_effects: "- £job_soldier£ §Y$job_soldier_plural$§! provide additional £defense_army£ $defense_army_plural$ and £unity£ $unity$\n- Citizen £pop£ Pops have §R-10%§! §YHappiness§! and §R-10%§! §YJob Output§! during peacetime and §G+5%§! §YHappiness§! and §G+10%§! §YJob Output§! during wartime.\n- Allows access to the ['concept_pki_war_preparation_edict'] Edict."
+
+    concept_pki_war_preparation_edict:0 "War Preparation Grants"
+    concept_pki_war_preparation_edict_desc:0 "The War Preparation Grants Edict grants §G+15%§! £mod_job_foundry_produces_mult£ §Y$job_foundry$ Output§!, §G+25%§! £mod_starbase_ship_build_speed_mult §YShip Build Speed§! and §G+25%§! £mod_army_build_speed_mult£§YArmy Build Speed§! at the cost of §R+15%§! £mod_job_foundry_upkeep_mult£ §Y$job_foundry$ Upkeep§! and, §R-10%§! §YMonthly $energy$ Income§!.\n\nRemoves the maluses for being at peace while active.\n\nLasts for 5 years and has a 5 year cooldown, which is reset following a victory in a war."
+
     # Planets
     pc_pki_flusion_ecu:0 "Flusio-Arcology"
     pc_pki_flusion_ecu_desc:0 "The Flusio-Arcology makes full usage of Flusion's vast natural resources. The cities of Katown, Bundengrad and Teho have been transformed into gargantuan gigacities spanning large portions of the planet and capable of housing dozens of billions of inhabitants each. The rest of the planet has been altered to ecological perfection and now harbors a variety of climates fit for every single species native to Flusion."
