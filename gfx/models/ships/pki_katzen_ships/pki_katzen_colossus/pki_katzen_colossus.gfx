@@ -1,0 +1,12 @@
+objectTypes = {
+    pdxmesh = {
+        name = "pki_katzen_colossus_mesh"
+        file = "gfx/models/ships/pki_katzen_ships/pki_katzen_colossus/pki_katzen_colossus.mesh"
+
+        animation = { id = "idle"		type = "pki_katzen_colossus_idle_animation" }
+        animation = { id = "open"		type = "pki_katzen_colossus_firing_animation" }
+        animation = { id = "opening"	type = "pki_katzen_colossus_opening_animation" }
+        animation = { id = "closing"	type = "pki_katzen_colossus_closing_animation" }
+
+    }
+}

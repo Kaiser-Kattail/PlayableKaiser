@@ -86,6 +86,20 @@
 ########################
 
 utility_component_template = {
+	key = PKI_TEST
+	size = small
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = 999999
+
+	component_set = pki_katzen_power_core
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
 	key = PKI_DESTROYER_FISSION_REACTOR
 	size = small
 	icon = "GFX_ship_part_reactor_1"

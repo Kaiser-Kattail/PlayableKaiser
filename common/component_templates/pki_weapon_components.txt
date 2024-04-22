@@ -153,3 +153,25 @@ weapon_component_template = {
 		weight = 999
 	}
 }
+
+weapon_component_template = { # World Cracker
+	key = "PKI_PLANET_KILLER_CRACKER"
+	size = planet_killer
+	type = planet_killer
+	use_ship_kill_target = no
+
+	icon = GFX_ship_part_world_cracker
+	icon_frame = 1
+
+	windup = { max = 100 min = 100 }
+	total_fire_time = 100
+
+	size_restriction = { pki_colossus }
+	component_set = "PLANET_KILLER_CRACKER"
+
+	planet_destruction_gfx = "shatter_planet_gfx"
+
+	ai_weight = {
+		factor = 2
+	}
+}

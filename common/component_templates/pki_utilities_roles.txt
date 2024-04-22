@@ -12,15 +12,15 @@
 # DEFAULT COMPUTER #
 ####################
 
+
 utility_component_template = {
 	key = PKI_COMBAT_COMPUTER_DEFAULT
 	size = small
 	icon = "GFX_ship_part_computer_default"
 	icon_frame = 1
 	ship_behavior = "default"
-	hidden = yes
+	hidden = no
 
-	class_restriction = { shipclass_military }
 	component_set = pki_katzen_combat_computers
 
 	ai_weight = {

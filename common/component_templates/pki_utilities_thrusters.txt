@@ -49,6 +49,20 @@
 @battleship_cost5 = 120
 
 
+utility_component_template = {
+	key = PKI_TEST_THRUSTER
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	power = 999999
+
+	component_set = pki_katzen_thruster_components
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
 #############
 # THRUSTERS #
 #############
