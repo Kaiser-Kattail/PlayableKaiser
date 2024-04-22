@@ -568,6 +568,7 @@ country_event = {
 			every_system_megastructure = {
 				if = {
 					limit = {
+						is_megastructure_type = katzen_war_forge_1
 						prev = {
 							any_fleet_in_system = {
 								NOT = {
@@ -601,7 +602,26 @@ country_event = {
 								upgradable = no
 							}
 							set_location = prev
+							set_fleet_flag = warforge_platform
 							set_fleet_flag = warforge_platform@prev
+						}
+					}
+					if = {
+						limit = {
+							space_owner = {
+								pki_is_katzprotektorat = yes
+							}
+						}
+						solar_system = {
+							every_system_planet = {
+								limit = {
+									has_planet_flag = war_forge
+								}
+								add_modifier = {
+									modifier = pki_warforge_in_orbit
+									days = -1
+								}
+							}
 						}
 					}
 				}
