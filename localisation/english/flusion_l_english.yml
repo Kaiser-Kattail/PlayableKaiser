@@ -3,6 +3,7 @@
     NAME_Kattail:0 "Kattail"
     NAME_Pawlbert:0 "Pawlbert"
     NAME_Zousan:0 "Linterian"
+    NAME_Mewtail:0 "Mewtail III"
 
     FLAG_CATEGORY_flusion:0 "PvZRP"
     #Deprecated?
@@ -12,18 +13,18 @@
     PRESCRIPTED_system_name_katzen: "Jublio"
     PRESCRIPTED_ruler_name_katzen: "$NAME_Kattail$"
     #Prescripted Empire
-    EMPIRE_DESIGN_katzenartig_imperium_desc:0 "Flusion stands on the edge of all out war, with the militarist Katzens gearing up for war under the watchful eye of the mysterious Kaiser Kattail, all it takes is a match to ignite this uranium filled powder keg.\n\nThe Kaiser's story begins in Katown, but given the right circumstances and enough skill his legacy can define the future of the Universe as a whole."
-    PKI_PRESCRIPTED_EMPIRE_NAME:0 "Katzenartig Imperium"
-    PKI_PRESCRIPTED_EMPIRE_ADJ:0 "Katzenartig"
+    EMPIRE_DESIGN_katzenartig_imperium_desc:0 "Flusion stands on the edge of all out war, Roqualian-Katzen relations are at an all time low following the atomic bombing of the Wacegi during the Wacegi war just years prior. The Cat Kingdom stands at the brink of civil war as tensions withing the government reach a boiling point... the Cat Kingdom may be about to face its toughest trial yet... if not its final trial..."
+    PKI_PRESCRIPTED_EMPIRE_NAME:0 "Cat Kingdom"
+    PKI_PRESCRIPTED_EMPIRE_ADJ:0 "Katzen"
     PKI_PRESCRIPTED_SHIP_PREFIX:0 "KSS"
     PKI_PRESCRIPTED_SPECIES_NAME:0 "Katzen"
     PKI_PRESCRIPTED_SPECIES_PLURAL:0 "Katzens"
     PKI_PRESCRIPTED_SPECIES_ADJ:0 "Katzen"
     PKI_PRESCRIPTED_CAPITAL_PLANET_NAME:0 "Flusion"
     PKI_PRESCRIPTED_CAPITAL_SYSTEM_NAME:0 "Jublio"
-    PKI_PRESCRIPTED_RULER_NAME:0 "$NAME_Kattail$"
-    PKI_PRESCRIPTED_RULER_TITLE_MALE:0 "Kaiser"
-    PKI_PRESCRIPTED_RULER_TITLE_FEMALE:0 "Kaiserin"
+    PKI_PRESCRIPTED_RULER_NAME:0 "$NAME_Mewtail$"
+    PKI_PRESCRIPTED_RULER_TITLE_MALE:0 "König"
+    PKI_PRESCRIPTED_RULER_TITLE_FEMALE:0 "Königin"
 
     NAME_Coalition:0 "Flusionian Coalition"
     ADJ_Coalition:0 "Coalition"
