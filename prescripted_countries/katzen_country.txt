@@ -51,13 +51,13 @@ katzenartig_imperium= {
 	ruler = {
 		gender = male
 		name = "PKI_PRESCRIPTED_RULER_NAME"
-		portrait="mam14"
+		portrait="Kattail_1"
 		texture=0
 		attachment=0
-		clothes=4
+		clothes=0
 		ruler_title = "PKI_PRESCRIPTED_RULER_TITLE_MALE"
 		ruler_title_female = "PKI_PRESCRIPTED_RULER_TITLE_FEMALE"
-		trait= "trait_ruler_charismatic"
+		trait = pki_leader_trait_ruler_kaiser_kattail
 		leader_class= "commander"
 	}
 
@@ -75,5 +75,5 @@ katzenartig_imperium= {
 		"civic_distinguished_admiralty"
 		"civic_nationalistic_zeal"
 	}
-	origin="origin_katzen"
+	origin= origin_katzen
 }
