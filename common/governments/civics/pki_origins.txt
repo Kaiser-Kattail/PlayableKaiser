@@ -1,8 +1,8 @@
 origin_katzen = {
 	is_origin = yes
-	icon = "gfx/interface/icons/origins/origins_life_seeded.dds"
+	icon = "gfx/interface/icons/origins/pki_katzen_origin.dds"
 	picture = GFX_evt_flusion
-	
+
 	description = "civic_tooltip_flusion_effects"
 
 	possible = {

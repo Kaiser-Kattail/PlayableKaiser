@@ -152,7 +152,7 @@ katzen_trait_martial_free = {
 
 # Leader Traits
 
-leader_trait_ruler_kaiser_cattail = {
+pki_leader_trait_ruler_kaiser_kattail = {
 	leader_trait_type = destiny
 	immortal_leaders = yes
 	inline_script = {
@@ -165,7 +165,7 @@ leader_trait_ruler_kaiser_cattail = {
 	}
 	councilor_modifier = {
 		army_morale = 0.25
-		ship_weapon_damage = 0.05
+		ship_weapon_damage = 0.15
 		pop_government_ethic_attraction = 0.10
 	}
 	leader_class = { commander }

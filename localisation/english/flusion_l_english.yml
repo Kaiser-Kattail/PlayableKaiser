@@ -57,8 +57,8 @@
     pki_katzen_trait_elite_desc:0 "This leader is an extremely important figure within Flusionian society, and their skills are far beyond average. They are given the latest in anti-aging technology and cybernetics in order to keep them alive."
     pki_katzen_trait_elite_effect: "$t$Does not use Leader Capacity."
 
-    leader_trait_ruler_kaiser_cattail:0 "The Kaiser"
-    leader_trait_ruler_kaiser_cattail_desc:0 "Kaiser Kattail is a nigh-immortal entity of high charisma yet pronounced goofyness and megalomania."
+    pki_leader_trait_ruler_kaiser_kattail:0 "The Kaiser"
+    pki_leader_trait_ruler_kaiser_kattail_desc:0 "Kaiser Kattail is a nigh-immortal entity of high charisma yet pronounced goofyness and megalomania."
     katzen_trait_martial_free:0 "Martial Discipline"
     katzen_trait_martial_free_desc:0 "This species is incredibly disciplined, thanks to long-standing martial traditions. They will fight like no other on the battlefield and vow absolute loyalty to their nation, defending it to the very end."
 
