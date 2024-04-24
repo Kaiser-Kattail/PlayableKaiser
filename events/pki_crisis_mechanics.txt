@@ -255,22 +255,24 @@ country_event = {
         trigger = {
             pki_is_katzenartig_imperium = no
         }
-        if = {
-            limit = {
-                OR = {
-                    has_country_flag = pki_galcom_opponent
-                    is_part_of_galactic_council = yes
+        hidden_effect = {
+            if = {
+                limit = {
+                    OR = {
+                        has_country_flag = pki_galcom_opponent
+                        is_part_of_galactic_council = yes
+                    }
+                }
+                add_opinion_modifier = {
+                    modifier = opinion_pki_mocked_galcom_1
+                    who = event_target:playerflusion
                 }
             }
-            add_opinion_modifier = {
-                modifier = opinion_pki_mocked_galcom_1
-                who = event_target:playerflusion
-            }
-        }
-        else = {
-            add_opinion_modifier = {
-                modifier = opinion_pki_mocked_galcom_2
-                who = event_target:playerflusion
+            else = {
+                add_opinion_modifier = {
+                    modifier = opinion_pki_mocked_galcom_2
+                    who = event_target:playerflusion
+                }
             }
         }
     }

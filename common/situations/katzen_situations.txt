@@ -767,6 +767,7 @@ situation_pki_galactic_tension = {
 				owner = {
 					country_event = { id = pki_corrona.004 days = 1800 random = 1800 }
 				}
+				set_global_flag = pki_crusade_unlocked
 			}
 
 			end = 60
