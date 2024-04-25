@@ -49,13 +49,8 @@ situation_ftl_development = {
 		on_select = {
 			custom_tooltip = approach_outcome_tooltip
 		}
-		resources = {
-			category = situations
-			upkeep = {
-				physics_research = 15
-				society_research = 15
-				engineering_research = 15
-			}
+		modifier = {
+			all_technology_research_speed = -0.30
 		}
 	}
 	approach = {
@@ -65,13 +60,8 @@ situation_ftl_development = {
 		on_select = {
 			custom_tooltip = approach_outcome_tooltip
 		}
-		resources = {
-			category = situations
-			upkeep = {
-				physics_research = 30
-				society_research = 30
-				engineering_research = 30
-			}
+		modifier = {
+			all_technology_research_speed = -0.50
 		}
 	}
 	approach = {
@@ -81,13 +71,8 @@ situation_ftl_development = {
 		on_select = {
 			custom_tooltip = approach_outcome_tooltip
 		}
-		resources = {
-			category = situations
-			upkeep = {
-				physics_research = 60
-				society_research = 60
-				engineering_research = 60
-			}
+		modifier = {
+			all_technology_research_speed = -0.70
 		}
 	}
 }
