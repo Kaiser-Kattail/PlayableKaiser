@@ -14,20 +14,12 @@ pki_kaiser_arrival_focus_requirements = {
     text = pki_focus_kaiser_arrival_tt
 }
 
-pki_neighbors_focus_requirements = {
+pki_herzlands_industry_focus_requirements = {
     inline_script = {
         script = pki_focuses/pki_focus_trigger_loc
         FOCUS = kaiser_arrival
     }
-    text = pki_focus_neighbors_tt
-}
-
-pki_harania_focus_requirements = {
-    inline_script = {
-        script = pki_focuses/pki_focus_trigger_loc
-        FOCUS = neighbors
-    }
-    text = pki_focus_harania_tt
+    text = pki_focus_herzlands_industry_tt
 }
 
 ## BYPASS REQUIREMENTS (NOT REQUIRED)

@@ -4,9 +4,5 @@ inline_script = {
 }
 inline_script = {
     script = pki_focuses/$SCRIPT_NAME$
-    FOCUS = neighbors
-}
-inline_script = {
-    script = pki_focuses/$SCRIPT_NAME$
-    FOCUS = harania
+    FOCUS = herzlands_industry
 }

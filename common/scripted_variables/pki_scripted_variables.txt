@@ -1,7 +1,5 @@
 @pki_vassal_peacekeeper_amt = 2
 
-@pki_kaiser_arrival_speed = 5
-
 #@pki_COUNTRY_pops =
 #@pki_COUNTRY_building_slots =
 #@pki_COUNTRY_industry_level =

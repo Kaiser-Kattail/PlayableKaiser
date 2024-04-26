@@ -11,8 +11,8 @@ spriteTypes = {
     }
 
     spriteType = {
-        name = "GFX_pki_focus_neighbors"
-        textureFile = "gfx/interface/icons/modifiers/mod_cat_diplomacy.dds"
+        name = "GFX_pki_focus_placeholder"
+        textureFile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_placeholder.dds"
     }
 
     spriteType = {

@@ -405,7 +405,7 @@ guiTypes = {
 
 				containerWindowType = {
 					name = focus_kaiser_arrival
-					position = { x = @tile_x_450 y = @tile_y_1 }
+					position = { x = @tile_x_300 y = @tile_y_1 }
 
 					containerWindowType = {
 						name = focus
@@ -467,6 +467,73 @@ guiTypes = {
 						text = "pki_focus_kaiser_arrival_label"
 						quadTextureSprite = "GFX_invisible"
 						effect = pki_focus_kaiser_arrival_icon
+					}
+				}
+
+				containerWindowType = {
+					name = focus_herzlands_industry
+					position = { x = @tile_x_250 y = @tile_y_2 }
+
+					containerWindowType = {
+						name = focus
+						orientation = CENTER
+
+						effectButtonType = {
+							name = focus_label
+							position = { x = +0 y = +70 }
+							size = { x = 170 y = 50 }
+							orientation = CENTER
+							quadTextureSprite = "GFX_glow_tile_cyan"
+							effect = pki_focus_herzlands_industry_effect
+						}
+					}
+
+					containerWindowType = {
+						name = focus_in_progress
+						orientation = CENTER
+
+						effectButtonType = {
+							name = focus_label
+							position = { x = +0 y = +70 }
+							size = { x = 170 y = 50 }
+							quadTextureSprite = "GFX_glow_tile_striped"
+							effect = pki_focus_herzlands_industry_in_progress_effect
+						}
+					}
+
+					containerWindowType = {
+						name = focus_completed
+						orientation = CENTER
+
+						effectButtonType = {
+							name = focus_label
+							position = { x = +0 y = +70 }
+							size = { x = 170 y = 50 }
+							quadTextureSprite = "GFX_glow_tile_orange"
+							effect = pki_focus_herzlands_industry_completed_effect
+						}
+					}
+
+					effectButtonType = {
+						name = focus_icon
+						position = { x = +0 y = 0 }
+						orientation = CENTER
+						alwaysTransparent = no
+						quadTextureSprite = "GFX_pki_focus_placeholder"
+						effect = pki_focus_herzlands_industry_icon
+					}
+
+					effectButtonType = {
+						name = focus_label
+						position = { x = +0 y = +70 }
+						size = { x = 170 y = 50 }
+						orientation = CENTER
+						font = cg_16b
+						multiline = yes
+						alwaysTransparent = yes
+						text = "pki_focus_herzlands_industry_label"
+						quadTextureSprite = "GFX_invisible"
+						effect = pki_focus_herzlands_industry_icon
 					}
 				}
 
@@ -2487,8 +2554,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = time_background
-			position = { x = 220 y = 51 }
-			size = { width = 74 height = 34 }
+			position = { x = 200 y = 51 }
+			size = { width = 90 height = 34 }
 			alwaysTransparent = yes
 			background = {
 				name = background
@@ -2513,8 +2580,10 @@ guiTypes = {
 			name = "pki_focus_title"
 			font = "malgun_goth_24"
 			text = "pki_focus_title_text"
-			position = { x = -28 y = -84 }
+			position = { x = 12 y = -82 }
 			alwaysTransparent = yes
+			format = left
+
 			effect = pki_always_no_effect
 		}
 
@@ -2639,7 +2708,7 @@ guiTypes = {
 		effectButtonType = {
 			name = "focus_time"
 			font = "cg_16b"
-			position = { x = 216 y = 60 }
+			position = { x = 204 y = 60 }
 			size = { x = 80 y = 16 }
 			vertical_alignment = top
 			format = center

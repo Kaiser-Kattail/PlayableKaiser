@@ -63,6 +63,12 @@ pki_focus_kaiser_arrival_effects = {
     }
 }
 
+pki_focus_herzlands_industry_effects = {
+    event_target:pki_flusion_planet = {
+        add_deposit = d_pki_megafoundries
+    }
+}
+
 pki_focus_in_progress_effects = {
     switch = {
         trigger = has_situation_flag

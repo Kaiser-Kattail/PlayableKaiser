@@ -1,6 +1,6 @@
 d_pki_economic_mechanics = {
     is_for_colonizable = yes
-    icon = d_industrial_district
+    icon = unused/d_strategic_resources
     category = deposit_cat_giga_mechanics
 
     drop_weight = { weight = 0 }

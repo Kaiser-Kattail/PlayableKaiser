@@ -22,6 +22,10 @@ concept_pki_neighbors = {
     icon = "gfx/interface/icons/diplomacy/diplomacy_envoy.dds"
 }
 
+concept_pki_d_pki_megafoundries = {
+    icon = "gfx/interface/icons/deposits/d_industrial_district.dds"
+}
+
 concept_pki_focus_tree = {
     icon = "gfx/interface/icons/situation_log/situations/stages/situation_severity_level_pki_national_focus.dds"
 }

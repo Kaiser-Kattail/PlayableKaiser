@@ -19,6 +19,22 @@ d_pki_katown = {
 	}
 }
 
+d_pki_megafoundries = {
+	is_for_colonizable = yes
+	icon = d_industrial_district
+
+	triggered_planet_modifier = {
+		modifier = {
+			planet_metallurgists_alloys_produces_add = 0.25
+			planet_metallurgists_upkeep_mult = -0.10
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
 d_katown_palace ={
 	is_for_colonizable = yes
 	icon = d_central_spire
@@ -28,9 +44,6 @@ d_katown_palace ={
 		job_politician_add = 1
 		job_bureaucrat_add = 2
 		job_soldier_add = 2
-	}
-	country_modifier = {
-		empire_size_mult = -0.15
 	}
 	resources = {
 		category = planet_deposits
