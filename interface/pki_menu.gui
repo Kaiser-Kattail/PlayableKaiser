@@ -280,8 +280,8 @@ guiTypes = {
 
 		effectButtonType = {
 			name = focus_tree_background
-			position = { x = +1 y = +52 }
-			size = { x = 1616 y = 845 }
+			position = { x = +1 y = +92 }
+			size = { x = 1616 y = 805 }
 			orientation = upper_left
 			alwaysTransparent = yes
 
@@ -291,10 +291,87 @@ guiTypes = {
 		}
 
 		containerWindowType = {
+			name = focus tabs
+			origo = upper_left
+			orientation = upper_left
+
+			effectButtonType = {
+				name = tab_state
+				position = { x = -7 y = +50 }
+				size = { x = 160 y = 50 }
+				orientation = UPPER_LEFT
+				font = cg_16b
+				multiline = yes
+				alwaysTransparent = no
+				text = "pki_focus_tab_state"
+				format = center
+				vertical_alignment = center
+				quadTextureSprite = "GFX_button_filter_tab"
+				effect = pki_focus_tree_no_effect
+			}
+
+			effectButtonType = {
+				name = tab_innovation
+				position = { x = 135 y = +50 }
+				size = { x = 160 y = 50 }
+				orientation = UPPER_LEFT
+				font = cg_16b
+				multiline = yes
+				alwaysTransparent = no
+				text = "pki_focus_tab_innovation"
+				format = center
+				vertical_alignment = center
+				quadTextureSprite = "GFX_button_filter_tab"
+				effect = pki_focus_tree_no_effect
+			}
+
+			effectButtonType = {
+				name = tab_conquest
+				position = { x = 277 y = +50 }
+				size = { x = 160 y = 50 }
+				orientation = UPPER_LEFT
+				font = cg_16b
+				multiline = yes
+				alwaysTransparent = no
+				text = "pki_focus_tab_conquest"
+				format = center
+				vertical_alignment = center
+				quadTextureSprite = "GFX_button_filter_tab"
+				effect = pki_focus_tree_no_effect
+			}
+
+			effectButtonType = {
+				name = tab_galactic
+				position = { x = 419 y = +50 }
+				size = { x = 160 y = 50 }
+				orientation = UPPER_LEFT
+				font = cg_16b
+				multiline = yes
+				alwaysTransparent = no
+				text = "pki_focus_tab_galactic"
+				format = center
+				vertical_alignment = center
+				quadTextureSprite = "GFX_button_filter_tab"
+				effect = pki_focus_tree_no_effect
+			}
+		}
+
+		effectButtonType = {
+			name = title
+			size = { x = 296 y = 40 }
+			position = { x = +1310 y = 63 }
+			text = "PKI_INFO"
+			font = malgun_goth_24
+			quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+			effect = pki_map_no_effect
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
 			name = scrolling_section
 			origo = UPPER_LEFT
-			position = { x = +10 y = +64 }
-			size = { width = 1598 height = 820 }
+			position = { x = +10 y = 104 }
+			size = { width = 1598 height = 780 }
 			verticalScrollbar = "right_vertical_slider"
 			clipping = yes
 			background = { name = "background" quadTextureSprite = "GFX_invisible" }
@@ -311,18 +388,8 @@ guiTypes = {
 				position = { x = +1300 y = 0 }
 
 				effectButtonType = {
-					name = title
-					size = { x = 284 y = 40 }
-					text = "PKI_INFO"
-					font = malgun_goth_24
-					quadTextureSprite = "GFX_tiles_dark_area_cut_8"
-					effect = pki_map_no_effect
-					alwaysTransparent = yes
-				}
-
-				effectButtonType = {
 					name = info_text
-					position = { x = +6 y = +46 }
+					position = { x = +6 y = +4 }
 					size = { x = 274 y = 1620 }
 					text = "[pki_map_selected_country_info]"
 					font = cg_16b
@@ -2566,8 +2633,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = desc_background
-			position = { x = 8 y = 102 }
-			size = { width = 384 height = 490 }
+			position = { x = 8 y = 90 }
+			size = { width = 384 height = 502 }
 			alwaysTransparent = yes
 			background = {
 				name = background
@@ -2695,7 +2762,7 @@ guiTypes = {
 		effectButtonType = {
 			name = "focus_desc"
 			font = "cg_16b"
-			position = { x = 16 y = 110 }
+			position = { x = 16 y = 96 }
 			size = { x = 368 y = 600 }
 			multiline = yes
 			format = left
