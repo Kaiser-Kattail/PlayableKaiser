@@ -118,5 +118,5 @@ pki_is_allowed_for_kaiser_spawn = {
 }
 
 can_destroy_planet_with_PKI_PLANET_KILLER_CRACKER = {
-	always = yes
+	can_destroy_planet_with_PLANET_KILLER_CRACKER = yes
 }

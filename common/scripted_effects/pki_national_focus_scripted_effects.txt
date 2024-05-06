@@ -3,6 +3,13 @@ pki_clear_gui_flags = {
     remove_country_flag = pki_focus_tree_tab
 }
 
+pki_clear_focus_tree_tab_flags = {
+    remove_country_flag = pki_focus_tree_tab_state
+    remove_country_flag = pki_focus_tree_tab_military
+    remove_country_flag = pki_focus_tree_tab_innovation
+    remove_country_flag = pki_focus_tree_tab_galactic
+}
+
 pki_focus_kaiser_arrival_effects = {
     set_empire_name = "Katzenartig Imperium" #Situation effects wont display properly if it is a localised entry
     remove_modifier = pki_destabilized_government

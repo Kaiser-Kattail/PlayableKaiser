@@ -1,6 +1,6 @@
 pki_$COUNTRY$ = {
-    root = { country_event = { id = pki_$COUNTRY$.01 } }
+    event_target:pki_player = { country_event = { id = pki_$COUNTRY$.01 } }
 }
 pki_map_$COUNTRY$_selected = {
-    root = { country_event = { id = pki_$COUNTRY$.01 } }
+    event_target:pki_player = { country_event = { id = pki_$COUNTRY$.01 } }
 }

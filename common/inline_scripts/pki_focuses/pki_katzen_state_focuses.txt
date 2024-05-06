@@ -1,0 +1,10 @@
+inline_script = {
+    script = pki_focuses/pki_focus_potential
+    FOCUS = kaiser_arrival
+    TAB = $TAB$
+}
+inline_script = {
+    script = pki_focuses/pki_focus_potential
+    FOCUS = herzlands_industry
+    TAB = $TAB$
+}

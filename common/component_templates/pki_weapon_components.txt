@@ -163,8 +163,8 @@ weapon_component_template = { # World Cracker
 	icon = GFX_ship_part_world_cracker
 	icon_frame = 1
 
-	windup = { max = 100 min = 100 }
-	total_fire_time = 100
+	windup = { max = 40 min = 40 }
+	total_fire_time = 10
 
 	size_restriction = { pki_colossus }
 	component_set = "PLANET_KILLER_CRACKER"

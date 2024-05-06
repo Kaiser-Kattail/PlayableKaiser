@@ -1,8 +1,8 @@
 ## FOCUS POTENTIALS
 
 inline_script = {
-    script = pki_focuses/pki_all_katzen_focuses
-    SCRIPT_NAME = pki_focus_potentials
+    script = pki_focuses/pki_katzen_state_focuses
+    TAB = state
 }
 
 ## FOCUS REQUIREMENTS

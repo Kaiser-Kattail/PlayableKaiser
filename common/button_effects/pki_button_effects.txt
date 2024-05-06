@@ -104,7 +104,6 @@ pki_map_decrease = {
 	effect = { hidden_effect = { event_target:pki_player = { pki_decrease_used_factories = yes } } }
 }
 
-
 ### COUNTRIES
 
 inline_script = {
@@ -116,6 +115,50 @@ pki_map_country_contact = {
 	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab } }
 	allow = { hidden_trigger = { event_target:pki_player = { NOT = { has_country_flag = pki_contacted_country } } custom_tooltip_fail = { text = PKI_CANT_CONTACT_SELF } hidden_trigger = { event_target:pki_player = { NOT = { has_country_flag = pki_map_KAT_selected } } } } }
 	effect = { hidden_effect = { event_target:pki_player = { country_event = { id = pki_flusion_nations.0000 } } } }
+}
+
+pki_focus_tree_tab_state = {
+	potential = { event_target:pki_player = { has_country_flag = pki_focus_tree_tab } }
+	allow = { always = yes }
+	effect = { event_target:pki_player = { pki_clear_focus_tree_tab_flags = yes set_country_flag = pki_focus_tree_tab_state } }
+}
+
+pki_focus_tree_tab_innovation = {
+	potential = { event_target:pki_player = { has_country_flag = pki_focus_tree_tab } }
+	allow = { always = yes }
+	effect = { event_target:pki_player = { pki_clear_focus_tree_tab_flags = yes set_country_flag = pki_focus_tree_tab_innovation } }
+}
+
+pki_focus_tree_tab_military = {
+	potential = { event_target:pki_player = { has_country_flag = pki_focus_tree_tab } }
+	allow = { always = yes }
+	effect = { event_target:pki_player = { pki_clear_focus_tree_tab_flags = yes set_country_flag = pki_focus_tree_tab_military } }
+}
+
+pki_focus_tree_tab_galactic = {
+	potential = { event_target:pki_player = { has_country_flag = pki_focus_tree_tab } }
+	allow = { always = yes }
+	effect = { event_target:pki_player = { pki_clear_focus_tree_tab_flags = yes set_country_flag = pki_focus_tree_tab_galactic } }
+}
+
+pki_focus_tree_tab_state_active = {
+	potential = { event_target:pki_player = { has_country_flag = pki_focus_tree_tab has_country_flag = pki_focus_tree_tab_state } }
+	allow = { always = yes }
+}
+
+pki_focus_tree_tab_innovation_active = {
+	potential = { event_target:pki_player = { has_country_flag = pki_focus_tree_tab has_country_flag = pki_focus_tree_tab_innovation } }
+	allow = { always = yes }
+}
+
+pki_focus_tree_tab_military_active = {
+	potential = { event_target:pki_player = { has_country_flag = pki_focus_tree_tab has_country_flag = pki_focus_tree_tab_military } }
+	allow = { always = yes }
+}
+
+pki_focus_tree_tab_galactic_active = {
+	potential = { event_target:pki_player = { has_country_flag = pki_focus_tree_tab has_country_flag = pki_focus_tree_tab_galactic } }
+	allow = { always = yes }
 }
 
 ### ADD FOCUSES HERE

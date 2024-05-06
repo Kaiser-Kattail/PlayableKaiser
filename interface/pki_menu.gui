@@ -307,7 +307,22 @@ guiTypes = {
 				format = center
 				vertical_alignment = center
 				quadTextureSprite = "GFX_button_filter_tab"
-				effect = pki_focus_tree_no_effect
+				effect = pki_focus_tree_tab_state
+			}
+
+			effectButtonType = {
+				name = tab_state_active
+				position = { x = -7 y = +50 }
+				size = { x = 160 y = 50 }
+				orientation = UPPER_LEFT
+				font = cg_16b
+				multiline = yes
+				alwaysTransparent = no
+				text = "pki_focus_tab_state"
+				format = center
+				vertical_alignment = center
+				quadTextureSprite = "GFX_button_filter_tab_selected"
+				effect = pki_focus_tree_tab_state_active
 			}
 
 			effectButtonType = {
@@ -322,7 +337,22 @@ guiTypes = {
 				format = center
 				vertical_alignment = center
 				quadTextureSprite = "GFX_button_filter_tab"
-				effect = pki_focus_tree_no_effect
+				effect = pki_focus_tree_tab_innovation
+			}
+
+			effectButtonType = {
+				name = tab_innovation_active
+				position = { x = 135 y = +50 }
+				size = { x = 160 y = 50 }
+				orientation = UPPER_LEFT
+				font = cg_16b
+				multiline = yes
+				alwaysTransparent = no
+				text = "pki_focus_tab_innovation"
+				format = center
+				vertical_alignment = center
+				quadTextureSprite = "GFX_button_filter_tab_selected"
+				effect = pki_focus_tree_tab_innovation_active
 			}
 
 			effectButtonType = {
@@ -337,7 +367,22 @@ guiTypes = {
 				format = center
 				vertical_alignment = center
 				quadTextureSprite = "GFX_button_filter_tab"
-				effect = pki_focus_tree_no_effect
+				effect = pki_focus_tree_tab_military
+			}
+
+			effectButtonType = {
+				name = tab_conquest_active
+				position = { x = 277 y = +50 }
+				size = { x = 160 y = 50 }
+				orientation = UPPER_LEFT
+				font = cg_16b
+				multiline = yes
+				alwaysTransparent = no
+				text = "pki_focus_tab_conquest"
+				format = center
+				vertical_alignment = center
+				quadTextureSprite = "GFX_button_filter_tab_selected"
+				effect = pki_focus_tree_tab_military_active
 			}
 
 			effectButtonType = {
@@ -352,7 +397,22 @@ guiTypes = {
 				format = center
 				vertical_alignment = center
 				quadTextureSprite = "GFX_button_filter_tab"
-				effect = pki_focus_tree_no_effect
+				effect = pki_focus_tree_tab_galactic
+			}
+
+			effectButtonType = {
+				name = tab_galactic_active
+				position = { x = 419 y = +50 }
+				size = { x = 160 y = 50 }
+				orientation = UPPER_LEFT
+				font = cg_16b
+				multiline = yes
+				alwaysTransparent = no
+				text = "pki_focus_tab_galactic"
+				format = center
+				vertical_alignment = center
+				quadTextureSprite = "GFX_button_filter_tab_selected"
+				effect = pki_focus_tree_tab_galactic_active
 			}
 		}
 

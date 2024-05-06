@@ -1,0 +1,3 @@
+pki_focus_$FOCUS$_potential = {
+    event_target:pki_player = { has_country_flag = pki_focus_tree_tab has_country_flag = pki_focus_tree_tab_$TAB$ }
+}

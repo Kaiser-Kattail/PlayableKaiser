@@ -127,3 +127,9 @@ on_war_lost = {
 		pki_misc.213
 	}
 }
+
+on_destroy_planet_with_PKI_PLANET_KILLER_CRACKER = {
+	events = {
+		pki_misc.666
+	}
+}
