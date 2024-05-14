@@ -27,7 +27,7 @@ building_katzen_civilian_forge = {
 
 	inline_script = {
 		script = jobs/factory_add
-		AMOUNT = 6
+		AMOUNT = 4
 	}
 
 	destroy_trigger = {
@@ -264,13 +264,13 @@ building_pki_flusion_fusion_power_plant = {
 			minerals = @b3_minerals
 		}
 		produces = {
-			energy = 10
+			energy = 20
 		}
 	}
 
 	inline_script = {
 		script = jobs/technicians_add
-		AMOUNT = 6
+		AMOUNT = 4
 	}
 }
 
@@ -331,17 +331,17 @@ building_pki_katzen_synthetizer = {
 
 	inline_script = {
 		script = jobs/refiner_add
-		AMOUNT = 2
+		AMOUNT = 1
 	}
 
 	inline_script = {
 		script = jobs/chemist_add
-		AMOUNT = 2
+		AMOUNT = 1
 	}
 
 	inline_script = {
 		script = jobs/translucer_add
-		AMOUNT = 2
+		AMOUNT = 1
 	}
 }
 
@@ -385,7 +385,7 @@ building_pki_foundry = {
 
 	inline_script = {
 		script = jobs/foundry_add
-		AMOUNT = 6
+		AMOUNT = 4
 	}
 }
 
@@ -435,7 +435,7 @@ building_pki_theater = {
 		potential = {
 			NOT = {
 				owner = {
-					has_origin = origin_katzen
+					pki_is_katzenartig_imperium = yes
 				}
 			}
 		}
@@ -445,7 +445,7 @@ building_pki_theater = {
 	triggered_planet_modifier = {
 		potential = {
 			owner = {
-				has_origin = origin_katzen
+				pki_is_katzenartig_imperium = yes
 			}
 		}
 		pop_government_ethic_attraction = 0.5
@@ -486,12 +486,12 @@ building_pki_science = {
 	}
 
 	planet_modifier = {
-		pop_happiness = -0.05
+		pop_happiness = -0.025
 	}
 
 	inline_script = {
 		script = jobs/researchers_add
-		AMOUNT = 6
+		AMOUNT = 4
 	}
 }
 
