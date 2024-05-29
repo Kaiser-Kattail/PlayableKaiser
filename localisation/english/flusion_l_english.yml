@@ -61,8 +61,8 @@
 
     pki_leader_trait_ruler_kaiser_kattail:0 "The Kaiser"
     pki_leader_trait_ruler_kaiser_kattail_desc:0 "Kaiser Kattail is a nigh-immortal entity of high charisma yet pronounced goofyness and megalomania."
-    katzen_trait_martial_free:0 "Martial Discipline"
-    katzen_trait_martial_free_desc:0 "This species is incredibly disciplined, thanks to long-standing martial traditions. They will fight like no other on the battlefield and vow absolute loyalty to their nation, defending it to the very end."
+    trait_pki_martial_free:0 "Martial Discipline"
+    trait_pki_martial_free_desc:0 "This species is incredibly disciplined, thanks to long-standing martial traditions. They will fight like no other on the battlefield and vow absolute loyalty to their nation, defending it to the very end."
 
     trait_ruler_katzen_cruiser_focus:0 "Katzenkreuzer Production Focus"
     trait_ruler_katzen_cruiser_focus_desc:0 "This leader is intent on promoting the construction of Katzenkreuzers."
