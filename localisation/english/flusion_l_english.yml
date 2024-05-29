@@ -224,8 +224,15 @@
     d_bureau_of_colonial_benefits: "Flusionian Administration"
     d_bureau_of_colonial_benefits_desc: "With the empire administered from Flusion, things become simpler to organize. If not less efficient."
 
-    d_pki_flusion_societal_restructuring:0 "Societal Restructuring"
-    d_pki_flusion_societal_restructuring_desc:0 "Society has been redefined with these changes on our Flusio-Arcology. Our production is now limitless."
+    pki_expand_flusion: "$MOD_PLANET_MAX_DISTRICTS_ADD$: §G+1§! and District Energy Upkeep: §R+5%§! for every §YSemiautonomous Katzenkolonies§!"
+    pki_needs_scaling_colony: "£trigger_no£Must have a §YSemiautonomous Katzenkolonie§!"
+
+    decision_pki_extra_districts: "Planetary Expansion"
+    decision_pki_extra_districts_desc: "We can add new layers to the behemoth that is the Flusio-Arcology, though it will require support from our other colonies."
+
+    d_pki_flusion_extra_districts: "Expanded Layers"
+    d_pki_flusion_extra_districts_desc: "The expansion of Flusion was often thought of post-unification. Truly a marvel to see it to fruition."
+
 
     # Opinions
     opinion_katzen_militarism:0 "Katzen Menace"
@@ -382,28 +389,30 @@
     d_katzen_energy_dam_desc:0 "A series of large hydroelectric dams that greatly increase the energy output of this world."
     concept_pki_energy_dam: "$d_katzen_energy_dam$"
     concept_pki_energy_dam_desc: "§EEffects:§!\n$pki_energy_dam_effect$"
-    pki_energy_dam_effect: "- £mod_district_generator_max£ Max Generator Districts §G+3§!\n- £housing£ Housing §G+15§!\n- £mod_habitability£ Habitability §R-10%§!\n- §G+1§! Energy Job per §Y10§! pops\n- Produces £energy£ 30"
+    pki_energy_dam_effect: "- £mod_district_generator_max£ Max Generator Districts §G+3§!\n- £housing£ Housing §G+15§!\n- £mod_habitability£ Habitability §R-10%§!\n- §G+1§! Technicians per §Y10§! pops\n- Produces £energy£ 30"
 
     d_katzen_mineral_dam:0 "Superscale Ore Washing Sites"
     d_katzen_mineral_dam_desc:0 "A series of dams that allow for the excavation of the seabed, which increases the mineral output of this world."
     concept_pki_minerals_dam: "$d_katzen_mineral_dam$"
     concept_pki_minerals_dam_desc: "§EEffects:§!\n$pki_mineral_dam_effect$"
-    pki_mineral_dam_effect: "- £mod_district_mining_max£ Max Mining Districts §G+3§!\n- £housing£ Housing §G+15§!\n- £mod_habitability£ Habitability §R-10%§!\n- §G+1§! Mining Job per §Y10§! pops"
+    pki_mineral_dam_effect: "- £mod_district_mining_max£ Max Mining Districts §G+3§!\n- £housing£ Housing §G+15§!\n- £mod_habitability£ Habitability §R-10%§!\n- §G+1§! Miners per §Y10§! pops"
 
-    d_katzen_food_dam:0 "Hyper-irrigated Farming Sectors"
+    d_katzen_food_dam:0 "Hyper-Irrigated Farming Sectors"
     d_katzen_food_dam_desc:0 "A series of dams that redirect water for agricultural purposes."
     concept_pki_food_dam: "$d_katzen_food_dam$"
     concept_pki_food_dam_desc: "§EEffects:§!\n$pki_food_dam_effect$"
-    pki_food_dam_effect: "- £mod_district_farming_max£ Max Agriculture Districts §G+3§!\n- £housing£ Housing §G+15§!\n- £mod_habitability£ Habitability §R-10%§!\n- §G+1§! Farming Job per §Y10§! pops"
+    pki_food_dam_effect: "- £mod_district_farming_max£ Max Agriculture Districts §G+3§!\n- £housing£ Housing §G+15§!\n- £mod_habitability£ Habitability §R-10%§!\n- §G+1§! Farmers per §Y10§! pops"
 
 
-    d_katzen_industrial_dam:0 "Giga-coolant Plant "
+    d_katzen_industrial_dam:0 "Giga-Coolant Plant"
     d_katzen_industrial_dam_desc:0 "A series of dams that relocates water for use as industrial coolant, allowing more factories to be opened."
     concept_pki_industrial_dam: "$d_katzen_industrial_dam$"
     concept_pki_industrial_dam_desc: "§EEffects:§!\n$pki_industrial_dam_effect$\n\n§EAdditional Effects:§!\nBased on §YPlanetary Designation§!, industrial jobs gain increased output along with increased energy upkeep"
-    pki_industrial_dam_effect: "- £housing£ Housing §G+15§!\n- £mod_habitability£ Habitability §R-1%§!\n- £alloys£ Alloys from £job_foundry£ Alloy Jobs §G+0.50§!\n- £consumer_goods£ Alloys from £job_artisan£ Consumer Goods Jobs §G+0.50§!\n- £energy£ $energy$ Upkeep from £job_foundry£ Alloy Jobs §R+1.00§!\n- £energy£ $energy$ Upkeep from £job_artisan£ Consumer Goods Jobs §R+1.00§!"
+    pki_industrial_dam_effect: "- £housing£ Housing §G+15§!\n- £mod_habitability£ Habitability §R-15%§!\n- £alloys£ Alloys from £job_foundry£ Metallurgists §G+0.50§!\n- £consumer_goods£ Consumer Goods from £job_artisan£ Artisans §G+0.50§!\n- £energy£ $energy$ Upkeep from £job_foundry£ Metallurgists §R+1.00§!\n- £energy£ $energy$ Upkeep from £job_artisan£ Artisans §R+1.00§!"
 
-    decision_pki_dams_effect: "Constructs a dam on §Y[root.GetName]§!, giving £housing£ §YHousing§!, and £district£ §YDistricts§! with bonuses to resource production based on the type of dam built.\n\n['concept_pki_housing_dam']\n['concept_pki_energy_dam']\n['concept_pki_minerals_dam']\n['concept_pki_industrial_dam']\n\nIf £planet£ §GWet§! Climate:\n['concept_pki_food_dam']"
+    decision_pki_dams_effect: "Constructs a dam on §Y[root.GetName]§!, giving £housing£ §YHousing§!, and £district£ §YDistricts§! with bonuses to resource production based on the type of dam built.\n\n['concept_pki_housing_dam']\n['concept_pki_energy_dam']\n['concept_pki_minerals_dam']\n['concept_pki_food_dam']\n['concept_pki_industrial_dam']"
+
+    pki_must_be_wet: "£trigger_no£Must have a £planet£ §GWet§! Climate"
 
     pki_industrial_dam_effects: "\nBonuses change based on §YPlanetary Designation§!"
 
@@ -424,14 +433,6 @@
     decision_katzen_war_forge_desc:0 "A new military station in orbit will assist in the creation of a larger navy."
     pki_warforge_decision: "Begins §YKatzen War Forge§! construction in §Y[planet.GetName]§! Orbit, at a base build time of §Y480 days§!."
 
-    decision_pki_societal_restructuring:0 "Societal Restructuring"
-    decision_pki_societal_restructuring_desc:0 "By changing how Flusion functions from the ground up, we will be able to achieve an extreme boost in efficiency.\n\n§RWARNING: This will effectively kill half of the planet's population and destroy half of the districts.§!"
-
-    decision_pki_further_restructuring:0 "Further Restructuring"
-    decision_pki_further_restructuring_desc:0 "By building more and more off of our existing work, we will be able to achieve an further boost in efficiency.\n\n§HThere are diminishing returns with further restructuring.§!\n\n§RWARNING: This will effectively kill half of the planet's population and destroy half of the districts.§!"
-
-    pki_expand_flusion:0 "Increases §YJob Size§! by §G+50%§!\n\nIncreases available space for districts and pops to grow.§!"
-    pki_expand_flusion_more:0 "Increases §YJob Size§! by §G+50%§!\n\nIncreases available space for districts and pops to grow.§!"
 
     decision_pki_scaling_colony: "Create Semiautonomous Colony"
     decision_pki_scaling_colony_desc: "By handing over some control to the local government, the jobs can be managed with reduced effort."

@@ -93,7 +93,7 @@ pki_scaling_colony = {
 	pop_demotion_time_mult = -0.6
 	planet_carry_cap_add = 50
 	planet_max_buildings_add = -1000
-	planet_max_districts_mult = -0.25
+	planet_max_districts_mult = -0.30
 	planet_jobs_produces_mult = -0.20
 }
 

@@ -1,4 +1,5 @@
 decision_flusion_arc = {
+	icon = decision_arcology_project
 	enactment_time = 3600
 
 	prerequisites = {
@@ -113,6 +114,7 @@ decision_flusion_arc = {
 }
 
 decision_siegfried_world = {
+	icon = decision_maginot_planet
 	enactment_time = 1800
 	owned_planets_only = yes
 
@@ -277,6 +279,7 @@ decision_kaiser_moon = {
 
 #builds solaktropa dams
 decision_solaktropa = {
+	icon = decision_katlantropa
 	prerequisites = {
 		"tech_capital_productivity_1"
 	}
@@ -343,6 +346,7 @@ decision_katlantropa = {
 }
 
 decision_pki_dams = {
+	icon = decision_katlantropa
 	owned_planets_only = yes
 
 	prerequisites = {
@@ -360,9 +364,12 @@ decision_pki_dams = {
 	}
 
 	allow = {
-		OR = {
-			is_dry = no
-			is_wet = yes
+		custom_tooltip_fail = {
+			text = pki_must_be_wet
+			OR = {
+				is_wet = yes
+				giga_is_gaia = yes
+			}
 		}
 	}
 
@@ -407,6 +414,7 @@ decision_pki_dams = {
 }
 
 decision_katzen_defense_array_1 = {
+	icon = decision_mining_station
 	owned_planets_only = yes
 	enactment_time = 720
 	resources = {
@@ -517,6 +525,7 @@ decision_katzen_defense_array_1 = {
 }
 
 decision_katzen_war_forge = {
+	icon = decision_mining_station
 	owned_planets_only = no
 	enactment_time = 0
 	resources = {
@@ -614,6 +623,7 @@ decision_kaiser_craft_recall = {
 }
 
 decision_pki_demotion_modifier = {
+	icon = decision_politics
 	enactment_time = 0
     resources = {
         category = decisions
@@ -624,10 +634,10 @@ decision_pki_demotion_modifier = {
 	sound = event_administrative_work
   	potential = {
 		from = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 			has_tradition = tr_flusion_finish
 	    }
-	    has_planet_flag = playerflusion
+	    is_planet_class = pc_pki_flusion_ecu
    	}
 	effect = {
 		custom_tooltip = decision_pki_demotion_modifier_effect
@@ -682,6 +692,7 @@ decision_toggle_relocation = {
 }
 
 decision_depopulate_planet = {
+	icon = decision_expel_population
 	enactment_time = 60
     resources = {
         category = decisions
@@ -718,8 +729,9 @@ decision_depopulate_planet = {
 	}
 }
 
-decision_pki_societal_restructuring = {
-	enactment_time = 3600
+decision_pki_extra_districts = {
+	icon = decision_industrial_district
+	enactment_time = 720
 	resources = {
         category = decisions
         cost = {
@@ -731,147 +743,38 @@ decision_pki_societal_restructuring = {
     }
 	sound = event_administrative_work
     potential = {
-		NOT = {
-			has_planet_flag = societal_reconstruction_started
-		}
         from = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
         }
+		NOT = {
+			has_planet_flag = pki_has_extra_districts
+		}
 		has_planet_flag = gigaflusion
 		is_planet_class = pc_pki_flusion_ecu
 		is_colony = yes
     }
+	prerequisites = { tech_katzen_housing }
 	allow = {
-		num_pops >= 750 
+		custom_tooltip_fail = {
+			text = pki_needs_scaling_colony
+			from = {
+				any_owned_planet = {
+					hidden_trigger = { has_modifier = pki_scaling_colony }
+				}
+			}
+		}
 	}
 	effect = {
 		custom_tooltip = pki_expand_flusion
 		hidden_effect = {
-			set_planet_flag = societal_reconstruction_started
-			planet = {
-				set_variable = {
-					which = pki_flusion_job_size
-					value = 1
-				}
-			}
-			add_deposit = d_pki_flusion_societal_restructuring
-			add_deposit = d_giga_job_size
-			export_trigger_value_to_variable = { trigger = num_pops variable = pki_flusion_pops }
-			divide_variable = { which = pki_flusion_pops value = 2 }
-			floor_variable = pki_flusion_pops
-			while = {
-				count = pki_flusion_pops
-				this = {
-					random_owned_pop = {
-						kill_pop = yes
-					}
-				}
-			}
-			pki_district_half = {
-				DISTRICT = district_pki_flusion_civilian_industry
-				VARIABLE = pki_num_civ_industry_districts
-			}
-			pki_district_half = {
-				DISTRICT = district_pki_flusion_heavy_industry
-				VARIABLE = pki_num_heavy_industry_districts
-			}
-			pki_district_half = {
-				DISTRICT = district_pki_flusion_science
-				VARIABLE = pki_num_science_districts
-			}
-			pki_district_half = {
-				DISTRICT = district_pki_flusion_mining
-				VARIABLE = pki_num_mining_districts
-			}
-			pki_district_half = {
-				DISTRICT = district_pki_flusion_farming
-				VARIABLE = pki_num_farming_districts
-			}
-			pki_district_half = {
-				DISTRICT = district_pki_flusion_power
-				VARIABLE = pki_num_energy_districts
-			}
-		}
-	}
-}
-
-decision_pki_further_restructuring = {
-	enactment_time = 3600
-	resources = {
-        category = decisions
-        cost = {
-			alloys = 30000
-			minerals = 50000
-			unity = 10000
-			multiplier = pki_flusion_job_size
-        }
-		cost = {
-			influence = 500
-		}
-    }
-	sound = event_administrative_work
-    potential = {
-        from = {
-			has_origin = origin_katzen
-        }
-		has_planet_flag = societal_reconstruction_started
-		has_planet_flag = gigaflusion
-		is_planet_class = pc_pki_flusion_ecu
-		is_colony = yes
-    }
-	allow = {
-		num_pops >= 750 
-	}
-	effect = {
-		custom_tooltip = pki_expand_flusion_more
-		hidden_effect = {
-			planet = {
-				multiply_variable = { 
-					which = pki_flusion_job_size
-					value = 1.5
-				}
-			}
-			export_trigger_value_to_variable = { trigger = num_pops variable = pki_flusion_pops }
-			divide_variable = { which = pki_flusion_pops value = 2 }
-			floor_variable = pki_flusion_pops
-			while = {
-				count = pki_flusion_pops
-				this = {
-					random_owned_pop = {
-						kill_pop = yes
-					}
-				}
-			}
-			pki_district_half = {
-				DISTRICT = district_pki_flusion_civilian_industry
-				VARIABLE = pki_num_civ_industry_districts
-			}
-			pki_district_half = {
-				DISTRICT = district_pki_flusion_heavy_industry
-				VARIABLE = pki_num_heavy_industry_districts
-			}
-			pki_district_half = {
-				DISTRICT = district_pki_flusion_science
-				VARIABLE = pki_num_science_districts
-			}
-			pki_district_half = {
-				DISTRICT = district_pki_flusion_mining
-				VARIABLE = pki_num_mining_districts
-			}
-			pki_district_half = {
-				DISTRICT = district_pki_flusion_farming
-				VARIABLE = pki_num_farming_districts
-			}
-			pki_district_half = {
-				DISTRICT = district_pki_flusion_power
-				VARIABLE = pki_num_energy_districts
-			}
-			add_deposit = d_pki_flusion_societal_restructuring
+			set_planet_flag = pki_has_extra_districts
+			add_deposit = d_pki_flusion_extra_districts
 		}
 	}
 }
 
 decision_create_kaiser_legion = {
+	icon = decision_martial_law
 	potential = {
 		from = {
 			pki_is_katzenartig_imperium = yes
@@ -901,6 +804,7 @@ decision_create_kaiser_legion = {
 
 decision_pki_sector_auto = {
 	enactment_time = 1080
+	icon = decision_expel_population
 	resources = {
 		category = decisions
 		cost = {

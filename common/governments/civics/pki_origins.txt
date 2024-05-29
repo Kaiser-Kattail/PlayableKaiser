@@ -8,6 +8,7 @@ origin_katzen = {
 	possible = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 		civics = { NOT = { value = civic_fanatic_purifiers } }
+		species_class = { NOT = { value = MACHINE } }
 		authority = {
 			value = auth_dictatorial
 		}
