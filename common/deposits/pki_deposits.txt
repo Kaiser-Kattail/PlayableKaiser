@@ -886,7 +886,7 @@ d_pki_flusion_extra_districts = {
 	is_for_colonizable = yes
 	drop_weight = { weight = 0 }
 	potential = { always = no }
-	icon = unused/d_colony_settlement
+	icon = d_leisure_arcology
 
 	triggered_planet_modifier = {
 		planet_max_districts_add = 1

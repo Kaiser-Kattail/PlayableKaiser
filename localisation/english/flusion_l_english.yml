@@ -227,8 +227,12 @@
     pki_expand_flusion: "$MOD_PLANET_MAX_DISTRICTS_ADD$: §G+1§! and District Energy Upkeep: §R+5%§! for every §YSemiautonomous Katzenkolonies§!"
     pki_needs_scaling_colony: "£trigger_no£Must have a §YSemiautonomous Katzenkolonie§!"
 
-    decision_pki_extra_districts: "Expansion"
-    decision_pki_extra_districts_desc: "By delegating the management of planets to their local government, resources can be reallocated back on [planet.GetName]."
+    decision_pki_extra_districts: "Planetary Expansion"
+    decision_pki_extra_districts_desc: "We can add new layers to the behemoth that is the Flusio-Arcology, though it will require support from our other colonies."
+
+    d_pki_flusion_extra_districts: "Expanded Layers"
+    d_pki_flusion_extra_districts_desc: "The expansion of Flusion was often thought of post-unification. Truly a marvel to see it to fruition."
+
 
     # Opinions
     opinion_katzen_militarism:0 "Katzen Menace"
