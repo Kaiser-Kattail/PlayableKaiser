@@ -1,6 +1,6 @@
 origin_katzen = {
 	is_origin = yes
-	icon = "gfx/interface/icons/origins/origins_life_seeded.dds"
+	icon = "gfx/interface/icons/origins/pki_katzen_origin.dds"
 	picture = GFX_evt_flusion
 	
 	description = origin_tooltip_pki_katzen_effects
@@ -9,6 +9,7 @@ origin_katzen = {
 	possible = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 		civics = { NOT = { value = civic_fanatic_purifiers } }
+		species_class = { NOT = { value = MACHINE } }
 		authority = {
 			value = auth_dictatorial
 		}

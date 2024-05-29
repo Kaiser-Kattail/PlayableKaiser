@@ -43,7 +43,7 @@ tr_katzen_planetside_garrisons = {
 
 tr_katzen_logistiks = {
 	modifier = {
-		armies_upkeep_mult = -0.35
+		armies_upkeep_mult = -0.30
 		planet_army_build_speed_mult = 0.2
 	}
 
@@ -105,103 +105,48 @@ tr_flusion_adopt = {
 tr_flusion_finish = {
 	# the refund effect is implemented elsewhere
 	on_enabled = {
-		set_country_flag = finished_flusiocentrism
-		if = {
-			limit = {
-				NOT = {
-					has_technology = tech_katzen_flusioarc
-				}
-			}
-			give_technology = {
+		hidden_effect = {
+			add_tech_progress = {
 				tech = tech_katzen_flusioarc
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_technology = tech_capital_productivity_1
-				}
-			}
-			give_technology = {
-				tech = tech_capital_productivity_1
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_technology = tech_katzen_reactor
-				}
+				progress = 0.25
 			}
 			add_tech_progress = {
 				tech = tech_katzen_reactor
 				progress = 0.25
 			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_technology = tech_katzen_forge
-				}
+			add_tech_progress = {
+				tech = tech_capital_productivity_1
+				progress = 0.25
 			}
 			add_tech_progress = {
 				tech = tech_katzen_forge
 				progress = 0.25
 			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_technology = tech_katzen_habitability
-				}
-			}
 			add_tech_progress = {
 				tech = tech_katzen_habitability
 				progress = 0.25
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_technology = tech_katzen_lab
-				}
 			}
 			add_tech_progress = {
 				tech = tech_katzen_lab
 				progress = 0.25
 			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_technology = tech_katzen_luxuries
-				}
-			}
 			add_tech_progress = {
 				tech = tech_katzen_luxuries
 				progress = 0.25
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_technology = tech_katzen_rr
-				}
 			}
 			add_tech_progress = {
 				tech = tech_katzen_rr
 				progress = 0.25
 			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_technology = tech_katzen_theater
-				}
-			}
 			add_tech_progress = {
 				tech = tech_katzen_theater
 				progress = 0.25
 			}
+			add_tech_progress = {
+				tech = tech_katzen_housing
+				progress = 0.25
+			}
+			set_country_flag = finished_flusiocentrism
 		}
 	}
 	custom_tooltip_with_modifiers = "tr_flusion_finish_effect"

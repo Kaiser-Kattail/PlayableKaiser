@@ -19,15 +19,40 @@ should_count_towards_leader_cap = {
 }
 
 can_be_part_of_galactic_community = {
-	OR = {
-		NOT = {
+	custom_tooltip = {
+		fail_text = "community_default_failtext"
+		is_country_type = default
+	}
+	custom_tooltip = {
+		fail_text = "community_homicidal_failtext"
+		NOR = {
+			has_civic = civic_fanatic_purifiers
+			has_civic = civic_hive_devouring_swarm
+			has_civic = civic_machine_terminator
+		}
+	}
+	custom_tooltip = {
+		fail_text = "community_declared_crisis_failtext"
+		has_been_declared_crisis = no
+	}
+	custom_tooltip = {
+		fail_text = "community_declared_crisis_failtext"
+		#fail_text = "community_overlord_declared_crisis_failtext"
+		OR = {
+			NOT = { exists = overlord }
+			overlord = { has_been_declared_crisis = no }
+		}
+	}
+	custom_tooltip = {
+		fail_text = "community_declared_crisis_failtext"
+		NAND = {
 			pki_is_katzenartig_imperium = yes
 			has_global_flag = pki_galactic_tension_stage_5
 		}
-		NOT = {
+		NAND = {
+			pki_is_katzenartig_imperium = yes
 			has_global_flag = galcom_kaiser_crusade
 			OR = {
-				pki_is_katzenartig_imperium = yes
 				pki_is_katzprotektorat = yes
 				pki_is_allied_with_katzen = yes
 			}

@@ -419,14 +419,14 @@ d_ravaka_volcano = {
 
 	potential = { always = no }
 
-	planet_modifier = { 
+	planet_modifier = {
 		planet_jobs_alloys_produces_mult = 0.10
 	}
 
-    resources = {
+	resources = {
 		category = planet_deposits
 		produces = {
-            rare_crystals = 3
+			rare_crystals = 3
 		}
 	}
 
@@ -435,17 +435,15 @@ d_ravaka_volcano = {
 	}
 }
 
-######## Jobs Size Deposit #######
-
-d_pki_flusion_societal_restructuring = {
+d_pki_flusion_extra_districts = {
 	is_for_colonizable = yes
 	drop_weight = { weight = 0 }
 	potential = { always = no }
-	icon = d_birch_structure
+	icon = d_leisure_arcology
 
-	planet_modifier = {
-		giga_planet_job_size = 0.5
-		planet_building_build_speed_mult = 0.1
-		planet_decision_enact_speed_mult = 0.1
+	triggered_planet_modifier = {
+		planet_max_districts_add = 1
+		planet_districts_energy_upkeep_mult = 0.05
+		mult = value:pki_extra_districts_value
 	}
 }

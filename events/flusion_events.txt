@@ -371,8 +371,8 @@ country_event = {
 				}
 				colors = {
 					"blue"
-					"dark_blue"
-					"black"
+					"indigo"
+					"null"
 					"null"
 				}
 			}
@@ -918,7 +918,7 @@ country_event = {
 			limit = {
 				NOR = {
 					has_trait = pki_katzen_trait_elite
-					has_trait = pki_leader_trait_kaiser_kattail
+					has_trait = pki_leader_trait_ruler_kaiser_kattail
 				}
 				leader_class = official
 			}
@@ -928,7 +928,7 @@ country_event = {
 			limit = {
 				NOR = {
 					has_trait = pki_katzen_trait_elite
-					has_trait = pki_leader_trait_kaiser_kattail
+					has_trait = pki_leader_trait_ruler_kaiser_kattail
 				}
 				leader_class = official
 				NOT = { is_same_value = event_target:leader_1 }
@@ -939,7 +939,7 @@ country_event = {
 			limit = {
 				NOR = {
 					has_trait = pki_katzen_trait_elite
-					has_trait = pki_leader_trait_kaiser_kattail
+					has_trait = pki_leader_trait_ruler_kaiser_kattail
 				}
 				leader_class = official
 				NOT = { is_same_value = event_target:leader_1 }
@@ -951,7 +951,7 @@ country_event = {
 			limit = {
 				NOR = {
 					has_trait = pki_katzen_trait_elite
-					has_trait = pki_leader_trait_kaiser_kattail
+					has_trait = pki_leader_trait_ruler_kaiser_kattail
 				}
 				leader_class = official
 				NOT = { is_same_value = event_target:leader_1 }
@@ -964,7 +964,7 @@ country_event = {
 			limit = {
 				NOR = {
 					has_trait = pki_katzen_trait_elite
-					has_trait = pki_leader_trait_kaiser_kattail
+					has_trait = pki_leader_trait_ruler_kaiser_kattail
 				}
 				leader_class = official
 				NOT = { is_same_value = event_target:leader_1 }
@@ -1094,7 +1094,7 @@ country_event = {
 			limit = {
 				NOR = {
 					has_trait = pki_katzen_trait_elite
-					has_trait = pki_leader_trait_kaiser_kattail
+					has_trait = pki_leader_trait_ruler_kaiser_kattail
 				}
 				leader_class = scientist
 			}
@@ -1104,7 +1104,7 @@ country_event = {
 			limit = {
 				NOR = {
 					has_trait = pki_katzen_trait_elite
-					has_trait = pki_leader_trait_kaiser_kattail
+					has_trait = pki_leader_trait_ruler_kaiser_kattail
 				}
 				leader_class = scientist
 				NOT = { is_same_value = event_target:leader_1 }
@@ -1115,7 +1115,7 @@ country_event = {
 			limit = {
 				NOR = {
 					has_trait = pki_katzen_trait_elite
-					has_trait = pki_leader_trait_kaiser_kattail
+					has_trait = pki_leader_trait_ruler_kaiser_kattail
 				}
 				leader_class = scientist
 				NOT = { is_same_value = event_target:leader_1 }
@@ -1127,7 +1127,7 @@ country_event = {
 			limit = {
 				NOR = {
 					has_trait = pki_katzen_trait_elite
-					has_trait = pki_leader_trait_kaiser_kattail
+					has_trait = pki_leader_trait_ruler_kaiser_kattail
 				}
 				leader_class = scientist
 				NOT = { is_same_value = event_target:leader_1 }
@@ -1140,7 +1140,7 @@ country_event = {
 			limit = {
 				NOR = {
 					has_trait = pki_katzen_trait_elite
-					has_trait = pki_leader_trait_kaiser_kattail
+					has_trait = pki_leader_trait_ruler_kaiser_kattail
 				}
 				leader_class = scientist
 				NOT = { is_same_value = event_target:leader_1 }
@@ -1270,7 +1270,7 @@ country_event = {
 			limit = {
 				NOR = {
 					has_trait = pki_katzen_trait_elite
-					has_trait = pki_leader_trait_kaiser_kattail
+					has_trait = pki_leader_trait_ruler_kaiser_kattail
 				}
 				leader_class = commander
 			}
@@ -1280,7 +1280,7 @@ country_event = {
 			limit = {
 				NOR = {
 					has_trait = pki_katzen_trait_elite
-					has_trait = pki_leader_trait_kaiser_kattail
+					has_trait = pki_leader_trait_ruler_kaiser_kattail
 				}
 				leader_class = commander
 				NOT = { is_same_value = event_target:leader_1 }
@@ -1291,7 +1291,7 @@ country_event = {
 			limit = {
 				NOR = {
 					has_trait = pki_katzen_trait_elite
-					has_trait = pki_leader_trait_kaiser_kattail
+					has_trait = pki_leader_trait_ruler_kaiser_kattail
 				}
 				leader_class = commander
 				NOT = { is_same_value = event_target:leader_1 }
@@ -1303,7 +1303,7 @@ country_event = {
 			limit = {
 				NOR = {
 					has_trait = pki_katzen_trait_elite
-					has_trait = pki_leader_trait_kaiser_kattail
+					has_trait = pki_leader_trait_ruler_kaiser_kattail
 				}
 				leader_class = commander
 				NOT = { is_same_value = event_target:leader_1 }
@@ -1316,7 +1316,7 @@ country_event = {
 			limit = {
 				NOR = {
 					has_trait = pki_katzen_trait_elite
-					has_trait = pki_leader_trait_kaiser_kattail
+					has_trait = pki_leader_trait_ruler_kaiser_kattail
 				}
 				leader_class = commander
 				NOT = { is_same_value = event_target:leader_1 }

@@ -1,5 +1,5 @@
 katzen_war_forge_0 = {
-	entity = "construction_platform_entity"
+	entity = ""
 	construction_entity = "katzen_war_forge_entity"
 	portrait = "GFX_megastructure_construction_background"
 	place_entity_on_planet_plane = no

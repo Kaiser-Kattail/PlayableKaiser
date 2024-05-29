@@ -8,7 +8,7 @@ tech_katzen_housing = {
 	}
 	prerequisites = {
 		"tech_planetary_infrastructure_1"
-		"tech_housing_2"
+		"tech_housing_1"
 	}
 	weight = @tier4weight1
 	weight_modifier = {

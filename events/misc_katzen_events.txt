@@ -34,127 +34,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = pki_misc.3
-	is_triggered_only = yes
-	hide_window = yes
-	trigger = {
-		has_origin = origin_katzen
-	}
-	immediate = {
-		set_variable = { #count total systems, used so kaiser can change the name
-			which = "player_katzen_galaxy_total_system_count"
-			value = 0
-		}
-		every_system = { #every system in galaxy adds 1
-			event_target:pki_player = {
-				change_variable = {
-					which = "player_katzen_galaxy_total_system_count"
-					value = 1
-				}
-			}
-		}
-		set_variable = { #count katzen systems, used so kaiser can change the name
-			which = player_katzen_total_system_count
-			value = 0
-		}
-		every_system_within_border = { #count katzen systems
-			event_target:pki_player = {
-				change_variable = {
-					which = player_katzen_total_system_count
-					value = 1
-				}
-			}
-		}
-		every_subject = {
-			every_system_within_border = { #count katzen systems
-				event_target:pki_player = {
-					change_variable = {
-						which = player_katzen_total_system_count
-						value = 1
-					}
-				}
-			}
-		}
-		set_variable = { #check for greater katzen imperium
-			which = "player_greater_imperium_limit"
-			value = player_katzen_galaxy_total_system_count
-		}
-		multiply_variable = { #the limit to form greater imperium is 45% the total systems
-			which = "player_greater_imperium_limit"
-			value = 0.45
-		}
-		set_variable = { #check for galactic katzen imperium
-			which = "player_galactic_imperium_limit"
-			value = player_katzen_galaxy_total_system_count
-		}
-		multiply_variable = { #the limit to form galactic imperium is 75% the total systems
-			which = "player_galactic_imperium_limit"
-			value = 0.75
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_country_flag = player_big_katzen_empire_formed
-				}
-				check_variable = {
-					which = player_katzen_total_system_count
-					value >= player_greater_imperium_limit
-				}
-			}
-			set_country_flag = player_big_katzen_empire_formed
-			change_country_flag = {
-				icon = {
-					category="domination"
-					file="domination_3.dds"
-				}
-				background = {
-					category="backgrounds"
-					file="v.dds"
-				}
-				colors = {
-					"indigo"
-					"dark_purple"
-					"null"
-					"null"
-				}
-			}
-			set_name = "NAME_BIG_KATZEN_EMPIRE"
-			every_country = { country_event = { id = pki_misc.4 } }
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_country_flag = player_galactic_katzen_empire_formed
-				}
-				check_variable = {
-					which = player_katzen_total_system_count
-					value >= player_galactic_imperium_limit
-				}
-			}
-			set_country_flag = player_galactic_katzen_empire_formed
-			change_country_flag = {
-				icon = {
-					category="domination"
-					file="domination_18.dds"
-				}
-				background = {
-					category="backgrounds"
-					file="circle.dds"
-				}
-				colors = {
-					"indigo"
-					"dark_blue"
-					"null"
-					"null"
-				}
-			}
-			set_name = "NAME_GALACTIC_KATZEN_EMPIRE"
-			every_country = { country_event = { id = pki_misc.5 } }
-		}
-	}
-}
-
 country_event = { #big
 	id = pki_misc.4
 	title = "pki_misc.4.name"
@@ -689,6 +568,7 @@ country_event = {
 			every_system_megastructure = {
 				if = {
 					limit = {
+						is_megastructure_type = katzen_war_forge_1
 						prev = {
 							any_fleet_in_system = {
 								NOT = {
@@ -722,7 +602,26 @@ country_event = {
 								upgradable = no
 							}
 							set_location = prev
+							set_fleet_flag = warforge_platform
 							set_fleet_flag = warforge_platform@prev
+						}
+					}
+					if = {
+						limit = {
+							space_owner = {
+								pki_is_katzprotektorat = yes
+							}
+						}
+						solar_system = {
+							every_system_planet = {
+								limit = {
+									has_planet_flag = war_forge
+								}
+								add_modifier = {
+									modifier = pki_warforge_in_orbit
+									days = -1
+								}
+							}
 						}
 					}
 				}
@@ -1328,9 +1227,29 @@ country_event = {
 	}
 
 	immediate = {
-		add_opinion_modifier = {
-			modifier = opinion_katzen_militarism
-			who = event_target:pki_player
+		if = {
+			limit = {
+				NOR = {
+					pki_is_allied_with_katzen = yes
+					pki_is_katzprotektorat = yes
+				}
+			}
+			add_opinion_modifier = {
+				modifier = opinion_katzen_militarism
+				who = event_target:pki_player
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					pki_is_allied_with_katzen = yes
+					pki_is_katzprotektorat = yes
+				}
+			}
+			remove_opinion_modifier = {
+				modifier = opinion_katzen_militarism
+				who = event_target:pki_player
+			}
 		}
 	}
 }

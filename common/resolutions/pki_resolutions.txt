@@ -359,13 +359,12 @@ resolution_pki_anti_kaiser_crusade = {
     }
 
     potential = {
-        has_global_flag = pki_galactic_tension_stage_6
+        has_global_flag = pki_crusade_unlocked
         AND = {
             has_global_flag = pki_katzen_is_being_played
             NOT = { has_global_flag = pki_katzen_defeated }
         }
         pki_is_katzenartig_imperium = no
-
     }
 
     active = {
