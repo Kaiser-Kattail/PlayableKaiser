@@ -30,15 +30,14 @@
     pki_air_combat_tt: "Air Supremacy: [pki_air_supremacy_color][pki_air_supremacy]%§!\n\n§HYour Air Wings:§!\nFighters: §Y[owner.pki_num_fighters]§!\nClose Air Support: §Y[owner.pki_num_cas]§!\n\n§REnemy Air Wings:§!\nFighters: §Y[event_target:pki_conquest_target.pki_num_fighters]§!\nClose Air Support: §Y[event_target:pki_conquest_target.pki_num_cas]§!"
 
     pki_industry_total: "Industry: §Y[event_target:pki_player.pki_used_industry]§!/§Y[pki_total_industry]§!"
-    pki_industry_total_tt: "Effective Industry: §Y[pki_total_industry]§!\n- From Factories: §Y[event_target:pki_player.pki_industry_level]§!\n\nIndustry used for Factory construction: §Y[event_target:pki_player.pki_used_industry]§!\nFactory construction progress: §Y[pki_industry_factory_progress_player]§!/§H1000§! (x§H[pki_industry_new_factories]§!)\nMonthly construction progress: §Y+[pki_industry_factories_monthly_progress]§!\n\n§Y[pki_job_industry_factories]§! unused Effective Industry provides $mod_planet_jobs_produces_mult$: §G+[pki_job_industry_factories]%§! on [event_target:pki_player.capital_scope.GetName]"
-
-    pki_economy_title: "Economy:"
+    pki_industry_total_tt: "Effective Industry: §Y[pki_total_industry]§!\n\nIndustry used for Factory construction: §Y[event_target:pki_player.pki_used_industry]§!\nFactory construction progress: §Y[pki_industry_factory_progress_player]§!/§H1000§! (x§H[pki_industry_new_factories]§!)\nMonthly construction progress: §Y+[pki_industry_factories_monthly_progress]§!\n\n§Y[pki_job_industry_factories]§! unused Effective Industry provides $mod_planet_jobs_produces_mult$: §G+[pki_job_industry_factories]%§! on [event_target:pki_player.capital_scope.GetName]"
 
     pki_text_color_green: "§G"
     pki_text_color_red: "§R"
     pki_text_color_yellow: "§Y"
     pki_text_color_orange: "§H"
     pki_text_color_pink: "§P"
+    pki_text_color_close: "§!"
 
     pki_building_slots_total: "Building Slots: §Y[pki_industry_building_slots]§!"
 
@@ -59,14 +58,41 @@
     #mod_job_pki_war_worker_drone_per_pop_short:0 "\n§G+1§! £mod_job_pki_war_worker_drone_add£ per $VALUE$ £pop£"
 
 
-    PKI_CANT_CONTACT_SELF: "We cannot contact our self."
+    PKI_DIPLOMACY_TT: "§H$DIPLOMACY$§!\n$COUNTRY_FLAG_TOOLTIP_LEFT_CLICK_TO_DIPLOMACY$"
+    PKI_CANT_CONTACT_SELF: "$GALAXY_VIEW_EMPIRE_DIPLOMACY_BUTTON_SELF$"
+    pki_goodbye: "Goodbye."
 
     pki_map_selected_country_info: ""
 
+    PKI_MAP_WORLD_DOMINATION: "£planet£World Domination: §Y[pki_world_domination]%§!"
+
     PKI_COUNTRY_TITLE: "[event_target:pki_selected_country.GetName]"
-    PKI_COUNTRY_INFO_ECONOMY: "§YEconomy§!:\n$t$Factories: §Y[event_target:pki_selected_country.pki_industry_level]§!\n$t$Building Slots: §Y[event_target:pki_selected_country.pki_building_slots]§!"
-    PKI_COUNTRY_INFO_MILITARY: "§YMilitary§!:\n$t$Ground Divisions: §Y[event_target:pki_selected_country.pki_army_count]§!\n$t$Air Wings: §Y[event_target:pki_selected_country.pki_planes_count]§!"
-    PKI_COUNTRY_INFO: "$PKI_COUNTRY_INFO_ECONOMY$\n\n$PKI_COUNTRY_INFO_MILITARY$[pki_map_special_info]"
+
+    PKI_SELECTED_COUNTRY_FACTORIES: "£pki_factory£ §Y[event_target:pki_selected_country.pki_industry_level]§!"
+    PKI_SELECTED_COUNTRY_BUILDING_SLOTS: "£building£ §Y[event_target:pki_selected_country.pki_building_slots]§!"
+    PKI_SELECTED_COUNTRY_ARMIES: "£military_ship£§Y[event_target:pki_selected_country.pki_army_count]§!"
+    PKI_SELECTED_COUNTRY_PLANES: "£pki_plane£ §Y[event_target:pki_selected_country.pki_planes_count]§!"
+
+    PKI_SELECTED_COUNTRY_FACTORIES_tt: "§HFactories§!"
+    PKI_SELECTED_COUNTRY_BUILDING_SLOTS_tt: "§HBuilding Slots§!"
+    PKI_SELECTED_COUNTRY_ARMIES_tt: "§HDivisions§!\nApproximate number of divisions this country has"
+    PKI_SELECTED_COUNTRY_PLANES_tt: "§HAir Wings§!\nApproximate number of air wings this country has"
+
+    pki_pre_ftl_military_1: "Pre-FTL Military"
+    pki_pre_ftl_military_2: "$pki_pre_ftl_military_1$"
+    pki_pre_ftl_military_3: "$pki_pre_ftl_military_1$"
+    pki_pre_ftl_military_1_desc: "Compared with most space-faring civilizations, they have access to all of their plant's resources. As we have not reached planetary unification, our military hasn't had the chance to expand that it so sorely needs."
+    pki_pre_ftl_military_2_desc: "$pki_pre_ftl_military_1_desc$"
+    pki_pre_ftl_military_3_desc: "$pki_pre_ftl_military_1_desc$"
+
+    pki_panzer_corp_1: "Katzen Panzer Corp"
+    pki_panzer_corp_2: "$pki_panzer_corp_1$"
+    pki_panzer_corp_3: "$pki_panzer_corp_1$"
+    pki_panzer_corp_1_desc: "They are the panzer elite, born to compete, never retreat"
+    pki_panzer_corp_2_desc: "$pki_panzer_corp_1_desc$"
+    pki_panzer_corp_3_desc: "$pki_panzer_corp_1_desc$"
+
+    mod_pki_tanks_max_add: "Max Panzer Divisions"
 
     PKI_KAT_title: "[event_target:pki_player.GetName]"
     PKI_PLAYER_INFO_ECONOMY: "§YEconomy§!:\n$t$Factories: §Y[event_target:pki_player.pki_industry_level]§!\n$t$Building Slots: §Y[pki_industry_building_slots]§!"
@@ -75,10 +101,11 @@
     pki_KAT_flavor: "§gThe dominant [event_target:pki_player.GetName], originating in the Central Katzen Plain, asserts control over [event_target:pki_player.capital_scope.GetName]. Fueled by militaristic might, it imposes a strict hierarchy, setting the stage for conflicts and the emergence of charismatic leaders.§!"
     pki_map_KAT_tt: "§H$PKI_KAT_title$§!\n$pki_KAT_flavor$"
 
-    pki_ATA_title: "Atallrian Sanctuary"
+    pki_ATA_title: "Atallria"
     pki_ATA_adj: "Atallrian"
     pki_ATA_leader: ""
+    pki_ATA_flavor: "§gblah blah blah lore goes here§!"
     NAME_ATA_SPECIES: "Atallrian"
     NAME_ATA_SPECIES_PLURAL: "Atallrians"
-    pki_map_ATA_tt: "§H$pki_ATA_title$§!\n"
+    pki_map_ATA_tt: "§H$pki_ATA_title$§!\n$pki_ATA_flavor$"
 

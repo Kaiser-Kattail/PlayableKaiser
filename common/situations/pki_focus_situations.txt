@@ -46,6 +46,20 @@ situation_naitonal_focus = {
             }
         }
     }
+
+    abort_trigger = {
+        switch = {
+            trigger = has_situation_flag
+            inline_script = {
+                script = pki_focuses/pki_all_focuses
+                SCRIPT_NAME = pki_focus_bypass_situation
+            }
+            default = {
+                always = no
+            }
+        }
+    }
+
     on_fail = {
         hidden_effect = { destroy_situation = this }
     }

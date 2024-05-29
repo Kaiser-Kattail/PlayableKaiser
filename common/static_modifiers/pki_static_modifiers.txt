@@ -112,10 +112,6 @@ pki_attack_moon_upkeep = {
 	shipsize_giga_massive_planet_upkeep = -0.75
 }
 
-pki_combat_width = {
-	planet_combat_width_add = 25
-}
-
 pki_galcom_mobilizes_against_kaiser = {
 	damage_vs_superior_empires_mult = 0.25
 }
@@ -150,4 +146,56 @@ pki_crisis_buffs = {
 	megastructure_build_speed_mult = 0.1
 	ship_starting_experience_add = 50
 	country_naval_cap_add = 50
+}
+
+pki_pre_ftl_military_1 = {
+	army_damage_mult = -0.5
+	army_health = -0.5
+	army_morale = -0.5
+	army_collateral_damage_mult = -0.75
+	army_disengage_chance_mult = -0.5
+	army_experience_gain_mult = -0.5
+	army_starting_experience_add = 0
+	planet_army_build_speed_mult = -0.5
+	armies_upkeep_mult = -0.5
+	armies_cost_mult = -0.5
+}
+
+pki_pre_ftl_military_2 = {
+	army_damage_mult = -0.25
+	army_health = -0.25
+	army_morale = -0.25
+	army_collateral_damage_mult = -0.50
+	army_disengage_chance_mult = -0.25
+	army_experience_gain_mult = -0.25
+	army_starting_experience_add = 50
+	planet_army_build_speed_mult = -0.25
+	armies_upkeep_mult = -0.25
+	armies_cost_mult = -0.25
+}
+
+pki_pre_ftl_military_3 = {
+	army_damage_mult = -0.15
+	army_health = -0.15
+	army_morale = -0.15
+	army_collateral_damage_mult = -0.25
+	army_disengage_chance_mult = -0.15
+	army_starting_experience_add = 100
+	armies_upkeep_mult = -0.15
+	armies_cost_mult = -0.15
+}
+
+pki_panzer_corp_1 = {
+	icon = gfx/interface/icons/modifiers/mod_pki_tank_max.dds
+	pki_tanks_max_add = 3
+}
+
+pki_panzer_corp_2 = {
+	icon = gfx/interface/icons/modifiers/mod_pki_tank_max.dds
+	pki_tanks_max_add = 5
+}
+
+pki_panzer_corp_3 = {
+	icon = gfx/interface/icons/modifiers/mod_pki_tank_max.dds
+	pki_tanks_max_add = 10
 }

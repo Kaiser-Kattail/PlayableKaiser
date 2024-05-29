@@ -9,7 +9,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			from = { is_country_type = flusion_nation }
+			from = { is_country_type = pki_flusion_nation }
 			pki_is_katzenartig_imperium = yes
 		}
 	}

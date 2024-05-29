@@ -89,11 +89,11 @@ KAT = {
 			sequential_name = KAT1_xx_ORD
 		}
 
-		katzensoldaten_army = {
+		pki_katzen_special_forces = {
 			sequential_name = KAT2_xx_ORD
 		}
 
-		gepanzertertank_army = {
+		pki_katzen_tanks = {
 			sequential_name = KAT3_xx_ORD
 		}
 

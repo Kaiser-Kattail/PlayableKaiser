@@ -1,6 +1,14 @@
 allow = {
-    custom_tooltip = {
+    custom_tooltip_success = {
         text = pki_$ARMY$_army_limit
+        hidden_trigger = {
+            event_target:pki_player = {
+                check_variable = {
+                    which = pki_$ARMY$_current
+                    value < value:pki_army_$ARMY$_limit
+                }
+            }
+        }
     }
     custom_tooltip_fail = {
         text = pki_$ARMY$_reached_limit
@@ -8,7 +16,7 @@ allow = {
             event_target:pki_player = {
                 check_variable = {
                     which = pki_$ARMY$_current
-                    value < pki_$ARMY$_limit
+                    value < value:pki_army_$ARMY$_limit
                 }
             }
         }

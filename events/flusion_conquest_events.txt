@@ -49,7 +49,7 @@ country_event = { #Flusion is INVADED
 		fromfrom = { has_planet_flag = pki_flusion_planet }
 		this = {
 			NOT = {
-				is_country_type = flusion_nation
+				is_country_type = pki_flusion_nation
 			}
 		}
 	}
@@ -74,7 +74,7 @@ country_event = {
 	trigger = {
 		fromfrom = { has_planet_flag = pki_flusion_planet }
 		this = {
-			is_country_type = flusion_nation
+			is_country_type = pki_flusion_nation
 		}
 	}
 	immediate = {
@@ -1007,7 +1007,7 @@ country_event = { #Flusion is INVADED
 			limit = {
 				OR = {
 					is_country_type = flusion_coalition
-					is_country_type = flusion_nation
+					is_country_type = pki_flusion_nation
 				}
 			}
 			destroy_country = yes
@@ -1033,7 +1033,7 @@ country_event = { #Flusion is BUGGED
 		every_country = {
 			limit = {
 				is_country_type = flusion_coalition
-				is_country_type = flusion_nation
+				is_country_type = pki_flusion_nation
 			}
 			destroy_country = yes
 		}
@@ -1075,7 +1075,7 @@ country_event = {
 			NOT = {
 				any_country = {
 					OR = {
-						is_country_type = flusion_nation
+						is_country_type = pki_flusion_nation
 						is_country_type = flusion_coalition
 					}
 				}
@@ -1090,7 +1090,7 @@ country_event = {
 		}
 	}
 	immediate = {
-		player_flusion_unify_flusion = yes
+		set_country_flag = pki_unified_flusion
 		add_tech_progress = { tech = tech_pki_warforge progress = 0.25 }
 		add_modifier = {
 			modifier = pki_warforge_naval_cap
@@ -1100,10 +1100,6 @@ country_event = {
 		set_variable = {
 			which = pki_num_total_warforges
 			value = value:pki_num_total_warforges
-		}
-		event_target:pki_flusion_planet = {
-			remove_deposit = d_katown_palace_primitive
-			add_deposit = d_katown_palace
 		}
 		remove_country_flag = flusionian_war
 		country_event = {
@@ -1123,7 +1119,7 @@ country_event = { #work mfer
 		has_origin = origin_katzen
 		NOT = {
 			any_country = {
-				is_country_type = flusion_nation
+				is_country_type = pki_flusion_nation
 			}
 		}
 	}
@@ -1140,7 +1136,7 @@ country_event = { #work mfer
 		every_country = {
 			limit = {
 				is_country_type = flusion_coalition
-				is_country_type = flusion_nation
+				is_country_type = pki_flusion_nation
 			}
 			destroy_country = yes
 		}
@@ -1159,7 +1155,7 @@ country_event = {
 			has_planet_flag = pki_flusion_planet
 		}
 		this = {
-			is_country_type = flusion_nation
+			is_country_type = pki_flusion_nation
 		}
 	}
 	immediate = {

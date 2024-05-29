@@ -358,26 +358,179 @@ pki_clear_map_selector_mults = {
 }
 
 pki_map_annex = {
-    set_country_flag = pki_map_annexed_$COUNTRY$
-    change_variable = {
-        which = pki_industry_level
-        value = event_target:pki_$COUNTRY$_country.pki_industry_level
-    }
-    event_target:pki_flusion_planet = {
-        add_deposit = d_pki_$COUNTRY$
-        while = {
-            count = event_target:pki_$COUNTRY$_country.pki_pops
-            create_pop = {
-                species = event_target:pki_$COUNTRY$_species
-                ethos = random
-                effect = {
-                    add_modifier = {
-                        modifier = pop_recently_conquered
-                        days = 1800
+    if = {
+        limit = {
+            any_country = {
+                is_country_type = pki_flusion_nation
+                has_country_flag = pki_$COUNTRY$
+            }
+        }
+        set_country_flag = pki_map_annexed_$COUNTRY$
+        change_variable = {
+            which = pki_industry_level
+            value = event_target:pki_$COUNTRY$_country.pki_industry_level
+        }
+        event_target:pki_flusion_planet = {
+            add_deposit = d_pki_$COUNTRY$
+            while = {
+                count = event_target:pki_$COUNTRY$_country.pki_pops
+                create_pop = {
+                    species = event_target:pki_$COUNTRY$_species
+                    ethos = random
+                    effect = {
+                        add_modifier = {
+                            modifier = pop_recently_conquered
+                            days = 1800
+                        }
                     }
                 }
             }
         }
+        every_country = {
+            limit = {
+                is_country_type = pki_flusion_nation
+                has_country_flag = pki_$COUNTRY$
+            }
+            destroy_country = yes
+        }
+    }
+}
+
+pki_map_clear = {
+    remove_country_flag = pki_map_occupied_$COUNTRY$
+    remove_country_flag = pki_map_annexed_$COUNTRY$
+}
+
+pki_map_occupy = {
+    set_country_flag = pki_map_occupied_$COUNTRY$
+}
+
+pki_annex_all = {
+    pki_all_countries_effect = {
+        EFFECT = pki_map_annex
+    }
+}
+
+pki_occupy_all = {
+    pki_all_countries_effect = {
+        EFFECT = pki_map_occupy
+    }
+}
+
+pki_clear_all = {
+    pki_all_countries_effect = {
+        EFFECT = pki_map_clear
+    }
+}
+
+pki_all_countries_effect = {
+    $EFFECT$ = {
+        COUNTRY = ATA
+    }
+    $EFFECT$ = {
+        COUNTRY = AXO
+    }
+    $EFFECT$ = {
+        COUNTRY = BYU
+    }
+    $EFFECT$ = {
+        COUNTRY = CYA
+    }
+    $EFFECT$ = {
+        COUNTRY = DTC
+    }
+    $EFFECT$ = {
+        COUNTRY = GNA
+    }
+    $EFFECT$ = {
+        COUNTRY = GTA
+    }
+    $EFFECT$ = {
+        COUNTRY = HAR
+    }
+    $EFFECT$ = {
+        COUNTRY = HOS
+    }
+    $EFFECT$ = {
+        COUNTRY = ILY
+    }
+    $EFFECT$ = {
+        COUNTRY = KIT
+    }
+    $EFFECT$ = {
+        COUNTRY = KRK
+    }
+    $EFFECT$ = {
+        COUNTRY = KRO
+    }
+    $EFFECT$ = {
+        COUNTRY = LAU
+    }
+    $EFFECT$ = {
+        COUNTRY = LIN
+    }
+    $EFFECT$ = {
+        COUNTRY = MER
+    }
+    $EFFECT$ = {
+        COUNTRY = NDK
+    }
+    $EFFECT$ = {
+        COUNTRY = NDR
+    }
+    $EFFECT$ = {
+        COUNTRY = NEK
+    }
+    $EFFECT$ = {
+        COUNTRY = NOR
+    }
+    $EFFECT$ = {
+        COUNTRY = PFL
+    }
+    $EFFECT$ = {
+        COUNTRY = PGM
+    }
+    $EFFECT$ = {
+        COUNTRY = PHH
+    }
+    $EFFECT$ = {
+        COUNTRY = POZ
+    }
+    $EFFECT$ = {
+        COUNTRY = PRO
+    }
+    $EFFECT$ = {
+        COUNTRY = RAV
+    }
+    $EFFECT$ = {
+        COUNTRY = ROQ
+    }
+    $EFFECT$ = {
+        COUNTRY = RUS
+    }
+    $EFFECT$ = {
+        COUNTRY = SAR
+    }
+    $EFFECT$ = {
+        COUNTRY = SOB
+    }
+    $EFFECT$ = {
+        COUNTRY = TER
+    }
+    $EFFECT$ = {
+        COUNTRY = VIX
+    }
+    $EFFECT$ = {
+        COUNTRY = WAC
+    }
+    $EFFECT$ = {
+        COUNTRY = WIN
+    }
+    $EFFECT$ = {
+        COUNTRY = YIN
+    }
+    $EFFECT$ = {
+        COUNTRY = ZUS
     }
 }
 

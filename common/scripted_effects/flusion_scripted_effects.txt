@@ -1,4 +1,7 @@
 pki_create_flusion_nations = {
+
+	## SPECIES
+
 	event_target:pki_flusion_planet = {
 		inline_script = {
 			script = pki/pki_country_species_creation
@@ -46,165 +49,127 @@ pki_create_flusion_nations = {
 			"
 		}
 
-		create_species = {
-			name = "NAME_GTA_SPECIES"
-			plural = "NAME_GTA_SPECIES_PLURAL"
-			class = FUN
-			portrait = fun1
-			homeworld = this
-			traits = {
+		inline_script = {
+			script = pki/pki_country_species_creation
+			COUNTRY = GTA
+			CLASS = FUN
+			PORTRAIT = fun1
+			TRAITS = "
 				trait = trait_pc_continental_preference
 				trait = trait_delicious
 				trait = trait_erudite
 				trait = trait_wasteful
-			}
-			effect = {
-				save_global_event_target_as = pki_GTA_species
-			}
+			"
 		}
 
-		create_species = {
-			name = "NAME_KRO_SPECIES"
-			plural = "NAME_KRO_SPECIES_PLURAL"
-			class = ART
-			portrait = art15
-			homeworld = this
-			traits = {
+		inline_script = {
+			script = pki/pki_country_species_creation
+			COUNTRY = KRO
+			CLASS = ART
+			PORTRAIT = art15
+			TRAITS = "
 				trait = trait_pc_continental_preference
 				trait = trait_industrious
 				trait = trait_rapid_breeders
 				trait = trait_sedentary
 				trait = trait_repugnant
-			}
-			effect = {
-				save_global_event_target_as = pki_KRO_species
-			}
+			"
 		}
 
-		create_species = {
-			name = "NAME_MER_SPECIES"
-			plural = "NAME_MER_SPECIES_PLURAL"
-			class = PLANT
-			portrait = pla14
-			homeworld = this
-			traits = {
+		inline_script = {
+			script = pki/pki_country_species_creation
+			COUNTRY = MER
+			CLASS = PLANT
+			PORTRAIT = pla14
+			TRAITS = "
 				trait = trait_pc_continental_preference
 				trait = trait_intelligent
 				trait = trait_sedentary
 				trait = trait_wasteful
-			}
-			effect = {
-				save_global_event_target_as = pki_MER_species
-			}
+			"
 		}
 
-		create_species = {
-			name = "NAME_LAU_SPECIES"
-			plural = "NAME_LAU_SPECIES_PLURAL"
-			class = REP
-			portrait = rep8
-			homeworld = this
-			traits = {
+		inline_script = {
+			script = pki/pki_country_species_creation
+			COUNTRY = LAU
+			CLASS = REP
+			PORTRAIT = rep8
+			TRAITS = "
 				trait = trait_pc_continental_preference
 				trait = trait_rapid_breeders
-			}
-			effect = {
-				save_global_event_target_as = pki_LAU_species
-			}
+			"
 		}
 
-		create_species = {
-			name = "NAME_LIN_SPECIES"
-			plural = "NAME_LIN_SPECIES_PLURAL"
-			class = AVI
-			portrait = avi11
-			homeworld = this
-			traits = {
+		inline_script = {
+			script = pki/pki_country_species_creation
+			COUNTRY = LIN
+			CLASS = AVI
+			PORTRAIT = avi11
+			TRAITS = "
 				trait = trait_pc_continental_preference
 				trait = trait_talented
 				trait = trait_traditional
 				trait = trait_decadent
-			}
-			effect = {
-				save_global_event_target_as = pki_LIN_species
-			}
+			"
 		}
 
-		create_species = {
-			name = "NAME_PFL_SPECIES"
-			plural = "NAME_PFL_SPECIES_PLURAL"
-			class = FUN
-			portrait = fun11
-			homeworld = this
-			traits = {
+		inline_script = {
+			script = pki/pki_country_species_creation
+			COUNTRY = PFL
+			CLASS = FUN
+			PORTRAIT = fun11
+			TRAITS = "
 				trait = trait_pc_continental_preference
 				trait = trait_strong
 				trait = trait_nomadic
-			}
-			effect = {
-				save_global_event_target_as = pki_PFL_species
-			}
+			"
 		}
 
-		create_species = {
-			name = "NAME_RAV_SPECIES"
-			plural = "NAME_RAV_SPECIES_PLURAL"
-			class = HUM
-			portrait = humanoid_hp_01
-			homeworld = this
-			traits = {
+		inline_script = {
+			script = pki/pki_country_species_creation
+			COUNTRY = RAV
+			CLASS = HUM
+			PORTRAIT = humanoid_hp_01
+			TRAITS = "
 				trait = trait_pc_continental_preference
 				trait = trait_intelligent
 				trait = trait_sedentary
 				trait = trait_wasteful
-			}
-			effect = {
-				save_global_event_target_as = pki_RAV_species
-			}
+			"
 		}
 
-		create_species = {
-			name = "NAME_ROQ_SPECIES"
-			plural = "NAME_ROQ_SPECIES_PLURAL"
-			class = HUM
-			portrait = human
-			homeworld = this
-			traits = {
+		inline_script = {
+			script = pki/pki_country_species_creation
+			COUNTRY = ROQ
+			CLASS = HUM
+			PORTRAIT = human
+			TRAITS = "
 				trait = trait_pc_continental_preference
 				trait = trait_intelligent
 				trait = trait_charismatic
 				trait = trait_resilient
 				trait = trait_wasteful
-			}
-			effect = {
-				save_global_event_target_as = pki_ROQ_species
-			}
+			"
 		}
 
-		#Yinjites
-		create_species = {
-			name = "NAME_YIN_SPECIES"
-			plural = "NAME_YIN_SPECIES_PLURAL"
-			class = HUM
-			portrait = humanoid_hp_09
-			homeworld = this
-			traits = {
+		inline_script = {
+			script = pki/pki_country_species_creation
+			COUNTRY = YIN
+			CLASS = HUM
+			PORTRAIT = humanoid_hp_09
+			TRAITS = "
 				trait = trait_pc_continental_preference
 				trait = trait_industrious
 				trait = trait_sedentary
-			}
-			effect = {
-				save_global_event_target_as = pki_YIN_species
-			}
+			"
 		}
-		#Ezics
-		create_species = {
-			name = "NAME_ZUS_SPECIES"
-			plural = "NAME_ZUS_SPECIES_PLURAL"
-			class = REP
-			portrait = rep10
-			homeworld = this
-			traits = {
+
+		inline_script = {
+			script = pki/pki_country_species_creation
+			COUNTRY = ZUS
+			CLASS = REP
+			PORTRAIT = rep10
+			TRAITS = "
 				trait = trait_pc_continental_preference
 				trait = trait_venerable
 				trait = trait_adaptive
@@ -212,12 +177,10 @@ pki_create_flusion_nations = {
 				trait = trait_slow_learners
 				trait = trait_quarrelsome
 				trait = trait_slow_breeders
-			}
-			effect = {
-				save_global_event_target_as = pki_ZUS_species
-			}
+			"
 		}
 	}
+
 	#Create Flusion Nations
 
 	inline_script = {
@@ -247,352 +210,6 @@ pki_create_flusion_nations = {
 			}
 		}
 		room_name_override = ""
-	}
-}
-
-player_flusion_unify_flusion = {
-	event_target:pki_flusion_planet = {
-		remove_deposit = d_pki_flusion_nations
-		every_planet_army = {
-			limit = {
-				owner = {
-					OR = {
-						is_country_type = flusion_nation
-						is_country_type = flusion_coalition
-					}
-				}
-			}
-			remove_army = yes
-		}
-		while = {
-			count = 10
-			remove_deposit = d_annexed_region_solak
-		}
-		while = {
-			count = 10
-			remove_deposit = d_annexed_region_cookie
-		}
-		while = {
-			count = 10
-			remove_deposit = d_annexed_region_kronk
-		}
-		while = {
-			count = 10
-			remove_deposit = d_annexed_region_ravka
-		}
-		while = {
-			count = 10
-			remove_deposit = d_annexed_region_droog
-		}
-		while = {
-			count = 10
-			remove_deposit = d_annexed_region_zousa
-		}
-		if = {
-			limit = { event_target:pki_player = { NOT = { has_country_flag = solak_pop_acquired } } }
-			while = {
-				count = 5
-				create_pop = {
-					species = event_target:solakians
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
-				}
-			}
-			planet.owner = {
-				set_country_flag = solak_pop_acquired
-			}
-		}
-		if = {
-			limit = { event_target:pki_player = { NOT = { has_country_flag = cookie_pop_acquired } } }
-			while = {
-				count = 4
-				create_pop = {
-					species = event_target:cookians
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
-				}
-			}
-			planet.owner = {
-				set_country_flag = cookie_pop_acquired
-			}
-		}
-		if = {
-			limit = { event_target:pki_player = { NOT = { has_country_flag = kronk_pop_acquired } } }
-			while = {
-				count = 3
-				create_pop = {
-					species = event_target:kronks
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
-				}
-			}
-			planet.owner = {
-				set_country_flag = kronk_pop_acquired
-			}
-		}
-		if = {
-			limit = { event_target:pki_player = { NOT = { has_country_flag = ravka_pop_acquired } } }
-			while = {
-				count = 2
-				create_pop = {
-					species = event_target:ravkans
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
-				}
-			}
-			planet.owner = {
-				set_country_flag = ravka_pop_acquired
-			}
-		}
-		if = {
-			limit = { event_target:pki_player = { NOT = { has_country_flag = zousa_pop_acquired } } }
-			while = {
-				count = 1
-				create_pop = {
-					species = event_target:zousans
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
-				}
-			}
-			planet.owner = {
-				set_country_flag = zousa_pop_acquired
-			}
-		}
-		if = {
-			limit = { event_target:pki_player = { NOT = { has_country_flag = droog_pop_acquired } } }
-			while = {
-				count = 1
-				create_pop = {
-					species = event_target:droog
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
-				}
-			}
-			planet.owner = {
-				set_country_flag = droog_pop_acquired
-			}
-		}
-		if = {
-			limit = { event_target:pki_player = { NOT = { has_country_flag = ezic_pop_acquired } } }
-			while = {
-				count = 2
-				create_pop = {
-					species = event_target:ezics
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
-				}
-			}
-			planet.owner = {
-				set_country_flag = ezic_pop_acquired
-			}
-		}
-		if = {
-			limit = { event_target:pki_player = { NOT = { has_country_flag = mercuria_pop_acquired } } }
-			while = {
-				count = 1
-				create_pop = {
-					species = event_target:mercurians
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
-				}
-			}
-			planet.owner = {
-				set_country_flag = mercuria_pop_acquired
-			}
-		}
-		if = {
-			limit = { event_target:pki_player = { NOT = { has_country_flag = cyatianala_pop_acquired } } }
-			while = {
-				count = 1
-				create_pop = {
-					species = event_target:mercurians
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
-				}
-			}
-			planet.owner = {
-				set_country_flag = cyatianala_pop_acquired
-			}
-		}
-		if = {
-			limit = { event_target:pki_player = { NOT = { has_country_flag = yinja_pop_acquired } } }
-			while = {
-				count = 3
-				create_pop = {
-					species = event_target:yinjites
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
-				}
-			}
-			planet.owner = {
-				set_country_flag = yinja_pop_acquired
-			}
-		}
-		if = {
-			limit = { event_target:pki_player = { NOT = { has_country_flag = symbie_pop_acquired } } }
-			while = {
-				count = 2
-				create_pop = {
-					species = event_target:symbies
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
-				}
-			}
-			planet.owner = {
-				set_country_flag = symbie_pop_acquired
-			}
-		}
-		if = {
-			limit = { event_target:pki_player = { NOT = { has_country_flag = lauranaise_pop_acquired } } }
-			while = {
-				count = 4
-				create_pop = {
-					species = event_target:lauranaise
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
-				}
-			}
-			planet.owner = {
-				set_country_flag = lauranaise_pop_acquired
-			}
-		}
-		if = {
-			limit = { event_target:pki_flusion_planet = { NOT = { has_deposit = d_grand_kronk_quarry } } }
-			add_deposit = d_grand_kronk_quarry
-		}
-		if = {
-			limit = { event_target:pki_flusion_planet = { NOT = { has_deposit = d_ezic_farmland } } }
-			add_deposit = d_ezic_farmland
-		}
-		if = {
-			limit = { event_target:pki_flusion_planet = { NOT = { has_deposit = d_mercurian_plains } } }
-			add_deposit = d_mercurian_plains
-		}
-		if = {
-			limit = { event_target:pki_flusion_planet = { NOT = { has_deposit = d_yinjite_sea_mines } } }
-			add_deposit = d_yinjite_sea_mines
-		}
-		if = {
-			limit = { event_target:pki_flusion_planet = { NOT = { has_deposit = d_laurandar_shores } } }
-			add_deposit = d_laurandar_shores
-		}
-		if = {
-			limit = { event_target:pki_flusion_planet = { NOT = { has_deposit = d_propanian_mines } } }
-			add_deposit = d_propanian_mines
-		}
-		if = {
-			limit = { event_target:pki_flusion_planet = { NOT = { has_deposit = d_magnetic_puffy } } }
-			add_deposit = d_magnetic_puffy
-		}
-		if = {
-			limit = { event_target:pki_flusion_planet = { NOT = { has_deposit = d_cookian_steppes_mining } } }
-			add_deposit = d_cookian_steppes_mining
-		}
-		if = {
-			limit = { event_target:pki_flusion_planet = { NOR = { has_deposit = d_altarian_jungle has_deposit = d_altarian_island } } }
-			add_deposit = d_altarian_jungle
-		}
-		if = {
-			limit = { event_target:pki_flusion_planet = { NOR = { has_deposit = d_manglarian_junkyard has_deposit = d_restored_solak } } }
-			add_deposit = d_manglarian_junkyard
-		}
-		if = {
-			limit = { event_target:pki_flusion_planet = { NOR = { has_deposit = d_catspian_sea has_deposit = d_catspian_crystal_mines } } }
-			add_deposit = d_catspian_sea
-		}
-		if = {
-			limit = { event_target:pki_flusion_planet = { NOR = { has_deposit = d_northern_ice_cap has_deposit = d_polar_mineral_fields } } }
-			add_deposit = d_northern_ice_cap
-		}
-		if = {
-			limit = { event_target:pki_flusion_planet = { NOR = { has_deposit = d_southern_ice_cap has_deposit = d_antarctic_uranium_fields } } }
-			add_deposit = d_southern_ice_cap
-		}
-		if = {
-			limit = { event_target:pki_flusion_planet = { NOR = { has_deposit = d_meowriana_trench has_deposit = d_flusion_sea_temple } } }
-			add_deposit = d_meowriana_trench
-		}
-		if = {
-			limit = { event_target:pki_flusion_planet = { NOT = { has_deposit = d_solakian_factory } } }
-			add_deposit = d_solakian_factory
-		}
-		remove_deposit = d_pki_flusion_nations
-	}
-	every_country = {
-		limit = {
-			OR = {
-				is_country_type = flusion_nation
-				is_country_type = flusion_coalition
-			}
-		}
-		destroy_country = yes
-	}
-	set_global_flag = solakia_conquered
-	set_global_flag = cookie_conquered
-	set_global_flag = kronk_conquered
-	set_global_flag = ravka_conquered
-	set_global_flag = zousa_conquered
-	set_global_flag = droog_conquered
-	set_global_flag = ezic_conquered
-	set_global_flag = mercuria_conquered
-	set_global_flag = cyatianala_conquered
-	set_global_flag = yinja_conquered
-	set_global_flag = symbie_conquered
-	set_global_flag = lauranaise_conquered
-	set_country_flag = unified_flusion
-	random_situation = {
-		limit = {
-			is_situation_type = situation_world_tension
-		}
-		destroy_situation = this
 	}
 }
 

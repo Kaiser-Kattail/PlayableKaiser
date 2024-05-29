@@ -1,0 +1,11 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_text_pki_factory"
+        textureFile = "gfx/interface/icons/text_icons/mod_economy_capacity.dds"
+    }
+
+    spriteType = {
+        name = "GFX_text_pki_plane"
+        textureFile = "gfx/interface/icons/text_icons/plane_icon.dds"
+    }
+}

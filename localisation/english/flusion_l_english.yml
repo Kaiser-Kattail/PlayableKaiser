@@ -186,33 +186,6 @@
     d_symbyland_power:0 "Repurposed Nuclear Power Plants"
     d_symbyland_power_desc:0 "Entire fields of nuclear power plants can be powered by re-using leftover fissile material from the Rapturian War."
 
-
-    d_annexed_region_solak:0 "Roqualian Held Territory"
-    d_annexed_region_solak_desc:0 "As long as Roqualian forces hold our land, we cannot use it."
-    d_annexed_region_cookie: "Galletian Held Territory"
-    d_annexed_region_cookie_desc: "As long as Cookian forces hold our land, we cannot use it."
-    d_annexed_region_kronk: "Kronk Held Territory"
-    d_annexed_region_kronk_desc: "As long as Kronk forces hold our land, we cannot use it."
-    d_annexed_region_ravka:0 "Ravkan Held Territory"
-    d_annexed_region_ravka_desc:0 "As long as Ravkan forces hold our land, we cannot use it."
-    d_annexed_region_zousa:0 "Linterian Held Territory"
-    d_annexed_region_zousa_desc:0 "As long as Linterian forces hold our land, we cannot use it."
-    d_annexed_region_droog:0 "Droog Held Territory"
-    d_annexed_region_droog_desc:0 "As long as Droog forces hold our land, we cannot use it."
-    d_annexed_region_ezic:0 "Zuspri Held Territory"
-    d_annexed_region_ezic_desc:0 "As long as Zuspri forces hold our land, we cannot use it."
-    d_annexed_region_mercuria:0 "Mercurian Held Territory"
-    d_annexed_region_mercuria_desc:0 "As long as Mercurian forces hold our land, we cannot use it."
-    d_annexed_region_cyatianala:0 "Cyatianala Held Territory"
-    d_annexed_region_cyatianala_desc:0 "As long as Cyatianala forces hold our land, we cannot use it."
-    d_annexed_region_yinja:0 "Yinjite Held Territory"
-    d_annexed_region_yinja_desc:0 "As long as Yinjite forces hold our land, we cannot use it."
-    d_annexed_region_symbie:0 "Wacegi Held Territory"
-    d_annexed_region_symbie_desc:0 "As long as Wacegi forces hold our land, we cannot use it."
-    d_annexed_region_lauranaise:0 "Lauranaise Held Territory"
-    d_annexed_region_lauranaise_desc:0 "As long as Lauranaise forces hold our land, we cannot use it."
-    d_annexed_region_haranian:0 "Haranian Held Territory"
-    d_annexed_region_haranian_desc:0 "As long as Haranian forces hold our land, we cannot use it."
     d_centralized_industry: "Centralized Industry"
     d_centralized_industry_desc: "With our industry centralized on our capital, construction is faster than ever."
     d_flusion_bureaucracy: "Imperial Governance"
@@ -225,9 +198,6 @@
     d_bureau_of_benefits_desc: "With the empire administered from Flusion, things become simpler to organize. If not less efficient."
     d_bureau_of_colonial_benefits: "Flusionian Administration"
     d_bureau_of_colonial_benefits_desc: "With the empire administered from Flusion, things become simpler to organize. If not less efficient."
-
-    d_pki_flusion_societal_restructuring:0 "Societal Restructuring"
-    d_pki_flusion_societal_restructuring_desc:0 "Society has been redefined with these changes on our Flusio-Arcology. Our production is now limitless."
 
     # Opinions
     opinion_katzen_militarism:0 "Katzen Menace"
@@ -273,7 +243,6 @@
     building_player_siegfried_centcom_desc:0 "This vast network of reinforced bunkers houses the administrative heart of a Katzen Siegfried World, ensuring its defenders are as efficient as possible."
     building_pki_katzen_outpost: "Katzen Recruitment Camp"
     building_pki_katzen_outpost_desc: "A sprawling recruitment office, propaganda center, and barracks offers a live-fire training program and exercise regimen to coax the population into signing on to the Katzenarmee, for a better galaxy."
-
     building_pki_katzen_housing: "Katzen Employment Office"
     building_pki_katzen_housing_desc: "A centralized position from which the Katzen governors of the planet issue quotas and assign jobs to the populace."
 
@@ -310,8 +279,6 @@
     sm_katzen_ring_energy_hub_desc:0 "Orbital surveying and transport infrastructure greatly aids the harvesting of thorium and other elements on the colony."
     sm_katzen_ring_alloys_hub:0 "Katzen Orbital Forge"
     sm_katzen_ring_alloys_hub_desc:0 "Orbital metallurgy infrastructure aids the production of alloys planetside."
-
-    pki_katzen_captured_ships: "Katzen Ships"
 
     # Custom fail text
     not_allowed_for_katzen_protektorat:0 "£trigger_no£ Not allowed for §YKatzprotektorat§! preset."
@@ -536,41 +503,6 @@
     district_pki_flusion_power: "Flusionian Power Plants"  
     district_pki_flusion_power_plural: "Flusionian Power Plants"
     district_pki_flusion_power_desc: "A behemoth array of nuclear generators and reactors, providing immense amounts of energy for both the planet and the rest of the empire."
-
-    pki_army_reached_limit: "§RWe have recruited the maximum number of §!"
-
-    pki_katzensoldaten_army_limit: "We have recruited §Y[event_target:pki_player.pki_katzensoldaten_current]§! out of §Y[event_target:pki_player.pki_katzensoldaten_limit]§! Armies"
-    pki_katzensoldaten_reached_limit: "$pki_army_reached_limit$§Y$katzensoldaten_army_plural$§!"
-
-    pki_gepanzertertank_army_limit: "We have recruited §Y[event_target:pki_player.pki_gepanzertertank_current]§! out of §Y[event_target:pki_player.pki_gepanzertertank_limit]§! Armies"
-    pki_gepanzertertank_reached_limit: "$pki_army_reached_limit$§Y$gepanzertertank_army_plural$§!"
-
-    pki_atmospharischekatzenbomber_army_limit: "We have recruited §Y[event_target:pki_player.pki_atmospharischekatzenbomber_current]§! out of §Y[event_target:pki_player.pki_atmospharischekatzenbomber_limit]§! Armies"
-    pki_atmospharischekatzenbomber_reached_limit: "$pki_army_reached_limit$§Y$pki_air_fighter_plural$§!"
-
-    katzensoldaten_army: "Katzensoldaten Division"
-    katzensoldaten_army_plural: "Katzensoldaten Divisions"
-    katzensoldaten_army_desc: "A specialized infantry unit, equipped with a larger than normal amount of mechanized armor pieces."
-
-    gepanzertertank_army: "Gepanzerter Division"
-    gepanzertertank_army_plural: "Gepanzerter Divisions"
-    gepanzertertank_army_desc: "The Gepanzerters are a lighter and arguably more realistic version of the Imperium's heavy hitting Riesigerkatzenpanzers. Ranging from standard sizes to 50 meters long, these units are the standard when it comes to armored warfare in the name of the Kaiser."
-
-    pki_air_fighter: "Katzenbomber Air Wing"
-    pki_air_fighter_plural: "Katzenbomber Air Wing"
-    pki_air_fighter_desc: "These bombers follow a radical new design philosophy that allows the bomb bays to pack significantly more firepower without losing speed. The bombers themselves provide heavy ordnance support wherever and whenever it's needed."
-
-    angriffskatze_army: "Angriffskatze Siege Breaker Army"
-    angriffskatze_army_plural: "Angriffskatze Siege Breaker Armies"
-    angriffskatze_army_desc: "When the ground defenses of a hostile world are too strong, the Angriffskatze are brought in. Equipped with multiple nuclear warheads ranging into the gigatons, these armies will smash the enemies defense... at the cost of infrastructure and civilians."
-
-    riesigerkatzenpanzer_army: "$riesigerkatzenpanzer_assault$"
-    riesigerkatzenpanzer_army_desc: "$riesigerkatzenpanzer_assault_desc$"
-
-
-    luftkatzenvernichter_army: "Luftkatzenvernichter Fleet"
-    luftkatzenvernichter_army_desc: "A fleet consisting of nuclear bombers, these squadrons annihilate defenses with ease. Not much will survive the devastation, however."
-
    
     temp_job_help:0 "Katzen Economical Reinforcement"
     temp_job_help_desc:0 "The Kaiser has ordered specific, somewhat harsh measures to ensure a smooth transition into the Flusio-Arcology."
@@ -1027,12 +959,10 @@
     PKI_TECH_UNLOCK_CRUISER_CONSTRUCTION_DESC: "§HKatzenkreuzers§!\nKatzenkreuzers are the backbone of any fleet they are in, being equipped ample armor and shields, and utilizing large railguns and missile batteries to overwhelm enemies. Katzenkreuzers are also equipped with small hangar bays."
     PKI_TECH_UNLOCK_CRUISER_CONSTRUCTION_TITLE: "§HUnlocks Ship Type:§! Katzenkreuzer"
 
-
     tech_pki_ship_sections: "Expanded Ship Designs"
     tech_pki_ship_sections_desc: "With combat experience we have determined new ship loadouts could benefit our effectiveness."
     PKI_TECH_UNLOCK_SHIP_SECTIONS_TITLE: "§HUnlocks Sections:§! Additional Katzen Ship Sections"
     PKI_TECH_UNLOCK_SHIP_SECTIONS_DESC: "§HAdditional Sections§!\nWith recent advances and combat experience, Katzen scientists have come up with additional ship configurations to help our efforts."
-
 
     tech_pki_submarine: "Unterraumboot"
     tech_pki_submarine_desc: "An extrapolation of the stealthy water vessels used by the Imperium's navy, Unterraumboots are equipped with powerful cloaking devices that allow them to go entirely undetected by enemy ships."
@@ -1047,8 +977,7 @@
     RT_PKI_KATZGOUVERNEUR:0 "Katzgouverneur"
     RT_PKI_KATZGOUVERNEUR_FEMALE:0 "$RT_PKI_KATZGOUVERNEUR$"
 
-    gov_pki_katprotektorat: "Katzprotektorat"
-    gov_pki_katprotektorat_desc: "A Katzprotektorat is a form of puppet government set up by the Katzenartig Imperium. They are effectively regional governors of the Imperium, and enjoy some limited autonomy."
+    pki_katzen_captured_ships: "Katzen Ships"
 
     NAME_katzen_warforge:0 "Katzen Occupying Force"
 
@@ -1086,6 +1015,7 @@
     decision_pki_sector_auto_desc: "This sector has little use for us beyond providing pops for [owner.capital_scope.getname]."
 
     PKI_PLACEHOLDER: "PLACEHOLDER"
+    PKI_BLANK: ""
 
     policy_pki_metallurgists_to_supertensiles: "Supertensile Job Allocation"
     policy_pki_metallurgists_to_supertensiles_desc: "By reallocating some of our industrial workforce, we can focus more on materials required for various megaconstruction projects"
@@ -1151,3 +1081,39 @@
     opinion_pki_mocked_galcom_2: "$opinion_pki_mocked_galcom_1$"
 
     pki_sanctions_worsening: "Modify §Y$pki_galcom_sanctions_1$§! by:\n$DIPLOMACY_WEIGHT_LABEL$: §R-25%§!\n$MOD_COUNTRY_TRUST_GROWTH$: §R-25%§!"
+
+    ## ARMIES
+
+    pki_army_reached_limit: "§RWe have recruited the maximum number of §!"
+
+    pki_katzensoldaten_army_limit: "We have recruited §Y[event_target:pki_player.pki_katzensoldaten_current]§! out of §Y[event_target:pki_player.pki_katzensoldaten_limit]§! Armies"
+    pki_katzensoldaten_reached_limit: "$pki_army_reached_limit$§Y$pki_katzen_special_forces_plural$§!"
+
+    pki_gepanzertertank_army_limit: "We have recruited §Y[event_target:pki_player.pki_gepanzertertank_current]§! out of §Y[event_target:pki_player.pki_gepanzertertank_limit]§! Armies"
+    pki_gepanzertertank_reached_limit: "$pki_army_reached_limit$§Y$pki_katzen_tanks_plural$§!"
+
+    pki_atmospharischekatzenbomber_army_limit: "We have recruited §Y[event_target:pki_player.pki_atmospharischekatzenbomber_current]§! out of §Y[event_target:pki_player.pki_atmospharischekatzenbomber_limit]§! Armies"
+    pki_atmospharischekatzenbomber_reached_limit: "$pki_army_reached_limit$§Y$pki_air_fighter_plural$§!"
+
+    pki_katzen_special_forces: "Katzensoldaten Division"
+    pki_katzen_special_forces_plural: "Katzensoldaten Divisions"
+    pki_katzen_special_forces_desc: "A specialized infantry unit, equipped with a larger than normal amount of mechanized armor pieces."
+
+    pki_katzen_tanks: "Gepanzerter Division"
+    pki_katzen_tanks_plural: "Gepanzerter Divisions"
+    pki_katzen_tanks_desc: "The Gepanzerters are a lighter and arguably more realistic version of the Imperium's heavy hitting Riesigerkatzenpanzers. Ranging from standard sizes to 50 meters long, these units are the standard when it comes to armored warfare in the name of the Kaiser."
+
+    pki_air_fighter: "Katzenbomber Air Wing"
+    pki_air_fighter_plural: "Katzenbomber Air Wing"
+    pki_air_fighter_desc: "These bombers follow a radical new design philosophy that allows the bomb bays to pack significantly more firepower without losing speed. The bombers themselves provide heavy ordnance support wherever and whenever it's needed."
+
+    angriffskatze_army: "Angriffskatze Siege Breaker Army"
+    angriffskatze_army_plural: "Angriffskatze Siege Breaker Armies"
+    angriffskatze_army_desc: "When the ground defenses of a hostile world are too strong, the Angriffskatze are brought in. Equipped with multiple nuclear warheads ranging into the gigatons, these armies will smash the enemies defense... at the cost of infrastructure and civilians."
+
+    riesigerkatzenpanzer_army: "$riesigerkatzenpanzer_assault$"
+    riesigerkatzenpanzer_army_desc: "$riesigerkatzenpanzer_assault_desc$"
+
+
+    luftkatzenvernichter_army: "Luftkatzenvernichter Fleet"
+    luftkatzenvernichter_army_desc: "A fleet consisting of nuclear bombers, these squadrons annihilate defenses with ease. Not much will survive the devastation, however."

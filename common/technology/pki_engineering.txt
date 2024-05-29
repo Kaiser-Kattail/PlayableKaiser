@@ -179,7 +179,7 @@ tech_pki_warforge = {
 			pki_is_katzprotektorat = yes
 			AND = {
 				pki_is_katzenartig_imperium = yes
-				has_country_flag = unified_flusion
+				has_country_flag = pki_unified_flusion
 			}
 		}
 	}

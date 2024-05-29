@@ -93,7 +93,7 @@ country_event = {
 
     trigger = {
         exists = this
-        is_country_type = flusion_nation
+        is_country_type = pki_flusion_nation
     }
 
     immediate = {

@@ -50,8 +50,8 @@ pki_is_pki_army = {
 
 pki_is_pki_ground_army = {
 	OR = {
-		army_type = katzensoldaten_army
-		army_type = gepanzertertank_army
+		army_type = pki_katzen_special_forces
+		army_type = pki_katzen_tanks
 		army_type = peacekeeper_army
 		army_type = dominion_tracks
 		army_type = meowrine_company

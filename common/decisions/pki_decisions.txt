@@ -16,7 +16,7 @@ decision_flusion_arc = {
 	potential = {
 		from = {
 			has_origin = origin_katzen
-			has_country_flag = unified_flusion
+			has_country_flag = pki_unified_flusion
 		}
 
 			has_planet_flag = pki_flusion_planet
@@ -297,12 +297,6 @@ decision_solaktropa = {
             has_planet_flag = solaktropa
         }
     }
-	allow = {
-		custom_tooltip = {
-			fail_text = no_forest
-			has_deposit = d_altarian_island
-		}
-	}
     effect = {
 		add_deposit = d_solaktropa_project
 		hidden_effect = {
@@ -419,7 +413,7 @@ decision_katzen_defense_array_1 = {
 	potential = {
 		from = {
 			has_origin = origin_katzen
-			has_country_flag = unified_flusion
+			has_country_flag = pki_unified_flusion
 		}
 	}
 
@@ -533,7 +527,7 @@ decision_katzen_war_forge = {
 		OR = {
 			from = {
 				pki_is_katzenartig_imperium = yes
-				has_country_flag = unified_flusion
+				has_country_flag = pki_unified_flusion
 			}
 			from = {
 				pki_is_katzprotektorat = yes

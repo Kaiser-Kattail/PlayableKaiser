@@ -1,0 +1,8 @@
+object_types = {
+    pdxparticle = {
+        name = "pki_gun_muzzle_particle"
+        type = "pki_gun_muzzle"
+
+        scale = 5.0
+    }
+}

@@ -1,11 +1,11 @@
 pki_map_$COUNTRY$_effect = {
     potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab } }
     allow = { always = yes }
-    effect = { custom_tooltip = "pki_map_$COUNTRY$_tt" hidden_effect = { event_target:pki_player = { pki_clear_selected_country = yes if = { limit = { NOT = { has_country_flag = pki_map_annexed_$COUNTRY$ } } event_target:pki_$COUNTRY$_country = { save_global_event_target_as = pki_selected_country } set_country_flag = pki_map_$COUNTRY$_selected } else = { clear_global_event_target = pki_selected_country set_country_flag = pki_map_KAT_selected } } } }
+    effect = { custom_tooltip = "pki_map_$COUNTRY$_tt" hidden_effect = { event_target:pki_player = { pki_clear_selected_country = yes if = { limit = { NOT = { has_country_flag = pki_map_annexed_$COUNTRY$ } } event_target:pki_$COUNTRY$_country = { save_global_event_target_as = pki_selected_country } set_country_flag = pki_map_$COUNTRY$_selected } else = { event_target:pki_player = { save_global_event_target_as = pki_selected_country } set_country_flag = pki_map_KAT_selected } } } }
 }
 
 pki_map_$COUNTRY$_occupied_effect = {
-    potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab has_country_flag = pki_map_$COUNTRY$_invading } }
+    potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab has_country_flag = pki_map_occupied_$COUNTRY$ } }
     allow = { always = yes }
     effect = {}
 }

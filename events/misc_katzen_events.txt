@@ -904,7 +904,7 @@ country_event = {
 	trigger = {
 		has_paragon_dlc = yes
 		has_origin = origin_katzen
-		has_country_flag = unified_flusion
+		has_country_flag = pki_unified_flusion
 		any_owned_sector = {
 			NOT = {
 				has_sector_type = core_sector
@@ -1342,7 +1342,7 @@ country_event = {
 
 	trigger = {
 		pki_is_katzenartig_imperium = yes
-		has_country_flag = unified_flusion
+		has_country_flag = pki_unified_flusion
 		NOT = {
 			check_variable = {
 				which = pki_num_total_warforges

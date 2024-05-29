@@ -8,27 +8,12 @@ defined_text = {
 }
 
 defined_text = {
-    name = pki_map_selected_country_info
-    text = {
-        trigger = { event_target:pki_player = { has_country_flag = pki_map_KAT_selected } }
-        localization_key = PKI_KAT_info
-    }
-    text = {
-        trigger = {
-            has_country_flag = pki_focus_tree_tab
-        }
-        localization_key = "PKI_BLANK"
-    }
-    default = "PKI_COUNTRY_INFO"
-}
-
-defined_text = {
     name = pki_focus_desc
     inline_script = {
         script = pki_focuses/pki_all_focuses
         SCRIPT_NAME = pki_focus_desc
     }
-    default = "PKI_PLACEHOLDER"
+    default = "PKI_BLANK"
 }
 
 defined_text = {
@@ -37,7 +22,7 @@ defined_text = {
         script = pki_focuses/pki_all_focuses
         SCRIPT_NAME = pki_focus_title
     }
-    default = "PKI_PLACEHOLDER"
+    default = "PKI_BLANK"
 }
 
 defined_text = {

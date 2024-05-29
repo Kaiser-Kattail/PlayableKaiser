@@ -113,8 +113,32 @@ inline_script = {
 
 pki_map_country_contact = {
 	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab } }
-	allow = { hidden_trigger = { event_target:pki_player = { NOT = { has_country_flag = pki_contacted_country } } custom_tooltip_fail = { text = PKI_CANT_CONTACT_SELF } hidden_trigger = { event_target:pki_player = { NOT = { has_country_flag = pki_map_KAT_selected } } } } }
-	effect = { hidden_effect = { event_target:pki_player = { country_event = { id = pki_flusion_nations.0000 } } } }
+	allow = { hidden_trigger = { event_target:pki_player = { NOT = { has_country_flag = pki_contacted_country } } custom_tooltip_fail = { text = PKI_CANT_CONTACT_SELF hidden_trigger = { event_target:pki_player = { NOT = { has_country_flag = pki_map_KAT_selected } } } } } }
+	effect = { custom_tooltip = PKI_DIPLOMACY_TT hidden_effect = { event_target:pki_player = { country_event = { id = pki_flusion_nations.0000 } } } }
+}
+
+pki_map_factories_tt = {
+	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab } }
+	allow = { always = yes }
+	effect = { custom_tooltip = PKI_SELECTED_COUNTRY_FACTORIES_tt }
+}
+
+pki_map_building_slots_tt = {
+	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab } }
+	allow = { always = yes }
+	effect = { custom_tooltip = PKI_SELECTED_COUNTRY_BUILDING_SLOTS_tt }
+}
+
+pki_map_armies_tt = {
+	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab } }
+	allow = { always = yes }
+	effect = { custom_tooltip = PKI_SELECTED_COUNTRY_ARMIES_tt }
+}
+
+pki_map_planes_tt = {
+	potential = { event_target:pki_player = { has_country_flag = pki_conquest_map_tab } }
+	allow = { always = yes }
+	effect = { custom_tooltip = PKI_SELECTED_COUNTRY_PLANES_tt }
 }
 
 pki_focus_tree_tab_state = {

@@ -2,7 +2,7 @@ ap_kaiser_moon = {
 	possible = {
 		custom_tooltip = {
 			fail_text = "unify_flusion_first_bozo"
-			has_country_flag = unified_flusion
+			has_country_flag = pki_unified_flusion
 		}
 		has_tradition = tr_katzen_finish
 	}

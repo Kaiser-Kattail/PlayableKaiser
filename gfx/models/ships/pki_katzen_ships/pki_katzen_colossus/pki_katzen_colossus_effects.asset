@@ -1,0 +1,48 @@
+######## COLOSSUS SHATTER PLANET #######
+
+# WINDUP
+
+entity = {
+    name = "pki_planet_destruction_windup_entity"
+
+    default_state = "attack"
+    get_state_from_parent = no
+    state = {
+        name = "attack" looping = no state_time = 0.1
+
+        event = { time = 0.0 particle = "shatter_planet_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+    }
+}
+
+# MUZZLE FLASH
+
+entity = {
+    name = "pki_planet_destruction_muzzle_entity"
+    cull_radius = 1.0
+
+    scale = 5
+    locator = { name = main rotation = { 0 0 90 } }
+    default_state = "idle"
+
+    state = { name = "idle" state_time = 7.0 looping = yes
+        event = { time = 0 particle = "pki_gun_muzzle_particle" keep_particle = yes }
+
+        event = { sound = { soundeffect = "auto_cannon_fire_large" stop_on_state_change = yes } }
+    }
+}
+
+# HIT ENTITIES
+
+entity = {
+    name = "pki_planet_destruction_hit_entity"
+    cull_radius = 1.0
+
+    scale = 5
+
+    default_state = "idle"
+    state = { name = "idle" state_time = 5 looping = yes
+        start_event = { particle = "kinetic_artillery_hit_effect" keep_particle = yes  }
+
+    }
+    state = { name = "stop" state_time = 0.5 looping = no }
+}

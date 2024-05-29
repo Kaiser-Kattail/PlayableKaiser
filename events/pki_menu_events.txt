@@ -55,6 +55,8 @@ country_event = {
 		custom_tooltip = "pki_menu.1.a.tooltip"
 		hidden_effect = {
 			pki_clear_gui_flags = yes
+			set_country_flag = pki_conquest_map_tab
+			set_country_flag = pki_focus_tree_tab_state
 			country_event = { id = pki_menu.2 }
 		}
 	}

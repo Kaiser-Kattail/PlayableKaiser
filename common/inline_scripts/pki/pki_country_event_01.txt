@@ -1,11 +1,6 @@
 id = pki_$COUNTRY$.01
 title = pki_$COUNTRY$.01.name
 desc = pki_$COUNTRY$.01.desc
-desc = pki_$COUNTRY$.01.desc
-desc = pki_$COUNTRY$.01.desc
-desc = pki_$COUNTRY$.01.desc
-desc = pki_$COUNTRY$.01.desc
-desc = pki_$COUNTRY$.01.desc
 
 is_triggered_only = yes
 diplomatic = yes
@@ -38,12 +33,10 @@ option = { # WAR
     custom_tooltip = flunat_war_dec
     is_dialog_only = yes
     response_text = pki_$COUNTRY$.01.c.response
-    hidden_effect = {
-    }
 }
 
 option = { # Bye
-    name = pki_$COUNTRY$.01.d
+    name = pki_goodbye
     default_hide_option = yes
     hidden_effect = {
         remove_country_flag = pki_contacted_country

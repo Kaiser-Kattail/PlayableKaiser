@@ -232,6 +232,7 @@ country_event = {
 	immediate = {
 		set_country_flag = starting_event
 		save_global_event_target_as = pki_player
+		save_global_event_target_as = pki_KAT_country
         set_global_flag = pki_katzen_is_being_played
 		owner_main_species = {
 			save_global_event_target_as = pki_katzen_species

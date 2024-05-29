@@ -1,5 +1,26 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_army_type_aerial"
+		textureFile = gfx/interface/icons/armies/plane_icon.dds
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_ruler_kaiser_kattail"
+		textureFile = gfx/interface/icons/traits/kaiser_trait.dds
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_neumeyer"
+		textureFile = gfx/interface/icons/traits/leader_trait_neumeyer.dds
+	}
+
+	spriteType = {
+		name = "GFX_no_preset"
+		textureFile = gfx/event_pictures/no_preset.dds
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+
+	spriteType = {
 		name = "GFX_ap_kaiser_moon"
 		texturefile = "gfx/interface/icons/ascension_perks/ap_kaiser_moon.dds"
 		alwaystransparent = yes

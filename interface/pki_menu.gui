@@ -1,11 +1,9 @@
-#noinspection ParadoxScriptUnresolvedExpression,ParadoxScriptMissingExpression
-
 # Dont fuck with things even if they give errors, your IDE is not as smart as me
 # Button effects arent predicted with inline scripts idgaf
 
 guiTypes = {
 
-	@view_w = 1620
+	@view_w = 1300
 	@view_h = 900
 	@tabs_y = 898
 	@map_scale = 0.9
@@ -231,19 +229,6 @@ guiTypes = {
 			listboxType = { name = "option_list" position = { x = -11500 y = -1130 } } # hidden option list
 		}
 
-		effectButtonType = {
-			name = info_frame
-			position = { x = +1300 y = +52 }
-			size = { x = 317 y = 845 }
-			orientation = upper_left
-			alwaysTransparent = yes
-
-
-			quadTextureSprite = "GFX_tiles_frame_light"
-
-			effect = pki_map_no_effect
-		}
-
 		instantTextBoxType = {
 			name = "alien_message"
 			font = "cg_16b"
@@ -281,8 +266,8 @@ guiTypes = {
 		effectButtonType = {
 			name = focus_tree_background
 			position = { x = +1 y = +92 }
-			size = { x = 1616 y = 805 }
-			orientation = upper_left
+			size = { x = 1298 y = 805 }
+			orientation = upper_left`
 			alwaysTransparent = yes
 
 			quadTextureSprite = "GFX_tiles_frame_light"
@@ -291,7 +276,7 @@ guiTypes = {
 		}
 
 		containerWindowType = {
-			name = focus tabs
+			name = focus_tabs
 			origo = upper_left
 			orientation = upper_left
 
@@ -416,50 +401,11 @@ guiTypes = {
 			}
 		}
 
-		effectButtonType = {
-			name = title
-			size = { x = 296 y = 40 }
-			position = { x = +1310 y = 63 }
-			text = "PKI_INFO"
-			font = malgun_goth_24
-			quadTextureSprite = "GFX_tiles_dark_area_cut_8"
-			effect = pki_map_no_effect
-			alwaysTransparent = yes
-		}
-
 		containerWindowType = {
 			name = scrolling_section
 			origo = UPPER_LEFT
 			position = { x = +10 y = 104 }
 			size = { width = 1598 height = 780 }
-			verticalScrollbar = "right_vertical_slider"
-			clipping = yes
-			background = { name = "background" quadTextureSprite = "GFX_invisible" }
-
-			gridBoxType = {
-				name = box
-				size = { width = 1 height = 1600 }
-				alwaysTransparent = yes
-			}
-
-			containerWindowType = {
-				name = info
-				origo = UPPER_LEFT
-				position = { x = +1300 y = 0 }
-
-				effectButtonType = {
-					name = info_text
-					position = { x = +6 y = +4 }
-					size = { x = 274 y = 1620 }
-					text = "[pki_map_selected_country_info]"
-					font = cg_16b
-					format = left
-					multiline = yes ## I dont care you cant resolve it stfu
-					vertical_alignment = top
-					alwaysTransparent = yes
-					effect = pki_map_no_effect
-				}
-			}
 
 			containerWindowType = {
 				name = focus_tree
@@ -471,7 +417,7 @@ guiTypes = {
 
 					effectButtonType = {
 						name = kaiser_arrival_down_blue
-						position = { x = @tile_x_450 y = @tile_y_1 }
+						position = { x = @tile_x_300 y = @tile_y_1 }
 
 						quadTextureSprite = "GFX_pki_focus_line_d_s_b"
 
@@ -480,7 +426,7 @@ guiTypes = {
 
 					effectButtonType = {
 						name = kaiser_arrival_down_green
-						position = { x = @tile_x_450 y = @tile_y_1 }
+						position = { x = @tile_x_300 y = @tile_y_1 }
 
 						quadTextureSprite = "GFX_pki_focus_line_d_s_g"
 
@@ -488,11 +434,11 @@ guiTypes = {
 					}
 
 					containerWindowType = {
-						name = right
+						name = left
 
 						effectButtonType = {
-							name = kaiser_arrival_right_blue
-							position = { x = @tile_x_450 y = @tile_y_1 }
+							name = kaiser_arrival_left_blue
+							position = { x = @tile_x_250 y = @tile_y_1 }
 
 							quadTextureSprite = "GFX_pki_focus_line_h_s_b"
 
@@ -500,8 +446,8 @@ guiTypes = {
 						}
 
 						effectButtonType = {
-							name = kaiser_arrival_right_green
-							position = { x = @tile_x_450 y = @tile_y_1 }
+							name = kaiser_arrival_left_green
+							position = { x = @tile_x_250 y = @tile_y_1 }
 
 							quadTextureSprite = "GFX_pki_focus_line_h_s_g"
 
@@ -510,7 +456,7 @@ guiTypes = {
 
 						effectButtonType = {
 							name = kaiser_arrival_up_blue
-							position = { x = @tile_x_500 y = @tile_y_2 }
+							position = { x = @tile_x_250 y = @tile_y_2 }
 
 							quadTextureSprite = "GFX_pki_focus_line_u_s_b"
 
@@ -519,7 +465,7 @@ guiTypes = {
 
 						effectButtonType = {
 							name = kaiser_arrival_up_green
-							position = { x = @tile_x_500 y = @tile_y_2 }
+							position = { x = @tile_x_250 y = @tile_y_2 }
 
 							quadTextureSprite = "GFX_pki_focus_line_u_s_g"
 
@@ -646,7 +592,7 @@ guiTypes = {
 						position = { x = +0 y = 0 }
 						orientation = CENTER
 						alwaysTransparent = no
-						quadTextureSprite = "GFX_pki_focus_placeholder"
+						quadTextureSprite = "GFX_pki_focus_herzlands_industry"
 						effect = pki_focus_herzlands_industry_icon
 					}
 
@@ -694,28 +640,28 @@ guiTypes = {
 
 					effect = pki_map_ATA_selected_effect
 				}
-			}
 
-			effectButtonType = {
-				name = country_flag
-				position = { x = +17 y = +728 }
-				size = { x = 640 y = 616 }
-				orientation = upper_left
-				alwaysTransparent = no
-				quadTextureSprite = "GFX_pki_empire_flag_frame"
+				effectButtonType = {
+					name = country_flag
+					position = { x = +17 y = +728 }
+					size = { x = 640 y = 616 }
+					orientation = upper_left
+					quadTextureSprite = "GFX_pki_empire_flag_frame"
 
-				effect = pki_map_country_contact
+					effect = pki_map_country_contact
+				}
 			}
 
 			containerWindowType = {
 				name = actions
+				origo = upper_left
 
 				position = { x = +170 y = +738 }
 
 				effectButtonType = {
 					name = country_title
 					position = { x = +0 y = +0 }
-					size = { x = 328 y = 40 }
+					size = { x = 170 y = 40 }
 					orientation = upper_left
 					alwaysTransparent = yes
 					format = center
@@ -729,7 +675,7 @@ guiTypes = {
 				effectButtonType = {
 					name = country_action_bg
 					position = { x = +0 y = +50 }
-					size = { x = 328 y = 64 }
+					size = { x = 170 y = 64 }
 					orientation = upper_left
 					alwaysTransparent = yes
 					quadTextureSprite = "GFX_tiles_dark_area_cut_8"
@@ -748,44 +694,108 @@ guiTypes = {
 					effect = pki_map_country_contact
 				}
 
-				effectButtonType = {
-					name = country_action_uhh
-					position = { x = +156 y = +50 }
-					orientation = upper_left
-					text = "guh"
-					font = malgun_goth_24
-					quadTextureSprite = "GFX_button_animated_142"
-
-					effect = pki_map_country_contact
-				}
-
 				containerWindowType = {
 					name = military_counters
 
 					effectButtonType = {
 						name = bg
 						size = { x = 328 y = 115 }
-						position = { x = 340 y = 0 }
+						position = { x = 200 y = 0 }
 						quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+						no_clicksound = yes
+						alwaysTransparent = yes
 
 						effect = pki_map_no_effect
 					}
 
 					effectButtonType = {
-						name = army_bg
+						name = industry
 						size = { x = 60 y = 30 }
-						position = { x = 356 y = 14 }
-						quadTextureSprite = "GFX_tiles_frame_extra_light"
+						position = { x = 210 y = 10 }
+						quadTextureSprite = "GFX_tile_dark_cut"
+						no_clicksound = yes
+						format = upper_left
+						font = cg_16b
+						text = "PKI_SELECTED_COUNTRY_FACTORIES"
 
-						effect = pki_map_no_effect
+						effect = pki_map_factories_tt
 					}
+
+					effectButtonType = {
+						name = building_slots
+						size = { x = 60 y = 30 }
+						position = { x = 210 y = 50 }
+						quadTextureSprite = "GFX_tile_dark_cut"
+						no_clicksound = yes
+						format = upper_left
+						font = cg_16b
+						text = "PKI_SELECTED_COUNTRY_BUILDING_SLOTS"
+
+						effect = pki_map_building_slots_tt
+					}
+
+					effectButtonType = {
+						name = army
+						size = { x = 60 y = 30 }
+						position = { x = 280 y = 10 }
+						quadTextureSprite = "GFX_tile_dark_cut"
+						no_clicksound = yes
+						format = upper_left
+						font = cg_16b
+						text = "PKI_SELECTED_COUNTRY_ARMIES"
+
+						effect = pki_map_armies_tt
+					}
+
+					effectButtonType = {
+						name = air
+						size = { x = 60 y = 30 }
+						position = { x = 280 y = 50 }
+						quadTextureSprite = "GFX_tile_dark_cut"
+						no_clicksound = yes
+						format = upper_left
+						font = cg_16b
+						text = "PKI_SELECTED_COUNTRY_PLANES"
+
+						effect = pki_map_planes_tt
+					}
+				}
+			}
+
+			containerWindowType = {
+				name = player_stats
+				position = { x = +800 y = 738 }
+
+				effectButtonType = {
+					position = { x = +0 y = +0 }
+					name = stats_bg
+					size = { x = 310 y = 115 }
+					orientation = upper_left
+					alwaysTransparent = yes
+					quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+					effect = pki_map_no_effect
+				}
+
+				effectButtonType = {
+					position = { x = +16 y = +10 }
+					name = world_domination
+					size = { x = 600 y = 20 }
+					text = "PKI_MAP_WORLD_DOMINATION"
+					orientation = upper_left
+					alwaysTransparent = yes
+					format = left
+					font = cg_16b
+					quadTextureSprite = "GFX_invisible"
+					clicksound = no_sound
+
+					effect = pki_map_no_effect
 				}
 			}
 
 			containerWindowType = {
 				name = economy
 
-				position = { x = +270 y = 20 }
+				position = { x = +256 y = 20 }
 
 				effectButtonType = {
 					name = economy_bg
@@ -793,55 +803,39 @@ guiTypes = {
 					size = { x = 140 y = 142 }
 					orientation = upper_left
 					alwaysTransparent = yes
-					quadTextureSprite = "GFX_tiles_dark_area_cut_8"
-
-					effect = pki_map_no_effect
-				}
-
-				effectButtonType = {
-					name = eco_title
-					position = { x = +896 y = +715 }
-					size = { x = 130 y = 10 }
-					orientation = upper_left
-					alwaysTransparent = no
-					multiline = yes
-					format = left
-					vertical_alignment = top
-					text = "pki_economy_title"
-					font = cg_16b
-					quadTextureSprite = "GFX_invisible"
-					clicksound = no_sound
+					quadTextureSprite = "GFX_tiles_frame"
 
 					effect = pki_map_no_effect
 				}
 
 				effectButtonType = {
 					name = industry_total
-					position = { x = +896 y = +736 }
-					size = { x = 130 y = 16 }
+					position = { x = +886 y = +720 }
+					size = { x = 130 y = 20 }
 					orientation = upper_left
 					alwaysTransparent = no
-					format = left
+					format = center
 					vertical_alignment = top
 					text = "pki_industry_total"
 					font = cg_16b
 					quadTextureSprite = "GFX_invisible"
 					clicksound = no_sound
+					oversound = no_sound
 
 					effect = pki_map_industry_total
 				}
 
 				effectButtonType = {
 					name = building_slots_total
-					position = { x = +896 y = +756 }
+					position = { x = +886 y = +744 }
 					size = { x = 130 y = 16 }
 					orientation = upper_left
-					alwaysTransparent = yes
-					format = left
+					format = center
 					vertical_alignment = top
 					text = "pki_building_slots_total"
 					font = cg_16b
 					quadTextureSprite = "GFX_invisible"
+					oversound = no_sound
 
 					effect = pki_map_no_effect
 				}
@@ -849,7 +843,7 @@ guiTypes = {
 				containerWindowType = {
 					name = counter
 
-					position = { x = 1 y = -25 }
+					position = { x = 5 y = -30 }
 
 					effectButtonType = {
 						name = counter_bg
@@ -901,7 +895,7 @@ guiTypes = {
 				containerWindowType = {
 					name = multipliers
 
-					position = { x = -8 y = 17 }
+					position = { x = -4 y = 17 }
 
 					effectButtonType = {
 						name = x1

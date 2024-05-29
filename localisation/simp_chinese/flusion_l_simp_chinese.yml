@@ -506,14 +506,14 @@
  district_pki_flusion_power_desc: "A behemoth array of nuclear generators and reactors, providing immense amounts of energy for both the planet and the rest of the empire." #NT!
   
   
- katzensoldaten_army: "Katzensoldaten Army" #NT!
- katzensoldaten_army_desc: "A specialized infantry unit, equipped with a larger than normal amount of mechanized armor pieces." #NT!
+ pki_katzen_special_forces: "Katzensoldaten Army" #NT!
+ pki_katzen_special_forces_desc: "A specialized infantry unit, equipped with a larger than normal amount of mechanized armor pieces." #NT!
   
  angriffskatze_army: "Angriffskatze Siege Breaker Army" #NT!
  angriffskatze_army_desc: "When the ground defenses of a hostile world are too strong, the Angriffskatze are brought in. Equipped with multiple nuclear warheads ranging into the gigatons, these armies will smash the enemies defense... at the cost of infrastructure and civilians." #NT!
   
- gepanzertertank_army: "Gepanzerter Division" #NT!
- gepanzertertank_army_desc: "The Gepanzerters are a lighter and arguably more realistic version of the Imperium's heavy hitting Riesigerkatzenpanzers. Ranging from standard sizes to 50 meters long, these units are the standard when it comes to armored warfare in the name of the Kaiser." #NT!
+ pki_katzen_tanks: "Gepanzerter Division" #NT!
+ pki_katzen_tanks_desc: "The Gepanzerters are a lighter and arguably more realistic version of the Imperium's heavy hitting Riesigerkatzenpanzers. Ranging from standard sizes to 50 meters long, these units are the standard when it comes to armored warfare in the name of the Kaiser." #NT!
   
  pki_air_fighter: "Katzenbomber Fleet" #NT!
  pki_air_fighter_desc: "These bombers follow a radical new design philosophy that allows the bomb bays to pack significantly more firepower without losing speed. The bombers themselves provide heavy ordnance support wherever and whenever it's needed." #NT!

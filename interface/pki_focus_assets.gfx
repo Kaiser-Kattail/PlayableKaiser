@@ -5,12 +5,6 @@ spriteTypes = {
     }
 
     spriteType = {
-        name = "GFX_pki_focus_kaiser_arrival"
-        textureFile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_kaiser_arrival.dds"
-        transParencecheck = yes
-    }
-
-    spriteType = {
         name = "GFX_pki_focus_placeholder"
         textureFile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_placeholder.dds"
     }
@@ -91,5 +85,19 @@ spriteTypes = {
         name = "GFX_pki_focus_line_u_s_g"
         textureFile = "gfx/interface/pki_ui/focus_tree/lines/pki_focus_link_up_solid_green.dds"
         alwaysTransparent = yes
+    }
+
+    ## FOCUSES GO HERE
+
+    spriteType = {
+        name = "GFX_pki_focus_kaiser_arrival"
+        textureFile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_kaiser_arrival.dds"
+        transParencecheck = yes
+    }
+
+    spriteType = {
+        name = "GFX_pki_focus_herzlands_industry"
+        textureFile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_herzlands_industry.dds"
+        transParencecheck = yes
     }
 }
