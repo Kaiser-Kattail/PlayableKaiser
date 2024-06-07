@@ -10,8 +10,8 @@ defined_text = {
 defined_text = {
     name = pki_focus_desc
     inline_script = {
-        script = pki_focuses/pki_all_focuses
-        SCRIPT_NAME = pki_focus_desc
+        script = pki_focuses/pki_focuses
+        PART = desc
     }
     default = "PKI_BLANK"
 }
@@ -19,8 +19,8 @@ defined_text = {
 defined_text = {
     name = pki_focus_title
     inline_script = {
-        script = pki_focuses/pki_all_focuses
-        SCRIPT_NAME = pki_focus_title
+        script = pki_focuses/pki_focuses
+        PART = title
     }
     default = "PKI_BLANK"
 }
@@ -86,7 +86,7 @@ defined_text = {
         trigger = {
             check_variable_arithmetic = {
                 which = event_target:pki_player.value:pki_air_supremacy
-                value <= 0.25
+                value <= 0.40
             }
         }
         weight = 4
@@ -96,17 +96,7 @@ defined_text = {
         trigger = {
             check_variable_arithmetic = {
                 which = event_target:pki_player.value:pki_air_supremacy
-                value <= 0.50
-            }
-        }
-        weight = 3
-        localization_key = pki_text_color_orange
-    }
-    text = {
-        trigger = {
-            check_variable_arithmetic = {
-                which = event_target:pki_player.value:pki_air_supremacy
-                value <= 0.75
+                value <= 0.60
             }
         }
         weight = 2

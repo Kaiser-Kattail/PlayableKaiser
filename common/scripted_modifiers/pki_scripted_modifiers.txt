@@ -34,3 +34,9 @@ pki_tanks_max_add = {
     good = yes
     icon = mod_pki_tank_max
 }
+
+pki_situation_conquest_speed = {
+    category = all
+    good = yes
+    icon = mod_pop_demotion_time_mult
+}

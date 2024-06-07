@@ -27,7 +27,13 @@
 
     pki_air_combat: "Air Combat"
     pki_air_combat_desc: "Who dares, wins."
-    pki_air_combat_tt: "Air Supremacy: [pki_air_supremacy_color][pki_air_supremacy]%§!\n\n§HYour Air Wings:§!\nFighters: §Y[owner.pki_num_fighters]§!\nClose Air Support: §Y[owner.pki_num_cas]§!\n\n§REnemy Air Wings:§!\nFighters: §Y[event_target:pki_conquest_target.pki_num_fighters]§!\nClose Air Support: §Y[event_target:pki_conquest_target.pki_num_cas]§!"
+    pki_air_combat_tt: "Air Superiority: [pki_air_supremacy_color][pki_air_supremacy]%§!\n\n§HOur Air Wings:§!\nFighters: §Y[owner.pki_num_fighters]§!\nClose Air Support: §Y[owner.pki_num_cas]§!\n\n§REnemy Air Wings:§!\nFighters: §Y[event_target:pki_conquest_target.pki_num_fighters]§!\nClose Air Support: §Y[event_target:pki_conquest_target.pki_num_cas]§!"
+
+    pki_battle_modifier: "Ongoing Battle"
+    pki_battle_modifier_desc: ""
+    pki_battle_modifier_tt: ""
+
+    pki_temporary_general: "This Commander is acting general for this battle due to a Commander not being assigned. They will disappear from the leader list following the completion of the battle.\n\n$pki_katzen_trait_elite_effect$"
 
     pki_industry_total: "Industry: §Y[event_target:pki_player.pki_used_industry]§!/§Y[pki_total_industry]§!"
     pki_industry_total_tt: "Effective Industry: §Y[pki_total_industry]§!\n\nIndustry used for Factory construction: §Y[event_target:pki_player.pki_used_industry]§!\nFactory construction progress: §Y[pki_industry_factory_progress_player]§!/§H1000§! (x§H[pki_industry_new_factories]§!)\nMonthly construction progress: §Y+[pki_industry_factories_monthly_progress]§!\n\n§Y[pki_job_industry_factories]§! unused Effective Industry provides $mod_planet_jobs_produces_mult$: §G+[pki_job_industry_factories]%§! on [event_target:pki_player.capital_scope.GetName]"
@@ -77,6 +83,16 @@
     PKI_SELECTED_COUNTRY_BUILDING_SLOTS_tt: "§HBuilding Slots§!"
     PKI_SELECTED_COUNTRY_ARMIES_tt: "§HDivisions§!\nApproximate number of divisions this country has"
     PKI_SELECTED_COUNTRY_PLANES_tt: "§HAir Wings§!\nApproximate number of air wings this country has"
+
+    pki_air_fighter: "Katzenkämpfer Air Wing"
+    pki_air_fighter_plural: "Katzenkämpfer Air Wings"
+    pki_air_fighter_desc: ""
+    pki_air_fighter_tt: "Contributes towards Air Supremacy"
+
+    pki_air_cas: "Katzen Close Air Support Air Wing"
+    pki_air_cas_plural: "Katzen Close Air Support Air Wing"
+    pki_air_cas_desc: "These airframes follow a radical new design philosophy that allows the bomb bays to pack significantly more firepower without losing speed. The bombers themselves provide heavy ordnance support wherever and whenever it's needed."
+    pki_air_cas_tt: ""
 
     pki_pre_ftl_military_1: "Pre-FTL Military"
     pki_pre_ftl_military_2: "$pki_pre_ftl_military_1$"

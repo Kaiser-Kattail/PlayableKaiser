@@ -447,7 +447,7 @@ pki_leader_trait_command_limit = {
 	}
 
 	fleet_modifier = {
-		command_limit_mult = 150
+		command_limit_mult = 1
 	}
 
 	leader_potential_add = {
@@ -464,4 +464,59 @@ pki_leader_trait_command_limit = {
 		weight = @subclass_trait_weight
 		inline_script = paragon/pilot_weight_mult
 	}
+}
+
+pki_leader_trait_battle_mechanics = {
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_legendary_militarist_one"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = none
+	}
+
+	leader_potential_add = {
+		always = no
+	}
+
+	triggered_army_modifier = {
+		potential = {
+			pki_is_katzenartig_imperium = yes
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			pki_is_katzenartig_imperium = yes
+		}
+	}
+
+	leader_class = { commander }
+}
+
+pki_leader_trait_inexperienced_general = {
+	inline_script = {
+		script = trait/icon_negative
+		ICON = "GFX_leader_trait_reckless"
+		COUNCIL = no
+		TIER = none
+	}
+
+	leader_potential_add = {
+		always = no
+	}
+
+	triggered_army_modifier = {
+		potential = {
+			pki_is_katzenartig_imperium = yes
+		}
+		army_damage_mult = -0.25
+		army_morale_damage_mult = -0.25
+		army_morale = -0.25
+	}
+
+	custom_tooltip_with_modifiers = pki_temporary_general
+
+	leader_class = { commander }
 }

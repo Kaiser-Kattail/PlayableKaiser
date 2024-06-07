@@ -29,3 +29,8 @@ pki_air_combat = {
     icon = gfx/interface/icons/planet_modifiers/pm_pki_air_combat.dds
     custom_tooltip = pki_air_combat_tt
 }
+
+pki_battle_modifier = {
+    icon = gfx/interface/icons/planet_modifiers/pm_martial_law.dds
+    custom_tooltip = pki_battle_modifier_tt
+}

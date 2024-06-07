@@ -57,8 +57,8 @@ katzenartig_imperium= {
 		clothes=0
 		ruler_title = "PKI_PRESCRIPTED_RULER_TITLE_MALE"
 		ruler_title_female = "PKI_PRESCRIPTED_RULER_TITLE_FEMALE"
-		trait = pki_leader_trait_ruler_kaiser_kattail
-		leader_class= "commander"
+		leader_class= "official"
+		trait = leader_trait_principled
 	}
 
 	flags = {

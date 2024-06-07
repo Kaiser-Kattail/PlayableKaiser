@@ -289,11 +289,16 @@ country_event = {
 				days = -1
 			}
 		}
+
 		add_modifier = {
 			modifier = pki_destabilized_government
 			days = -1
 		}
 
+		add_modifier = {
+			modifier = pki_pre_ftl_military_1
+			days = -1
+		}
 
 
 		#Leader Portraits

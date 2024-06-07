@@ -17,7 +17,7 @@ pki_katzen_special_forces = {
 		}
 
 		upkeep = {
-			energy = 2.5
+			energy = 1.5
 		}
 	}
 
@@ -65,10 +65,10 @@ pki_katzen_tanks = {
 
 pki_air_fighter = {
 	health = 5
-	damage = 1.5
+	damage = 2
 	has_morale = no
-	morale_damage = 3
-	collateral_damage = 3
+	morale_damage = 2
+	collateral_damage = 1
 	war_exhaustion = 3.0
 	icon = GFX_army_type_aerial
 	has_species = no
@@ -84,6 +84,41 @@ pki_air_fighter = {
 		}
 	}
 	potential = { owner = { pki_is_katzenartig_imperium = yes } }
+
+	allow = {
+		custom_tooltip = {
+			text = pki_air_fighter_tt
+		}
+	}
+}
+
+pki_air_cas = {
+	health = 5
+	damage = 1.5
+	has_morale = no
+	morale_damage = 3
+	collateral_damage = 2
+	war_exhaustion = 3.0
+	icon = GFX_army_type_aerial
+	has_species = no
+	time = 210
+	resources = {
+		category = armies
+		cost = {
+			minerals = 350
+			alloys = 75
+		}
+		upkeep = {
+			energy = 6
+		}
+	}
+	potential = { owner = { pki_is_katzenartig_imperium = yes } }
+
+	allow = {
+		custom_tooltip = {
+			text = pki_air_cas_tt
+		}
+	}
 }
 
 #angriffskatze_army = {

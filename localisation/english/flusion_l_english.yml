@@ -1107,10 +1107,6 @@
     pki_katzen_tanks_plural: "Gepanzerter Divisions"
     pki_katzen_tanks_desc: "The Gepanzerters are a lighter and arguably more realistic version of the Imperium's heavy hitting Riesigerkatzenpanzers. Ranging from standard sizes to 50 meters long, these units are the standard when it comes to armored warfare in the name of the Kaiser."
 
-    pki_air_fighter: "Katzenbomber Air Wing"
-    pki_air_fighter_plural: "Katzenbomber Air Wing"
-    pki_air_fighter_desc: "These bombers follow a radical new design philosophy that allows the bomb bays to pack significantly more firepower without losing speed. The bombers themselves provide heavy ordnance support wherever and whenever it's needed."
-
     angriffskatze_army: "Angriffskatze Siege Breaker Army"
     angriffskatze_army_plural: "Angriffskatze Siege Breaker Armies"
     angriffskatze_army_desc: "When the ground defenses of a hostile world are too strong, the Angriffskatze are brought in. Equipped with multiple nuclear warheads ranging into the gigatons, these armies will smash the enemies defense... at the cost of infrastructure and civilians."
