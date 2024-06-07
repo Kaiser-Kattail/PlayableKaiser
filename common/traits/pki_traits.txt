@@ -437,7 +437,11 @@ pki_leader_trait_nukelad = {
 	}
 }
 
-pki_leader_trait_command_limit = {
+### Destiny traits
+
+# Commander
+
+pki_leader_trait_destiny_admiral = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -449,12 +453,20 @@ pki_leader_trait_command_limit = {
 	}
 
 	fleet_modifier = {
-		command_limit_mult = 150
+		command_limit_mult = 1.5
+		weapon_type_explosive_weapon_fire_rate_mult = 0.5
 	}
+
+	custom_tooltip_with_modifiers = pki_leader_destiny_traits
 
 	leader_potential_add = {
 		from = {
 			pki_is_katzenartig_imperium = yes
+			any_owned_leader = {
+				NOT = {
+					has_trait = pki_leader_trait_destiny_admiral
+				}
+			}
 		}
 		has_paragon_dlc = yes
 		has_trait = subclass_commander_admiral
@@ -463,7 +475,179 @@ pki_leader_trait_command_limit = {
 	leader_class = { commander }
 
 	selectable_weight = {
-		weight = @subclass_trait_weight
+		weight = 300
 		inline_script = paragon/pilot_weight_mult
+	}
+}
+
+pki_leader_trait_destiny_general = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_rocketry_specialization"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+
+	fleet_modifier = {
+		ship_damage_against_starbases_mult = 1
+		weapon_type_explosive_weapon_damage_mult = 0.5
+	}
+
+	army_modifier = {
+		army_collateral_damage_mult = 1.5
+		army_morale_damage_mult = 0.5
+	}
+
+	custom_tooltip_with_modifiers = pki_leader_destiny_traits
+
+	leader_potential_add = {
+		from = {
+			pki_is_katzenartig_imperium = yes
+			any_owned_leader = {
+				NOT = {
+					has_trait = pki_leader_trait_destiny_general
+				}
+			}
+		}
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_general
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 300
+		inline_script = paragon/army_weight_mult
+	}
+}
+
+pki_leader_trait_destiny_commissioner = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_reverse_engineer"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+
+	planet_modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.1
+		planet_researchers_alloys_produces_add = 0.5
+	}
+
+	sector_modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.05
+		planet_researchers_alloys_produces_add = 0.25
+	}
+
+	custom_tooltip_with_modifiers = pki_leader_destiny_traits
+
+	leader_potential_add = {
+		from = {
+			pki_is_katzenartig_imperium = yes
+			any_owned_leader = {
+				NOT = {
+					has_trait = pki_leader_trait_destiny_commissioner
+				}
+			}
+		}
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_governor
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 300
+		inline_script = paragon/governor_weight_mult
+	}
+}
+
+pki_leader_trait_destiny_strategist = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_gunship_specialization"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+
+	councilor_modifier = {
+		katzen_ships_cost_mult = -0.1
+		katzen_ships_upkeep_mult = -0.15
+	}
+
+	custom_tooltip_with_modifiers = pki_leader_destiny_traits
+
+	leader_potential_add = {
+		from = {
+			pki_is_katzenartig_imperium = yes
+			any_owned_leader = {
+				NOT = {
+					has_trait = pki_leader_trait_destiny_strategist
+				}
+			}
+		}
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_councilor
+	}
+
+	leader_class = { commander }
+
+	selectable_weight = {
+		weight = 300
+		inline_script = paragon/council_weight_mult
+	}
+}
+
+# Scientist
+
+pki_leader_trait_destiny_analyst = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_gunship_specialization"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+
+	planet_modifier = {
+		planet_researchers_upkeep_mult = -0.3
+
+	}
+
+	sector_modifier = {
+		planet_researchers_upkeep_mult = -0.15
+	}
+
+	custom_tooltip_with_modifiers = pki_leader_destiny_traits
+
+	leader_potential_add = {
+		from = {
+			pki_is_katzenartig_imperium = yes
+			any_owned_leader = {
+				NOT = {
+					has_trait = pki_leader_trait_destiny_analyst
+				}
+			}
+		}
+		has_paragon_dlc = yes
+		has_trait = subclass_scientist_governor
+	}
+
+	leader_class = { scientist }
+
+	selectable_weight = {
+		weight = 300
+		inline_script = paragon/governor_weight_mult
 	}
 }

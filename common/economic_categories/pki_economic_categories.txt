@@ -1,7 +1,24 @@
-katzen_ships = {
+pki_katzen_ships = {
     use_for_ai_budget = yes
     parent = ships
     modifier_category = ship
+
+    triggered_cost_modifier = {
+        key = katzen_ships
+        use_parent_icon = yes
+        modifier_types = {
+            mult
+        }
+        trigger = {
+            is_scope_valid = yes
+            OR = {
+                is_ship_size = pki_cruiser
+                is_ship_size = pki_bomber
+                is_ship_size = pki_panzer
+                is_ship_size = pki_submarine
+            }
+        }
+    }
 
     triggered_upkeep_modifier = {
         key = katzen_ships

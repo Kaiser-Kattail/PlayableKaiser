@@ -99,13 +99,14 @@
     pki_flusion_ecu_modifier_desc:0 "The Flusio-Arcology takes full advantage of Flusion's vast natural resources, in order to squeeze out every last bit of efficiency from the planet. The Katzen cities of Katown, Bundengrad and Teho have been expanded to gargantuan proportions, housing tens of billions of inhabitants each while a network of hyper-efficient transportation highways surrounds the entire planet."
     pki_flusion_rich_modifier:0 "Exceptionally Rich World"
     pki_flusion_rich_modifier_desc:0 "This planet is incredibly rich in resources, and offers a spectacular amount of both arable and usable land. Both valuable heavy and light elements used for nuclear processes are exceptionally abundant within its crust. Furthermore, it also features vast veins of valuable resources scarcely found elsewhere in the galaxy. Any lucky civilization developing here would undoubtedly have an incredible advantage, both on the planetary and galactic scene.\n\n§YThis modifier will be removed if the planet turns into an Irradiated Desert, Tomb or Shattered World.§!"
-    mod_katzen_ships_upkeep_mult:0 "Katzen Ship Upkeep Cost"
+    mod_katzen_ships_cost_mult:0 "Katzen Ship Build Cost"
+    mod_katzen_ships_upkeep_mult:0 "Katzen Ship Upkeep"
     mod_ship_katzen_cruiser_cost_mult:0 "Katzenkreuzer Build Cost"
-    mod_ship_katzen_cruiser_upkeep_mult:0 "Katzenkreuzer Upkeep Cost"
+    mod_ship_katzen_cruiser_upkeep_mult:0 "Katzenkreuzer Upkeep"
     mod_ship_katzen_bomber_cost_mult:0 "Leerekatzenbomber Build Cost"
     mod_ship_katzen_bomber_upkeep_mult:0 "Leerekatzenbomber Build Cost"
     mod_ship_katzen_panzer_cost_mult:0 "Katzenweltraumpanzer Build Cost"
-    mod_ship_katzen_panzer_upkeep_mult:0 "Katzenweltraumpanzer Upkeep Cost"
+    mod_ship_katzen_panzer_upkeep_mult:0 "Katzenweltraumpanzer Upkeep"
     mod_ship_katzen_submarine_cost_mult:0 "Unterraumboot Build Cost"
     mod_ship_katzen_submarine_upkeep_mult:0 "Unterraumboot Build Cost"
     mod_pc_player_siegfried_world_habitability:0 "Siegfried World Habitability"
@@ -1049,8 +1050,8 @@
     pki_leader_trait_nukelad: "Nuclear Enthusiast"
     pki_leader_trait_nukelad_desc: "Nuclear and atomic weaponry holds a special place in this leader's heart. They do not hesitate to employ such weapons during warfare."
 
-    pki_leader_trait_command_limit: "Katzen Admiral"
-    pki_leader_trait_command_limit_desc: "Excelling at logistic and strategic planning, this commander is able to command fleets that would overburden their lesser peers."
+    pki_leader_trait_destiny_admiral: "Katzen Admiral"
+    pki_leader_trait_destiny_admiral_desc: "Excelling at logistic and strategic planning, this commander is able to command fleets that would overburden their lesser peers."
 
     pki_warforge_naval_cap: "Katzen War Forges"
 
@@ -1126,3 +1127,5 @@
     opinion_pki_mocked_galcom_2: "$opinion_pki_mocked_galcom_1$"
 
     pki_sanctions_worsening: "Modify §Y$pki_galcom_sanctions_1$§! by:\n$DIPLOMACY_WEIGHT_LABEL$: §R-25%§!\n$MOD_COUNTRY_TRUST_GROWTH$: §R-25%§!"
+
+    pki_leader_destiny_traits: "\n§YOnly one leader can have this §HKatzen Destiny Trait§!§!"
