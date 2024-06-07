@@ -1,0 +1,3 @@
+pki_$FOCUS$ = {
+    $IN_PROGRESS_EFFECT$
+}

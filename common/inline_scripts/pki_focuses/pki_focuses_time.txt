@@ -1,0 +1,4 @@
+set_variable = {
+    which = pki_$FOCUS$_speed
+    value = $TIME$
+}

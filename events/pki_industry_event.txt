@@ -12,6 +12,14 @@ country_event = {
     }
 
     immediate = {
+        change_variable = {
+            which = pki_planes_count
+            value = value:pki_num_air_wings
+        }
+        change_variable = {
+            which = pki_army_count
+            value = value:pki_num_armies
+        }
         if = {
             limit = {
                 check_variable = {

@@ -1,0 +1,3 @@
+pki_$FOCUS$_focus_requirements = {
+    $FULL_TRIGGER$
+}

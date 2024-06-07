@@ -183,13 +183,16 @@ pki_num_air_wings = {
 
 pki_air_supremacy_contribution = {
     add = pki_num_cas
-    divide = 100
-    add = 1
-    multiply = pki_num_fighters
+    add = pki_num_fighters
 }
 
 pki_air_supremacy = {
     add = event_target:pki_player.value:pki_air_supremacy_contribution
+    divide = value:pki_air_supremacy_total
+}
+
+pki_enemy_air_supremacy = {
+    add = event_target:pki_conquest_target.value:pki_air_supremacy_contribution
     divide = value:pki_air_supremacy_total
 }
 

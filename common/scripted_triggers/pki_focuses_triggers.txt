@@ -1,28 +1,32 @@
-## FOCUS POTENTIALS
+inline_script = {
+    script = pki_focuses/pki_focuses
+    PART = trigger
+}
 
 inline_script = {
-    script = pki_focuses/pki_katzen_state_focuses
-    TAB = state
+    script = pki_focuses/pki_focuses
+    PART = bypass
 }
 
-## FOCUS REQUIREMENTS
+inline_script = {
+    script = pki_focuses/pki_focuses
+    PART = potential
+}
 
-pki_kaiser_arrival_focus_requirements = {
-    hidden_trigger = {
-        always = yes
+pki_completed_focus = {
+    fail_text = {
+        text = pki_completed_$FOCUS$
+        hidden_trigger = {
+            event_target:pki_player = {
+                has_country_flag = pki_focus_$FOCUS$_completed
+            }
+        }
     }
 }
 
-pki_herzlands_industry_focus_requirements = {
-    inline_script = {
-        script = pki_focuses/pki_focus_trigger_loc
-        FOCUS = kaiser_arrival
-    }
-}
-
-## BYPASS REQUIREMENTS (NOT REQUIRED)
-pki_harania_bypass_requirements = {
-    NOT = {
-        exists = event_target:pki_HAR_country
+pki_test = {
+    pki_completed_focus = { FOCUS = kaiser_arrival }
+    event_target:pki_flusion_planet = {
+        num_districts = { type = district_industrial value = 2 }
     }
 }

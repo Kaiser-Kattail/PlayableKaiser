@@ -1,0 +1,6 @@
+inline_script = {
+    script = pki_focuses/pki_focuses_trigger_part_2
+    FOCUS = $FOCUS$
+    FULL_TRIGGER = "$PREREQUISITE$$TRIGGER$"
+    FULL_TRIGGER = "always = true"
+}

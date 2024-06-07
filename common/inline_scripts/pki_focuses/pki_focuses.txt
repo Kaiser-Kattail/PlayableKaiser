@@ -1,0 +1,106 @@
+# Big thanks to TTFTCUTS for helping with this.
+#
+# All triggers and effects are executed on country scope.
+# Make sure when using quotation marks to escape them like this \\\"blah blah blah\\\".
+# Ensure that either TRIGGER or PREREQUISITE is used, without both the focus will not appear as they don't have default values.
+# You can skip PREREQUISITE if the focus is the start of a tree or has no focuses before it, but please set TRIGGER to "always = true"
+#
+# There is a python script I have created to autogenerate loc and gui entry data. It is included in the root directory of the mod.
+#
+# You can define focuses like so:
+
+#inline_script = {
+#    script = pki_focuses/pki_focuses_$PART$
+#    PART = $PART$
+#
+#    FOCUS = ""                 Focus name
+#    TAB = ""                   Focus tree tab
+#    TIME = ""                  Focus length in years
+#    POTENTIAL = ""             Potential triggers (optional)
+#    TRIGGER = ""               Allow triggers (optional)
+#    BYPASS = ""                Bypass triggers, bypass check is called on monthly pulse (optional)
+#    PREREQUISITE = ""          Focus prerequisite, use for focus requirements rather than potential using "pki_completed_focus = { FOCUS = <Desired focus> }" (technically optional)
+#    EFFECT = ""                Effect fired after it is complete
+#    IN_PROGRESS_EFFECT = ""    Effect fired when focus starts (optional)
+#}
+
+inline_script = {
+    script = pki_focuses/pki_focuses_def
+    PART = $PART$
+    FOCUS = kaiser_arrival
+    TAB = state
+    TIME = 5
+    EFFECT = "
+    set_empire_name = \\\"Katzenartig Imperium\\\" #Situation effects wont display properly if it is a localised entry
+    remove_modifier = pki_destabilized_government
+    hidden_effect = {
+        change_country_flag = {
+            icon = {
+                category=\\\"domination\\\"
+                file=\\\"domination_8.dds\\\"
+            }
+            background = {
+                category=\\\"backgrounds\\\"
+                file=\\\"v.dds\\\"
+            }
+            colors = {
+                \\\"blue\\\"
+                \\\"indigo\\\"
+                \\\"null\\\"
+                \\\"null\\\"
+            }
+        }
+        create_leader = {
+            name = NAME_Kattail
+            species = event_target:pki_kaiser_portrait_hd
+            class = commander
+            skill = 4
+            set_age = 189
+            randomize_traits = no
+            traits = {
+                trait = pki_leader_trait_ruler_kaiser_kattail
+                trait = leader_trait_legendary_military_knowledge
+                trait = leader_trait_legendary_foe_hammer
+                trait = trait_ruler_charismatic_2
+                trait = subclass_commander_councilor
+            }
+            gender = male
+            immortal = yes
+            background_job = none
+            background_ethic = ethic_fanatic_militarist
+            background_planet = event_target:pki_flusion_planet
+
+            effect = {
+                set_leader_flag = kaiser_kattail
+                set_leader_flag = legendary_leader
+                set_leader_flag = immune_to_negative_traits
+                set_leader_flag = leader_death_events_blocked
+                set_leader_flag = flusion_modified
+                save_global_event_target_as = kaiser_kattail
+            }
+            custom_description = PKI_KAISER_DESC
+            custom_catch_phrase = PKI_KAISER_CATCH_PHRASE
+        }
+
+        ruler = {
+            save_global_event_target_as = pki_old_leader
+        }
+
+        assign_leader = last_created_leader
+    }
+    "
+}
+
+inline_script = {
+    script = pki_focuses/pki_focuses_def
+    PART = $PART$
+    FOCUS = herzlands_industry
+    TAB = state
+    TIME = 2.5
+    PREREQUISITE = "pki_completed_focus = { FOCUS = kaiser_arrival }"
+    EFFECT = "
+    event_target:pki_flusion_planet = {
+        add_deposit = d_pki_megafoundries
+    }
+    "
+}

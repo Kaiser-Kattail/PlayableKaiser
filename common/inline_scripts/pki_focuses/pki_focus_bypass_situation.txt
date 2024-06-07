@@ -1,9 +1,0 @@
-pki_$FOCUS$ = {
-    if = {
-        limit = {
-            owner = {
-                pki_$FOCUS$_bypass_requirements = yes
-            }
-        }
-    }
-}

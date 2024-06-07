@@ -879,3 +879,106 @@ situation_pki_galactic_tension = {
 		}
 	}
 }
+
+pki_situation_conquest = {
+	picture = GFX_evt_burning_city
+	category = neutral
+	start_value = 0
+	complete_icon = GFX_situation_outcome_positive
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	fail_icon = GFX_situation_outcome_negative
+	fail_icon_frame = GFX_situation_outcome_frame_red
+
+	monthly_progress = {
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = pki_approach_hold
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = pki_approach_push
+			add = 1
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = pki_approach_blitz
+			add = 1.5
+		}
+		modifier = {
+			desc = pki_situation_conquest_speed_desc
+			mult = modifier:pki_situation_conquest_speed
+		}
+		modifier = {
+			desc = pki_country_size
+			divide = event_target:pki_conquest_target.pki_building_slots
+		}
+		modifier = {
+			desc = pki_ongoing_battle
+			factor = 0
+			owner = {
+				has_country_flag = pki_has_ongoing_battle
+			}
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = pki_situation_conquest_complete
+		hidden_effect = {
+			event_target:pki_conquest_target = {
+				switch = {
+					trigger = has_country_flag
+					inline_script = {
+						script = pki/pki_inline_script
+						SCRIPT_NAME = country_annex
+					}
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		custom_tooltip = pki_situation_conquest_fail
+		hidden_effect = {
+
+		}
+	}
+
+	stages = {
+		stage = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_giga_situation_stage_frame_yellow
+			end = 100
+			modifier = {
+				pki_situation_conquest_speed = -0.5
+			}
+		}
+	}
+
+	approach = {
+		name = pki_approach_hold
+		icon = GFX_situation_approach_shrug
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = pki_approach_hold_tt
+		}
+		modifier = {
+			pki_situation_conquest_speed = 0.3
+		}
+	}
+	approach = {
+		name = pki_approach_push
+		icon = GFX_situation_approach_shrug
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = pki_approach_push_tt
+		}
+	}
+	approach = {
+		name = pki_approach_blitz
+		icon = GFX_situation_approach_shrug
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = pki_approach_blitz_tt
+		}
+	}
+}

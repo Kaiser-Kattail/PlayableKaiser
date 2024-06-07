@@ -1,0 +1,14 @@
+parameters = {
+    ### Focus tree tab
+    ## context_key = inline_scripts@pki_focuses/pki_focuses_def
+    TAB = enum[pki_focus_tab]
+
+    ### Focus length
+    ## context_key = inline_scripts@pki_focuses/pki_focuses_def
+    TIME = <job>
+
+    ### Focus effect
+    ## context_key = inline_scripts@pki_focuses/
+    ## push_scope = country
+    EFFECT = alias[effect]
+}

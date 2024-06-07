@@ -120,8 +120,8 @@ country_event = {
 						switch = {
 							trigger = has_country_flag
 							inline_script = {
-								script = pki_focuses/pki_all_focuses
-								SCRIPT_NAME = pki_situation_flag
+								script = pki_focuses/pki_focuses
+								PART = situation
 							}
 						}
 					}
@@ -138,8 +138,8 @@ country_event = {
 		switch = {
 			trigger = has_country_flag
 			inline_script = {
-				script = pki_focuses/pki_all_focuses
-				SCRIPT_NAME = pki_situation_flag
+				script = pki_focuses/pki_focuses
+				PART = situation
 			}
 		}
 	}

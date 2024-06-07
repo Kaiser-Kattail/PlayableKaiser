@@ -8,4 +8,10 @@ if = {
         localization = pki_focus_$FOCUS$_bypassed
         days = 5
     }
+    every_situation = {
+        limit = {
+            is_situation_type = situation_naitonal_focus
+        }
+        destroy_situation = this
+    }
 }

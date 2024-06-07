@@ -1,0 +1,2 @@
+title = { text = pki_focus_$FOCUS$ trigger = { has_situation_flag = pki_$FOCUS$} }
+desc = { text = pki_focus_$FOCUS$_flavor trigger = { has_situation_flag = pki_$FOCUS$} }

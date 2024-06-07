@@ -5,8 +5,8 @@ situation_naitonal_focus = {
     complete_icon_frame = GFX_situation_outcome_frame_blue
 
     inline_script = {
-        script = pki_focuses/pki_all_focuses
-        SCRIPT_NAME = pki_event_loc
+        script = pki_focuses/pki_focuses
+        PART = loc
     }
 
     on_start = {
@@ -30,8 +30,8 @@ situation_naitonal_focus = {
         switch = {
             trigger = has_situation_flag
             inline_script = {
-                script = pki_focuses/pki_all_focuses
-                SCRIPT_NAME = pki_focus_complete
+                script = pki_focuses/pki_focuses
+                PART = complete
             }
         }
         hidden_effect = {
@@ -47,22 +47,10 @@ situation_naitonal_focus = {
         }
     }
 
-    abort_trigger = {
-        switch = {
-            trigger = has_situation_flag
-            inline_script = {
-                script = pki_focuses/pki_all_focuses
-                SCRIPT_NAME = pki_focus_bypass_situation
-            }
-            default = {
-                always = no
-            }
-        }
-    }
-
     on_fail = {
         hidden_effect = { destroy_situation = this }
     }
+
     monthly_progress = {
         base = 1
         modifier = {
@@ -73,7 +61,7 @@ situation_naitonal_focus = {
         modifier = {
             desc = string_current_approach
             current_situation_approach = approach_focus_fast
-            mult = 2
+            mult = 1.5
         }
     }
 

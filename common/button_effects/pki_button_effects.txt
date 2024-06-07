@@ -188,6 +188,6 @@ pki_focus_tree_tab_galactic_active = {
 ### ADD FOCUSES HERE
 
 inline_script = {
-	script = pki_focuses/pki_all_focuses
-	SCRIPT_NAME = pki_focus_button_effects
+	script = pki_focuses/pki_focuses
+	PART = button
 }

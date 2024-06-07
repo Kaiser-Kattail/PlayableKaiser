@@ -1,2 +1,0 @@
-@pki_kaiser_arrival_speed = 5
-@pki_herzlands_industry_speed = 2.5

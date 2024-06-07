@@ -30,10 +30,10 @@
     pki_cancel: "Cancel"
 
     MESSAGE_PKI_NATIONAL_FOCUS_COMPLETE_TITLE: "National Focus Complete"
-    MESSAGE_PKI_NATIONAL_FOCUS_COMPLETE_TEXT: "We have completed"
+    MESSAGE_PKI_NATIONAL_FOCUS_COMPLETE_TEXT: "has been completed"
 
     MESSAGE_PKI_NATIONAL_FOCUS_BYPASSED_TITLE: "National Focus Bypassed"
-    MESSAGE_PKI_NATIONAL_FOCUS_BYPASSED_TEXT: "We have bypassed"
+    MESSAGE_PKI_NATIONAL_FOCUS_BYPASSED_TEXT: "has been bypassed"
 
     pki_focus_desc_text: "[pki_focus_desc]"
     pki_focus_time_text: "§H[pki_focus_speed] years§!"
@@ -47,28 +47,29 @@
     #### FOCUS LOC
 
     pki_completed_focus: "Requires "
+    pki_focus_spacer: "\n--------------\n"
 
     pki_focus_kaiser_arrival: "Storm the Pyramid"
     pki_focus_kaiser_arrival_label: "Storm the Pyramid"
-    pki_focus_kaiser_arrival_desc: "$pki_focus_kaiser_arrival_effects_desc$\n--------------\n§g$pki_focus_kaiser_arrival_flavor$§!"
+    pki_focus_kaiser_arrival_desc: "$pki_focus_kaiser_arrival_effects_desc$$pki_focus_spacer$§g$pki_focus_kaiser_arrival_flavor$§!"
     pki_focus_kaiser_arrival_effect: "[owner.GetName] will be known as §Y$PKI_KATZENARTIG_IMPERIUM$§!"
     pki_focus_kaiser_arrival_effects_desc: "§H$pki_focus_kaiser_arrival$§!\n\nEffect\n\n$pki_focus_kaiser_arrival_effect$"
     pki_focus_kaiser_arrival_flavor: "For the past decade, the Cat Kingdom has been in a period of severe political turmoil, with rising political violence, extreme polarization, and low opinions on the government. Kattail, a veteran of the Wacegi War, has an ambitious plan to stabilize the nation, and it starts by removing Mewtail III."
-    pki_focus_kaiser_arrival_tt: "\n§H$pki_focus_kaiser_arrival$§!\n\nCompletion Time: §H$@pki_kaiser_arrival_speed$§! years\n\n§HEffect§!:\n\n$pki_focus_kaiser_arrival_effect$"
+    pki_focus_kaiser_arrival_tt: "\n§H$pki_focus_kaiser_arrival$§!\n\nCompletion Time: §H[event_target:pki_player.pki_kaiser_arrival_speed]§! years\n\n§HEffect§!:\n\n$pki_focus_kaiser_arrival_effect$"
     pki_completed_kaiser_arrival: "$pki_completed_focus$§H$pki_focus_kaiser_arrival$§!"
-    pki_focus_kaiser_arrival_completed: "$MESSAGE_PKI_NATIONAL_FOCUS_COMPLETE_TEXT$ §H$pki_focus_kaiser_arrival$§!"
-    pki_focus_kaiser_arrival_bypassed: "$MESSAGE_PKI_NATIONAL_FOCUS_BYPASSED_TEXT$ §H$pki_focus_kaiser_arrival$§!"
+    pki_focus_kaiser_arrival_completed: "§H$pki_focus_kaiser_arrival$§! $MESSAGE_PKI_NATIONAL_FOCUS_COMPLETE_TEXT$"
+    pki_focus_kaiser_arrival_bypassed: "§H$pki_focus_kaiser_arrival$§! $MESSAGE_PKI_NATIONAL_FOCUS_BYPASSED_TEXT$"
 
     pki_focus_herzlands_industry: "Herzlands Industry"
     pki_focus_herzlands_industry_label: "Herzlands Industry"
-    pki_focus_herzlands_industry_desc: "$pki_focus_herzlands_industry_effects_desc$\n--------------\n§g$pki_focus_herzlands_industry_flavor$§!"
+    pki_focus_herzlands_industry_desc: "$pki_focus_herzlands_industry_effects_desc$$pki_focus_spacer$§g$pki_focus_herzlands_industry_flavor$§!"
     pki_focus_herzlands_industry_effect: "§Y[owner.capital_scope.GetName]§!: Add ['concept_pki_d_pki_megafoundries']"
     pki_focus_herzlands_industry_effects_desc: "§H$pki_focus_herzlands_industry$§!\n\nEffect\n\n§Y[owner.capital_scope.GetName]§!: Add §Y$d_pki_megafoundries$§!, which provide:$NEW_LINE$$concept_pki_d_pki_megafoundries_desc$"
     pki_focus_herzlands_industry_flavor: "The Kaiser has big plans for the Imperium, what a better way to start, than with and expanded industrial base."
     pki_completed_herzlands_industry: "$pki_completed_focus$§H$pki_focus_herzlands_industry$§!"
-    pki_focus_herzlands_industry_tt: "\n§H$pki_focus_herzlands_industry$§!\n\nCompletion Time: §H2.5§! years\n\n§HEffect§!:\n\n$pki_focus_herzlands_industry_effect$"
-    pki_focus_herzlands_industry_completed: "$MESSAGE_PKI_NATIONAL_FOCUS_COMPLETE_TEXT$ §H$pki_focus_herzlands_industry$§!"
-    pki_focus_herzlands_industry_bypassed: "$MESSAGE_PKI_NATIONAL_FOCUS_BYPASSED_TEXT$ §H$pki_focus_herzlands_industry$§!"
+    pki_focus_herzlands_industry_tt: "\n§H$pki_focus_herzlands_industry$§!\n\nCompletion Time: §H[event_target:pki_player.pki_herzlands_industry_speed]§! years\n\n§HEffect§!:\n\n$pki_focus_herzlands_industry_effect$"
+    pki_focus_herzlands_industry_completed: "§H$pki_focus_herzlands_industry$§! $MESSAGE_PKI_NATIONAL_FOCUS_COMPLETE_TEXT$"
+    pki_focus_herzlands_industry_bypassed: "§H$pki_focus_herzlands_industry$§! $MESSAGE_PKI_NATIONAL_FOCUS_BYPASSED_TEXT$"
 
     #### FOCUS CONCEPTS
 
@@ -79,10 +80,6 @@
 
     concept_pki_neighbors: "Neighbors Reassured"
     concept_pki_neighbors_desc: "- $MOD_COUNTRY_ENVOYS_ADD$: §G+1§!\n- $TRADE_VALUE$: §G+10%§!\n- $MOD_POP_AMENITIES_USAGE_ADD$ §Y-0.50§!"
-
-    #### FOCUS EVENTS
-
-    pki_focus.1.title: "Kaiser Kattail"
 
     #### FOCUS MODIFIERS
 

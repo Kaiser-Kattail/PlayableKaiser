@@ -1,8 +1,0 @@
-inline_script = {
-    script = pki_focuses/$SCRIPT_NAME$
-    FOCUS = kaiser_arrival
-}
-inline_script = {
-    script = pki_focuses/$SCRIPT_NAME$
-    FOCUS = herzlands_industry
-}

@@ -1,0 +1,7 @@
+pki_$COUNTRY$ = {
+    event_target:pki_player = {
+        pki_map_annex = {
+            COUNTRY = $COUNTRY$
+        }
+    }
+}

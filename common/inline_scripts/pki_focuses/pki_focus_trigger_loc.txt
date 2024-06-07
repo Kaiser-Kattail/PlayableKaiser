@@ -1,6 +1,0 @@
-fail_text = {
-    text = pki_completed_$FOCUS$
-    hidden_trigger = {
-        has_country_flag = pki_focus_$FOCUS$_completed
-    }
-}

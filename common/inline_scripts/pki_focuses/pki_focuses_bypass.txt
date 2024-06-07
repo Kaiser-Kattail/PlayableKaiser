@@ -1,0 +1,4 @@
+pki_$FOCUS$_bypass_requirements = {
+    $PREREQUISITE$
+    $BYPASS$
+}

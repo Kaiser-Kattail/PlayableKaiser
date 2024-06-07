@@ -1,0 +1,17 @@
+inline_script = {
+    script = pki_focuses/pki_focuses_$PART$
+    FOCUS = $FOCUS$
+    TAB = $TAB$
+    TIME = $TIME$
+    POTENTIAL = "$POTENTIAL$"
+    POTENTIAL = "always = yes"
+    TRIGGER = "$TRIGGER$"
+    TRIGGER = ""
+    BYPASS = "$BYPASS$"
+    BYPASS = "always = no"
+    PREREQUISITE = "$PREREQUISITE$"
+    PREREQUISITE = ""
+    EFFECT = "$EFFECT$"
+    IN_PROGRESS_EFFECT = "$IN_PROGRESS_EFFECT$"
+    IN_PROGRESS_EFFECT = ""
+}
