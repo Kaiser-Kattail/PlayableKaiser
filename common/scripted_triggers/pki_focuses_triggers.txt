@@ -23,10 +23,3 @@ pki_completed_focus = {
         }
     }
 }
-
-pki_test = {
-    pki_completed_focus = { FOCUS = kaiser_arrival }
-    event_target:pki_flusion_planet = {
-        num_districts = { type = district_industrial value = 2 }
-    }
-}

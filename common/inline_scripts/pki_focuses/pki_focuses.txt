@@ -36,12 +36,12 @@ inline_script = {
     hidden_effect = {
         change_country_flag = {
             icon = {
-                category=\\\"domination\\\"
-                file=\\\"domination_8.dds\\\"
+                category = \\\"domination\\\"
+                file = \\\"domination_8.dds\\\"
             }
             background = {
-                category=\\\"backgrounds\\\"
-                file=\\\"v.dds\\\"
+                category = \\\"backgrounds\\\"
+                file = \\\"v.dds\\\"
             }
             colors = {
                 \\\"blue\\\"

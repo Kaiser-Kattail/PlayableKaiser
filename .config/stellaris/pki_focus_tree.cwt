@@ -1,0 +1,53 @@
+parameters = {
+    ### Focus tree tab
+    ## context_key = inline_script@pki_focuses/pki_focuses_def
+    TAB = enum[pki_focus_tab]
+
+    ### Focus length
+    ## context_key = inline_script@pki_focuses/pki_focuses_def
+    TIME = number
+
+    ### Focus effect
+    ## context_key = inline_script@pki_focuses/pki_focuses_def
+    ## push_scope = country
+    ## context_configs_type = multiple
+    EFFECT = {
+        alias_name[effect] = alias_match_left[effect]
+    }
+
+    ### Focus effect
+    ## context_key = inline_script@pki_focuses/pki_focuses_def
+    ## push_scope = country
+    ## context_configs_type = multiple
+    IN_PROGRESS_EFFECT = {
+        alias_name[effect] = alias_match_left[effect]
+    }
+
+    ## context_key = inline_script@pki_focuses/pki_focuses_def
+    ## push_scope = country
+    ## context_configs_type = multiple
+    TRIGGER = {
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+
+    ## context_key = inline_script@pki_focuses/pki_focuses_def
+    ## push_scope = country
+    ## context_configs_type = multiple
+    POTENTIAL = {
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+
+    ## context_key = inline_script@pki_focuses/pki_focuses_def
+    ## push_scope = country
+    ## context_configs_type = multiple
+    BYPASS = {
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+
+    ## context_key = inline_script@pki_focuses/pki_focuses_def
+    ## push_scope = country
+    ## context_configs_type = multiple
+    PREREQUISITE = {
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+}
