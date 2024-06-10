@@ -1052,6 +1052,30 @@
 
     pki_leader_trait_destiny_admiral: "Katzen Admiral"
     pki_leader_trait_destiny_admiral_desc: "Excelling at logistic and strategic planning, this commander is able to command fleets that would overburden their lesser peers."
+    pki_leader_trait_destiny_general: "Katzen Siege Specialist"
+    pki_leader_trait_destiny_general_desc: "No fortress will be unbroken, no guard shall hold, no defeat, only victory."
+    pki_leader_trait_destiny_commissioner: "Katzen Protector"
+    pki_leader_trait_destiny_commissioner_desc: "A good soldier shouldn't fear dying. They should fear being left out of history."
+    pki_leader_trait_destiny_strategist: "Katzen Design Expert"
+    pki_leader_trait_destiny_strategist_desc: "Katzen science is the best in the galaxy!"
+    pki_leader_trait_destiny_analyst: "Katzen Director"
+    pki_leader_trait_destiny_analyst_desc: "Why pursue any other field than engineering?! Liberal arts won't blow up my enemy!"
+    pki_leader_trait_destiny_explorer: "Katzen Surveyor"
+    pki_leader_trait_destiny_explorer_desc: "While accuracy matters, speed is of equal importance. Why not both?"
+    pki_leader_trait_destiny_scholar: "Katzen Research Fiend"
+    pki_leader_trait_destiny_scholar_desc: "This guy loves archaeology. A bit too much. Don't tell them I said that."
+    pki_leader_trait_destiny_statistician: "Katzen Mentat"
+    pki_leader_trait_destiny_statistician_desc: "Spark of genius? More like thunderstorm of genius."
+    pki_leader_trait_destiny_delegate: "Katzen Fleet Organizer"
+    pki_leader_trait_destiny_delegate_desc: "50? Nah lets make it 70 more battleships."
+    pki_leader_trait_destiny_industrialist: "Katzen Logistics Manager"
+    pki_leader_trait_destiny_industrialist_desc: "Without logistics and proper upkeep, even an empire is guaranteed to fall."
+    pki_leader_trait_destiny_advisor: "Katzen Taskmaster"
+    pki_leader_trait_destiny_advisor_desc: "This leader gets things done the first time. No need to check if they did it, they already did the next thing you wanted."
+    pki_leader_trait_destiny_ambassador: "Katzen Foreign Affairs Specialist"
+    pki_leader_trait_destiny_ambassador_desc: "Things abroad can get messy. This leader sees the mess and gets excited."
+
+    mod_planet_researchers_alloys_produce_add: "£alloys£$alloys$ from $job_researcher_plural_with_icon$"
 
     pki_warforge_naval_cap: "Katzen War Forges"
 
@@ -1059,7 +1083,7 @@
     mod_shipsize_giga_massive_planet_upkeep: "Attack Moon Upkeep"
 
     decision_pki_sector_auto: "Semiautonomous Sector Designation"
-    decision_pki_sector_auto_desc: "This sector has little use for us beyond providing pops for [owner.capital_scope.getname]."
+    decision_pki_sector_auto_desc: "This sector has little use for us beyond providing pops for [owner.capital_scope.GetName]."
 
     PKI_PLACEHOLDER: "PLACEHOLDER"
 
