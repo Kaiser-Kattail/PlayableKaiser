@@ -6,8 +6,8 @@ pki_katzen_special_forces = {
 	collateral_damage = 0.75
 	war_exhaustion = 1.5
 	time = 120
-	icon = GFX_army_type_primitive
 	has_species = no
+	icon = GFX_army_type_primitive
 
 	resources = {
 		category = armies
@@ -121,93 +121,57 @@ pki_air_cas = {
 	}
 }
 
-#angriffskatze_army = {
-#	damage = 2.0
-#	health = 1.5
-#	morale = 2.5
-#	morale_damage = 1.0
-#	collateral_damage = 0.75
-#	war_exhaustion = 1.5
-#	time = 360
-#	icon = GFX_army_type_assault
-#	has_species = no
-#
-#	resources = {
-#		category = armies
-#		cost = {
-#			minerals = 1000
-#			alloys = 500
-#			exotic_gases = 50
-#			rare_crystals = 50
-#			volatile_motes = 50
-#		}
-#
-#		upkeep = {
-#			energy = 3
-#		}
-#	}
-#
-#	potential = { owner = { has_origin = origin_katzen } }
-#}
-#
-#luftkatzenvernichter_army = {
-#	health = 3
-#	damage = 8.0
-#	has_morale = no
-#	morale_damage = 10
-#	collateral_damage = 4.0
-#	war_exhaustion = 5.0
-#	icon = GFX_army_type_aerial
-#	has_species = no
-#	time = 420
-#	resources = {
-#		category = armies
-#		cost = {
-#			alloys = 800
-#			exotic_gases = 50
-#			rare_crystals = 50
-#			volatile_motes = 50
-#		}
-#		upkeep = {
-#			energy = 6
-#		}
-#	}
-#	potential = { owner = { has_origin = origin_katzen } }
-#}
-#
-#riesigerkatzenpanzer_army = {
-#	damage = 10.0
-#	health = 5.0
-#	has_morale = no
-#	collateral_damage = 4.0
-#	war_exhaustion = 5.0
-#	time = 750
-#	has_species = no
-#
-#	icon = GFX_army_type_katzen_panzer
-#
-#	resources = {
-#		category = armies
-#		cost = {
-#			alloys = 1000
-#			exotic_gases = 50
-#			rare_crystals = 50
-#			volatile_motes = 50
-#		}
-#
-#		upkeep = {
-#			energy = 10
-#		}
-#	}
-#
-#	potential = { owner = {
-#		OR = {
-#			has_origin = origin_katzen
-#			has_technology = giga_tech_katzen_panzers
-#		}
-#		}
-#	}
-#}
+pki_flusion_special_forces = {
+	damage = 2.0
+	health = 1.5
+	morale = 2.5
+	morale_damage = 1.0
+	collateral_damage = 0.75
+	war_exhaustion = 1.5
+	time = 120
+	icon = GFX_army_type_primitive
+
+	resources = {
+		category = armies
+		cost = {
+			minerals = 150
+			alloys = 10
+		}
+
+		upkeep = {
+			energy = 1.5
+		}
+	}
+
+	potential = { always = no }
+}
+
+pki_flusion_tanks = {
+	damage = 4.0
+	health = 5.0
+	has_morale = no
+	morale_damage = 1.5
+	collateral_damage = 3.00
+	war_exhaustion = 5.0
+	time = 210
+	has_species = no
+
+	icon = GFX_army_type_katzen_panzer
+
+	resources = {
+		category = armies
+		cost = {
+			minerals = 500
+			alloys = 100
+		}
+
+		upkeep = {
+			energy = 6
+		}
+	}
+
+	potential = { always = no }
+}
 
 corrona_army = {
 	defensive = yes

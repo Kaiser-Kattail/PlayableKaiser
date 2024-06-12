@@ -921,6 +921,10 @@ pki_situation_conquest = {
 		}
 	}
 
+	triggered_target_modifier = {
+		
+	}
+
 	on_progress_complete = {
 		custom_tooltip = pki_situation_conquest_complete
 		hidden_effect = {

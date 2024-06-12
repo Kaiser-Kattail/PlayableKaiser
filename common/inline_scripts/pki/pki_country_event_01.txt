@@ -33,6 +33,9 @@ option = { # WAR
     custom_tooltip = flunat_war_dec
     is_dialog_only = yes
     response_text = pki_$COUNTRY$.01.c.response
+    hidden_effect = {
+        event_target:pki_$COUNTRY$_country = { save_global_event_target_as = pki_conquest_target }
+    }
 }
 
 option = { # Bye

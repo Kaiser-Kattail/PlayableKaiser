@@ -27,7 +27,7 @@
 
     pki_air_combat: "Air Combat"
     pki_air_combat_desc: "Who dares, wins."
-    pki_air_combat_tt: "Air Superiority: [pki_air_supremacy_color][pki_air_supremacy]%§!\n\n§HOur Air Wings:§!\nFighters: §Y[owner.pki_num_fighters]§!\nClose Air Support: §Y[owner.pki_num_cas]§!\n\n§REnemy Air Wings:§!\nFighters: §Y[event_target:pki_conquest_target.pki_num_fighters]§!\nClose Air Support: §Y[event_target:pki_conquest_target.pki_num_cas]§!"
+    pki_air_combat_tt: "Air Superiority: [pki_air_supremacy_color][pki_air_supremacy]%§!\n\n§HOur Air Wings:§!\nFighters: §Y[event_target:pki_player.pki_num_fighters]§!\nClose Air Support: §Y[event_target:pki_player.pki_num_cas]§!\n\n§REnemy Air Wings:§!\nFighters: §Y[event_target:pki_conquest_target.pki_num_fighters]§!\nClose Air Support: §Y[event_target:pki_conquest_target.pki_num_cas]§!"
 
     pki_battle_modifier: "Ongoing Battle"
     pki_battle_modifier_desc: ""
@@ -76,8 +76,8 @@
 
     PKI_SELECTED_COUNTRY_FACTORIES: "£pki_factory£ §Y[event_target:pki_selected_country.pki_industry_level]§!"
     PKI_SELECTED_COUNTRY_BUILDING_SLOTS: "£building£ §Y[event_target:pki_selected_country.pki_building_slots]§!"
-    PKI_SELECTED_COUNTRY_ARMIES: "£military_ship£§Y[event_target:pki_selected_country.pki_army_count]§!"
-    PKI_SELECTED_COUNTRY_PLANES: "£pki_plane£ §Y[event_target:pki_selected_country.pki_planes_count]§!"
+    PKI_SELECTED_COUNTRY_ARMIES: "£military_ship£§Y[pki_map_army_display]§!"
+    PKI_SELECTED_COUNTRY_PLANES: "£pki_plane£ §Y[pki_map_planes_display]§!"
 
     PKI_SELECTED_COUNTRY_FACTORIES_tt: "§HFactories§!"
     PKI_SELECTED_COUNTRY_BUILDING_SLOTS_tt: "§HBuilding Slots§!"

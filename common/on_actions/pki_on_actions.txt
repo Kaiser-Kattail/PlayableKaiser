@@ -49,8 +49,9 @@ on_terraforming_complete = {
 		flusion.3
 	}
 }
-on_planet_attackers_win = {		events = { conquest.0 conquest.1 conquest.9 } }
-on_planet_defenders_win = {		events = { conquest.6	}}
+
+on_planet_attackers_win = {		events = { conquest.0 pki_conquest.0032 } }
+on_planet_defenders_win = {		events = { pki_conquest.0031	}}
 
 on_megastructure_change_owner = {
 	events = {

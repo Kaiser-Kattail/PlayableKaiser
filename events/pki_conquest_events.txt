@@ -1,0 +1,376 @@
+namespace = conquest
+
+
+country_event = { #Flusion is GONE (destroyed, checks monthly)
+	id = conquest.9998
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		AND = {
+			exists = event_target:jublio
+			OR = {
+				event_target:pki_flusion_planet = {
+					NOT = {
+                        			is_planet_class = pc_pki_flusion_ecu
+                   			}
+					OR = {
+						is_colony = no #Flusion is not a colony aka destroyed
+						is_planet_class = pc_shattered
+						is_planet_class = pc_shielded
+						num_pops = 0
+					}
+					NOT = { is_planet_class = pc_pki_flusion_ecu }
+				}
+				NOT = { exists = event_target:pki_flusion_planet }
+			}
+		}
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				has_origin = origin_katzen
+			}
+			country_event = {
+				id = conquest.9999
+			}
+		}
+	}
+}
+
+country_event = { #Flusion is INVADED
+	id = conquest.0
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		fromfrom = { has_planet_flag = pki_flusion_planet }
+		this = {
+			NOT = {
+				is_country_type = pki_flusion_nation
+			}
+		}
+	}
+
+	immediate = {
+		set_global_flag = pki_katzen_defeated
+		every_country = {
+			limit = {
+				has_origin = origin_katzen
+			}
+			country_event = {
+				id = conquest.9999
+			}
+		}
+	}
+}
+
+country_event = {
+	id = conquest.9999
+	picture = GFX_evt_death_from_above
+	show_sound = event_air_raid_siren
+	title = "conquest.0.title"
+	desc = "conquest.0.desc"
+	is_triggered_only = yes
+	option = {
+		name = "conquest.0.a"
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				has_origin = origin_katzen
+			}
+			destroy_country = yes
+		}
+	}
+}
+
+country_event = {
+	id = conquest.090909
+	picture = GFX_evt_victorious_army
+	show_sound = event_celebration
+	title = "conquest.090909.title"
+	desc = "conquest.090909.desc"
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			has_country_flag = defeated_coalition
+			NOT = {
+				any_country = {
+					OR = {
+						is_country_type = pki_flusion_nation
+					}
+				}
+			}
+		}
+		has_origin = origin_katzen
+	}
+	option = {
+		name = "conquest.090909.a"
+		add_resource = {
+			unity = 10000
+		}
+	}
+	immediate = {
+		set_country_flag = pki_unified_flusion
+		add_tech_progress = { tech = tech_pki_warforge progress = 0.25 }
+		add_modifier = {
+			modifier = pki_warforge_naval_cap
+			days = -1
+			mult = value:pki_num_total_warforges
+		}
+		set_variable = {
+			which = pki_num_total_warforges
+			value = value:pki_num_total_warforges
+		}
+		remove_country_flag = flusionian_war
+		country_event = {
+			id = pki_ftl.1 days = 660
+		}
+		country_event = {
+			id = pki_misc.6 days = 120
+		}
+	}
+}
+
+namespace = pki_conquest
+
+# Daily air combat
+country_event = {
+	id = pki_conquest.001
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		pki_is_katzenartig_imperium = yes
+		event_target:pki_flusion_planet = {
+			has_modifier = pki_air_combat
+			NOT = {
+				has_country_flag = pki_no_more_air_combat
+			}
+		}
+	}
+
+	immediate = {
+		country_event = {
+			id = pki_conquest.001
+			days = 1
+		}
+		while = {
+			count = value:pki_air_supremacy_total_fraction
+			random_list = {
+				1 = {
+					factor = event_target:pki_player.pki_num_fighters
+					factor = event_target:pki_player.modifier:pki_plane_strength_mult
+					random_list = {
+						1 = {
+							event_target:pki_conquest_target = {
+								if = {
+									limit = {
+										check_variable = {
+											which = pki_num_fighters
+											value > 0
+										}
+									}
+									change_variable = {
+										which = pki_num_fighters
+										value = -1
+									}
+								}
+							}
+						}
+						1 = {
+							event_target:pki_conquest_target = {
+								if = {
+									limit = {
+										check_variable = {
+											which = pki_num_cas
+											value > 0
+										}
+									}
+									change_variable = {
+										which = pki_num_cas
+										value = -1
+									}
+								}
+							}
+						}
+					}
+				}
+				1 = {
+					factor = event_target:pki_conquest_target.pki_num_fighters
+					factor = event_target:pki_conquest_target.pki_planes_strength
+					random_list = {
+						1 = {
+							event_target:pki_player = {
+								if = {
+									limit = {
+										check_variable = {
+											which = pki_num_fighters
+											value > 0
+										}
+									}
+									change_variable = {
+										which = pki_num_fighters
+										value = -1
+									}
+								}
+							}
+						}
+						1 = {
+							event_target:pki_player = {
+								if = {
+									limit = {
+										check_variable = {
+											which = pki_num_fighters
+											value > 0
+										}
+									}
+									change_variable = {
+										which = pki_num_cas
+										value = -1
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# Battle start
+country_event = {
+	id = pki_conquest.002
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		pki_is_katzenartig_imperium = yes
+	}
+
+	immediate = {
+		country_event = {
+			id = pki_conquest.001
+			days = 1
+		}
+		set_variable = {
+			which = pki_num_fighters
+			value = 0
+		}
+		set_variable = {
+			which = pki_num_cas
+			value = 0
+		}
+		every_country = {
+			limit = {
+				is_country_type = pki_flusion_nation
+			}
+			set_faction_hostility = { set_hostile = yes }
+		}
+		event_target:pki_flusion_planet = {
+			if = {
+				limit = {
+					exists = army_leader
+				}
+				army_leader = { add_trait_no_notify = pki_leader_trait_battle_mechanics }
+			}
+			create_army = {
+				type = assault_army
+				owner = root
+			}
+			else = {
+				root = {
+					create_leader = {
+						name = random
+						species = root.owner_main_species
+						class = commander
+						traits = {
+							trait = pki_leader_trait_inexperienced_general
+						}
+						can_manually_change_location = no
+						can_assign_to_council = no
+						hide_leader = yes
+						leader_age_min = 20
+						leader_age_max = 40
+						effect = {
+							prevprev = {
+								army_leader = {
+									assign_leader = last_created_leader
+								}
+							}
+						}
+					}
+				}
+			}
+			# Remove defensive armies, remember this is an attack not defense
+			every_planet_army = {
+				limit = { pki_is_air_wing = yes }
+				switch = {
+					trigger = army_type
+					pki_air_fighter = {
+						prevprev = {
+							change_variable = {
+								which = pki_num_fighters
+								value = 100
+							}
+						}
+					}
+					pki_air_cas = {
+						prevprev = {
+							change_variable = {
+								which = pki_num_cas
+								value = 100
+							}
+						}
+					}
+				}
+				remove_army = yes
+			}
+			every_planet_army = {
+				limit = { pki_is_normal_army = no }
+				remove_army = yes
+			}
+			add_modifier = {
+				modifier = pki_air_combat
+			}
+		}
+		event_target:pki_conquest_target = {
+			pki_create_conquest_armies = yes
+		}
+	}
+}
+# Won battle
+country_event = {
+	id = pki_conquest.0031
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		pki_is_katzenartig_imperium = yes
+	}
+
+	immediate = {
+		pki_end_battle_effects = yes
+	}
+}
+
+# Lost battle
+country_event = {
+	id = pki_conquest.0032
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		pki_is_katzenartig_imperium = yes
+	}
+
+	immediate = {
+		from = {
+			pki_end_battle_effects = yes
+		}
+	}
+}

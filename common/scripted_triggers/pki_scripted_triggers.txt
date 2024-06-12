@@ -79,6 +79,7 @@ pki_is_normal_army = {
 pki_is_air_wing = {
 	OR = {
 		army_type = pki_air_fighter
+		army_type = pki_air_cas
 	}
 }
 

@@ -20,6 +20,10 @@ country_event = {
             which = pki_army_count
             value = value:pki_num_armies
         }
+        set_variable = {
+            which = pki_building_slots
+            value = event_target:pki_flusion_planet.modifier:pki_industry_building_slots
+        }
         if = {
             limit = {
                 check_variable = {
@@ -158,6 +162,39 @@ country_event = {
         change_variable = {
             which = pki_planes_count
             value = value:pki_industry_ai_air
+        }
+        if = {
+            limit = {
+                event_target:pki_flusion_planet = {
+                    has_ground_combat = no
+                }
+            }
+            set_variable = {
+                which = pki_num_fighters
+                value = pki_planes_count
+            }
+            multiply_variable = {
+                which = pki_num_fighters
+                value = pki_fighters_cas_ratio
+            }
+            set_variable = {
+                which = pki_num_cas
+                value = pki_planes_count
+            }
+            subtract_variable = {
+                which = pki_num_cas
+                value = pki_num_fighters
+            }
+            multiply_variable = {
+                which = pki_num_fighters
+                value = 100
+            }
+            multiply_variable = {
+                which = pki_num_cas
+                value = 100
+            }
+            floor_variable = pki_num_fighters
+            floor_variable = pki_num_cas
         }
         if = {
             limit = {

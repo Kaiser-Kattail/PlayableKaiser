@@ -563,3 +563,221 @@ pki_set_asteroid_name = {
         1 = { set_name = "giga_generic_asteroid_25" set_planet_flag = random_asteroid_name_25 modifier = { factor = 0 solar_system = { any_system_planet = { has_planet_flag = random_asteroid_name_25 } } } }
     }
 }
+
+pki_create_conquest_armies = {
+    create_leader = {
+        name = random
+        species = root.owner_main_species
+        class = commander
+        traits = {
+            trait = pki_leader_trait_battle_mechanics
+        }
+        skill = 3
+        randomize_traits = yes
+        can_manually_change_location = no
+        can_assign_to_council = no
+        hide_leader = yes
+        leader_age_min = 20
+        leader_age_max = 40
+        effect = {
+            random_list = {
+                25 = {
+                    add_trait_no_notify = pki_leader_trait_inexperienced_general
+                }
+                75 = {
+
+                }
+            }
+            last_created_army = {
+                assign_leader = last_created_leader
+            }
+        }
+    }
+    while = {
+        count = pki_current_army_points
+        random_list = {
+            4 = {
+                modifier = {
+                    factor = 0
+                    event_target:pki_player = {
+                        NOT = {
+                            has_country_flag = pki_panzer_core_formed
+                        }
+                    }
+                }
+                modifier = {
+                    factor = 0
+                    check_variable = {
+                        which = pki_current_army_points
+                        value < 4
+                    }
+                }
+                event_target:pki_flusion_planet = {
+                    fleet = {
+                        queue_actions = {
+
+                        }
+                    }
+                    create_army = {
+                        owner = event_target:pki_conquest_target
+                        type = pki_flusion_tanks
+                    }
+                }
+            }
+            1 = {
+                modifier = {
+                    factor = 0
+                    check_variable = {
+                        which = pki_current_army_points
+                        value < 2
+                    }
+                }
+                event_target:pki_flusion_planet = {
+                    create_army = {
+                        owner = event_target:pki_conquest_target
+                        type = pki_flusion_special_forces
+                        species = event_target:pki_conquest_target.owner_main_species
+                    }
+                }
+            }
+            2 = {
+                modifier = {
+                    factor = 0
+                    check_variable = {
+                        which = pki_current_army_points
+                        value < 1
+                    }
+                }
+                modifier = {
+                    factor = 999
+                    event_target:pki_player = {
+                        has_modifier = pki_pre_ftl_military_1
+                    }
+                }
+                modifier = {
+                    factor = 3
+                    event_target:pki_player = {
+                        has_modifier = pki_pre_ftl_military_2
+                    }
+                }
+                modifier = {
+                    factor = 2
+                    event_target:pki_player = {
+                        has_modifier = pki_pre_ftl_military_3
+                    }
+                }
+                event_target:pki_flusion_planet = {
+                    create_army = {
+                        owner = event_target:pki_conquest_target
+                        type = assault_army
+                        species = event_target:pki_conquest_target.owner_main_species
+                    }
+                }
+            }
+            1 = {
+                modifier = {
+                    factor = 999
+                    check_variable = {
+                        which = pki_current_army_points
+                        value = 0
+                    }
+                }
+                ## hehe nothing lmao
+            }
+        }
+    }
+    create_fleet = {
+        name = "guh"
+        effect = {
+            set_owner = this
+            while = {
+                count = 1
+                create_army_transport = {
+                    army_type = dominion_tracks
+                    army_name = "NAME_dominiontracks"
+                    ship_name = "NAME_dominiontracks"
+                }
+
+            }
+            set_location = {
+                target = event_target:pki_flusion_planet
+            }
+        }
+    }
+    last_created_army = {
+        assign_leader = last_created_leader
+    }
+    set_variable = {
+        which = pki_current_army_points
+        value = pki_army_count
+    }
+    
+    
+}
+
+pki_end_battle_effects = {
+    every_country = {
+        limit = {
+            is_country_type = pki_flusion_nation
+        }
+        set_faction_hostility = { set_hostile = no }
+    }
+    event_target:pki_flusion_planet = {
+        army_leader = {
+            remove_trait = pki_leader_trait_battle_mechanics
+        }
+        set_controller = event_target:pki_player
+        every_planet_army = {
+            limit = {
+                owner = {
+                    pki_is_katzenartig_imperium = no
+                }
+            }
+            remove_army = yes
+        }
+        remove_modifier = pki_air_combat
+        root = {
+            divide_variable = {
+                which = pki_num_fighters
+                value = 100
+            }
+            ceiling_variable = pki_num_fighters
+            divide_variable = {
+                which = pki_num_cas
+                value = 100
+            }
+            ceiling_variable = pki_num_cas
+        }
+        while = {
+            count = root.pki_num_fighters
+            create_army = {
+                name = random
+                owner = root
+                type = pki_air_fighter
+            }
+        }
+        while = {
+            count = root.pki_num_cas
+            create_army = {
+                name = random
+                owner = root
+                type = pki_air_cas
+            }
+        }
+    }
+    event_target:pki_conquest_target = {
+        set_variable = {
+            which = pki_planes_count
+            value = pki_num_fighters
+        }
+        change_variable = {
+            which = pki_planes_count
+            value = pki_num_cas
+        }
+        divide_variable = {
+            which = pki_planes_count
+            value = 100
+        }
+        floor_variable = pki_planes_count
+    }
+}

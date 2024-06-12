@@ -116,5 +116,15 @@ defined_text = {
 
 defined_text = {
     name = pki_air_supremacy
-    value = event_target:pki_player.value:pki_air_supremacy
+    value = event_target:pki_player.value:pki_air_supremacy_display
+}
+
+defined_text = {
+    name = pki_map_army_display
+    value = value:pki_map_army_display
+}
+
+defined_text = {
+    name = pki_map_planes_display
+    value = value:pki_map_planes_display
 }

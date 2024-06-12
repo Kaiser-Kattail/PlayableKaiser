@@ -142,22 +142,28 @@ pki_industry_ai_availible_factories = {
 pki_industry_ai_army = {
     add = value:pki_industry_ai_availible_factories
     multiply = pki_army_ratio
+    multiply = 0.25
 }
 
 pki_industry_ai_air = {
     add = value:pki_industry_ai_availible_factories
     multiply = pki_planes_ratio
+    multiply = 0.25
 }
 
-inline_script = {
-    script = pki/pki_random_intel
-    CATEGORY = factory
-    VARIABLE = pki_industrial_level
+pki_map_army_display = {
+    add = event_target:pki_selected_country.pki_army_count
+    floor = yes
+}
+
+pki_map_planes_display = {
+    add = event_target:pki_selected_country.pki_planes_count
+    floor = yes
 }
 
 pki_num_armies = {
     complex_trigger_modifier = {
-        trigger_scope = planet
+        trigger_scope = event_target:pki_flusion_planet
         trigger = count_planet_army
         mode = add
         parameters = {
@@ -170,7 +176,7 @@ pki_num_armies = {
 
 pki_num_air_wings = {
     complex_trigger_modifier = {
-        trigger_scope = planet
+        trigger_scope = event_target:pki_flusion_planet
         trigger = count_planet_army
         mode = add
         parameters = {
@@ -191,6 +197,12 @@ pki_air_supremacy = {
     divide = value:pki_air_supremacy_total
 }
 
+pki_air_supremacy_display = {
+    add = value:pki_air_supremacy
+    multiply = 100
+    floor = yes
+}
+
 pki_enemy_air_supremacy = {
     add = event_target:pki_conquest_target.value:pki_air_supremacy_contribution
     divide = value:pki_air_supremacy_total
@@ -199,6 +211,12 @@ pki_enemy_air_supremacy = {
 pki_air_supremacy_total = {
     add = event_target:pki_player.value:pki_air_supremacy_contribution
     add = event_target:pki_conquest_target.value:pki_air_supremacy_contribution
+}
+
+pki_air_supremacy_total_fraction = {
+    add = value:pki_air_supremacy_total
+    divide = 200
+    ceiling = yes
 }
 
 pki_attack_moon_upkeep = {

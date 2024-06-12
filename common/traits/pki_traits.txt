@@ -484,6 +484,9 @@ pki_leader_trait_battle_mechanics = {
 		potential = {
 			pki_is_katzenartig_imperium = yes
 		}
+		army_damage_mult = 1
+		army_morale = 1
+		multiplier = value:pki_air_supremacy
 	}
 
 	triggered_planet_modifier = {
@@ -491,6 +494,23 @@ pki_leader_trait_battle_mechanics = {
 			pki_is_katzenartig_imperium = yes
 		}
 	}
+
+	triggered_army_modifier = {
+		potential = {
+			pki_is_katzenartig_imperium = no
+		}
+		army_damage_mult = 1
+		army_morale = 1
+		multiplier = value:pki_air_supremacy
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			pki_is_katzenartig_imperium = no
+		}
+	}
+
+	custom_tooltip = pki_battle_general_tt
 
 	leader_class = { commander }
 }

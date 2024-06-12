@@ -40,3 +40,9 @@ pki_situation_conquest_speed = {
     good = yes
     icon = mod_pop_demotion_time_mult
 }
+
+pki_plane_strength_mult = {
+    category = army
+    good = yes
+    percentage = yes
+}
