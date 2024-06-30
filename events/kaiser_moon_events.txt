@@ -79,7 +79,7 @@ namespace = kmoon
 
 	trigger = {
 		owner = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 		}
 	}
 
@@ -218,7 +218,7 @@ country_event = {
 
 	trigger = {
 		owner = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 		}
 	}
 

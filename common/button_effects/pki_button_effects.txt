@@ -5,7 +5,7 @@ kaiser_bureau = {
 			NOT = { has_country_flag = giga_diplo_sa_buttons }
 			AND = { 
 				has_country_flag = kaiser_bureau_formed
-				has_origin = origin_katzen
+				pki_is_katzenartig_imperium = yes
 			}
 		}
 	}

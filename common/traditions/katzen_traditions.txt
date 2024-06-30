@@ -106,6 +106,7 @@ tr_flusion_finish = {
 	# the refund effect is implemented elsewhere
 	on_enabled = {
 		hidden_effect = {
+			set_country_flag = finished_flusiocentrism
 			add_tech_progress = {
 				tech = tech_katzen_flusioarc
 				progress = 0.25
@@ -146,7 +147,6 @@ tr_flusion_finish = {
 				tech = tech_katzen_housing
 				progress = 0.25
 			}
-			set_country_flag = finished_flusiocentrism
 		}
 	}
 	custom_tooltip_with_modifiers = "tr_flusion_finish_effect"

@@ -882,15 +882,22 @@ d_ravaka_volcano = {
 	}
 }
 
-d_pki_flusion_extra_districts = {
+d_pki_flusion_expansion = {
 	is_for_colonizable = yes
-	drop_weight = { weight = 0 }
-	potential = { always = no }
 	icon = d_leisure_arcology
 
+	potential = { always = no }
+
+	drop_weight = {
+		weight = 0
+	}
+
+	custom_tooltip_short = pki_expand_flusion_short
+	custom_tooltip = pki_expand_flusion
+
 	triggered_planet_modifier = {
-		planet_max_districts_add = 1
-		planet_districts_energy_upkeep_mult = 0.05
-		mult = value:pki_extra_districts_value
+		planet_max_districts_add = 5
+		planet_districts_upkeep_mult = 0.05
+		planet_districts_cost_mult = 0.05
 	}
 }

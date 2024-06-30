@@ -21,7 +21,7 @@ wg_subjugation = {
 			FROM = { has_valid_civic = civic_inwards_perfection }
 			has_authority = auth_corporate
 			has_ascension_perk = ap_become_the_crisis
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 		}
 		has_total_war_cb = no
 	}

@@ -10,7 +10,7 @@ decision_flusion_strike_cheap = {
 	}
 	potential = {
 		from = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 			has_country_flag = flusionian_war
 			any_situation = {
 				OR = {
@@ -94,7 +94,7 @@ decision_flusion_strike_mixed = {
 	}
 	potential = {
 		from = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 			has_country_flag = flusionian_war
 			any_situation = {
 				OR = {
@@ -179,7 +179,7 @@ decision_flusion_strike_attrition = {
 	}
 	potential = {
 		from = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 			has_country_flag = flusionian_war
 			any_situation = {
 				OR = {

@@ -5,7 +5,7 @@ col_player_katzen_fortress = {
 		exists = owner
 		is_planet_class = pc_player_siegfried_world
 		owner = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 		}
 	}
 

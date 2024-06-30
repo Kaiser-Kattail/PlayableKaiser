@@ -16,7 +16,7 @@ decision_flusion_arc = {
 
 	potential = {
 		from = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 			has_country_flag = unified_flusion
 		}
 
@@ -71,6 +71,10 @@ decision_flusion_arc = {
 		}
 		change_pc = pc_pki_flusion_ecu
 		hidden_effect = {
+			set_variable = {
+				which = pki_flusion_expansion_cost_mult
+				value = 1
+			}
 			planet_event = { id = pki_flavor.1 }
 			add_deposit = d_giga_job_upkeep
 			pki_district_convert = {
@@ -130,7 +134,7 @@ decision_siegfried_world = {
 	potential = {
 		has_building = building_siegfried_stronghold
 		from = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 		}
 		NOT = {
 			has_planet_flag = gigaflusion
@@ -190,7 +194,7 @@ decision_pki_scaling_colony = {
 	potential = {
 		is_colony = yes
 		from = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 		}
 		NOR = {
 			has_planet_flag = gigaflusion
@@ -293,7 +297,7 @@ decision_solaktropa = {
     }
     potential = {
         from = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
         }
         has_planet_flag = gigaflusion
         NOT = {
@@ -329,7 +333,7 @@ decision_katlantropa = {
     }
     potential = {
         from = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
         }
             has_planet_flag = gigaflusion
         
@@ -426,7 +430,7 @@ decision_katzen_defense_array_1 = {
 	}
 	potential = {
 		from = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 			has_country_flag = unified_flusion
 		}
 	}
@@ -599,7 +603,7 @@ decision_kaiser_craft_recall = {
 	sound = event_red_alert
     potential = {
         from = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 			any_controlled_fleet = {
 				any_controlled_ship = {
 					has_ship_flag = current_katzen_flagship
@@ -666,7 +670,7 @@ decision_toggle_relocation = {
 	sound = event_administrative_work
     potential = {
         from = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 			has_tradition = tr_flusion_finish
         }
 		NOT = {
@@ -703,7 +707,7 @@ decision_depopulate_planet = {
 	sound = event_administrative_work
     potential = {
         from = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 			has_tradition = tr_flusion_finish
         }
 		NOT = {
@@ -731,14 +735,13 @@ decision_depopulate_planet = {
 
 decision_pki_extra_districts = {
 	icon = decision_industrial_district
-	enactment_time = 720
+	enactment_time = 480
 	resources = {
         category = decisions
         cost = {
-            influence = 500
-			alloys = 30000
-			minerals = 50000
-			unity = 10000
+			alloys = 1000
+			minerals = 2000
+			multiplier = pki_flusion_expansion_cost_mult
         }
     }
 	sound = event_administrative_work
@@ -746,31 +749,33 @@ decision_pki_extra_districts = {
         from = {
 			pki_is_katzenartig_imperium = yes
         }
-		NOT = {
-			has_planet_flag = pki_has_extra_districts
-		}
 		has_planet_flag = gigaflusion
 		is_planet_class = pc_pki_flusion_ecu
 		is_colony = yes
     }
-	prerequisites = { tech_katzen_housing }
-	allow = {
-		custom_tooltip_fail = {
-			text = pki_needs_scaling_colony
+
+	effect = {
+		#custom_tooltip = pki_expand_flusion
+		add_deposit = d_pki_flusion_expansion
+		hidden_effect = {
+			multiply_variable = {
+				which = pki_flusion_expansion_cost_mult
+				value = 1.2
+			}
+			change_variable = {
+				which = pki_flusion_expansion_count
+				value = 1
+			}
 			from = {
-				any_owned_planet = {
-					hidden_trigger = { has_modifier = pki_scaling_colony }
+				remove_modifier = pki_expanded_layers
+				add_modifier = {
+					modifier = pki_expanded_layers
+					multiplier = event_target:flusionhome.pki_flusion_expansion_count
 				}
 			}
 		}
 	}
-	effect = {
-		custom_tooltip = pki_expand_flusion
-		hidden_effect = {
-			set_planet_flag = pki_has_extra_districts
-			add_deposit = d_pki_flusion_extra_districts
-		}
-	}
+
 }
 
 decision_create_kaiser_legion = {

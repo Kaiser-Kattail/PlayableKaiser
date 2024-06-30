@@ -83,7 +83,7 @@ preset_katzen = {
 	potential = {
 		has_overlord_dlc = yes
 		from = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 		}
 		is_gestalt = no
 	}
@@ -162,7 +162,7 @@ preset_katzen_gestalt = {
 	potential = {
 		has_overlord_dlc = yes
 		from = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 		}
 		is_gestalt = yes
 	}

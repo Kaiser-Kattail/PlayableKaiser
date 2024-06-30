@@ -454,7 +454,7 @@ pki_leader_trait_destiny_admiral = {
 
 	fleet_modifier = {
 		command_limit_mult = 1.5
-		weapon_type_explosive_weapon_fire_rate_mult = 0.5
+		weapon_type_explosive_weapon_fire_rate_mult = 0.25
 	}
 
 	custom_tooltip_with_modifiers = pki_leader_destiny_traits
@@ -536,12 +536,12 @@ pki_leader_trait_destiny_commissioner = {
 	}
 
 	planet_modifier = {
-		defense_armies_add = 6
+		defense_armies_add = 4
 		planet_orbital_bombardment_damage = -0.10
 	}
 
 	sector_modifier = {
-		defense_armies_add = 3
+		defense_armies_add = 2
 		planet_orbital_bombardment_damage = -0.05
 	}
 
@@ -580,7 +580,7 @@ pki_leader_trait_destiny_strategist = {
 	}
 
 	councilor_modifier = {
-		katzen_ships_cost_mult = -0.15
+		katzen_ships_cost_mult = -0.05
 		katzen_ships_upkeep_mult = -0.15
 	}
 
@@ -621,13 +621,13 @@ pki_leader_trait_destiny_analyst = {
 	}
 
 	planet_modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.1
-		planet_researchers_alloys_produces_add = 0.25
+		planet_jobs_engineering_research_produces_mult = 0.50
+		planet_researchers_upkeep_mult = 0.25
 	}
 
 	sector_modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.05
-		planet_researchers_alloys_produces_add = 0.125
+		planet_jobs_engineering_research_produces_mult = 0.25
+		planet_researchers_upkeep_mult = 0.125
 	}
 
 	custom_tooltip_with_modifiers = pki_leader_destiny_traits
@@ -791,7 +791,6 @@ pki_leader_trait_destiny_delegate = {
 	}
 
 	federation_modifier = {
-		federation_fleet_contribution_factor = 0.5
 		federation_fleet_cap_add = 600
 	}
 
@@ -831,12 +830,12 @@ pki_leader_trait_destiny_industrialist = {
 
 	planet_modifier = {
 		pop_amenities_usage_mult = -0.2
-		planet_jobs_upkeep_mult = -0.15
+		planet_jobs_upkeep_mult = -0.10
 	}
 
 	sector_modifier = {
 		pop_amenities_usage_mult = -0.1
-		planet_jobs_upkeep_mult = -0.075
+		planet_jobs_upkeep_mult = -0.05
 	}
 
 	custom_tooltip_with_modifiers = pki_leader_destiny_traits
@@ -914,7 +913,7 @@ pki_leader_trait_destiny_ambassador = {
 	}
 
 	councilor_modifier = {
-		divided_patrongage_max_subjects = 3
+		divided_patrongage_max_subjects = 1
 		subject_integration_influence_cost_mult = -0.1
 		country_naval_capacity_contribution_from_subjects_mult = 0.1
 	}

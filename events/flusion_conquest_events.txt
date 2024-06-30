@@ -31,7 +31,7 @@ country_event = { #Flusion is GONE (destroyed, checks monthly)
 	immediate = {
 		every_country = {
 			limit = {
-				has_origin = origin_katzen
+				pki_is_katzenartig_imperium = yes
 			}
 			country_event = {
 				id = conquest.9999
@@ -58,7 +58,7 @@ country_event = { #Flusion is INVADED
 		set_global_flag = pki_katzen_defeated
 		every_country = {
 			limit = {
-				has_origin = origin_katzen
+				pki_is_katzenartig_imperium = yes
 			}
 			country_event = {
 				id = conquest.9999
@@ -989,7 +989,7 @@ country_event = { #Flusion is INVADED
 			is_country_type = flusion_coalition
 		}
 		root = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 		}
 	}
 
@@ -1054,7 +1054,7 @@ country_event = {
 	immediate = {
 		every_country = {
 			limit = {
-				has_origin = origin_katzen
+				pki_is_katzenartig_imperium = yes
 			}
 			destroy_country = yes
 		}
@@ -1081,7 +1081,7 @@ country_event = {
 				}
 			}
 		}
-		has_origin = origin_katzen
+		pki_is_katzenartig_imperium = yes
 	}
 	option = {
 		name = "conquest.090909.a"
@@ -1120,7 +1120,7 @@ country_event = { #work mfer
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_origin = origin_katzen
+		pki_is_katzenartig_imperium = yes
 		NOT = {
 			any_country = {
 				is_country_type = flusion_nation
@@ -1153,7 +1153,7 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		from = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 		}
 		fromfrom = {
 			has_planet_flag = playerflusion

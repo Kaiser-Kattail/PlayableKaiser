@@ -225,15 +225,15 @@
     d_bureau_of_colonial_benefits: "Flusionian Administration"
     d_bureau_of_colonial_benefits_desc: "With the empire administered from Flusion, things become simpler to organize. If not less efficient."
 
-    pki_expand_flusion: "$MOD_PLANET_MAX_DISTRICTS_ADD$: §G+1§! and District Energy Upkeep: §R+5%§! for every §YSemiautonomous Katzenkolonies§!"
-    pki_needs_scaling_colony: "£trigger_no£Must have a §YSemiautonomous Katzenkolonie§!"
+    pki_expand_flusion: "$t$$empire_size$: §Y+5§!"
+    pki_expand_flusion_short: "£empire_sprawl£ §Y+5§!"
 
     decision_pki_extra_districts: "Planetary Expansion"
-    decision_pki_extra_districts_desc: "We can add new layers to the behemoth that is the Flusio-Arcology, though it will require support from our other colonies."
+    decision_pki_extra_districts_desc: "Adding new layers to the economic behemoth that is the Flusio-Arcology can allow for more productivity, though it will require additional upkeep."
 
-    d_pki_flusion_extra_districts: "Expanded Layers"
-    d_pki_flusion_extra_districts_desc: "The expansion of Flusion was often thought of post-unification. Truly a marvel to see it to fruition."
-
+    d_pki_flusion_expansion: "Expanded Layers"
+    d_pki_flusion_expansion_desc: "The expansion of Flusion was often thought of during post-unification. Truly a marvel to see it to fruition."
+    pki_expanded_layers: "$d_pki_flusion_expansion$"
 
     # Opinions
     opinion_katzen_militarism:0 "Katzen Menace"
@@ -512,7 +512,8 @@
     katzen_war_forge_0_DESC:0 "A future construction site for a Katzen War Forge."
     katzen_war_forge_1:0 "Katzen War Forge"
     katzen_war_forge_1_DESC:0 "A large orbital construct built near an inhabited Katzen colony, harvesting the local system for resources in order to assemble Katzen warships."
-   
+
+    pki_war_forge_mega_effect: "Naval Capacity: §G+1%§!\nShip Build Speed: §G+2.5%§!\n\n On Starbases with §YKatzen Shipyard Array§!:$TABBED_NEW_LINE$Shipyard Capacity: §G+0.5§!"
 
     district_pki_flusion_city:0 "Flusionian Housing Complex"
     district_pki_flusion_city_desc:0 "Colossal stretches of urban housing built within humongous megacities, providing housing and entertainment to its inhabitants. In true Katzen fashion, these housing complexes feature large quantities of anti-air and anti-orbital weaponry mounted onto nearly every rooftop, designed to hamper any invaders attempting to seize Flusion."
@@ -535,7 +536,9 @@
     district_pki_flusion_power: "Flusionian Power Plants"  
     district_pki_flusion_power_plural: "Flusionian Power Plants"
     district_pki_flusion_power_desc: "A behemoth array of nuclear generators and reactors, providing immense amounts of energy for both the planet and the rest of the empire."
-   
+    district_pki_flusion_unity: "Flusionian Administrative Megacomplex"
+    district_pki_flusion_unity_plural: "Flusionian Administrative Megacomplexes"
+    district_pki_flusion_unity_desc: "An enormous complex of offices, hosting many departments, subdepartments, subsubdepartments, all dedicated to managing the bureaucratic nightmare that is the Imperium."
    
     katzensoldaten_army: "Katzensoldaten Army"
     katzensoldaten_army_desc: "A specialized infantry unit, equipped with a larger than normal amount of mechanized armor pieces."
@@ -560,7 +563,7 @@
     temp_job_help:0 "Katzen Economical Reinforcement"
     temp_job_help_desc:0 "The Kaiser has ordered specific, somewhat harsh measures to ensure a smooth transition into the Flusio-Arcology."
    
-    civic_tooltip_flusion_effects:0 "Start with Jublio as your home system, a set of special leaders, and the ability to perform special Katzen decisions on colonies. More can be unlocked through research. Project Mondkanone can be started by taking the Kaiserism tradition."
+    civic_tooltip_flusion_effects:0 "Start with Jublio as your home system, a set of special leaders, and the ability to perform special Katzen decisions on colonies. More can be unlocked through research. Project Mondkanone can be started by taking the Kaiserism tradition.\n\n§RMultiple people cannot use this Origin. Any empires with this origin after the first will be generate with $origin_default$ instead.§!"
    
     edict_katzen_leader_upgrade:0 "Leader Katzenification"
     edict_katzen_leader_upgrade_desc:0 "Our leaders are national treasures, and should be treated as such. The very latest in anti-aging technology and special training will be made available to choice leaders."
@@ -699,6 +702,11 @@
     pki_misc.5.desc:0 "The §YGroßkatzenartig Imperium§! has now expanded to cover the vast majority of the galaxy, and §YKaiser Kattail§! has once again decided to honor this milestone by renaming the nation to the \"Galactic Katzen Empire\", in order to better reflect the Katzens' now near full control of our galaxy.\n\nThe Katzen military machine has now grown to monstrous proportions, and the galaxy's hopes to vanquish the Imperium grow slimmer by the day, with the Kaiser stating that his empire would last \"until the stars burn out\"."
     pki_misc.5.a:0 "This does not bode well."
     pki_misc.5.b:0 "Wunderbar!"
+
+    pki_misc.55.name:0 "Kaiser Proclaims Übergalaktisches Katzimperium!"
+    pki_misc.55.desc:0 "It has been done. An entire galaxy an all of it's beings united under one banner. A §HKatzen§! banner. Who knows what plans the Kaiser has for this galaxy of which he now rules. To signify this great achievement, and the prospect of expanding further even from this galaxy, the §YGalaktisches Katzimperium§! has been renamed to the §YÜbergalaktisches Katzimperium§!.\n\nEvery system, every planet, every city, all of them in fanatic support of the Kaiser. All plans have been achieved, all battles succeeded.\n\n§GThe game is done.§! "
+    pki_misc.55.a:0 "It's over."
+    pki_misc.55.b:0 "Yes, the game is done."
 
     NAME_dominiontracks: "Dominiontracks"
     dominion_tracks:0 "DT Riesigerkatzenpanzer"

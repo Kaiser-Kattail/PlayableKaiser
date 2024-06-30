@@ -8,7 +8,7 @@ giga_contact_solak = {
 		from = {
 			has_country_flag = gigas_diplo_engaged
 			NOT = { has_country_flag = giga_diplo_sa_buttons }
-			NOT = { has_origin = origin_katzen }
+			NOT = { pki_is_katzenartig_imperium = yes }
 			OR = {
 				AND = { 
 					has_global_flag = solak_resistance_active
@@ -53,7 +53,7 @@ giga_contact_ezic = {
 		from = {
 			has_country_flag = gigas_diplo_engaged
 			NOT = { has_country_flag = giga_diplo_sa_buttons }
-			NOT = { has_origin = origin_katzen }
+			NOT = { pki_is_katzenartig_imperium = yes }
 			OR = {
 				AND = {
 					has_global_flag = ezic_resistance_active
@@ -110,7 +110,7 @@ jublio_x_disabled = {
 		}
 		custom_tooltip = {
 			fail_text = "must_not_have_katzen_orign"
-			hidden_trigger = { NOT = { any_country = { has_origin = origin_katzen } } }
+			hidden_trigger = { NOT = { any_country = { pki_is_katzenartig_imperium = yes } } }
 		}
 	}
 	effect = {
@@ -137,7 +137,7 @@ jupitwo_x_disabled = {
 		}
 		custom_tooltip = {
 			fail_text = "must_not_have_katzen_orign"
-			hidden_trigger = { NOT = { any_country = { has_origin = origin_katzen } } }
+			hidden_trigger = { NOT = { any_country = { pki_is_katzenartig_imperium = yes } } }
 		}
 	}
 	effect = {
@@ -163,7 +163,7 @@ katzenartig_x_disabled = {
 		}
 		custom_tooltip = {
 			fail_text = "must_not_have_katzen_orign"
-			hidden_trigger = { NOT = { any_country = { has_origin = origin_katzen } } }
+			hidden_trigger = { NOT = { any_country = { pki_is_katzenartig_imperium = yes } } }
 		}
 	}
 	effect = {
@@ -195,7 +195,7 @@ katzenartig_x_yes_disabled = { #default "disabled" option, click to ENABLE
 		}
 		custom_tooltip = {
 			fail_text = "must_not_have_katzen_orign"
-			hidden_trigger = { NOT = { any_country = { has_origin = origin_katzen } } }
+			hidden_trigger = { NOT = { any_country = { pki_is_katzenartig_imperium = yes } } }
 		}
 	}
 	effect = {
@@ -227,7 +227,7 @@ katzenartig_x_nuke_disabled = { #NO KAISER, click to ENABLE
 		}
 		custom_tooltip = {
 			fail_text = "must_not_have_katzen_orign"
-			hidden_trigger = { NOT = { any_country = { has_origin = origin_katzen } } }
+			hidden_trigger = { NOT = { any_country = { pki_is_katzenartig_imperium = yes } } }
 		}
 	}
 	effect = {
@@ -259,7 +259,7 @@ katzenartig_x_always_disabled = { #always kaiser, click to ENABLE
 		}
 		custom_tooltip = {
 			fail_text = "must_not_have_katzen_orign"
-			hidden_trigger = { NOT = { any_country = { has_origin = origin_katzen } } }
+			hidden_trigger = { NOT = { any_country = { pki_is_katzenartig_imperium = yes } } }
 		}
 	}
 	effect = {
@@ -291,7 +291,7 @@ katzenartig_x_easy_disabled = { #Easy kaiser, click to ENABLE
 		}
 		custom_tooltip = {
 			fail_text = "must_not_have_katzen_orign"
-			hidden_trigger = { NOT = { any_country = { has_origin = origin_katzen } } }
+			hidden_trigger = { NOT = { any_country = { pki_is_katzenartig_imperium = yes } } }
 		}
 	}
 	effect = {
@@ -323,7 +323,7 @@ katzenartig_x_deathwish_disabled = { #OP kaiser, click to ENABLE
 		}
 		custom_tooltip = {
 			fail_text = "must_not_have_katzen_orign"
-			hidden_trigger = { NOT = { any_country = { has_origin = origin_katzen } } }
+			hidden_trigger = { NOT = { any_country = { pki_is_katzenartig_imperium = yes } } }
 		}
 	}
 	effect = {
@@ -355,7 +355,7 @@ katzenartig_x_stellarite_disabled = { #ultra OP kaiser, click to ENABLE
 		}
 		custom_tooltip = {
 			fail_text = "must_not_have_katzen_orign"
-			hidden_trigger = { NOT = { any_country = { has_origin = origin_katzen } } }
+			hidden_trigger = { NOT = { any_country = { pki_is_katzenartig_imperium = yes } } }
 		}
 	}
 	effect = {
@@ -387,7 +387,7 @@ katzenartig_x_improbable_disabled = { #infinite OP kaiser, click to ENABLE
 		}
 		custom_tooltip = {
 			fail_text = "must_not_have_katzen_orign"
-			hidden_trigger = { NOT = { any_country = { has_origin = origin_katzen } } }
+			hidden_trigger = { NOT = { any_country = { pki_is_katzenartig_imperium = yes } } }
 		}
 	}
 	effect = {
@@ -419,7 +419,7 @@ giga_fe_pouchkinn_disabled = {
 		}
 		custom_tooltip = {
 			fail_text = "must_not_have_katzen_orign"
-			hidden_trigger = { NOT = { any_country = { has_origin = origin_katzen } } }
+			hidden_trigger = { NOT = { any_country = { pki_is_katzenartig_imperium = yes } } }
 		}
 	}
 	effect = {
