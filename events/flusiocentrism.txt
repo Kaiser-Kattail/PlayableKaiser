@@ -52,7 +52,7 @@ country_event = {
 	picture = GFX_evt_announcement
 	show_sound = event_celebration
 	trigger = {
-		has_origin = origin_katzen
+		pki_is_katzenartig_imperium = yes
 	}
 
 	title = centrism.3.title
@@ -222,7 +222,7 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
-		has_origin = origin_katzen
+		pki_is_katzenartig_imperium = yes
 		has_tradition = tr_centralization
 	}
 

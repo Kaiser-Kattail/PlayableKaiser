@@ -14,7 +14,7 @@ tech_katzen_reactor = {
 		modifier = {
 			factor = 0
 			NOT = {
-				has_origin = origin_katzen
+				pki_is_katzenartig_imperium = yes
 			}
 		}
 		modifier = {
@@ -58,7 +58,7 @@ tech_katzen_lab = {
 		modifier = {
 			factor = 0
 			NOT = {
-				has_origin = origin_katzen
+				pki_is_katzenartig_imperium = yes
 			}
 		}
 		factor = 2

@@ -15,7 +15,7 @@ tech_katzen_housing = {
 		modifier = {
 			factor = 0
 			NOT = {
-				has_origin = origin_katzen
+				pki_is_katzenartig_imperium = yes
 			}
 		}
 		modifier = {
@@ -57,7 +57,7 @@ tech_katzen_habitability = {
 		modifier = {
 			factor = 0
 			NOT = {
-				has_origin = origin_katzen
+				pki_is_katzenartig_imperium = yes
 			}
 		}
 		modifier = {
@@ -102,7 +102,7 @@ tech_katzen_theater = {
 		modifier = {
 			factor = 0
 			NOT = {
-				has_origin = origin_katzen
+				pki_is_katzenartig_imperium = yes
 			}
 		}
 		modifier = {

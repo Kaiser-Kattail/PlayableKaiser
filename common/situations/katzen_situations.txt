@@ -540,19 +540,27 @@ situation_pki_galactic_tension = {
 	}
 
 	abort_trigger = {
-		any_country = {
-			is_country_type = default
-			NOT = {
-				exists = this
+		NOT = {
+			count_country = {
+				count > 0
+				limit = {
+					is_country_type = default
+					pki_is_katzenartig_imperium = no
+					NOT = {
+						has_country_flag = pki_win_prevention_country
+					}
+				}
 			}
-			pki_is_katzenartig_imperium = no
 		}
 	}
 
 	on_abort = {
 		owner = {
-			#every_country = { country_event = { id = pki_misc.5 } }
+			every_country = { country_event = { id = pki_misc.55 days = 1 } }
 			hidden_effect = {
+				event_target:pki_win_prevention_country = {
+					destroy_country = yes
+				}
 				set_country_flag = player_galactic_katzen_empire_formed
 				change_country_flag = {
 					icon = {

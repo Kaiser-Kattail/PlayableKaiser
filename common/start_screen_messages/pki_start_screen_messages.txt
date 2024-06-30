@@ -5,7 +5,7 @@ part = {
     trigger = {
         AND = {
             has_country_flag = kaiser_preset
-            has_origin = origin_katzen
+            pki_is_katzenartig_imperium = yes
         }
     }
 }
@@ -15,6 +15,6 @@ part = {
 #    localization = START_SCREEN_PKI_DOCS
 #
 #    trigger = {
-#        has_origin = origin_katzen
+#        pki_is_katzenartig_imperium = yes
 #    }
 #}

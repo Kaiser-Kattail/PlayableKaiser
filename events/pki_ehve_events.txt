@@ -8,6 +8,7 @@ fleet_event = {
 	picture = GFX_evt_ehof
 	is_triggered_only = yes
 	fire_only_once = yes
+	location = FROMFROM
 	option = {
 		name = pki_ehve.1.a
 		name = pki_ehve.1.b
@@ -42,9 +43,7 @@ country_event = {
 
 	trigger = {
 		from = {
-			NOT = {
-				has_megastructure_flag = pki_dont_do_completion_event
-			}
+			has_megastructure_flag = pki_newly_built_ehve
 		}
 	}
 

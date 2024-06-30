@@ -6,7 +6,7 @@ agenda_project_mondkanone = {
 		has_tradition = tr_katzen_adopt
 	}
 	potential = {
-		has_origin = origin_katzen
+		pki_is_katzenartig_imperium = yes
 		NOT = {
 			has_country_flag = mondkanone_started
 		}
@@ -27,7 +27,7 @@ agenda_project_dominance = {
 		has_tradition = tr_flusion_adopt
 	}
 	potential = {
-		has_origin = origin_katzen
+		pki_is_katzenartig_imperium = yes
 		has_country_flag = ready_for_moon_ap
 		NOT = {
 			has_country_flag = dominance_started
@@ -49,7 +49,7 @@ agenda_project_celestia = {
 		has_ascension_perk = ap_gigastructural_constructs
 	}
 	potential = {
-		has_origin = origin_katzen
+		pki_is_katzenartig_imperium = yes
 		NOT = {
 			has_country_flag = celestia_started
 		}

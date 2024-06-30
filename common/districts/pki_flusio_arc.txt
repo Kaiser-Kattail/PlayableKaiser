@@ -1,7 +1,7 @@
 #Housing: Amenities
 district_pki_flusion_city = {
 	icon = district_flusion_city
-	base_buildtime = 480
+	base_buildtime = 600
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
 
@@ -23,17 +23,18 @@ district_pki_flusion_city = {
 
 	conversion_ratio = 1
 	convert_to = {
-		district_city_katzen
 		district_city
+		district_nexus
+		district_hive
 	}
 
 	resources = {
-		category = planet_districts_industrial
+		category = planet_districts
 		cost = {
-			minerals = 720
+			minerals = 1200
 		}
 		upkeep = {
-			energy = 5
+			energy = 8
 		}
 	}
 
@@ -43,33 +44,22 @@ district_pki_flusion_city = {
 		planet_max_buildings_add = 1.5
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				OR = {
-					pki_is_katzenartig_imperium = yes
-					is_gestalt = no
-				}
-			}
-		}
-		modifier = {
-			job_enforcer_add = 2
-			job_soldier_add = 2
-		}
+	inline_script = {
+		script = planet/maintenance/giga_city_job_swap
+		jobs = 2
+		district = @yes
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		modifier = {
-			job_patrol_drone_add = 2
-			job_warrior_drone_add = 2
-		}
+	inline_script = {
+		script = planet/security/giga_security_job_swap
+		jobs = 1
+		district = @yes
+	}
+
+	inline_script = {
+		script = planet/soldiers/giga_soldier_job_swap
+		jobs = 1
+		district = @yes
 	}
 
 	triggered_planet_modifier = {
@@ -80,7 +70,7 @@ district_pki_flusion_city = {
 			}
 		}
 		modifier = {
-			planet_housing_add = -3
+			planet_housing_add = -4
 		}
 	}
 
@@ -90,7 +80,7 @@ district_pki_flusion_city = {
 			owner = { has_active_tradition = tr_prosperity_public_works }
 		}
 		modifier = {
-			planet_housing_add = 3
+			planet_housing_add = 4
 		}
 	}
 
@@ -102,7 +92,7 @@ district_pki_flusion_city = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 3
+			planet_housing_add = 4
 		}
 	}
 
@@ -115,7 +105,7 @@ district_pki_flusion_city = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 3
+			planet_housing_add = 4
 		}
 	}
 
@@ -134,6 +124,7 @@ district_pki_flusion_city = {
 		}
 	}
 
+	# Bug Branch
 	triggered_desc = {
 		trigger = {
 			exists = owner
@@ -141,54 +132,11 @@ district_pki_flusion_city = {
 		}
 		text = job_farmer_effect_desc
 	}
-	# Bug Branch
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					pki_is_katzenartig_imperium = yes
-					is_gestalt = no
-				}
-			}
-		}
-		text = job_enforcer_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		text = job_patrol_drone_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					pki_is_katzenartig_imperium = yes
-					is_gestalt = no
-				}
-			}
-		}
-		text = job_soldier_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		text = job_warrior_drone_effect_desc
-	}
 }
 
 #Heavy Industry: Alloys (and Supertensiles)
 district_pki_flusion_heavy_industry = {
-	base_buildtime = 480
+	base_buildtime = 600
 	is_capped_by_modifier = no
 
 	show_on_uncolonized = {
@@ -209,16 +157,19 @@ district_pki_flusion_heavy_industry = {
 
 	conversion_ratio = 1
 	convert_to = {
-		district_industrial
+		district_city
+		district_nexus
+		district_hive
 	}
 
 	resources = {
-		category = planet_districts_industrial
+		category = planet_districts
 		cost = {
-			minerals = 720
+			minerals = 1200
 		}
 		upkeep = {
-			energy = 5
+			energy = 8
+			volatile_motes = 2
 		}
 
 		upkeep = {
@@ -232,14 +183,13 @@ district_pki_flusion_heavy_industry = {
 		}
 	}
 
-	planet_modifier = {
-		pop_environment_tolerance = -0.05
-		planet_jobs_alloys_produces_mult = 0.01
-	}
-
 	inline_script = {
 		script = planet/alloys/giga_foundry_job_swap
 		jobs = 8
+	}
+
+	planet_modifier = {
+		planet_housing_add = 4
 	}
 
 	triggered_planet_modifier = {
@@ -333,26 +283,16 @@ district_pki_flusion_heavy_industry = {
 
 #Consumer Goods
 district_pki_flusion_civilian_industry = {
-	base_buildtime = 480
+	base_buildtime = 600
 	is_capped_by_modifier = no
 
 	show_on_uncolonized = {
-		exists = from
-		from = { is_planet_class = pc_pki_flusion_ecu 	uses_district_set = pki_flusion_ecu }
-	}
-
-	conversion_ratio = 1
-	convert_to = {
-		district_industrial
+		is_planet_class = pc_pki_flusion_ecu
+		uses_district_set = pki_flusion_ecu
 	}
 
 	potential = {
 		exists = owner
-		owner = {
-			NOT = {
-				has_ethic = ethic_gestalt_consciousness
-			}
-		}
 		is_planet_class = pc_pki_flusion_ecu
 		uses_district_set = pki_flusion_ecu
 	}
@@ -361,31 +301,72 @@ district_pki_flusion_civilian_industry = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
 	}
-	resources = {
-		category = planet_districts_industrial
-		cost = {
-			minerals = 720
-		}
-		upkeep = {
-			energy = 5
-		}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_nexus
+		district_hive
 	}
 
-	planet_modifier = {
-		pop_environment_tolerance = -0.05
-		planet_pops_consumer_goods_upkeep_mult = -0.01
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 1200
+		}
+		upkeep = {
+			energy = 8
+			rare_crystals = 2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_edict = industrial_maintenance
+				}
+			}
+			energy = 2
+		}
 	}
 
 	inline_script = {
-		script = jobs/factory_add
-		AMOUNT = 8
+		script = planet/consumer_goods/giga_artisan_job_swap
+		jobs = 8
+	}
+
+	planet_modifier = {
+		planet_housing_add = 4
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				has_edict = industrial_maintenance
+			}
+		}
+		modifier = {
+			job_maintenance_drone_add = 1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				has_edict = industrial_maintenance
+			}
+		}
+		text = job_maintenance_drone_effect_desc
 	}
 }
 
 #Science
 district_pki_flusion_science = {
 	icon = district_flusion_science
-	base_buildtime = 480
+	base_buildtime = 600
 	is_capped_by_modifier = no
 
 	show_on_uncolonized = {
@@ -406,21 +387,19 @@ district_pki_flusion_science = {
 
 	conversion_ratio = 1
 	convert_to = {
-		district_mining
-	}
-
-	planet_modifier = {
-		pop_happiness = -0.05
-
+		district_city
+		district_nexus
+		district_hive
 	}
 
 	resources = {
-		category = planet_districts_industrial
+		category = planet_districts
 		cost = {
-			minerals = 720
+			minerals = 1200
 		}
 		upkeep = {
-			energy = 5
+			energy = 8
+			exotic_gases = 2
 		}
 	}
 
@@ -429,40 +408,15 @@ district_pki_flusion_science = {
 		jobs = 8
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					is_gestalt = no
-				}
-			}
-		}
-		modifier = {
-			job_head_researcher_add = 1
-			job_researcher_add = -1
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					is_country_type = katzenartig_imperium
-					is_gestalt = no
-				}
-			}
-		}
-		text = job_head_researcher_effect_desc
+	planet_modifier = {
+		planet_housing_add = 4
 	}
 }
 
 #Mining: Minerals, Crystals & Gasses
 district_pki_flusion_mining = {
 	icon = district_flusion_mining
-	base_buildtime = 480
+	base_buildtime = 600
 	is_capped_by_modifier = no
 
 	show_on_uncolonized = {
@@ -487,22 +441,22 @@ district_pki_flusion_mining = {
 	}
 
 	resources = {
-		category = planet_districts_industrial
+		category = planet_districts
 		cost = {
-			minerals = 720
+			minerals = 1200
 		}
 		upkeep = {
-			energy = 5
+			energy = 8
 		}
-	}
-
-	planet_modifier = {
-		pop_environment_tolerance = -0.025
 	}
 
 	inline_script = {
 		script = planet/minerals/giga_miner_job_swap
 		jobs = 7
+	}
+
+	planet_modifier = {
+		planet_housing_add = 4
 	}
 
 	triggered_planet_modifier = {
@@ -584,9 +538,10 @@ district_pki_flusion_mining = {
 
 #Farming
 district_pki_flusion_farming = {
-	base_buildtime = 480
-	is_capped_by_modifier = no
 	icon = district_flusion_farming
+	base_buildtime = 600
+	is_capped_by_modifier = no
+
 	show_on_uncolonized = {
 		is_planet_class = pc_pki_flusion_ecu
 		uses_district_set = pki_flusion_ecu
@@ -609,28 +564,28 @@ district_pki_flusion_farming = {
 	}
 
 	resources = {
-		category = planet_districts_industrial
+		category = planet_districts
 		cost = {
-			minerals = 720
+			minerals = 1200
 		}
 		upkeep = {
-			energy = 5
+			energy = 8
 		}
-	}
-
-	planet_modifier = {
-		pop_environment_tolerance = 0.15
 	}
 
 	inline_script = {
 		script = planet/food/giga_farmer_job_swap
 		jobs = 8
 	}
+
+	planet_modifier = {
+		planet_housing_add = 4
+	}
 }
 
 district_pki_flusion_power = {
 	icon = district_generator
-	base_buildtime = 480
+	base_buildtime = 600
 	is_capped_by_modifier = no
 
 	show_on_uncolonized = {
@@ -655,29 +610,28 @@ district_pki_flusion_power = {
 	}
 
 	resources = {
-		category = planet_districts_generator
+		category = planet_districts
 		cost = {
-			minerals = 720
+			minerals = 1200
 		}
 		upkeep = {
-			energy = 5
+			energy = 8
 		}
-	}
-
-	planet_modifier = {
-		pop_environment_tolerance = -0.025
-
 	}
 
 	inline_script = {
 		script = planet/energy/giga_technician_job_swap
 		jobs = 8
 	}
+
+	planet_modifier = {
+		planet_housing_add = 4
+	}
 }
 
 district_pki_flusion_unity = {
 	icon = district_arcology_administrative
-	base_buildtime = 480
+	base_buildtime = 600
 	is_capped_by_modifier = no
 
 	show_on_uncolonized = {
@@ -698,95 +652,28 @@ district_pki_flusion_unity = {
 
 	conversion_ratio = 1
 	convert_to = {
-		district_arcology_administrative
-	}
-
-	planet_modifier = {
-		pop_happiness = 0.10
-		planet_jobs_unity_produces_mult = 0.01
+		district_city
+		district_hive
+		district_nexus
 	}
 
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = 720
+			minerals = 1200
 		}
 		upkeep = {
-			energy = 5
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		modifier = {
-			job_culture_worker_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-				is_hive_empire = yes
-			}
-		}
-		modifier = {
-			job_synapse_drone_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-				is_machine_empire = yes
-			}
-		}
-		modifier = {
-			job_evaluator_add = 1
+			energy = 8
+			rare_crystals = 2
 		}
 	}
 
 	inline_script = {
 		script = planet/unity/giga_unity_job_swap
-		jobs = 6
+		jobs = 8
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		text = job_culture_worker_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-				is_hive_empire = yes
-			}
-		}
-		text = job_synapse_drone_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-				is_machine_empire = yes
-			}
-		}
-		text = job_evaluator_effect_desc
+	planet_modifier = {
+		planet_housing_add = 4
 	}
 }

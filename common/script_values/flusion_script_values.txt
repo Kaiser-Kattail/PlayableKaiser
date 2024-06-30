@@ -70,18 +70,3 @@ pki_set_situation_progress_effect = {
     add = $NEW_PROGRESS$
     subtract = trigger:situation_progress
 }
-
-pki_extra_districts_value = {
-    complex_trigger_modifier = {
-        trigger = count_galaxy_planet
-        trigger_scope = planet
-        parameters = {
-            limit = {
-                exists = owner
-                owner = { pki_is_katzenartig_imperium = yes }
-                has_modifier = pki_scaling_colony
-            }
-        }
-        mode = add
-    }
-}

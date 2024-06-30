@@ -59,7 +59,7 @@ pki_flusion_ecu_modifier = {
 	planet_jobs_produces_mult = 0.25
 	pop_growth_speed = 0.15
 	planet_max_buildings_add = 36
-	planet_max_districts_mult = 2
+	planet_max_districts_add = 20
 	planet_resettlement_unemployed_destination_mult = 0.5
 	icon = "gfx/interface/icons/planet_modifiers/pm_flusion_arcology.dds"
 	icon_frame = 1
@@ -100,6 +100,7 @@ pki_scaling_colony = {
 pki_warforge_naval_cap = {
 	country_naval_cap_mult = 0.01
 	starbase_shipyard_build_speed_mult = 0.025
+	hide_from_country_list = yes
 }
 
 pki_attack_moon_upkeep = {
@@ -140,4 +141,9 @@ pki_crisis_buffs = {
 	megastructure_build_speed_mult = 0.1
 	ship_starting_experience_add = 50
 	country_naval_cap_add = 50
+}
+
+pki_expanded_layers = {
+	empire_size_add = 5
+	hide_from_country_list = yes
 }

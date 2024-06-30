@@ -5,6 +5,12 @@ on_game_start = {
 	}
 }
 
+on_game_start_country = {
+	events = {
+		flusion.1001
+	}
+}
+
 on_press_begin = {
 	events = {
 		flusion.42

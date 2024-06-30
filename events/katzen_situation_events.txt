@@ -11,7 +11,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		has_origin = origin_katzen
+		pki_is_katzenartig_imperium = yes
 		any_planet_within_border = {
 			has_planet_flag = gigamuno
 		}
@@ -89,7 +89,7 @@ situation_event = {
 
 	trigger = {
 		owner = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 			any_planet_within_border = {
 			has_planet_flag = gigamuno
 		}

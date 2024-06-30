@@ -60,7 +60,7 @@ country_event = {
 				is_gestalt = no
 				is_megacorp = no
 				NOT = {
-					has_origin = origin_katzen
+					pki_is_katzenartig_imperium = yes
 				}
 			}
 			if = {
@@ -92,7 +92,7 @@ country_event = {
 			}
 		}
 		else_if = {
-			limit = { has_origin = origin_katzen }
+			limit = { pki_is_katzenartig_imperium = yes }
 			force_add_civic = civic_galactic_sovereign
 		}
 		set_government_cooldown = no

@@ -4,7 +4,7 @@ tradition_katzen = {
 	finish_bonus = "tr_katzen_finish"
 
 	potential = {
-		has_origin = origin_katzen
+		pki_is_katzenartig_imperium = yes
 	}
 
 	traditions = {
@@ -26,7 +26,7 @@ tradition_flusion = {
 	finish_bonus = "tr_flusion_finish"
 
 	potential = {
-		has_origin = origin_katzen
+		pki_is_katzenartig_imperium = yes
 	}
 
 
