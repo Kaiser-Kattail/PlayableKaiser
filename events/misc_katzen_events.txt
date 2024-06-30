@@ -109,11 +109,6 @@ country_event = { #galactic
 		trigger = {
 			pki_is_katzenartig_imperium = yes
 		}
-		hidden_effect = {
-			event_target:pki_win_prevention_country = {
-				destroy_country = yes
-			}
-		}
 		win = yes
 	}
 }

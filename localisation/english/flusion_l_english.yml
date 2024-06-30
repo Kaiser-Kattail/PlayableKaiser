@@ -226,7 +226,7 @@
     d_bureau_of_colonial_benefits_desc: "With the empire administered from Flusion, things become simpler to organize. If not less efficient."
 
     pki_expand_flusion: "$t$$empire_size$: §Y+5§!"
-    pki_expand_flusion_short: "£empire_sprawl£ §Y+5§!"
+    pki_expand_flusion_short: "£empire_sprawl£ $empire_size$: §Y+5§!"
 
     decision_pki_extra_districts: "Planetary Expansion"
     decision_pki_extra_districts_desc: "Adding new layers to the economic behemoth that is the Flusio-Arcology can allow for more productivity, though it will require additional upkeep."

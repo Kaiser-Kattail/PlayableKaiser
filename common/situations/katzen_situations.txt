@@ -556,8 +556,11 @@ situation_pki_galactic_tension = {
 
 	on_abort = {
 		owner = {
-			every_country = { country_event = { id = pki_misc.55 } }
+			every_country = { country_event = { id = pki_misc.55 days = 1 } }
 			hidden_effect = {
+				event_target:pki_win_prevention_country = {
+					destroy_country = yes
+				}
 				set_country_flag = player_galactic_katzen_empire_formed
 				change_country_flag = {
 					icon = {
