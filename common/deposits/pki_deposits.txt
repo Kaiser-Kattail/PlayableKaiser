@@ -572,19 +572,10 @@ d_katzen_mineral_dam = {
 	triggered_planet_modifier = {
 		potential = {
 			owner = {
-				is_gestalt = no
+				pki_is_katzenartig_imperium = yes
 			}
 		}
 		job_miner_per_pop = 0.1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_mining_drone_per_pop = 0.1
 	}
 
 	drop_weight = {
@@ -606,19 +597,10 @@ d_katzen_energy_dam = {
 	triggered_planet_modifier = {
 		potential = {
 			owner = {
-				is_gestalt = no
+				pki_is_katzenartig_imperium = yes
 			}
 		}
 		job_technician_per_pop = 0.1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_technician_drone_per_pop = 0.1
 	}
 
     resources = {
@@ -646,19 +628,10 @@ d_katzen_food_dam = {
 	triggered_planet_modifier = {
 		potential = {
 			owner = {
-				is_gestalt = no
+				pki_is_katzenartig_imperium = yes
 			}
 		}
 		job_farmer_per_pop = 0.1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_agri_drone_per_pop = 0.1
 	}
 
 	drop_weight = {
