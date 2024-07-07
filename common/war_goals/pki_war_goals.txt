@@ -84,7 +84,7 @@ wg_pki_subjugation = {
 
 
 	potential = {
-		has_origin = origin_katzen
+		pki_is_katzenartig_imperium = yes
 		has_total_war_cb = no
 	}
 	possible = {

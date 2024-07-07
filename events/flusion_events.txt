@@ -13,13 +13,46 @@ event = {
 
 	immediate = {
 		set_global_flag = pki_enabled
+	}
+}
+
+country_event = {
+	id = flusion.1001
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = origin_katzen
+	}
+
+	immediate = {
 		if = {
-			limit = {
-				any_country = {
-					pki_is_katzenartig_imperium = yes
+			limit = { NOT = { has_global_flag = pki_katzen_is_being_played } }
+			set_global_flag = pki_katzen_is_being_played
+			set_country_flag = pki_playable_kaiser
+			country_event = { id = flusion.4 }
+			country_event = { id = kaiser_bureau.0 days = 30 }
+			every_country = {
+				limit = { has_origin = origin_katzen NOT = { has_country_flag = pki_playable_kaiser} }
+				capital_scope.solar_system = { set_star_flag = gigas_new_planets set_star_flag = pki_reset }
+				giga_reset_ai_start = yes
+				kill_leader = {
+					ruler = yes
+					show_notification = no
+				}
+				create_leader = {
+					name = random
+					species = owner_main_species
+					class = official
+					skill = 3
+					randomize_traits = yes
+					effect = {
+						prev = {
+							assign_leader = last_created_leader
+						}
+					}
 				}
 			}
-			set_global_flag = pki_player_katzen
 		}
 	}
 }
@@ -300,6 +333,26 @@ country_event = {
 			days = -1
 		}
 
+		# Win prevention for "cinematic" ending
+		event_target:global_event_country = {
+			create_country = {
+				name = "PKI Win Prevention Country"
+				type = default
+				contact_rule = never
+				auto_delete = no
+				name_list = random
+				authority = random
+				civics = random
+				origin = origin_default
+				species = event_target:katzenartig
+				set_capital_from_species = no
+				randomize_ethos = yes
+				effect = {
+					set_country_flag = pki_win_prevention_country
+					save_global_event_target_as = pki_win_prevention_country
+				}
+			}
+		}
 
 		#Leader Portraits
 		create_species = {
@@ -679,7 +732,7 @@ event = {
 	immediate = {
 		every_playable_country = {
 			limit = {
-				has_origin = origin_katzen
+				pki_is_katzenartig_imperium = yes
 				NOT = {
 					has_country_flag = kaiser_preset
 				}
@@ -696,12 +749,7 @@ country_event = {
 	picture = GFX_no_preset
 	show_sound = event_assembly_fight
 	is_triggered_only = yes
-	immediate = {
-		add_modifier = {
-			modifier = mod_no_preset
-			days = -1
-		}
-	}
+
 	option = {
 		name = "flusion.44.a"
 	}
@@ -755,7 +803,7 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		this = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 		}
 	}
 	immediate = {
@@ -813,7 +861,7 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		this = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 		}
 		has_global_flag = silly_flusionian_portraits_enabled
 	}
@@ -841,7 +889,7 @@ country_event = {
 	desc = "katzen.7.desc"
 	trigger = {
 		this = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 		}
 	}
 	#Governors

@@ -2,7 +2,7 @@ katzen_leader_upgrade = {
 	icon = "GFX_edict_type_policy"
 	length = 1
 	resources = { category = edicts }
-	potential = { has_origin = origin_katzen }
+	potential = { pki_is_katzenartig_imperium = yes }
 	effect = {
 		country_event = {
 			id = katzen.7
@@ -15,7 +15,7 @@ katzen_conquest_map = {
 	icon = "GFX_edict_type_policy"
 	length = 1
 	resources = { category = edicts }
-	potential = { has_origin = origin_katzen has_country_flag = kaiser_bureau_formed }
+	potential = { pki_is_katzenartig_imperium = yes has_country_flag = kaiser_bureau_formed }
 	effect = {
 		hidden_effect = {
 			country_event = {

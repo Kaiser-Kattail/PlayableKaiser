@@ -71,23 +71,35 @@ gigas_kilostructure_list = {
 		# macroengineering test site
 		$CONDITION$ = macro_test_site_0
 		$CONDITION$ = macro_test_site_1
-		$CONDITION$ = macro_test_site_1_dismantle
+		$CONDITION$ = macro_test_site_2
+		$CONDITION$ = macro_test_site_3
+		# $CONDITION$ = macro_test_site_1_dismantle
 		$CONDITION$ = macro_test_site_ruined
 		$CONDITION$ = macro_test_site_restored
 
 		# orbital artificial ecosystem
 		$CONDITION$ = orbital_artificial_eco_0
 		$CONDITION$ = orbital_artificial_eco_1
-		$CONDITION$ = orbital_artificial_eco_1_dismantle
+		$CONDITION$ = orbital_artificial_eco_2
+		$CONDITION$ = orbital_artificial_eco_3
+		# $CONDITION$ = orbital_artificial_eco_1_dismantle
 		$CONDITION$ = orbital_artificial_eco_ruined
 		$CONDITION$ = orbital_artificial_eco_restored
 
 		# stellar particle accelerator
-		$CONDITION$ = particle_accelerator_0
-		$CONDITION$ = particle_accelerator_1
-		$CONDITION$ = particle_accelerator_1_manage
-		$CONDITION$ = particle_accelerator_ruined
-		$CONDITION$ = particle_accelerator_restored
+		# $CONDITION$ = particle_accelerator_0
+		# $CONDITION$ = particle_accelerator_1
+		# $CONDITION$ = particle_accelerator_1_manage
+		# $CONDITION$ = particle_accelerator_ruined
+		# $CONDITION$ = particle_accelerator_restored
+
+
+		$CONDITION$ = atmosphere_shredder_0
+		$CONDITION$ = atmosphere_shredder_1
+		$CONDITION$ = atmosphere_shredder_2
+		$CONDITION$ = atmosphere_shredder_3
+		$CONDITION$ = atmosphere_shredder_ruined
+		$CONDITION$ = atmosphere_shredder_restored
 
 		# atmospheric purifier
 		$CONDITION$ = terraform_toxic_0
@@ -105,6 +117,7 @@ gigas_kilostructure_list = {
 		$CONDITION$ = frameworld_outpost_construction_hive
 		$CONDITION$ = frameworld_outpost_construction_hive_lithoid
 		$CONDITION$ = frameworld_outpost_construction_machine
+		$CONDITION$ = frameworld_outpost_construction_im
 		# deprecated
 		#$CONDITION$ = frameworld_outpost_deconstruction
 		#$CONDITION$ = frameworld_outpost_0

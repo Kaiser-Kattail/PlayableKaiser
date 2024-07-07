@@ -19,7 +19,7 @@ ap_kaiser_moon = {
 		NOT = {
 			has_ascension_perk = ap_kaiser_moon
 		}
-		has_origin = origin_katzen
+		pki_is_katzenartig_imperium = yes
 	}
 
 	ai_weight = {

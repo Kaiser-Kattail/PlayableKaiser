@@ -1,7 +1,7 @@
 pki_is_katzenartig_imperium = {
-	is_country_type = default
-	OR = {
+	AND = {
 		has_origin = origin_katzen
+		has_country_flag = pki_playable_kaiser
 	}
 }
 

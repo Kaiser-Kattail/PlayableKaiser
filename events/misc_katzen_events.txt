@@ -5,7 +5,7 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
-		has_origin = origin_katzen
+		pki_is_katzenartig_imperium = yes
 		has_tradition = tr_katzen_planetside_garrisons
 	}
 	immediate = {
@@ -48,14 +48,14 @@ country_event = { #big
 		name = "pki_misc.4.a"
 		trigger = {
 			NOT = {
-				has_origin = origin_katzen
+				pki_is_katzenartig_imperium = yes
 			}
 		}
 	}
 	option = { #:KaiserPog:
 		name = "pki_misc.4.b"
 		trigger = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 		}
 	}
 }
@@ -65,7 +65,7 @@ country_event = { #galactic
 	title = "pki_misc.5.name"
 	desc = "pki_misc.5.desc"
 
-	picture = GFX_evt_grand_speech
+	picture = GFX_evt_announcement
 	show_sound = event_celebration
 	location = from
 	is_triggered_only = yes
@@ -74,15 +74,42 @@ country_event = { #galactic
 		name = "pki_misc.5.a"
 		trigger = {
 			NOT = {
-				has_origin = origin_katzen
+				pki_is_katzenartig_imperium = yes
 			}
 		}
 	}
 	option = { #:KaiserPog:
 		name = "pki_misc.5.b"
 		trigger = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 		}
+	}
+}
+
+country_event = { #galactic
+	id = pki_misc.55
+	title = "pki_misc.55.name"
+	desc = "pki_misc.55.desc"
+
+	picture = GFX_evt_astral_rift_vortex
+	show_sound = event_celebration
+	location = from
+	is_triggered_only = yes
+
+	option = { #aw
+		name = "pki_misc.55.a"
+		trigger = {
+			NOT = {
+				pki_is_katzenartig_imperium = yes
+			}
+		}
+	}
+	option = { #:KaiserPog:
+		name = "pki_misc.55.b"
+		trigger = {
+			pki_is_katzenartig_imperium = yes
+		}
+		win = yes
 	}
 }
 
@@ -278,7 +305,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_origin = origin_katzen
+		pki_is_katzenartig_imperium = yes
 		has_policy_flag = pvz_cattail
 	}
 
@@ -387,7 +414,7 @@ planet_event = {
 		if = {
 			limit = {
 				OR = {
-					owner = { NOT = { has_origin = origin_katzen } }
+					owner = { NOT = { pki_is_katzenartig_imperium = yes } }
 					is_colony = no
 				}
 			}
@@ -662,13 +689,11 @@ fleet_event = {
 			exists = planet_owner
 			planet_owner = {
 				is_at_war_with = event_target:pki_player
-				NOT = {
-					has_origin = origin_katzen
-				}
+                pki_is_katzenartig_imperium = no
 			}
 			any_fleet_in_orbit = {
 				is_ship_size = pki_submarine
-				owner = { has_origin = origin_katzen }
+				owner = { pki_is_katzenartig_imperium = yes }
 				is_cloaked = yes
 			}
 		}
@@ -698,7 +723,7 @@ planet_event = {
 			limit = {
 				any_fleet_in_orbit = {
 					is_ship_size = pki_submarine
-					owner = { has_origin = origin_katzen }
+					owner = { pki_is_katzenartig_imperium = yes }
 					is_cloaked = yes
 				}
 			}
@@ -802,7 +827,7 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		has_paragon_dlc = yes
-		has_origin = origin_katzen
+		pki_is_katzenartig_imperium = yes
 		has_country_flag = pki_unified_flusion
 		any_owned_sector = {
 			NOT = {
@@ -828,7 +853,7 @@ event = {
 	is_triggered_only = yes
 	trigger = {
 		any_country = {
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 		}
 	}
 	immediate = {

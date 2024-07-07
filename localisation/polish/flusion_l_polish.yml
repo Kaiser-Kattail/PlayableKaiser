@@ -1010,5 +1010,5 @@
  pki_leader_trait_nukelad: "Nuclear Enthusiast" #NT!
  pki_leader_trait_nukelad_desc: "Nuclear and atomic weaponry holds a special place in this leader's heart. They do not hesitate to employ such weapons during warfare." #NT!
   
- pki_leader_trait_command_limit: "Katzen Admiral" #NT!
- pki_leader_trait_command_limit_desc: "Excelling at logistic and strategic planning, this commander is able to command fleets that would overburden their lesser peers." #NT!
+ pki_leader_trait_destiny_admiral: "Katzen Admiral" #NT!
+ pki_leader_trait_destiny_admiral_desc: "Excelling at logistic and strategic planning, this commander is able to command fleets that would overburden their lesser peers." #NT!

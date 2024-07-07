@@ -125,19 +125,10 @@ d_katzen_mineral_dam = {
 	triggered_planet_modifier = {
 		potential = {
 			owner = {
-				is_gestalt = no
+				pki_is_katzenartig_imperium = yes
 			}
 		}
 		job_miner_per_pop = 0.1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_mining_drone_per_pop = 0.1
 	}
 
 	drop_weight = {
@@ -159,19 +150,10 @@ d_katzen_energy_dam = {
 	triggered_planet_modifier = {
 		potential = {
 			owner = {
-				is_gestalt = no
+				pki_is_katzenartig_imperium = yes
 			}
 		}
 		job_technician_per_pop = 0.1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_technician_drone_per_pop = 0.1
 	}
 
     resources = {
@@ -199,19 +181,10 @@ d_katzen_food_dam = {
 	triggered_planet_modifier = {
 		potential = {
 			owner = {
-				is_gestalt = no
+				pki_is_katzenartig_imperium = yes
 			}
 		}
 		job_farmer_per_pop = 0.1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_agri_drone_per_pop = 0.1
 	}
 
 	drop_weight = {
@@ -435,15 +408,22 @@ d_ravaka_volcano = {
 	}
 }
 
-d_pki_flusion_extra_districts = {
+d_pki_flusion_expansion = {
 	is_for_colonizable = yes
-	drop_weight = { weight = 0 }
-	potential = { always = no }
 	icon = d_leisure_arcology
 
+	potential = { always = no }
+
+	drop_weight = {
+		weight = 0
+	}
+
+	custom_tooltip_short = pki_expand_flusion_short
+	custom_tooltip = pki_expand_flusion
+
 	triggered_planet_modifier = {
-		planet_max_districts_add = 1
-		planet_districts_energy_upkeep_mult = 0.05
-		mult = value:pki_extra_districts_value
+		planet_max_districts_add = 5
+		planet_districts_upkeep_mult = 0.05
+		planet_districts_cost_mult = 0.05
 	}
 }

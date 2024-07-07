@@ -29,7 +29,6 @@ giga_planet_behemoth = {
 	combat_disengage_chance = 0
 	prerequisites = { "giga_tech_war_planet" }
 	class = shipclass_military
-	possible_construction = { always = no }
 
 	ship_roles = { gunship artillery }
 
@@ -42,13 +41,22 @@ giga_planet_behemoth = {
 	resources = {
 		category = ships
 		cost = {
-			alloys = 10000
+			alloys = 262500 #210000 adjusted to compensate for buffs provided by the uplink
 		}
 		upkeep = {
 			energy = 250
 			alloys = 75
 		}
 	}
+
+	possible_construction = {
+		starbase = {
+			has_starbase_building = quasarshipyard__shipyard_uplink
+		}
+	}
+
+	construction_type = starbase_shipyard
+	base_buildtime = 27000 #10800 adjusted to compensate for buffs provided by the uplink
 }
 
 giga_massive_planet = {
@@ -77,7 +85,7 @@ giga_massive_planet = {
 	is_space_station = no
 	icon = ship_size_atk_moon
 	combat_disengage_chance = 0.5
-	possible_construction = { always = no }
+	#possible_construction = { always = no }
 	class = shipclass_military
 	is_designable = yes
 	enable_default_design = yes
@@ -94,12 +102,20 @@ giga_massive_planet = {
 	resources = {
 		category = ships
 		cost = {
-			alloys = 10000
+			alloys = 18000 #22500 (removed the build cost reduction) #18000 adjusted to compensate for buffs provided by the uplink
 		}
 		upkeep = {
-			multiplier = value:pki_attack_moon_upkeep
 			energy = 500
 			alloys = 125
 		}
 	}
+
+	possible_construction = {
+		starbase = {
+			has_starbase_building = quasarshipyard__shipyard_uplink
+		}
+	}
+
+	construction_type = starbase_shipyard
+	base_buildtime = 13500 #5400 adjusted to compensate for buffs provided by the uplink
 }

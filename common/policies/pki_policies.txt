@@ -2,7 +2,7 @@ consumer_alloys = {
 	potential = {
 		AND = {
 			is_country_type = default
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 		}
 	}
 
@@ -147,7 +147,7 @@ kaiser_appearance = {
 	potential = {
 		AND = {
 			is_country_type = default
-			has_origin = origin_katzen
+			pki_is_katzenartig_imperium = yes
 		}
 	}
 

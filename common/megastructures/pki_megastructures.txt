@@ -11,7 +11,11 @@ katzen_war_forge_0 = {
 	}
 	potential = { always = no }
 	ai_weight = { factor = 0 }
+	dismantle_potential = { always = no }
+	outliner_trigger = {
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
 	}
+}
 	
 katzen_war_forge_1 = {
 	entity = "katzen_war_forge_entity"
@@ -28,6 +32,9 @@ katzen_war_forge_1 = {
 		category = giga_kilostructures
 		produces = { alloys = 5 }
 	}
+	country_modifier = {
+		custom_tooltip = pki_war_forge_mega_effect
+	}
 	upgrade_from = {
 		katzen_war_forge_0
 	}
@@ -38,7 +45,27 @@ katzen_war_forge_1 = {
 		pki_spawn_warforge_fleet = {
 			OWNER = event_target:pki_player
 		}
-	}	
+	}
+	dismantle_potential = { always = yes }
+	dismantle_time = 240
+	on_dismantle_complete = {
+		every_fleet_in_system = {
+			limit = {
+				has_fleet_flag = warforge_platform
+				has_fleet_flag = warforge_platform@fromfrom
+			}
+			delete_fleet = this
+		}
+	}
+	dismantle_cost = {
+		category = megastructures
+		cost = {
+			alloys = 250
+		}
+	}
+	outliner_trigger = {
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
+	}
 }	
 
 playable_kaiser_ehve_phase0 = {
@@ -66,7 +93,7 @@ playable_kaiser_ehve_phase0 = {
 
 	prerequisites = { "tech_pki_ehve" }
 	potential = {
-		has_origin = origin_katzen
+		pki_is_katzenartig_imperium = yes
 	}
 
 	possible = {
@@ -89,6 +116,7 @@ playable_kaiser_ehve_phase0 = {
 	on_build_complete = {
 		save_event_target_as = ehve_megastructure
 		fromfrom = {
+			set_megastructure_flag = pki_newly_built_ehve
 			planet = {
 				giga_set_has_mega_flag = yes
 				if = { limit = { has_orbital_station = yes } orbital_station = { dismantle = yes } }
@@ -106,6 +134,9 @@ playable_kaiser_ehve_phase0 = {
 			set_planet_flag = cant_build_here
 			set_planet_flag = cant_target_this_planet
 		}
+	}
+	outliner_trigger = {
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
 	}
 }
 
@@ -160,6 +191,9 @@ playable_kaiser_ehve_phase1 = {
 			set_planet_flag = cant_build_here
 			set_planet_flag = cant_target_this_planet
 		}
+	}
+	outliner_trigger = {
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
 	}
 }
 
@@ -230,6 +264,9 @@ playable_kaiser_ehve_dummy = {
 			}
 		}
 	}
+	outliner_trigger = {
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
+	}
 }
 
 playable_kaiser_ehve_cooldown = {
@@ -266,6 +303,10 @@ playable_kaiser_ehve_cooldown = {
 	country_modifier = {
 		fleet_mia_time_mult = -0.15
 	}
+
+	outliner_trigger = {
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
+	}
 }
 
 playable_kaiser_ehve_cooldown_dummy = {
@@ -298,6 +339,10 @@ playable_kaiser_ehve_cooldown_dummy = {
 			}
 		}
 		remove_megastructure = fromfrom
+	}
+
+	outliner_trigger = {
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
 	}
 }
 
@@ -337,6 +382,10 @@ playable_kaiser_ehve_active = {
 		from = {
 			set_country_flag = has_created_ehve
 		}		
+	}
+
+	outliner_trigger = {
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
 	}
 }
 
@@ -383,5 +432,9 @@ playable_kaiser_ehve = {
 			country_event = { id = pki_ehve.3 }
 		}
 
+	}
+
+	outliner_trigger = {
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
 	}
 }
