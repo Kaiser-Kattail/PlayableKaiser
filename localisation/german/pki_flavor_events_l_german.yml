@@ -1,0 +1,52 @@
+﻿l_german:
+  
+  pki_flavor.1.name:99 "§HFlusio-Arcology§!: [Root.GetName] Encased"
+  pki_flavor.1.desc:99 "Layers upon layers of urban sprawl eclipse the globe's crust, and it is done.\n\nScant few years have passed since the start of this grand project, but it is already difficult to recall what the surface of [Root.GetName] was like. Verdant? Rugged? It is all steel now, miles in every direction.\n\nA place once molded by chance and the unthinking laws of nature, now a design wrought from indomitable purpose."
+  
+  pki_flavor.20.name:99 "Ereignis Horizont Versatz Einrichtung"
+  pki_flavor.20.desc:99 "The construction site for our planned $pki_flavor.2.name$ is completed and ready for the next stage. Once we have the necessary resources, construction of the facility may commence."
+  
+  pki_flavor.21.name:99 "Ereignis Horizont Versatz Einrichtung"
+  pki_flavor.21.desc:99 "The initial structure of the facility is complete. Once we have the necessary resources, we will soon be able to travel nearly anywhere."
+  
+  situation_pki_galactic_tension:99 "Galactic Tension"
+  situation_pki_galactic_tension_type:99 "Galactic Tension"
+  situation_pki_galactic_tension_desc:99 "As we conquer more of the galaxy, some will oppose us. We will soon bring them into the fold.\n\nBelow represents the §Ypercentage§! of the galaxy owned by us. It functions as a progress bar towards §Yvictory§! as well as the §Yseverity§! of opinion malus we may face.\n\nAs we progress more, disastrous consequences could occur. §RBe prepared to fight!§!"
+  situation_pki_galactic_tension_outcome:99 "[event_target:katzenartig.GetName] proclaims victory over the galaxy"
+  approach_pki_galactic_tension_outcome_tooltip:99 "Progress is made by controlling more of the galaxy."
+  approach_pki_crisis_default:99 "Galactic Conquest"
+  
+  pki_ejected_from_galcom:99 "§YWe have been ejected from the Galactic Community§!"
+  
+  pki_crisis.100.name:99 "Galactic Ambitions"
+  pki_crisis.100.desc:99 "Following our discovery of FTL and our entrance to the galactic stage, §Y[ruler.GetTitle] [ruler.GetName]§! has expressed great interest in glorious conquest across the galaxy. Some will challenge us, but they will soon enjoy the benefits the Imperium has to offer."
+  
+  pki_crisis.104.name:99 "Empire-wide Specialization"
+  pki_crisis.104.desc:99 "As our conquest continues, it has become apparent that while our wars drag on, adjustments can be made to get more use out of our ships. Katzen officials have devised a program to do just that.\n\n§YWhile at war we will gain bonuses to ship effectiveness in combat and suffer upkeep and build speed maluses. While at peace the opposite will be true.§!"
+  
+  pki_crisis.301.name:99 "Galactic Community Sanctions [event_target:katzenartig.GetName]"
+  pki_crisis.301.desc:99 "Prominent figures in the Galactic Community have kept a keen eye on the §Y[event_target:katzenartig.GetName]§! since their discovery of FTL. Of them, the §Y[event_target:pki_galcom_opponent_1.GetName]§!, rallied members in an attempt to sanction the §Y[event_target:katzenartig.GetName]§!. Following many discussions with community members, all voted as part of a secret vote in favor of sanctioning the §Y[event_target:katzenartig.GetName]§! in response to threat they pose to the galaxy."
+  pki_crisis.301.a:99 "We voted correctly."
+  pki_crisis.301.b:99 "An outrage!"
+  
+  pki_crisis.311.name:99 "Increased Diplomatic Activity"
+  pki_crisis.311.desc:99 "We have intercepted some communications between our neighbors, implying plans for increased cooperation and defensive pacts. How this will affect our plans remains to be seen."
+  
+  pki_crisis.401.name:99 "Further Sanctions"
+  pki_crisis.401.desc:99 "As the §Y[event_target:katzenartig.GetName]§! gains more territory in the galaxy, the Galactic Community has decided again to enforce sanctions, in a attempt to preserve the galaxy's way of life.\n\nThere are rumors from the §Y[event_target:katzenartig.GetName]§! that §Y[event_target:katzenartig.ruler.GetTitle] [event_target:katzenartig.ruler.GetName]§! will make a statement about this soon. As with anything, only time can tell."
+  pki_crisis.401.a:99 "We we not harsh enough."
+  pki_crisis.401.b:99 "Again?"
+  
+  pki_crisis.402.name:99 "[event_target:katzenartig.ruler.GetTitle] [event_target:katzenartig.ruler.GetName] mocks Galactic Community"
+  pki_crisis.402.desc:99 "All across the galaxy, the message from §Y[event_target:katzenartig.ruler.GetTitle] [event_target:katzenartig.ruler.GetName]§! could be heard, booming from every screen and speaker.\n\n§L\"You sanction me once, shame on me I guess. You sanction me twice, shame on you, hiding behind your little community. The mere thought of glorious unification troubles you that much? This grand Imperium that I have built will not be scared off by your pitiful sanctions. Do what you want, but keep this in mind; If you have refused negotiations once, I won't be so willing to indulge in it again.\"§!\n\nThere is word of mobilization against the §Y[event_target:katzenartig.GetName]§!, but only time will tell.\n\n§Y$resolution_pki_galactic_focus_crisis_katzen$§! resolution is now available in the Galactic Community."
+  pki_crisis.402.a:99 "An outrage!"
+  pki_crisis.402.b:99 "Their end is nigh."
+  
+  pki_crisis.667.a:99 "The fight is on!"
+  
+  pki_crisis.999.name:99 ""
+  pki_crisis.999.desc:99 ""
+  pki_crisis.999.a:99 ""
+  pki_crisis.999.b:99 "We have won at last"
+  
+  pki_corrona.008.b:99 "You will be subjugated as well."

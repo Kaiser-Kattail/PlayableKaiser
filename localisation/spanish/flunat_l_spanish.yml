@@ -1,417 +1,426 @@
 ﻿l_spanish:
- d_flunat: "Flusonian Nations" #NT!
- d_flunat_desc: "There are many other nations on Flusion, ready to be conquered." #NT!
+  d_flunat:0 "Flusonian Nations"
+  d_flunat_desc:0 "There are many other nations on Flusion, ready to be conquered."
   
-  ###DIPLOMACY EVENTS### 
- flunat_get_lore: "Learn about their nation's history and culture." #NT!
- flunat_demand_land: "Demand that they give up land, with compensation of course." #NT!
- flunat_war_dec: "Declare war to conquer their lands." #NT!
+  ###DIPLOMACY EVENTS###
+  flunat_get_lore:0 "Learn about their nation's history and culture."
+  flunat_demand_land:0 "Demand that they give up land, with compensation of course."
+  flunat_war_dec:0 "Declare war to conquer their lands."
   
- flunat.0101.a: "Tell me about your nation." #NT!
- flunat.0101.b: "Could we purchase some of your land?" #NT!
- flunat.0101.c: "Enough is enough, this is §RWAR§!!" #NT!
- flunat.0101.d: "Nothing for now. Goodbye." #NT!
-   #Solakia 
- NAME_Solakians: "Roqualian Republic" #NT!
- NAME_Solakian: "Roqualian" #NT!
+  flunat.0101.a:0 "Tell me about your nation."
+  flunat.0101.b:0 "Could we purchase some of your land?"
+  flunat.0101.c:0 "Enough is enough, this is §RWAR§!!"
+  flunat.0101.d:0 "Nothing for now. Goodbye."
+  #Solakia
+  NAME_Solakians:0 "Roqualian Republic"
+  NAME_Solakian:0 "Roqualian"
   
- flunat.0101.name: "$NAME_Solakians$ - §Y[solakia_flunat.GetRulerName]§!" #NT!
- flunat.0101a.desc: "If it isn't our rowdy northern neighbors. What do you desire, Kattail? Know that our mutual border is manned at all times." #NT!
- flunat.0101b.desc: "What do you want, Kattail? Was your kind's savage bombing of Rapture not sufficient?" #NT!
- flunat.0101c.desc: "We are not foolish enough to ignore your blatant ambitions on our land, Katzens. We might be pacifists, but we can, and will fight to the end should you attempt anything." #NT!
- flunat.0101d.desc: "Oh great, I guess I should pull out the litterbox for the level of crap you're about to send my way." #NT!
- flunat.0101e.desc: "Out with it Kattail, what do you want?" #NT!
- flunat.0101f.desc: "Do not bother us with your ridiculous claptrap. We see through your game, Kattail." #NT!
+  flunat.0101.name:0 "$NAME_Solakians$ - §Y[solakia_flunat.GetRulerName]§!"
+  flunat.0101a.desc:0 "If it isn't our rowdy northern neighbors. What do you desire, Kattail? Know that our mutual border is manned at all times."
+  flunat.0101b.desc:0 "What do you want, Kattail? Was your kind's savage bombing of Rapture not sufficient?"
+  flunat.0101c.desc:0 "We are not foolish enough to ignore your blatant ambitions on our land, Katzens. We might be pacifists, but we can, and will fight to the end should you attempt anything."
+  flunat.0101d.desc:0 "Oh great, I guess I should pull out the litterbox for the level of crap you're about to send my way."
+  flunat.0101e.desc:0 "Out with it Kattail, what do you want?"
+  flunat.0101f.desc:0 "Do not bother us with your ridiculous claptrap. We see through your game, Kattail."
   
- flunat.0101.a.response: "Why, so you can destroy every last bit of culture we have? Screw you." #NT!
- flunat.0101.b.response: "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you." #NT!
- flunat.0101.c.response: "We knew this day would come. We will fight you until the last $NAME_Solakian$ falls. See you on the battlefield, Kattail." #NT!
-   #Cookian Steppes 
- NAME_Cookies: "Galletian Technocracy" #NT!
- NAME_Cookie: "Galletian" #NT!
+  flunat.0101.a.response:0 "Why, so you can destroy every last bit of culture we have? Screw you."
+  flunat.0101.b.response:0 "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you."
+  flunat.0101.c.response:0 "We knew this day would come. We will fight you until the last $NAME_Solakian$ falls. See you on the battlefield, Kattail."
+  #Cookian Steppes
+  NAME_Cookies:0 "Galletian Technocracy"
+  NAME_Cookie:0 "Galletian"
   
- flunat.0201.name: "$NAME_Cookies$ - §Y[cookie_flunat.GetRulerName]§!" #NT!
- flunat.0201a.desc: "There is science to be done and experiments to be processed. We have little time to waste with you nukeslingers." #NT!
- flunat.0201b.desc: "Greetings, Kattail. Our border defenses are ready, if you were wondering." #NT!
- flunat.0201c.desc: "Your ambitions will be your downfall, Katzens. Heed this warning before it is too late!" #NT!
- flunat.0201d.desc: "We would have never left Doughland if we knew we'd end up with you folks as neighbors!" #NT!
- flunat.0201e.desc: "Out with it Kattail, what is it that your kind seeks this time around?" #NT!
- flunat.0201f.desc: "We are not open to trading with your kind, unfortunately." #NT!
+  flunat.0201.name:0 "$NAME_Cookies$ - §Y[cookie_flunat.GetRulerName]§!"
+  flunat.0201a.desc:0 "There is science to be done and experiments to be processed. We have little time to waste with you nukeslingers."
+  flunat.0201b.desc:0 "Greetings, Kattail. Our border defenses are ready, if you were wondering."
+  flunat.0201c.desc:0 "Your ambitions will be your downfall, Katzens. Heed this warning before it is too late!"
+  flunat.0201d.desc:0 "We would have never left Doughland if we knew we'd end up with you folks as neighbors!"
+  flunat.0201e.desc:0 "Out with it Kattail, what is it that your kind seeks this time around?"
+  flunat.0201f.desc:0 "We are not open to trading with your kind, unfortunately."
   
- flunat.0201.a.response: "Our kind is a science-oriented one. Unlike you... militaristic despoilers, we value progress above all, both scientific and cultural." #NT!
- flunat.0201.b.response: "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you." #NT!
- flunat.0201.c.response: "So be it. Let it be known that we can, and will do everything in our power to stop your asinine crusade, Kattail." #NT!
-   #Kronk 
- NAME_Kronks: "Kronk" #NT!
- NAME_Kronk: "Kronk" #NT!
+  flunat.0201.a.response:0 "Our kind is a science-oriented one. Unlike you... militaristic despoilers, we value progress above all, both scientific and cultural."
+  flunat.0201.b.response:0 "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you."
+  flunat.0201.c.response:0 "So be it. Let it be known that we can, and will do everything in our power to stop your asinine crusade, Kattail."
+  #Kronk
+  NAME_Kronks:0 "Kronk"
+  NAME_Kronk:0 "Kronk"
   
- flunat.0301.name: "$NAME_Kronks$ - §Y[kronk_flunat.GetRulerName]§!" #NT!
- flunat.0301a.desc: "Kronk, kronk, kronk?" #NT!
- flunat.0301b.desc: "Kronk." #NT!
- flunat.0301c.desc: "Krooooooonk!!" #NT!
- flunat.0301d.desc: "Kronk, kronk... kronk... kronk?!" #NT!
- flunat.0301e.desc: "Kronk!" #NT!
- flunat.0301f.desc: "Kronk? Kronk? Kronk!" #NT!
+  flunat.0301.name:0 "$NAME_Kronks$ - §Y[kronk_flunat.GetRulerName]§!"
+  flunat.0301a.desc:0 "Kronk, kronk, kronk?"
+  flunat.0301b.desc:0 "Kronk."
+  flunat.0301c.desc:0 "Krooooooonk!!"
+  flunat.0301d.desc:0 "Kronk, kronk... kronk... kronk?!"
+  flunat.0301e.desc:0 "Kronk!"
+  flunat.0301f.desc:0 "Kronk? Kronk? Kronk!"
   
- flunat.0301.a.response: "Kronk." #NT!
- flunat.0301.b.response: "Kronken't." #NT!
- flunat.0301.c.response: "KRONK!!!!!!" #NT!
-   #Ravka 
- NAME_Ravkans: "Ravka" #NT!
- NAME_Ravkan: "Ravkan" #NT!
+  flunat.0301.a.response:0 "Kronk."
+  flunat.0301.b.response:0 "Kronken't."
+  flunat.0301.c.response:0 "KRONK!!!!!!"
+  #Ravka
+  NAME_Ravkans:0 "Ravka"
+  NAME_Ravkan:0 "Ravkan"
   
- flunat.0401.name: "$NAME_Ravkans$ Commonwealth - §Y[ravkan_flunat.GetRulerName]§!" #NT!
- flunat.0401a.desc: "We salute you, Katzens. What is it that you seek?" #NT!
- flunat.0401b.desc: "The Council of Grand Wielders wishes for peace between our kinds." #NT!
- flunat.0401c.desc: "Let it be known, Katzens, that our kind is not defenceless." #NT!
- flunat.0401d.desc: "Greetings. What brings you to our lands?" #NT!
- flunat.0401e.desc: "Our nations are so different from one another. Is there truly anything to discuss?" #NT!
- flunat.0401f.desc: "We wish for nothing more than to be left alone." #NT!
+  flunat.0401.name:0 "$NAME_Ravkans$ Commonwealth - §Y[ravkan_flunat.GetRulerName]§!"
+  flunat.0401a.desc:0 "We salute you, Katzens. What is it that you seek?"
+  flunat.0401b.desc:0 "The Council of Grand Wielders wishes for peace between our kinds."
+  flunat.0401c.desc:0 "Let it be known, Katzens, that our kind is not defenceless."
+  flunat.0401d.desc:0 "Greetings. What brings you to our lands?"
+  flunat.0401e.desc:0 "Our nations are so different from one another. Is there truly anything to discuss?"
+  flunat.0401f.desc:0 "We wish for nothing more than to be left alone."
   
- flunat.0401.a.response: "Why, so you can destroy every last bit of culture we have? Screw you." #NT!
- flunat.0401.b.response: "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you." #NT!
- flunat.0401.c.response: "This is... a most uncouth act. Why is it that you insist on spreading such suffering? This can only end badly." #NT!
-   #Zousa 
+  flunat.0401.a.response:0 "Why, so you can destroy every last bit of culture we have? Screw you."
+  flunat.0401.b.response:0 "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you."
+  flunat.0401.c.response:0 "This is... a most uncouth act. Why is it that you insist on spreading such suffering? This can only end badly."
+  #Zousa
   
- NAME_Zousans: "Linteria" #NT!
- NAME_Zousa: "Linterians" #NT!
- flunat.0501.name: "$NAME_Zousans$ - §Y[zousan_flunat.GetRulerName]§!" #NT!
- flunat.0501a.desc: "Go away." #NT!
- flunat.0501b.desc: "We do not care for your kind." #NT!
- flunat.0501c.desc: "Foolish felines. We want nothing to do with your kind." #NT!
- flunat.0501d.desc: "Away with you!" #NT!
- flunat.0501e.desc: "Shoo." #NT!
- flunat.0501f.desc: "Why are you bothering us?" #NT!
+  NAME_Zousans:0 "Linteria"
+  NAME_Zousa:0 "Linterians"
+  flunat.0501.name:0 "$NAME_Zousans$ - §Y[zousan_flunat.GetRulerName]§!"
+  flunat.0501a.desc:0 "Go away."
+  flunat.0501b.desc:0 "We do not care for your kind."
+  flunat.0501c.desc:0 "Foolish felines. We want nothing to do with your kind."
+  flunat.0501d.desc:0 "Away with you!"
+  flunat.0501e.desc:0 "Shoo."
+  flunat.0501f.desc:0 "Why are you bothering us?"
   
- flunat.0501.a.response: "Why, so you can destroy every last bit of culture we have? Screw you." #NT!
- flunat.0501.b.response: "No." #NT!
- flunat.0501.c.response: "You will soon realize your own folly." #NT!
-   #Droog 
+  flunat.0501.a.response:0 "Why, so you can destroy every last bit of culture we have? Screw you."
+  flunat.0501.b.response:0 "No."
+  flunat.0501.c.response:0 "You will soon realize your own folly."
+  #Droog
   
- NAME_Droog: "Droogian Tribes" #NT!
- NAME_Droogs: "Droog" #NT!
- flunat.0601.name: "$NAME_Droog$ - §RNo Centralized Government§!" #NT!
- flunat.0601a.desc: "The Droogian Tribes lack a centralized government to communicate with." #NT!
+  NAME_Droog:0 "Droogian Tribes"
+  NAME_Droogs:0 "Droog"
+  flunat.0601.name:0 "$NAME_Droog$ - §RNo Centralized Government§!"
+  flunat.0601a.desc:0 "The Droogian Tribes lack a centralized government to communicate with."
   
- flunat.0601.a.response: "Although the Droogian themselves are not able to respond, it is known that the Droogian Tribes consist of a myriad of tribal communities populated by vampiric beings. These tribes are constantly in feud with one another and there is no real centralized government beyond a loose council." #NT!
- flunat.0601.c.response: "..." #NT!
-   #Ezics 
+  flunat.0601.a.response:0 "Although the Droogian themselves are not able to respond, it is known that the Droogian Tribes consist of a myriad of tribal communities populated by vampiric beings. These tribes are constantly in feud with one another and there is no real centralized government beyond a loose council."
+  flunat.0601.c.response:0 "..."
+  #Ezics
   
- NAME_Ezics: "Zuspri Intermarium" #NT!
- NAME_Ezic: "Zuspris" #NT!
- flunat.0701.name: "$NAME_Ezics$ - §Y[ezic_flunat.GetRulerName]§!" #NT!
- flunat.0701a.desc: "Your very existence is a stain upon this universe." #NT!
- flunat.0701b.desc: "It was the Rapturians yesterday, it will be us tomorrow, am I correct?" #NT!
- flunat.0701c.desc: "Know that if you set one foot into our lands, we will tear your soldiers and panzers apart until they are nothing but piles of junk." #NT!
- flunat.0701d.desc: "How could your proud species fall so low, Katzens?" #NT!
- flunat.0701e.desc: "Even if the odds are against us, we shall stand our ground." #NT!
- flunat.0701f.desc: "Our kind will not be threatened by your folly." #NT!
+  NAME_Ezics:0 "Zuspri Intermarium"
+  NAME_Ezic:0 "Zuspris"
+  flunat.0701.name:0 "$NAME_Ezics$ - §Y[ezic_flunat.GetRulerName]§!"
+  flunat.0701a.desc:0 "Your very existence is a stain upon this universe."
+  flunat.0701b.desc:0 "It was the Rapturians yesterday, it will be us tomorrow, am I correct?"
+  flunat.0701c.desc:0 "Know that if you set one foot into our lands, we will tear your soldiers and panzers apart until they are nothing but piles of junk."
+  flunat.0701d.desc:0 "How could your proud species fall so low, Katzens?"
+  flunat.0701e.desc:0 "Even if the odds are against us, we shall stand our ground."
+  flunat.0701f.desc:0 "Our kind will not be threatened by your folly."
   
- flunat.0701.a.response: "Why, so you can destroy every last bit of culture we have? Screw you." #NT!
- flunat.0701.b.response: "Our land is ours, not yours." #NT!
- flunat.0701.c.response: "The blood which you are about to spill will be sufficient to make every river in your forsaken empire run red." #NT!
-   #Mercuria 
+  flunat.0701.a.response:0 "Why, so you can destroy every last bit of culture we have? Screw you."
+  flunat.0701.b.response:0 "Our land is ours, not yours."
+  flunat.0701.c.response:0 "The blood which you are about to spill will be sufficient to make every river in your forsaken empire run red."
+  #Mercuria
   
- NAME_Mercurians: "Mercuria" #NT!
- NAME_Mercurian: "Mercurian" #NT!
- flunat.0801.name: "$NAME_Mercurians$ - §Y[mercuria_flunat.GetRulerName]§!" #NT!
- flunat.0801a.desc: "We follow a very strict policy of armed neutrality. And we are not afraid to enforce it." #NT!
- flunat.0801b.desc: "Please, do not disturb us." #NT!
- flunat.0801c.desc: "The Mercurians do not wish to be involved in your business." #NT!
- flunat.0801d.desc: "Any incursion will be paid for in blood." #NT!
- flunat.0801e.desc: "We have no desire to interact with your kind." #NT!
- flunat.0801f.desc: "We only demand that you leave us to our own affairs." #NT!
+  NAME_Mercurians:0 "Mercuria"
+  NAME_Mercurian:0 "Mercurian"
+  flunat.0801.name:0 "$NAME_Mercurians$ - §Y[mercuria_flunat.GetRulerName]§!"
+  flunat.0801a.desc:0 "We follow a very strict policy of armed neutrality. And we are not afraid to enforce it."
+  flunat.0801b.desc:0 "Please, do not disturb us."
+  flunat.0801c.desc:0 "The Mercurians do not wish to be involved in your business."
+  flunat.0801d.desc:0 "Any incursion will be paid for in blood."
+  flunat.0801e.desc:0 "We have no desire to interact with your kind."
+  flunat.0801f.desc:0 "We only demand that you leave us to our own affairs."
   
- flunat.0801.a.response: "Why, so you can destroy every last bit of culture we have? Screw you." #NT!
- flunat.0801.b.response: "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you." #NT!
- flunat.0801.c.response: "We shall defend our neutrality and right to exist, even if millions have to die." #NT!
-   #Cyatianala 
+  flunat.0801.a.response:0 "Why, so you can destroy every last bit of culture we have? Screw you."
+  flunat.0801.b.response:0 "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you."
+  flunat.0801.c.response:0 "We shall defend our neutrality and right to exist, even if millions have to die."
+  #Cyatianala
   
- NAME_Cyatianalas: "Cyatianala" #NT!
- NAME_Cyatianala: "Cyatianala" #NT!
- flunat.0901.name: "$NAME_Cyatianalas$ - §Y[cyatianala_flunat.GetRulerName]§!" #NT!
- flunat.0901a.desc: "Ah and who do I have nex- oh, it's you. What do you want this time, Kattail?" #NT!
- flunat.0901b.desc: "Oh, lovely. What do you want now?" #NT!
- flunat.0901c.desc: "You know, if it was anybody else I'd be happy someone was trying to unite the world! Instead we got you." #NT!
- flunat.0901d.desc: "Oh great, I guess I should pull out the litterbox for the level of crap you're about to send my way." #NT!
- flunat.0901e.desc: "Out with it Kattail, what do you want?" #NT!
- flunat.0901f.desc: "Why are you bothering me?" #NT!
+  NAME_Cyatianalas:0 "Cyatianala"
+  NAME_Cyatianala:0 "Cyatianala"
+  flunat.0901.name:0 "$NAME_Cyatianalas$ - §Y[cyatianala_flunat.GetRulerName]§!"
+  flunat.0901a.desc:0 "Ah and who do I have nex- oh, it's you. What do you want this time, Kattail?"
+  flunat.0901b.desc:0 "Oh, lovely. What do you want now?"
+  flunat.0901c.desc:0 "You know, if it was anybody else I'd be happy someone was trying to unite the world! Instead we got you."
+  flunat.0901d.desc:0 "Oh great, I guess I should pull out the litterbox for the level of crap you're about to send my way."
+  flunat.0901e.desc:0 "Out with it Kattail, what do you want?"
+  flunat.0901f.desc:0 "Why are you bothering me?"
   
- flunat.0901.a.response: "Why, so you can destroy every last bit of culture we have? Screw you." #NT!
- flunat.0901.b.response: "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you." #NT!
- flunat.0901.c.response: "So be it. We will fight you until the last $NAME_Cyatianala$ falls. See you on the battlefield, Kattail." #NT!
- #Yinja 
+  flunat.0901.a.response:0 "Why, so you can destroy every last bit of culture we have? Screw you."
+  flunat.0901.b.response:0 "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you."
+  flunat.0901.c.response:0 "So be it. We will fight you until the last $NAME_Cyatianala$ falls. See you on the battlefield, Kattail."
+  #Yinja
   
- NAME_Yinjites: "Yinjite Thalassocracy" #NT!
- NAME_Yinjite: "Yinjite" #NT!
- flunat.01101.name: "$NAME_Yinjites$ -  §Y[yinjite_flunat.GetRulerName]§!" #NT!
- flunat.01101a.desc: "Greetings, Katzens. Have you come to bargain?" #NT!
- flunat.01101b.desc: "Good evening to you, Kattail. How goes things?" #NT!
- flunat.01101c.desc: "Our warriors salute you, Katzens." #NT!
- flunat.01101d.desc: "Greetings. Let it be known that our Grand Flotilla is ready for action, should your warriors feel like trying anything." #NT!
- flunat.01101e.desc: "Salutations, Kattail. Do you wish to engage in joint naval exercises?" #NT!
- flunat.01101f.desc: "It is more curious how you felines tend to neglect the sea in favor of the land." #NT!
+  NAME_Yinjites:0 "Yinjite Thalassocracy"
+  NAME_Yinjite:0 "Yinjite"
+  flunat.01101.name:0 "$NAME_Yinjites$ -  §Y[yinjite_flunat.GetRulerName]§!"
+  flunat.01101a.desc:0 "Greetings, Katzens. Have you come to bargain?"
+  flunat.01101b.desc:0 "Good evening to you, Kattail. How goes things?"
+  flunat.01101c.desc:0 "Our warriors salute you, Katzens."
+  flunat.01101d.desc:0 "Greetings. Let it be known that our Grand Flotilla is ready for action, should your warriors feel like trying anything."
+  flunat.01101e.desc:0 "Salutations, Kattail. Do you wish to engage in joint naval exercises?"
+  flunat.01101f.desc:0 "It is more curious how you felines tend to neglect the sea in favor of the land."
   
- flunat.01101.a.response: "We Yinjites are a proud, seafaring people. Our magnificient cities are constructed within vast marshes and wetland, while our pride and joy, the Grand Flotilla, protects us from invaders and secures our shipping lanes. Despite Godred's efforts, Rapture failed to breach it, and, should you wish to challenge it, I trust it would do an equally good job against your Katzenseetruppen." #NT!
- flunat.01101.b.response: "Our lands and seas are not for sale." #NT!
- flunat.01101.c.response: "So be it! Let this glorious combat determine who Flusion's greatest warrior actually is!" #NT!
- #Symbyland 
+  flunat.01101.a.response:0 "We Yinjites are a proud, seafaring people. Our magnificient cities are constructed within vast marshes and wetland, while our pride and joy, the Grand Flotilla, protects us from invaders and secures our shipping lanes. Despite Godred's efforts, Rapture failed to breach it, and, should you wish to challenge it, I trust it would do an equally good job against your Katzenseetruppen."
+  flunat.01101.b.response:0 "Our lands and seas are not for sale."
+  flunat.01101.c.response:0 "So be it! Let this glorious combat determine who Flusion's greatest warrior actually is!"
+  #Symbyland
   
- NAME_Symbies: "Puffiland Republic" #NT!
- NAME_Symbiess: "Wacegi" #NT!
- flunat.01201.name: "Puffiland Republic -  §Y[symbie_flunat.GetRulerName]§!" #NT!
- flunat.01201a.desc: "What do you want? Have you not bombed us enough?" #NT!
- flunat.01201b.desc: "Granted, you liberated us from Godred's grasp... but at what cost?" #NT!
- flunat.01201c.desc: "Half of our country is nothing but radioactive wasteland thanks to your kind!" #NT!
- flunat.01201d.desc: "If you seek to bomb us again, know that can and will fight until our dying breath." #NT!
- flunat.01201e.desc: "Thinking about it, Godred was probably right." #NT!
- flunat.01201f.desc: "How many more nations will you obliterate in nuclear fire before someone stops you?" #NT!
+  NAME_Symbies:0 "Puffiland Republic"
+  NAME_Symbiess:0 "Wacegi"
+  flunat.01201.name:0 "Puffiland Republic -  §Y[symbie_flunat.GetRulerName]§!"
+  flunat.01201a.desc:0 "What do you want? Have you not bombed us enough?"
+  flunat.01201b.desc:0 "Granted, you liberated us from Godred's grasp... but at what cost?"
+  flunat.01201c.desc:0 "Half of our country is nothing but radioactive wasteland thanks to your kind!"
+  flunat.01201d.desc:0 "If you seek to bomb us again, know that can and will fight until our dying breath."
+  flunat.01201e.desc:0 "Thinking about it, Godred was probably right."
+  flunat.01201f.desc:0 "How many more nations will you obliterate in nuclear fire before someone stops you?"
   
- flunat.01201.a.response: "Why, so you can destroy every last bit of culture we have? Screw you." #NT!
- flunat.01201.b.response: "Why would you want some worthless rubble?" #NT!
- flunat.01201.c.response: "So you've finally decided to finish the job, huh? Well then, have at it, nuclear barbarians." #NT!
- #Laurandar 
+  flunat.01201.a.response:0 "Why, so you can destroy every last bit of culture we have? Screw you."
+  flunat.01201.b.response:0 "Why would you want some worthless rubble?"
+  flunat.01201.c.response:0 "So you've finally decided to finish the job, huh? Well then, have at it, nuclear barbarians."
+  #Laurandar
   
- NAME_Lauranaise: "Laurandar" #NT!
- NAME_Lauranaises: "Laurnaise" #NT!
- flunat.01301.name: "Laurandar - §Y[lauranaise_flunat.GetRulerName]§!" #NT!
- flunat.01301a.desc: "Hello, Kattail. What do you want?" #NT!
- flunat.01301b.desc: "I've got meetings to attend and warplans to draft. Be quick." #NT!
- flunat.01301c.desc: "Your culture is most intriguing, Katzen. We do wonder which one of our nations would win in a war." #NT!
- flunat.01301d.desc: "Is there anything you need, Kattail?" #NT!
- flunat.01301e.desc: "If you're thinking about invading, know that we are ready, Kattail." #NT!
- flunat.01301f.desc: "Good day to you, Katzens. Enjoy it while it lasts." #NT!
+  NAME_Lauranaise:0 "Laurandar"
+  NAME_Lauranaises:0 "Laurnaise"
+  flunat.01301.name:0 "Laurandar - §Y[lauranaise_flunat.GetRulerName]§!"
+  flunat.01301a.desc:0 "Hello, Kattail. What do you want?"
+  flunat.01301b.desc:0 "I've got meetings to attend and warplans to draft. Be quick."
+  flunat.01301c.desc:0 "Your culture is most intriguing, Katzen. We do wonder which one of our nations would win in a war."
+  flunat.01301d.desc:0 "Is there anything you need, Kattail?"
+  flunat.01301e.desc:0 "If you're thinking about invading, know that we are ready, Kattail."
+  flunat.01301f.desc:0 "Good day to you, Katzens. Enjoy it while it lasts."
   
- flunat.01301.a.response: "Why, so you can destroy every last bit of culture we have? Screw you." #NT!
- flunat.01301.b.response: "We do not wish to sell our land." #NT!
- flunat.01301.c.response: "And so it is war? You finally show your true face, Kattail. Know that we shall fight on the beaches, we shall fight in the streets, and we shall defend our island to the very end." #NT!
- #Harania 
+  flunat.01301.a.response:0 "Why, so you can destroy every last bit of culture we have? Screw you."
+  flunat.01301.b.response:0 "We do not wish to sell our land."
+  flunat.01301.c.response:0 "And so it is war? You finally show your true face, Kattail. Know that we shall fight on the beaches, we shall fight in the streets, and we shall defend our island to the very end."
+  #Harania
   
- NAME_Haranian: "Harania" #NT!
- NAME_Haranians: "Haranian" #NT!
- flunat.01401.name: "Kingdom of Harania - §Y[haranian_flunat.GetRulerName]§!" #NT!
- flunat.01401a.desc: "We are not interested in diplomacy." #NT!
- flunat.01401b.desc: "I am very busy. Please, be brief." #NT!
- flunat.01401c.desc: "It is you. What do you want?" #NT!
- flunat.01401d.desc: "Eventually, your empire will crumble, like all others." #NT!
- flunat.01401e.desc: "What do you want?" #NT!
- flunat.01401f.desc: "Do not bother the Kingdom of Harania with your futile balderdash." #NT!
+  NAME_Haranian:0 "Harania"
+  NAME_Haranians:0 "Haranian"
+  flunat.01401.name:0 "Kingdom of Harania - §Y[haranian_flunat.GetRulerName]§!"
+  flunat.01401a.desc:0 "We are not interested in diplomacy."
+  flunat.01401b.desc:0 "I am very busy. Please, be brief."
+  flunat.01401c.desc:0 "It is you. What do you want?"
+  flunat.01401d.desc:0 "Eventually, your empire will crumble, like all others."
+  flunat.01401e.desc:0 "What do you want?"
+  flunat.01401f.desc:0 "Do not bother the Kingdom of Harania with your futile balderdash."
   
- flunat.01401.a.response: "Why, so you can destroy every last bit of culture we have? Screw you." #NT!
- flunat.01401.b.response: "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you." #NT!
- flunat.01401.c.response: "The tundras shall run red with Katzen blood." #NT!
- ###WAR EVENTS### 
- decision_flusion_strike_cheap: "Initiate Strike" #NT!
- decision_flusion_strike_cheap_desc: "Initiates a strike on hostile forces, advancing the war in our favor." #NT!
- decision_flusion_strike_mixed: "$decision_flusion_strike_cheap$" #NT!
- decision_flusion_strike_mixed_desc: "$decision_flusion_strike_cheap_desc$" #NT!
- decision_flusion_strike_attrition: "$decision_flusion_strike_cheap$" #NT!
- decision_flusion_strike_attrition_desc: "$decision_flusion_strike_cheap_desc$" #NT!
- situation_world_tension_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$" #NT!
- situation_solakian_conquest: "War For Roqualia" #NT!
- situation_solakian_conquest_type: "Flusionian Conquest" #NT!
- situation_solakian_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HRoqualian Republic§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu." #NT!
- situation_solakian_conquest_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$" #NT!
- conquest_situation_conquer_solakia: "We annex Roqualia, and control their lands and people." #NT!
- conquest_situation_get_rekt: "We lose a region and gain less space!" #NT!
- approach_mobile: "Mobile Doctrine" #NT!
- approach_mixed: "Mixed Doctrine" #NT!
- approach_attrition: "Attrition Doctrine" #NT!
- approach_mobile_desc: "We will stay light, moving quickly under shadow of night.\n§HWe will make less progress in the situation, but §YStrikes§H will be easier. §YStrikes§H may be performed from Flusion's §YDecisions§!." #NT!
- approach_mixed_desc: "To commit ourselves to a path is to narrow our focus. Our strategy is victory.\n§HThis is a balanced approach. §YStrikes§H may be performed from Flusion's §YDecisions§!" #NT!
- approach_attrition_desc: "We will fight in the trenches, we will fight at the mountains. Our industrial might will be the key to victory.\n§HWe will make more progress in the situation, but §YStrikes§H will be harder. §YStrikes§H may be performed from Flusion's §YDecisions§!" #NT!
- flunat.0111.title: "Flusionian Conquest" #NT!
- flunat.0111.desc: "Alert! We have reached a hostile bastion, ground forces are imminent! Expect heavy resistance, they won't go without a fight." #NT!
- flunat_defense.a: "Incoming!" #NT!
- conquest.4.title: "Surprise Strike" #NT!
- conquest.4.desc: "Enemy forces have launched several surprise strikes at key chokepoints and locations, and have provided a serious setback in our efforts." #NT!
- conquest.4.a: "Curses!" #NT!
- conquest.1.title: "Conquest Setback" #NT!
- conquest.1.desc: "Alert! Following the decisive defeat of our ground forces, enemy troops have blitzed and seized a significant amount of land!\n\n§RThe Situation has moved backwards by 25!" #NT!
- backfoot: "Homeland" #NT!
- region_1: "First Region" #NT!
- region_2: "Second Region" #NT!
- region_3: "Third Region" #NT!
- region_4: "Fourth Region" #NT!
- region_5: "Fifth Region" #NT!
- flunat.0102.desc: "You may have crushed our armies, but you will never crush our spirits. We shall do everything in our power to oppose you." #NT!
- flunat.0102.a: "We have won this." #NT!
- conquest.102.desc: "Face it Kattail; you will never win. The free Roqualian spirit cannot be crushed by your farcical war machines." #NT!
- conquest.102.a: "You will regret this!" #NT!
- NAME_solakia_defense: "Roqualian Army" #NT!
-  
-  
- #Cookians 
- #I cannot organize lmao 
- situation_cookian_conquest: "War for the Galletian Technocracy" #NT!
- situation_cookian_conquest_type: "Flusionian Conquest" #NT!
- situation_cookian_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HGalletian Technocracy§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu." #NT!
- situation_cookian_conquest_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$" #NT!
- conquest_situation_conquer_cookian_steppes: "We annex the Galletian Technocracy, and control their lands and people." #NT!
- conquest_situation_conquer_cookie: "We annex the Galletian Technocracy, and control their lands and people." #NT!
- flunat.0202.desc: "The flame of progress can never be extinguished. We shall rise again once more." #NT!
- NAME_cookie_defense: "Galletian Army" #NT!
- conquest.202.desc: "Intellect has once more triumphed over barbarism." #NT!
-  
- #Kronk 
- situation_kronk_conquest: "War for the Kronk" #NT!
- situation_kronk_conquest_type: "Flusionian Conquest" #NT!
- situation_kronk_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HKronk§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu." #NT!
- situation_kronk_conquest_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$" #NT!
- conquest_situation_conquer_kronk_steppes: "We annex the Kronk, and control their lands and people." #NT!
- conquest_situation_conquer_kronk: "We annex the Kronk, and control their lands and people." #NT!
- flunat.0302.desc: "Kronk..." #NT!
- NAME_kronk_defense: "Kronk Army" #NT!
- conquest.302.desc: "Kronk! KRONK!!!!" #NT!
-  
- #Ravka 
- situation_ravka_conquest: "War for the Ravkans" #NT!
- situation_ravka_conquest_type: "Flusionian Conquest" #NT!
- situation_ravka_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HRavka§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu." #NT!
- situation_ravka_conquest_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$" #NT!
- conquest_situation_conquer_ravka: "We annex the Ravka, and control their lands and people." #NT!
- flunat.0402.desc: "You will one day pay for your monstrous actions." #NT!
- NAME_ravka_defense: "Ravkan Army" #NT!
- conquest.402.desc: "Face it Kattail; you will never win. The Ravkanian spirit cannot be crushed by your farcical war machines." #NT!
-  
- #Zousa 
- situation_zousa_conquest: "War for the Linterians" #NT!
- situation_zousa_conquest_type: "Flusionian Conquest" #NT!
- situation_zousa_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on §HLinteria§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu." #NT!
- situation_zousa_conquest_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$" #NT!
- conquest_situation_conquer_zousa: "We annex Linteria, and control their lands and people." #NT!
- flunat.0502.desc: "...this...this cannot be..." #NT!
- NAME_zousa_defense: "Linterian Army" #NT!
- conquest.502.desc: "Let this be a rightful lesson to you, foolish felines." #NT!
-  
- #Droog 
- situation_droog_conquest: "War for the Droog" #NT!
- situation_droog_conquest_type: "Flusionian Conquest" #NT!
- situation_droog_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on §HDroog§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu." #NT!
- situation_droog_conquest_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$" #NT!
- conquest_situation_conquer_droog: "We annex the Droog, and control their lands and people." #NT!
- flunat.0602.desc: "The Droogians have been subjugated." #NT!
- NAME_droog_defense: "Droog Army" #NT!
- conquest.602.desc: "Somehow, we lost to decentralized tribes. This blunder will be remembered for decades to come..." #NT!
+  flunat.01401.a.response:0 "Why, so you can destroy every last bit of culture we have? Screw you."
+  flunat.01401.b.response:0 "Hah! Don't make me laugh Kattail, why would we §Hever§! sell our lands, least of all to you."
+  flunat.01401.c.response:0 "The tundras shall run red with Katzen blood."
+  ###WAR EVENTS###
+  decision_flusion_strike_cheap:0 "Initiate Strike"
+  decision_flusion_strike_cheap_desc:0 "Initiates a strike on hostile forces, advancing the war in our favor."
+  decision_flusion_strike_mixed:0 "$decision_flusion_strike_cheap$"
+  decision_flusion_strike_mixed_desc:0 "$decision_flusion_strike_cheap_desc$"
+  decision_flusion_strike_attrition:0 "$decision_flusion_strike_cheap$"
+  decision_flusion_strike_attrition_desc:0 "$decision_flusion_strike_cheap_desc$"
+  situation_world_tension_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
+  situation_solakian_conquest:0 "War For Roqualia"
+  situation_solakian_conquest_type:0 "Flusionian Conquest"
+  situation_solakian_conquest_desc:0 "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HRoqualian Republic§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
+  situation_solakian_conquest_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
+  conquest_situation_conquer_solakia:0 "We annex Roqualia, and control their lands and people."
+  conquest_situation_get_rekt:0 "We lose a region and gain less space!"
+  approach_mobile:0 "Mobile Doctrine"
+  approach_mixed:0 "Mixed Doctrine"
+  approach_attrition:0 "Attrition Doctrine"
+  approach_mobile_desc:0 "We will stay light, moving quickly under shadow of night.\n§HWe will make less progress in the situation, but §YStrikes§H will be easier. §YStrikes§H may be performed from Flusion's §YDecisions§!."
+  approach_mixed_desc:0 "To commit ourselves to a path is to narrow our focus. Our strategy is victory.\n§HThis is a balanced approach. §YStrikes§H may be performed from Flusion's §YDecisions§!"
+  approach_attrition_desc:0 "We will fight in the trenches, we will fight at the mountains. Our industrial might will be the key to victory.\n§HWe will make more progress in the situation, but §YStrikes§H will be harder. §YStrikes§H may be performed from Flusion's §YDecisions§!"
+  flunat.0111.title:0 "Flusionian Conquest"
+  flunat.0111.desc:0 "Alert! We have reached a hostile bastion, ground forces are imminent! Expect heavy resistance, they won't go without a fight."
+  flunat_defense.a:0 "Incoming!"
+  conquest.4.title:0 "Surprise Strike"
+  conquest.4.desc:0 "Enemy forces have launched several surprise strikes at key chokepoints and locations, and have provided a serious setback in our efforts."
+  conquest.4.a:0 "Curses!"
+  conquest.1.title:0 "Conquest Setback"
+  conquest.1.desc:0 "Alert! Following the decisive defeat of our ground forces, enemy troops have blitzed and seized a significant amount of land!\n\n§RThe Situation has moved backwards by 25!"
+  backfoot:0 "Homeland"
+  region_1:0 "First Region"
+  region_2:0 "Second Region"
+  region_3:0 "Third Region"
+  region_4:0 "Fourth Region"
+  region_5:0 "Fifth Region"
+  flunat.0102.desc:0 "You may have crushed our armies, but you will never crush our spirits. We shall do everything in our power to oppose you."
+  flunat.0102.a:0 "We have won this."
+  conquest.102.desc:0 "Face it Kattail; you will never win. The free Roqualian spirit cannot be crushed by your farcical war machines."
+  conquest.102.a:0 "You will regret this!"
+  NAME_solakia_defense:0 "Roqualian Army"
   
   
- #Ezic 
- situation_ezic_conquest: "War for the Zuspri Intermarium" #NT!
- situation_ezic_conquest_type: "Flusionian Conquest" #NT!
- situation_ezic_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HZuspri Intermarium§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu." #NT!
- situation_ezic_conquest_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$" #NT!
- conquest_situation_conquer_ezic: "We annex the Zuspri, and control their lands and people." #NT!
- flunat.0702.desc: "You will pay for this in blood, Katzens." #NT!
- NAME_ezic_defense: "Zuspri Army" #NT!
- conquest.702.desc: "Our idyllic and resilient Zuspri spirit will forevermore stand defiant to your metal monstrosities." #NT!
+  #Cookians
+  #I cannot organize lmao
+  situation_cookian_conquest:0 "War for the Galletian Technocracy"
+  situation_cookian_conquest_type:0 "Flusionian Conquest"
+  situation_cookian_conquest_desc:0 "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HGalletian Technocracy§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
+  situation_cookian_conquest_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
+  conquest_situation_conquer_cookian_steppes:0 "We annex the Galletian Technocracy, and control their lands and people."
+  conquest_situation_conquer_cookie:0 "We annex the Galletian Technocracy, and control their lands and people."
+  flunat.0202.desc:0 "The flame of progress can never be extinguished. We shall rise again once more."
+  NAME_cookie_defense:0 "Galletian Army"
+  conquest.202.desc:0 "Intellect has once more triumphed over barbarism."
   
- #Mercuria 
- situation_mercurian_conquest: "War for Mercuria" #NT!
- situation_mercurian_conquest_type: "Flusionian Conquest" #NT!
- situation_mercurian_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on §HMercuria§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu." #NT!
- situation_mercurian_conquest_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$" #NT!
- conquest_situation_conquer_mercuria: "We annex the Mercurians, and control their lands and people." #NT!
- flunat.0802.desc: "All we wished for was to be left alone. Was that too much to ask for?" #NT!
- NAME_mercurian_defense: "Mercurian Army" #NT!
- conquest.802.desc: "Let that be a lesson in our definition of armed neutrality." #NT!
+  #Kronk
+  situation_kronk_conquest:0 "War for the Kronk"
+  situation_kronk_conquest_type:0 "Flusionian Conquest"
+  situation_kronk_conquest_desc:0 "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HKronk§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
+  situation_kronk_conquest_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
+  conquest_situation_conquer_kronk_steppes:0 "We annex the Kronk, and control their lands and people."
+  conquest_situation_conquer_kronk:0 "We annex the Kronk, and control their lands and people."
+  flunat.0302.desc:0 "Kronk..."
+  NAME_kronk_defense:0 "Kronk Army"
+  conquest.302.desc:0 "Kronk! KRONK!!!!"
   
- #Cyatianala 
- situation_cyatianala_conquest: "War for Cyatianala" #NT!
- situation_cyatianala_conquest_type: "Flusionian Conquest" #NT!
- situation_cyatianala_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on §HCyatianala§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu." #NT!
- situation_cyatianala_conquest_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$" #NT!
- conquest_situation_conquer_cyatianala: "We annex the Cyatianalas, and control their lands and people." #NT!
- flunat.0902.desc: "Your armies may have won, but the Cyats vow to fight against your regime, even unto death." #NT!
- NAME_cyatianala_defense: "Cyatianalian Army" #NT!
- conquest.902.desc: "Face it Kattail; you're no match for the might of the Cyat." #NT!
+  #Ravka
+  situation_ravka_conquest:0 "War for the Ravkans"
+  situation_ravka_conquest_type:0 "Flusionian Conquest"
+  situation_ravka_conquest_desc:0 "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HRavka§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
+  situation_ravka_conquest_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
+  conquest_situation_conquer_ravka:0 "We annex the Ravka, and control their lands and people."
+  flunat.0402.desc:0 "You will one day pay for your monstrous actions."
+  NAME_ravka_defense:0 "Ravkan Army"
+  conquest.402.desc:0 "Face it Kattail; you will never win. The Ravkanian spirit cannot be crushed by your farcical war machines."
   
- #Yinja 
- situation_yinja_conquest: "War for Yinja" #NT!
- situation_yinja_conquest_type: "Flusionian Conquest" #NT!
- situation_yinja_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HYinjites§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu." #NT!
- situation_yinja_conquest_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$" #NT!
- conquest_situation_conquer_yinja: "We annex the Yinjites, and control their lands and people." #NT!
- flunat.01102.desc: "And so you have won. But, this is not the end, Kattail. Our fight shall continue for decades to come, whether your nation wishes for it or not!" #NT!
- NAME_yinja_defense: "Yinjite Army" #NT!
- conquest.1102.desc: "A most exhilarating conflict. You felines have been swept away by our might!" #NT!
+  #Zousa
+  situation_zousa_conquest:0 "War for the Linterians"
+  situation_zousa_conquest_type:0 "Flusionian Conquest"
+  situation_zousa_conquest_desc:0 "Rev up the panzers, it's time for war! We have declared a war of annexation on §HLinteria§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
+  situation_zousa_conquest_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
+  conquest_situation_conquer_zousa:0 "We annex Linteria, and control their lands and people."
+  flunat.0502.desc:0 "...this...this cannot be..."
+  NAME_zousa_defense:0 "Linterian Army"
+  conquest.502.desc:0 "Let this be a rightful lesson to you, foolish felines."
   
- #Symbieland 
- situation_symbie_conquest: "War for Puffiland" #NT!
- situation_symbie_conquest_type: "Flusionian Conquest" #NT!
- situation_symbie_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HWacegi§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu." #NT!
- situation_symbie_conquest_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$" #NT!
- conquest_situation_conquer_symbie: "We annex the Wacegi, and control their lands and people." #NT!
- flunat.01202.desc: "And so we fall once more. This is the end, is it not?" #NT!
- NAME_symbie_defense: "Wacegi Army" #NT!
- conquest.1202.desc: "Let this be a lesson to you. One day, we shall turn Katown to rubble." #NT!
-  
- #Laurandar 
- situation_lauranaise_conquest: "War for Laurandar" #NT!
- situation_lauranaise_conquest_type: "Flusionian Conquest" #NT!
- situation_lauranaise_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on §HLaurandar§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu." #NT!
- situation_lauranaise_conquest_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$" #NT!
- conquest_situation_conquer_lauranaise: "We annex the Lauranaise, and control their lands and people." #NT!
- flunat.01302.desc: "Ha! You think you've won? The war has only just started..." #NT!
- NAME_lauranaise_defense: "Laurnaise Army" #NT!
- conquest.1302.desc: "And stay out of our shores!" #NT!
-  
- #Harania 
- situation_haranian_conquest: "War for Harania" #NT!
- situation_haranian_conquest_type: "Flusionian Conquest" #NT!
- situation_haranian_conquest_desc: "Rev up the panzers, it's time for war! We have declared a war of annexation on §HHarania§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu." #NT!
- situation_haranian_conquest_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$" #NT!
- conquest_situation_conquer_harania: "We annex the Haranians, and control their lands and people." #NT!
- flunat.01402.desc: "No... you will... pay for this..." #NT!
- NAME_haranian_defense: "Haranian Army" #NT!
- conquest.1402.desc: "We have endured for ten thousand years and we shall endure ten thousand more." #NT!
-  
- ### FLUSION COALITION ### 
- flunat_defense_army: "Flusionian Army" #NT!
- flunat_defense_army_desc: "Armies comprised of their home nation's species, they defend or attack in the name of their country." #NT!
-  
- flunat.0991.title: "The Flusionian Coalition" #NT!
- flunat.0991.desc: "For several years, world tension across Flusion has been spiking. Reaching an all time high, the surviving nations of Flusion have federated and declared war on us!\n\n§HIf we lose this battle, §Rwe lose the game!§!" #NT!
- flunat.0991.a: "All units, high alert!" #NT!
- tension_1: "Stage 1" #NT!
- tension_2: "Stage 2" #NT!
- tension_3: "Stage 3" #NT!
+  #Droog
+  situation_droog_conquest:0 "War for the Droog"
+  situation_droog_conquest_type:0 "Flusionian Conquest"
+  situation_droog_conquest_desc:0 "Rev up the panzers, it's time for war! We have declared a war of annexation on §HDroog§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
+  situation_droog_conquest_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
+  conquest_situation_conquer_droog:0 "We annex the Droog, and control their lands and people."
+  flunat.0602.desc:0 "The Droogians have been subjugated."
+  NAME_droog_defense:0 "Droog Army"
+  conquest.602.desc:0 "Somehow, we lost to decentralized tribes. This blunder will be remembered for decades to come..."
   
   
- conquest.090909.title: "The Unification of Flusion" #NT!
- conquest.090909.desc: "Success! After years of violent wars, conquests, and death, Flusion is now unified under one banner.\n\nOur banner!" #NT!
- conquest.090909.a: "Hear, hear!" #NT!
+  #Ezic
+  situation_ezic_conquest:0 "War for the Zuspri Intermarium"
+  situation_ezic_conquest_type:0 "Flusionian Conquest"
+  situation_ezic_conquest_desc:0 "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HZuspri Intermarium§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
+  situation_ezic_conquest_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
+  conquest_situation_conquer_ezic:0 "We annex the Zuspri, and control their lands and people."
+  flunat.0702.desc:0 "You will pay for this in blood, Katzens."
+  NAME_ezic_defense:0 "Zuspri Army"
+  conquest.702.desc:0 "Our idyllic and resilient Zuspri spirit will forevermore stand defiant to your metal monstrosities."
   
- pki_no_ftl_capability: "No FTL Discovered" #NT!
- central_stability: "Central Stability" #NT!
+  #Mercuria
+  situation_mercurian_conquest:0 "War for Mercuria"
+  situation_mercurian_conquest_type:0 "Flusionian Conquest"
+  situation_mercurian_conquest_desc:0 "Rev up the panzers, it's time for war! We have declared a war of annexation on §HMercuria§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
+  situation_mercurian_conquest_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
+  conquest_situation_conquer_mercuria:0 "We annex the Mercurians, and control their lands and people."
+  flunat.0802.desc:0 "All we wished for was to be left alone. Was that too much to ask for?"
+  NAME_mercurian_defense:0 "Mercurian Army"
+  conquest.802.desc:0 "Let that be a lesson in our definition of armed neutrality."
   
- situation_ftl_development: "Development of FTL" #NT!
- situation_ftl_development_type: "Development of FTL" #NT!
- situation_ftl_development_desc: "After the unification of our homeworld, we have turned our attention towards learning how to reach the stars." #NT!
- situation_ftl_development_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$" #NT!
- ftl_situation_success: "We invent FTL, and can establish an interstellar empire." #NT!
- approach_minor_research: "Minor Investment" #NT!
- approach_major_research: "Major Investment" #NT!
- approach_heavy_research: "Heavy Investment" #NT!
+  #Cyatianala
+  situation_cyatianala_conquest:0 "War for Cyatianala"
+  situation_cyatianala_conquest_type:0 "Flusionian Conquest"
+  situation_cyatianala_conquest_desc:0 "Rev up the panzers, it's time for war! We have declared a war of annexation on §HCyatianala§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
+  situation_cyatianala_conquest_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
+  conquest_situation_conquer_cyatianala:0 "We annex the Cyatianalas, and control their lands and people."
+  flunat.0902.desc:0 "Your armies may have won, but the Cyats vow to fight against your regime, even unto death."
+  NAME_cyatianala_defense:0 "Cyatianalian Army"
+  conquest.902.desc:0 "Face it Kattail; you're no match for the might of the Cyat."
   
- agenda_project_mondkanone: "Project Mondkanone" #NT!
- agenda_project_mondkanone_desc: "Initiate Project Mondkanone, in order to ensure Flusionian security against extraterrestrial threats." #NT!
- council_agenda_agenda_project_mondkanone_name: "Project Mondkanone" #NT!
- council_agenda_agenda_project_mondkanone_desc: "Initiate Project Mondkanone, in order to ensure Flusionian security against extraterrestrial threats." #NT!
- agenda_project_mondkanone_finish: "$council_agenda_agenda_project_mondkanone_name$ $agenda_ref$" #NT!
- agenda_project_mondkanone_finish_desc: "$council_agenda_agenda_project_mondkanone_desc$" #NT!
+  #Yinja
+  situation_yinja_conquest:0 "War for Yinja"
+  situation_yinja_conquest_type:0 "Flusionian Conquest"
+  situation_yinja_conquest_desc:0 "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HYinjites§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
+  situation_yinja_conquest_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
+  conquest_situation_conquer_yinja:0 "We annex the Yinjites, and control their lands and people."
+  flunat.01102.desc:0 "And so you have won. But, this is not the end, Kattail. Our fight shall continue for decades to come, whether your nation wishes for it or not!"
+  NAME_yinja_defense:0 "Yinjite Army"
+  conquest.1102.desc:0 "A most exhilarating conflict. You felines have been swept away by our might!"
   
- agenda_project_dominance: "Project Dominance" #NT!
- agenda_project_dominance_desc: "Initiate Project Dominance to mobilize the guardian of Flusion, our Lunar Defence System." #NT!
- council_agenda_agenda_project_dominance_name: "Project Dominance" #NT!
- council_agenda_agenda_project_dominance_desc: "Initiate Project Dominance to mobilize the guardian of Flusion, our Lunar Defence System." #NT!
- agenda_project_dominance_finish: "$council_agenda_agenda_project_dominance_name$ $agenda_ref$" #NT!
- agenda_project_dominance_finish_desc: "$council_agenda_agenda_project_dominance_desc$" #NT!
+  #Symbieland
+  situation_symbie_conquest:0 "War for Puffiland"
+  situation_symbie_conquest_type:0 "Flusionian Conquest"
+  situation_symbie_conquest_desc:0 "Rev up the panzers, it's time for war! We have declared a war of annexation on the §HWacegi§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
+  situation_symbie_conquest_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
+  conquest_situation_conquer_symbie:0 "We annex the Wacegi, and control their lands and people."
+  flunat.01202.desc:0 "And so we fall once more. This is the end, is it not?"
+  NAME_symbie_defense:0 "Wacegi Army"
+  conquest.1202.desc:0 "Let this be a lesson to you. One day, we shall turn Katown to rubble."
   
- agenda_project_celestia: "Project Höchstedominanz" #NT!
- agenda_project_celestia_desc: "Initiate Project Höchstedominanz to devise an even stronger weapon, using Doughland as a base." #NT!
- council_agenda_agenda_project_celestia_name: "Project Höchstedominanz" #NT!
- council_agenda_agenda_project_celestia_desc: "Initiate Project Höchstedominanz to devise an even stronger weapon, using Doughland as a base." #NT!
- agenda_project_celestia_finish: "$council_agenda_agenda_project_celestia_name$ $agenda_ref$" #NT!
- agenda_project_celestia_finish_desc: "$council_agenda_agenda_project_celestia_desc$" #NT!
+  #Laurandar
+  situation_lauranaise_conquest:0 "War for Laurandar"
+  situation_lauranaise_conquest_type:0 "Flusionian Conquest"
+  situation_lauranaise_conquest_desc:0 "Rev up the panzers, it's time for war! We have declared a war of annexation on §HLaurandar§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
+  situation_lauranaise_conquest_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
+  conquest_situation_conquer_lauranaise:0 "We annex the Lauranaise, and control their lands and people."
+  flunat.01302.desc:0 "Ha! You think you've won? The war has only just started..."
+  NAME_lauranaise_defense:0 "Laurnaise Army"
+  conquest.1302.desc:0 "And stay out of our shores!"
   
- unify_flusion_first_bozo: "$TRIGGER_FAIL$We need to unify Flusion first!" #NT!
+  #Harania
+  situation_haranian_conquest:0 "War for Harania"
+  situation_haranian_conquest_type:0 "Flusionian Conquest"
+  situation_haranian_conquest_desc:0 "Rev up the panzers, it's time for war! We have declared a war of annexation on §HHarania§!, and have a few ways to go about winning the conflict. We may perform §YStrikes§! to advance the situation in our favor, or we may win the war through attrition.\n\n§YStrikes§! may be performed from §HFlusion's§! decisions menu."
+  situation_haranian_conquest_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
+  conquest_situation_conquer_harania:0 "We annex the Haranians, and control their lands and people."
+  flunat.01402.desc:0 "No... you will... pay for this..."
+  NAME_haranian_defense:0 "Haranian Army"
+  conquest.1402.desc:0 "We have endured for ten thousand years and we shall endure ten thousand more."
+  
+  ### FLUSION COALITION ###
+  flunat_defense_army:0 "Flusionian Army"
+  flunat_defense_army_desc:0 "Armies comprised of their home nation's species, they defend or attack in the name of their country."
+  
+  flunat.0991.title:0 "The Flusionian Coalition"
+  flunat.0991.desc:0 "For several years, world tension across Flusion has been spiking. Reaching an all time high, the surviving nations of Flusion have federated and declared war on us!\n\n§HIf we lose this battle, §Rwe lose the game!§!"
+  flunat.0991.a:0 "All units, high alert!"
+  tension_1:0 "Stage 1"
+  tension_2:0 "Stage 2"
+  tension_3:0 "Stage 3"
+  tension_4:99 "Stage 4"
+  tension_5:99 "Stage 5"
+  tension_6:99 "Stage 6"
+  tension_7:99 "Stage 7"
+  tension_8:99 "Stage 8"
+  tension_9:99 "Stage 9"
+  tension_10:99 "Stage 10"
+  
+  
+  
+  conquest.090909.title:0 "The Unification of Flusion"
+  conquest.090909.desc:0 "Success! After years of violent wars, conquests, and death, Flusion is now unified under one banner.\n\nOur banner!"
+  conquest.090909.a:0 "Hear, hear!"
+  
+  pki_no_ftl_capability:0 "No FTL Discovered"
+  central_stability:0 "Central Stability"
+  
+  situation_ftl_development:0 "Development of FTL"
+  situation_ftl_development_type:0 "Development of FTL"
+  situation_ftl_development_desc:0 "After the unification of our homeworld, we have turned our attention towards learning how to reach the stars."
+  situation_ftl_development_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
+  ftl_situation_success:0 "We invent FTL, and can establish an interstellar empire."
+  approach_minor_research:0 "Minor Investment"
+  approach_major_research:0 "Major Investment"
+  approach_heavy_research:0 "Heavy Investment"
+  
+  agenda_project_mondkanone:0 "Project Mondkanone"
+  agenda_project_mondkanone_desc:0 "Initiate Project Mondkanone, in order to ensure Flusionian security against extraterrestrial threats."
+  council_agenda_agenda_project_mondkanone_name:0 "Project Mondkanone"
+  council_agenda_agenda_project_mondkanone_desc:0 "Initiate Project Mondkanone, in order to ensure Flusionian security against extraterrestrial threats."
+  agenda_project_mondkanone_finish:0 "$council_agenda_agenda_project_mondkanone_name$ $agenda_ref$"
+  agenda_project_mondkanone_finish_desc:0 "$council_agenda_agenda_project_mondkanone_desc$"
+  
+  agenda_project_dominance:0 "Project Dominance"
+  agenda_project_dominance_desc:0 "Initiate Project Dominance to mobilize the guardian of Flusion, our Lunar Defence System."
+  council_agenda_agenda_project_dominance_name:0 "Project Dominance"
+  council_agenda_agenda_project_dominance_desc:0 "Initiate Project Dominance to mobilize the guardian of Flusion, our Lunar Defence System."
+  agenda_project_dominance_finish:0 "$council_agenda_agenda_project_dominance_name$ $agenda_ref$"
+  agenda_project_dominance_finish_desc:0 "$council_agenda_agenda_project_dominance_desc$"
+  
+  agenda_project_celestia:0 "Project Höchstedominanz"
+  agenda_project_celestia_desc:0 "Initiate Project Höchstedominanz to devise an even stronger weapon, using Doughland as a base."
+  council_agenda_agenda_project_celestia_name:0 "Project Höchstedominanz"
+  council_agenda_agenda_project_celestia_desc:0 "Initiate Project Höchstedominanz to devise an even stronger weapon, using Doughland as a base."
+  agenda_project_celestia_finish:0 "$council_agenda_agenda_project_celestia_name$ $agenda_ref$"
+  agenda_project_celestia_finish_desc:0 "$council_agenda_agenda_project_celestia_desc$"
+  
+  unify_flusion_first_bozo:0 "$TRIGGER_FAIL$We need to unify Flusion first!"
+  
