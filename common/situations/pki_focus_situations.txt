@@ -63,6 +63,13 @@ situation_naitonal_focus = {
             current_situation_approach = approach_focus_fast
             mult = 1.5
         }
+        modifier = {
+            desc = BLANK_STRING
+            owner = {
+                has_country_flag = pki_instant_focus
+            }
+            mult = 9001
+        }
     }
 
     approach = {

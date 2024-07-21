@@ -24,3 +24,24 @@ pki_focus_in_progress_effects = {
         }
     }
 }
+
+pki_instant_focus = {
+    if = {
+        limit = {
+            has_country_flag = pki_instant_focus
+        }
+        remove_country_flag = pki_instant_focus
+    }
+    else = {
+        set_country_flag = pki_instant_focus
+    }
+}
+
+pki_complete_focus = {
+    every_situation = {
+        limit = {
+            is_situation_type = situation_naitonal_focus
+        }
+        add_situation_progress = 12
+    }
+}
