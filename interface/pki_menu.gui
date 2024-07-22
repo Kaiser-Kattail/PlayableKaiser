@@ -515,7 +515,7 @@ guiTypes = {
 							name = focus_label
 							position = { x = +0 y = +70 }
 							size = { x = 170 y = 50 }
-							quadTextureSprite = "GFX_focus_completed"
+							quadTextureSprite = "GFX_pki_focus_label_completed"
 							effect = pki_focus_kaiser_arrival_completed_effect
 						}
 					}

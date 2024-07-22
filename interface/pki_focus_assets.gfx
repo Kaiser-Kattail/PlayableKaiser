@@ -87,9 +87,11 @@ spriteTypes = {
         alwaysTransparent = yes
     }
 
-    spriteType = {
+    corneredTileSpriteType = {
         name = "GFX_pki_focus_label_in_progress"
         texturefile = "gfx/interface/tiles/glow_tile_orange_striped.dds"
+        borderSize = { x=12 y=12 }
+        effectFile = "gfx/FX/buttonstate_onlydisable.shader"
         animation = {
             animationmaskfile = "gfx/interface/pki_ui/focus_tree/focus_ongoing_mask2.dds"
             animationtexturefile = "gfx/interface/pki_ui/focus_tree/focus_ongoing_texture.dds" 	# <- the animated file
@@ -120,10 +122,11 @@ spriteTypes = {
         legacy_lazy_load = no
     }
 
-    SpriteType = {
+    corneredTileSpriteType = {
         name = "GFX_pki_focus_label_completed"
         texturefile = "gfx/interface/tiles/glow_tile_orange.dds"
-
+        borderSize = { x=12 y=12 }
+        effectFile = "gfx/FX/buttonstate_onlydisable.shader"
         animation = {
             animationmaskfile = "gfx/interface/pki_ui/focus_tree/focus_completed_mask.dds"
             animationtexturefile = "gfx/interface/pki_ui/focus_tree/focus_completed_texture.dds" 	# <- the animated file
@@ -176,15 +179,15 @@ spriteTypes = {
 
     spriteType = {
         name = "GFX_pki_focus_kaiser_arrival"
-        textureFile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_herzlands_industry.dds"
+        textureFile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_kaiser_arrival.dds"
         transParencecheck = yes
         animation = {
-            animationmaskfile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_herzlands_industry.dds"
+            animationmaskfile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_kaiser_arrival.dds"
             animationtexturefile = "gfx/interface/pki_ui/focus_tree/shine_overlay.dds" 	# <- the animated file
             animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
-            animationlooping = no			# yes or no ;)
+            animationlooping = yes			# yes or no ;)
             animationtime = 0.75				# in seconds
-            animationdelay = 0			# in seconds
+            animationdelay = 3			# in seconds
             animationblendmode = "add"       #add, multiply, overlay
             animationtype = "scrolling"      #scrolling, rotating, pulsing
             animationrotationoffset = { x = 0.0 y = 0.0 }
@@ -192,12 +195,12 @@ spriteTypes = {
         }
 
         animation = {
-            animationmaskfile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_herzlands_industry.dds"
+            animationmaskfile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_kaiser_arrival.dds"
             animationtexturefile = "gfx/interface/pki_ui/focus_tree/shine_overlay.dds" 	# <- the animated file
             animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
-            animationlooping = no			# yes or no ;)
+            animationlooping = yes			# yes or no ;)
             animationtime = 0.75				# in seconds
-            animationdelay = 0			# in seconds
+            animationdelay = 3			# in seconds
             animationblendmode = "add"       #add, multiply, overlay
             animationtype = "scrolling"      #scrolling, rotating, pulsing
             animationrotationoffset = { x = 0.0 y = 0.0 }
@@ -214,9 +217,9 @@ spriteTypes = {
             animationmaskfile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_herzlands_industry.dds"
             animationtexturefile = "gfx/interface/pki_ui/focus_tree/shine_overlay.dds" 	# <- the animated file
             animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
-            animationlooping = no			# yes or no ;)
+            animationlooping = yes			# yes or no ;)
             animationtime = 0.75				# in seconds
-            animationdelay = 0			# in seconds
+            animationdelay = 3  			# in seconds
             animationblendmode = "add"       #add, multiply, overlay
             animationtype = "scrolling"      #scrolling, rotating, pulsing
             animationrotationoffset = { x = 0.0 y = 0.0 }
@@ -227,9 +230,9 @@ spriteTypes = {
             animationmaskfile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_herzlands_industry.dds"
             animationtexturefile = "gfx/interface/pki_ui/focus_tree/shine_overlay.dds" 	# <- the animated file
             animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
-            animationlooping = no			# yes or no ;)
+            animationlooping = yes			# yes or no ;)
             animationtime = 0.75				# in seconds
-            animationdelay = 0			# in seconds
+            animationdelay = 3			# in seconds
             animationblendmode = "add"       #add, multiply, overlay
             animationtype = "scrolling"      #scrolling, rotating, pulsing
             animationrotationoffset = { x = 0.0 y = 0.0 }
