@@ -33,10 +33,10 @@ pki_num_warforges = {
 
 pki_num_total_warforges = {
     complex_trigger_modifier = {
-        trigger = count_galaxy_planet
+        trigger = count_system_megastructure
         trigger_scope = solar_system
         parameters = {
-            limit = { has_planet_flag = war_forge }
+            limit = { is_megastructure_type = katzen_war_forge_1 }
         }
         mode = add
     }

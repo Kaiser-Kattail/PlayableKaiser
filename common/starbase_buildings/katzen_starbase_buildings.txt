@@ -17,27 +17,10 @@ katzen_warforge_shipyard = {
 				value > 0
 			}
 		}
-		owner = {
-			count_starbase_buildings = {
-				type = katzen_warforge_shipyard
-				count < 1
-				include_being_constructed = yes
-			}
-		}
-	}
-
-	abort_construction_trigger = {
-		owner = {
-			count_starbase_buildings = {
-				type = katzen_warforge_shipyard
-				count > 1
-				include_being_constructed = yes
-			}
-		}
 	}
 
 	triggered_station_modifier = {
-		starbase_shipyard_capacity_add = 0.5
+		starbase_shipyard_capacity_add = 8
 		mult = value:pki_num_total_warforges
 	}
 
