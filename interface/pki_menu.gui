@@ -476,6 +476,8 @@ guiTypes = {
 
 				### ADD FOCUSES HERE
 
+				# STATE TAB
+
 				containerWindowType = {
 					name = focus_kaiser_arrival
 					position = { x = @tile_x_300 y = @tile_y_1 }
@@ -609,6 +611,222 @@ guiTypes = {
 						effect = pki_focus_herzlands_industry_icon
 					}
 				}
+
+				# Innovation
+
+				# Military
+
+				containerWindowType = {
+					name = focus_military_1
+					position = { x = @tile_x_200 y = @tile_y_1 }
+
+					containerWindowType = {
+						name = focus
+						orientation = CENTER
+
+						effectButtonType = {
+							name = focus_label
+							position = { x = +0 y = +70 }
+							size = { x = 170 y = 50 }
+							orientation = CENTER
+							quadTextureSprite = "GFX_glow_tile_cyan"
+							effect = pki_focus_military_1_effect
+						}
+					}
+
+					containerWindowType = {
+						name = focus_in_progress
+						orientation = CENTER
+
+						effectButtonType = {
+							name = focus_label
+							position = { x = +0 y = +70 }
+							size = { x = 170 y = 50 }
+							quadTextureSprite = "GFX_pki_focus_label_in_progress"
+							effect = pki_focus_military_1_in_progress_effect
+						}
+					}
+
+					containerWindowType = {
+						name = focus_completed
+						orientation = CENTER
+
+						effectButtonType = {
+							name = focus_label
+							position = { x = +0 y = +70 }
+							size = { x = 170 y = 50 }
+							quadTextureSprite = "GFX_pki_focus_label_completed"
+							effect = pki_focus_military_1_completed_effect
+						}
+					}
+
+					effectButtonType = {
+						name = focus_icon
+						position = { x = +0 y = 0 }
+						orientation = CENTER
+						alwaysTransparent = no
+						quadTextureSprite = "GFX_pki_focus_placeholder"
+						effect = pki_focus_military_1_icon
+					}
+
+					effectButtonType = {
+						name = focus_label
+						position = { x = +0 y = +70 }
+						size = { x = 170 y = 50 }
+						orientation = CENTER
+						font = cg_16b
+						multiline = yes
+						alwaysTransparent = yes
+						text = "pki_focus_military_1_label"
+						quadTextureSprite = "GFX_invisible"
+						effect = pki_focus_military_1_icon
+					}
+				}
+
+				# Focus lines
+				containerWindowType = {
+					name = military_1_lines
+
+					effectButtonType = {
+						name = military_1_h1_blue
+						position = { x = @tile_x_100 y = @tile_y_1 }
+
+						quadTextureSprite = "GFX_pki_focus_line_h_s_b"
+
+						effect = pki_focus_military_1_line
+					}
+
+					effectButtonType = {
+						name = military_h2_blue
+						position = { x = @tile_x_150 y = @tile_y_1 }
+
+						quadTextureSprite = "GFX_pki_focus_line_h_s_b"
+
+						effect = pki_focus_military_1_line
+					}
+
+					effectButtonType = {
+						name = military_d1_blue
+						position = { x = @tile_x_200 y = @tile_y_1 }
+
+						quadTextureSprite = "GFX_pki_focus_line_d_s_b"
+
+						effect = pki_focus_military_1_line
+					}
+
+					effectButtonType = {
+						name = military_u1_blue
+						position = { x = @tile_x_100 y = @tile_y_2 }
+
+						quadTextureSprite = "GFX_pki_focus_line_u_s_b"
+
+						effect = pki_focus_military_1_line
+					}
+
+					effectButtonType = {
+						name = military_h1_g
+						position = { x = @tile_x_100 y = @tile_y_1 }
+
+						quadTextureSprite = "GFX_pki_focus_line_h_s_g"
+
+						effect = pki_focus_military_1_line_completed
+					}
+
+					effectButtonType = {
+						name = military_h2_g
+						position = { x = @tile_x_150 y = @tile_y_1 }
+
+						quadTextureSprite = "GFX_pki_focus_line_h_s_g"
+
+						effect = pki_focus_military_1_line_completed
+					}
+
+					effectButtonType = {
+						name = military_d1_g
+						position = { x = @tile_x_200 y = @tile_y_1 }
+
+						quadTextureSprite = "GFX_pki_focus_line_d_s_g"
+
+						effect = pki_focus_military_1_line_completed
+					}
+
+					effectButtonType = {
+						name = military_u1_g
+						position = { x = @tile_x_100 y = @tile_y_2 }
+
+						quadTextureSprite = "GFX_pki_focus_line_u_s_g"
+
+						effect = pki_focus_military_1_line_completed
+					}
+				}
+
+				containerWindowType = {
+					name = focus_panzer_corp_1
+					position = { x = @tile_x_100 y = @tile_y_2 }
+
+					containerWindowType = {
+						name = focus
+						orientation = CENTER
+
+						effectButtonType = {
+							name = focus_label
+							position = { x = +0 y = +70 }
+							size = { x = 170 y = 50 }
+							orientation = CENTER
+							quadTextureSprite = "GFX_glow_tile_cyan"
+							effect = pki_focus_panzer_corp_1_effect
+						}
+					}
+
+					containerWindowType = {
+						name = focus_in_progress
+						orientation = CENTER
+
+						effectButtonType = {
+							name = focus_label
+							position = { x = +0 y = +70 }
+							size = { x = 170 y = 50 }
+							quadTextureSprite = "GFX_pki_focus_label_in_progress"
+							effect = pki_focus_panzer_corp_1_in_progress_effect
+						}
+					}
+
+					containerWindowType = {
+						name = focus_completed
+						orientation = CENTER
+
+						effectButtonType = {
+							name = focus_label
+							position = { x = +0 y = +70 }
+							size = { x = 170 y = 50 }
+							quadTextureSprite = "GFX_pki_focus_label_completed"
+							effect = pki_focus_panzer_corp_1_completed_effect
+						}
+					}
+
+					effectButtonType = {
+						name = focus_icon
+						position = { x = +0 y = 0 }
+						orientation = CENTER
+						alwaysTransparent = no
+						quadTextureSprite = "GFX_pki_focus_placeholder"
+						effect = pki_focus_panzer_corp_1_icon
+					}
+
+					effectButtonType = {
+						name = focus_label
+						position = { x = +0 y = +70 }
+						size = { x = 170 y = 50 }
+						orientation = CENTER
+						font = cg_16b
+						multiline = yes
+						alwaysTransparent = yes
+						text = "pki_focus_panzer_corp_1_label"
+						quadTextureSprite = "GFX_invisible"
+						effect = pki_focus_panzer_corp_1_icon
+					}
+				}
+				# Galactic stuff
 
 				#effectButtonType = {
 				#	name = guh
