@@ -46,23 +46,7 @@ katzen_war_forge_1 = {
 			OWNER = event_target:katzenartig
 		}
 	}
-	dismantle_potential = { always = yes }
-	dismantle_time = 240
-	on_dismantle_complete = {
-		every_fleet_in_system = {
-			limit = {
-				has_fleet_flag = warforge_platform
-				has_fleet_flag = warforge_platform@fromfrom
-			}
-			delete_fleet = this
-		}
-	}
-	dismantle_cost = {
-		category = megastructures
-		cost = {
-			alloys = 250
-		}
-	}
+	dismantle_potential = { always = no }
 	outliner_trigger = {
 		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
 	}
