@@ -96,6 +96,29 @@ country_event = { #galactic
 	location = from
 	is_triggered_only = yes
 
+	immediate = {
+		event_target:katzenartig = {
+			set_country_flag = player_galactic_katzen_empire_formed
+			change_country_flag = {
+				icon = {
+					category="domination"
+					file="domination_8.dds"
+				}
+				background = {
+					category="backgrounds"
+					file="v.dds"
+				}
+				colors = {
+					"dark_blue"
+					"shadow_blue"
+					"null"
+					"null"
+				}
+			}
+			set_name = "NAME_BIGGEST_KATZEN_EMPIRE"
+		}
+	}
+
 	option = { #aw
 		name = "pki_misc.55.a"
 		trigger = {
@@ -108,6 +131,12 @@ country_event = { #galactic
 		name = "pki_misc.55.b"
 		trigger = {
 			pki_is_katzenartig_imperium = yes
+		}
+		hidden_effect = {
+			event_target:pki_win_prevention_country = {
+				set_country_type = no_contact_neutral_faction
+				destroy_country = yes
+			}
 		}
 		win = yes
 	}

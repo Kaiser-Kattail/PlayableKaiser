@@ -42,6 +42,19 @@ country_event = {
 
     immediate = {
         pki_update_galactic_tension = yes
+        every_country = {
+            limit = {
+                OR = {
+                    is_country_type = default
+                    is_country_type = fallen_empire
+                }
+                NOR = {
+                    has_country_flag = pki_win_prevention_country
+                    pki_is_katzenartig_imperium = yes
+                }
+            }
+            destroy_country = yes
+        }
     }
 }
 

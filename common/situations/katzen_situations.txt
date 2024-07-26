@@ -541,10 +541,22 @@ situation_pki_galactic_tension = {
 
 	abort_trigger = {
 		NOT = {
+			#Gigas crises
+			has_global_flag = blokkat_crisis_ongoing
+			has_global_flag = aeternum_awakening_ongoing
+			has_global_flag = compound_invasion_ongoing
+			#Vanilla crises
+			has_global_flag = ongoing_prethoryn_invasion
+			# why no ongoing flag paradox, literally just forgot extradimensionals
+			has_global_flag = ai_invasion_ongoing
+			has_global_flag = synth_queen_ongoing
 			count_country = {
 				count > 0
 				limit = {
-					is_country_type = default
+					OR = {
+						is_country_type = default
+						is_country_type = fallen_empire
+					}
 					pki_is_katzenartig_imperium = no
 					NOT = {
 						has_country_flag = pki_win_prevention_country
@@ -557,29 +569,6 @@ situation_pki_galactic_tension = {
 	on_abort = {
 		owner = {
 			every_country = { country_event = { id = pki_misc.55 days = 1 } }
-			hidden_effect = {
-				event_target:pki_win_prevention_country = {
-					destroy_country = yes
-				}
-				set_country_flag = player_galactic_katzen_empire_formed
-				change_country_flag = {
-					icon = {
-						category="domination"
-						file="domination_8.dds"
-					}
-					background = {
-						category="backgrounds"
-						file="v.dds"
-					}
-					colors = {
-						"dark_blue"
-						"shadow_blue"
-						"null"
-						"null"
-					}
-				}
-				set_name = "NAME_BIGGEST_KATZEN_EMPIRE"
-			}
 		}
 	}
 
