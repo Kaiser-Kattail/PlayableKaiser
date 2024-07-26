@@ -87,17 +87,157 @@ spriteTypes = {
         alwaysTransparent = yes
     }
 
+    corneredTileSpriteType = {
+        name = "GFX_pki_focus_label_in_progress"
+        texturefile = "gfx/interface/tiles/glow_tile_orange_striped.dds"
+        borderSize = { x=12 y=12 }
+        effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/pki_ui/focus_tree/focus_ongoing_mask2.dds"
+            animationtexturefile = "gfx/interface/pki_ui/focus_tree/focus_ongoing_texture.dds" 	# <- the animated file
+            animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 20.0				# in seconds
+            animationdelay = 0.2			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+            #			animationframes = {1 2 3 }
+        }
+        animation = {
+            animationmaskfile = "gfx/interface/pki_ui/focus_tree/focus_ongoing_mask4.dds"
+            animationtexturefile = "gfx/interface/pki_ui/focus_tree/focus_ongoing_texture.dds"
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 15.0				# in seconds
+            animationdelay = 0.2			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating_ccw"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+            #			animationframes = {1 2 3 }
+        }
+
+        legacy_lazy_load = no
+    }
+
+    corneredTileSpriteType = {
+        name = "GFX_pki_focus_label_completed"
+        texturefile = "gfx/interface/tiles/glow_tile_orange.dds"
+        borderSize = { x=12 y=12 }
+        effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/pki_ui/focus_tree/focus_completed_mask.dds"
+            animationtexturefile = "gfx/interface/pki_ui/focus_tree/focus_completed_texture.dds" 	# <- the animated file
+            animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 26.0				# in seconds
+            animationdelay = 0.0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "scrolling"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+            #			animationframes = {1 2 3 }
+        }
+
+        legacy_lazy_load = no
+    }
+
+    SpriteType = {
+        name = "GFX__shine"
+        texturefile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_placeholder.dds"
+        animation = {
+            animationmaskfile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_placeholder.dds"
+            animationtexturefile = "gfx/interface/pki_ui/focus_tree/shine_overlay.dds" 	# <- the animated file
+            animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes  		# yes or no ;)
+            animationtime = 0.75				# in seconds
+            animationdelay = 3			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "scrolling"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+
+        animation = {
+            animationmaskfile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_placeholder.dds"
+            animationtexturefile = "gfx/interface/pki_ui/focus_tree/shine_overlay.dds" 	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 0.75				# in seconds
+            animationdelay = 3			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "scrolling"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+
     ## FOCUSES GO HERE
 
     spriteType = {
         name = "GFX_pki_focus_kaiser_arrival"
         textureFile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_kaiser_arrival.dds"
         transParencecheck = yes
+        animation = {
+            animationmaskfile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_kaiser_arrival.dds"
+            animationtexturefile = "gfx/interface/pki_ui/focus_tree/shine_overlay.dds" 	# <- the animated file
+            animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 0.75				# in seconds
+            animationdelay = 3			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "scrolling"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+
+        animation = {
+            animationmaskfile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_kaiser_arrival.dds"
+            animationtexturefile = "gfx/interface/pki_ui/focus_tree/shine_overlay.dds" 	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 0.75				# in seconds
+            animationdelay = 3			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "scrolling"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
     }
 
     spriteType = {
         name = "GFX_pki_focus_herzlands_industry"
         textureFile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_herzlands_industry.dds"
         transParencecheck = yes
+        animation = {
+            animationmaskfile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_herzlands_industry.dds"
+            animationtexturefile = "gfx/interface/pki_ui/focus_tree/shine_overlay.dds" 	# <- the animated file
+            animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 0.75				# in seconds
+            animationdelay = 3  			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "scrolling"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+
+        animation = {
+            animationmaskfile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_herzlands_industry.dds"
+            animationtexturefile = "gfx/interface/pki_ui/focus_tree/shine_overlay.dds" 	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 0.75				# in seconds
+            animationdelay = 3			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "scrolling"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
     }
 }
