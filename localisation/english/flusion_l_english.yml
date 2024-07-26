@@ -513,7 +513,7 @@
     katzen_war_forge_1:0 "Katzen War Forge"
     katzen_war_forge_1_DESC:0 "A large orbital construct built near an inhabited Katzen colony, harvesting the local system for resources in order to assemble Katzen warships."
 
-    pki_war_forge_mega_effect: "Naval Capacity: §G+1%§!\nShip Build Speed: §G+2.5%§!\n\n On Starbases with §YKatzen Shipyard Array§!:$TABBED_NEW_LINE$Shipyard Capacity: §G+0.5§!"
+    pki_war_forge_mega_effect: "Naval Capacity: §G+5§!\nShip Build Speed: §G+1%§!\n\n On Starbases with §YKatzen Shipyard Array§!:$TABBED_NEW_LINE$Shipyard Capacity: §G+8§!"
 
     district_pki_flusion_city:0 "Flusionian Housing Complex"
     district_pki_flusion_city_desc:0 "Colossal stretches of urban housing built within humongous megacities, providing housing and entertainment to its inhabitants. In true Katzen fashion, these housing complexes feature large quantities of anti-air and anti-orbital weaponry mounted onto nearly every rooftop, designed to hamper any invaders attempting to seize Flusion."
