@@ -478,6 +478,7 @@ guiTypes = {
 
 				# STATE TAB
 
+
 				containerWindowType = {
 					name = focus_kaiser_arrival
 					position = { x = @tile_x_300 y = @tile_y_1 }
@@ -2853,6 +2854,7 @@ guiTypes = {
 
 		background = { name = background quadTextureSprite = GFX_tile_outliner_bg }
 
+		clipping = no
 		moveable = yes
 
 		iconType = {
@@ -3023,25 +3025,12 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "alien_message"
 			font = "cg_16b"
-			position = { x = -999 y = -999 }
-			maxWidth = 370
-			maxHeight = 550
+			position = { x = 16 y = 96 }
+			maxWidth = 368
+			maxHeight = 600
 			format = left
 			scrollbartype = "standardtext_slider"
-			alwaysTransparent = yes
-		}
-
-		effectButtonType = {
-			name = "focus_desc"
-			font = "cg_16b"
-			position = { x = 16 y = 96 }
-			size = { x = 368 y = 600 }
-			multiline = yes
-			format = left
-			vertical_alignment = top
-			text = pki_focus_desc_text
-			alwaysTransparent = yes
-			effect = pki_always_no_effect
+			alwaysTransparent = no
 		}
 
 		effectButtonType = {

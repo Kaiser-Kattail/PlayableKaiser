@@ -103,10 +103,7 @@ country_event = {
 		set_country_flag = pki_selected_focus
 	}
 
-	picture_event_data = {
-		portrait = douclaw
-		room = "flusion_katown_room"
-	}
+	desc = pki_focus_desc_text
 
 	option = {
 		name = pki_confirm

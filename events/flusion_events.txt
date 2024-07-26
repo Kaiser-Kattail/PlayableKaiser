@@ -13,6 +13,15 @@ event = {
 
 	immediate = {
 		set_global_flag = pki_enabled
+
+		every_country = {
+			limit = {
+				has_origin = origin_katzen
+			}
+			country_event = {
+				id = flusion.1001
+			}
+		}
 	}
 }
 
@@ -23,6 +32,9 @@ country_event = {
 
 	trigger = {
 		has_origin = origin_katzen
+		NOT = {
+			has_global_flag = pki_katzen_is_being_played
+		}
 	}
 
 	immediate = {
@@ -30,8 +42,12 @@ country_event = {
 			limit = { NOT = { has_global_flag = pki_katzen_is_being_played } }
 			set_global_flag = pki_katzen_is_being_played
 			set_country_flag = pki_playable_kaiser
+			set_global_flag = katzenartig_disabled
+			set_global_flag = giga_jublio_disabled
+			set_global_flag = giga_jupitwo_disabled
+			set_global_flag = giga_fe_pouchkinn_disabled
 			country_event = { id = flusion.4 }
-			country_event = { id = kaiser_bureau.0 days = 30 }
+			country_event = { id = pki_menu.0 days = 30 }
 			every_country = {
 				limit = { has_origin = origin_katzen NOT = { has_country_flag = pki_playable_kaiser} }
 				capital_scope.solar_system = { set_star_flag = gigas_new_planets set_star_flag = pki_reset }
@@ -258,7 +274,7 @@ country_event = {
 
 	trigger = {
 		exists = this
-		has_global_flag = pki_player_katzen
+		has_country_flag = pki_playable_kaiser
 		pki_is_katzenartig_imperium = yes
 	}
 
@@ -266,7 +282,6 @@ country_event = {
 		set_country_flag = starting_event
 		save_global_event_target_as = pki_player
 		save_global_event_target_as = pki_KAT_country
-        set_global_flag = pki_katzen_is_being_played
 		owner_main_species = {
 			save_global_event_target_as = pki_katzen_species
 		}
@@ -579,22 +594,7 @@ country_event = {
 			}
 		}
 
-		country_event = { id = flusion.41 }
-		country_event = { id = pki_menu.0 days = 30 }
-	}
-}
-
-event = {
-	id = flusion.42
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		set_global_flag = kaiser_is_player
-		set_global_flag = katzenartig_disabled
-		set_global_flag = giga_jublio_disabled
-		set_global_flag = giga_jupitwo_disabled
-		set_global_flag = giga_fe_pouchkinn_disabled
+		#country_event = { id = flusion.41 }
 	}
 }
 
@@ -703,24 +703,6 @@ country_event = {
 				set_council_position = councilor_defense
 			}
 		}
-	}
-}
-
-country_event = {
-	id = flusion.42
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		pki_is_katzenartig_imperium = yes
-	}
-
-	immediate = {
-		set_global_flag = pki_katzen_is_being_played
-		set_global_flag = katzenartig_disabled
-		set_global_flag = giga_jublio_disabled
-		set_global_flag = giga_jupitwo_disabled
-		set_global_flag = giga_fe_pouchkinn_disabled
 	}
 }
 

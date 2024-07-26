@@ -1,6 +1,8 @@
 text = {
     trigger = {
-        has_country_flag = pki_selected_$FOCUS$
+        event_target:pki_player = {
+            has_country_flag = pki_selected_$FOCUS$
+        }
     }
-    localization_key = "pki_focus_$FOCUS$_desc"
+    localization_key = "pki_focus_$FOCUS$_effects_desc"
 }

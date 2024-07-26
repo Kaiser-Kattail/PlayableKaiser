@@ -25,6 +25,18 @@ pki_focus_in_progress_effects = {
     }
 }
 
+pki_add_factories = {
+    tooltip = {
+        add_deposit = d_pki_factory_add_$VALUE$
+    }
+    hidden_effect = {
+        set_variable = {
+            which = pki_industry_level
+            value = $VALUE$
+        }
+    }
+}
+
 pki_instant_focus = {
     if = {
         limit = {

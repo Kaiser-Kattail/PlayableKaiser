@@ -1,19 +1,17 @@
 on_game_start = {
 	events = {
 		flusion.1
-		flusion.43
 	}
 }
 
 on_game_start_country = {
 	events = {
-		flusion.1001
+		flusion.43
 	}
 }
 
 on_press_begin = {
 	events = {
-		flusion.42
 		pki_focus.002
 	}
 }
@@ -23,7 +21,6 @@ on_monthly_pulse_country = {
         pki_industry.001
         pki_industry.002
 		pki_crisis.101
-		conquest.3
 		conquest.9998
 		conquest.090909
 		pki_misc.1
@@ -31,7 +28,6 @@ on_monthly_pulse_country = {
 		centrism.65
 		centrism.6
 		centrism.9
-		conquest.8
 		#pki_misc.10
 		centrism.65
 		pki_misc.15

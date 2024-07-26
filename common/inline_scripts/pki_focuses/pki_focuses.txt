@@ -108,6 +108,24 @@ inline_script = {
 inline_script = {
     script = pki_focuses/pki_focuses_def
     PART = $PART$
+    FOCUS = rearmament
+    TAB = state
+    TIME = 2.5
+    PREREQUISITE = "pki_completed_focus = { FOCUS = herzlands_industry }"
+    EFFECT = "
+    remove_modifier = pki_pre_ftl_military_1
+    add_modifier = {
+        modifier = pki_pre_ftl_military_2
+    }
+    event_target:pki_flusion_planet = {
+        pki_add_factories = { VALUE = 3 }
+    }
+    "
+}
+
+inline_script = {
+    script = pki_focuses/pki_focuses_def
+    PART = $PART$
     FOCUS = panzer_corp_1
     TAB = military
     TIME = 2.5

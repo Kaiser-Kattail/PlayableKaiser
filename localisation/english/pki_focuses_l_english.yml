@@ -64,7 +64,7 @@
     pki_focus_herzlands_industry_label: "Herzlands Industry"
     pki_focus_herzlands_industry_desc: "$pki_focus_herzlands_industry_effects_desc$$pki_focus_spacer$§g$pki_focus_herzlands_industry_flavor$§!"
     pki_focus_herzlands_industry_effect: "§Y[owner.capital_scope.GetName]§!: Add ['concept_pki_d_pki_megafoundries']"
-    pki_focus_herzlands_industry_effects_desc: "§H$pki_focus_herzlands_industry$§!\n\nEffect\n\n§Y[owner.capital_scope.GetName]§!: Add §Y$d_pki_megafoundries$§!, which provide:$NEW_LINE$$concept_pki_d_pki_megafoundries_desc$"
+    pki_focus_herzlands_industry_effects_desc: "§H$pki_focus_herzlands_industry$§!\n\nEffect\n\n$pki_focus_herzlands_industry_effect$"
     pki_focus_herzlands_industry_flavor: "The Kaiser has big plans for the Imperium, what a better way to start, than with and expanded industrial base."
     pki_completed_herzlands_industry: "$pki_completed_focus$§H$pki_focus_herzlands_industry$§!"
     pki_focus_herzlands_industry_tt: "\n§H$pki_focus_herzlands_industry$§!\n\nCompletion Time: §H[event_target:pki_player.pki_herzlands_industry_speed]§! years\n\n§HEffect§!:\n\n$pki_focus_herzlands_industry_effect$"
@@ -72,6 +72,12 @@
     pki_focus_herzlands_industry_bypassed: "§H$pki_focus_herzlands_industry$§! $MESSAGE_PKI_NATIONAL_FOCUS_BYPASSED_TEXT$"
 
     #### FOCUS CONCEPTS
+
+    d_pki_factory_add_1: "Add §G+1§! £pki_factory£§YFactories§!"
+    d_pki_factory_add_2: "Add §G+2§! £pki_factory£§YFactories§!"
+    d_pki_factory_add_3: "Add §G+3§! £pki_factory£§YFactories§!"
+    d_pki_factory_add_4: "Add §G+4§! £pki_factory£§YFactories§!"
+    d_pki_factory_add_5: "Add §G+5§! £pki_factory£§YFactories§!"
 
     d_pki_megafoundries: "Katzen Megafoundries"
 
