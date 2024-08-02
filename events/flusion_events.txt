@@ -339,11 +339,6 @@ country_event = {
 		}
 
 		add_modifier = {
-			modifier = pki_destabilized_government
-			days = -1
-		}
-
-		add_modifier = {
 			modifier = pki_pre_ftl_military_1
 			days = -1
 		}
@@ -534,16 +529,6 @@ country_event = {
 					size = starbase_outpost
 				}
 			}
-		}
-
-		every_owned_ship = {
-			limit = {
-				OR = {
-					is_ship_size = mining_station
-					is_ship_size = research_station
-				}
-			}
-			delete_ship = this
 		}
 
 		set_country_flag = pki_map_KAT_selected

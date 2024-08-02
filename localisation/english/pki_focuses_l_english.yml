@@ -59,6 +59,7 @@
     pki_completed_kaiser_arrival: "$pki_completed_focus$§H$pki_focus_kaiser_arrival$§!"
     pki_focus_kaiser_arrival_completed: "§H$pki_focus_kaiser_arrival$§! $MESSAGE_PKI_NATIONAL_FOCUS_COMPLETE_TEXT$"
     pki_focus_kaiser_arrival_bypassed: "§H$pki_focus_kaiser_arrival$§! $MESSAGE_PKI_NATIONAL_FOCUS_BYPASSED_TEXT$"
+    pki_focus_kaiser_arrival_icon: "£pki_focus_kaiser_arrival£"
 
     pki_focus_herzlands_industry: "Herzlands Industry"
     pki_focus_herzlands_industry_label: "Herzlands Industry"
@@ -70,8 +71,11 @@
     pki_focus_herzlands_industry_tt: "\n§H$pki_focus_herzlands_industry$§!\n\nCompletion Time: §H[event_target:pki_player.pki_herzlands_industry_speed]§! years\n\n§HEffect§!:\n\n$pki_focus_herzlands_industry_effect$"
     pki_focus_herzlands_industry_completed: "§H$pki_focus_herzlands_industry$§! $MESSAGE_PKI_NATIONAL_FOCUS_COMPLETE_TEXT$"
     pki_focus_herzlands_industry_bypassed: "§H$pki_focus_herzlands_industry$§! $MESSAGE_PKI_NATIONAL_FOCUS_BYPASSED_TEXT$"
+    pki_focus_herzlands_industry_icon: "£pki_focus_herzlands_industry£"
 
-    #### FOCUS CONCEPTS
+    #### FOCUS RELATED STUFF
+
+    pki_become_katzenartig: "[event_target:pki_player.GetName] will be reformed into the §YKatzenartig Imperium§!"
 
     d_pki_factory_add_1: "Add §G+1§! £pki_factory£§YFactories§!"
     d_pki_factory_add_2: "Add §G+2§! £pki_factory£§YFactories§!"

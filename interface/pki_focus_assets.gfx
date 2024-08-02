@@ -5,11 +5,6 @@ spriteTypes = {
     }
 
     spriteType = {
-        name = "GFX_pki_focus_placeholder"
-        textureFile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_placeholder.dds"
-    }
-
-    spriteType = {
         name = "GFX_pki_focus_line_h_s_r"
         textureFile = "gfx/interface/pki_ui/focus_tree/lines/pki_focus_link_horizontal_solid_red.dds"
         alwaysTransparent = yes
@@ -87,10 +82,9 @@ spriteTypes = {
         alwaysTransparent = yes
     }
 
-    corneredTileSpriteType = {
+    spriteType = {
         name = "GFX_pki_focus_label_in_progress"
-        texturefile = "gfx/interface/tiles/glow_tile_orange_striped.dds"
-        borderSize = { x=12 y=12 }
+        texturefile = "gfx/interface/pki_ui/focus_tree/pki_orange_striped.dds"
         effectFile = "gfx/FX/buttonstate_onlydisable.shader"
         animation = {
             animationmaskfile = "gfx/interface/pki_ui/focus_tree/focus_ongoing_mask2.dds"
@@ -122,10 +116,9 @@ spriteTypes = {
         legacy_lazy_load = no
     }
 
-    corneredTileSpriteType = {
+    spriteType = {
         name = "GFX_pki_focus_label_completed"
-        texturefile = "gfx/interface/tiles/glow_tile_orange.dds"
-        borderSize = { x=12 y=12 }
+        texturefile = "gfx/interface/pki_ui/focus_tree/pki_orange.dds"
         effectFile = "gfx/FX/buttonstate_onlydisable.shader"
         animation = {
             animationmaskfile = "gfx/interface/pki_ui/focus_tree/focus_completed_mask.dds"
@@ -145,7 +138,7 @@ spriteTypes = {
     }
 
     SpriteType = {
-        name = "GFX__shine"
+        name = "GFX_pki_focus_placeholder"
         texturefile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_placeholder.dds"
         animation = {
             animationmaskfile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_placeholder.dds"

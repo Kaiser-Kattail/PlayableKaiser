@@ -31,9 +31,20 @@ inline_script = {
     TAB = state
     TIME = 5
     EFFECT = "
-    set_empire_name = \\\"Katzenartig Imperium\\\" #Situation effects wont display properly if it is a localised entry
-    remove_modifier = pki_destabilized_government
+    custom_tooltip = pki_become_katzenartig
     hidden_effect = {
+        pki_remove_ethics = yes
+        country_add_ethic = ethic_fanatic_militarist
+        country_add_ethic = ethic_xenophile
+        change_government = {
+            authority = auth_dictatorial
+            civics = {
+                civic = civic_distinguished_admiralty
+                civic = civic_nationalistic_zeal
+            }
+        }
+        set_ruler_title_male = \\\"Kaiser\\\"
+        set_empire_name = \\\"Katzenartig Imperium\\\" #Situation effects wont display properly if it is a localised entry
         change_country_flag = {
             icon = {
                 category = \\\"domination\\\"
@@ -89,6 +100,7 @@ inline_script = {
         assign_leader = last_created_leader
     }
     "
+    POTENTIAL = "pki_is_katzenartig_imperium = yes"
 }
 
 inline_script = {
@@ -103,25 +115,9 @@ inline_script = {
         add_deposit = d_pki_megafoundries
     }
     "
+    POTENTIAL = "pki_is_katzenartig_imperium = yes"
 }
 
-inline_script = {
-    script = pki_focuses/pki_focuses_def
-    PART = $PART$
-    FOCUS = rearmament
-    TAB = state
-    TIME = 2.5
-    PREREQUISITE = "pki_completed_focus = { FOCUS = herzlands_industry }"
-    EFFECT = "
-    remove_modifier = pki_pre_ftl_military_1
-    add_modifier = {
-        modifier = pki_pre_ftl_military_2
-    }
-    event_target:pki_flusion_planet = {
-        pki_add_factories = { VALUE = 3 }
-    }
-    "
-}
 
 inline_script = {
     script = pki_focuses/pki_focuses_def
@@ -135,6 +131,7 @@ inline_script = {
         modifier = pki_panzer_corp_1
     }
     "
+    POTENTIAL = "pki_is_katzenartig_imperium = yes"
 }
 
 inline_script = {
@@ -148,5 +145,9 @@ inline_script = {
     add_modifier = {
         modifier = pki_pre_ftl_military_2
     }
+    event_target:pki_flusion_planet = {
+        pki_add_factories = { VALUE = 3 }
+    }
     "
+    POTENTIAL = "pki_is_katzenartig_imperium = yes"
 }

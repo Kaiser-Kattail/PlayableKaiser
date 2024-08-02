@@ -1,6 +1,6 @@
 on_game_start = {
 	events = {
-		flusion.1
+		#flusion.1 event is called late elsewhere
 	}
 }
 

@@ -572,7 +572,7 @@ guiTypes = {
 							name = focus_label
 							position = { x = +0 y = +70 }
 							size = { x = 170 y = 50 }
-							quadTextureSprite = "GFX_glow_tile_striped"
+							quadTextureSprite = "GFX_pki_focus_label_in_progress"
 							effect = pki_focus_herzlands_industry_in_progress_effect
 						}
 					}
@@ -585,7 +585,7 @@ guiTypes = {
 							name = focus_label
 							position = { x = +0 y = +70 }
 							size = { x = 170 y = 50 }
-							quadTextureSprite = "GFX_glow_tile_orange"
+							quadTextureSprite = "GFX_pki_focus_label_completed"
 							effect = pki_focus_herzlands_industry_completed_effect
 						}
 					}
@@ -2882,16 +2882,16 @@ guiTypes = {
 			alwaysTransparent = yes
 		}
 
-		instantTextboxType = {
-			name = "pki_focus_message"
-			font = "cg_16b"
-			text = "pki_confirm_focus"
-			position = { x = 16 y = 60 }
-			maxWidth = 543
-			maxHeight = 22
-			fixedSize = yes
-			alwaysTransparent = yes
-		}
+		#instantTextboxType = {
+		#	name = "pki_focus_message"
+		#	font = "cg_16b"
+		#	text = "pki_confirm_focus"
+		#	position = { x = 16 y = 60 }
+		#	maxWidth = 543
+		#	maxHeight = 22
+		#	fixedSize = yes
+		#	alwaysTransparent = yes
+		#}
 
 		containerWindowType = {
 			name = time_background
@@ -2907,8 +2907,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = desc_background
-			position = { x = 8 y = 90 }
-			size = { width = 384 height = 502 }
+			position = { x = 8 y = 160 }
+			size = { width = 384 height = 402 }
 			alwaysTransparent = yes
 			background = {
 				name = background
@@ -2922,6 +2922,17 @@ guiTypes = {
 			font = "malgun_goth_24"
 			text = "pki_focus_title_text"
 			position = { x = 12 y = -82 }
+			alwaysTransparent = yes
+			format = left
+
+			effect = pki_always_no_effect
+		}
+
+		effectButtonType = {
+			name = "pki_focus_icon"
+			font = "malgun_goth_24"
+			text = "[pki_focus_icon]"
+			position = { x = 0 y = 0 }
 			alwaysTransparent = yes
 			format = left
 
@@ -3025,9 +3036,9 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "alien_message"
 			font = "cg_16b"
-			position = { x = 16 y = 96 }
+			position = { x = 16 y = 166 }
 			maxWidth = 368
-			maxHeight = 600
+			maxHeight = 400
 			format = left
 			scrollbartype = "standardtext_slider"
 			alwaysTransparent = no
@@ -3059,6 +3070,7 @@ guiTypes = {
 			font = "cg_16b"
 			format = center
 			orientation = top_left
+			clicksound = confirm_click
 			text = "OPTION_TEXT"
 		}
 

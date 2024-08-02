@@ -8,4 +8,19 @@ spriteTypes = {
         name = "GFX_text_pki_plane"
         textureFile = "gfx/interface/icons/text_icons/plane_icon.dds"
     }
+
+    spriteType = {
+        name = "GFX_text_pki_focus_placeholder"
+        textureFile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_placeholder.dds"
+    }
+
+    spriteType = {
+        name = "GFX_text_pki_focus_kaiser_arrival"
+        textureFile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_kaiser_arrival.dds"
+    }
+
+    spriteType = {
+        name = "GFX_text_pki_focus_herzlands_industry"
+        textureFile = "gfx/interface/pki_ui/focus_tree/focuses/pki_focus_herzlands_industry.dds"
+    }
 }

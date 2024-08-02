@@ -26,6 +26,15 @@ defined_text = {
 }
 
 defined_text = {
+    name = pki_focus_icon
+    inline_script = {
+        script = pki_focuses/pki_focuses
+        PART = icon
+    }
+    default = "PKI_BLANK"
+}
+
+defined_text = {
     name = pki_focus_speed
     value = event_target:pki_player.value:pki_focus_length
 }
