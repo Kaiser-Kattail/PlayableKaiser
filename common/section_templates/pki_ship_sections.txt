@@ -327,7 +327,7 @@ ship_section_template = {
 	component_slot = { name = "SMALL_3"		template = "small_turret"					locatorname = "gun_4" }
 	component_slot = { name = "SMALL_4"		template = "small_turret"					locatorname = "gun_5" }
 	component_slot = { name = "LARGE_1"			template = "large_turret"		locatorname = "xl_gun_01" }
-	component_slot = { name = "LARGE_1"			template = "large_turret"		locatorname = "xl_gun_02" }
+	component_slot = { name = "LARGE_2"			template = "large_turret"		locatorname = "xl_gun_02" }
 
 	medium_utility_slots = 6
 	aux_utility_slots = 2
@@ -428,4 +428,139 @@ ship_section_template = {
 			alloys = @section_cost
 		}
 	}
+}
+
+ship_section_template = {
+	key = "PKI_WARFORGE_PLATFORM"
+	ship_size = pki_warforge_starbase
+	fits_on_slot = "mid"
+	entity = "katzen_warplatform_invisible_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = { name = "EXTRA_LARGE_01"	template = "invisible_extra_large_fixed"			locatorname = "loc101" } #Kaiser rocket
+	component_slot = { name = "TORPEDO_01"			template = "invisible_missile_turret"					locatorname = "loc101" } #Missiles
+	component_slot = { name = "TORPEDO_02"			template = "invisible_missile_turret"					locatorname = "loc101" }
+	component_slot = { name = "TORPEDO_03"			template = "invisible_missile_turret"					locatorname = "loc101" }
+	component_slot = { name = "TORPEDO_04"			template = "invisible_missile_turret"					locatorname = "loc101" }
+	component_slot = { name = "TORPEDO_05"			template = "invisible_missile_turret"					locatorname = "loc101" } #Missiles
+	component_slot = { name = "TORPEDO_06"			template = "invisible_missile_turret"					locatorname = "loc101" }
+	component_slot = { name = "TORPEDO_07"			template = "invisible_missile_turret"					locatorname = "loc101" }
+	component_slot = { name = "TORPEDO_08"			template = "invisible_missile_turret"					locatorname = "loc101" }
+	component_slot = { name = "KINETIC_01"			template = "invisible_large_turret"							locatorname = "loc101" } #Kinetic
+	component_slot = { name = "KINETIC_02"			template = "invisible_large_turret"							locatorname = "loc101" }
+	component_slot = { name = "KINETIC_03"			template = "invisible_large_turret"							locatorname = "loc101" } #Kinetic
+	component_slot = { name = "KINETIC_04"			template = "invisible_large_turret"							locatorname = "loc101" }
+	component_slot = { name = "AUTOCANNON_01"		template = "invisible_small_turret"							locatorname = "loc101" } #Small guns
+	component_slot = { name = "AUTOCANNON_02"		template = "invisible_small_turret"							locatorname = "loc101" }
+	component_slot = { name = "AUTOCANNON_03"		template = "invisible_small_turret"							locatorname = "loc101" }
+	component_slot = { name = "AUTOCANNON_04"		template = "invisible_small_turret"							locatorname = "loc101" }
+
+	should_draw_components = yes
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 10
+	aux_utility_slots = 1
+}
+
+ship_section_template = {
+	key = "PKI_WARFORGE_BATTERY_STARBASE_SECTION"
+	entity = "katzen_warplatform_invisible_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	ship_size = pki_warforge_starbase
+
+	fits_on_slot = "1"
+	fits_on_slot = "2"
+	fits_on_slot = "3"
+	fits_on_slot = "4"
+	fits_on_slot = "5"
+	fits_on_slot = "6"
+
+	should_draw_components = yes
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "invisible_medium_turret"
+		locatorname = "loc101"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "invisible_medium_turret"
+		locatorname = "loc101"
+	}
+}
+
+ship_section_template = {
+	key = "PKI_WARFORGE_MISSILE_STARBASE_SECTION"
+	entity = "katzen_warplatform_invisible_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	prerequisites = { tech_torpedoes_1 }
+
+	ship_size = pki_warforge_starbase
+
+	fits_on_slot = "1"
+	fits_on_slot = "2"
+	fits_on_slot = "3"
+	fits_on_slot = "4"
+	fits_on_slot = "5"
+	fits_on_slot = "6"
+
+	should_draw_components = yes
+
+	component_slot = {
+		name = "TORPEDO_01"
+		template = "invisible_missile_turret"
+		locatorname = "loc101"
+	}
+
+	component_slot = {
+		name = "TORPEDO_02"
+		template = "invisible_missile_turret"
+		locatorname = "loc101"
+	}
+}
+
+ship_section_template = {
+	key = "PKI_WARFORGE_HANGAR_STARBASE_SECTION"
+	entity = "katzen_warplatform_invisible_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	ship_size = pki_warforge_starbase
+
+	fits_on_slot = "1"
+	fits_on_slot = "2"
+	fits_on_slot = "3"
+	fits_on_slot = "4"
+	fits_on_slot = "5"
+	fits_on_slot = "6"
+
+	should_draw_components = yes
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "loc101"
+	}
+}
+
+ship_section_template = {
+	key = "PKI_WARFORGE_BLANK_SECTION"
+
+	ship_size = pki_warforge_starbase
+
+	fits_on_slot = "1"
+	fits_on_slot = "2"
+	fits_on_slot = "3"
+	fits_on_slot = "4"
+	fits_on_slot = "5"
+	fits_on_slot = "6"
+
+	entity = "katzen_warplatform_invisible_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	should_draw_components = yes
 }
