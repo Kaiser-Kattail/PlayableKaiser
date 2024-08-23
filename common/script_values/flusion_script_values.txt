@@ -33,10 +33,10 @@ pki_num_warforges = {
 
 pki_num_total_warforges = {
     complex_trigger_modifier = {
-        trigger = count_system_megastructure
+        trigger = count_ship_in_system
         trigger_scope = solar_system
         parameters = {
-            limit = { is_megastructure_type = katzen_war_forge_1 }
+            limit = { is_ship_size = pki_warforge_starbase }
         }
         mode = add
     }

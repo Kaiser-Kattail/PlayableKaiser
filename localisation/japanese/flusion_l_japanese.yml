@@ -312,10 +312,10 @@
  leader_trait_katzen_overseer_desc: "This leader is a transfer from specialized Katown training programs, and is qualified to enact Katzenification onto foreign worlds." #NT!
   
      # Starbase/Orbital Ring 
- sm_katzen_ring_energy_hub: "Katzen Orbital Actinide Harvesting" #NT!
- sm_katzen_ring_energy_hub_desc: "Orbital surveying and transport infrastructure greatly aids the harvesting of thorium and other elements on the colony." #NT!
- sm_katzen_ring_alloys_hub: "Katzen Orbital Forge" #NT!
- sm_katzen_ring_alloys_hub_desc: "Orbital metallurgy infrastructure aids the production of alloys planetside." #NT!
+ sm_pki_ring_energy_hub: "Katzen Orbital Actinide Harvesting" #NT!
+ sm_pki_ring_energy_hub_desc: "Orbital surveying and transport infrastructure greatly aids the harvesting of thorium and other elements on the colony." #NT!
+ sm_pki_ring_alloys_hub: "Katzen Orbital Forge" #NT!
+ sm_pki_ring_alloys_hub_desc: "Orbital metallurgy infrastructure aids the production of alloys planetside." #NT!
   
  pki_katzen_captured_ships: "Katzen Ships" #NT!
   
@@ -477,10 +477,10 @@
  NAME_PKI_ATTACK_MOON: "Kaiser Moon" #NT!
   
      # War forges 
- katzen_war_forge_0: "Katzen War Forge Site" #NT!
- katzen_war_forge_0_DESC: "A future construction site for a Katzen War Forge." #NT!
- katzen_war_forge_1: "Katzen War Forge" #NT!
- katzen_war_forge_1_DESC: "A large orbital construct built near an inhabited Katzen colony, harvesting the local system for resources in order to assemble Katzen warships." #NT!
+ pki_warforge_0: "Katzen War Forge Site" #NT!
+ pki_warforge_0_DESC: "A future construction site for a Katzen War Forge." #NT!
+ pki_warforge_1: "Katzen War Forge" #NT!
+ pki_warforge_1_DESC: "A large orbital construct built near an inhabited Katzen colony, harvesting the local system for resources in order to assemble Katzen warships." #NT!
   
   
  district_pki_flusion_city: "Flusionian Housing Complex" #NT!

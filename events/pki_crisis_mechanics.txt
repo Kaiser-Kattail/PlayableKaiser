@@ -74,6 +74,46 @@ country_event = {
             value = value:pki_galaxy_systems
         }
         pki_update_galactic_tension = yes
+
+        if = {
+            limit = {
+                NOT = { has_global_flag = pki_win_prevention_country_created}
+                count_country = {
+                    count < 2
+                    limit = {
+                        OR = {
+                            is_country_type = default
+                            is_country_type = fallen_empire
+                        }
+                        pki_is_katzenartig_imperium = no
+                        NOT = {
+                            has_country_flag = pki_win_prevention_country
+                        }
+                    }
+                }
+            }
+            # Win prevention for "cinematic" ending
+            event_target:global_event_country = {
+                create_country = {
+                    name = "PKI Win Prevention Country"
+                    type = default
+                    contact_rule = never
+                    auto_delete = no
+                    name_list = random
+                    authority = random
+                    civics = random
+                    origin = origin_default
+                    species = event_target:katzenartig
+                    set_capital_from_species = no
+                    randomize_ethos = yes
+                    effect = {
+                        set_global_flag = pki_win_prevention_country_created
+                        set_country_flag = pki_win_prevention_country
+                        save_global_event_target_as = pki_win_prevention_country
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -663,7 +703,7 @@ country_event = {
     immediate = {
         event_target:pki_corrona_country = {
             #apply_katzen_difficulty = yes
-            set_country_type = awakaned_corrona
+            set_country_type = pki_awakaned_corrona
             create_leader = {
                 class = commander
                 species = event_target:pki_corronaskeletons
@@ -724,6 +764,14 @@ country_event = {
             pki_create_corrona_dragon_fleet_corrona = yes
             pki_create_corrona_dragon_fleet_corrona = yes
             pki_create_corrona_dragon_fleet_corrona = yes
+            add_modifier = {
+                modifier = pki_corrona_fire_rate_debuff
+                multiplier = 99
+            }
+            add_modifier = {
+                modifier = pki_corrona_damage_debuff
+                multiplier = 50
+            }
         }
         event_target:pki_corrona = {
             destroy_colony = yes
@@ -804,7 +852,7 @@ country_event = { #Corrona Moon destroyed :(
     show_sound = event_structural_collapse
 
     trigger = {
-        from = { is_country_type = awakaned_corrona }
+        from = { is_country_type = pki_awakaned_corrona }
         fromfromfrom = {
             is_ship_size = giga_corrona_planetcraft
         }

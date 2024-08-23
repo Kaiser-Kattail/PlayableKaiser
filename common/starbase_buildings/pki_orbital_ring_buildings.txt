@@ -1,4 +1,4 @@
-katzen_ring_energy_hub = {
+pki_ring_energy_hub = {
 	icon = "GFX_spaceport_module_teldar_refinery"
 	construction_days = 360
 	potential = {
@@ -47,7 +47,7 @@ katzen_ring_energy_hub = {
 	}
 }
 
-katzen_ring_alloys_hub = {
+pki_ring_alloys_hub = {
 	icon = "GFX_orbitalring_alloy_hub"
 	construction_days = 360
 	potential = {

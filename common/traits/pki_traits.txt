@@ -462,8 +462,8 @@ pki_leader_trait_destiny_admiral = {
 	leader_potential_add = {
 		from = {
 			pki_is_katzenartig_imperium = yes
-			any_owned_leader = {
-				NOT = {
+			NOT = {
+				any_owned_leader = {
 					has_trait = pki_leader_trait_destiny_admiral
 				}
 			}
@@ -506,8 +506,8 @@ pki_leader_trait_destiny_general = {
 	leader_potential_add = {
 		from = {
 			pki_is_katzenartig_imperium = yes
-			any_owned_leader = {
-				NOT = {
+			NOT = {
+				any_owned_leader = {
 					has_trait = pki_leader_trait_destiny_general
 				}
 			}
@@ -550,8 +550,8 @@ pki_leader_trait_destiny_commissioner = {
 	leader_potential_add = {
 		from = {
 			pki_is_katzenartig_imperium = yes
-			any_owned_leader = {
-				NOT = {
+			NOT = {
+				any_owned_leader = {
 					has_trait = pki_leader_trait_destiny_commissioner
 				}
 			}
@@ -589,8 +589,8 @@ pki_leader_trait_destiny_strategist = {
 	leader_potential_add = {
 		from = {
 			pki_is_katzenartig_imperium = yes
-			any_owned_leader = {
-				NOT = {
+			NOT = {
+				any_owned_leader = {
 					has_trait = pki_leader_trait_destiny_strategist
 				}
 			}
@@ -635,8 +635,8 @@ pki_leader_trait_destiny_analyst = {
 	leader_potential_add = {
 		from = {
 			pki_is_katzenartig_imperium = yes
-			any_owned_leader = {
-				NOT = {
+			NOT = {
+				any_owned_leader = {
 					has_trait = pki_leader_trait_destiny_analyst
 				}
 			}
@@ -676,8 +676,8 @@ pki_leader_trait_destiny_explorer = {
 	leader_potential_add = {
 		from = {
 			pki_is_katzenartig_imperium = yes
-			any_owned_leader = {
-				NOT = {
+			NOT = {
+				any_owned_leader = {
 					has_trait = pki_leader_trait_destiny_explorer
 				}
 			}
@@ -719,8 +719,8 @@ pki_leader_trait_destiny_scholar = {
 	leader_potential_add = {
 		from = {
 			pki_is_katzenartig_imperium = yes
-			any_owned_leader = {
-				NOT = {
+			NOT = {
+				any_owned_leader = {
 					has_trait = pki_leader_trait_destiny_scholar
 				}
 			}
@@ -759,8 +759,8 @@ pki_leader_trait_destiny_statistician = {
 	leader_potential_add = {
 		from = {
 			pki_is_katzenartig_imperium = yes
-			any_owned_leader = {
-				NOT = {
+			NOT = {
+				any_owned_leader = {
 					has_trait = pki_leader_trait_destiny_statistician
 				}
 			}
@@ -799,8 +799,8 @@ pki_leader_trait_destiny_delegate = {
 	leader_potential_add = {
 		from = {
 			pki_is_katzenartig_imperium = yes
-			any_owned_leader = {
-				NOT = {
+			NOT = {
+				any_owned_leader = {
 					has_trait = pki_leader_trait_destiny_delegate
 				}
 			}
@@ -843,8 +843,8 @@ pki_leader_trait_destiny_industrialist = {
 	leader_potential_add = {
 		from = {
 			pki_is_katzenartig_imperium = yes
-			any_owned_leader = {
-				NOT = {
+			NOT = {
+				any_owned_leader = {
 					has_trait = pki_leader_trait_destiny_industrialist
 				}
 			}
@@ -883,8 +883,8 @@ pki_leader_trait_destiny_advisor = {
 	leader_potential_add = {
 		from = {
 			pki_is_katzenartig_imperium = yes
-			any_owned_leader = {
-				NOT = {
+			NOT = {
+				any_owned_leader = {
 					has_trait = pki_leader_trait_destiny_advisor
 				}
 			}
@@ -923,8 +923,8 @@ pki_leader_trait_destiny_ambassador = {
 	leader_potential_add = {
 		from = {
 			pki_is_katzenartig_imperium = yes
-			any_owned_leader = {
-				NOT = {
+			NOT = {
+				any_owned_leader = {
 					has_trait = pki_leader_trait_destiny_ambassador
 				}
 			}

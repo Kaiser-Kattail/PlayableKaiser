@@ -156,27 +156,6 @@ country_event = {
 			}
 		}
 
-		# Win prevention for "cinematic" ending
-		event_target:global_event_country = {
-			create_country = {
-				name = "PKI Win Prevention Country"
-				type = default
-				contact_rule = never
-				auto_delete = no
-				name_list = random
-				authority = random
-				civics = random
-				origin = origin_default
-				species = event_target:katzenartig
-				set_capital_from_species = no
-				randomize_ethos = yes
-				effect = {
-					set_country_flag = pki_win_prevention_country
-					save_global_event_target_as = pki_win_prevention_country
-				}
-			}
-		}
-
 		#Leader Portraits
 		create_species = {
 			name = "Imperial Katzen"

@@ -1,0 +1,13 @@
+starbase_level_pki_warforge_starbase = {
+    ship_size = pki_warforge_starbase
+    level_weight = 1
+    ai_weight = { weight = 3 }
+    potential_home_base = yes
+    portrait = "GFX_starbase_background"
+    special_construction = yes
+    collects_trade = no
+    show_in_outliner = no
+    downgrade_potential = {
+        always = no
+    }
+}

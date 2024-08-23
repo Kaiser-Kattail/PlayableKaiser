@@ -74,3 +74,39 @@ pki_katzen_ship = { #origin_here_be_dragons dragon. Settings copied from a levia
 		standard_event_module = {} # For bouncing events
 	}
 }
+
+pki_awakaned_corrona = {
+	attack_unarmed_orbital_stations = yes
+	destroys_starbases = yes
+	show_in_contacts_list = no
+	share_survey_data = no
+	custom_diplomacy = no
+	mid_game_crisis = yes
+	enforces_borders = no
+	needs_survey = no
+	has_complete_sensor = yes
+	can_have_their_comms_shared = yes
+	government = no
+	observable = no
+	ai = {
+		enabled = yes
+		modules = {
+			berserk_military_minister_module
+		}
+	}
+
+	faction = {
+		hostile = yes
+		needs_border_access = no
+		generate_borders = yes
+		needs_colony = no
+	}
+	modules = {
+		exclusive_diplomacy_module = { contact_rule = on_action_only } # Nothing is allowed, but we need this for relationships.
+		tiered_technology_module = {
+			tier = 3
+			rare = no
+		}
+		standard_event_module = {}
+	}
+}

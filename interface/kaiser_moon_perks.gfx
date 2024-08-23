@@ -109,12 +109,12 @@ spriteTypes = {
 	spriteType = { name = "GFX_wg_end_katzen_threat"			texturefile = "gfx/interface/icons/diplomacy/diplomacy_katzen_defence.dds" }
 
 	spriteType = {
-		name = "GFX_katzen_war_forge_1_outliner_icon"
+		name = "GFX_pki_warforge_0_outliner_icon"
 		textureFile = "gfx/interface/icons/megastructures/katzen_warforge.dds"
 	}
 
 	spriteType = {
-		name = "GFX_katzen_war_forge_0_outliner_icon"
+		name = "GFX_pki_warforge_1_outliner_icon"
 		textureFile = "gfx/interface/icons/megastructures/katzen_warforge.dds"
 	}
 

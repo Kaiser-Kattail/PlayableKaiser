@@ -312,10 +312,10 @@
     leader_trait_katzen_overseer_desc:0 "This leader is a transfer from specialized Katown training programs, and is qualified to enact Katzenification onto foreign worlds."
 
     # Starbase/Orbital Ring
-    sm_katzen_ring_energy_hub:0 "Katzen Orbital Actinide Harvesting"
-    sm_katzen_ring_energy_hub_desc:0 "Orbital surveying and transport infrastructure greatly aids the harvesting of thorium and other elements on the colony."
-    sm_katzen_ring_alloys_hub:0 "Katzen Orbital Forge"
-    sm_katzen_ring_alloys_hub_desc:0 "Orbital metallurgy infrastructure aids the production of alloys planetside."
+    sm_pki_ring_energy_hub:0 "Katzen Orbital Actinide Harvesting"
+    sm_pki_ring_energy_hub_desc:0 "Orbital surveying and transport infrastructure greatly aids the harvesting of thorium and other elements on the colony."
+    sm_pki_ring_alloys_hub:0 "Katzen Orbital Forge"
+    sm_pki_ring_alloys_hub_desc:0 "Orbital metallurgy infrastructure aids the production of alloys planetside."
 
     pki_katzen_captured_ships: "Katzen Ships"
 
@@ -508,12 +508,12 @@
     NAME_PKI_ATTACK_MOON: "Kaiser Moon"
    
     # War forges
-    katzen_war_forge_0:0 "Katzen War Forge Site"
-    katzen_war_forge_0_DESC:0 "A future construction site for a Katzen War Forge."
-    katzen_war_forge_1:0 "Katzen War Forge"
-    katzen_war_forge_1_DESC:0 "A large orbital construct built near an inhabited Katzen colony, harvesting the local system for resources in order to assemble Katzen warships."
+    pki_warforge_0:0 "Katzen War Forge Site"
+    pki_warforge_0_DESC:0 "A future construction site for a Katzen War Forge."
+    pki_warforge_1:0 "Katzen War Forge"
+    pki_warforge_1_DESC:0 "A large orbital construct built near an inhabited Katzen colony, harvesting the local system for resources in order to assemble Katzen warships."
 
-    pki_war_forge_mega_effect: "Naval Capacity: §G+5§!\nShip Build Speed: §G+1%§!\n\n On Starbases with §YKatzen Shipyard Array§!:$TABBED_NEW_LINE$Shipyard Capacity: §G+8§!"
+    pki_war_forge_mega_effect: "Produces: £alloys£5.00\nCountry Modifier:$t$\nNaval Capacity: §G+5§!$t$\nShip Build Speed: §G+1%§!"
 
     district_pki_flusion_city:0 "Flusionian Housing Complex"
     district_pki_flusion_city_desc:0 "Colossal stretches of urban housing built within humongous megacities, providing housing and entertainment to its inhabitants. In true Katzen fashion, these housing complexes feature large quantities of anti-air and anti-orbital weaponry mounted onto nearly every rooftop, designed to hamper any invaders attempting to seize Flusion."
@@ -994,7 +994,7 @@
     needs_schulz: "£trigger_no£ We can only recruit meowrines on a world governed by §Y$NAME_schulz$§!!"
 
     pki_warforge_shipyard_add: "£alloys£ Alloys from £job£ Jobs §G+5%§!"
-    pki_warforge_building: "Starbase Modifier\n    Per §YKatzen War Forge§! in [solar_system.GetName]:\n        Shipyard Capactiy: §G+8§!"
+    pki_warforge_building: "Country Modifier:\n"
 
     katzen_combat_computers_DESC: "Katzen combat computers are computing devices engineered by the Katzenartig Imperium. They simplify movement, weaponry, and shield activation such that the crew can easily defeat enemy fleets."
 
@@ -1161,3 +1161,25 @@
     pki_sanctions_worsening: "Modify §Y$pki_galcom_sanctions_1$§! by:\n$DIPLOMACY_WEIGHT_LABEL$: §R-25%§!\n$MOD_COUNTRY_TRUST_GROWTH$: §R-25%§!"
 
     pki_leader_destiny_traits: "\n§YOnly one leader can have this §HKatzen Destiny Trait§!§!"
+
+    decision_pki_construct_warforge: "$decision_katzen_war_forge$"
+    decision_pki_construct_warforge_desc: "$pki_warforge_decision$"
+
+    decision_pki_dismantle_warforge: "Dismantle War forge"
+    decision_pki_dismantle_warforge_desc: "Regardless of the reason, this war forge suits us no longer, it must be dismantled."
+
+    pki_warforge_name: "[event_target:pki_warforge_planet.GetName] War forge"
+
+    pki_warforge_starbase: "Katzen War forge"
+
+    sm_pki_warforge_gun_battery: "$sm_gun_battery$"
+    sm_pki_warforge_gun_battery_desc: "$sm_gun_battery_desc$"
+    sm_pki_warforge_missile_battery: "$sm_missile_battery$"
+    sm_pki_warforge_missile_battery_desc: "$sm_missile_battery_desc$"
+    sm_pki_warforge_hangar_bay: "$sm_hangar_bay$"
+    sm_pki_warforge_hangar_bay_desc: "$sm_hangar_bay_desc$"
+    sm_pki_warforge_anchorage: "$sm_anchorage$"
+    sm_pki_warforge_anchorage_desc: "$sm_anchorage_desc$"
+
+    sm_pki_warforge_building: "Katzen War forge Core"
+    sm_pki_warforge_building_desc: "The epitome of Katzen engineering.\n\n§gDue to game limitations certain buildings cannot be built nor hidden from this list. Sorry for the potentially clogged list.§!\n"

@@ -536,16 +536,16 @@ country_event = {
 			}
 			solar_system = {
 				spawn_megastructure = {
-					type = katzen_war_forge_0
+					type = pki_warforge_0
 					planet = prev
 					owner = space_owner
 				}
 				random_system_megastructure = {
 					limit = {
-						is_megastructure_type = katzen_war_forge_0
+						is_megastructure_type = pki_warforge_0
 						planet = { is_same_value = PREVPREVPREV } 
 					}
-					upgrade_megastructure_to = katzen_war_forge_1
+					upgrade_megastructure_to = pki_warforge_1
 				}
 			}
 			set_planet_flag = war_forge
@@ -563,7 +563,7 @@ country_event = {
 	immediate = {
 		every_megastructure = { #Delete any finished war forges in system with ONLY hostile ships
 			limit = {
-				is_megastructure_type = katzen_war_forge_1
+				is_megastructure_type = pki_warforge_1
 				solar_system = {
 					any_fleet_in_system = { #no hostiles
 						controller = {
@@ -602,7 +602,7 @@ country_event = {
 	trigger = {
 		pki_is_katzenartig_imperium = yes
 		any_system_within_border = {
-			has_megastructure = katzen_war_forge_1
+			has_megastructure = pki_warforge_1
 			NOT = {
 				any_fleet_in_system = {
 					has_fleet_flag = warforge_platform
@@ -614,7 +614,7 @@ country_event = {
 	immediate = {
 		every_system_within_border = {
 			limit = {
-				has_megastructure = katzen_war_forge_1
+				has_megastructure = pki_warforge_1
 				NOT = {
 					any_fleet_in_system = {
 						has_fleet_flag = warforge_platform
@@ -624,7 +624,7 @@ country_event = {
 			every_system_megastructure = {
 				if = {
 					limit = {
-						is_megastructure_type = katzen_war_forge_1
+						is_megastructure_type = pki_warforge_1
 						prev = {
 							any_fleet_in_system = {
 								NOT = {
@@ -890,8 +890,8 @@ event = {
 		every_megastructure = {
 			limit = {
 				OR = {
-					is_megastructure_type = katzen_war_forge_0
-					is_megastructure_type = katzen_war_forge_1
+					is_megastructure_type = pki_warforge_0
+					is_megastructure_type = pki_warforge_1
 				}
 				solar_system = {
 					NOT = {
@@ -1317,24 +1317,19 @@ country_event = {
 	trigger = {
 		pki_is_katzenartig_imperium = yes
 		has_country_flag = unified_flusion
-		NOT = {
-			check_variable = {
-				which = pki_num_total_warforges
-				value = value:pki_num_total_warforges
-			}
+		any_owned_ship = {
+			is_ship_size = pki_warforge_starbase
 		}
 	}
 
 	immediate = {
-		set_variable = {
-			which = pki_num_total_warforges
-			value = value:pki_num_total_warforges
-		}
-		remove_modifier = pki_warforge_naval_cap
-		add_modifier = {
-			modifier = pki_warforge_naval_cap
-			days = -1
-			mult = value:pki_num_total_warforges
+		every_owned_ship = {
+			limit = {
+				is_ship_size = pki_warforge_starbase
+			}
+			set_ship_design = {
+				random_existing_design = pki_warforge_starbase
+			}
 		}
 	}
 }

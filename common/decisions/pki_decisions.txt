@@ -421,118 +421,118 @@ decision_pki_dams = {
 	}
 }
 
-decision_katzen_defense_array_1 = {
-	icon = decision_mining_station
-	owned_planets_only = yes
-	enactment_time = 720
-	resources = {
-		category = decisions
-		cost = {
-			unity = 100
-			alloys = 1000
-		}
-	}
-	potential = {
-		from = {
-			pki_is_katzenartig_imperium = yes
-			has_country_flag = unified_flusion
-		}
-	}
+# decision_katzen_defense_array_1 = {
+# 	icon = decision_mining_station
+# 	owned_planets_only = yes
+# 	enactment_time = 720
+# 	resources = {
+# 		category = decisions
+# 		cost = {
+# 			unity = 100
+# 			alloys = 1000
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			pki_is_katzenartig_imperium = yes
+# 			has_country_flag = unified_flusion
+# 		}
+# 	}
+#
+# 	allow = {
+# 		custom_tooltip = {
+# 			fail_text = PKI_AT_DEFENSE_ARRAY_MAX
+# 			solar_system = {
+# 				NOT = {
+# 					count_fleet_in_system = {
+# 						count = 4
+# 						limit = {
+# 							has_fleet_flag = pki_platform_planet_@root
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+#
+# 	effect = {
+# 		custom_tooltip = pki_defence_array_decision
+# 		if = {
+# 			limit = {
+# 				solar_system = {
+# 					NOT = {
+# 						count_fleet_in_system = {
+# 							count = 1
+# 							limit = {
+# 								has_fleet_flag = pki_platform_planet_@root
+# 								has_fleet_flag = pki_platform_1_@root
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 			pki_spawn_defense_fleet = {
+# 				NUMBER = 1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				solar_system = {
+# 					NOT = {
+# 						count_fleet_in_system = {
+# 							count = 1
+# 							limit = {
+# 								has_fleet_flag = pki_platform_planet_@root
+# 								has_fleet_flag = pki_platform_2_@root
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 			pki_spawn_defense_fleet = {
+# 				NUMBER = 2
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				solar_system = {
+# 					NOT = {
+# 						count_fleet_in_system = {
+# 							count = 1
+# 							limit = {
+# 								has_fleet_flag = pki_platform_planet_@root
+# 								has_fleet_flag = pki_platform_3_@root
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 			pki_spawn_defense_fleet = {
+# 				NUMBER = 3
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				solar_system = {
+# 					NOT = {
+# 						count_fleet_in_system = {
+# 							count = 1
+# 							limit = {
+# 								has_fleet_flag = pki_platform_planet_@root
+# 								has_fleet_flag = pki_platform_4_@root
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 			pki_spawn_defense_fleet = {
+# 				NUMBER = 4
+# 			}
+# 		}
+# 	}
+# }
 
-	allow = {
-		custom_tooltip = {
-			fail_text = PKI_AT_DEFENSE_ARRAY_MAX
-			solar_system = {
-				NOT = {
-					count_fleet_in_system = {
-						count = 4
-						limit = {
-							has_fleet_flag = pki_platform_planet_@root
-						}
-					}
-				}
-			}
-		}
-	}
-
-	effect = {
-		custom_tooltip = pki_defence_array_decision
-		if = {
-			limit = {
-				solar_system = {
-					NOT = {
-						count_fleet_in_system = {
-							count = 1
-							limit = {
-								has_fleet_flag = pki_platform_planet_@root
-								has_fleet_flag = pki_platform_1_@root
-							}
-						}
-					}
-				}
-			}
-			pki_spawn_defense_fleet = {
-				NUMBER = 1
-			}
-		}
-		else_if = {
-			limit = {
-				solar_system = {
-					NOT = {
-						count_fleet_in_system = {
-							count = 1
-							limit = {
-								has_fleet_flag = pki_platform_planet_@root
-								has_fleet_flag = pki_platform_2_@root
-							}
-						}
-					}
-				}
-			}
-			pki_spawn_defense_fleet = {
-				NUMBER = 2
-			}
-		}
-		else_if = {
-			limit = {
-				solar_system = {
-					NOT = {
-						count_fleet_in_system = {
-							count = 1
-							limit = {
-								has_fleet_flag = pki_platform_planet_@root
-								has_fleet_flag = pki_platform_3_@root
-							}
-						}
-					}
-				}
-			}
-			pki_spawn_defense_fleet = {
-				NUMBER = 3
-			}
-		}
-		else_if = {
-			limit = {
-				solar_system = {
-					NOT = {
-						count_fleet_in_system = {
-							count = 1
-							limit = {
-								has_fleet_flag = pki_platform_planet_@root
-								has_fleet_flag = pki_platform_4_@root
-							}
-						}
-					}
-				}
-			}
-			pki_spawn_defense_fleet = {
-				NUMBER = 4
-			}
-		}
-	}
-}
-
-decision_katzen_war_forge = {
+decision_pki_construct_warforge = {
 	icon = decision_mining_station
 	owned_planets_only = yes
 	enactment_time = 0
@@ -547,49 +547,138 @@ decision_katzen_war_forge = {
 		from = {
 			has_technology = tech_pki_warforge
 		}
-		OR = {
-			from = {
-				pki_is_katzenartig_imperium = yes
-				has_country_flag = unified_flusion
+		solar_system = {
+			NOR = {
+				any_fleet_in_system = {
+					has_fleet_flag = pki_warforge@root
+				}
+				any_system_megastructure = {
+					has_megastructure_flag = pki_warforge@root
+				}
 			}
-			from = {
-				pki_is_katzprotektorat = yes
-			}
 		}
-		NOT = {
-			has_planet_flag = war_forge
-		}
-		OR = {
-			habitable_planet = yes
-			is_planet_class = pc_pki_flusion_ecu
-			is_planet_class = pc_nuked
-			is_planet_class = pc_player_siegfried_world
-		}
-		is_artificial = no
-		giga_habitable_structure = no
 	}
+
 	effect = {
 		custom_tooltip = pki_warforge_decision
 		solar_system = {
 			spawn_megastructure = {
-				type = katzen_war_forge_0
+				type = pki_warforge_0
 				planet = ROOT
 				owner = event_target:katzenartig
 			}
 			random_system_megastructure = {
 				limit = {
-					is_megastructure_type = katzen_war_forge_0
-					planet = { is_same_value = ROOT } 
+					is_megastructure_type = pki_warforge_0
+					planet = { is_same_value = ROOT }
 				}
-				upgrade_megastructure_to = katzen_war_forge_1
+				set_megastructure_flag = pki_warforge@root
+				root = {
+					save_global_event_target_as = pki_warforge_planet@prev
+				}
+				upgrade_megastructure_to = pki_warforge_1
 			}
 		}
-		set_planet_flag = war_forge
-	}
-	ai_weight = {
-		base = 1000
 	}
 }
+
+decision_pki_dismantle_warforge = {
+	icon = decision_mining_station
+	owned_planets_only = yes
+	enactment_time = 360
+	resources = {
+		category = decisions
+		cost = {
+			unity = 100
+		}
+	}
+	potential = {
+		from = {
+			pki_is_katzenartig_imperium = yes
+		}
+		solar_system = {
+			any_fleet_in_system = {
+				has_fleet_flag = pki_warforge@root
+			}
+		}
+	}
+
+	effect = {
+		solar_system = {
+			every_fleet_in_system = {
+				limit = {
+					is_ship_size = pki_warforge_starbase
+					has_fleet_flag = pki_warforge@root
+				}
+				delete_fleet = this
+			}
+		}
+		from = {
+			add_resource = {
+				alloys = 500
+			}
+		}
+	}
+}
+
+# decision_katzen_war_forge = {
+# 	icon = decision_mining_station
+# 	owned_planets_only = yes
+# 	enactment_time = 0
+# 	resources = {
+# 		category = decisions
+# 		cost = {
+# 			unity = 100
+# 			alloys = 1000
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_technology = tech_pki_warforge
+# 		}
+# 		OR = {
+# 			from = {
+# 				pki_is_katzenartig_imperium = yes
+# 				has_country_flag = unified_flusion
+# 			}
+# 			from = {
+# 				pki_is_katzprotektorat = yes
+# 			}
+# 		}
+# 		NOT = {
+# 			has_planet_flag = war_forge
+# 		}
+# 		OR = {
+# 			habitable_planet = yes
+# 			is_planet_class = pc_pki_flusion_ecu
+# 			is_planet_class = pc_nuked
+# 			is_planet_class = pc_player_siegfried_world
+# 		}
+# 		is_artificial = no
+# 		giga_habitable_structure = no
+# 	}
+# 	effect = {
+# 		custom_tooltip = pki_warforge_decision
+# 		solar_system = {
+# 			spawn_megastructure = {
+# 				type = katzen_war_forge_0
+# 				planet = ROOT
+# 				owner = event_target:katzenartig
+# 			}
+# 			random_system_megastructure = {
+# 				limit = {
+# 					is_megastructure_type = katzen_war_forge_0
+# 					planet = { is_same_value = ROOT }
+# 				}
+# 				upgrade_megastructure_to = katzen_war_forge_1
+# 			}
+# 		}
+# 		set_planet_flag = war_forge
+# 	}
+# 	ai_weight = {
+# 		base = 1000
+# 	}
+# }
 
 decision_kaiser_craft_recall = {
 	enactment_time = 30

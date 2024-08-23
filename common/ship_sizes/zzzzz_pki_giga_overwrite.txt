@@ -49,6 +49,10 @@ giga_planet_behemoth = {
 		}
 	}
 
+	potential_construction = {
+		has_global_flag = quasarmod_enabled
+	}
+
 	possible_construction = {
 		starbase = {
 			has_starbase_building = quasarshipyard__shipyard_uplink
@@ -107,7 +111,12 @@ giga_massive_planet = {
 		upkeep = {
 			energy = 500
 			alloys = 125
+			multiplier = value:pki_attack_moon_upkeep
 		}
+	}
+
+	potential_construction = {
+		has_global_flag = quasarmod_enabled
 	}
 
 	possible_construction = {

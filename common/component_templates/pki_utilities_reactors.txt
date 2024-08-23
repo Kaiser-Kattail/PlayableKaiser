@@ -38,6 +38,13 @@
 @platform_power_5 = 575
 @platform_power_6 = 750
 
+@starbase_power_1 = 1875
+@starbase_power_2 = 2500
+@starbase_power_3 = 3250
+@starbase_power_4 = 4250
+@starbase_power_5 = 5500
+@starbase_power_6 = 7125
+
 #############
 #	COST	#
 #############
@@ -213,7 +220,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fission_power" }
 	component_set = pki_katzen_power_core
-	size_restriction = { pki_warforge_platform }
+	size_restriction = { pki_warforge_platform  }
 	upgrades_to = PKI_PLATFORM_FUSION_REACTOR
 
 	ai_weight = {
@@ -352,7 +359,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fusion_power" }
 	component_set = pki_katzen_power_core
-	size_restriction = { pki_warforge_platform }
+	size_restriction = { pki_warforge_platform  }
 	upgrades_to = PKI_PLATFORM_COLD_FUSION_REACTOR
 
 	ai_weight = {
@@ -491,7 +498,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_cold_fusion_power" }
 	component_set = pki_katzen_power_core
-	size_restriction = { pki_warforge_platform }
+	size_restriction = { pki_warforge_platform  }
 	upgrades_to = PKI_PLATFORM_ANTIMATTER_REACTOR
 
 	ai_weight = {
@@ -630,7 +637,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_antimatter_power" }
 	component_set = pki_katzen_power_core
-	size_restriction = { pki_warforge_platform }
+	size_restriction = { pki_warforge_platform  }
 	upgrades_to = PKI_PLATFORM_ZERO_POINT_REACTOR
 
 	ai_weight = {
@@ -770,7 +777,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_zero_point_power" }
 	component_set = pki_katzen_power_core
-	size_restriction = { pki_warforge_platform }
+	size_restriction = { pki_warforge_platform  }
 	upgrades_to = PKI_PLATFORM_DARK_MATTER_REACTOR
 
 	ai_weight = {
@@ -926,7 +933,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_dark_matter_power_core" }
 	component_set = pki_katzen_power_core
-	size_restriction = { pki_warforge_platform }
+	size_restriction = { pki_warforge_platform  }
 
 	ai_weight = {
 		weight = 6
@@ -934,5 +941,126 @@ utility_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_dark_matter }
 		}
+	}
+}
+
+# Warforge reactors
+
+utility_component_template = {
+	key = "PKI_WARFORGE_FISSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = @starbase_power_1
+
+	prerequisites = { "tech_fission_power" }
+	class_restriction = { shipclass_starbase }
+	component_set = "pki_katzen_power_core"
+	size_restriction = {
+		pki_warforge_starbase
+	}
+	upgrades_to = "PKI_WARFORGE_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "PKI_WARFORGE_FUSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = @starbase_power_2
+
+	prerequisites = { "tech_fusion_power" }
+	component_set = "pki_katzen_power_core"
+	class_restriction = { shipclass_starbase }
+	size_restriction = {
+		pki_warforge_starbase
+	}
+	upgrades_to = "PKI_WARFORGE_COLD_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "PKI_WARFORGE_COLD_FUSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = @starbase_power_3
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "pki_katzen_power_core"
+	class_restriction = { shipclass_starbase }
+	size_restriction = {
+		pki_warforge_starbase
+	}
+	upgrades_to = "PKI_WARFORGE_ANTIMATTER_REACTOR"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "PKI_WARFORGE_ANTIMATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = @starbase_power_4
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "pki_katzen_power_core"
+	class_restriction = { shipclass_starbase }
+	size_restriction = {
+		pki_warforge_starbase
+	}
+	upgrades_to = "PKI_WARFORGE_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "PKI_WARFORGE_ZERO_POINT_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @starbase_power_5
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "pki_katzen_power_core"
+	class_restriction = { shipclass_starbase }
+	size_restriction = {
+		pki_warforge_starbase
+	}
+	upgrades_to = "PKI_WARFORGE_DARK_MATTER_REACTOR"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "PKI_WARFORGE_DARK_MATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @starbase_power_6
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "pki_katzen_power_core"
+	class_restriction = { shipclass_starbase }
+	size_restriction = {
+		pki_warforge_starbase
+	}
+
+	ai_weight = {
+		weight = 6
 	}
 }

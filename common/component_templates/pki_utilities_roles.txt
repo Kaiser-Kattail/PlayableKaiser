@@ -530,3 +530,83 @@ utility_component_template = {
 		weight = 3
 	}
 }
+
+################
+# Starbase
+################
+
+utility_component_template = {
+	key = "PKI_WARFORGE_COMBAT_COMPUTER_1"
+	size = small
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	power = 0
+	class_restriction = { shipclass_starbase shipclass_military_station }
+	size_restriction = {
+		pki_warforge_starbase
+		pki_warforge_platform
+	}
+	component_set = "pki_katzen_combat_computers"
+	ship_behavior = "platform"
+	upgrades_to = "PKI_WARFORGE_COMBAT_COMPUTER_2"
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.05
+		ship_tracking_add = 10
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "PKI_WARFORGE_COMBAT_COMPUTER_2"
+	size = small
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	power = 0
+	class_restriction = { shipclass_starbase shipclass_military_station }
+	size_restriction = {
+		pki_warforge_starbase
+		pki_warforge_platform
+	}
+	component_set = "pki_katzen_combat_computers"
+	ship_behavior = "platform"
+	prerequisites = { "tech_combat_computers_1" }
+	upgrades_to = "PKI_WARFORGE_COMBAT_COMPUTER_3"
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.10
+		ship_tracking_add = 20
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "PKI_WARFORGE_COMBAT_COMPUTER_3"
+	size = small
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	power = 0
+	class_restriction = { shipclass_starbase shipclass_military_station }
+	size_restriction = {
+		pki_warforge_starbase
+		pki_warforge_platform
+	}
+	component_set = "pki_katzen_combat_computers"
+	ship_behavior = "platform"
+	prerequisites = { "tech_combat_computers_2" }
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_tracking_add = 30
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}

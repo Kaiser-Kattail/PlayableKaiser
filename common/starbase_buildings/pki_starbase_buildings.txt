@@ -1,0 +1,17 @@
+pki_warforge_building = {
+	icon = "GFX_starbase_salvager_workshop"
+	construction_days = 360
+	potential = {
+		has_starbase_size = pki_warforge_starbase
+	}
+
+	resources = {
+		category = starbase_buildings
+		produces = { alloys = 10 }
+		cost = { alloys = 50 }
+	}
+
+	station_modifier = {
+		starbase_shipyard_build_speed_mult = 0.5
+	}
+}

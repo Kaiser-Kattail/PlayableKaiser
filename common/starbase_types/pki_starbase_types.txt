@@ -1,0 +1,55 @@
+spki_warforge = {
+    ai_use_defense_platforms = yes
+    potential = {
+        has_starbase_size = pki_warforge_starbase
+    }
+
+    weight_modifier = {
+        base = 1
+    }
+
+    ai_design = {
+        min = {
+            base = 1
+        }
+
+        ratio = {
+            base = 0.20
+            modifier = {
+                add = 0.10
+                exists = owner
+                owner = {
+                    has_ethic = ethic_militarist
+                }
+            }
+            modifier = {
+                add = 0.05
+                exists = owner
+                owner = {
+                    has_ethic = ethic_fanatic_militarist
+                }
+            }
+        }
+
+        # token followed by priority
+        buildings = {
+            crew_quarters = {
+                base = 1.00
+            }
+        }
+
+        modules = {
+            pki_warforge_gun_battery = {
+                base = 0.50
+            }
+
+            pki_warforge_missile_battery = {
+                base = 1.00
+            }
+
+            pki_warforge_hangar_bay = {
+                base = 0.45
+            }
+        }
+    }
+}

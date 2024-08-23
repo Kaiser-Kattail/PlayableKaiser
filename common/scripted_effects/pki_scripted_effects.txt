@@ -35,54 +35,6 @@ pki_district_convert = {
     clear_variable = $VARIABLE$
 }
 
-pki_spawn_warforge_fleet = {
-    create_fleet = {
-        name = "Katzenkriegsschmiedekanone"
-        settings = {
-            spawn_debris = no
-        }
-        effect = {
-            set_owner = $OWNER$
-            if = {
-                limit = {
-                    fromfrom = {
-                        space_owner = {
-                            NOT = {
-                                pki_is_katzenartig_imperium = yes
-                            }
-                        }
-                    }
-                }
-                set_owner = event_target:pki_warforge_country
-            }
-            create_ship = {
-                name = "Katzenkriegsschmiedekanone"
-                design = "Rhawn"
-                upgradable = no
-            }
-            set_location = fromfrom
-            set_fleet_flag = warforge_platform
-            set_fleet_flag = warforge_platform@fromfrom
-        }
-    }
-    if = {
-        limit = {
-            space_owner = {
-                pki_is_katzprotektorat = yes
-            }
-        }
-        every_system_planet = {
-            limit = {
-                has_planet_flag = war_forge
-            }
-            add_modifier = {
-                modifier = pki_warforge_in_orbit
-                days = -1
-            }
-        }
-    }
-}
-
 pki_spawn_defense_fleet = {
     create_fleet = {
         name = "Katzenplanetenverteidigung"

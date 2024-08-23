@@ -1,5 +1,5 @@
-katzen_war_forge_0 = {
-	entity = ""
+pki_warforge_0 = {
+	entity = "pki_warplatform_invisible_entity"
 	construction_entity = "katzen_war_forge_entity"
 	portrait = "GFX_megastructure_construction_background"
 	place_entity_on_planet_plane = no
@@ -17,7 +17,7 @@ katzen_war_forge_0 = {
 	}
 }
 	
-katzen_war_forge_1 = {
+pki_warforge_1 = {
 	entity = "katzen_war_forge_entity"
 	construction_entity = "katzen_war_forge_entity"
 	portrait = "GFX_megastructure_construction_background"
@@ -28,27 +28,50 @@ katzen_war_forge_1 = {
 	build_time = 480
 	show_in_outliner = no
 	construction_blocks_and_blocked_by = none
-	resources = {
-		category = giga_kilostructures
-		produces = { alloys = 5 }
-	}
-	country_modifier = {
-		custom_tooltip = pki_war_forge_mega_effect
-	}
 	upgrade_from = {
-		katzen_war_forge_0
+		pki_warforge_0
 	}
-	potential = { always = yes }
+	potential = { always = no }
 	ai_weight = { factor = 0 }
 
 	on_build_complete = {
-		pki_spawn_warforge_fleet = {
-			OWNER = event_target:katzenartig
+		event_target:pki_warforge_planet@fromfrom = {
+			save_event_target_as = pki_warforge_planet
 		}
-	}
-	dismantle_potential = { always = no }
-	outliner_trigger = {
-		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
+		clear_global_event_target = pki_warforge_planet@fromfrom
+		create_fleet = {
+			effect = {
+				set_owner = event_target:katzenartig
+				create_ship = {
+					random_existing_design = pki_warforge_starbase
+					effect = {
+						set_name = {
+							key = pki_warforge_name
+							variable_string = "[event_target:pki_warforge_planet.GetName]"
+						}
+					}
+				}
+				set_location = event_target:pki_warforge_planet
+				set_fleet_flag = pki_warforge@event_target:pki_warforge_planet
+			}
+		}
+		solar_system = {
+			every_fleet_in_system = {
+				limit = {
+					is_ship_size = pki_warforge_starbase
+					has_fleet_flag = pki_warforge@event_target:pki_warforge_planet
+				}
+				set_location = {
+					target = event_target:pki_warforge_planet
+					distance = 0
+					angle = random
+				}
+				starbase = {
+					set_starbase_building = { building = pki_warforge_building slot = 1 }
+				}
+			}
+		}
+		remove_megastructure = fromfrom
 	}
 }	
 
@@ -420,5 +443,166 @@ playable_kaiser_ehve = {
 
 	outliner_trigger = {
 		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
+	}
+}
+
+pki_warforge_mega = {
+	entity = ""
+	construction_entity = "katzen_war_forge_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = 0 y = 0 }
+	scales_with_planet = no
+	show_galactic_map_icon = no
+	show_in_outliner = no
+	build_time = 1
+
+	starbase = starbase_level_pki_warforge_starbase
+
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 1
+		}
+	}
+	construction_blocks_and_blocked_by = none
+
+	potential = { pki_is_katzenartig_imperium = yes }
+
+	possible = {
+		hidden_trigger = {
+			exists = starbase
+		}
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_surveyed_planet"
+				is_surveyed = { # prevent leaking habitability information
+					who = prev.from
+					status = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_colonized_planet_orbital_ring"
+				is_colony = yes
+				exists = owner
+				exists = controller
+				controller = { is_same_value = prev.owner }
+			}
+			custom_tooltip = {
+				fail_text = "requires_not_hostile_or_primitive"
+				NOR = {
+					planet_is_hostile_or_crisis = yes
+					AND = {
+						exists = owner
+						owner = {
+							is_country_type = primitive
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#can_build_megastructure_on_planet = yes
+				NOR = {
+					has_planet_flag = megastructure
+					AND = {
+						has_planet_flag = has_megastructure
+						# Special exception so you can build an orbital ring even if you have MSI's warship as a habitat.
+						NOT = {
+							has_planet_flag = has_payback_habitat
+						}
+					}
+					has_planet_flag = ruined_orbital_ring_planet
+					solar_system = {
+						has_star_flag = ring_world_built
+					}
+					is_artificial = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_orbital_debris"
+				NOR = {
+					has_planet_flag = has_orbital_debris
+				}
+			}
+			if = {
+				limit = {
+					from = { is_ai = yes }
+				}
+				num_pops >= 25
+			}
+		}
+	}
+
+	# root = system
+	# from = country
+	ai_weight = {
+		factor = 5
+
+		modifier = {
+			factor = 3
+			solar_system = {
+				exists = owner
+				is_same_value = owner.capital_scope.solar_system
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_system = {
+				exists = owner
+				is_same_value = owner.capital_scope.solar_system
+			}
+		}
+
+		modifier = {
+			factor = 0.1
+			any_neighbor_system = {
+				exists = owner
+				owner = { NOT = { is_same_value = from } }
+			}
+		}
+		modifier = {
+			factor = 3
+			any_system_colony = {
+				num_pops >= 50
+				NOT = { exists = orbital_defence }
+			}
+		}
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+
+	on_build_complete = {
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+			save_event_target_as = orbital_ring_planet
+
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+			create_starbase = {
+				size = pki_warforge_starbase
+				owner = FROM
+				#module = <starbase_module>
+				#building = <starbase_building>
+				effect = { }
+			}
+		}
+		remove_megastructure = fromfrom
 	}
 }
