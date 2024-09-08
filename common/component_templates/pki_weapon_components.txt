@@ -32,7 +32,7 @@ weapon_component_template = {
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic }
 
-	size_restriction = { pki_panzer }
+	size_restriction = { pki_panzer pki_warforge_starbase }
 
 	firing_arc = 30
 	min_range = 10.0
@@ -147,7 +147,7 @@ weapon_component_template = {
 		}
 	}
 
-	size_restriction = { pki_cruiser }
+	size_restriction = { pki_cruiser pki_warforge_starbase }
 
 	ai_weight = {
 		weight = 999

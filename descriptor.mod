@@ -1,4 +1,4 @@
-version="3.8.4"
+version="3.8.6"
 tags={
 	"Buildings"
 	"Diplomacy"

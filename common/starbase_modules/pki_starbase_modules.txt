@@ -1,5 +1,53 @@
-pki_warforge_gun_battery = {
-    section = "PKI_WARFORGE_BATTERY_STARBASE_SECTION"
+pki_warforge_xl_battery = {
+    section = "PKI_WARFORGE_XL_BATTERY_STARBASE_SECTION"
+    icon = GFX_spaceport_modules
+    construction_days = 180
+
+    potential = {
+        has_starbase_size = pki_warforge_starbase
+        from = {
+            has_technology = tech_pki_cruiser
+        }
+    }
+
+    show_in_tech = tech_pki_cruiser
+
+    resources = {
+        category = starbase_modules
+        cost = {
+            alloys = 50
+        }
+
+        upkeep = {
+            energy = 1
+        }
+    }
+
+    station_modifier = {
+        ship_hull_mult = 0.10
+        ship_armor_mult = 0.10
+        starbase_trade_protection_range_add = 1
+        starbase_trade_protection_add = 5
+        starbase_defense_platform_capacity_add = 1
+    }
+
+    ai_weight = {
+        weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+        modifier = {
+            factor = 2
+            exists = owner
+            owner = {
+                OR = {
+                    is_preferred_weapons = weapon_type_energy
+                    is_preferred_weapons = weapon_type_kinetic
+                }
+            }
+        }
+    }
+}
+
+pki_warforge_small_gun_battery = {
+    section = "PKI_WARFORGE_SMALL_BATTERY_STARBASE_SECTION"
     icon = GFX_spaceport_modules
     construction_days = 180
 
@@ -17,6 +65,54 @@ pki_warforge_gun_battery = {
             energy = 1
         }
     }
+
+    station_modifier = {
+        ship_hull_mult = 0.10
+        ship_armor_mult = 0.10
+        starbase_trade_protection_range_add = 1
+        starbase_trade_protection_add = 5
+        starbase_defense_platform_capacity_add = 1
+    }
+
+    ai_weight = {
+        weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+        modifier = {
+            factor = 2
+            exists = owner
+            owner = {
+                OR = {
+                    is_preferred_weapons = weapon_type_energy
+                    is_preferred_weapons = weapon_type_kinetic
+                }
+            }
+        }
+    }
+}
+
+pki_warforge_gun_battery = {
+    section = "PKI_WARFORGE_BATTERY_STARBASE_SECTION"
+    icon = GFX_spaceport_modules
+    construction_days = 180
+
+    potential = {
+        has_starbase_size = pki_warforge_starbase
+        from = {
+            has_technology = tech_pki_panzer
+        }
+    }
+
+    resources = {
+        category = starbase_modules
+        cost = {
+            alloys = 50
+        }
+
+        upkeep = {
+            energy = 1
+        }
+    }
+
+    show_in_tech = tech_pki_panzer
 
     station_modifier = {
         ship_hull_mult = 0.10

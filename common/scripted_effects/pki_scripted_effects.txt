@@ -243,3 +243,38 @@ pki_create_corrona_dragon_fleet_corrona = {
         }
     }
 }
+
+pki_make_warforge = {
+    create_fleet = {
+        effect = {
+            set_owner = event_target:katzenartig
+            create_ship = {
+                random_existing_design = pki_warforge_starbase
+                effect = {
+                    set_name = {
+                        key = pki_warforge_name
+                        variable_string = "[event_target:pki_warforge_planet.GetName]"
+                    }
+                }
+            }
+            set_location = event_target:root
+            set_fleet_flag = pki_warforge@root
+        }
+    }
+    solar_system = {
+        every_fleet_in_system = {
+            limit = {
+                is_ship_size = pki_warforge_starbase
+                has_fleet_flag = pki_warforge@root
+            }
+            set_location = {
+                target = root
+                distance = 0
+                angle = random
+            }
+            starbase = {
+                set_starbase_building = { building = pki_warforge_building slot = 1 }
+            }
+        }
+    }
+}
