@@ -591,9 +591,9 @@
     approach_ignore_desc: "We will simply do nothing."
     approach_mobilize:0 "Mobilize"
     approach_mobilize_desc: "We will mobilize as secretly as possible, but word is bound to get out."
-    conquest.0.title:0 "Fall of Katown"
-    conquest.0.desc:0 "The §HKatzenartig Imperium§! has been defeated. The Kaiser has vanished, and the Katzen High Command are being rounded up as we speak.\n\n§RThe game is over.§!"
-    conquest.0.a: "Damnit."
+    pki_conquest.0.title:0 "Fall of Katown"
+    pki_conquest.0.desc:0 "The §HKatzenartig Imperium§! has been defeated. The Kaiser has vanished, and the Katzen High Command are being rounded up as we speak.\n\n§RThe game is over.§!"
+    pki_conquest.0.a: "Damnit."
    
     EMPIRE_DESIGN_katzen:0 "Katzenartig Imperium"
     PRESCRIPTED_ship_prefix_katzen: "KAT"

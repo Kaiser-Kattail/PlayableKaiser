@@ -760,13 +760,6 @@ situation_pki_galactic_tension = {
 			on_first_enter = {
 				set_global_flag = pki_galactic_tension_stage_4
 
-				owner = {
-					set_country_flag = pki_crisis_buffs_enabled
-					country_event = {
-						id = pki_crisis.104
-					}
-				}
-
 				if = {
 					limit = {
 						is_galactic_community_formed = yes
