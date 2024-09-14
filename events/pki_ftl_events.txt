@@ -6,10 +6,12 @@ country_event = {
 	title = pki_ftl.1.title
 	desc = pki_ftl.1.desc
 	is_triggered_only = yes
+	show_sound = event_energy_field
 	option = {
 		name = pki_ftl.1.a
 	}
 	immediate = {
+		play_sound = event_machinery
 		start_situation = {
 			type = situation_ftl_development
 		}
@@ -33,17 +35,11 @@ country_event = {
 			}
 			destroy_situation = this
 		}
-		remove_modifier = pki_no_ftl_capability
-		if = {
-			limit = {
-				has_first_contact_dlc = yes
-			}
-			set_country_flag = pki_completed_ftl
-			add_tech_progress = { tech = tech_hyper_drive_1 progress = 0.25 }
-		}
+		remove_modifier = pki_no_ftl_capability_4
 		country_event = {
 			id = pki_paragons.1
 			days = 180
+			random = 360
 		}
 		country_event = {
 			id = pki_crisis.100
