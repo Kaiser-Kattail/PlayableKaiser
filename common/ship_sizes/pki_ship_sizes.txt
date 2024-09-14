@@ -350,7 +350,7 @@ pki_warforge_platform = { #Katzen war forge platform
 	build_block_radius = @build_block_radius_military
 
 	construction_type = starbase_defenses
-
+	base_buildtime = @corvette_build_time
 	resources = {
 		category = pki_katzen_ships
 		cost = {
@@ -360,6 +360,7 @@ pki_warforge_platform = { #Katzen war forge platform
 
 	potential_country = {
 		pki_is_katzenartig_imperium = yes
+		has_technology = tech_pki_warforge
 	}
 
 	potential_construction = {

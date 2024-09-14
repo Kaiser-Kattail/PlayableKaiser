@@ -1,5 +1,5 @@
 pki_warforge_building = {
-	icon = "GFX_starbase_salvager_workshop"
+	icon = "GFX_spaceport_pki_war_forge_core"
 	construction_days = 360
 	potential = {
 		has_starbase_size = pki_warforge_starbase
