@@ -131,15 +131,10 @@ country_event = {
 
 		set_country_flag = pki_hasnt_used_ehve
 
-		if = {
-			limit = {
-				has_first_contact_dlc = no
-			}
-			add_modifier = {
-				modifier = pki_no_ftl_capability
-				days = -1
-			}
+		add_modifier = {
+			modifier = pki_no_ftl_capability_1
 		}
+
 		#Target flusion
 		every_galaxy_planet = {
 			if = {

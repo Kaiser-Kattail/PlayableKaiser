@@ -386,7 +386,7 @@ situation_new_moon = {
 }
 
 situation_ftl_development = {
-	picture = GFX_evt_analyzing_artifacts
+	picture = GFX_evt_ship_in_orbit_2
 	category = neutral
 	start_value = 0
 	complete_icon = GFX_situation_outcome_positive
@@ -401,17 +401,17 @@ situation_ftl_development = {
 		modifier = {
 			desc = string_current_approach
 			current_situation_approach = approach_major_research
-			add = 2
+			add = 1.5
 		}
 		modifier = {
 			desc = string_current_approach
 			current_situation_approach = approach_heavy_research
-			add = 4
+			add = 2
 		}
 	}
 
 	on_progress_complete = {
-		custom_tooltip = ftl_situation_success
+		custom_tooltip = pki_ftl_situation_success
 		hidden_effect = {
 			owner = {
 				country_event = {
@@ -425,7 +425,53 @@ situation_ftl_development = {
 		stage_1 = {
 			icon = GFX_situation_stage_1
 			icon_background = GFX_situation_stage_frame_green
+			end = 30
+
+		}
+	}
+
+	stages = {
+		stage_2 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 60
+			custom_tooltip = pki_ftl_sit_improve
+			on_first_enter = {
+				owner = {
+					remove_modifier = pki_no_ftl_capability_1
+					add_modifier = { modifier = pki_no_ftl_capability_2 }
+				}
+			}
+		}
+	}
+
+	stages = {
+		stage_3 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 90
+			custom_tooltip = pki_ftl_sit_improve
+			on_first_enter = {
+				owner = {
+					remove_modifier = pki_no_ftl_capability_2
+					add_modifier = { modifier = pki_no_ftl_capability_3 }
+				}
+			}
+		}
+	}
+
+	stages = {
+		stage_4 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
 			end = 120
+			custom_tooltip = pki_ftl_sit_improve
+			on_first_enter = {
+				owner = {
+					remove_modifier = pki_no_ftl_capability_3
+					add_modifier = { modifier = pki_no_ftl_capability_4 }
+				}
+			}
 		}
 	}
 
@@ -625,7 +671,7 @@ situation_pki_galactic_tension = {
 			has_global_flag = compound_invasion_ongoing
 			#Vanilla crises
 			has_global_flag = ongoing_prethoryn_invasion
-			# why no ongoing flag paradox, literally just forgot extradimensionals
+			# why no ongoing flag, paradox literally just forgot extradimensionals
 			has_global_flag = ai_invasion_ongoing
 			has_global_flag = synth_queen_ongoing
 			count_country = {
@@ -637,9 +683,7 @@ situation_pki_galactic_tension = {
 						is_country_type = dormant_aeternum
 					}
 					pki_is_katzenartig_imperium = no
-					NOT = {
-						has_country_flag = pki_win_prevention_country
-					}
+					pki_is_allied_with_katzen = no
 				}
 			}
 		}
@@ -860,6 +904,7 @@ situation_pki_galactic_tension = {
 			on_first_enter = {
 				owner = {
 					every_country = { country_event = { id = pki_misc.5 } }
+					event_target:global_event_target = { country_event = { id = pki_crisis.666 days = 360 } }
 					hidden_effect = {
 						set_country_flag = player_galactic_katzen_empire_formed
 						change_country_flag = {

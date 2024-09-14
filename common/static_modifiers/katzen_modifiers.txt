@@ -17,11 +17,24 @@ stop_eating_naval_cap_you_hecker = {
 	country_naval_cap_add = 50
 }
 
-pki_no_ftl_capability = {
-	ship_speed_mult = -0.75
-	ship_windup_mult = 2
-	country_starbase_influence_cost_mult = 0.75
+pki_no_ftl_capability_1 = {
+	custom_tooltip = pki_no_ftl_tooltip_1
+	ship_interstellar_speed_mult = -0.9975
+}
+
+pki_no_ftl_capability_2 = {
+	custom_tooltip = pki_no_ftl_tooltip_2
 	ship_interstellar_speed_mult = -0.99
+}
+
+pki_no_ftl_capability_3 = {
+	custom_tooltip = pki_no_ftl_tooltip_3
+	ship_interstellar_speed_mult = -0.90
+}
+
+pki_no_ftl_capability_4 = {
+	custom_tooltip = pki_no_ftl_tooltip_4
+	ship_interstellar_speed_mult = -0.80
 }
 
 central_stability = {
@@ -119,21 +132,6 @@ pki_galcom_sanctions_1 = {
 pki_galcom_sanctions_2 = {
 	diplo_weight_mult = -0.75
 	country_trust_growth = -0.75
-}
-
-pki_crisis_war_buffs = {
-	ship_speed_mult = 0.15
-	ship_fire_rate_mult = 0.15
-	ships_upkeep_mult = 0.5
-	starbase_shipyard_build_speed_mult = -0.5
-	planet_building_build_speed_mult = -0.5
-}
-
-pki_crisis_peace_buffs = {
-	ships_upkeep_mult = -0.5
-	starbase_shipyard_build_speed_mult = 0.5
-	planet_building_build_speed_mult = 0.5
-	megastructure_build_speed_mult = 0.25
 }
 
 pki_crisis_buffs = {
