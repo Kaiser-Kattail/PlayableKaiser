@@ -133,7 +133,7 @@ situation_solakian_conquest = {
 		hidden_effect = {
 			owner = {
 				country_event = {
-					id = conquest.102
+					id = pki_conquest.102
 				}
 			}
 		}
@@ -294,7 +294,7 @@ situation_cookian_conquest = {
 		hidden_effect = {
 			owner = {
 				country_event = {
-					id = conquest.202
+					id = pki_conquest.202
 				}
 			}
 		}
@@ -444,7 +444,7 @@ situation_kronk_conquest = {
 		hidden_effect = {
 			owner = {
 				country_event = {
-					id = conquest.302
+					id = pki_conquest.302
 				}
 			}
 		}
@@ -583,7 +583,7 @@ situation_ravka_conquest = {
 		hidden_effect = {
 			owner = {
 				country_event = {
-					id = conquest.402
+					id = pki_conquest.402
 				}
 			}
 		}
@@ -714,7 +714,7 @@ situation_zousa_conquest = {
 		hidden_effect = {
 			owner = {
 				country_event = {
-					id = conquest.502
+					id = pki_conquest.502
 				}
 			}
 		}
@@ -834,7 +834,7 @@ situation_droog_conquest = {
 		hidden_effect = {
 			owner = {
 				country_event = {
-					id = conquest.602
+					id = pki_conquest.602
 				}
 			}
 		}
@@ -954,7 +954,7 @@ situation_ezic_conquest = {
 		hidden_effect = {
 			owner = {
 				country_event = {
-					id = conquest.702
+					id = pki_conquest.702
 				}
 			}
 		}
@@ -1085,7 +1085,7 @@ situation_mercurian_conquest = {
 		hidden_effect = {
 			owner = {
 				country_event = {
-					id = conquest.802
+					id = pki_conquest.802
 				}
 			}
 		}
@@ -1205,7 +1205,7 @@ situation_cyatianala_conquest = {
 		hidden_effect = {
 			owner = {
 				country_event = {
-					id = conquest.902
+					id = pki_conquest.902
 				}
 			}
 		}
@@ -1336,7 +1336,7 @@ situation_yinja_conquest = {
 		hidden_effect = {
 			owner = {
 				country_event = {
-					id = conquest.1102
+					id = pki_conquest.1102
 				}
 			}
 		}
@@ -1478,7 +1478,7 @@ situation_symbie_conquest = {
 		hidden_effect = {
 			owner = {
 				country_event = {
-					id = conquest.1202
+					id = pki_conquest.1202
 				}
 			}
 		}
@@ -1620,7 +1620,7 @@ situation_lauranaise_conquest = {
 		hidden_effect = {
 			owner = {
 				country_event = {
-					id = conquest.1302
+					id = pki_conquest.1302
 				}
 			}
 		}
@@ -1773,7 +1773,7 @@ situation_haranian_conquest = {
 		hidden_effect = {
 			owner = {
 				country_event = {
-					id = conquest.1402
+					id = pki_conquest.1402
 				}
 			}
 		}

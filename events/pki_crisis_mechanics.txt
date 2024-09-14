@@ -42,19 +42,6 @@ country_event = {
 
     immediate = {
         pki_update_galactic_tension = yes
-        every_country = {
-            limit = {
-                OR = {
-                    is_country_type = default
-                    is_country_type = fallen_empire
-                }
-                NOR = {
-                    has_country_flag = pki_win_prevention_country
-                    pki_is_katzenartig_imperium = yes
-                }
-            }
-            destroy_country = yes
-        }
     }
 }
 
@@ -74,118 +61,6 @@ country_event = {
             value = value:pki_galaxy_systems
         }
         pki_update_galactic_tension = yes
-
-        if = {
-            limit = {
-                NOT = { has_global_flag = pki_win_prevention_country_created}
-                count_country = {
-                    count < 2
-                    limit = {
-                        OR = {
-                            is_country_type = default
-                            is_country_type = fallen_empire
-                        }
-                        pki_is_katzenartig_imperium = no
-                        NOT = {
-                            has_country_flag = pki_win_prevention_country
-                        }
-                    }
-                }
-            }
-            # Win prevention for "cinematic" ending
-            event_target:global_event_country = {
-                create_country = {
-                    name = "PKI Win Prevention Country"
-                    type = default
-                    contact_rule = never
-                    auto_delete = no
-                    name_list = random
-                    authority = random
-                    civics = random
-                    origin = origin_default
-                    species = event_target:katzenartig
-                    set_capital_from_species = no
-                    randomize_ethos = yes
-                    effect = {
-                        set_global_flag = pki_win_prevention_country_created
-                        set_country_flag = pki_win_prevention_country
-                        save_global_event_target_as = pki_win_prevention_country
-                    }
-                }
-            }
-        }
-    }
-}
-
-country_event = {
-    id = pki_crisis.103
-    is_triggered_only = yes
-    hide_window = yes
-
-    trigger = {
-        pki_is_katzenartig_imperium = yes
-        has_country_flag = pki_crisis_buffs_enabled
-    }
-
-    immediate = {
-        remove_modifier = pki_crisis_peace_buffs
-        remove_modifier = pki_crisis_war_buffs
-        if = {
-            limit = {
-                is_at_war = yes
-            }
-            add_modifier = {
-                modifier = pki_crisis_war_buffs
-                multiplier = trigger:count_war
-            }
-        }
-        else_if = {
-            limit = {
-                is_at_war = no
-            }
-            add_modifier = {
-                modifier = pki_crisis_peace_buffs
-            }
-        }
-    }
-}
-
-country_event = {
-    id = pki_crisis.104
-    is_triggered_only = yes
-    picture = "GFX_evt_space_station"
-    title = "pki_crisis.104.name"
-    desc = "pki_crisis.104.desc"
-
-    trigger = {
-        pki_is_katzenartig_imperium = yes
-        has_country_flag = pki_crisis_buffs_enabled
-    }
-
-    immediate = {
-        remove_modifier = pki_crisis_peace_buffs
-        remove_modifier = pki_crisis_war_buffs
-        if = {
-            limit = {
-                is_at_war = yes
-            }
-            add_modifier = {
-                modifier = pki_crisis_war_buffs
-                multiplier = trigger:count_war
-            }
-        }
-        else_if = {
-            limit = {
-                is_at_war = no
-            }
-            add_modifier = {
-                modifier = pki_crisis_peace_buffs
-            }
-        }
-    }
-
-    option = {
-        name = "ACKNOWLEDGED"
     }
 }
 
