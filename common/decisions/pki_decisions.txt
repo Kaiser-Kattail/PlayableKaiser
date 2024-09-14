@@ -604,18 +604,21 @@ decision_pki_dismantle_warforge = {
 	}
 
 	effect = {
-		solar_system = {
-			every_fleet_in_system = {
-				limit = {
-					is_ship_size = pki_warforge_starbase
-					has_fleet_flag = pki_warforge@root
+		custom_tooltip = pki_dismantle_warforge_tt
+		hidden_effect = {
+			solar_system = {
+				every_fleet_in_system = {
+					limit = {
+						is_ship_size = pki_warforge_starbase
+						has_fleet_flag = pki_warforge@root
+					}
+					delete_fleet = this
 				}
-				delete_fleet = this
 			}
-		}
-		from = {
-			add_resource = {
-				alloys = 500
+			from = {
+				add_resource = {
+					alloys = 500
+				}
 			}
 		}
 	}
