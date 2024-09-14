@@ -507,9 +507,9 @@
 
     NAME_PKI_ATTACK_MOON: "Kaiser Moon"
    
-    # War forges
+    # War Forges
     pki_warforge_0:0 "Katzen War Forge Site"
-    pki_warforge_0_DESC:0 "A future construction site for a Katzen War Forge."
+    pki_warforge_0_DESC:0 "A construction site for a future Katzen War Forge."
     pki_warforge_1:0 "Katzen War Forge"
     pki_warforge_1_DESC:0 "A large orbital construct built near an inhabited Katzen colony, harvesting the local system for resources in order to assemble Katzen warships."
 
@@ -631,6 +631,22 @@
     pki_ftl.2.title:0 "FTL Complete"
     pki_ftl.2.desc:0 "After years of trials and experiments, the Katzenartig Research Division has successfully created FTL drives!\n\nWe may now reach for the very stars themselves!"
     pki_ftl.2.a:0 "Awesome!"
+
+    pki_no_ftl_capability_1:0 "Proto-FTL Engines: Abysmal"
+    pki_no_ftl_capability_desc_1:0 "While we may have discovered a form of FTL travel in the form of a hyperdrive, it is still too slow to perform to our standards."
+    pki_no_ftl_capability_2:0 "Proto-FTL Engines: Terrible"
+    pki_no_ftl_capability_desc_2:0 "$pki_no_ftl_capability_desc_1$"
+    pki_no_ftl_capability_3:0 "Proto-FTL Engines: Improving"
+    pki_no_ftl_capability_desc_3:0 "$pki_no_ftl_capability_desc_1$"
+    pki_no_ftl_capability_4:0 "Proto-FTL Engines: Near-Perfect"
+    pki_no_ftl_capability_desc_4:0 "$pki_no_ftl_capability_desc_1$"
+
+    pki_no_ftl_tooltip_1: "§YFTL Speed§! is §Rextremely slow§!"
+    pki_no_ftl_tooltip_2: "§YFTL Speed§! is §Pvery slow§!"
+    pki_no_ftl_tooltip_3: "§YFTL Speed§! is §Hmoderately slow§!"
+    pki_no_ftl_tooltip_4: "§YFTL Speed§! is §Ysomewhat slow§!"
+
+    pki_ftl_sit_improve: "§YFTL Speed§! will improve"
 
     tradition_katzen:0 "Kaiserism"
     tradition_katzen_desc:0 "The Kaiser's ambitions for both Flusion and the galaxy require an immense war machine to back it."
@@ -863,7 +879,7 @@
     decision_siegfried_anti_jump_off:0 "Deactivate Siegfried Disruptor System"
     decision_siegfried_anti_jump_off_desc:0 "Disables the disruption capabilities of the Siegfried world."
 
-    edict_katzen_war_forge_construction:0 "Automate War forge Construction"
+    edict_katzen_war_forge_construction:0 "Automate War Forge Construction"
     edict_katzen_war_forge_construction_desc:0 "Our workers will automatically seek out planets that don't have war forges and start constructing them, one by one."
 
     decision_pki_demotion_modifier:0 "Economic Assistance"
@@ -895,7 +911,7 @@
 
     playable_kaiser_ehve_phase0:0 "$gc_mega$E.H.V.E. Construction Site"
     playable_kaiser_ehve_phase0_DESC:0 "A construction site for a future Katzen E.H.V.E."
-    playable_kaiser_ehve_phase0_MEGASTRUCTURE_DETAILS:0 "£galwonders£ $giga_list_category_megastructure$ - $giga_list_category_transportation$\nTransports §YFleets§! across the galaxy by creating a §YWormhole§!.\n§LA device that stabilizes micro black holes that form in quantum foam to create tunnles through space.§!"
+    playable_kaiser_ehve_phase0_MEGASTRUCTURE_DETAILS:0 "£galwonders£ $giga_list_category_megastructure$ - $giga_list_category_transportation$\nTransports §YFleets§! across the galaxy by creating a §YWormhole§!\n§LA device that stabilizes micro black holes that form in quantum foam to create tunnles through space.§!"
 
     tech_pki_ehve:0 "Ereignis Horizont Versatz Einrichtung Construction"
     tech_pki_ehve_desc:0 "Utilizes the $r_arcane_manipulator_1$ and squeezed electromagnetic fields to inflate and stabilize probabilistic $ehof_wormholes$."
@@ -1164,22 +1180,25 @@
 
     decision_pki_construct_warforge: "$decision_katzen_war_forge$"
     decision_pki_construct_warforge_desc: "$pki_warforge_decision$"
+    pki_dismantle_warforge_tt: "§Y[This.GetName]'s War Forge§! will be dismantled, returning £alloys£ §Y500 Alloys§!"
 
-    decision_pki_dismantle_warforge: "Dismantle War forge"
+    decision_pki_dismantle_warforge: "Dismantle War Forge"
     decision_pki_dismantle_warforge_desc: "Regardless of the reason, this war forge suits us no longer, it must be dismantled."
 
-    pki_warforge_name: "[event_target:pki_warforge_planet.GetName] War forge"
+    pki_warforge_name: "[event_target:pki_warforge_planet.GetName] War Forge"
 
-    pki_warforge_starbase: "Katzen War forge"
+    pki_warforge_starbase: "Katzen War Forge"
 
     sm_pki_warforge_gun_battery: "$sm_gun_battery$"
-    sm_pki_warforge_gun_battery_desc: "$sm_gun_battery_desc$"
+    sm_pki_warforge_gun_battery_desc: "Adds two large weapon slots to the War Forge.\n"
     sm_pki_warforge_missile_battery: "$sm_missile_battery$"
-    sm_pki_warforge_missile_battery_desc: "$sm_missile_battery_desc$"
+    sm_pki_warforge_missile_battery_desc: "Adds four guided weapon slots to the War Forge.\n"
     sm_pki_warforge_hangar_bay: "$sm_hangar_bay$"
-    sm_pki_warforge_hangar_bay_desc: "$sm_hangar_bay_desc$"
-    sm_pki_warforge_anchorage: "$sm_anchorage$"
-    sm_pki_warforge_anchorage_desc: "$sm_anchorage_desc$"
+    sm_pki_warforge_hangar_bay_desc: "Adds two hangers for Strike Craft to the War Forge.\n"
+    sm_pki_warforge_xl_battery: "Extra Large Gun Battery"
+    sm_pki_warforge_xl_battery_desc: "Adds one extra large weapon slots to the War Forge.\n"
+    sm_pki_warforge_small_gun_battery: "Small Gun Battery"
+    sm_pki_warforge_small_gun_battery_desc: "Adds four small weapon slots to the War Forge.\n"
 
-    sm_pki_warforge_building: "Katzen War forge Core"
+    sm_pki_warforge_building: "Katzen War Forge Core"
     sm_pki_warforge_building_desc: "The epitome of Katzen engineering.\n\n§gDue to game limitations certain buildings cannot be built nor hidden from this list. Sorry for the potentially clogged list.§!\n"
