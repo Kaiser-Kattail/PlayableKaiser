@@ -134,23 +134,9 @@ d_propanian_mines = {
 	icon = d_gaseous_eruption
 	
 	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_gas_extractor_add = 2
+		planet_miners_exotic_gases_produces_add = 0.1
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_gas_extraction_drone_add = 2
-	}
-	
 	drop_weight = {
 		weight = 0
 	}
@@ -301,21 +287,7 @@ d_catspian_crystal_mines = {
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_crystal_miner_add = 2
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_crystal_mining_drone_add = 2
+		planet_miners_rare_crystals_produces_add = 0.1
 	}
 
 	drop_weight = {
@@ -431,18 +403,9 @@ d_katzen_mote_field = {
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			is_gestalt = no
-		}
-		job_mote_harvester_add = 2
+		planet_miners_volatile_motes_produces_add = 0.1
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			is_gestalt = yes
-		}
-		job_mote_harvesting_drone_add = 2
-	}
 	
 	drop_weight = {
 		weight = 0

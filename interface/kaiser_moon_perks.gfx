@@ -273,5 +273,31 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_pki_swarmer_missile.dds"
 	}
 
+	spriteType = {
+		name = GFX_playable_kaiser_ehve_phase0_build_icon
+		textureFile = gfx/interface/icons/technologies/tech_pki_ehve.dds
+	}
+
+	spriteType = {
+		name = "GFX_spaceport_pki_extra_large_gun_battery"
+		textureFile = "gfx/interface/icons/modules/sb_pki_extra_large_battery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_spaceport_pki_missile_battery"
+		textureFile = "gfx/interface/icons/modules/sb_pki_missile_battery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_spaceport_pki_war_forge_core"
+		textureFile = "gfx/interface/icons/modules/sb_pki_war_forge_core.dds"
+	}
+
+	spriteType = {
+		name = "GFX_spaceport_pki_small_gun_battery"
+		textureFile = "gfx/interface/icons/modules/spaceport_modules.dds"
+		noOfFrames = 3
+		default_frame = 2
+	}
 }
 

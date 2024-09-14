@@ -452,7 +452,7 @@ district_pki_flusion_mining = {
 
 	inline_script = {
 		script = planet/minerals/giga_miner_job_swap
-		jobs = 7
+		jobs = 8
 	}
 
 	planet_modifier = {
@@ -460,79 +460,11 @@ district_pki_flusion_mining = {
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
 		modifier = {
-			job_crystal_miner_add = 0.33
-			job_gas_extractor_add = 0.33
-			job_mote_harvester_add = 0.33
+			planet_miners_rare_crystals_produces_add = 0.01
+			planet_miners_exotic_gases_produces_add = 0.01
+			planet_miners_volatile_motes_produces_add = 0.01
 		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		modifier = {
-			job_crystal_mining_drone_add = 0.33
-			job_gas_extraction_drone_add = 0.33
-			job_mote_harvesting_drone_add = 0.33
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		text = job_gas_extractor_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		text = job_gas_extraction_drone_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		text = job_crystal_miner_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		text = job_crystal_mining_drone_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		text = job_mote_harvester_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		text = job_mote_harvesting_drone_effect_desc
 	}
 }
 
