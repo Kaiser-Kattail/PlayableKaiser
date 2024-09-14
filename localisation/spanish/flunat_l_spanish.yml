@@ -223,11 +223,11 @@
   flunat.0111.title:0 "Flusionian Conquest"
   flunat.0111.desc:0 "Alert! We have reached a hostile bastion, ground forces are imminent! Expect heavy resistance, they won't go without a fight."
   flunat_defense.a:0 "Incoming!"
-  conquest.4.title:0 "Surprise Strike"
-  conquest.4.desc:0 "Enemy forces have launched several surprise strikes at key chokepoints and locations, and have provided a serious setback in our efforts."
-  conquest.4.a:0 "Curses!"
-  conquest.1.title:0 "Conquest Setback"
-  conquest.1.desc:0 "Alert! Following the decisive defeat of our ground forces, enemy troops have blitzed and seized a significant amount of land!\n\n§RThe Situation has moved backwards by 25!"
+  pki_conquest.4.title:99 "Surprise Strike"
+  pki_conquest.4.desc:99 "Enemy forces have launched several surprise strikes at key chokepoints and locations, and have provided a serious setback in our efforts."
+  pki_conquest.4.a:99 "Curses!"
+  pki_conquest.1.title:99 "Conquest Setback"
+  pki_conquest.1.desc:99 "Alert! Following the decisive defeat of our ground forces, enemy troops have blitzed and seized a significant amount of land!\n\n§RThe Situation has moved backwards by 25!"
   backfoot:0 "Homeland"
   region_1:0 "First Region"
   region_2:0 "Second Region"
@@ -236,8 +236,8 @@
   region_5:0 "Fifth Region"
   flunat.0102.desc:0 "You may have crushed our armies, but you will never crush our spirits. We shall do everything in our power to oppose you."
   flunat.0102.a:0 "We have won this."
-  conquest.102.desc:0 "Face it Kattail; you will never win. The free Roqualian spirit cannot be crushed by your farcical war machines."
-  conquest.102.a:0 "You will regret this!"
+  pki_conquest.102.desc:99 "Face it Kattail; you will never win. The free Roqualian spirit cannot be crushed by your farcical war machines."
+  pki_conquest.102.a:99 "You will regret this!"
   NAME_solakia_defense:0 "Roqualian Army"
   
   
@@ -251,7 +251,7 @@
   conquest_situation_conquer_cookie:0 "We annex the Galletian Technocracy, and control their lands and people."
   flunat.0202.desc:0 "The flame of progress can never be extinguished. We shall rise again once more."
   NAME_cookie_defense:0 "Galletian Army"
-  conquest.202.desc:0 "Intellect has once more triumphed over barbarism."
+  pki_conquest.202.desc:99 "Intellect has once more triumphed over barbarism."
   
   #Kronk
   situation_kronk_conquest:0 "War for the Kronk"
@@ -262,7 +262,7 @@
   conquest_situation_conquer_kronk:0 "We annex the Kronk, and control their lands and people."
   flunat.0302.desc:0 "Kronk..."
   NAME_kronk_defense:0 "Kronk Army"
-  conquest.302.desc:0 "Kronk! KRONK!!!!"
+  pki_conquest.302.desc:99 "Kronk! KRONK!!!!"
   
   #Ravka
   situation_ravka_conquest:0 "War for the Ravkans"
@@ -272,7 +272,7 @@
   conquest_situation_conquer_ravka:0 "We annex the Ravka, and control their lands and people."
   flunat.0402.desc:0 "You will one day pay for your monstrous actions."
   NAME_ravka_defense:0 "Ravkan Army"
-  conquest.402.desc:0 "Face it Kattail; you will never win. The Ravkanian spirit cannot be crushed by your farcical war machines."
+  pki_conquest.402.desc:99 "Face it Kattail; you will never win. The Ravkanian spirit cannot be crushed by your farcical war machines."
   
   #Zousa
   situation_zousa_conquest:0 "War for the Linterians"
@@ -282,7 +282,7 @@
   conquest_situation_conquer_zousa:0 "We annex Linteria, and control their lands and people."
   flunat.0502.desc:0 "...this...this cannot be..."
   NAME_zousa_defense:0 "Linterian Army"
-  conquest.502.desc:0 "Let this be a rightful lesson to you, foolish felines."
+  pki_conquest.502.desc:99 "Let this be a rightful lesson to you, foolish felines."
   
   #Droog
   situation_droog_conquest:0 "War for the Droog"
@@ -292,7 +292,7 @@
   conquest_situation_conquer_droog:0 "We annex the Droog, and control their lands and people."
   flunat.0602.desc:0 "The Droogians have been subjugated."
   NAME_droog_defense:0 "Droog Army"
-  conquest.602.desc:0 "Somehow, we lost to decentralized tribes. This blunder will be remembered for decades to come..."
+  pki_conquest.602.desc:99 "Somehow, we lost to decentralized tribes. This blunder will be remembered for decades to come..."
   
   
   #Ezic
@@ -303,7 +303,7 @@
   conquest_situation_conquer_ezic:0 "We annex the Zuspri, and control their lands and people."
   flunat.0702.desc:0 "You will pay for this in blood, Katzens."
   NAME_ezic_defense:0 "Zuspri Army"
-  conquest.702.desc:0 "Our idyllic and resilient Zuspri spirit will forevermore stand defiant to your metal monstrosities."
+  pki_conquest.702.desc:99 "Our idyllic and resilient Zuspri spirit will forevermore stand defiant to your metal monstrosities."
   
   #Mercuria
   situation_mercurian_conquest:0 "War for Mercuria"
@@ -313,7 +313,7 @@
   conquest_situation_conquer_mercuria:0 "We annex the Mercurians, and control their lands and people."
   flunat.0802.desc:0 "All we wished for was to be left alone. Was that too much to ask for?"
   NAME_mercurian_defense:0 "Mercurian Army"
-  conquest.802.desc:0 "Let that be a lesson in our definition of armed neutrality."
+  pki_conquest.802.desc:99 "Let that be a lesson in our definition of armed neutrality."
   
   #Cyatianala
   situation_cyatianala_conquest:0 "War for Cyatianala"
@@ -323,7 +323,7 @@
   conquest_situation_conquer_cyatianala:0 "We annex the Cyatianalas, and control their lands and people."
   flunat.0902.desc:0 "Your armies may have won, but the Cyats vow to fight against your regime, even unto death."
   NAME_cyatianala_defense:0 "Cyatianalian Army"
-  conquest.902.desc:0 "Face it Kattail; you're no match for the might of the Cyat."
+  pki_conquest.902.desc:99 "Face it Kattail; you're no match for the might of the Cyat."
   
   #Yinja
   situation_yinja_conquest:0 "War for Yinja"
@@ -333,7 +333,7 @@
   conquest_situation_conquer_yinja:0 "We annex the Yinjites, and control their lands and people."
   flunat.01102.desc:0 "And so you have won. But, this is not the end, Kattail. Our fight shall continue for decades to come, whether your nation wishes for it or not!"
   NAME_yinja_defense:0 "Yinjite Army"
-  conquest.1102.desc:0 "A most exhilarating conflict. You felines have been swept away by our might!"
+  pki_conquest.1102.desc:99 "A most exhilarating conflict. You felines have been swept away by our might!"
   
   #Symbieland
   situation_symbie_conquest:0 "War for Puffiland"
@@ -343,7 +343,7 @@
   conquest_situation_conquer_symbie:0 "We annex the Wacegi, and control their lands and people."
   flunat.01202.desc:0 "And so we fall once more. This is the end, is it not?"
   NAME_symbie_defense:0 "Wacegi Army"
-  conquest.1202.desc:0 "Let this be a lesson to you. One day, we shall turn Katown to rubble."
+  pki_conquest.1202.desc:99 "Let this be a lesson to you. One day, we shall turn Katown to rubble."
   
   #Laurandar
   situation_lauranaise_conquest:0 "War for Laurandar"
@@ -353,7 +353,7 @@
   conquest_situation_conquer_lauranaise:0 "We annex the Lauranaise, and control their lands and people."
   flunat.01302.desc:0 "Ha! You think you've won? The war has only just started..."
   NAME_lauranaise_defense:0 "Laurnaise Army"
-  conquest.1302.desc:0 "And stay out of our shores!"
+  pki_conquest.1302.desc:99 "And stay out of our shores!"
   
   #Harania
   situation_haranian_conquest:0 "War for Harania"
@@ -363,7 +363,7 @@
   conquest_situation_conquer_harania:0 "We annex the Haranians, and control their lands and people."
   flunat.01402.desc:0 "No... you will... pay for this..."
   NAME_haranian_defense:0 "Haranian Army"
-  conquest.1402.desc:0 "We have endured for ten thousand years and we shall endure ten thousand more."
+  pki_conquest.1402.desc:99 "We have endured for ten thousand years and we shall endure ten thousand more."
   
   ### FLUSION COALITION ###
   flunat_defense_army:0 "Flusionian Army"
@@ -385,18 +385,18 @@
   
   
   
-  conquest.090909.title:0 "The Unification of Flusion"
-  conquest.090909.desc:0 "Success! After years of violent wars, conquests, and death, Flusion is now unified under one banner.\n\nOur banner!"
-  conquest.090909.a:0 "Hear, hear!"
+  pki_conquest.090909.title:99 "The Unification of Flusion"
+  pki_conquest.090909.desc:99 "Success! After years of violent wars, conquests, and death, Flusion is now unified under one banner.\n\nOur banner!"
+  pki_conquest.090909.a:99 "Hear, hear!"
   
-  pki_no_ftl_capability:0 "No FTL Discovered"
+  
   central_stability:0 "Central Stability"
   
   situation_ftl_development:0 "Development of FTL"
   situation_ftl_development_type:0 "Development of FTL"
   situation_ftl_development_desc:0 "After the unification of our homeworld, we have turned our attention towards learning how to reach the stars."
   situation_ftl_development_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
-  ftl_situation_success:0 "We invent FTL, and can establish an interstellar empire."
+  pki_ftl_situation_success:99 "We perfect FTL, and can establish an interstellar empire."
   approach_minor_research:0 "Minor Investment"
   approach_major_research:0 "Major Investment"
   approach_heavy_research:0 "Heavy Investment"

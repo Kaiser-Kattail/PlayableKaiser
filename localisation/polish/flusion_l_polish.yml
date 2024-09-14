@@ -507,13 +507,13 @@
   
   NAME_PKI_ATTACK_MOON:0 "Kaiser Moon"
   
-  # War forges
+  # War Forges
   pki_warforge_0:0 "Katzen War Forge Site"
   pki_warforge_0_DESC:0 "A future construction site for a Katzen War Forge."
   pki_warforge_1:0 "Katzen War Forge"
   pki_warforge_1_DESC:0 "A large orbital construct built near an inhabited Katzen colony, harvesting the local system for resources in order to assemble Katzen warships."
   
-  pki_war_forge_mega_effect:99 "Naval Capacity: §G+1%§!\nShip Build Speed: §G+2.5%§!\n\n On Starbases with §YKatzen Shipyard Array§!:$TABBED_NEW_LINE$Shipyard Capacity: §G+0.5§!"
+  pki_war_forge_mega_effect:99 "Produces: £alloys£5.00\nCountry Modifier:$t$\nNaval Capacity: §G+5§!$t$\nShip Build Speed: §G+1%§!"
   
   district_pki_flusion_city:0 "Flusionian Housing Complex"
   district_pki_flusion_city_desc:0 "Colossal stretches of urban housing built within humongous megacities, providing housing and entertainment to its inhabitants. In true Katzen fashion, these housing complexes feature large quantities of anti-air and anti-orbital weaponry mounted onto nearly every rooftop, designed to hamper any invaders attempting to seize Flusion."
@@ -591,9 +591,9 @@
   approach_ignore_desc:0 "We will simply do nothing."
   approach_mobilize:0 "Mobilize"
   approach_mobilize_desc:0 "We will mobilize as secretly as possible, but word is bound to get out."
-  conquest.0.title:0 "Fall of Katown"
-  conquest.0.desc:0 "The §HKatzenartig Imperium§! has been defeated. The Kaiser has vanished, and the Katzen High Command are being rounded up as we speak.\n\n§RThe game is over.§!"
-  conquest.0.a:0 "Damnit."
+  pki_conquest.0.title:99 "Fall of Katown"
+  pki_conquest.0.desc:99 "The §HKatzenartig Imperium§! has been defeated. The Kaiser has vanished, and the Katzen High Command are being rounded up as we speak.\n\n§RThe game is over.§!"
+  pki_conquest.0.a:99 "Damnit."
   
   EMPIRE_DESIGN_katzen:0 "Katzenartig Imperium"
   PRESCRIPTED_ship_prefix_katzen:0 "KAT"
@@ -631,6 +631,22 @@
   pki_ftl.2.title:0 "FTL Complete"
   pki_ftl.2.desc:0 "After years of trials and experiments, the Katzenartig Research Division has successfully created FTL drives!\n\nWe may now reach for the very stars themselves!"
   pki_ftl.2.a:0 "Awesome!"
+  
+  pki_no_ftl_capability_1:99 "Proto-FTL Engines: Abysmal"
+  pki_no_ftl_capability_desc_1:99 "While we may have discovered a form of FTL travel in the form of a hyperdrive, it is still too slow to perform to our standards."
+  pki_no_ftl_capability_2:99 "Proto-FTL Engines: Terrible"
+  pki_no_ftl_capability_desc_2:99 "$pki_no_ftl_capability_desc_1$"
+  pki_no_ftl_capability_3:99 "Proto-FTL Engines: Improving"
+  pki_no_ftl_capability_desc_3:99 "$pki_no_ftl_capability_desc_1$"
+  pki_no_ftl_capability_4:99 "Proto-FTL Engines: Near-Perfect"
+  pki_no_ftl_capability_desc_4:99 "$pki_no_ftl_capability_desc_1$"
+  
+  pki_no_ftl_tooltip_1:99 "§YFTL Speed§! is §Rextremely slow§!"
+  pki_no_ftl_tooltip_2:99 "§YFTL Speed§! is §Pvery slow§!"
+  pki_no_ftl_tooltip_3:99 "§YFTL Speed§! is §Hmoderately slow§!"
+  pki_no_ftl_tooltip_4:99 "§YFTL Speed§! is §Ysomewhat slow§!"
+  
+  pki_ftl_sit_improve:99 "§YFTL Speed§! will improve"
   
   tradition_katzen:0 "Kaiserism"
   tradition_katzen_desc:0 "The Kaiser's ambitions for both Flusion and the galaxy require an immense war machine to back it."
@@ -1161,3 +1177,28 @@
   pki_sanctions_worsening:99 "Modify §Y$pki_galcom_sanctions_1$§! by:\n$DIPLOMACY_WEIGHT_LABEL$: §R-25%§!\n$MOD_COUNTRY_TRUST_GROWTH$: §R-25%§!"
   
   pki_leader_destiny_traits:99 "\n§YOnly one leader can have this §HKatzen Destiny Trait§!§!"
+  
+  decision_pki_construct_warforge:99 "$decision_katzen_war_forge$"
+  decision_pki_construct_warforge_desc:99 "$pki_warforge_decision$"
+  pki_dismantle_warforge_tt:99 "§Y[This.GetName]'s War Forge§! will be dismantled, returning £alloys£ §Y500 Alloys§!"
+  
+  decision_pki_dismantle_warforge:99 "Dismantle War Forge"
+  decision_pki_dismantle_warforge_desc:99 "Regardless of the reason, this war forge suits us no longer, it must be dismantled."
+  
+  pki_warforge_name:99 "[event_target:pki_warforge_planet.GetName] War Forge"
+  
+  pki_warforge_starbase:99 "Katzen War Forge"
+  
+  sm_pki_warforge_gun_battery:99 "$sm_gun_battery$"
+  sm_pki_warforge_gun_battery_desc:99 "Adds two large weapon slots to the War Forge.\n"
+  sm_pki_warforge_missile_battery:99 "$sm_missile_battery$"
+  sm_pki_warforge_missile_battery_desc:99 "Adds four guided weapon slots to the War Forge.\n"
+  sm_pki_warforge_hangar_bay:99 "$sm_hangar_bay$"
+  sm_pki_warforge_hangar_bay_desc:99 "Adds two hangers for Strike Craft to the War Forge.\n"
+  sm_pki_warforge_xl_battery:99 "Extra Large Gun Battery"
+  sm_pki_warforge_xl_battery_desc:99 "Adds one extra large weapon slots to the War Forge.\n"
+  sm_pki_warforge_small_gun_battery:99 "Small Gun Battery"
+  sm_pki_warforge_small_gun_battery_desc:99 "Adds four small weapon slots to the War Forge.\n"
+  
+  sm_pki_warforge_building:99 "Katzen War Forge Core"
+  sm_pki_warforge_building_desc:99 "The epitome of Katzen engineering.\n\n§gDue to game limitations certain buildings cannot be built nor hidden from this list. Sorry for the potentially clogged list.§!\n"

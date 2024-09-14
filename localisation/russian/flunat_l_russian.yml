@@ -223,11 +223,11 @@
   flunat.0111.title:0 "Флюзионское завоевание"
   flunat.0111.desc:0 "Внимание! Мы достигли вражеского бастиона, сражение неминуемо! Ожидайте сильного сопротивления, без боя они не уйдут."
   flunat_defense.a:0 "В бой!"
-  conquest.4.title:0 "Неожиданный удар"
-  conquest.4.desc:0 "Вражеские силы нанесли несколько внезапных ударов по ключевым точкам, что серьезно подорвало наши усилия."
-  conquest.4.a:0 "Проклятия!"
-  conquest.1.title:0 "Неудача в завоевании"
-  conquest.1.desc:0 "Тревога! После решительного разгрома наших сухопутных войск вражеские войска прорвались и захватили значительную территорию!\n\n§RСитуация изменилась на 25 назад!"
+  pki_conquest.4.title:99 "Surprise Strike"
+  pki_conquest.4.desc:99 "Enemy forces have launched several surprise strikes at key chokepoints and locations, and have provided a serious setback in our efforts."
+  pki_conquest.4.a:99 "Curses!"
+  pki_conquest.1.title:99 "Conquest Setback"
+  pki_conquest.1.desc:99 "Alert! Following the decisive defeat of our ground forces, enemy troops have blitzed and seized a significant amount of land!\n\n§RThe Situation has moved backwards by 25!"
   backfoot:0 "Родина"
   region_1:0 "Первый регион"
   region_2:0 "Второй регион"
@@ -236,8 +236,8 @@
   region_5:0 "Пятый регион"
   flunat.0102.desc:0 "Возможно, вы сокрушили наши армии, но вам никогда не сокрушить наш дух. Мы сделаем все, что в наших силах, чтобы противостоять вам."
   flunat.0102.a:0 "Мы выиграли это."
-  conquest.102.desc:0 "Посмотри правде в глаза, Каттейл; ты никогда не выиграешь. Свободный роквальский дух не может быть сокрушён вашими напыщенными военными машинами."
-  conquest.102.a:0 "Вы пожалеете об этом!"
+  pki_conquest.102.desc:99 "Face it Kattail; you will never win. The free Roqualian spirit cannot be crushed by your farcical war machines."
+  pki_conquest.102.a:99 "You will regret this!"
   NAME_solakia_defense:0 "Роквальская армия"
   
   
@@ -251,7 +251,7 @@
   conquest_situation_conquer_cookie:0 "Мы аннексируем Галлетианскую Технократию и контролируем их земли и людей."
   flunat.0202.desc:0 "Пламя прогресса никогда не погаснет. Мы воскреснем еще раз."
   NAME_cookie_defense:0 "Галлетийская армия"
-  conquest.202.desc:0 "Интеллект еще раз восторжествовал над варварством."
+  pki_conquest.202.desc:99 "Intellect has once more triumphed over barbarism."
   
   #Kronk
   situation_kronk_conquest:0 "Война за Кронк"
@@ -262,7 +262,7 @@
   conquest_situation_conquer_kronk:0 "Мы аннексируем Кронк и контролируем их земли и людей."
   flunat.0302.desc:0 "Кронк..."
   NAME_kronk_defense:0 "Кронк Армия"
-  conquest.302.desc:0 "Кронк! КРОНК!!!!"
+  pki_conquest.302.desc:99 "Kronk! KRONK!!!!"
   
   #Ravka
   situation_ravka_conquest:0 "Война за Равканов"
@@ -272,7 +272,7 @@
   conquest_situation_conquer_ravka:0 "Мы аннексируем Равку и получаем власть над их землёй и населением."
   flunat.0402.desc:0 "Однажды ты заплатишь за свои чудовищные действия."
   NAME_ravka_defense:0 "Равканская армия"
-  conquest.402.desc:0 "Посмотри правде в глаза, Каттейл; ты никогда не выиграешь. Равканский дух не может быть сокрушён вашими фарсовыми военными машинами."
+  pki_conquest.402.desc:99 "Face it Kattail; you will never win. The Ravkanian spirit cannot be crushed by your farcical war machines."
   
   #Zousa
   situation_zousa_conquest:0 "Война за Линтерианцев"
@@ -282,7 +282,7 @@
   conquest_situation_conquer_zousa:0 "Мы аннексируем Линтерию и получаем власть над их землёй и населением."
   flunat.0502.desc:0 "...этого... этого не может быть..."
   NAME_zousa_defense:0 "Линтерийская армия"
-  conquest.502.desc:0 "Пусть это будет для вас достойным уроком, глупые кошачьи."
+  pki_conquest.502.desc:99 "Let this be a rightful lesson to you, foolish felines."
   
   #Droog
   situation_droog_conquest:0 "Война за Другиан"
@@ -292,7 +292,7 @@
   conquest_situation_conquer_droog:0 "Мы аннексируем другов и контролируем их земли и людей."
   flunat.0602.desc:0 "Другиане были порабощены."
   NAME_droog_defense:0 "Армия другиан"
-  conquest.602.desc:0 "Каким-то образом мы проиграли децентрализованным племенам. Эту ошибку запомнят на десятилетия вперед..."
+  pki_conquest.602.desc:99 "Somehow, we lost to decentralized tribes. This blunder will be remembered for decades to come..."
   
   
   #Ezic
@@ -303,7 +303,7 @@
   conquest_situation_conquer_ezic:0 "Мы аннексируем Зуспри и контролируем их земли и людей."
   flunat.0702.desc:0 "Ты заплатишь за это кровью, Катцен."
   NAME_ezic_defense:0 "Армия Зуспри"
-  conquest.702.desc:0 "Наш идиллический и жизнерадостный дух Зуспри навсегда будет противостоять вашим металлическим чудовищам."
+  pki_conquest.702.desc:99 "Our idyllic and resilient Zuspri spirit will forevermore stand defiant to your metal monstrosities."
   
   #Mercuria
   situation_mercurian_conquest:0 "Война за Меркурию"
@@ -313,7 +313,7 @@
   conquest_situation_conquer_mercuria:0 "Мы аннексируем меркурианцев и контролируем их земли и людей."
   flunat.0802.desc:0 "Все, чего мы хотели, это чтобы нас оставили в покое. Было ли это слишком многого, о чем я просил?"
   NAME_mercurian_defense:0 "Меркурианская армия"
-  conquest.802.desc:0 "Пусть это станет уроком в нашем определении вооруженного нейтралитета."
+  pki_conquest.802.desc:99 "Let that be a lesson in our definition of armed neutrality."
   
   #Cyatianala
   situation_cyatianala_conquest:0 "Война за Чьятианалу"
@@ -323,7 +323,7 @@
   conquest_situation_conquer_cyatianala:0 "Мы аннексируем Чьятианалы и контролируем их земли и людей."
   flunat.0902.desc:0 "Возможно, ваши армии и победили, но сиаты поклялись сражаться против вашего режима даже до смерти."
   NAME_cyatianala_defense:0 "Циатианалианская армия"
-  conquest.902.desc:0 "Посмотри правде в глаза, Каттейл; ты не можешь сравниться с мощью Сиата."
+  pki_conquest.902.desc:99 "Face it Kattail; you're no match for the might of the Cyat."
   
   #Yinja
   situation_yinja_conquest:0 "Война за Иньдзю"
@@ -333,7 +333,7 @@
   conquest_situation_conquer_yinja:0 "Мы аннексируем иньцзитов и контролируем их земли и людей."
   flunat.01102.desc:0 "И вот вы победили. Но это еще не конец, Кэттейл. Наша борьба будет продолжаться еще десятилетия, желает ли этого ваша нация или нет!"
   NAME_yinja_defense:0 "Иньджитская армия"
-  conquest.1102.desc:0 "Самый захватывающий конфликт. Вы, кошачьи, были сметены нашей мощью!"
+  pki_conquest.1102.desc:99 "A most exhilarating conflict. You felines have been swept away by our might!"
   
   #Symbieland
   situation_symbie_conquest:0 "Война за Паффиленд"
@@ -343,7 +343,7 @@
   conquest_situation_conquer_symbie:0 "Мы аннексируем Вачеги и контролируем их земли и людей."
   flunat.01202.desc:0 "И вот мы падаем еще раз. Это конец, не так ли?"
   NAME_symbie_defense:0 "Армия Вачеги"
-  conquest.1202.desc:0 "Пусть это послужит вам уроком. Однажды мы превратим Катаун ​​в руины."
+  pki_conquest.1202.desc:99 "Let this be a lesson to you. One day, we shall turn Katown to rubble."
   
   #Laurandar
   situation_lauranaise_conquest:0 "Война за Лаурандар"
@@ -353,7 +353,7 @@
   conquest_situation_conquer_lauranaise:0 "Мы аннексируем Лоранез и контролируем их земли и людей."
   flunat.01302.desc:0 "Ха! Думаешь, ты выиграл? Война только началась..."
   NAME_lauranaise_defense:0 "Лорнез Армия"
-  conquest.1302.desc:0 "И держитесь подальше от наших берегов!"
+  pki_conquest.1302.desc:99 "And stay out of our shores!"
   
   #Harania
   situation_haranian_conquest:0 "Война за Харанию"
@@ -363,7 +363,7 @@
   conquest_situation_conquer_harania:0 "Мы аннексируем харанцев и контролируем их земли и людей."
   flunat.01402.desc:0 "Нет... ты... заплатишь за это..."
   NAME_haranian_defense:0 "Харанская армия"
-  conquest.1402.desc:0 "Мы выстояли десять тысяч лет и вытерпим еще десять тысяч."
+  pki_conquest.1402.desc:99 "We have endured for ten thousand years and we shall endure ten thousand more."
   
   ### FLUSION COALITION ###
   flunat_defense_army:0 "Флюзионская армия"
@@ -385,18 +385,18 @@
   
   
   
-  conquest.090909.title:0 "Объединение Флюжена"
-  conquest.090909.desc:0 "Успех! После многих лет жестоких войн, завоеваний и смертей Флюжн теперь объединен под одним знаменем.\n\nНашим знаменем!"
-  conquest.090909.a:0 "Наконец-то!"
+  pki_conquest.090909.title:99 "The Unification of Flusion"
+  pki_conquest.090909.desc:99 "Success! After years of violent wars, conquests, and death, Flusion is now unified under one banner.\n\nOur banner!"
+  pki_conquest.090909.a:99 "Hear, hear!"
   
-  pki_no_ftl_capability:0 "Сверхсветовая скорость не обнаружена"
+  
   central_stability:0 "Центральная стабильность"
   
   situation_ftl_development:0 "Разработка FTL"
   situation_ftl_development_type:0 "Разработка FTL"
   situation_ftl_development_desc:0 "После объединения нашего родного мира мы сосредоточили свое внимание на том, чтобы научиться достигать звезд."
   situation_ftl_development_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_approaches_dependent$"
-  ftl_situation_success:0 "Мы изобретём сверхсветовую скорость и сможем основать межзвёздную империю."
+  pki_ftl_situation_success:99 "We perfect FTL, and can establish an interstellar empire."
   approach_minor_research:0 "Незначительные инвестиции"
   approach_major_research:0 "Крупные инвестиции"
   approach_heavy_research:0 "Тяжелые инвестиции"
