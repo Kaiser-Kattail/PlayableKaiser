@@ -429,8 +429,6 @@ pki_warforge_starbase = {
 		always = no
 	}
 
-	auto_upgrade = yes
-
 	is_designable = no
 	num_target_locators = 0
 	is_space_station = no

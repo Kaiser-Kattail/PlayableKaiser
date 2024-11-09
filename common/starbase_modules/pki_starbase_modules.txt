@@ -5,9 +5,6 @@ pki_warforge_xl_battery = {
 
     potential = {
         has_starbase_size = pki_warforge_starbase
-        from = {
-            has_technology = tech_pki_cruiser
-        }
     }
 
     show_in_tech = tech_pki_cruiser
@@ -96,9 +93,6 @@ pki_warforge_gun_battery = {
 
     potential = {
         has_starbase_size = pki_warforge_starbase
-        from = {
-            has_technology = tech_pki_panzer
-        }
     }
 
     resources = {
@@ -143,8 +137,6 @@ pki_warforge_missile_battery = {
     construction_days = 180
 
     potential = {
-        exists = owner
-        owner = { has_technology = tech_torpedoes_1 }
         has_starbase_size = pki_warforge_starbase
     }
 
@@ -183,8 +175,6 @@ pki_warforge_hangar_bay = {
     construction_days = 180
 
     potential = {
-        exists = owner
-        owner = { has_technology = tech_strike_craft_1 }
         has_starbase_size = pki_warforge_starbase
     }
 

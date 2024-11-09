@@ -536,6 +536,11 @@ country_event = { #corrona start
             has_global_flag = katzenartig_imperium_defeated
         }
         exists = event_target:pki_corrona
+        event_target:pki_corrona = {
+            owner = {
+                has_country_flag = corrona_primitives
+            }
+        }
     }
 
     immediate = {
@@ -576,8 +581,12 @@ country_event = {
     is_triggered_only = yes
 
     immediate = {
+        event_target:katzenartig = {
+            giga_hypersiphon_calculate_empire_power = yes
+            set_variable = { which = pki_player_power value = 100000 }
+            divide_variable = { which = pki_player_power value = giga_hypersiphon_incursion_power }
+        }
         event_target:pki_corrona_country = {
-            #apply_katzen_difficulty = yes
             set_country_type = pki_awakaned_corrona
             create_leader = {
                 class = commander
@@ -641,11 +650,11 @@ country_event = {
             pki_create_corrona_dragon_fleet_corrona = yes
             add_modifier = {
                 modifier = pki_corrona_fire_rate_debuff
-                multiplier = 99
+                multiplier = event_target:katzenartig.pki_player_power
             }
             add_modifier = {
                 modifier = pki_corrona_damage_debuff
-                multiplier = 50
+                multiplier = event_target:katzenartig.pki_player_power
             }
         }
         event_target:pki_corrona = {

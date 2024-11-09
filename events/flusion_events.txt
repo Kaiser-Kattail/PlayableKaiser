@@ -230,7 +230,7 @@ country_event = {
 			gender = male
 			immortal = yes
 			background_job = none
-			background_ethic = ethic_fanatic_militarist
+			background_ethic = ethic_militarist
 			background_planet = event_target:playerflusion
 
 			effect = {

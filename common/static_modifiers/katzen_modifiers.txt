@@ -147,9 +147,9 @@ pki_expanded_layers = {
 }
 
 pki_corrona_damage_debuff = {
-	ship_weapon_damage = -0.01
+	ship_weapon_damage = -1
 }
 
 pki_corrona_fire_rate_debuff = {
-	ship_fire_rate_mult = -0.01
+	ship_fire_rate_mult = -1
 }

@@ -88,7 +88,6 @@ flusion_new_initializer = {
             set_planet_flag = doughland
             save_global_event_target_as = doughland
             set_planet_flag = forbid_guillis_planet_modifiers
-            giga_set_has_mega_flag = yes
         }
     }
 
@@ -109,7 +108,6 @@ flusion_new_initializer = {
             save_global_event_target_as = playerflusion
             set_planet_flag = gigaflusion
             set_planet_flag = playerflusion
-            set_planet_flag = cant_build_here
             set_planet_flag = kaiser_update
             set_planet_flag = forbid_guillis_planet_modifiers
         }
@@ -141,7 +139,6 @@ flusion_new_initializer = {
                 set_planet_flag = gigamuno
                 save_global_event_target_as = gigamuno
                 set_planet_flag = forbid_guillis_planet_modifiers
-                giga_set_has_mega_flag = yes
             }
         }
     }
@@ -232,7 +229,6 @@ flusion_new_initializer = {
             set_planet_flag = nesar
             save_global_event_target_as = nesar
             set_planet_flag = forbid_guillis_planet_modifiers
-            giga_set_has_mega_flag = yes
         }
 
         moon = {
