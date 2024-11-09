@@ -428,9 +428,6 @@ situation_ftl_development = {
 			end = 30
 
 		}
-	}
-
-	stages = {
 		stage_2 = {
 			icon = GFX_situation_stage_1
 			icon_background = GFX_situation_stage_frame_green
@@ -443,9 +440,6 @@ situation_ftl_development = {
 				}
 			}
 		}
-	}
-
-	stages = {
 		stage_3 = {
 			icon = GFX_situation_stage_1
 			icon_background = GFX_situation_stage_frame_green
@@ -458,9 +452,6 @@ situation_ftl_development = {
 				}
 			}
 		}
-	}
-
-	stages = {
 		stage_4 = {
 			icon = GFX_situation_stage_1
 			icon_background = GFX_situation_stage_frame_green
