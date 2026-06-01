@@ -299,6 +299,7 @@ country_event = {
 			remove_all_buildings = yes
 			remove_all_districts = yes
 
+			add_building = building_capital
 			add_building = building_stronghold
 
 			add_deposit = d_katown
