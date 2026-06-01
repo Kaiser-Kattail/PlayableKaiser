@@ -134,9 +134,10 @@ country_event = {
             start_situation = {
                 type = situation_solakian_conquest
                 target = root
-                effect = {
-                    set_situation_approach = approach_mixed
-                }
+				effect = {
+					set_situation_approach = approach_mixed
+					set_situation_progress = 19
+				}
             }
         }
     }
@@ -377,9 +378,10 @@ situation_event = {
             start_situation = {
                 type = situation_cookian_conquest
                 target = root
-                effect = {
-                    set_situation_approach = approach_mixed
-                }
+				effect = {
+					set_situation_approach = approach_mixed
+					set_situation_progress = 19
+				}
             }
         }
     }
@@ -624,9 +626,10 @@ country_event = {
             start_situation = {
                 type = situation_kronk_conquest
                 target = root
-                effect = {
-                    set_situation_approach = approach_mixed
-                }
+				effect = {
+					set_situation_approach = approach_mixed
+					set_situation_progress = 19
+				}
             }
         }
     }
@@ -879,9 +882,10 @@ country_event = {
             start_situation = {
                 type = situation_ravka_conquest
                 target = root
-                effect = {
-                    set_situation_approach = approach_mixed
-                }
+				effect = {
+					set_situation_approach = approach_mixed
+					set_situation_progress = 19
+				}
             }
         }
     }
@@ -1134,9 +1138,10 @@ country_event = {
             start_situation = {
                 type = situation_zousa_conquest
                 target = root
-                effect = {
-                    set_situation_approach = approach_mixed
-                }
+				effect = {
+					set_situation_approach = approach_mixed
+					set_situation_progress = 19
+				}
             }
         }
     }
@@ -1372,9 +1377,10 @@ country_event = {
             start_situation = {
                 type = situation_droog_conquest
                 target = root
-                effect = {
-                    set_situation_approach = approach_mixed
-                }
+				effect = {
+					set_situation_approach = approach_mixed
+					set_situation_progress = 19
+				}
             }
         }
     }
@@ -1614,6 +1620,7 @@ country_event = {
                 target = root
                 effect = {
                     set_situation_approach = approach_mixed
+					set_situation_progress = 19
                 }
             }
         }
@@ -1857,9 +1864,10 @@ country_event = {
             start_situation = {
                 type = situation_mercurian_conquest
                 target = root
-                effect = {
-                    set_situation_approach = approach_mixed
-                }
+				effect = {
+					set_situation_approach = approach_mixed
+					set_situation_progress = 19
+				}
             }
         }
     }
@@ -2113,9 +2121,10 @@ country_event = {
             start_situation = {
                 type = situation_cyatianala_conquest
                 target = root
-                effect = {
-                    set_situation_approach = approach_mixed
-                }
+				effect = {
+					set_situation_approach = approach_mixed
+					set_situation_progress = 19
+				}
             }
         }
     }
@@ -2367,9 +2376,10 @@ country_event = {
             start_situation = {
                 type = situation_yinja_conquest
                 target = root
-                effect = {
-                    set_situation_approach = approach_mixed
-                }
+				effect = {
+					set_situation_approach = approach_mixed
+					set_situation_progress = 19
+				}
             }
         }
     }
@@ -2622,9 +2632,10 @@ country_event = {
             start_situation = {
                 type = situation_symbie_conquest
                 target = root
-                effect = {
-                    set_situation_approach = approach_mixed
-                }
+				effect = {
+					set_situation_approach = approach_mixed
+					set_situation_progress = 19
+				}
             }
         }
     }
@@ -2877,9 +2888,10 @@ country_event = {
             start_situation = {
                 type = situation_lauranaise_conquest
                 target = root
-                effect = {
-                    set_situation_approach = approach_mixed
-                }
+				effect = {
+					set_situation_approach = approach_mixed
+					set_situation_progress = 19
+				}
             }
         }
     }
@@ -3131,9 +3143,10 @@ country_event = {
             start_situation = {
                 type = situation_haranian_conquest
                 target = root
-                effect = {
-                    set_situation_approach = approach_mixed
-                }
+				effect = {
+					set_situation_approach = approach_mixed
+					set_situation_progress = 19
+				}
             }
         }
     }

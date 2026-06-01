@@ -18,7 +18,7 @@ country_event = { #Flusion is GONE (destroyed, checks monthly)
 						is_colony = no #Flusion is not a colony aka destroyed
 						is_planet_class = pc_shattered
 						is_planet_class = pc_shielded
-						num_pops = 0
+						pop_amount = 0
 						is_planet_habitable = no
 					}
 					NOT = { is_planet_class = pc_pki_flusion_ecu }
