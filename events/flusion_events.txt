@@ -296,22 +296,8 @@ country_event = {
 			set_planet_size = 16
 			clear_blockers = yes
 			clear_deposits = yes
-
-
-			remove_district = district_city
-			remove_district = district_city
-
-			remove_district = district_industrial
-
-			remove_district = district_generator
-			remove_district = district_generator
-
-			remove_district = district_mining
-
-			remove_district = district_farming
-
-			remove_building = building_commercial_zone
-			remove_building = building_bureaucratic_1
+			remove_all_buildings = yes
+			remove_all_districts = yes
 
 			add_building = building_stronghold
 
@@ -338,36 +324,9 @@ country_event = {
 			planet_event = { id = flusion.3 days = 1 }
 
 			while = {
-				count = 9
-				random_owned_pop = {
-					limit = {
-						is_pop_category = specialist
-					}
-					kill_pop = yes
-				}
-			}
-
-			if = {
-				limit = {
-					NOT = {
-						root = {
-							OR = {
-								has_valid_civic = civic_eager_explorers
-								has_valid_civic = civic_privatized_exploration
-								has_valid_civic = civic_hive_stargazers
-								has_valid_civic = civic_machine_exploration_protocol
-							}
-						}
-					}
-				}
-				while = {
-					count = 10
-					random_owned_pop = {
-						limit = {
-							is_pop_category = specialist
-						}
-						kill_pop = yes
-					}
+				limit = { pop_amount > 900 }
+				random_owned_pop_group = {
+					kill_single_pop = yes
 				}
 			}
 		}
@@ -437,7 +396,10 @@ country_event = {
 		this = {
 			every_owned_leader = {
 				limit = {
-					leader_class = official
+					NOR = {
+						has_leader_flag = kaiser_kattail
+						leader_class = scientist
+					}
 				}
 				set_leader_flag = kill_yourself_now
 				kill_leader = { show_notification = no }
@@ -453,7 +415,7 @@ country_event = {
 				set_gender = male
 				set_name = "NAME_Pawlbert"
 				set_leader_flag = flusion_modified
-				add_trait_no_notify = pki_katzen_trait_elite
+				add_trait = pki_katzen_trait_elite
 			}
 
 			#Create Pawtton
@@ -528,6 +490,7 @@ country_event = {
 				change_leader_portrait = douclaw
 				set_leader_flag = douclaw
 				save_global_event_target_as = douclaw
+				set_council_position = councilor_defense
 			}
 		}
 	}
@@ -678,7 +641,7 @@ country_event = {
 	}
 }
 
-#Set lore acurate looks (if applicable)
+#Set lore accurate looks (if applicable)
 country_event = {
 	id = katzen.6
 	hide_window = yes

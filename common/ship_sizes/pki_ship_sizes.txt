@@ -9,7 +9,6 @@ pki_panzer = { #Destroyerish, designed to conduct Blitzkrieg and overwhelm enemy
 	max_hitpoints = @destroyer_hp
 	modifier = {
 		ship_evasion_add = @destroyer_evasion
-		ship_piracy_suppression_add = 8
 	}
 	size_multiplier = 2
 	fleet_slot_size = 3
@@ -99,7 +98,6 @@ pki_bomber = { #Cruiser, bomber designed to assault enemy worlds and fortificati
 	max_hitpoints = @cruiser_hp
 	modifier = {
 		ship_evasion_add = @cruiser_evasion
-		ship_piracy_suppression_add = 4
 		ship_orbital_bombardment_mult = 2
 	}
 	size_multiplier = 4
@@ -197,7 +195,6 @@ pki_cruiser = { #Battleship-Titan, designed to "sit back" and assist the fleet
 	}
 	modifier = {
 		ship_evasion_add = @battleship_evasion
-		ship_piracy_suppression_add = 4
 		ship_fire_rate_mult = 0.1
 	}
 	size_multiplier = 8
@@ -280,7 +277,6 @@ pki_submarine = {
 		ship_evasion_add = @frigate_evasion
 		ship_engagement_range_mult = 4
 		ship_cloaking_strength_add = 3
-		ship_piracy_suppression_add = 10
 	}
 	size_multiplier = 4
 	fleet_slot_size = 2
@@ -334,7 +330,6 @@ pki_warforge_platform = { #Katzen war forge platform
 	modifier = {
 		ship_evasion_mult = -1
 		ships_upkeep_mult = -0.25
-		ship_piracy_suppression_add = 2
 	}
 	ship_modifier = {
 		ship_weapon_range_mult = 0.20
@@ -398,7 +393,7 @@ pki_warforge_starbase = {
 	max_hitpoints = 20000
 	base_buildtime = 720
 	resources = {
-		category = starbase_stations
+		category = starbases
 		cost = {
 			alloys = 1000
 			influence = 50

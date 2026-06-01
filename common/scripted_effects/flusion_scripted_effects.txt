@@ -811,14 +811,6 @@ flusion_conversion_effect_step_1 = {
 		variable = nexus_count
 	}
 
-	#Industrial
-	export_trigger_value_to_variable = {
-		trigger = num_districts
-		parameters = {
-			type = district_industrial
-		}
-		variable = industrial_count
-	}
 
 	#Mining
 	export_trigger_value_to_variable = {
@@ -943,16 +935,11 @@ player_flusion_unify_flusion = {
 		}
 		if = {
 			limit = { event_target:katzenartig = { NOT = { has_country_flag = solak_pop_acquired } } }
-			while = {
-				count = 5
-				create_pop = {
-					species = event_target:solakians
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
+			create_pop_group = {
+				size = 500
+				species = event_target:solakians
+				effect = {
+					add_modifier = { modifier = pop_recently_conquered days = 3600 }
 				}
 			}
 			planet.owner = {
@@ -961,16 +948,11 @@ player_flusion_unify_flusion = {
 		}
 		if = {
 			limit = { event_target:katzenartig = { NOT = { has_country_flag = cookie_pop_acquired } } }
-			while = {
-				count = 4
-				create_pop = {
-					species = event_target:cookians
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
+			create_pop_group = {
+				size = 400
+				species = event_target:cookians
+				effect = {
+					add_modifier = { modifier = pop_recently_conquered days = 3600 }
 				}
 			}
 			planet.owner = {
@@ -979,16 +961,11 @@ player_flusion_unify_flusion = {
 		}
 		if = {
 			limit = { event_target:katzenartig = { NOT = { has_country_flag = kronk_pop_acquired } } }
-			while = {
-				count = 3
-				create_pop = {
-					species = event_target:kronks
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
+			create_pop_group = {
+				size = 300
+				species = event_target:kronks
+				effect = {
+					add_modifier = { modifier = pop_recently_conquered days = 3600 }
 				}
 			}
 			planet.owner = {
@@ -997,16 +974,11 @@ player_flusion_unify_flusion = {
 		}
 		if = {
 			limit = { event_target:katzenartig = { NOT = { has_country_flag = ravka_pop_acquired } } }
-			while = {
-				count = 2
-				create_pop = {
-					species = event_target:ravkans
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
+			create_pop_group = {
+				size = 200
+				species = event_target:ravkans
+				effect = {
+					add_modifier = { modifier = pop_recently_conquered days = 3600 }
 				}
 			}
 			planet.owner = {
@@ -1015,16 +987,11 @@ player_flusion_unify_flusion = {
 		}
 		if = {
 			limit = { event_target:katzenartig = { NOT = { has_country_flag = zousa_pop_acquired } } }
-			while = {
-				count = 1
-				create_pop = {
-					species = event_target:zousans
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
+			create_pop_group = {
+				size = 100
+				species = event_target:zousans
+				effect = {
+					add_modifier = { modifier = pop_recently_conquered days = 3600 }
 				}
 			}
 			planet.owner = {
@@ -1033,16 +1000,11 @@ player_flusion_unify_flusion = {
 		}
 		if = {
 			limit = { event_target:katzenartig = { NOT = { has_country_flag = droog_pop_acquired } } }
-			while = {
-				count = 1
-				create_pop = {
-					species = event_target:droog
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
+			create_pop_group = {
+				size = 100
+				species = event_target:droog
+				effect = {
+					add_modifier = { modifier = pop_recently_conquered days = 3600 }
 				}
 			}
 			planet.owner = {
@@ -1051,16 +1013,11 @@ player_flusion_unify_flusion = {
 		}
 		if = {
 			limit = { event_target:katzenartig = { NOT = { has_country_flag = ezic_pop_acquired } } }
-			while = {
-				count = 2
-				create_pop = {
-					species = event_target:ezics
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
+			create_pop_group = {
+				size = 200
+				species = event_target:ezics
+				effect = {
+					add_modifier = { modifier = pop_recently_conquered days = 3600 }
 				}
 			}
 			planet.owner = {
@@ -1069,16 +1026,11 @@ player_flusion_unify_flusion = {
 		}
 		if = {
 			limit = { event_target:katzenartig = { NOT = { has_country_flag = mercuria_pop_acquired } } }
-			while = {
-				count = 1
-				create_pop = {
-					species = event_target:mercurians
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
+			create_pop_group = {
+				size = 100
+				species = event_target:mercurians
+				effect = {
+					add_modifier = { modifier = pop_recently_conquered days = 3600 }
 				}
 			}
 			planet.owner = {
@@ -1087,16 +1039,11 @@ player_flusion_unify_flusion = {
 		}
 		if = {
 			limit = { event_target:katzenartig = { NOT = { has_country_flag = cyatianala_pop_acquired } } }
-			while = {
-				count = 1
-				create_pop = {
-					species = event_target:mercurians
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
+			create_pop_group = {
+				size = 100
+				species = event_target:cyatianalas
+				effect = {
+					add_modifier = { modifier = pop_recently_conquered days = 3600 }
 				}
 			}
 			planet.owner = {
@@ -1105,16 +1052,11 @@ player_flusion_unify_flusion = {
 		}
 		if = {
 			limit = { event_target:katzenartig = { NOT = { has_country_flag = yinja_pop_acquired } } }
-			while = {
-				count = 3
-				create_pop = {
-					species = event_target:yinjites
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
+			create_pop_group = {
+				size = 300
+				species = event_target:yinjites
+				effect = {
+					add_modifier = { modifier = pop_recently_conquered days = 3600 }
 				}
 			}
 			planet.owner = {
@@ -1123,16 +1065,11 @@ player_flusion_unify_flusion = {
 		}
 		if = {
 			limit = { event_target:katzenartig = { NOT = { has_country_flag = symbie_pop_acquired } } }
-			while = {
-				count = 2
-				create_pop = {
-					species = event_target:symbies
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
+			create_pop_group = {
+				size = 200
+				species = event_target:symbies
+				effect = {
+					add_modifier = { modifier = pop_recently_conquered days = 3600 }
 				}
 			}
 			planet.owner = {
@@ -1141,16 +1078,11 @@ player_flusion_unify_flusion = {
 		}
 		if = {
 			limit = { event_target:katzenartig = { NOT = { has_country_flag = lauranaise_pop_acquired } } }
-			while = {
-				count = 4
-				create_pop = {
-					species = event_target:lauranaise
-				}
-				last_created_pop = {
-					add_modifier = {
-						modifier = "pop_recently_conquered"
-						days = 3600
-					}
+			create_pop_group = {
+				size = 400
+				species = event_target:lauranaise
+				effect = {
+					add_modifier = { modifier = pop_recently_conquered days = 3600 }
 				}
 			}
 			planet.owner = {
@@ -1251,8 +1183,9 @@ player_flusion_unify_flusion = {
 
 player_flusion_annexed_solak = {
 	add_deposit = d_annexed_region_solak
-	random_owned_pop = {
-		kill_pop = yes
+	while = {
+		count = 100
+		kill_single_pop = yes
 	}
 }
 
@@ -1262,18 +1195,17 @@ player_flusion_liberated_solak = {
 		remove_deposit = d_annexed_region_solak
 	}
 	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
+	create_pop_group = {
+		size = 200
+		species = owner_main_species
 	}
 }
 
 player_flusion_annexed_cookie = {
 	add_deposit = d_annexed_region_cookie
-	random_owned_pop = {
-		kill_pop = yes
+	while = {
+		count = 100
+		kill_single_pop = yes
 	}
 }
 
@@ -1282,19 +1214,18 @@ player_flusion_liberated_cookie = {
 		count = 10
 		remove_deposit = d_annexed_region_cookie
 	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
+
+	create_pop_group = {
+		size = 200
+		species = owner_main_species
 	}
 }
 
 player_flusion_annexed_kronk = {
 	add_deposit = d_annexed_region_kronk
-	random_owned_pop = {
-		kill_pop = yes
+	while = {
+		count = 100
+		kill_single_pop = yes
 	}
 }
 
@@ -1303,19 +1234,18 @@ player_flusion_liberated_kronk = {
 		count = 10
 		remove_deposit = d_annexed_region_kronk
 	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
+
+	create_pop_group = {
+		size = 200
+		species = owner_main_species
 	}
 }
 
 player_flusion_annexed_ravka = {
 	add_deposit = d_annexed_region_ravka
-	random_owned_pop = {
-		kill_pop = yes
+	while = {
+		count = 100
+		kill_single_pop = yes
 	}
 }
 
@@ -1324,19 +1254,18 @@ player_flusion_liberated_ravka = {
 		count = 10
 		remove_deposit = d_annexed_region_ravka
 	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
+
+	create_pop_group = {
+		size = 200
+		species = owner_main_species
 	}
 }
 
 player_flusion_annexed_zousa = {
 	add_deposit = d_annexed_region_zousa
-	random_owned_pop = {
-		kill_pop = yes
+	while = {
+		count = 100
+		kill_single_pop = yes
 	}
 }
 
@@ -1345,19 +1274,18 @@ player_flusion_liberated_zousa = {
 		count = 10
 		remove_deposit = d_annexed_region_zousa
 	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
+
+	create_pop_group = {
+		size = 200
+		species = owner_main_species
 	}
 }
 
 player_flusion_annexed_droog = {
 	add_deposit = d_annexed_region_droog
-	random_owned_pop = {
-		kill_pop = yes
+	while = {
+		count = 100
+		kill_single_pop = yes
 	}
 }
 
@@ -1366,19 +1294,18 @@ player_flusion_liberated_droog = {
 		count = 10
 		remove_deposit = d_annexed_region_droog
 	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
+
+	create_pop_group = {
+		size = 200
+		species = owner_main_species
 	}
 }
 
 player_flusion_annexed_ezic = {
 	add_deposit = d_annexed_region_ezic
-	random_owned_pop = {
-		kill_pop = yes
+	while = {
+		count = 100
+		kill_single_pop = yes
 	}
 }
 
@@ -1387,19 +1314,18 @@ player_flusion_liberated_ezic = {
 		count = 10
 		remove_deposit = d_annexed_region_ezic
 	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
+
+	create_pop_group = {
+		size = 200
+		species = owner_main_species
 	}
 }
 
 player_flusion_annexed_mercuria = {
 	add_deposit = d_annexed_region_mercuria
-	random_owned_pop = {
-		kill_pop = yes
+	while = {
+		count = 100
+		kill_single_pop = yes
 	}
 }
 
@@ -1408,19 +1334,18 @@ player_flusion_liberated_mercuria = {
 		count = 10
 		remove_deposit = d_annexed_region_mercuria
 	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
+
+	create_pop_group = {
+		size = 200
+		species = owner_main_species
 	}
 }
 
 player_flusion_annexed_cyatianala = {
 	add_deposit = d_annexed_region_cyatianala
-	random_owned_pop = {
-		kill_pop = yes
+	while = {
+		count = 100
+		kill_single_pop = yes
 	}
 }
 
@@ -1429,19 +1354,18 @@ player_flusion_liberated_cyatianala = {
 		count = 10
 		remove_deposit = d_annexed_region_cyatianala
 	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
+
+	create_pop_group = {
+		size = 200
+		species = owner_main_species
 	}
 }
 
 player_flusion_annexed_yinja = {
 	add_deposit = d_annexed_region_yinja
-	random_owned_pop = {
-		kill_pop = yes
+	while = {
+		count = 100
+		kill_single_pop = yes
 	}
 }
 
@@ -1450,19 +1374,18 @@ player_flusion_liberated_yinja = {
 		count = 10
 		remove_deposit = d_annexed_region_yinja
 	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
+
+	create_pop_group = {
+		size = 200
+		species = owner_main_species
 	}
 }
 
 player_flusion_annexed_symbie = {
 	add_deposit = d_annexed_region_symbie
-	random_owned_pop = {
-		kill_pop = yes
+	while = {
+		count = 100
+		kill_single_pop = yes
 	}
 }
 
@@ -1471,19 +1394,18 @@ player_flusion_liberated_symbie = {
 		count = 10
 		remove_deposit = d_annexed_region_symbie
 	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
+
+	create_pop_group = {
+		size = 200
+		species = owner_main_species
 	}
 }
 
 player_flusion_annexed_lauranaise = {
 	add_deposit = d_annexed_region_lauranaise
-	random_owned_pop = {
-		kill_pop = yes
+	while = {
+		count = 100
+		kill_single_pop = yes
 	}
 }
 
@@ -1492,19 +1414,18 @@ player_flusion_liberated_lauranaise = {
 		count = 10
 		remove_deposit = d_annexed_region_lauranaise
 	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
+
+	create_pop_group = {
+		size = 200
+		species = owner_main_species
 	}
 }
 
 player_flusion_annexed_haranian = {
 	add_deposit = d_annexed_region_haranian
-	random_owned_pop = {
-		kill_pop = yes
+	while = {
+		count = 100
+		kill_single_pop = yes
 	}
 }
 
@@ -1513,12 +1434,10 @@ player_flusion_liberated_haranian = {
 		count = 10
 		remove_deposit = d_annexed_region_haranian
 	}
-	
-	while = {
-		count = 2
-		create_pop = {
-			species = owner_main_species
-		}
+
+	create_pop_group = {
+		size = 200
+		species = owner_main_species
 	}
 }
 

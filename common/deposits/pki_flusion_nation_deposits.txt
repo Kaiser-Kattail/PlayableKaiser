@@ -9,7 +9,6 @@ d_flunat = {
 
 	planet_modifier = {
 		planet_max_districts_add = -16
-		planet_max_buildings_add = -12
 	}
 
     triggered_planet_modifier = {
@@ -17,7 +16,6 @@ d_flunat = {
             has_global_flag = solakia_conquered
         }
         planet_max_districts_add = 2.5
-        planet_max_buildings_add = 1.875
     }
 
 	triggered_planet_modifier = {
@@ -25,7 +23,6 @@ d_flunat = {
             has_global_flag = cookie_conquered
         }
         planet_max_districts_add = 2
-        planet_max_buildings_add = 1.5
     }
 
 	triggered_planet_modifier = {
@@ -33,7 +30,6 @@ d_flunat = {
             has_global_flag = lauranaise_conquered
         }
         planet_max_districts_add = 2
-        planet_max_buildings_add = 1.5
     }
 
 	triggered_planet_modifier = {
@@ -41,7 +37,6 @@ d_flunat = {
             has_global_flag = kronk_conquered
         }
         planet_max_districts_add = 1.5
-        planet_max_buildings_add = 1.125
     }
 
 	triggered_planet_modifier = {
@@ -49,63 +44,54 @@ d_flunat = {
             has_global_flag = ravka_conquered
         }
         planet_max_districts_add = 1
-        planet_max_buildings_add = 0.75
     }
 	triggered_planet_modifier = {
         potential = {
             has_global_flag = zousa_conquered
         }
         planet_max_districts_add = 0.5
-        planet_max_buildings_add = 0.375
     }
 	triggered_planet_modifier = {
         potential = {
             has_global_flag = droog_conquered
         }
         planet_max_districts_add = 0.5
-        planet_max_buildings_add = 0.375
     }
 	triggered_planet_modifier = {
         potential = {
             has_global_flag = ezic_conquered
         }
         planet_max_districts_add = 1
-        planet_max_buildings_add = 0.75
     }
 	triggered_planet_modifier = {
         potential = {
             has_global_flag = mercuria_conquered
         }
         planet_max_districts_add = 0.5
-        planet_max_buildings_add = 0.375
     }
 	triggered_planet_modifier = {
         potential = {
             has_global_flag = cyatianala_conquered
         }
         planet_max_districts_add = 0.5
-        planet_max_buildings_add = 0.375
     }
 	triggered_planet_modifier = {
         potential = {
             has_global_flag = yinja_conquered
         }
         planet_max_districts_add = 1.5
-        planet_max_buildings_add = 1.125
     }
 	triggered_planet_modifier = {
         potential = {
             has_global_flag = symbie_conquered
         }
         planet_max_districts_add = 1
-        planet_max_buildings_add = 0.75
     }
 	triggered_planet_modifier = {
         potential = {
             has_global_flag = haranian_conquered
         }
         planet_max_districts_add = 1
-        planet_max_buildings_add = 0.75
     }
 
 	can_be_cleared = {

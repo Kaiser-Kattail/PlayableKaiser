@@ -14,6 +14,11 @@ building_katzen_civilian_forge = {
 		"tech_katzen_luxuries"
 	}
 
+	building_sets = {
+		industrial
+		factory
+	}
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -30,7 +35,7 @@ building_katzen_civilian_forge = {
 
 	inline_script = {
 		script = planet/consumer_goods/giga_artisan_job_swap
-		jobs = 4
+		jobs = 400
 	}
 
 	destroy_trigger = {
@@ -45,6 +50,9 @@ building_siegfried_stronghold = {
 	planetary_ftl_inhibitor = yes
 	position_priority = 200
 	#add_to_first_building_slot = yes
+	building_sets = {
+		fortress
+	}
 
 	category = army
 
@@ -144,6 +152,10 @@ building_player_siegfried_centcom = {
 	can_demolish = no
 	position_priority = 200
 	#add_to_first_building_slot = yes
+	building_sets = {
+		government
+		fortress
+	}
 
 	category = army
 
@@ -178,7 +190,7 @@ building_player_siegfried_centcom = {
 			owner = { is_gestalt = no }
 		}
 		modifier = {
-			job_maginot_bunker_officer_add = 1
+			job_maginot_bunker_officer_add = 100
 		}
 	}
 	triggered_planet_modifier = {
@@ -187,7 +199,7 @@ building_player_siegfried_centcom = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_maginot_bunker_officer_gestalt_add = 1
+			job_maginot_bunker_officer_gestalt_add = 100
 		}
 	}
 
@@ -228,21 +240,6 @@ building_player_siegfried_centcom = {
 		}
 		text = job_maginot_central_command_effect_desc
 	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		text = job_maginot_bunker_officer_gestalt_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		text = job_maginot_bunker_officer_effect_desc
-	}
 }
 
 #Katzen reactor
@@ -255,6 +252,11 @@ building_pki_flusion_fusion_power_plant = {
 		owner = {
 			pki_is_katzenartig_imperium = yes
 		}
+	}
+
+	building_sets = {
+		generator
+		urban
 	}
 
 	prerequisites = {
@@ -273,7 +275,7 @@ building_pki_flusion_fusion_power_plant = {
 
 	inline_script = {
 		script = jobs/technicians_add
-		AMOUNT = 4
+		AMOUNT = 400
 	}
 }
 
@@ -285,6 +287,9 @@ building_pki_katzen_terraformer = {
 		owner = {
 			pki_is_katzenartig_imperium = yes
 		}
+	}
+	building_sets = {
+		urban
 	}
 
 	prerequisites = {
@@ -318,6 +323,12 @@ building_pki_katzen_synthetizer = {
 		}
 	}
 
+	building_sets = {
+		industrial
+		factory
+		foundry
+	}
+
 	prerequisites = {
 		"tech_katzen_rr"
 	}
@@ -334,17 +345,17 @@ building_pki_katzen_synthetizer = {
 
 	inline_script = {
 		script = planet/refiners/giga_chemist_job_swap
-		jobs = 1
+		jobs = 100
 	}
 
 	inline_script = {
 		script = planet/refiners/giga_translucer_job_swap
-		jobs = 1
+		jobs = 100
 	}
 
 	inline_script = {
 		script = planet/refiners/giga_gas_refiner_job_swap
-		jobs = 1
+		jobs = 100
 	}
 }
 
@@ -353,6 +364,11 @@ building_pki_foundry = {
 	base_buildtime = @b2_time
 	icon = building_katzen_foundry
 	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+	}
 
 	potential = {
 		owner = {
@@ -388,7 +404,7 @@ building_pki_foundry = {
 
 	inline_script = {
 		script = jobs/foundry_add
-		AMOUNT = 4
+		AMOUNT = 400
 	}
 }
 
@@ -402,6 +418,12 @@ building_pki_theater = {
 		owner = {
 			pki_is_katzenartig_imperium = yes
 		}
+	}
+
+	building_sets = {
+		government
+		urban
+		entertainment
 	}
 
 	prerequisites = {
@@ -430,7 +452,7 @@ building_pki_theater = {
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 12
+		planet_amenities_add = 1200
 		pop_happiness = 0.05
 	}
 
@@ -467,6 +489,10 @@ building_pki_science = {
 		}
 	}
 
+	building_sets = {
+		research
+	}
+
 	prerequisites = {
 		"tech_katzen_lab"
 	}
@@ -494,10 +520,11 @@ building_pki_science = {
 
 	inline_script = {
 		script = jobs/researchers_add
-		AMOUNT = 4
+		AMOUNT = 120
 	}
 }
 
+# awaiting elysium rework
 building_pki_katzen_housing = {
 	can_build = no
 	can_demolish = no
@@ -585,7 +612,7 @@ building_pki_katzen_outpost = {
 	}
 
 	country_modifier = {
-		defense_armies_add = 2
+		planet_defense_armies_add = 2
 		country_naval_cap_mult = 0.05
 	}
 
@@ -593,7 +620,7 @@ building_pki_katzen_outpost = {
 		potential = {
 			planet.owner = { is_gestalt = no }
 		}
-		job_overlord_propagandist_add = 1
+		job_overlord_propagandist_add = 100
 		job_pki_recruiter_per_pop = 0.033
 	}
 
@@ -607,15 +634,5 @@ building_pki_katzen_outpost = {
 
 	planet_modifier = {
 		monthly_loyalty = -0.5
-	}
-
-	triggered_desc = {
-		text = job_pki_recruiter_effect_desc
-		trigger = { planet.owner = { is_gestalt = no } }
-	}
-
-	triggered_desc = {
-		text = job_pki_recruiter_drone_effect_desc
-		trigger = { planet.owner = { is_gestalt = yes } }
 	}
 }

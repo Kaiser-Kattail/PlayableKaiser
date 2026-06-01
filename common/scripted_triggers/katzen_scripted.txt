@@ -35,7 +35,7 @@ pki_is_katzen_ship = {
 }
 
 is_pki_flusion_ecu = {
-	is_planet_class = pc_pki_flusion_ecu
+	is_planet_class = pc_pki_flusion_gaia_ecu
 }
 
 is_pki_katzen_trait_elite = {

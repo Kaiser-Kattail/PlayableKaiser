@@ -1,4 +1,4 @@
-version="3.8.7.1"
+version="4.0"
 tags={
 	"Buildings"
 	"Diplomacy"
@@ -7,5 +7,5 @@ tags={
 }
 name="Playable Katzenartig Imperium"
 picture="thumbnail.png"
-supported_version="v3.14.*"
+supported_version="v4.3.*"
 remote_file_id="2981429115"

@@ -33,17 +33,17 @@ katzenartig_imperium= {
 	city_graphical_culture="mammalian_01"
 	empire_flag = {
 		icon = {
-			category="domination"
-			file="domination_8.dds"
+			category="flusionian"
+			file="katzen_new.dds"
 		}
 		background = {
 			category="backgrounds"
-			file="v.dds"
+			file="katzen.dds"
 		}
 		colors = {
 			"blue"
-			"indigo"
-			"null"
+			"light_blue"
+			"yellow"
 			"null"
 		}
 	}

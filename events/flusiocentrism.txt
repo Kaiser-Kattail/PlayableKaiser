@@ -83,16 +83,15 @@ planet_event = {
 	immediate = {
 		if = {
 			limit = {
-				count_owned_pop = {
-					count <= 15					
+				count_owned_pop_amount = {
+					count < 1500
 				}
 			}
-			every_owned_pop = {
-				resettle_pop = {
-					pop = THIS
-					planet = event_target:playerflusion
+			every_owned_pop_group = {
+				resettle_pop_group = {
+					POP_GROUP = this
+					PLANET = event_target:playerflusion
 				}
-				clear_pop_category = yes
 			}
 			from = {
 				country_event = {
@@ -280,7 +279,6 @@ country_event = {
 				has_policy_flag = smol_migration
 			}
 			pki_yearly_migration = {
-				HIGH_BOUND = 95
 				LOW_BOUND = 5
 			}
 		}
@@ -289,7 +287,6 @@ country_event = {
 				has_policy_flag = more_migration
 			}
 			pki_yearly_migration = {
-				HIGH_BOUND = 90
 				LOW_BOUND = 10
 			}
 		}
@@ -298,7 +295,6 @@ country_event = {
 				has_policy_flag = much_migration
 			}
 			pki_yearly_migration = {
-				HIGH_BOUND = 85
 				LOW_BOUND = 15
 			}
 		}
@@ -312,24 +308,16 @@ country_event = {
 						has_planet_flag = playerflusion
 						has_modifier = no_relocation
 					}
-					count_owned_pop = {
+					count_owned_pop_amount = {
 						count >= value:pki_flusion_half_threshold
 					}
 				}
-				while = {
-					count = 10
-					random_owned_pop = {
-						resettle_pop = {
-							pop = THIS
-							planet = event_target:playerflusion
-						}
+				every_owned_pop_group = {
+					resettle_pop_group = {
+						POP_GROUP = this
+						PERCENTAGE = 0.1
+						PLANET = event_target:playerflusion
 					}
-				}
-			}
-			event_target:playerflusion = {
-				add_modifier = {
-					modifier = temp_job_help
-					days = 1
 				}
 			}
 		}

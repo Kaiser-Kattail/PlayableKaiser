@@ -1,10 +1,10 @@
 flusion_empire_ratio = {
-    add = trigger:num_pops
-    divide = owner.capital_scope.trigger:num_pops
+    add = trigger:pop_amount
+    divide = owner.capital_scope.trigger:pop_amount
 }
 
 pki_flusion_half_threshold = {
-    add = root.capital_scope.trigger:num_pops
+    add = root.capital_scope.trigger:pop_amount
     divide = 2
     floor = yes
     subtract = 5

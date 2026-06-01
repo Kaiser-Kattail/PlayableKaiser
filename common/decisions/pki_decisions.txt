@@ -22,7 +22,7 @@ decision_flusion_arc = {
 		}
 		has_planet_flag = gigaflusion
 		NOR = {
-			is_planet_class = pc_pki_flusion_ecu
+			is_planet_class = pc_pki_flusion_gaia_ecu
 			is_planet_class = pc_city
 			is_planet_class = pc_relic
 			has_modifier = resort_colony
@@ -34,7 +34,7 @@ decision_flusion_arc = {
 
 	allow = {
 		num_uncleared_blockers < 1
-		num_pops >= 90
+		pop_amount > 9000
 		custom_tooltip = {
 			fail_text = decision_flusion_arc_requirements
 			has_planet_flag = solaktropa
@@ -49,14 +49,6 @@ decision_flusion_arc = {
 				DISTRICT = district_city
 			}
 			pki_district_var_set = {
-				VARIABLE = pki_num_foundry_districts
-				DISTRICT = district_industrial
-			}
-			pki_district_var_set = {
-				VARIABLE = pki_num_factory_districts
-				DISTRICT = district_industrial
-			}
-			pki_district_var_set = {
 				VARIABLE = pki_num_mining_districts
 				DISTRICT = district_mining
 			}
@@ -69,7 +61,7 @@ decision_flusion_arc = {
 				DISTRICT = district_farming
 			}
 		}
-		change_pc = pc_pki_flusion_ecu
+		change_pc = pc_pki_flusion_gaia_ecu
 		hidden_effect = {
 			set_variable = {
 				which = pki_flusion_expansion_cost_mult
@@ -80,14 +72,6 @@ decision_flusion_arc = {
 			pki_district_convert = {
 				VARIABLE = pki_num_city_districts
 				DISTRICT = district_pki_flusion_city
-			}
-			pki_district_convert = {
-				VARIABLE = pki_num_foundry_districts
-				DISTRICT = district_pki_flusion_heavy_industry
-			}
-			pki_district_convert = {
-				VARIABLE = pki_num_factory_districts
-				DISTRICT = district_pki_flusion_civilian_industry
 			}
 			pki_district_convert = {
 				VARIABLE = pki_num_mining_districts
@@ -103,10 +87,6 @@ decision_flusion_arc = {
 			}
 			set_planet_entity = {
 				entity = flusion_planet_ecugaia_01_entity
-			}
-			add_modifier ={
-				modifier = temp_job_help
-				days = 360
 			}
 			add_modifier ={
 				modifier = pki_flusion_ecu_modifier
@@ -140,7 +120,7 @@ decision_siegfried_world = {
 			has_planet_flag = gigaflusion
 		}
 		NOR = {
-			is_planet_class = pc_pki_flusion_ecu
+			is_planet_class = pc_pki_flusion_gaia_ecu
 			is_planet_class = pc_city
 			is_planet_class = pc_relic
 			has_modifier = resort_colony
@@ -717,41 +697,6 @@ decision_kaiser_craft_recall = {
 	}
 }
 
-decision_pki_demotion_modifier = {
-	icon = decision_politics
-	enactment_time = 0
-	owned_planets_only = yes
-
-	resources = {
-        category = decisions
-        cost = {
-            influence = 100
-        }
-    }
-	sound = event_administrative_work
-  	potential = {
-		from = {
-			pki_is_katzenartig_imperium = yes
-			has_tradition = tr_flusion_finish
-	    }
-	    is_planet_class = pc_pki_flusion_ecu
-   	}
-	effect = {
-		custom_tooltip = decision_pki_demotion_modifier_effect
-		hidden_effect = {
-			every_owned_pop = {
-				limit = {
-					is_unemployed = yes
-				}
-				add_modifier = {
-					modifier = temp_job_help
-					days = 1
-				}
-				clear_pop_category = yes
-			}
-		}
-	}
-}
 
 decision_toggle_relocation = {
 	owned_planets_only = yes
@@ -812,10 +757,11 @@ decision_depopulate_planet = {
 	effect = {
 		custom_tooltip = PKI_DEPOPULATE
 		hidden_effect = {
-			every_owned_pop = {
-				resettle_pop = {
-					pop = THIS
-					planet = event_target:playerflusion
+			every_owned_pop_group = {
+				resettle_pop_group = {
+					POP_GROUP = this
+					PLANET = event_target:playerflusion
+					PERCENTAGE = 1
 				}
 			}
 			remove_modifier = central_instability
@@ -846,7 +792,7 @@ decision_pki_extra_districts = {
 			pki_is_katzenartig_imperium = yes
         }
 		has_planet_flag = gigaflusion
-		is_planet_class = pc_pki_flusion_ecu
+		is_planet_class = pc_pki_flusion_gaia_ecu
     }
 
 	effect = {
@@ -928,6 +874,7 @@ decision_pki_sector_auto = {
 		is_capital = no
 		has_upgraded_capital = yes
 		has_planet_flag = pki_scaling_colony
+		always = no #awaiting rework Elysium
 	}
 
 	effect = {
@@ -947,7 +894,7 @@ decision_pki_sector_auto = {
 								giga_is_arcology = no
 								is_pd_arcology = no
 								NOR = {
-									is_planet_class = pc_pki_flusion_ecu
+									is_planet_class = pc_pki_flusion_gaia_ecu
 									has_modifier = resort_colony
 									has_modifier = penal_colony
 									has_modifier = slave_colony

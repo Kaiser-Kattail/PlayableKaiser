@@ -12,7 +12,7 @@ planet_event = {
     is_triggered_only = yes
 
     trigger = {
-        is_planet_class = pc_pki_flusion_ecu
+        is_planet_class = pc_pki_flusion_gaia_ecu
     }
 
     option = {

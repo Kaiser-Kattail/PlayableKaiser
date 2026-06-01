@@ -116,7 +116,6 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = 45.0
-	use_ship_kill_target = no
 
 	power = -150
 	damage = { min = 500 max = 1500 }

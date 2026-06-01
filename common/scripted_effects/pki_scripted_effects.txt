@@ -84,27 +84,16 @@ pki_yearly_migration = {
                 has_planet_flag = playerflusion
                 has_modifier = no_relocation
             }
-            count_owned_pop = {
-                count >= 15
+            count_owned_pop_amount = {
+                count >= 1500
             }
         }
-        every_owned_pop = {
-            random_list = {
-                $HIGH_BOUND$ = {
-                }
-                $LOW_BOUND$ = {
-                    resettle_pop = {
-                        pop = THIS
-                        planet = event_target:playerflusion
-                    }
-                }
+        every_owned_pop_group = {
+            resettle_pop_group = {
+                POP_GROUP = this
+                PERCENTAGE = LOW_BOUND
+                PLANET = event_target:playerflusion
             }
-        }
-    }
-    event_target:playerflusion = {
-        add_modifier = {
-            modifier = temp_job_help
-            days = 1
         }
     }
 }

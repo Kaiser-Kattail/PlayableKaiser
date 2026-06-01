@@ -1,4 +1,4 @@
-@section_cost = 30
+@section_cost = 640
 
 # BOW: 8 S slots equivalent
 
@@ -259,7 +259,7 @@ ship_section_template = {
 	resources = {
 		category = ships
 		cost = {
-			alloys = @section_cost
+			alloys = 120
 		}
 	}
 }
@@ -283,7 +283,7 @@ ship_section_template = {
 	resources = {
 		category = ships
 		cost = {
-			alloys = 100
+			alloys = 120
 		}
 	}
 }
@@ -310,7 +310,7 @@ ship_section_template = {
 	resources = {
 		category = ships
 		cost = {
-			alloys = 80
+			alloys = 240
 		}
 	}
 }
@@ -335,7 +335,7 @@ ship_section_template = {
 	resources = {
 		category = ships
 		cost = {
-			alloys = 80
+			alloys = 240
 		}
 	}
 }
@@ -361,7 +361,7 @@ ship_section_template = {
 	resources = {
 		category = ships
 		cost = {
-			alloys = 80
+			alloys = 240
 		}
 	}
 }
@@ -397,7 +397,7 @@ ship_section_template = {
 	resources = {
 		category = ships
 		cost = {
-			alloys = @section_cost
+			alloys = 120
 		}
 	}
 }
@@ -425,7 +425,7 @@ ship_section_template = {
 	resources = {
 		category = ships
 		cost = {
-			alloys = @section_cost
+			alloys = 120
 		}
 	}
 }
