@@ -1022,12 +1022,16 @@
     tech_pki_bomber_desc: "Leerkatzenbombers are vessels designed to deploy vast amounts of explosive weapons on the battlefield. They are able to field either vast amounts of torpedoes, or swarms of more traditional missiles."
     tech_pki_cruiser: "Katzenkreuzer"
     tech_pki_cruiser_desc: "Born out of a need for heavier firepower, Katzenkreuzers are the largest non-celestial ships in the Katzen arsenal. They can field a large amount of large weaponry, as well as some strike craft and missiles."
+    tech_pki_blimp: "Gepanzerterluftschiffträger"
+    tech_pki_blimp_desc: "A capital ship surpassed only by the celestials, our armored blimp carriers are armadas unto themselves."
     PKI_TECH_UNLOCK_PANZER_CONSTRUCTION_DESC: "§HKatzenweltraumpanzers§!\nKatzenweltraumpanzers form the frontal line of all Katzen fleets, using their powerful railgun batteries to simply break apart enemy ships."
     PKI_TECH_UNLOCK_PANZER_CONSTRUCTION_TITLE: "§HUnlocks Ship Type:§! Katzenweltraumpanzer"
     PKI_TECH_UNLOCK_BOMBER_CONSTRUCTION_DESC: "§HLeerekatzenbombers§!\nLeerekatzenbombers provide a significant amount of missile armament to our fleets. They come in 2 forms: Dive bombers, delivering torpedoes, and long-range bombers, using conventional missiles."
     PKI_TECH_UNLOCK_BOMBER_CONSTRUCTION_TITLE: "§HUnlocks Ship Type:§! Leerekatzenbomber"
     PKI_TECH_UNLOCK_CRUISER_CONSTRUCTION_DESC: "§HKatzenkreuzers§!\nKatzenkreuzers are the backbone of any fleet they are in, being equipped ample armor and shields, and utilizing large railguns and missile batteries to overwhelm enemies. Katzenkreuzers are also equipped with small hangar bays."
     PKI_TECH_UNLOCK_CRUISER_CONSTRUCTION_TITLE: "§HUnlocks Ship Type:§! Katzenkreuzer"
+    PKI_TECH_UNLOCK_BLIMP_CONSTRUCTION_DESC: "§HGepanzerterluftschiffträgers§!\nGepanzerterluftschiffträgers serve the role of a capital ship, artillery, and battlecarrier. These vessels also possess a powerful main cannon."
+    PKI_TECH_UNLOCK_BLIMP_CONSTRUCTION_TITLE: "§HUnlocks Ship Type:§! Gepanzerterluftschiffträger"
 
 
     tech_pki_ship_sections: "Expanded Ship Designs"

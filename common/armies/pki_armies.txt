@@ -247,6 +247,11 @@ flunat_defense_army = {
 	war_exhaustion = 0.0
 	icon = GFX_army_type_defensive
 	potential = {
-		always = no
+		owner = {
+			OR = {
+				is_country_type = flusion_coalition
+				is_country_type = flusion_nation
+			}
+		}
 	}
 }

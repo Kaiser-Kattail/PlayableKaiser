@@ -360,6 +360,8 @@ tech_pki_blimp = {
 	prerequisites = { "tech_pki_cruiser" }
 	weight = @tier1weight1
 
+	icon = tech_juggernaut
+
 	is_rare = yes
 
 	potential = {

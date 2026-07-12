@@ -331,7 +331,7 @@ pki_katzen_blimp = { #Armored Blimp Carrier (but bigger). Titan-juggernaut-ish m
 	required_component_set = "ftl_components"
 	required_component_set = "thruster_components"
 	required_component_set = "sensor_components"
-	required_component_set = "combat_computers"
+	required_component_set = "pki_katzen_combat_computers"
 	required_component_set = "ship_aura_components"
 }
 

@@ -78,13 +78,13 @@ namespace = kmoon
 	fire_only_once = yes
 
 	trigger = {
-		owner = {
+		this.owner = {
 			pki_is_katzenartig_imperium = yes
 		}
 	}
 
 	immediate = {
-		owner = {
+		this.owner = {
 			every_situation = {
 				limit = {
 					is_situation_type = situation_kaiser_moon
@@ -136,7 +136,7 @@ country_event = {
 						set_ship_flag = current_katzen_flagship
 					}
 				}
-				set_location = event_target:gigaflusion
+				set_location = event_target:playerflusion
 			}
 		}
 	}

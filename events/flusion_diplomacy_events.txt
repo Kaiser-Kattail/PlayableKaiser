@@ -204,7 +204,7 @@ country_event = {
 					species = event_target:solakians
 					effect = {
 						add_modifier = {
-							modifier = pop_recently_conquered
+							modifier = "pop_recently_conquered"
 							days = 3600
 						}
 					}
@@ -558,7 +558,7 @@ country_event = {
 					species = event_target:cookians
 					effect = {
 						add_modifier = {
-							modifier = pop_recently_conquered
+							modifier = "pop_recently_conquered"
 							days = 3600
 						}
 					}
@@ -813,7 +813,7 @@ country_event = {
 					species = event_target:kronks
 					effect = {
 						add_modifier = {
-							modifier = pop_recently_conquered
+							modifier = "pop_recently_conquered"
 							days = 3600
 						}
 					}
@@ -1080,7 +1080,7 @@ country_event = {
 					species = event_target:ravkans
 					effect = {
 						add_modifier = {
-							modifier = pop_recently_conquered
+							modifier = "pop_recently_conquered"
 							days = 3600
 						}
 					}
@@ -1346,7 +1346,7 @@ country_event = {
 					species = event_target:zousans
 					effect = {
 						add_modifier = {
-							modifier = pop_recently_conquered
+							modifier = "pop_recently_conquered"
 							days = 3600
 						}
 					}
@@ -1591,7 +1591,7 @@ country_event = {
 					species = event_target:droog
 					effect = {
 						add_modifier = {
-							modifier = pop_recently_conquered
+							modifier = "pop_recently_conquered"
 							days = 3600
 						}
 					}
@@ -1846,8 +1846,8 @@ country_event = {
 					size = 100
 					species = event_target:ezics
 					effect = {
-						add_modifier = {
-							modifier = pop_recently_conquered
+						add_modifier = { 
+							modifier = "pop_recently_conquered"
 							days = 3600
 						}
 					}
@@ -2102,7 +2102,7 @@ country_event = {
 					species = event_target:mercurians
 					effect = {
 						add_modifier = {
-							modifier = pop_recently_conquered
+							modifier = "pop_recently_conquered"
 							days = 3600
 						}
 					}
@@ -2368,7 +2368,7 @@ country_event = {
 					species = event_target:cyatianalas
 					effect = {
 						add_modifier = {
-							modifier = pop_recently_conquered
+							modifier = "pop_recently_conquered"
 							days = 3600
 						}
 					}
@@ -2634,7 +2634,7 @@ country_event = {
 					species = event_target:yinjites
 					effect = {
 						add_modifier = {
-							modifier = pop_recently_conquered
+							modifier = "pop_recently_conquered"
 							days = 3600
 						}
 					}
@@ -2900,7 +2900,7 @@ country_event = {
 					species = event_target:symbies
 					effect = {
 						add_modifier = {
-							modifier = pop_recently_conquered
+							modifier = "pop_recently_conquered"
 							days = 3600
 						}
 					}
@@ -3166,7 +3166,7 @@ country_event = {
 					species = event_target:lauranaise
 					effect = {
 						add_modifier = {
-							modifier = pop_recently_conquered
+							modifier = "pop_recently_conquered"
 							days = 3600
 						}
 					}
@@ -3430,7 +3430,7 @@ country_event = {
 					species = event_target:haranians
 					effect = {
 						add_modifier = {
-							modifier = pop_recently_conquered
+							modifier = "pop_recently_conquered"
 							days = 3600
 						}
 					}

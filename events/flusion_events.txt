@@ -64,7 +64,7 @@ colony_event = {
 	immediate = {
 		if = {
 			limit = {
-				has_planet_flag = flusion
+				is_same_value = event_target:playerflusion
 			}
 			set_planet_entity = {
 				entity = "flusion_planet_entity"
@@ -465,6 +465,25 @@ country_event = {
 					set_council_position = councilor_state
 				}
 			}
+
+			# this ought to be Head of Foreign Relations so it's not 100% lore accurate but shuddup
+			set_council_position_title_male = {
+				position_tag = councilor_state
+				title = "Governor of Flusion"
+			}
+			set_council_position_title_female = {
+				position_tag = councilor_state
+				title = "Governor of Flusion"
+			}
+			set_council_position_title_male = {
+				position_tag = councilor_defense
+				title = "Generalissimo"
+			}
+			set_council_position_title_female = {
+				position_tag = councilor_defense
+				title = "Generalissimo"
+			}
+
 
 			event_target:playerflusion = {
 				assign_leader = event_target:pki_loris

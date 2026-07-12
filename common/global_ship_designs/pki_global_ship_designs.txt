@@ -2,7 +2,7 @@
 #Kaiser Moon
 ship_design = {
 	name = "NAME_PKI_ATTACK_MOON"
-	ship_size = giga_massive_planet
+	ship_size = giga_war_moon
 	section = {
 		template = "kaiser_moon_bow_01_key"
 		slot = "bow"
