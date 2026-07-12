@@ -1,7 +1,7 @@
 namespace = pki_flavor
 
 #Flusio-arc
-planet_event = {
+colony_event = {
     id = pki_flavor.1
     title = pki_flavor.1.name
     desc = pki_flavor.1.desc

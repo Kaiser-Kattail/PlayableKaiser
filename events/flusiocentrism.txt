@@ -7,9 +7,10 @@ country_event = {
 
 	trigger = {
 		pki_is_katzenartig_imperium = yes
-		any_owned_planet = {
+		has_tradition = tr_flusion_finish
+		any_owned_colony = {
 			NOT = {
-				has_planet_flag = playerflusion
+				has_carrier_flag = playerflusion
 			}
 			OR = {
 				check_variable_arithmetic = {
@@ -22,11 +23,11 @@ country_event = {
 	}
 
 	immediate = {
-		every_owned_planet = {
+		every_owned_colony = {
 			if = {
 				limit = {
 					NOT = {
-						has_planet_flag = playerflusion
+						has_carrier_flag = playerflusion
 					}
 					check_variable_arithmetic = {
 						which = value:flusion_empire_ratio
@@ -70,7 +71,7 @@ country_event = {
 
 }
 
-planet_event = {
+colony_event = {
 	id = centrism.4
 	is_triggered_only = yes
 	hide_window = yes
@@ -139,12 +140,12 @@ country_event = {
 	}
 
 	immediate = {
-		every_owned_planet = {
+		every_owned_colony = {
 			limit = {
 				exists = owner
 				is_colony = yes
 				NOR = {
-					has_planet_flag = playerflusion
+					has_carrier_flag = playerflusion
 				}
 			}
 			if = {
@@ -195,7 +196,7 @@ country_event = {
 
 	trigger = {
 		pki_is_katzenartig_imperium = no
-		any_owned_planet = {
+		any_owned_colony = {
 			exists = owner
 			OR = {
 				has_modifier = katzen_colony
@@ -207,7 +208,7 @@ country_event = {
 	}
 
 	immediate = {
-		every_owned_planet = {
+		every_owned_colony = {
 			remove_modifier = katzen_colony
 			remove_deposit = d_bureau_of_colonial_benefits
 			remove_deposit = d_flusion_bounty_colony
@@ -231,14 +232,14 @@ country_event = {
 			which = centralization_unity_modifier
 			value = 0
 		}
-		every_owned_planet = {
+		every_owned_colony = {
 			if = {
 				limit = {
 					NOT = {
 						has_modifier = central_instability
 					}
 					NOT = {
-						has_planet_flag = playerflusion
+						has_carrier_flag = playerflusion
 					}
 				}
 				event_target:katzenartig = {
@@ -302,10 +303,10 @@ country_event = {
 			limit = {
 				has_policy_flag = dynamic_migration
 			}
-			every_owned_planet = {
+			every_owned_colony = {
 				limit = {
 					NOR = {
-						has_planet_flag = playerflusion
+						has_carrier_flag = playerflusion
 						has_modifier = no_relocation
 					}
 					count_owned_pop_amount = {

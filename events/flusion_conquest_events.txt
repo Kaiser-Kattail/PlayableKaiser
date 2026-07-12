@@ -12,8 +12,8 @@ country_event = { #Flusion is GONE (destroyed, checks monthly)
 			OR = {
 				event_target:playerflusion = {
 					NOT = {
-                        			is_planet_class = pc_pki_flusion_ecu
-                   			}
+						is_planet_class = pc_flusion_gaia_ecu
+					}
 					OR = {
 						is_colony = no #Flusion is not a colony aka destroyed
 						is_planet_class = pc_shattered
@@ -21,7 +21,7 @@ country_event = { #Flusion is GONE (destroyed, checks monthly)
 						pop_amount = 0
 						is_planet_habitable = no
 					}
-					NOT = { is_planet_class = pc_pki_flusion_ecu }
+					NOT = { is_planet_class = pc_flusion_gaia_ecu }
 				}
 				NOT = { exists = event_target:playerflusion }
 			}
@@ -46,7 +46,7 @@ country_event = { #Flusion is INVADED
 	hide_window = yes
 
 	trigger = {
-		fromfrom = { has_planet_flag = playerflusion }
+		fromfrom = { has_carrier_flag = playerflusion }
 		this = {
 			NOT = {
 				is_country_type = flusion_nation
@@ -72,7 +72,7 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
-		fromfrom = { has_planet_flag = playerflusion }
+		fromfrom = { has_carrier_flag = playerflusion }
 		this = {
 			is_country_type = flusion_nation
 		}

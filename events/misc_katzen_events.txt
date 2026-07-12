@@ -151,7 +151,7 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = {
-		has_paragon_dlc = yes
+		has_paragon_dlc = yes #you get to stay for now
 	}
 
 	event_window_type = leader_recruit
@@ -434,7 +434,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = pki_misc.12
 	hide_window = yes
 	is_triggered_only = yes
@@ -473,7 +473,9 @@ planet_event = {
 			}
 		}
 		else = {
-			planet_event = { id = pki_misc.12 days = 30 }
+			colony = {
+				colony_event = { id = pki_misc.12 days = 30 }
+			}
 		}
 	}
 }
@@ -736,7 +738,7 @@ fleet_event = {
 				modifier = pki_katzen_submarine_subspace_blockade
 				days = -1
 			}
-			planet_event = {
+			colony_event = {
 				id = pki_misc.171
 				days = 30
 			}
@@ -744,7 +746,7 @@ fleet_event = {
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = pki_misc.171
 	hide_window = yes
 	is_triggered_only = yes
@@ -762,7 +764,7 @@ planet_event = {
 				modifier = pki_katzen_submarine_subspace_blockade
 				days = -1
 			}
-			planet_event = {
+			colony_event = {
 				id = pki_misc.171
 				days = 30
 			}
@@ -1465,7 +1467,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = pki_misc.26
 	title = pki_misc.26.name
 	desc = pki_misc.26.desc

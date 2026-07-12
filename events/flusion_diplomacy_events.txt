@@ -214,7 +214,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = flunat.0110
 
 	is_triggered_only = yes
@@ -295,7 +295,7 @@ situation_event = {
 			}
 		}
 		event_target:playerflusion = {
-			planet_event = {
+			colony_event = {
 				id = flunat.0110 days = 2
 			}
 		}
@@ -393,7 +393,7 @@ situation_event = {
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = flunat.0210
 
 	is_triggered_only = yes
@@ -474,7 +474,7 @@ situation_event = {
 			}
 		}
 		event_target:playerflusion = {
-			planet_event = {
+			colony_event = {
 				id = flunat.0210 days = 2
 			}
 		}
@@ -641,7 +641,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = flunat.0310
 
 	is_triggered_only = yes
@@ -722,7 +722,7 @@ situation_event = {
 			}
 		}
 		event_target:playerflusion = {
-			planet_event = {
+			colony_event = {
 				id = flunat.0310 days = 2
 			}
 		}
@@ -897,7 +897,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = flunat.0410
 
 	is_triggered_only = yes
@@ -978,7 +978,7 @@ situation_event = {
 			}
 		}
 		event_target:playerflusion = {
-			planet_event = {
+			colony_event = {
 				id = flunat.0410 days = 2
 			}
 		}
@@ -1153,7 +1153,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = flunat.0510
 
 	is_triggered_only = yes
@@ -1234,7 +1234,7 @@ situation_event = {
 			}
 		}
 		event_target:playerflusion = {
-			planet_event = {
+			colony_event = {
 				id = flunat.0510 days = 2
 			}
 		}
@@ -1392,7 +1392,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = flunat.0610
 
 	is_triggered_only = yes
@@ -1473,7 +1473,7 @@ situation_event = {
 			}
 		}
 		event_target:playerflusion = {
-			planet_event = {
+			colony_event = {
 				id = flunat.0610 days = 2
 			}
 		}
@@ -1633,7 +1633,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = flunat.0710
 
 	is_triggered_only = yes
@@ -1714,7 +1714,7 @@ situation_event = {
 			}
 		}
 		event_target:playerflusion = {
-			planet_event = {
+			colony_event = {
 				id = flunat.0710 days = 2
 			}
 		}
@@ -1879,7 +1879,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = flunat.0810
 
 	is_triggered_only = yes
@@ -1960,7 +1960,7 @@ situation_event = {
 			}
 		}
 		event_target:playerflusion = {
-			planet_event = {
+			colony_event = {
 				id = flunat.0810 days = 2
 			}
 		}
@@ -2136,7 +2136,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = flunat.0910
 
 	is_triggered_only = yes
@@ -2217,7 +2217,7 @@ situation_event = {
 			}
 		}
 		event_target:playerflusion = {
-			planet_event = {
+			colony_event = {
 				id = flunat.0910 days = 2
 			}
 		}
@@ -2391,7 +2391,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = flunat.01110
 
 	is_triggered_only = yes
@@ -2472,7 +2472,7 @@ situation_event = {
 			}
 		}
 		event_target:playerflusion = {
-			planet_event = {
+			colony_event = {
 				id = flunat.01110 days = 2
 			}
 		}
@@ -2647,7 +2647,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = flunat.01210
 
 	is_triggered_only = yes
@@ -2728,7 +2728,7 @@ situation_event = {
 			}
 		}
 		event_target:playerflusion = {
-			planet_event = {
+			colony_event = {
 				id = flunat.01210 days = 2
 			}
 		}
@@ -2903,7 +2903,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = flunat.01310
 
 	is_triggered_only = yes
@@ -2984,7 +2984,7 @@ situation_event = {
 			}
 		}
 		event_target:playerflusion = {
-			planet_event = {
+			colony_event = {
 				id = flunat.01310 days = 2
 			}
 		}
@@ -3158,7 +3158,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = flunat.01410
 
 	is_triggered_only = yes
@@ -3239,7 +3239,7 @@ situation_event = {
 			}
 		}
 		event_target:playerflusion = {
-			planet_event = {
+			colony_event = {
 				id = flunat.01410 days = 2
 			}
 		}
