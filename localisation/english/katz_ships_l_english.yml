@@ -4,12 +4,19 @@
     pki_katzen_combat_computers_desc: ""
 
     pki_panzer: "Katzenweltraumpanzer"
+    pki_panzer_cap: "$pki_panzer$"
     pki_panzer_plural: "Katzenweltraumpanzers"
+
+    pki_katzen_blimp: "Gepanzerterluftschiffträger"
+    pki_katzen_blimp_cap: "$pki_katzen_blimp$"
+    pki_katzen_blimp_plural: "Gepanzerterluftschiffträgers"
+    CORE_PKI_KATZEN_BLIMP_SECTION: "$pki_katzen_blimp$ Core"
 
     PKI_SPACE_PANZER_L1P1S1: "Raumpanzerrumpf"
     PKI_SPACE_PANZER_3L: "Schwerer Artillerierumpf"
 
     pki_bomber: "Leerekatzenbomber"
+    pki_bomber_cap: "$pki_bomber$"
     pki_bomber_plural: "Leerekatzenbombers"
 
     PKI_SPACE_BOMBER_G5: "Torpedorumpf"
@@ -17,6 +24,7 @@
     PKI_SPACE_BOMBER_L1M4: "Raketenrumpf"
 
     pki_cruiser: "Katzenkreuzer"
+    pki_cruiser_cap: "$pki_cruiser$"
     pki_cruiser_plural: "Katzenkreuzers"
 
     PKI_CRUISER_BOW_X1: "Großer Vorwärtsaufsatz"
@@ -27,11 +35,13 @@
     PKI_CRUISER_STERN_S2P2: "Verteidigungsheck"
 
     pki_submarine:0 "Unterraumboot"
+    pki_submarine_cap: "$pki_submarine$"
     pki_submarine_plural:0 "Unterraumboots"
 
     PKI_SPACE_SUBMARINE:0 "Unterraumboot"
 
     pki_warforge_platform:0 "Katzen Defense Array"
+    pki_warforge_platform_cap: "$pki_warforge_platform$"
     pki_warforge_platform_plural:0 "Katzen Defense Arrays"
 
     PKI_DEFENCE_ARRAY:0 "Defense Array Core"

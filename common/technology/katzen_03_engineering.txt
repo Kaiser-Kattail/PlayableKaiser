@@ -378,6 +378,66 @@ tech_pki_cruiser = {
 	}
 }
 
+tech_pki_blimp = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_pki_cruiser" }
+	weight = @tier1weight1
+
+	is_rare = yes
+
+	potential = {
+		OR = {
+			pki_is_katzprotektorat_tier_3 = yes
+			pki_is_katzenartig_imperium = yes
+		}
+	}
+
+	prereqfor_desc = {
+		ship = {
+			title = "PKI_TECH_UNLOCK_BLIMP_CONSTRUCTION_TITLE"
+			desc = "PKI_TECH_UNLOCK_BLIMP_CONSTRUCTION_DESC"
+		}
+	}
+
+	modifier = {
+		ship_experience_gain_mult = 0.05
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOT = { years_passed > 50 }
+		}
+		modifier = {
+			factor = 15
+			has_technology = tech_battleships
+		}
+		modifier = {
+			factor = 2
+			years_passed > 60
+		}
+		modifier = {
+			factor = 3
+			years_passed > 65
+		}
+		modifier = {
+			factor = 4
+			years_passed > 70
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+	}
+
+	ai_weight = {
+		factor = @ai_ship_types_factor
+	}
+}
+
 tech_pki_ship_sections = {
 	cost = @tier4cost1
 	area = engineering

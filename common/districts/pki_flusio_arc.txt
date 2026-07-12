@@ -1,7 +1,7 @@
 #Housing: Amenities
 district_pki_flusion_city = {
 	icon = district_flusion_city
-	base_buildtime = 600
+	base_buildtime = 480
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
 
@@ -41,24 +41,16 @@ district_pki_flusion_city = {
 	planet_modifier = {
 		planet_housing_add = 16
 		planet_orbital_bombardment_damage = -0.01
-		planet_max_buildings_add = 1.5
 	}
-
-	inline_script = {
-		script = planet/maintenance/giga_city_job_swap
-		jobs = 2
-		district = @yes
-	}
-
 	inline_script = {
 		script = planet/security/giga_security_job_swap
-		jobs = 1
+		jobs = 100
 		district = @yes
 	}
 
 	inline_script = {
 		script = planet/soldiers/giga_soldier_job_swap
-		jobs = 1
+		jobs = 100
 		district = @yes
 	}
 
@@ -70,7 +62,7 @@ district_pki_flusion_city = {
 			}
 		}
 		modifier = {
-			planet_housing_add = -4
+			planet_housing_add = -400
 		}
 	}
 
@@ -80,7 +72,7 @@ district_pki_flusion_city = {
 			owner = { has_active_tradition = tr_prosperity_public_works }
 		}
 		modifier = {
-			planet_housing_add = 4
+			planet_housing_add = 400
 		}
 	}
 
@@ -92,7 +84,7 @@ district_pki_flusion_city = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 4
+			planet_housing_add = 400
 		}
 	}
 
@@ -105,7 +97,7 @@ district_pki_flusion_city = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 4
+			planet_housing_add = 400
 		}
 	}
 
@@ -120,17 +112,8 @@ district_pki_flusion_city = {
 		}
 		modifier = {
 			# the roofs are full of AA guns already
-			job_farmer_add = 2
+			job_farmer_add = 200
 		}
-	}
-
-	# Bug Branch
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_bugged_rooftop_farmers = yes }
-		}
-		text = job_farmer_effect_desc
 	}
 }
 

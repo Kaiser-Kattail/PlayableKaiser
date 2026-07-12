@@ -12,6 +12,7 @@ origin_katzen = {
 		authority = {
 			value = auth_dictatorial
 		}
+		is_nomadic = no
 	}
 
 	flags = { custom_start_screen }

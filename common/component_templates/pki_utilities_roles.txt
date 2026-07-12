@@ -49,7 +49,7 @@ utility_component_template = {
 
 
 	class_restriction = { shipclass_military }
-	size_restriction = { pki_bomber pki_panzer pki_cruiser }
+	size_restriction = { pki_bomber pki_panzer pki_cruiser pki_katzen_blimp }
 	component_set = pki_katzen_combat_computers
 	upgrades_to = PKI_COMBAT_COMPUTER_LINE_BASIC
 
@@ -225,7 +225,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { pki_panzer pki_cruiser pki_bomber }
+	size_restriction = { pki_panzer pki_cruiser pki_bomber pki_katzen_blimp }
 	component_set = pki_katzen_combat_computers
 	ship_behavior = "line"
 	prerequisites = { "tech_combat_computers_1" }
@@ -254,7 +254,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { pki_panzer pki_bomber pki_cruiser }
+	size_restriction = { pki_panzer pki_bomber pki_cruiser pki_katzen_blimp }
 	component_set = pki_katzen_combat_computers
 	ship_behavior = "line"
 	prerequisites = { "tech_combat_computers_2" }
@@ -285,7 +285,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { pki_cruiser pki_bomber pki_panzer }
+	size_restriction = { pki_cruiser pki_bomber pki_panzer pki_katzen_blimp }
 	component_set = pki_katzen_combat_computers
 	ship_behavior = "artillery"
 	prerequisites = { "tech_combat_computers_1" }
@@ -314,7 +314,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { pki_bomber pki_cruiser pki_panzer }
+	size_restriction = { pki_bomber pki_cruiser pki_panzer pki_katzen_blimp }
 	component_set = pki_katzen_combat_computers
 	ship_behavior = "artillery"
 	prerequisites = { "tech_combat_computers_2" }
@@ -346,7 +346,7 @@ utility_component_template = {
 	}
 
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { pki_cruiser }
+	size_restriction = { pki_cruiser pki_katzen_blimp }
 	component_set = pki_katzen_combat_computers
 	ship_behavior = "carrier"
 	prerequisites = { "tech_combat_computers_1" }
@@ -374,7 +374,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { pki_cruiser }
+	size_restriction = { pki_cruiser pki_katzen_blimp }
 	component_set = pki_katzen_combat_computers
 	ship_behavior = "carrier"
 	prerequisites = { "tech_combat_computers_2" }

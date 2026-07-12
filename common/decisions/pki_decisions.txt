@@ -61,29 +61,28 @@ decision_flusion_arc = {
 				DISTRICT = district_farming
 			}
 		}
-		change_pc = pc_pki_flusion_gaia_ecu
+		change_pc = pc_flusion_gaia_ecu
 		hidden_effect = {
 			set_variable = {
 				which = pki_flusion_expansion_cost_mult
 				value = 1
 			}
 			planet_event = { id = pki_flavor.1 }
-			add_deposit = d_giga_job_upkeep
 			pki_district_convert = {
 				VARIABLE = pki_num_city_districts
-				DISTRICT = district_pki_flusion_city
+				DISTRICT = district_flusion_city
 			}
 			pki_district_convert = {
 				VARIABLE = pki_num_mining_districts
-				DISTRICT = district_pki_flusion_mining
+				DISTRICT = district_flusion_mining
 			}
 			pki_district_convert = {
 				VARIABLE = pki_num_energy_districts
-				DISTRICT = district_pki_flusion_power
+				DISTRICT = district_flusion_power
 			}
 			pki_district_convert = {
 				VARIABLE = pki_num_food_districts
-				DISTRICT = district_pki_flusion_farming
+				DISTRICT = district_flusion_farming
 			}
 			set_planet_entity = {
 				entity = flusion_planet_ecugaia_01_entity

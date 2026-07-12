@@ -29,6 +29,24 @@ is_maginotable_restricted = {
 		# planetary computer
 		is_planet_class = pc_giga_planetary_computer
 		has_planet_flag = has_planet_pc_mega
-		is_planet_class = pc_pki_flusion_gaia_ecu
+		is_planet_class = pc_flusion_gaia_ecu
 	}
+}
+
+
+ship_uses_titan_components = {
+	OR = {
+		is_ship_size = titan
+		is_ship_size = bio_titan
+		is_ship_size = cosmo_crisis_titan
+		is_ship_size = large_fallen_stinger
+		is_ship_size = cosmo_crisis_stinger
+		is_ship_size = pki_katzen_blimp
+	}
+}
+
+
+ship_uses_juggernaut_components = {
+	is_ship_size = juggernaut
+	is_ship_size = pki_katzen_blimp
 }

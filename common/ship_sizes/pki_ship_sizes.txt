@@ -10,8 +10,8 @@ pki_panzer = { #Destroyerish, designed to conduct Blitzkrieg and overwhelm enemy
 	modifier = {
 		ship_evasion_add = @destroyer_evasion
 	}
-	size_multiplier = 2
-	fleet_slot_size = 3
+	size_multiplier = 10
+	fleet_slot_size = 2
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 4
 	is_space_station = no
@@ -49,8 +49,10 @@ pki_panzer = { #Destroyerish, designed to conduct Blitzkrieg and overwhelm enemy
 			energy = @destroyer_upkeep_energy
 			alloys = @destroyer_upkeep_alloys
 		}
+		logistics = {
+			trade = @destroyer_logistic_upkeep_trade
+		}
 	}
-
 	min_upgrade_cost = {
 		alloys = 2
 	}
@@ -100,8 +102,8 @@ pki_bomber = { #Cruiser, bomber designed to assault enemy worlds and fortificati
 		ship_evasion_add = @cruiser_evasion
 		ship_orbital_bombardment_mult = 2
 	}
-	size_multiplier = 4
-	fleet_slot_size = 4
+	size_multiplier = 20
+	fleet_slot_size = 3
 	section_slots = { "mid" = { locator = "part2" } }
 	num_target_locators = 4
 	is_space_station = no
@@ -138,6 +140,9 @@ pki_bomber = { #Cruiser, bomber designed to assault enemy worlds and fortificati
 		upkeep = {
 			energy = @cruiser_upkeep_energy
 			alloys = @cruiser_upkeep_alloys
+		}
+		logistics = {
+			trade = @cruiser_logistic_upkeep_trade
 		}
 	}
 
@@ -197,8 +202,8 @@ pki_cruiser = { #Battleship-Titan, designed to "sit back" and assist the fleet
 		ship_evasion_add = @battleship_evasion
 		ship_fire_rate_mult = 0.1
 	}
-	size_multiplier = 8
-	fleet_slot_size = 8
+	size_multiplier = 40
+	fleet_slot_size = 4
 	section_slots = { "bow" = { locator = "part1" } "mid" = { locator = "part2" } "stern" = { locator = "part3" } }
 	num_target_locators = 4
 	is_space_station = no
@@ -212,10 +217,13 @@ pki_cruiser = { #Battleship-Titan, designed to "sit back" and assist the fleet
 			energy = @battleship_upkeep_energy
 			alloys = @battleship_upkeep_alloys
 		}
+		logistics = {
+			trade = @battleship_logistic_upkeep_trade
+		}
 	}
 
 	min_upgrade_cost = {
-		alloys = 6
+		alloys = 8
 	}
 
 	class = shipclass_military
@@ -263,6 +271,70 @@ pki_cruiser = { #Battleship-Titan, designed to "sit back" and assist the fleet
 	}
 }
 
+pki_katzen_blimp = { #Armored Blimp Carrier (but bigger). Titan-juggernaut-ish miniboss
+	entity = katzen_blimp_entity
+	formation_priority = 80
+	max_speed = 100
+	acceleration = 0.2
+	rotation_speed = 0.15
+	collision_radius = 7
+	max_hitpoints = 40000 #remember to change CORE_KATZEN_ADVANCED_BLIMP_SECTION if health is changed
+	modifier = {
+		ship_evasion_add = @juggernaut_evasion
+	}
+	size_multiplier = 80
+	fleet_slot_size = 16
+	section_slots = { "core" = { locator = "part1" } }
+	num_target_locators = 4
+	is_space_station = no
+	icon = ship_size_military_16
+	map_counter_icon = ship_counter_64
+
+	combat_disengage_chance = 1.25
+
+	base_buildtime = @titan_build_time
+	can_have_federation_design = no
+	enable_default_design = yes
+	resources = {
+		category = ships
+		upkeep = {
+			energy = @titan_upkeep_energy
+			alloys = @titan_upkeep_alloys
+		}
+		logistics = {
+			trade = @titan_logistic_upkeep_trade
+		}
+	}
+
+	min_upgrade_cost = {
+		alloys = 16
+	}
+
+	ai_ship_data = {
+		min = 1
+		max = 15
+		planet_mult = 0.1
+	}
+
+	potential_country = {
+		OR = {
+			pki_is_katzenartig_imperium = yes
+			pki_is_katzprotektorat_tier_3 = yes
+		}
+	}
+	prerequisites = {
+		tech_pki_blimp
+	}
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+	required_component_set = "ship_aura_components"
+}
+
 pki_submarine = {
 	entity = giga_katzen_submarine_entity
 	graphical_culture = no
@@ -278,8 +350,8 @@ pki_submarine = {
 		ship_engagement_range_mult = 4
 		ship_cloaking_strength_add = 3
 	}
-	size_multiplier = 4
-	fleet_slot_size = 2
+	size_multiplier = 8
+	fleet_slot_size = 1
 	section_slots = { "mid" = { locator = "part2" } }
 	num_target_locators = 4
 	is_space_station = no
@@ -304,10 +376,12 @@ pki_submarine = {
 			energy = @destroyer_upkeep_energy
 			alloys = @destroyer_upkeep_alloys
 		}
+		logistics = {
+			trade = @destroyer_logistic_upkeep_trade
+		}
 	}
-
 	min_upgrade_cost = {
-		alloys = 1
+		alloys = 2
 	}
 
 	construction_type = starbase_shipyard
@@ -338,7 +412,8 @@ pki_warforge_platform = { #Katzen war forge platform
 	max_hitpoints = 12000
 
 	size_multiplier = 1
-	fleet_slot_size = 1
+	combat_size_multiplier = 20
+	fleet_slot_size = 2
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 0
 	is_space_station = yes
@@ -403,8 +478,8 @@ pki_warforge_starbase = {
 		}
 	}
 
-	combat_size_multiplier = 30
-	size_multiplier = 8
+	combat_size_multiplier = 80
+	size_multiplier = 80
 	fleet_slot_size = 2
 	section_slots = {
 		"mid" = { locator = "root" }

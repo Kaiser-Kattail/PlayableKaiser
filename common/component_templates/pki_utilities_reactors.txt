@@ -786,7 +786,7 @@ utility_component_template = {
 }
 
 ####################
-# Engimatic Reactors
+# Enigmatic Reactors
 ####################
 
 utility_component_template = {
