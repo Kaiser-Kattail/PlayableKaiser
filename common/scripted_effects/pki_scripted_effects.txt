@@ -78,10 +78,10 @@ pki_count_ships = {
 }
 
 pki_yearly_migration = {
-    every_owned_planet = {
+    every_owned_colony = {
         limit = {
             NOR = {
-                has_planet_flag = playerflusion
+                has_carrier_flag = playerflusion
                 has_modifier = no_relocation
             }
             count_owned_pop_amount = {
