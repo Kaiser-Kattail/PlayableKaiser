@@ -225,55 +225,65 @@ colony_event = {
 			1111 = {
 				while = {
 					count = 3
-					create_army = {
-						name = "NAME_solakia_defense"
-						owner = event_target:solakia_flunat
-						species = event_target:solakians
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_solakia_defense"
+							owner = event_target:solakia_flunat
+							species = event_target:solakians
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 4
-					create_army = {
-						name = "NAME_solakia_defense"
-						owner = event_target:solakia_flunat
-						species = event_target:solakians
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_solakia_defense"
+							owner = event_target:solakia_flunat
+							species = event_target:solakians
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			3333 = {
 				while = {
 					count = 5
-					create_army = {
-						name = "NAME_solakia_defense"
-						owner = event_target:solakia_flunat
-						species = event_target:solakians
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_solakia_defense"
+							owner = event_target:solakia_flunat
+							species = event_target:solakians
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 6
-					create_army = {
-						name = "NAME_solakia_defense"
-						owner = event_target:solakia_flunat
-						species = event_target:solakians
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_solakia_defense"
+							owner = event_target:solakia_flunat
+							species = event_target:solakians
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			1111 = {
 				while = {
 					count = 7
-					create_army = {
-						name = "NAME_solakia_defense"
-						owner = event_target:solakia_flunat
-						species = event_target:solakians
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_solakia_defense"
+							owner = event_target:solakia_flunat
+							species = event_target:solakians
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
@@ -404,55 +414,65 @@ colony_event = {
 			1111 = {
 				while = {
 					count = 3
-					create_army = {
-						name = "NAME_cookie_defense"
-						owner = event_target:cookie_flunat
-						species = event_target:cookians
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_cookie_defense"
+							owner = event_target:cookie_flunat
+							species = event_target:cookians
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 4
-					create_army = {
-						name = "NAME_cookie_defense"
-						owner = event_target:cookie_flunat
-						species = event_target:cookians
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_cookie_defense"
+							owner = event_target:cookie_flunat
+							species = event_target:cookians
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			3333 = {
 				while = {
 					count = 5
-					create_army = {
-						name = "NAME_cookie_defense"
-						owner = event_target:cookie_flunat
-						species = event_target:cookians
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_cookie_defense"
+							owner = event_target:cookie_flunat
+							species = event_target:cookians
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 6
-					create_army = {
-						name = "NAME_cookie_defense"
-						owner = event_target:cookie_flunat
-						species = event_target:cookians
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_cookie_defense"
+							owner = event_target:cookie_flunat
+							species = event_target:cookians
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			1111 = {
 				while = {
 					count = 7
-					create_army = {
-						name = "NAME_cookie_defense"
-						owner = event_target:cookie_flunat
-						species = event_target:cookians
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_cookie_defense"
+							owner = event_target:cookie_flunat
+							species = event_target:cookians
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
@@ -652,55 +672,65 @@ colony_event = {
 			1111 = {
 				while = {
 					count = 3
-					create_army = {
-						name = "NAME_kronk_defense"
-						owner = event_target:kronk_flunat
-						species = event_target:kronks
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_kronk_defense"
+							owner = event_target:kronk_flunat
+							species = event_target:kronks
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 4
-					create_army = {
-						name = "NAME_kronk_defense"
-						owner = event_target:kronk_flunat
-						species = event_target:kronks
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_kronk_defense"
+							owner = event_target:kronk_flunat
+							species = event_target:kronks
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			3333 = {
 				while = {
 					count = 5
-					create_army = {
-						name = "NAME_kronk_defense"
-						owner = event_target:kronk_flunat
-						species = event_target:kronks
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_kronk_defense"
+							owner = event_target:kronk_flunat
+							species = event_target:kronks
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 6
-					create_army = {
-						name = "NAME_kronk_defense"
-						owner = event_target:kronk_flunat
-						species = event_target:kronks
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_kronk_defense"
+							owner = event_target:kronk_flunat
+							species = event_target:kronks
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			1111 = {
 				while = {
 					count = 7
-					create_army = {
-						name = "NAME_kronk_defense"
-						owner = event_target:kronk_flunat
-						species = event_target:kronks
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_kronk_defense"
+							owner = event_target:kronk_flunat
+							species = event_target:kronks
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
@@ -908,55 +938,65 @@ colony_event = {
 			1111 = {
 				while = {
 					count = 3
-					create_army = {
-						name = "NAME_ravka_defense"
-						owner = event_target:ravkan_flunat
-						species = event_target:ravkans
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_ravka_defense"
+							owner = event_target:ravkan_flunat
+							species = event_target:ravkans
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 4
-					create_army = {
-						name = "NAME_ravka_defense"
-						owner = event_target:ravkan_flunat
-						species = event_target:ravkans
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_ravka_defense"
+							owner = event_target:ravkan_flunat
+							species = event_target:ravkans
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			3333 = {
 				while = {
 					count = 5
-					create_army = {
-						name = "NAME_ravka_defense"
-						owner = event_target:ravkan_flunat
-						species = event_target:ravkans
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_ravka_defense"
+							owner = event_target:ravkan_flunat
+							species = event_target:ravkans
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 6
-					create_army = {
-						name = "NAME_ravka_defense"
-						owner = event_target:ravkan_flunat
-						species = event_target:ravkans
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_ravka_defense"
+							owner = event_target:ravkan_flunat
+							species = event_target:ravkans
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			1111 = {
 				while = {
 					count = 7
-					create_army = {
-						name = "NAME_ravka_defense"
-						owner = event_target:ravkan_flunat
-						species = event_target:ravkans
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_ravka_defense"
+							owner = event_target:ravkan_flunat
+							species = event_target:ravkans
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
@@ -1164,55 +1204,65 @@ colony_event = {
 			1111 = {
 				while = {
 					count = 3
-					create_army = {
-						name = "NAME_zousa_defense"
-						owner = event_target:zousan_flunat
-						species = event_target:zousans
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_zousa_defense"
+							owner = event_target:zousan_flunat
+							species = event_target:zousans
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 4
-					create_army = {
-						name = "NAME_zousa_defense"
-						owner = event_target:zousan_flunat
-						species = event_target:zousans
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_zousa_defense"
+							owner = event_target:zousan_flunat
+							species = event_target:zousans
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			3333 = {
 				while = {
 					count = 5
-					create_army = {
-						name = "NAME_zousa_defense"
-						owner = event_target:zousan_flunat
-						species = event_target:zousans
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_zousa_defense"
+							owner = event_target:zousan_flunat
+							species = event_target:zousans
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 6
-					create_army = {
-						name = "NAME_zousa_defense"
-						owner = event_target:zousan_flunat
-						species = event_target:zousans
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_zousa_defense"
+							owner = event_target:zousan_flunat
+							species = event_target:zousans
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			1111 = {
 				while = {
 					count = 7
-					create_army = {
-						name = "NAME_zousa_defense"
-						owner = event_target:zousan_flunat
-						species = event_target:zousans
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_zousa_defense"
+							owner = event_target:zousan_flunat
+							species = event_target:zousans
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
@@ -1403,55 +1453,65 @@ colony_event = {
 			1111 = {
 				while = {
 					count = 3
-					create_army = {
-						name = "NAME_droog_defense"
-						owner = event_target:droog_flunat
-						species = event_target:droog
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_droog_defense"
+							owner = event_target:droog_flunat
+							species = event_target:droog
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 4
-					create_army = {
-						name = "NAME_droog_defense"
-						owner = event_target:droog_flunat
-						species = event_target:droog
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_droog_defense"
+							owner = event_target:droog_flunat
+							species = event_target:droog
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			3333 = {
 				while = {
 					count = 5
-					create_army = {
-						name = "NAME_droog_defense"
-						owner = event_target:droog_flunat
-						species = event_target:droog
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_droog_defense"
+							owner = event_target:droog_flunat
+							species = event_target:droog
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 6
-					create_army = {
-						name = "NAME_droog_defense"
-						owner = event_target:droog_flunat
-						species = event_target:droog
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_droog_defense"
+							owner = event_target:droog_flunat
+							species = event_target:droog
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			1111 = {
 				while = {
 					count = 7
-					create_army = {
-						name = "NAME_droog_defense"
-						owner = event_target:droog_flunat
-						species = event_target:droog
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_droog_defense"
+							owner = event_target:droog_flunat
+							species = event_target:droog
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
@@ -1644,55 +1704,65 @@ colony_event = {
 			1111 = {
 				while = {
 					count = 3
-					create_army = {
-						name = "NAME_ezic_defense"
-						owner = event_target:ezic_flunat
-						species = event_target:ezics
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_ezic_defense"
+							owner = event_target:ezic_flunat
+							species = event_target:ezics
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 4
-					create_army = {
-						name = "NAME_ezic_defense"
-						owner = event_target:ezic_flunat
-						species = event_target:ezics
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_ezic_defense"
+							owner = event_target:ezic_flunat
+							species = event_target:ezics
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			3333 = {
 				while = {
 					count = 5
-					create_army = {
-						name = "NAME_ezic_defense"
-						owner = event_target:ezic_flunat
-						species = event_target:ezics
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_ezic_defense"
+							owner = event_target:ezic_flunat
+							species = event_target:ezics
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 6
-					create_army = {
-						name = "NAME_ezic_defense"
-						owner = event_target:ezic_flunat
-						species = event_target:ezics
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_ezic_defense"
+							owner = event_target:ezic_flunat
+							species = event_target:ezics
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			1111 = {
 				while = {
 					count = 7
-					create_army = {
-						name = "NAME_ezic_defense"
-						owner = event_target:ezic_flunat
-						species = event_target:ezics
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_ezic_defense"
+							owner = event_target:ezic_flunat
+							species = event_target:ezics
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
@@ -1890,55 +1960,65 @@ colony_event = {
 			1111 = {
 				while = {
 					count = 3
-					create_army = {
-						name = "NAME_mercuria_defense"
-						owner = event_target:mercuria_flunat
-						species = event_target:mercurians
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_mercuria_defense"
+							owner = event_target:mercuria_flunat
+							species = event_target:mercurians
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 4
-					create_army = {
-						name = "NAME_mercuria_defense"
-						owner = event_target:mercuria_flunat
-						species = event_target:mercurians
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_mercuria_defense"
+							owner = event_target:mercuria_flunat
+							species = event_target:mercurians
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			3333 = {
 				while = {
 					count = 5
-					create_army = {
-						name = "NAME_mercuria_defense"
-						owner = event_target:mercuria_flunat
-						species = event_target:mercurians
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_mercuria_defense"
+							owner = event_target:mercuria_flunat
+							species = event_target:mercurians
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 6
-					create_army = {
-						name = "NAME_mercuria_defense"
-						owner = event_target:mercuria_flunat
-						species = event_target:mercurians
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_mercuria_defense"
+							owner = event_target:mercuria_flunat
+							species = event_target:mercurians
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			1111 = {
 				while = {
 					count = 7
-					create_army = {
-						name = "NAME_mercuria_defense"
-						owner = event_target:mercuria_flunat
-						species = event_target:mercurians
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_mercuria_defense"
+							owner = event_target:mercuria_flunat
+							species = event_target:mercurians
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
@@ -2147,55 +2227,65 @@ colony_event = {
 			1111 = {
 				while = {
 					count = 3
-					create_army = {
-						name = "NAME_cyatianala_defense"
-						owner = event_target:cyatianala_flunat
-						species = event_target:cyatianalas
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_cyatianala_defense"
+							owner = event_target:cyatianala_flunat
+							species = event_target:cyatianalas
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 4
-					create_army = {
-						name = "NAME_cyatianala_defense"
-						owner = event_target:cyatianala_flunat
-						species = event_target:cyatianalas
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_cyatianala_defense"
+							owner = event_target:cyatianala_flunat
+							species = event_target:cyatianalas
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			3333 = {
 				while = {
 					count = 5
-					create_army = {
-						name = "NAME_cyatianala_defense"
-						owner = event_target:cyatianala_flunat
-						species = event_target:cyatianalas
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_cyatianala_defense"
+							owner = event_target:cyatianala_flunat
+							species = event_target:cyatianalas
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 6
-					create_army = {
-						name = "NAME_cyatianala_defense"
-						owner = event_target:cyatianala_flunat
-						species = event_target:cyatianalas
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_cyatianala_defense"
+							owner = event_target:cyatianala_flunat
+							species = event_target:cyatianalas
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			1111 = {
 				while = {
 					count = 7
-					create_army = {
-						name = "NAME_cyatianala_defense"
-						owner = event_target:cyatianala_flunat
-						species = event_target:cyatianalas
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_cyatianala_defense"
+							owner = event_target:cyatianala_flunat
+							species = event_target:cyatianalas
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
@@ -2402,55 +2492,65 @@ colony_event = {
 			1111 = {
 				while = {
 					count = 3
-					create_army = {
-						name = "NAME_yinja_defense"
-						owner = event_target:yinjite_flunat
-						species = event_target:yinjas
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_yinja_defense"
+							owner = event_target:yinjite_flunat
+							species = event_target:yinjas
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 4
-					create_army = {
-						name = "NAME_yinja_defense"
-						owner = event_target:yinjite_flunat
-						species = event_target:yinjas
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_yinja_defense"
+							owner = event_target:yinjite_flunat
+							species = event_target:yinjas
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			3333 = {
 				while = {
 					count = 5
-					create_army = {
-						name = "NAME_yinja_defense"
-						owner = event_target:yinjite_flunat
-						species = event_target:yinjas
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_yinja_defense"
+							owner = event_target:yinjite_flunat
+							species = event_target:yinjas
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 6
-					create_army = {
-						name = "NAME_yinja_defense"
-						owner = event_target:yinjite_flunat
-						species = event_target:yinjas
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_yinja_defense"
+							owner = event_target:yinjite_flunat
+							species = event_target:yinjas
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			1111 = {
 				while = {
 					count = 7
-					create_army = {
-						name = "NAME_yinja_defense"
-						owner = event_target:yinjite_flunat
-						species = event_target:yinjas
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_yinja_defense"
+							owner = event_target:yinjite_flunat
+							species = event_target:yinjas
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
@@ -2658,55 +2758,65 @@ colony_event = {
 			1111 = {
 				while = {
 					count = 3
-					create_army = {
-						name = "NAME_symbie_defense"
-						owner = event_target:symbie_flunat
-						species = event_target:symbies
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_symbie_defense"
+							owner = event_target:symbie_flunat
+							species = event_target:symbies
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 4
-					create_army = {
-						name = "NAME_symbie_defense"
-						owner = event_target:symbie_flunat
-						species = event_target:symbies
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_symbie_defense"
+							owner = event_target:symbie_flunat
+							species = event_target:symbies
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			3333 = {
 				while = {
 					count = 5
-					create_army = {
-						name = "NAME_symbie_defense"
-						owner = event_target:symbie_flunat
-						species = event_target:symbies
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_symbie_defense"
+							owner = event_target:symbie_flunat
+							species = event_target:symbies
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 6
-					create_army = {
-						name = "NAME_symbie_defense"
-						owner = event_target:symbie_flunat
-						species = event_target:symbies
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_symbie_defense"
+							owner = event_target:symbie_flunat
+							species = event_target:symbies
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			1111 = {
 				while = {
 					count = 7
-					create_army = {
-						name = "NAME_symbie_defense"
-						owner = event_target:symbie_flunat
-						species = event_target:symbies
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_symbie_defense"
+							owner = event_target:symbie_flunat
+							species = event_target:symbies
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
@@ -2914,55 +3024,65 @@ colony_event = {
 			1111 = {
 				while = {
 					count = 3
-					create_army = {
-						name = "NAME_lauranaise_defense"
-						owner = event_target:lauranaise_flunat
-						species = event_target:lauranaise
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_lauranaise_defense"
+							owner = event_target:lauranaise_flunat
+							species = event_target:lauranaise
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 4
-					create_army = {
-						name = "NAME_lauranaise_defense"
-						owner = event_target:lauranaise_flunat
-						species = event_target:lauranaise
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_lauranaise_defense"
+							owner = event_target:lauranaise_flunat
+							species = event_target:lauranaise
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			3333 = {
 				while = {
 					count = 5
-					create_army = {
-						name = "NAME_lauranaise_defense"
-						owner = event_target:lauranaise_flunat
-						species = event_target:lauranaise
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_lauranaise_defense"
+							owner = event_target:lauranaise_flunat
+							species = event_target:lauranaise
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 6
-					create_army = {
-						name = "NAME_lauranaise_defense"
-						owner = event_target:lauranaise_flunat
-						species = event_target:lauranaise
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_lauranaise_defense"
+							owner = event_target:lauranaise_flunat
+							species = event_target:lauranaise
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			1111 = {
 				while = {
 					count = 7
-					create_army = {
-						name = "NAME_lauranaise_defense"
-						owner = event_target:lauranaise_flunat
-						species = event_target:lauranaise
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_lauranaise_defense"
+							owner = event_target:lauranaise_flunat
+							species = event_target:lauranaise
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
@@ -3169,55 +3289,65 @@ colony_event = {
 			1111 = {
 				while = {
 					count = 3
-					create_army = {
-						name = "NAME_haranian_defense"
-						owner = event_target:haranian_flunat
-						species = event_target:haranians
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_haranian_defense"
+							owner = event_target:haranian_flunat
+							species = event_target:haranians
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 4
-					create_army = {
-						name = "NAME_haranian_defense"
-						owner = event_target:haranian_flunat
-						species = event_target:haranians
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_haranian_defense"
+							owner = event_target:haranian_flunat
+							species = event_target:haranians
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			3333 = {
 				while = {
 					count = 5
-					create_army = {
-						name = "NAME_haranian_defense"
-						owner = event_target:haranian_flunat
-						species = event_target:haranians
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_haranian_defense"
+							owner = event_target:haranian_flunat
+							species = event_target:haranians
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			2222 = {
 				while = {
 					count = 6
-					create_army = {
-						name = "NAME_haranian_defense"
-						owner = event_target:haranian_flunat
-						species = event_target:haranians
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_haranian_defense"
+							owner = event_target:haranian_flunat
+							species = event_target:haranians
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
 			1111 = {
 				while = {
 					count = 7
-					create_army = {
-						name = "NAME_haranian_defense"
-						owner = event_target:haranian_flunat
-						species = event_target:haranians
-						type = "flunat_defense_army"
+					event_target:playerflusion = {
+						create_army = {
+							name = "NAME_haranian_defense"
+							owner = event_target:haranian_flunat
+							species = event_target:haranians
+							type = "flunat_defense_army"
+						}
 					}
 				}
 			}
