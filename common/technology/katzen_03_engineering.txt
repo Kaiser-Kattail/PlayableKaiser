@@ -43,26 +43,13 @@ tech_katzen_forge = {
 			}
 		}
 		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
-		}
-		modifier = {
 			factor = 1.5
 			is_specialist_subject_type = { TYPE = prospectorium }
 		}
 	}
 	ai_weight = {
 		factor = @ai_alloy_factor_factor
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
-		}
+
 	}
 }
 
@@ -87,26 +74,13 @@ tech_katzen_luxuries = {
 			}
 		}
 		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
-		}
-		modifier = {
 			factor = 1.5
 			is_specialist_subject_type = { TYPE = prospectorium }
 		}
 	}
 	ai_weight = {
 		factor = @ai_alloy_factor_factor
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
-		}
+
 	}
 }
 
