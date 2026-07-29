@@ -10,6 +10,10 @@ tech_katzen_housing = {
 		"tech_planetary_infrastructure_1"
 		"tech_housing_1"
 	}
+
+	potential = {
+		always = no #broken
+	}
 	weight = @tier4weight1
 	weight_modifier = {
 		modifier = {
@@ -18,26 +22,9 @@ tech_katzen_housing = {
 				pki_is_katzenartig_imperium = yes
 			}
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_statecraft"
-			}
-		}
 	}
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_statecraft"
-			}
-		}
-		modifier = {
-			factor = @housing_ai_tech_factor
-			num_pops >= 100
-		}
+		base = 0
 	}
 }
 
@@ -61,13 +48,6 @@ tech_katzen_habitability = {
 			}
 		}
 		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_new_worlds"
-			}
-		}
-		modifier = {
 			factor = 0.7
 			OR = {
 				has_civic = civic_machine_servitor
@@ -76,13 +56,7 @@ tech_katzen_habitability = {
 		}
 	}
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_new_worlds"
-			}
-		}
+		base = 0
 	}
 }
 
@@ -105,26 +79,9 @@ tech_katzen_theater = {
 				pki_is_katzenartig_imperium = yes
 			}
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_statecraft"
-			}
-		}
 	}
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_statecraft"
-			}
-		}
-		modifier = {
-			factor = @housing_ai_tech_factor
-			num_pops >= 100
-		}
+		base = 0
 	}
 }
 
@@ -144,9 +101,6 @@ tech_katzen_flusioarc = {
 	}
 	weight = 0
 	ai_weight = {
-		modifier = {
-			factor = @housing_ai_tech_factor
-			num_pops >= 100
-		}
+		base = 0
 	}
 }

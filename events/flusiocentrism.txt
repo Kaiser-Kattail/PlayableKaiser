@@ -78,6 +78,7 @@ colony_event = {
 	trigger = {
 		from = {
 			pki_is_katzenartig_imperium = yes
+			has_edict = katzen_auto_resettle_conquered
 		}
 		exists = fromfrom
 	}
@@ -85,7 +86,7 @@ colony_event = {
 		if = {
 			limit = {
 				count_owned_pop_amount = {
-					count < 1500
+					count <= 1500
 				}
 			}
 			every_owned_pop_group = {

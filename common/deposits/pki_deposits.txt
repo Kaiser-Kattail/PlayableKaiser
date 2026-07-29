@@ -295,7 +295,7 @@ d_catspian_crystal_mines = {
 	}
 
 	triggered_planet_modifier = {
-		planet_miners_rare_crystals_produces_add = 0.1
+		planet_miners_rare_crystals_produces_add = 0.05
 	}
 
 	drop_weight = {
@@ -411,7 +411,7 @@ d_katzen_mote_field = {
 	}
 
 	triggered_planet_modifier = {
-		planet_technician_volatile_motes_produces_add = 0.1
+		planet_technician_volatile_motes_produces_add = 0.05
 	}
 
 	
@@ -820,13 +820,7 @@ d_ravaka_volcano = {
 
 	planet_modifier = {
 		planet_jobs_alloys_produces_mult = 0.10
-	}
-
-	resources = {
-		category = planet_deposits
-		produces = {
-			rare_crystals = 3
-		}
+		planet_miners_rare_crystals_produces_add = 0.05
 	}
 
 	drop_weight = {

@@ -158,8 +158,6 @@ country_event = {
 
 	immediate = {
 		ethic_leader_creator = {
-			SPECIES_CLASS = MAM
-			LEADER_PORTRAIT = mam14
 			CLASS = commander
 			NAME = NAME_gunfur
 			LEVEL = 4
@@ -177,6 +175,7 @@ country_event = {
 			add_trait = leader_trait_victory_or_death
 			set_age = 32
 			save_global_event_target_as = gunfur
+			change_species = root.owner_main_species
 		}
 	}
 
@@ -230,7 +229,6 @@ country_event = {
 							army_name = "NAME_dominiontracks"
 							ship_name = "NAME_dominiontracks"
 						}
-						 
 					}
 					set_location = {
 						target = root.capital_scope

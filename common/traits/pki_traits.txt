@@ -269,8 +269,7 @@ pki_katzen_trait_elite = {
 	immortal_leaders = yes
 	triggered_self_modifier = {
 		modifier = {
-			species_leader_exp_gain = -0.01
-			leaders_upkeep_mult = 0.01
+			leaders_upkeep_mult = 0.005
 		}
 		multiplier = trigger:leader_age
 	}

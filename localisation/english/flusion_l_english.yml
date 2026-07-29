@@ -384,25 +384,25 @@
     d_katzen_housing_dam_desc:0 "A series of dams that redirect and filter water into usable forms, so as to allow the construction of new homes."
     concept_pki_housing_dam: "$d_katzen_housing_dam$"
     concept_pki_housing_dam_desc: "§EEffects:§!\n$pki_housing_dam_effect$"
-    pki_housing_dam_effect: "- £housing£ Housing §G+30§!\n- £amenities£ Amenities §G+10§!\n- £district£ Max Districts §G+3§!\n- £mod_habitability£ Habitability §R-15%§!"
+    pki_housing_dam_effect: "- £housing£ Housing §G+3000§!\n- £amenities£ Amenities §G+1000§!\n- £district£ Max Districts §G+3§!\n- £mod_habitability£ Habitability §R-15%§!"
 
     d_katzen_energy_dam:0 "Hydroelectric Energy Plants"
     d_katzen_energy_dam_desc:0 "A series of large hydroelectric dams that greatly increase the energy output of this world."
     concept_pki_energy_dam: "$d_katzen_energy_dam$"
     concept_pki_energy_dam_desc: "§EEffects:§!\n$pki_energy_dam_effect$"
-    pki_energy_dam_effect: "- £mod_district_generator_max£ Max Generator Districts §G+3§!\n- £housing£ Housing §G+15§!\n- £mod_habitability£ Habitability §R-10%§!\n- §G+1§! Technicians per §Y10§! pops\n- Produces £energy£ 30"
+    pki_energy_dam_effect: "- £mod_district_generator_max£ Max Generator Districts §G+3§!\n- £housing£ Housing §G+1500§!\n- £mod_habitability£ Habitability §R-10%§!\n- §G+1§! Technicians per §Y10§! pops\n- Produces £energy£ 30"
 
     d_katzen_mineral_dam:0 "Superscale Ore Washing Sites"
     d_katzen_mineral_dam_desc:0 "A series of dams that allow for the excavation of the seabed, which increases the mineral output of this world."
     concept_pki_minerals_dam: "$d_katzen_mineral_dam$"
     concept_pki_minerals_dam_desc: "§EEffects:§!\n$pki_mineral_dam_effect$"
-    pki_mineral_dam_effect: "- £mod_district_mining_max£ Max Mining Districts §G+3§!\n- £housing£ Housing §G+15§!\n- £mod_habitability£ Habitability §R-10%§!\n- §G+1§! Miners per §Y10§! pops"
+    pki_mineral_dam_effect: "- £mod_district_mining_max£ Max Mining Districts §G+3§!\n- £housing£ Housing §G+1500§!\n- £mod_habitability£ Habitability §R-10%§!\n- §G+1§! Miners per §Y10§! pops"
 
     d_katzen_food_dam:0 "Hyper-Irrigated Farming Sectors"
     d_katzen_food_dam_desc:0 "A series of dams that redirect water for agricultural purposes."
     concept_pki_food_dam: "$d_katzen_food_dam$"
     concept_pki_food_dam_desc: "§EEffects:§!\n$pki_food_dam_effect$"
-    pki_food_dam_effect: "- £mod_district_farming_max£ Max Agriculture Districts §G+3§!\n- £housing£ Housing §G+15§!\n- £mod_habitability£ Habitability §R-10%§!\n- §G+1§! Farmers per §Y10§! pops"
+    pki_food_dam_effect: "- £mod_district_farming_max£ Max Agriculture Districts §G+3§!\n- £housing£ Housing §G+1500§!\n- £mod_habitability£ Habitability §R-10%§!\n- §G+1§! Farmers per §Y10§! pops"
 
 
     d_katzen_industrial_dam:0 "Giga-Coolant Plant"
@@ -571,6 +571,9 @@
     edict_katzen_conquest_map:0 "Contact the Katzenvereinigungsbüro"
     edict_katzen_conquest_map_desc:0 "Access the Flusionian Conquest Map"
 
+    edict_katzen_auto_resettle_conquered: "Resettle Conquered Worlds"
+    edict_katzen_auto_resettle_conquered_desc: "Any planets with less than 1,500 Pops will be resettled to Flusion while this edict is active."
+
     dont_build_here_pls:0 "A Grand Agenda"
     dont_build_here_pls_desc: "The Kaiser has a particular agenda for this world. Until such time that said agenda can be fulfilled, it is heavily advised that this world remain undisturbed and uncolonized."
 
@@ -682,7 +685,7 @@
     tr_imperial_management_delayed:0 "Centralization around Flusion lessens our administrative burden for the empire and makes infrastructure projects easier as well."
     tr_flusions_bounty:0 "Flusion's Bounty"
     tr_flusions_bounty_delayed:0 "Flusion is the single greatest planet in the entire galaxy; we must learn to use it and love it to its fullest extent."
-    tr_flusions_bounty_effect: "All colonies but §YFlusion§! receive §R-1§! districts and §R-15%§! happiness."
+    tr_flusions_bounty_effect: "All colonies but §YFlusion§! receive §R-1§! districts and §R-5%§! happiness."
     tr_centralization:0 "Centralization"
     tr_centralization_delayed:0 "Any world coming close to Flusion in greatness is a shame to the homeworld's magnificence; any that is blinded by its light will be vaunted."
     tr_centralization_effect:0 "Gain §G+1%§! monthly §YUnity§! per colony not suffering from §YFlusiocentric Instability§!."
@@ -1206,3 +1209,4 @@
 
     sm_pki_warforge_building: "Katzen War Forge Core"
     sm_pki_warforge_building_desc: "The epitome of Katzen engineering.\n\n§gDue to game limitations certain buildings cannot be built nor hidden from this list. Sorry for the potentially clogged list.§!\n"
+
